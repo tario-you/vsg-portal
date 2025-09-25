@@ -33,6 +33,7 @@ const state = {
   lastFrameUrl: null,
   prefetch: { cache: new Map(), limit: 48 },
   renderStride: 6,
+  lastRenderedFrame: null,
   debug: { enabled: false, overlay: null },
 };
 
@@ -192,6 +193,12 @@ function shouldRenderFrame(time) {
   if (!state.playing) return true;
   if (stride <= 1) return true;
   return (time % stride) === 0;
+}
+
+function getRenderFrame(time) {
+  const stride = Math.max(1, Number(state.renderStride) || 1);
+  if (stride <= 1) return time;
+  return Math.floor(time / stride) * stride;
 }
 
 function formatCategoryLabel(cat) {
@@ -500,7 +507,7 @@ function prefetchNeighbors() {
   const data = state.currentVideoData;
   if (!data || !data.frameTemplate) return;
   const max = Number.isFinite(data.sliderMax) ? data.sliderMax : data.maxFrame;
-  const center = state.currentTime || 0;
+  const center = getRenderFrame(state.currentTime || 0);
   const stride = Math.max(1, Number(state.renderStride) || 1);
   const aheadSteps = 20;
   const behindSteps = Math.min(4, aheadSteps);
@@ -996,7 +1003,7 @@ function initialiseNetwork(nodes) {
 function getActiveRelations() {
   const data = state.currentVideoData;
   if (!data) return [];
-  const time = state.currentTime;
+  const time = getRenderFrame(state.currentTime);
   const enabled = state.enabledCategories;
   return data.relations.filter((rel) => {
     if (!enabled.has(rel.category)) return false;
@@ -1100,7 +1107,7 @@ function updateNodePositions(activeNodeIds) {
     });
   }
 
-  const frame = state.currentTime;
+  const frame = getRenderFrame(state.currentTime);
   const containerWidth = Math.max(container.clientWidth, 1);
   const containerHeight = Math.max(container.clientHeight, 1);
   let scale = 1;
@@ -1311,7 +1318,8 @@ function renderFrameDisplay() {
     hideBothFrames();
     return;
   }
-  const urlExample = formatFrameUrl(data.frameTemplate, state.currentTime);
+  const displayFrameIndex = getRenderFrame(state.currentTime);
+  const urlExample = formatFrameUrl(data.frameTemplate, displayFrameIndex);
   if (urlExample && urlExample !== '—') {
     let linkLabel = urlExample;
     try {
@@ -1323,16 +1331,14 @@ function renderFrameDisplay() {
     }
     dom.frameDisplay.title = urlExample;
     dom.frameDisplay.innerHTML = `
-      <span class="frame-display__label">Frame ${state.currentTime}</span>
+      <span class="frame-display__label">Frame ${displayFrameIndex}</span>
       <span class="frame-display__divider">·</span>
       <a class="frame-display__link" href="${urlExample}" target="_blank" rel="noopener">Open frame (${linkLabel})</a>
     `;
-    if (shouldRenderFrame(state.currentTime)) {
-      displayFrame(urlExample);
-    }
+    displayFrame(urlExample);
   } else {
     dom.frameDisplay.removeAttribute('title');
-    dom.frameDisplay.textContent = `Frame ${state.currentTime}`;
+    dom.frameDisplay.textContent = `Frame ${displayFrameIndex}`;
     hideBothFrames();
   }
 }
@@ -1345,9 +1351,12 @@ function setCurrentTime(time) {
   const clamped = Math.max(0, Math.min(time, upperBound));
   state.currentTime = clamped;
   dom.timeSlider.value = clamped.toString();
-  dom.timeValue.textContent = clamped.toString();
-  renderFrameDisplay();
-  if (shouldRenderFrame(clamped)) {
+  const renderFrameIndex = getRenderFrame(clamped);
+  const changed = state.lastRenderedFrame !== renderFrameIndex;
+  dom.timeValue.textContent = renderFrameIndex.toString();
+  if (changed) {
+    state.lastRenderedFrame = renderFrameIndex;
+    renderFrameDisplay();
     updateNetwork();
     renderActiveRelations();
   }
@@ -1505,6 +1514,7 @@ async function loadVideo(videoId) {
   } else {
     state.baseFps = 24;
   }
+  state.lastRenderedFrame = null;
   setCurrentTime(0);
 }
 
@@ -1578,6 +1588,7 @@ function initialiseEventHandlers() {
       const parsed = parseInt(event.target.value, 10);
       state.renderStride = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
       // Nudge a render so the change is visible
+      state.lastRenderedFrame = null;
       renderFrameDisplay();
       updateNetwork();
       renderActiveRelations();
