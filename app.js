@@ -36,6 +36,18 @@ const state = {
   debug: { enabled: false, overlay: null },
 };
 
+function exposeStateForDebug() {
+  try {
+    if (typeof window !== 'undefined') {
+      window.__VSG_STATE__ = state;
+    }
+  } catch (error) {
+    console.debug('Unable to expose state globally:', error);
+  }
+}
+
+exposeStateForDebug();
+
 const dom = {
   videoSelect: document.getElementById('video-select'),
   prevVideo: document.getElementById('prev-video'),
@@ -1357,6 +1369,15 @@ async function loadVideo(videoId) {
   }
 
   let cached = state.videoCache.get(videoId);
+  const expectCentroids = Boolean(manifestEntry.centroids_url);
+  if (cached && expectCentroids) {
+    const cachedCount =
+      cached.centroids instanceof Map ? cached.centroids.size : cached.centroids ? Object.keys(cached.centroids).length : 0;
+    if (!cachedCount) {
+      state.videoCache.delete(videoId);
+      cached = null;
+    }
+  }
   if (!cached) {
     const [raw, metadata, centroidPayload] = await Promise.all([
       fetchRelations(manifestEntry.relations_url),
@@ -1371,6 +1392,7 @@ async function loadVideo(videoId) {
   state.currentVideoData = cached;
   state.enabledCategories = new Set(cached.categories);
   state.nodeCentroids = cached.centroids;
+  exposeStateForDebug();
   state.centroidFrameIndex = new Map();
   state.imageSize = {
     width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
