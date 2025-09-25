@@ -31,7 +31,7 @@ const state = {
   resizeHandler: null,
   baseFps: 24,
   lastFrameUrl: null,
-  prefetch: { cache: new Map(), limit: 24 },
+  prefetch: { cache: new Map(), limit: 48 },
   renderStride: 6,
   debug: { enabled: false, overlay: null },
 };
@@ -501,22 +501,37 @@ function prefetchNeighbors() {
   if (!data || !data.frameTemplate) return;
   const max = Number.isFinite(data.sliderMax) ? data.sliderMax : data.maxFrame;
   const center = state.currentTime || 0;
-  const radius = 6; // prefetch +/- 6 frames
-  const stride = Number(state.renderStride) || 1;
-  const frames = [];
-  const shouldPrefetch = (frame) => {
-    if (stride <= 1) return true;
-    return frame % stride === 0;
+  const stride = Math.max(1, Number(state.renderStride) || 1);
+  const aheadSteps = 20;
+  const behindSteps = Math.min(4, aheadSteps);
+  const frames = new Set();
+
+  const addFrame = (frame) => {
+    if (frame < 0 || frame > max) return;
+    frames.add(frame);
   };
-  for (let k = -radius; k <= radius; k++) {
-    const f = center + k;
-    if (f < 0 || f > max) continue;
-    if (!shouldPrefetch(f)) continue;
-    frames.push(f);
+
+  // Always include immediate neighbours for smooth scrubbing.
+  addFrame(center);
+  addFrame(center + 1);
+  addFrame(center - 1);
+
+  for (let step = 1; step <= aheadSteps; step++) {
+    const frame = center + step * stride;
+    if (frame > max) break;
+    addFrame(frame);
   }
+
+  for (let step = 1; step <= behindSteps; step++) {
+    const frame = center - step * stride;
+    if (frame < 0) break;
+    addFrame(frame);
+  }
+
+  const orderedFrames = Array.from(frames).sort((a, b) => a - b);
   const cache = state.prefetch.cache;
   const limit = state.prefetch.limit || 24;
-  frames.forEach((f) => {
+  orderedFrames.forEach((f) => {
     const url = formatFrameUrl(data.frameTemplate, f);
     if (!url || url === '—' || cache.has(url)) return;
     const img = new Image();
