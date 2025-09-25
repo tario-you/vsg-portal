@@ -502,10 +502,20 @@ function prefetchNeighbors() {
   const max = Number.isFinite(data.sliderMax) ? data.sliderMax : data.maxFrame;
   const center = state.currentTime || 0;
   const radius = 6; // prefetch +/- 6 frames
+  const stride = Number(state.renderStride) || 1;
+  const playing = state.playing === true;
   const frames = [];
+  const shouldPrefetch = (frame) => {
+    if (!playing) return true;
+    if (stride <= 1) return true;
+    if (frame === center) return true;
+    return frame % stride === 0;
+  };
   for (let k = -radius; k <= radius; k++) {
     const f = center + k;
-    if (f >= 0 && f <= max) frames.push(f);
+    if (f < 0 || f > max) continue;
+    if (!shouldPrefetch(f)) continue;
+    frames.push(f);
   }
   const cache = state.prefetch.cache;
   const limit = state.prefetch.limit || 24;
