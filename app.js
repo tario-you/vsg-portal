@@ -130,15 +130,21 @@ function renderDebugOverlay(info) {
   const summary = [
     `frame: ${info.frame}`,
     `container: ${formatDebugNumber(info.containerWidth, 0)}×${formatDebugNumber(info.containerHeight, 0)} | img: ${formatDebugNumber(info.imgWidth, 0)}×${formatDebugNumber(info.imgHeight, 0)}`,
-    `scale: ${formatDebugNumber(info.scale, 3)} offset: (${formatDebugNumber(info.offsetX, 1)}, ${formatDebugNumber(info.offsetY, 1)}` + ')',
+    `scale: ${formatDebugNumber(info.scale, 3)} offset: (${formatDebugNumber(info.offsetX, 1)}, ${formatDebugNumber(info.offsetY, 1)}) origin: (${formatDebugNumber(info.originX, 1)}, ${formatDebugNumber(info.originY, 1)}) centroids: ${info.centroidEnabled ? 'enabled' : 'fallback only'}`,
     `active: ${info.counts.active} | centroid: ${info.counts.centroid} | fallback: ${info.counts.fallback} | hidden: ${info.counts.hidden} | inactive: ${info.counts.inactive}`,
   ];
+
+  if (info.bounds) {
+    summary.push(
+      `bounds: x[${formatDebugNumber(info.bounds.minX, 1)}, ${formatDebugNumber(info.bounds.maxX, 1)}] y[${formatDebugNumber(info.bounds.minY, 1)}, ${formatDebugNumber(info.bounds.maxY, 1)}]`
+    );
+  }
 
   if (info.samples && info.samples.length) {
     summary.push('samples:');
     info.samples.forEach((sample) => {
       summary.push(
-        `  ${sample.id} → src=${sample.source} frame=${sample.frame} world=(${formatDebugNumber(sample.worldX, 1)}, ${formatDebugNumber(sample.worldY, 1)}) screen=(${formatDebugNumber(sample.screenX, 1)}, ${formatDebugNumber(sample.screenY, 1)})`
+        `  ${sample.id} → src=${sample.source} frame=${sample.frame} world=(${formatDebugNumber(sample.worldX, 1)}, ${formatDebugNumber(sample.worldY, 1)}) local=(${formatDebugNumber(sample.localX, 1)}, ${formatDebugNumber(sample.localY, 1)}) screen=(${formatDebugNumber(sample.screenX, 1)}, ${formatDebugNumber(sample.screenY, 1)})`
       );
     });
   } else {
@@ -371,8 +377,12 @@ function normaliseCentroidPayload(payload, nodes) {
 
   const imageWidthRaw = Number(payload.image_width ?? payload.imageWidth);
   const imageHeightRaw = Number(payload.image_height ?? payload.imageHeight);
-  const imageWidth = Number.isFinite(imageWidthRaw) && imageWidthRaw > 0 ? imageWidthRaw : null;
-  const imageHeight = Number.isFinite(imageHeightRaw) && imageHeightRaw > 0 ? imageHeightRaw : null;
+  const hasImageWidth = Number.isFinite(imageWidthRaw) && imageWidthRaw > 0;
+  const hasImageHeight = Number.isFinite(imageHeightRaw) && imageHeightRaw > 0;
+  let imageWidth = hasImageWidth ? imageWidthRaw : null;
+  let imageHeight = hasImageHeight ? imageHeightRaw : null;
+  let originX = 0;
+  let originY = 0;
 
   const looksFractional =
     pointCount > 0 &&
@@ -409,12 +419,47 @@ function normaliseCentroidPayload(payload, nodes) {
     } else if (looksPercentage && validWidth && validHeight) {
       scaleCentroids(imageWidthRaw / 100, imageHeightRaw / 100);
     }
+
+    if (looksFractional) {
+      if (!Number.isFinite(imageWidth) || imageWidth <= 0) imageWidth = validWidth ? imageWidthRaw : 1;
+      if (!Number.isFinite(imageHeight) || imageHeight <= 0) imageHeight = validHeight ? imageHeightRaw : 1;
+    } else if (looksPercentage) {
+      if (!Number.isFinite(imageWidth) || imageWidth <= 0) imageWidth = validWidth ? imageWidthRaw : 100;
+      if (!Number.isFinite(imageHeight) || imageHeight <= 0) imageHeight = validHeight ? imageHeightRaw : 100;
+    }
+
+    if ((!Number.isFinite(imageWidth) || imageWidth <= 0) && Number.isFinite(minObservedX) && Number.isFinite(maxObservedX)) {
+      const spanX = maxObservedX - minObservedX;
+      if (Number.isFinite(spanX) && spanX > 0) {
+        originX = minObservedX;
+        imageWidth = spanX;
+      }
+    }
+    if ((!Number.isFinite(imageHeight) || imageHeight <= 0) && Number.isFinite(minObservedY) && Number.isFinite(maxObservedY)) {
+      const spanY = maxObservedY - minObservedY;
+      if (Number.isFinite(spanY) && spanY > 0) {
+        originY = minObservedY;
+        imageHeight = spanY;
+      }
+    }
   }
+
+  const bounds =
+    pointCount > 0 &&
+    Number.isFinite(minObservedX) &&
+    Number.isFinite(maxObservedX) &&
+    Number.isFinite(minObservedY) &&
+    Number.isFinite(maxObservedY)
+      ? { minX: minObservedX, maxX: maxObservedX, minY: minObservedY, maxY: maxObservedY }
+      : null;
 
   return {
     centroids: centroidMap.size ? centroidMap : null,
-    imageWidth,
-    imageHeight,
+    imageWidth: Number.isFinite(imageWidth) && imageWidth > 0 ? imageWidth : null,
+    imageHeight: Number.isFinite(imageHeight) && imageHeight > 0 ? imageHeight : null,
+    originX: Number.isFinite(originX) ? originX : 0,
+    originY: Number.isFinite(originY) ? originY : 0,
+    bounds,
     maxFrame: Number.isFinite(maxFrame) && maxFrame >= 0 ? maxFrame : null,
   };
 }
@@ -743,6 +788,18 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload) {
 
   const fpsValue = parseFpsLabel(fpsLabel, 24);
 
+  if (centroidsPayload) {
+    if (!centroidInfo.centroids) {
+      console.warn(`Centroid payload for ${manifestEntry.video_id} did not match any nodes or frames.`, {
+        availableKeys: Object.keys(centroidsPayload.centroids || {}),
+      });
+    } else if (!Number.isFinite(centroidInfo.imageWidth) || !Number.isFinite(centroidInfo.imageHeight)) {
+      console.warn(`Centroid payload for ${manifestEntry.video_id} missing dimension metadata; using observed bounds fallback.`, {
+        bounds: centroidInfo.bounds,
+      });
+    }
+  }
+
   return {
     manifest: manifestEntry,
     raw: rawData,
@@ -761,6 +818,9 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload) {
     centroids: centroidInfo.centroids,
     imageWidth: centroidInfo.imageWidth,
     imageHeight: centroidInfo.imageHeight,
+    centroidOriginX: centroidInfo.originX,
+    centroidOriginY: centroidInfo.originY,
+    centroidBounds: centroidInfo.bounds,
     fpsValue,
   };
 }
@@ -964,6 +1024,8 @@ function updateNodePositions(activeNodeIds) {
   const hasCentroids = centroids instanceof Map && centroids.size > 0;
   const imgWidth = state.imageSize?.width;
   const imgHeight = state.imageSize?.height;
+  const originX = Number.isFinite(state.imageSize?.originX) ? state.imageSize.originX : 0;
+  const originY = Number.isFinite(state.imageSize?.originY) ? state.imageSize.originY : 0;
   const allowCentroidPlacement = hasCentroids && Number.isFinite(imgWidth) && Number.isFinite(imgHeight) && imgWidth > 0 && imgHeight > 0;
   const fallback = state.fallbackPositions instanceof Map ? state.fallbackPositions : new Map();
 
@@ -1000,9 +1062,13 @@ function updateNodePositions(activeNodeIds) {
         containerHeight,
         imgWidth,
         imgHeight,
+        originX,
+        originY,
+        bounds: state.imageSize?.bounds || null,
         scale,
         offsetX,
         offsetY,
+        centroidEnabled: allowCentroidPlacement,
         counts: { centroid: 0, fallback: 0, hidden: 0, inactive: 0, active: 0 },
         samples: [],
       }
@@ -1022,8 +1088,10 @@ function updateNodePositions(activeNodeIds) {
     }
 
     if (point && Number.isFinite(point.x) && Number.isFinite(point.y)) {
-      const screenX = offsetX + point.x * scale;
-      const screenY = offsetY + point.y * scale;
+      const baseX = point.x - originX;
+      const baseY = point.y - originY;
+      const screenX = offsetX + baseX * scale;
+      const screenY = offsetY + baseY * scale;
       x = screenX - containerWidth / 2;
       y = screenY - containerHeight / 2;
       hidden = false;
@@ -1037,6 +1105,8 @@ function updateNodePositions(activeNodeIds) {
             frame,
             worldX: point.x,
             worldY: point.y,
+            localX: baseX,
+            localY: baseY,
             screenX,
             screenY,
           });
@@ -1060,6 +1130,8 @@ function updateNodePositions(activeNodeIds) {
               frame,
               worldX: fallbackPos.x,
               worldY: fallbackPos.y,
+              localX: fallbackPos.x,
+              localY: fallbackPos.y,
               screenX: fallbackPos.x,
               screenY: fallbackPos.y,
             });
@@ -1303,6 +1375,9 @@ async function loadVideo(videoId) {
   state.imageSize = {
     width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
     height: Number.isFinite(cached.imageHeight) ? cached.imageHeight : null,
+    originX: Number.isFinite(cached.centroidOriginX) ? cached.centroidOriginX : 0,
+    originY: Number.isFinite(cached.centroidOriginY) ? cached.centroidOriginY : 0,
+    bounds: cached.centroidBounds || null,
   };
 
   dom.videoSelect.value = videoId;
