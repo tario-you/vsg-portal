@@ -24,6 +24,11 @@ const state = {
   network: null,
   nodesDataset: null,
   edgesDataset: null,
+  nodeCentroids: null,
+  imageSize: null,
+  fallbackPositions: null,
+  resizeHandler: null,
+  baseFps: 24,
 };
 
 const dom = {
@@ -75,6 +80,134 @@ function formatFrameUrl(template, frame) {
   return template;
 }
 
+function parseFpsLabel(label, fallback = 24) {
+  if (!label) return fallback;
+  const str = String(label).trim();
+  if (!str) return fallback;
+  if (str.includes('/')) {
+    const [num, denom] = str.split('/').map(Number);
+    const value = Number.isFinite(num) && Number.isFinite(denom) && denom !== 0 ? num / denom : null;
+    if (value && value > 0) return value;
+  }
+  const value = Number(str);
+  if (Number.isFinite(value) && value > 0) {
+    return value;
+  }
+  return fallback;
+}
+
+function extractObjectLabels(rawData, metadata) {
+  const labels = new Map();
+
+  const register = (idValue, labelValue) => {
+    if (idValue === null || idValue === undefined) return;
+    if (labelValue === null || labelValue === undefined) return;
+    const id = String(idValue).trim();
+    if (!id) return;
+    const label = String(labelValue).trim();
+    if (!label) return;
+    if (!labels.has(id)) {
+      labels.set(id, label);
+    }
+  };
+
+  const consumeArray = (entries) => {
+    if (!Array.isArray(entries)) return;
+    entries.forEach((entry) => {
+      if (!entry || typeof entry !== 'object') return;
+      const id = entry.object_id ?? entry.id;
+      const label = entry.category ?? entry.label ?? entry.name;
+      register(id, label);
+    });
+  };
+
+  const consumeObjectMap = (obj) => {
+    if (!obj || typeof obj !== 'object') return;
+    Object.entries(obj).forEach(([id, label]) => register(id, label));
+  };
+
+  if (rawData) {
+    consumeArray(rawData.objects);
+    consumeObjectMap(rawData.object_labels);
+  }
+
+  if (metadata) {
+    consumeArray(metadata.objects);
+    consumeObjectMap(metadata.object_labels);
+  }
+
+  return labels;
+}
+
+function normaliseCentroidPayload(payload, nodes) {
+  if (!payload || typeof payload !== 'object') {
+    return { centroids: null, imageWidth: null, imageHeight: null, maxFrame: null };
+  }
+
+  const nodeIdSet = new Set(nodes.map((node) => String(node.id)));
+  const rawCentroids = payload.centroids;
+  if (!rawCentroids || typeof rawCentroids !== 'object') {
+    return { centroids: null, imageWidth: null, imageHeight: null, maxFrame: null };
+  }
+
+  const centroidMap = new Map();
+  let maxFrame = -Infinity;
+
+  Object.entries(rawCentroids).forEach(([objectId, frames]) => {
+    const nodeId = String(objectId);
+    if (!nodeIdSet.has(nodeId)) return;
+    if (!frames || typeof frames !== 'object') return;
+
+    const perFrame = new Map();
+    Object.entries(frames).forEach(([frameKey, coords]) => {
+      if (!coords || typeof coords !== 'object') return;
+      const x = Number(coords.x);
+      const y = Number(coords.y);
+      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+      const frame = Number(frameKey);
+      if (!Number.isFinite(frame) || frame < 0) return;
+      perFrame.set(frame, { x, y });
+      if (frame > maxFrame) {
+        maxFrame = frame;
+      }
+    });
+
+    if (perFrame.size > 0) {
+      centroidMap.set(nodeId, perFrame);
+    }
+  });
+
+  const imageWidth = Number(payload.image_width);
+  const imageHeight = Number(payload.image_height);
+
+  return {
+    centroids: centroidMap.size ? centroidMap : null,
+    imageWidth: Number.isFinite(imageWidth) && imageWidth > 0 ? imageWidth : null,
+    imageHeight: Number.isFinite(imageHeight) && imageHeight > 0 ? imageHeight : null,
+    maxFrame: Number.isFinite(maxFrame) && maxFrame >= 0 ? maxFrame : null,
+  };
+}
+
+function computeCircularLayout(nodes, container) {
+  const fallback = new Map();
+  if (!container) return fallback;
+
+  const width = Math.max(container.clientWidth, 1);
+  const height = Math.max(container.clientHeight, 1);
+  const total = Math.max(nodes.length, 1);
+  const radius = Math.max(Math.min(width, height) / 2.6, 140);
+
+  nodes.forEach((node, idx) => {
+    const angle = (2 * Math.PI * idx) / total;
+    fallback.set(String(node.id), {
+      x: radius * Math.cos(angle),
+      y: radius * Math.sin(angle),
+    });
+  });
+
+  return fallback;
+}
+
 async function fetchManifest() {
   const response = await fetch(manifestUrl, { cache: 'no-cache' });
   if (!response.ok) {
@@ -104,7 +237,31 @@ async function fetchMetadata(url) {
   }
 }
 
-function buildVideoData(manifestEntry, rawData, metadata) {
+async function fetchCentroids(videoId, manifestEntry) {
+  const candidates = [];
+  if (manifestEntry?.centroids_url) {
+    candidates.push(manifestEntry.centroids_url);
+  }
+  candidates.push(`public/centroids/${videoId}.json`);
+
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url, { cache: 'no-cache' });
+      if (!response.ok) {
+        continue;
+      }
+      const data = await response.json();
+      if (data && typeof data === 'object') {
+        return data;
+      }
+    } catch (error) {
+      console.debug(`Centroid fetch failed for ${url}:`, error);
+    }
+  }
+  return null;
+}
+
+function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload) {
   const relationships = Array.isArray(rawData.relationships)
     ? rawData.relationships
     : Array.isArray(rawData.relations)
@@ -114,6 +271,7 @@ function buildVideoData(manifestEntry, rawData, metadata) {
   const processed = [];
   const categories = new Set();
   const nodes = new Set();
+  const labelMap = extractObjectLabels(rawData, metadata);
   let maxFrame = 0;
   let frameCount = null;
   let fpsLabel = null;
@@ -159,7 +317,9 @@ function buildVideoData(manifestEntry, rawData, metadata) {
     processed.push({
       index,
       from,
+      fromLabel: labelMap.get(from) || `Object ${from}`,
       to,
+      toLabel: labelMap.get(to) || `Object ${to}`,
       predicate,
       intervals,
       category,
@@ -174,12 +334,19 @@ function buildVideoData(manifestEntry, rawData, metadata) {
     .sort((a, b) => Number(a) - Number(b))
     .map((id) => ({
       id,
-      label: `Object ${id}`,
+      label: labelMap.get(id) || `Object ${id}`,
     }));
+
+  const centroidInfo = normaliseCentroidPayload(centroidsPayload, nodeArray);
+  if (centroidInfo.maxFrame != null) {
+    maxFrame = Math.max(maxFrame, centroidInfo.maxFrame);
+  }
 
   if (frameCount == null) {
     frameCount = maxFrame + 1;
   }
+
+  const fpsValue = parseFpsLabel(fpsLabel, 24);
 
   return {
     manifest: manifestEntry,
@@ -188,13 +355,18 @@ function buildVideoData(manifestEntry, rawData, metadata) {
     categories: Array.from(categories).sort(),
     nodes: nodeArray,
     maxFrame,
-    sliderMax: maxFrame,
+    sliderMax: Math.max(maxFrame, Number.isFinite(frameCount) ? frameCount - 1 : maxFrame),
     description: rawData.description || 'No description provided.',
     frameTemplate: manifestEntry.frame_template,
     metadataUrl: manifestEntry.metadata_url,
     metadata,
     frameCount,
     fpsLabel,
+    objectLabels: Object.fromEntries(labelMap),
+    centroids: centroidInfo.centroids,
+    imageWidth: centroidInfo.imageWidth,
+    imageHeight: centroidInfo.imageHeight,
+    fpsValue,
   };
 }
 
@@ -205,24 +377,42 @@ function destroyNetwork() {
     state.nodesDataset = null;
     state.edgesDataset = null;
   }
+  state.nodeCentroids = null;
+  state.imageSize = null;
+  state.fallbackPositions = null;
+  if (state.resizeHandler) {
+    window.removeEventListener('resize', state.resizeHandler);
+    state.resizeHandler = null;
+  }
 }
 
 function initialiseNetwork(nodes) {
   destroyNetwork();
   const container = dom.network;
   container.innerHTML = '';
+  if (!container.dataset.lockedScroll) {
+    container.addEventListener(
+      'wheel',
+      (event) => {
+        event.preventDefault();
+      },
+      { passive: false }
+    );
+    container.dataset.lockedScroll = 'true';
+  }
 
-  const total = Math.max(nodes.length, 3);
-  const radius = Math.max(220, Math.min(container.clientWidth, container.clientHeight) / 2.4);
+  const fallback = computeCircularLayout(nodes, container);
+  state.fallbackPositions = fallback;
 
-  const nodeData = nodes.map((node, idx) => {
-    const angle = (2 * Math.PI * idx) / total;
+  const nodeData = nodes.map((node) => {
+    const fallbackPos = fallback.get(String(node.id)) || { x: 0, y: 0 };
     return {
       id: node.id,
       label: node.label,
-      x: radius * Math.cos(angle),
-      y: radius * Math.sin(angle),
+      x: fallbackPos.x,
+      y: fallbackPos.y,
       physics: false,
+      hidden: true,
     };
   });
 
@@ -236,8 +426,10 @@ function initialiseNetwork(nodes) {
     interaction: {
       hover: true,
       dragNodes: true,
-      dragView: true,
-      zoomView: true,
+      dragView: false,
+      zoomView: false,
+      navigationButtons: false,
+      keyboard: false,
     },
     nodes: {
       shape: 'dot',
@@ -273,6 +465,14 @@ function initialiseNetwork(nodes) {
   state.network = new vis.Network(container, data, options);
   state.nodesDataset = data.nodes;
   state.edgesDataset = data.edges;
+
+  const handleResize = () => {
+    if (!state.network || !state.nodesDataset) return;
+    state.fallbackPositions = computeCircularLayout(nodes, container);
+    updateNetwork();
+  };
+  window.addEventListener('resize', handleResize);
+  state.resizeHandler = handleResize;
 }
 
 function getActiveRelations() {
@@ -286,9 +486,92 @@ function getActiveRelations() {
   });
 }
 
+function updateNodePositions(activeNodeIds) {
+  if (!state.nodesDataset || !state.currentVideoData) return;
+  const container = dom.network;
+  if (!container) return;
+
+  const centroids = state.nodeCentroids;
+  const hasCentroids = centroids instanceof Map && centroids.size > 0;
+  const imgWidth = state.imageSize?.width;
+  const imgHeight = state.imageSize?.height;
+  const allowCentroidPlacement = hasCentroids && Number.isFinite(imgWidth) && Number.isFinite(imgHeight) && imgWidth > 0 && imgHeight > 0;
+  const fallback = state.fallbackPositions instanceof Map ? state.fallbackPositions : new Map();
+
+  let activeSet = activeNodeIds instanceof Set ? activeNodeIds : null;
+  if (!activeSet) {
+    activeSet = new Set();
+    getActiveRelations().forEach((rel) => {
+      activeSet.add(rel.from);
+      activeSet.add(rel.to);
+    });
+  }
+
+  const frame = state.currentTime;
+  const containerWidth = Math.max(container.clientWidth, 1);
+  const containerHeight = Math.max(container.clientHeight, 1);
+
+  const updates = [];
+
+  state.currentVideoData.nodes.forEach((node) => {
+    const id = String(node.id);
+    const isActive = activeSet.size === 0 ? false : activeSet.has(id);
+    let hidden = !isActive;
+    let x = 0;
+    let y = 0;
+
+    if (isActive && allowCentroidPlacement) {
+      const frameMap = centroids.get(id);
+      const point = frameMap?.get(frame);
+      if (point) {
+        const normalizedX = (point.x / imgWidth) * containerWidth - containerWidth / 2;
+        const normalizedY = (point.y / imgHeight) * containerHeight - containerHeight / 2;
+        x = Number.isFinite(normalizedX) ? normalizedX : 0;
+        y = Number.isFinite(normalizedY) ? normalizedY : 0;
+        hidden = false;
+      }
+    }
+
+    if (isActive && hidden) {
+      const fallbackPos = fallback.get(id);
+      if (fallbackPos) {
+        x = fallbackPos.x;
+        y = fallbackPos.y;
+        hidden = false;
+      }
+    }
+
+    if (!isActive && allowCentroidPlacement) {
+      // Keep centroid-capable nodes hidden when not in use
+      hidden = true;
+    } else if (!isActive) {
+      const fallbackPos = fallback.get(id);
+      if (fallbackPos) {
+        x = fallbackPos.x;
+        y = fallbackPos.y;
+      }
+    }
+
+    updates.push({ id: node.id, x, y, hidden });
+  });
+
+  if (updates.length) {
+    state.nodesDataset.update(updates);
+  }
+  if (state.network) {
+    state.network.redraw();
+  }
+}
+
 function updateNetwork() {
   if (!state.edgesDataset) return;
   const active = getActiveRelations();
+
+  const activeNodeIds = new Set();
+  active.forEach((rel) => {
+    activeNodeIds.add(rel.from);
+    activeNodeIds.add(rel.to);
+  });
 
   const edges = active.map((rel) => {
     const style = CATEGORY_STYLES[rel.category] || CATEGORY_STYLES.default;
@@ -310,6 +593,8 @@ function updateNetwork() {
   if (edges.length) {
     state.edgesDataset.add(edges);
   }
+
+  updateNodePositions(activeNodeIds);
 }
 
 function renderActiveRelations() {
@@ -327,6 +612,8 @@ function renderActiveRelations() {
       const ranges = rel.intervals
         .map(([start, end]) => `frames ${start}–${end}`)
         .join(', ');
+      const from = rel.fromLabel || `Object ${rel.from}`;
+      const to = rel.toLabel || `Object ${rel.to}`;
       return `
         <div class="relation-item" data-category="${rel.category}">
           <div class="relation-item__header">
@@ -335,7 +622,7 @@ function renderActiveRelations() {
               ${rel.predicate}
             </span>
           </div>
-          <div class="relation-item__entities">${rel.from} → ${rel.to}</div>
+          <div class="relation-item__entities">${from} → ${to}</div>
           <div class="relation-item__time">${ranges}</div>
         </div>
       `;
@@ -372,7 +659,10 @@ function renderFrameDisplay() {
 
 function setCurrentTime(time) {
   if (!state.currentVideoData) return;
-  const clamped = Math.max(0, Math.min(time, state.currentVideoData.maxFrame));
+  const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
+    ? state.currentVideoData.sliderMax
+    : state.currentVideoData.maxFrame;
+  const clamped = Math.max(0, Math.min(time, upperBound));
   state.currentTime = clamped;
   dom.timeSlider.value = clamped.toString();
   dom.timeValue.textContent = clamped.toString();
@@ -398,10 +688,16 @@ function startPlayback() {
   dom.playToggle.textContent = '⏸';
   dom.playToggle.setAttribute('aria-label', 'Pause');
 
-  const interval = Math.max(80, 400 / state.speed);
+  const baseFps = Number.isFinite(state.baseFps) && state.baseFps > 0 ? state.baseFps : 24;
+  const speed = Number.isFinite(state.speed) && state.speed > 0 ? state.speed : 1;
+  const effectiveFps = baseFps * speed;
+  const interval = Math.max(16, 1000 / effectiveFps);
   state.timer = setInterval(() => {
     if (!state.currentVideoData) return;
-    const next = state.currentTime >= state.currentVideoData.maxFrame ? 0 : state.currentTime + 1;
+    const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
+      ? state.currentVideoData.sliderMax
+      : state.currentVideoData.maxFrame;
+    const next = state.currentTime >= upperBound ? 0 : state.currentTime + 1;
     setCurrentTime(next);
   }, interval);
 }
@@ -455,17 +751,23 @@ async function loadVideo(videoId) {
 
   let cached = state.videoCache.get(videoId);
   if (!cached) {
-    const [raw, metadata] = await Promise.all([
+    const [raw, metadata, centroidPayload] = await Promise.all([
       fetchRelations(manifestEntry.relations_url),
       fetchMetadata(manifestEntry.metadata_url),
+      fetchCentroids(videoId, manifestEntry),
     ]);
-    cached = buildVideoData(manifestEntry, raw, metadata);
+    cached = buildVideoData(manifestEntry, raw, metadata, centroidPayload);
     state.videoCache.set(videoId, cached);
   }
 
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
   state.enabledCategories = new Set(cached.categories);
+  state.nodeCentroids = cached.centroids;
+  state.imageSize = {
+    width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
+    height: Number.isFinite(cached.imageHeight) ? cached.imageHeight : null,
+  };
 
   dom.videoSelect.value = videoId;
   dom.videoTitle.textContent = videoId;
@@ -475,16 +777,23 @@ async function loadVideo(videoId) {
 
   const frameCount = cached.frameCount;
   const fpsRaw = cached.fpsLabel;
+  const fpsValue = cached.fpsValue;
   dom.metaFrames.textContent = frameCount ? frameCount.toLocaleString() : '—';
-  dom.metaFps.textContent = fpsRaw || '—';
+  dom.metaFps.textContent = fpsRaw || (Number.isFinite(fpsValue) ? fpsValue.toString() : '—');
 
   const sliderMax = Number.isFinite(cached.sliderMax) ? cached.sliderMax : cached.maxFrame;
   dom.timeSlider.max = sliderMax.toString();
   dom.timeSlider.value = '0';
   dom.timeSlider.disabled = sliderMax <= 0;
+  dom.timeSlider.step = '1';
 
   updateCategoryFilters(cached.categories);
   initialiseNetwork(cached.nodes);
+  if (Number.isFinite(fpsValue) && fpsValue > 0) {
+    state.baseFps = fpsValue;
+  } else {
+    state.baseFps = 24;
+  }
   setCurrentTime(0);
 }
 
@@ -524,7 +833,10 @@ function initialiseEventHandlers() {
   });
   dom.stepForward.addEventListener('click', () => {
     if (!state.currentVideoData) return;
-    const next = Math.min(state.currentVideoData.maxFrame, state.currentTime + 1);
+    const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
+      ? state.currentVideoData.sliderMax
+      : state.currentVideoData.maxFrame;
+    const next = Math.min(upperBound, state.currentTime + 1);
     setCurrentTime(next);
   });
 
@@ -534,7 +846,8 @@ function initialiseEventHandlers() {
   });
 
   dom.speedSelect.addEventListener('change', (event) => {
-    const value = Number(event.target.value) || 1;
+    const parsed = parseFloat(event.target.value);
+    const value = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
     state.speed = value;
     if (state.playing) {
       stopPlayback();
