@@ -270,36 +270,52 @@ function displayFrame(url) {
   const b = dom.frameImageB;
   if (!a || !b) return;
 
-  // Keep current visible; load next into the back buffer and swap when ready
+  // Keep current visible; load next into the back buffer and only swap when decoded
   const active = state.activeBuffer || 'A';
   const front = active === 'A' ? a : b;
   const back = active === 'A' ? b : a;
 
+  // If the requested frame is already visible, ensure it's shown and bail
   if (front.dataset.url === url) {
     if (front.style.opacity !== '1') front.style.opacity = '1';
     return;
   }
 
+  // Always keep the front visible until the back image has fully decoded
+  back.style.opacity = '0';
+
+  const swapIfCurrent = () => {
+    // Guard against races if multiple displayFrame calls happen quickly
+    if (back.dataset.url !== url) return;
+    back.style.opacity = '1';
+    front.style.opacity = '0';
+    state.activeBuffer = active === 'A' ? 'B' : 'A';
+    state.lastFrameUrl = url;
+  };
+
   ensurePrefetch(url)
-    .then(() => {
+    .catch(() => null)
+    .finally(() => {
+      // Set source after prefetch attempt; keep front visible until decode completes
       back.dataset.url = url;
       if (back.src !== url) back.src = url;
-      // show back, hide front
-      back.style.opacity = '1';
-      front.style.opacity = '0';
-      state.activeBuffer = active === 'A' ? 'B' : 'A';
-      state.lastFrameUrl = url;
-    })
-    .catch(() => {
-      // fall back to direct set without blanking the front; swap after it loads
-      back.dataset.url = url;
-      back.onload = () => {
-        back.style.opacity = '1';
-        front.style.opacity = '0';
-        state.activeBuffer = active === 'A' ? 'B' : 'A';
-        state.lastFrameUrl = url;
-      };
-      if (back.src !== url) back.src = url;
+
+      // If the image is already in cache and complete, try decode() to avoid flashing
+      const tryDecode = back.decode ? back.decode().catch(() => null) : Promise.resolve();
+
+      // If decode is supported, wait for it; otherwise rely on onload/complete
+      tryDecode
+        .then(() => {
+          // After successful decode, swap immediately
+          swapIfCurrent();
+        })
+        .catch(() => {
+          // Last resort: swap on load
+          back.onload = () => {
+            back.onload = null;
+            swapIfCurrent();
+          };
+        });
     });
 }
 
