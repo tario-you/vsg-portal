@@ -1298,11 +1298,25 @@ function renderFrameDisplay() {
   }
   const urlExample = formatFrameUrl(data.frameTemplate, state.currentTime);
   if (urlExample && urlExample !== '—') {
-    dom.frameDisplay.innerHTML = `Frame ${state.currentTime} — <a href="${urlExample}" target="_blank" rel="noopener">${urlExample}</a>`;
+    let linkLabel = urlExample;
+    try {
+      const parsed = new URL(urlExample);
+      const parts = parsed.pathname.split('/').filter(Boolean);
+      linkLabel = parts.pop() || parsed.hostname;
+    } catch (error) {
+      linkLabel = urlExample.split('/').pop() || urlExample;
+    }
+    dom.frameDisplay.title = urlExample;
+    dom.frameDisplay.innerHTML = `
+      <span class="frame-display__label">Frame ${state.currentTime}</span>
+      <span class="frame-display__divider">·</span>
+      <a class="frame-display__link" href="${urlExample}" target="_blank" rel="noopener">Open frame (${linkLabel})</a>
+    `;
     if (shouldRenderFrame(state.currentTime)) {
       displayFrame(urlExample);
     }
   } else {
+    dom.frameDisplay.removeAttribute('title');
     dom.frameDisplay.textContent = `Frame ${state.currentTime}`;
     hideBothFrames();
   }
