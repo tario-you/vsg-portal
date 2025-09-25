@@ -29,6 +29,8 @@ const state = {
   fallbackPositions: null,
   resizeHandler: null,
   baseFps: 24,
+  lastFrameUrl: null,
+  prefetch: { cache: new Map(), limit: 24 },
 };
 
 const dom = {
@@ -206,6 +208,35 @@ function computeCircularLayout(nodes, container) {
   });
 
   return fallback;
+}
+
+function prefetchNeighbors() {
+  const data = state.currentVideoData;
+  if (!data || !data.frameTemplate) return;
+  const max = Number.isFinite(data.sliderMax) ? data.sliderMax : data.maxFrame;
+  const center = state.currentTime || 0;
+  const radius = 6; // prefetch +/- 6 frames
+  const frames = [];
+  for (let k = -radius; k <= radius; k++) {
+    const f = center + k;
+    if (f >= 0 && f <= max) frames.push(f);
+  }
+  const cache = state.prefetch.cache;
+  const limit = state.prefetch.limit || 24;
+  frames.forEach((f) => {
+    const url = formatFrameUrl(data.frameTemplate, f);
+    if (!url || url === '—' || cache.has(url)) return;
+    const img = new Image();
+    img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
+    img.src = url;
+    cache.set(url, img);
+    // trim cache if needed (FIFO)
+    if (cache.size > limit) {
+      const firstKey = cache.keys().next().value;
+      cache.delete(firstKey);
+    }
+  });
 }
 
 async function fetchManifest() {
@@ -510,6 +541,18 @@ function updateNodePositions(activeNodeIds) {
   const frame = state.currentTime;
   const containerWidth = Math.max(container.clientWidth, 1);
   const containerHeight = Math.max(container.clientHeight, 1);
+  let scale = 1;
+  let offsetX = 0;
+  let offsetY = 0;
+  if (allowCentroidPlacement) {
+    const s1 = containerWidth / imgWidth;
+    const s2 = containerHeight / imgHeight;
+    scale = Math.min(s1, s2);
+    const dispW = imgWidth * scale;
+    const dispH = imgHeight * scale;
+    offsetX = (containerWidth - dispW) / 2;
+    offsetY = (containerHeight - dispH) / 2;
+  }
 
   const updates = [];
 
@@ -524,10 +567,10 @@ function updateNodePositions(activeNodeIds) {
       const frameMap = centroids.get(id);
       const point = frameMap?.get(frame);
       if (point) {
-        const normalizedX = (point.x / imgWidth) * containerWidth - containerWidth / 2;
-        const normalizedY = (point.y / imgHeight) * containerHeight - containerHeight / 2;
-        x = Number.isFinite(normalizedX) ? normalizedX : 0;
-        y = Number.isFinite(normalizedY) ? normalizedY : 0;
+        const screenX = offsetX + point.x * scale;
+        const screenY = offsetY + point.y * scale;
+        x = screenX - containerWidth / 2;
+        y = screenY - containerHeight / 2;
         hidden = false;
       }
     }
@@ -645,7 +688,10 @@ function renderFrameDisplay() {
   if (urlExample && urlExample !== '—') {
     dom.frameDisplay.innerHTML = `Frame ${state.currentTime} — <a href="${urlExample}" target="_blank" rel="noopener">${urlExample}</a>`;
     if (dom.frameImage) {
-      dom.frameImage.src = urlExample;
+      if (state.lastFrameUrl !== urlExample) {
+        dom.frameImage.src = urlExample;
+        state.lastFrameUrl = urlExample;
+      }
       dom.frameImage.alt = `Frame ${state.currentTime} for ${state.currentVideoId}`;
     }
   } else {
@@ -669,6 +715,7 @@ function setCurrentTime(time) {
   renderFrameDisplay();
   updateNetwork();
   renderActiveRelations();
+  prefetchNeighbors();
 }
 
 function stopPlayback() {
