@@ -1391,16 +1391,6 @@ async function loadVideo(videoId) {
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
   state.enabledCategories = new Set(cached.categories);
-  state.nodeCentroids = cached.centroids;
-  exposeStateForDebug();
-  state.centroidFrameIndex = new Map();
-  state.imageSize = {
-    width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
-    height: Number.isFinite(cached.imageHeight) ? cached.imageHeight : null,
-    originX: Number.isFinite(cached.centroidOriginX) ? cached.centroidOriginX : 0,
-    originY: Number.isFinite(cached.centroidOriginY) ? cached.centroidOriginY : 0,
-    bounds: cached.centroidBounds || null,
-  };
 
   dom.videoSelect.value = videoId;
   dom.videoTitle.textContent = videoId;
@@ -1422,6 +1412,17 @@ async function loadVideo(videoId) {
 
   updateCategoryFilters(cached.categories);
   initialiseNetwork(cached.nodes);
+  state.nodeCentroids = cached.centroids;
+  state.centroidFrameIndex = new Map();
+  state.imageSize = {
+    width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
+    height: Number.isFinite(cached.imageHeight) ? cached.imageHeight : null,
+    originX: Number.isFinite(cached.centroidOriginX) ? cached.centroidOriginX : 0,
+    originY: Number.isFinite(cached.centroidOriginY) ? cached.centroidOriginY : 0,
+    bounds: cached.centroidBounds || null,
+  };
+  exposeStateForDebug();
+
   if (Number.isFinite(fpsValue) && fpsValue > 0) {
     state.baseFps = fpsValue;
   } else {
