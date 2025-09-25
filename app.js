@@ -38,6 +38,7 @@ const dom = {
   speedSelect: document.getElementById('speed-select'),
   videoCount: document.getElementById('video-count'),
   frameDisplay: document.getElementById('frame-display'),
+  frameImage: document.getElementById('frame-image'),
   network: document.getElementById('network'),
   videoTitle: document.getElementById('video-title'),
   videoDescription: document.getElementById('video-description'),
@@ -64,11 +65,12 @@ function padFrame(frame) {
 
 function formatFrameUrl(template, frame) {
   if (!template) return '—';
+  const frameValue = frame + 1; // assets are 1-indexed
   if (template.includes('{frame:04d}')) {
-    return template.replace('{frame:04d}', padFrame(frame));
+    return template.replace('{frame:04d}', padFrame(frameValue));
   }
   if (template.includes('{frame}')) {
-    return template.replace('{frame}', frame.toString());
+    return template.replace('{frame}', frameValue.toString());
   }
   return template;
 }
@@ -346,13 +348,25 @@ function renderFrameDisplay() {
   const data = state.currentVideoData;
   if (!data) {
     dom.frameDisplay.textContent = 'Frame 0 — awaiting selection.';
+    if (dom.frameImage) {
+      dom.frameImage.src = '';
+      dom.frameImage.alt = 'No frame loaded';
+    }
     return;
   }
   const urlExample = formatFrameUrl(data.frameTemplate, state.currentTime);
   if (urlExample && urlExample !== '—') {
     dom.frameDisplay.innerHTML = `Frame ${state.currentTime} — <a href="${urlExample}" target="_blank" rel="noopener">${urlExample}</a>`;
+    if (dom.frameImage) {
+      dom.frameImage.src = urlExample;
+      dom.frameImage.alt = `Frame ${state.currentTime} for ${state.currentVideoId}`;
+    }
   } else {
     dom.frameDisplay.textContent = `Frame ${state.currentTime}`;
+    if (dom.frameImage) {
+      dom.frameImage.src = '';
+      dom.frameImage.alt = 'Frame unavailable';
+    }
   }
 }
 

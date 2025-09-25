@@ -155,12 +155,31 @@ body {
   align-items: center;
 }
 
-.network-canvas {
+.frame-viewport {
+  position: relative;
   flex: 1;
   border-radius: 1.25rem;
   border: 1px solid rgba(148, 163, 184, 0.25);
-  background: radial-gradient(circle at center, rgba(148, 163, 184, 0.12), rgba(226, 232, 240, 0.05));
-  min-height: 400px;
+  background: #000;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+.frame-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.network-canvas {
+  position: absolute !important;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
 }
 
 .sidebar {

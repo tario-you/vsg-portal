@@ -52,7 +52,10 @@
   <main class="layout">
     <section class="visualizer">
       <div class="frame-display" id="frame-display">Frame 0 — awaiting selection.</div>
-      <div id="network" class="network-canvas" aria-label="Relationship graph"></div>
+      <div class="frame-viewport">
+        <img id="frame-image" class="frame-image" alt="Video frame preview" />
+        <div id="network" class="network-canvas" aria-label="Relationship graph"></div>
+      </div>
     </section>
 
     <aside class="sidebar">
