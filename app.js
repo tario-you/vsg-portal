@@ -18,7 +18,7 @@ const state = {
   currentVideoData: null,
   currentTime: 0,
   playing: false,
-  speed: 1,
+  speed: 0.125,
   timer: null,
   enabledCategories: new Set(),
   network: null,
