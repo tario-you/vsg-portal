@@ -1373,6 +1373,7 @@ function startPlayback() {
 
   const baseFps = Number.isFinite(state.baseFps) && state.baseFps > 0 ? state.baseFps : 24;
   const speed = Number.isFinite(state.speed) && state.speed > 0 ? state.speed : 1;
+  const stride = Math.max(1, Number(state.renderStride) || 1);
   const effectiveFps = baseFps * speed;
   const interval = Math.max(16, 1000 / effectiveFps);
   state.timer = setInterval(() => {
@@ -1380,7 +1381,10 @@ function startPlayback() {
     const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
       ? state.currentVideoData.sliderMax
       : state.currentVideoData.maxFrame;
-    const next = state.currentTime >= upperBound ? 0 : state.currentTime + 1;
+    let next = state.currentTime + stride;
+    if (next > upperBound) {
+      next = 0;
+    }
     setCurrentTime(next);
   }, interval);
 }
@@ -1535,15 +1539,17 @@ function initialiseEventHandlers() {
   dom.playToggle.addEventListener('click', togglePlayback);
   dom.stepBack.addEventListener('click', () => {
     if (!state.currentVideoData) return;
-    const next = Math.max(0, state.currentTime - 1);
+    const stride = Math.max(1, Number(state.renderStride) || 1);
+    const next = Math.max(0, state.currentTime - stride);
     setCurrentTime(next);
   });
   dom.stepForward.addEventListener('click', () => {
     if (!state.currentVideoData) return;
+    const stride = Math.max(1, Number(state.renderStride) || 1);
     const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
       ? state.currentVideoData.sliderMax
       : state.currentVideoData.maxFrame;
-    const next = Math.min(upperBound, state.currentTime + 1);
+    const next = Math.min(upperBound, state.currentTime + stride);
     setCurrentTime(next);
   });
 
