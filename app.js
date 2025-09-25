@@ -943,10 +943,12 @@ function initialiseNetwork(nodes) {
         hover: { background: '#f97316', border: '#ea580c' },
       },
       font: {
-        color: '#0f172a',
+        color: '#ffffff',
         face: 'Inter',
         size: 16,
         align: 'horizontal',
+        background: '#000000',
+        strokeWidth: 0,
       },
     },
     edges: {
