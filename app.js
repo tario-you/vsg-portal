@@ -188,17 +188,47 @@ function canonicalCategory(value) {
   return String(value).trim().toLowerCase().replace(/[\s-]+/g, '_');
 }
 
+function getCurrentStride() {
+  const parsed = Number(state.renderStride);
+  const valid = Number.isFinite(parsed) && parsed >= 1 ? Math.floor(parsed) : 1;
+  return valid || 1;
+}
+
 function shouldRenderFrame(time) {
-  const stride = Number(state.renderStride) || 1;
+  const stride = getCurrentStride();
   if (!state.playing) return true;
   if (stride <= 1) return true;
   return (time % stride) === 0;
 }
 
 function getRenderFrame(time) {
-  const stride = Math.max(1, Number(state.renderStride) || 1);
-  if (stride <= 1) return time;
+  const stride = getCurrentStride();
+  if (stride <= 1) return Math.round(time);
   return Math.floor(time / stride) * stride;
+}
+
+function snapToStride(time, upperBound = Infinity) {
+  const stride = getCurrentStride();
+  const bound = Number.isFinite(upperBound) ? upperBound : Infinity;
+  const limited = Math.max(0, Math.min(time, bound));
+  if (stride <= 1) {
+    return Math.round(limited);
+  }
+  const snapped = Math.floor(limited / stride) * stride;
+  if (!Number.isFinite(bound)) {
+    return snapped;
+  }
+  if (snapped <= bound) {
+    return snapped;
+  }
+  const fallback = Math.floor(bound / stride) * stride;
+  return Math.max(0, fallback);
+}
+
+function updateTimeSliderStep() {
+  if (!dom.timeSlider) return;
+  const step = getCurrentStride();
+  dom.timeSlider.step = step.toString();
 }
 
 function formatCategoryLabel(cat) {
@@ -1348,14 +1378,13 @@ function setCurrentTime(time) {
   const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
     ? state.currentVideoData.sliderMax
     : state.currentVideoData.maxFrame;
-  const clamped = Math.max(0, Math.min(time, upperBound));
-  state.currentTime = clamped;
-  dom.timeSlider.value = clamped.toString();
-  const renderFrameIndex = getRenderFrame(clamped);
-  const changed = state.lastRenderedFrame !== renderFrameIndex;
-  dom.timeValue.textContent = renderFrameIndex.toString();
+  const snapped = snapToStride(time, upperBound);
+  state.currentTime = snapped;
+  dom.timeSlider.value = snapped.toString();
+  dom.timeValue.textContent = snapped.toString();
+  const changed = state.lastRenderedFrame !== snapped;
   if (changed) {
-    state.lastRenderedFrame = renderFrameIndex;
+    state.lastRenderedFrame = snapped;
     renderFrameDisplay();
     updateNetwork();
     renderActiveRelations();
@@ -1494,7 +1523,7 @@ async function loadVideo(videoId) {
   dom.timeSlider.max = sliderMax.toString();
   dom.timeSlider.value = '0';
   dom.timeSlider.disabled = sliderMax <= 0;
-  dom.timeSlider.step = '1';
+  updateTimeSliderStep();
 
   updateCategoryFilters(cached.categories);
   initialiseNetwork(cached.nodes);
@@ -1584,14 +1613,14 @@ function initialiseEventHandlers() {
     if (Number.isFinite(initialStride) && initialStride >= 1) {
       state.renderStride = initialStride;
     }
+    updateTimeSliderStep();
     dom.renderRate.addEventListener('change', (event) => {
       const parsed = parseInt(event.target.value, 10);
       state.renderStride = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
-      // Nudge a render so the change is visible
+      updateTimeSliderStep();
+      // Force a refresh so the new stride is reflected everywhere
       state.lastRenderedFrame = null;
-      renderFrameDisplay();
-      updateNetwork();
-      renderActiveRelations();
+      setCurrentTime(state.currentTime);
     });
   }
 
