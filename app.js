@@ -503,12 +503,9 @@ function prefetchNeighbors() {
   const center = state.currentTime || 0;
   const radius = 6; // prefetch +/- 6 frames
   const stride = Number(state.renderStride) || 1;
-  const playing = state.playing === true;
   const frames = [];
   const shouldPrefetch = (frame) => {
-    if (!playing) return true;
     if (stride <= 1) return true;
-    if (frame === center) return true;
     return frame % stride === 0;
   };
   for (let k = -radius; k <= radius; k++) {
