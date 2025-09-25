@@ -25,6 +25,7 @@ const state = {
   nodesDataset: null,
   edgesDataset: null,
   nodeCentroids: null,
+  centroidFrameIndex: new Map(),
   imageSize: null,
   fallbackPositions: null,
   resizeHandler: null,
@@ -32,6 +33,7 @@ const state = {
   lastFrameUrl: null,
   prefetch: { cache: new Map(), limit: 24 },
   renderStride: 6,
+  debug: { enabled: false, overlay: null },
 };
 
 const dom = {
@@ -60,6 +62,107 @@ const dom = {
   categoryFilters: document.getElementById('category-filters'),
   activeRelations: document.getElementById('active-relations'),
 };
+
+function detectDebugMode() {
+  if (typeof window === 'undefined') return false;
+  try {
+    if (window.__VSG_DEBUG__ === true) return true;
+  } catch (error) {
+    console.debug('Debug flag inspection failed:', error);
+  }
+  try {
+    const params = new URLSearchParams(window.location.search || '');
+    if (params.has('debug')) {
+      const value = params.get('debug');
+      if (value === null || value === '' || value === '1' || value.toLowerCase() === 'true') {
+        return true;
+      }
+      if (value.toLowerCase() === '0' || value.toLowerCase() === 'false') {
+        return false;
+      }
+    }
+  } catch (error) {
+    console.debug('URLSearchParams unavailable for debug detect:', error);
+  }
+  try {
+    const stored = window.localStorage?.getItem('vsg-debug');
+    if (stored === '1') return true;
+  } catch (error) {
+    console.debug('LocalStorage debug read failed:', error);
+  }
+  return false;
+}
+
+function ensureDebugOverlay() {
+  if (!state.debug.enabled || state.debug.overlay) return;
+  const el = document.createElement('div');
+  el.id = 'vsg-debug-overlay';
+  el.style.position = 'fixed';
+  el.style.bottom = '12px';
+  el.style.right = '12px';
+  el.style.maxWidth = '360px';
+  el.style.fontFamily = "'JetBrains Mono', 'Roboto Mono', monospace";
+  el.style.fontSize = '11px';
+  el.style.lineHeight = '1.4';
+  el.style.color = '#f8fafc';
+  el.style.background = 'rgba(15, 23, 42, 0.82)';
+  el.style.border = '1px solid rgba(148, 163, 184, 0.45)';
+  el.style.borderRadius = '8px';
+  el.style.padding = '8px 10px';
+  el.style.pointerEvents = 'none';
+  el.style.zIndex = '9999';
+  el.style.whiteSpace = 'pre-wrap';
+  el.style.backdropFilter = 'blur(6px)';
+  document.body.appendChild(el);
+  state.debug.overlay = el;
+}
+
+function formatDebugNumber(value, digits = 2) {
+  return Number.isFinite(value) ? value.toFixed(digits) : '—';
+}
+
+function renderDebugOverlay(info) {
+  if (!state.debug.enabled) return;
+  ensureDebugOverlay();
+  const el = state.debug.overlay;
+  if (!el) return;
+
+  const summary = [
+    `frame: ${info.frame}`,
+    `container: ${formatDebugNumber(info.containerWidth, 0)}×${formatDebugNumber(info.containerHeight, 0)} | img: ${formatDebugNumber(info.imgWidth, 0)}×${formatDebugNumber(info.imgHeight, 0)}`,
+    `scale: ${formatDebugNumber(info.scale, 3)} offset: (${formatDebugNumber(info.offsetX, 1)}, ${formatDebugNumber(info.offsetY, 1)}` + ')',
+    `active: ${info.counts.active} | centroid: ${info.counts.centroid} | fallback: ${info.counts.fallback} | hidden: ${info.counts.hidden} | inactive: ${info.counts.inactive}`,
+  ];
+
+  if (info.samples && info.samples.length) {
+    summary.push('samples:');
+    info.samples.forEach((sample) => {
+      summary.push(
+        `  ${sample.id} → src=${sample.source} frame=${sample.frame} world=(${formatDebugNumber(sample.worldX, 1)}, ${formatDebugNumber(sample.worldY, 1)}) screen=(${formatDebugNumber(sample.screenX, 1)}, ${formatDebugNumber(sample.screenY, 1)})`
+      );
+    });
+  } else {
+    summary.push('samples: none (enable relations or check centroids)');
+  }
+
+  summary.push('— debug mode is active (toggle with ?debug=0)');
+  el.textContent = summary.join('\n');
+
+  try {
+    window.__VSG_LAST_DEBUG__ = info;
+  } catch (error) {
+    console.debug('Unable to expose debug info globally:', error);
+  }
+}
+
+function configureDebugMode() {
+  const enabled = detectDebugMode();
+  state.debug.enabled = enabled;
+  if (enabled) {
+    ensureDebugOverlay();
+    console.info('VSG debug mode enabled. Append ?debug=0 to the URL to disable.');
+  }
+}
 
 function canonicalCategory(value) {
   if (!value) return 'default';
@@ -473,11 +576,66 @@ async function fetchMetadata(url) {
 }
 
 async function fetchCentroids(videoId, manifestEntry) {
+  const baseHref = typeof window !== 'undefined' && window.location ? window.location.href : 'http://localhost/';
   const candidates = [];
+  const seen = new Set();
+
+  const addCandidate = (value) => {
+    if (!value && value !== '') return;
+    const str = String(value).trim();
+    if (!str) return;
+
+    const pushVariant = (candidate) => {
+      if (!candidate) return;
+      if (seen.has(candidate)) return;
+      seen.add(candidate);
+      candidates.push(candidate);
+    };
+
+    pushVariant(str);
+
+    try {
+      const absolute = new URL(str, baseHref).href;
+      pushVariant(absolute);
+    } catch (error) {
+      // Ignore resolution errors for malformed URLs
+    }
+  };
+
   if (manifestEntry?.centroids_url) {
-    candidates.push(manifestEntry.centroids_url);
+    addCandidate(manifestEntry.centroids_url);
   }
-  candidates.push(`public/centroids/${videoId}.json`);
+
+  if (manifestEntry?.relations_url) {
+    const relUrl = manifestEntry.relations_url;
+    const swapped = relUrl.replace(/sav_rels/gi, 'centroids');
+    if (swapped !== relUrl) {
+      addCandidate(swapped);
+    }
+    const trimmed = swapped.replace(/\bpublic\//gi, '');
+    if (trimmed !== swapped) {
+      addCandidate(trimmed);
+    }
+  }
+
+  if (manifestEntry?.metadata_url) {
+    const metaUrl = manifestEntry.metadata_url;
+    const swapped = metaUrl.replace(/metadata\.json/gi, 'centroids.json');
+    if (swapped !== metaUrl) {
+      addCandidate(swapped);
+    }
+  }
+
+  [
+    `public/centroids/${videoId}.json`,
+    `/public/centroids/${videoId}.json`,
+    `./public/centroids/${videoId}.json`,
+    `centroids/${videoId}.json`,
+    `/centroids/${videoId}.json`,
+    `./centroids/${videoId}.json`,
+    `${videoId}.json`,
+    `./${videoId}.json`,
+  ].forEach(addCandidate);
 
   for (const url of candidates) {
     try {
@@ -493,6 +651,8 @@ async function fetchCentroids(videoId, manifestEntry) {
       console.debug(`Centroid fetch failed for ${url}:`, error);
     }
   }
+
+  console.warn(`Centroid data not found for video ${videoId}`);
   return null;
 }
 
@@ -613,6 +773,7 @@ function destroyNetwork() {
     state.edgesDataset = null;
   }
   state.nodeCentroids = null;
+  state.centroidFrameIndex = new Map();
   state.imageSize = null;
   state.fallbackPositions = null;
   if (state.resizeHandler) {
@@ -721,6 +882,79 @@ function getActiveRelations() {
   });
 }
 
+// Locate or interpolate a centroid for the requested frame so sparse data still renders smoothly.
+function getCentroidPoint(nodeId, frame) {
+  const centroids = state.nodeCentroids;
+  if (!(centroids instanceof Map) || centroids.size === 0) return null;
+
+  const id = String(nodeId);
+  const frameMap = centroids.get(id);
+  if (!(frameMap instanceof Map) || frameMap.size === 0) return null;
+
+  const direct = frameMap.get(frame);
+  if (direct) return direct;
+
+  let frameIndex = state.centroidFrameIndex.get(id);
+  if (!frameIndex) {
+    frameIndex = Array.from(frameMap.keys()).sort((a, b) => a - b);
+    state.centroidFrameIndex.set(id, frameIndex);
+  }
+
+  if (!frameIndex.length) return null;
+
+  let left = 0;
+  let right = frameIndex.length - 1;
+
+  while (left <= right) {
+    const mid = (left + right) >> 1;
+    const value = frameIndex[mid];
+    if (value === frame) {
+      const match = frameMap.get(value);
+      if (match) return match;
+      break;
+    }
+    if (value < frame) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  const nextIdx = left;
+  const prevIdx = right;
+  const prevFrame = prevIdx >= 0 ? frameIndex[prevIdx] : null;
+  const nextFrame = nextIdx < frameIndex.length ? frameIndex[nextIdx] : null;
+
+  if (prevFrame == null && nextFrame == null) {
+    return null;
+  }
+
+  if (nextFrame == null) {
+    return frameMap.get(prevFrame) || null;
+  }
+
+  if (prevFrame == null) {
+    return frameMap.get(nextFrame) || null;
+  }
+
+  const prevPoint = frameMap.get(prevFrame);
+  const nextPoint = frameMap.get(nextFrame);
+  if (!prevPoint || !nextPoint) {
+    return prevPoint || nextPoint || null;
+  }
+
+  const span = nextFrame - prevFrame;
+  if (!Number.isFinite(span) || span === 0) {
+    return prevPoint;
+  }
+
+  const alpha = (frame - prevFrame) / span;
+  return {
+    x: prevPoint.x + (nextPoint.x - prevPoint.x) * alpha,
+    y: prevPoint.y + (nextPoint.y - prevPoint.y) * alpha,
+  };
+}
+
 function updateNodePositions(activeNodeIds) {
   if (!state.nodesDataset || !state.currentVideoData) return;
   const container = dom.network;
@@ -759,43 +993,98 @@ function updateNodePositions(activeNodeIds) {
   }
 
   const updates = [];
+  const debugInfo = state.debug.enabled
+    ? {
+        frame,
+        containerWidth,
+        containerHeight,
+        imgWidth,
+        imgHeight,
+        scale,
+        offsetX,
+        offsetY,
+        counts: { centroid: 0, fallback: 0, hidden: 0, inactive: 0, active: 0 },
+        samples: [],
+      }
+    : null;
+  const debugSampleLimit = 6;
 
   state.currentVideoData.nodes.forEach((node) => {
     const id = String(node.id);
     const isActive = activeSet.size === 0 ? false : activeSet.has(id);
-    let hidden = !isActive;
+    let hidden = true;
     let x = 0;
     let y = 0;
 
+    let point = null;
     if (isActive && allowCentroidPlacement) {
-      const frameMap = centroids.get(id);
-      const point = frameMap?.get(frame);
-      if (point) {
-        const screenX = offsetX + point.x * scale;
-        const screenY = offsetY + point.y * scale;
-        x = screenX - containerWidth / 2;
-        y = screenY - containerHeight / 2;
-        hidden = false;
-      }
+      point = getCentroidPoint(id, frame);
     }
 
-    if (isActive && hidden) {
+    if (point && Number.isFinite(point.x) && Number.isFinite(point.y)) {
+      const screenX = offsetX + point.x * scale;
+      const screenY = offsetY + point.y * scale;
+      x = screenX - containerWidth / 2;
+      y = screenY - containerHeight / 2;
+      hidden = false;
+      if (debugInfo) {
+        debugInfo.counts.centroid += 1;
+        debugInfo.counts.active += 1;
+        if (debugInfo.samples.length < debugSampleLimit) {
+          debugInfo.samples.push({
+            id,
+            source: 'centroid',
+            frame,
+            worldX: point.x,
+            worldY: point.y,
+            screenX,
+            screenY,
+          });
+        }
+      }
+    } else if (isActive) {
+      if (debugInfo) {
+        debugInfo.counts.active += 1;
+      }
       const fallbackPos = fallback.get(id);
       if (fallbackPos) {
         x = fallbackPos.x;
         y = fallbackPos.y;
         hidden = false;
+        if (debugInfo) {
+          debugInfo.counts.fallback += 1;
+          if (debugInfo.samples.length < debugSampleLimit) {
+            debugInfo.samples.push({
+              id,
+              source: 'fallback',
+              frame,
+              worldX: fallbackPos.x,
+              worldY: fallbackPos.y,
+              screenX: fallbackPos.x,
+              screenY: fallbackPos.y,
+            });
+          }
+        }
+      } else if (debugInfo) {
+        debugInfo.counts.hidden += 1;
       }
     }
 
-    if (!isActive && allowCentroidPlacement) {
-      // Keep centroid-capable nodes hidden when not in use
-      hidden = true;
-    } else if (!isActive) {
-      const fallbackPos = fallback.get(id);
-      if (fallbackPos) {
-        x = fallbackPos.x;
-        y = fallbackPos.y;
+    if (!isActive) {
+      if (debugInfo) {
+        debugInfo.counts.inactive += 1;
+      }
+      if (allowCentroidPlacement) {
+        hidden = true;
+      } else {
+        const fallbackPos = fallback.get(id);
+        if (fallbackPos) {
+          x = fallbackPos.x;
+          y = fallbackPos.y;
+        }
+      }
+      if (debugInfo && hidden) {
+        debugInfo.counts.hidden += 1;
       }
     }
 
@@ -807,6 +1096,9 @@ function updateNodePositions(activeNodeIds) {
   }
   if (state.network) {
     state.network.redraw();
+  }
+  if (debugInfo) {
+    renderDebugOverlay(debugInfo);
   }
 }
 
@@ -1007,6 +1299,7 @@ async function loadVideo(videoId) {
   state.currentVideoData = cached;
   state.enabledCategories = new Set(cached.categories);
   state.nodeCentroids = cached.centroids;
+  state.centroidFrameIndex = new Map();
   state.imageSize = {
     width: Number.isFinite(cached.imageWidth) ? cached.imageWidth : null,
     height: Number.isFinite(cached.imageHeight) ? cached.imageHeight : null,
@@ -1151,5 +1444,6 @@ async function initialise() {
   }
 }
 
+configureDebugMode();
 initialiseEventHandlers();
 initialise();
