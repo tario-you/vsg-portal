@@ -46,6 +46,8 @@ const dom = {
   videoCount: document.getElementById('video-count'),
   frameDisplay: document.getElementById('frame-display'),
   frameImage: document.getElementById('frame-image'),
+  frameImageA: document.getElementById('frame-image-a'),
+  frameImageB: document.getElementById('frame-image-b'),
   network: document.getElementById('network'),
   videoTitle: document.getElementById('video-title'),
   videoDescription: document.getElementById('video-description'),
@@ -237,6 +239,68 @@ function prefetchNeighbors() {
       cache.delete(firstKey);
     }
   });
+}
+
+function ensurePrefetch(url) {
+  const cache = state.prefetch.cache;
+  let img = cache.get(url);
+  if (img && img.complete && img.naturalWidth) return Promise.resolve(img);
+  if (!img) {
+    img = new Image();
+    img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
+    cache.set(url, img);
+  }
+  return new Promise((resolve, reject) => {
+    img.onload = () => resolve(img);
+    img.onerror = (e) => reject(e);
+    if (!img.src) img.src = url;
+  });
+}
+
+function hideBothFrames() {
+  const a = dom.frameImageA;
+  const b = dom.frameImageB;
+  if (a) a.style.opacity = '0';
+  if (b) b.style.opacity = '0';
+}
+
+function displayFrame(url) {
+  const a = dom.frameImageA;
+  const b = dom.frameImageB;
+  if (!a || !b) return;
+
+  // Keep current visible; load next into the back buffer and swap when ready
+  const active = state.activeBuffer || 'A';
+  const front = active === 'A' ? a : b;
+  const back = active === 'A' ? b : a;
+
+  if (front.dataset.url === url) {
+    if (front.style.opacity !== '1') front.style.opacity = '1';
+    return;
+  }
+
+  ensurePrefetch(url)
+    .then(() => {
+      back.dataset.url = url;
+      if (back.src !== url) back.src = url;
+      // show back, hide front
+      back.style.opacity = '1';
+      front.style.opacity = '0';
+      state.activeBuffer = active === 'A' ? 'B' : 'A';
+      state.lastFrameUrl = url;
+    })
+    .catch(() => {
+      // fall back to direct set without blanking the front; swap after it loads
+      back.dataset.url = url;
+      back.onload = () => {
+        back.style.opacity = '1';
+        front.style.opacity = '0';
+        state.activeBuffer = active === 'A' ? 'B' : 'A';
+        state.lastFrameUrl = url;
+      };
+      if (back.src !== url) back.src = url;
+    });
 }
 
 async function fetchManifest() {
@@ -678,28 +742,16 @@ function renderFrameDisplay() {
   const data = state.currentVideoData;
   if (!data) {
     dom.frameDisplay.textContent = 'Frame 0 — awaiting selection.';
-    if (dom.frameImage) {
-      dom.frameImage.src = '';
-      dom.frameImage.alt = 'No frame loaded';
-    }
+    hideBothFrames();
     return;
   }
   const urlExample = formatFrameUrl(data.frameTemplate, state.currentTime);
   if (urlExample && urlExample !== '—') {
     dom.frameDisplay.innerHTML = `Frame ${state.currentTime} — <a href="${urlExample}" target="_blank" rel="noopener">${urlExample}</a>`;
-    if (dom.frameImage) {
-      if (state.lastFrameUrl !== urlExample) {
-        dom.frameImage.src = urlExample;
-        state.lastFrameUrl = urlExample;
-      }
-      dom.frameImage.alt = `Frame ${state.currentTime} for ${state.currentVideoId}`;
-    }
+    displayFrame(urlExample);
   } else {
     dom.frameDisplay.textContent = `Frame ${state.currentTime}`;
-    if (dom.frameImage) {
-      dom.frameImage.src = '';
-      dom.frameImage.alt = 'Frame unavailable';
-    }
+    hideBothFrames();
   }
 }
 
