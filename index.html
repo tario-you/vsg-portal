@@ -49,6 +49,17 @@
         </select>
       </div>
       <div class="control-group">
+        <label for="render-rate" class="sr-only">Render stride</label>
+        <select id="render-rate" aria-label="Render stride (render every Nth frame)">
+          <option value="1">All frames</option>
+          <option value="2">Every 2nd (≈12 fps)</option>
+          <option value="3">Every 3rd (≈8 fps)</option>
+          <option value="4">Every 4th (≈6 fps)</option>
+          <option value="6" selected>Every 6th (≈4 fps)</option>
+          <option value="8">Every 8th (≈3 fps)</option>
+        </select>
+      </div>
+      <div class="control-group">
         <span id="video-count" class="video-count">0 videos</span>
       </div>
     </div>

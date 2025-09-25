@@ -31,6 +31,7 @@ const state = {
   baseFps: 24,
   lastFrameUrl: null,
   prefetch: { cache: new Map(), limit: 24 },
+  renderStride: 6,
 };
 
 const dom = {
@@ -43,6 +44,7 @@ const dom = {
   stepBack: document.getElementById('step-back'),
   stepForward: document.getElementById('step-forward'),
   speedSelect: document.getElementById('speed-select'),
+  renderRate: document.getElementById('render-rate'),
   videoCount: document.getElementById('video-count'),
   frameDisplay: document.getElementById('frame-display'),
   frameImage: document.getElementById('frame-image'),
@@ -62,6 +64,13 @@ const dom = {
 function canonicalCategory(value) {
   if (!value) return 'default';
   return String(value).trim().toLowerCase().replace(/[\s-]+/g, '_');
+}
+
+function shouldRenderFrame(time) {
+  const stride = Number(state.renderStride) || 1;
+  if (!state.playing) return true;
+  if (stride <= 1) return true;
+  return (time % stride) === 0;
 }
 
 function formatCategoryLabel(cat) {
@@ -764,7 +773,9 @@ function renderFrameDisplay() {
   const urlExample = formatFrameUrl(data.frameTemplate, state.currentTime);
   if (urlExample && urlExample !== '—') {
     dom.frameDisplay.innerHTML = `Frame ${state.currentTime} — <a href="${urlExample}" target="_blank" rel="noopener">${urlExample}</a>`;
-    displayFrame(urlExample);
+    if (shouldRenderFrame(state.currentTime)) {
+      displayFrame(urlExample);
+    }
   } else {
     dom.frameDisplay.textContent = `Frame ${state.currentTime}`;
     hideBothFrames();
@@ -781,8 +792,10 @@ function setCurrentTime(time) {
   dom.timeSlider.value = clamped.toString();
   dom.timeValue.textContent = clamped.toString();
   renderFrameDisplay();
-  updateNetwork();
-  renderActiveRelations();
+  if (shouldRenderFrame(clamped)) {
+    updateNetwork();
+    renderActiveRelations();
+  }
   prefetchNeighbors();
 }
 
@@ -969,6 +982,22 @@ function initialiseEventHandlers() {
       startPlayback();
     }
   });
+
+  if (dom.renderRate) {
+    // Initialize from current select value
+    const initialStride = parseInt(dom.renderRate.value, 10);
+    if (Number.isFinite(initialStride) && initialStride >= 1) {
+      state.renderStride = initialStride;
+    }
+    dom.renderRate.addEventListener('change', (event) => {
+      const parsed = parseInt(event.target.value, 10);
+      state.renderStride = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
+      // Nudge a render so the change is visible
+      renderFrameDisplay();
+      updateNetwork();
+      renderActiveRelations();
+    });
+  }
 
   window.addEventListener('visibilitychange', () => {
     if (document.hidden) {
