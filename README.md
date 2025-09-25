@@ -76,4 +76,3 @@ backend is required.
 - Add richer metadata (object labels, evaluation metrics) if desired.
 - Extend the network view to support side-by-side comparisons or semantic
   filters once additional data is available.
-# vsg-portal
