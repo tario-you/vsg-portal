@@ -159,44 +159,159 @@ function normaliseCentroidPayload(payload, nodes) {
 
   const nodeIdSet = new Set(nodes.map((node) => String(node.id)));
   const rawCentroids = payload.centroids;
-  if (!rawCentroids || typeof rawCentroids !== 'object') {
+  if (!rawCentroids || (typeof rawCentroids !== 'object' && !Array.isArray(rawCentroids))) {
     return { centroids: null, imageWidth: null, imageHeight: null, maxFrame: null };
   }
 
   const centroidMap = new Map();
   let maxFrame = -Infinity;
+  let maxObservedX = -Infinity;
+  let maxObservedY = -Infinity;
+  let minObservedX = Infinity;
+  let minObservedY = Infinity;
+  let pointCount = 0;
 
-  Object.entries(rawCentroids).forEach(([objectId, frames]) => {
-    const nodeId = String(objectId);
-    if (!nodeIdSet.has(nodeId)) return;
-    if (!frames || typeof frames !== 'object') return;
+  const registerPoint = (perFrame, frameKey, coordsLike) => {
+    const frame = Number(frameKey);
+    if (!Number.isFinite(frame) || frame < 0) return;
+
+    let x = null;
+    let y = null;
+
+    if (Array.isArray(coordsLike)) {
+      if (coordsLike.length >= 2) {
+        x = Number(coordsLike[0]);
+        y = Number(coordsLike[1]);
+      }
+    } else if (coordsLike && typeof coordsLike === 'object') {
+      const candidateX = coordsLike.x ?? coordsLike.X ?? coordsLike[0];
+      const candidateY = coordsLike.y ?? coordsLike.Y ?? coordsLike[1];
+      x = Number(candidateX);
+      y = Number(candidateY);
+    }
+
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return;
+
+    perFrame.set(frame, { x, y });
+    if (frame > maxFrame) maxFrame = frame;
+    if (x > maxObservedX) maxObservedX = x;
+    if (y > maxObservedY) maxObservedY = y;
+    if (x < minObservedX) minObservedX = x;
+    if (y < minObservedY) minObservedY = y;
+    pointCount += 1;
+  };
+
+  const ingestFrames = (perFrame, frames) => {
+    if (!frames) return;
+    if (Array.isArray(frames)) {
+      frames.forEach((entry) => {
+        if (Array.isArray(entry)) {
+          if (entry.length >= 3) {
+            registerPoint(perFrame, entry[0], [entry[1], entry[2]]);
+          } else if (entry.length >= 2 && typeof entry[1] === 'object') {
+            registerPoint(perFrame, entry[0], entry[1]);
+          }
+        } else if (entry && typeof entry === 'object') {
+          const frameKey = entry.frame ?? entry.frame_index ?? entry.index ?? entry.time ?? entry.t ?? entry.f;
+          if (frameKey != null) {
+            registerPoint(perFrame, frameKey, entry);
+          }
+        }
+      });
+    } else if (typeof frames === 'object') {
+      Object.entries(frames).forEach(([frameKey, coords]) => {
+        registerPoint(perFrame, frameKey, coords);
+      });
+    }
+  };
+
+  const processNodeFrames = (nodeId, frames) => {
+    const id = String(nodeId);
+    if (!nodeIdSet.has(id)) return;
 
     const perFrame = new Map();
-    Object.entries(frames).forEach(([frameKey, coords]) => {
-      if (!coords || typeof coords !== 'object') return;
-      const x = Number(coords.x);
-      const y = Number(coords.y);
-      if (!Number.isFinite(x) || !Number.isFinite(y)) return;
-      const frame = Number(frameKey);
-      if (!Number.isFinite(frame) || frame < 0) return;
-      perFrame.set(frame, { x, y });
-      if (frame > maxFrame) {
-        maxFrame = frame;
-      }
-    });
+    ingestFrames(perFrame, frames);
 
     if (perFrame.size > 0) {
-      centroidMap.set(nodeId, perFrame);
+      centroidMap.set(id, perFrame);
     }
-  });
+  };
 
-  const imageWidth = Number(payload.image_width);
-  const imageHeight = Number(payload.image_height);
+  if (Array.isArray(rawCentroids)) {
+    rawCentroids.forEach((entry) => {
+      if (!entry || typeof entry !== 'object') return;
+      const nodeId = entry.node_id ?? entry.nodeId ?? entry.id ?? entry.object_id ?? entry.objectId ?? entry.key ?? null;
+      if (nodeId == null) return;
+      const frames =
+        entry.frames ??
+        entry.centroids ??
+        entry.positions ??
+        entry.points ??
+        entry.coords ??
+        entry.coordinates ??
+        entry.values ??
+        entry.data ??
+        null;
+      if (!frames) return;
+      processNodeFrames(nodeId, frames);
+    });
+  } else {
+    Object.entries(rawCentroids).forEach(([objectId, frames]) => {
+      processNodeFrames(objectId, frames);
+    });
+  }
+
+  const payloadMaxFrame = Number(payload.max_frame ?? payload.maxFrame);
+  if (Number.isFinite(payloadMaxFrame) && payloadMaxFrame >= 0) {
+    maxFrame = Math.max(maxFrame, payloadMaxFrame);
+  }
+
+  const imageWidthRaw = Number(payload.image_width ?? payload.imageWidth);
+  const imageHeightRaw = Number(payload.image_height ?? payload.imageHeight);
+  const imageWidth = Number.isFinite(imageWidthRaw) && imageWidthRaw > 0 ? imageWidthRaw : null;
+  const imageHeight = Number.isFinite(imageHeightRaw) && imageHeightRaw > 0 ? imageHeightRaw : null;
+
+  const looksFractional =
+    pointCount > 0 &&
+    minObservedX >= -0.01 &&
+    minObservedY >= -0.01 &&
+    maxObservedX <= 1.01 &&
+    maxObservedY <= 1.01;
+
+  const looksPercentage =
+    !looksFractional &&
+    pointCount > 0 &&
+    minObservedX >= -0.5 &&
+    minObservedY >= -0.5 &&
+    maxObservedX <= 100.5 &&
+    maxObservedY <= 100.5 &&
+    Number.isFinite(imageWidthRaw) && imageWidthRaw > 200 &&
+    Number.isFinite(imageHeightRaw) && imageHeightRaw > 200;
+
+  const scaleCentroids = (scaleX, scaleY) => {
+    if (!Number.isFinite(scaleX) || !Number.isFinite(scaleY)) return;
+    centroidMap.forEach((frames) => {
+      frames.forEach((point) => {
+        point.x *= scaleX;
+        point.y *= scaleY;
+      });
+    });
+  };
+
+  if (centroidMap.size > 0) {
+    const validWidth = Number.isFinite(imageWidthRaw) && imageWidthRaw > 0;
+    const validHeight = Number.isFinite(imageHeightRaw) && imageHeightRaw > 0;
+    if (looksFractional && validWidth && validHeight) {
+      scaleCentroids(imageWidthRaw, imageHeightRaw);
+    } else if (looksPercentage && validWidth && validHeight) {
+      scaleCentroids(imageWidthRaw / 100, imageHeightRaw / 100);
+    }
+  }
 
   return {
     centroids: centroidMap.size ? centroidMap : null,
-    imageWidth: Number.isFinite(imageWidth) && imageWidth > 0 ? imageWidth : null,
-    imageHeight: Number.isFinite(imageHeight) && imageHeight > 0 ? imageHeight : null,
+    imageWidth,
+    imageHeight,
     maxFrame: Number.isFinite(maxFrame) && maxFrame >= 0 ? maxFrame : null,
   };
 }
