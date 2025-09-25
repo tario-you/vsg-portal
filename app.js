@@ -626,6 +626,21 @@ async function fetchRelations(url) {
   return response.json();
 }
 
+async function fetchObjectLabels(url) {
+  if (!url) return null;
+  try {
+    const response = await fetch(url, { cache: 'no-cache' });
+    if (!response.ok) {
+      throw new Error(`status ${response.status}`);
+    }
+    const data = await response.json();
+    return data && typeof data === 'object' ? data : null;
+  } catch (error) {
+    console.warn(`Object labels fetch failed for ${url}:`, error);
+    return null;
+  }
+}
+
 async function fetchMetadata(url) {
   try {
     const response = await fetch(url, { cache: 'no-cache' });
@@ -720,7 +735,7 @@ async function fetchCentroids(videoId, manifestEntry) {
   return null;
 }
 
-function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload) {
+function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, objectLabelsPayload) {
   const relationships = Array.isArray(rawData.relationships)
     ? rawData.relationships
     : Array.isArray(rawData.relations)
@@ -731,6 +746,17 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload) {
   const categories = new Set();
   const nodes = new Set();
   const labelMap = extractObjectLabels(rawData, metadata);
+  if (objectLabelsPayload && typeof objectLabelsPayload === "object") {
+    Object.entries(objectLabelsPayload).forEach(([key, value]) => {
+      if (key === null || key === undefined) return;
+      const id = String(key).trim();
+      if (!id) return;
+      if (value === null || value === undefined) return;
+      const label = String(value).trim();
+      if (!label) return;
+      labelMap.set(id, label);
+    });
+  }
   let maxFrame = 0;
   let frameCount = null;
   let fpsLabel = null;
@@ -1377,6 +1403,7 @@ async function loadVideo(videoId) {
 
   let cached = state.videoCache.get(videoId);
   const expectCentroids = Boolean(manifestEntry.centroids_url);
+  const expectLabels = Boolean(manifestEntry.object_labels_url);
   if (cached && expectCentroids) {
     const cachedCount =
       cached.centroids instanceof Map ? cached.centroids.size : cached.centroids ? Object.keys(cached.centroids).length : 0;
@@ -1385,13 +1412,21 @@ async function loadVideo(videoId) {
       cached = null;
     }
   }
+  if (cached && expectLabels) {
+    const labelCount = cached.objectLabels ? Object.keys(cached.objectLabels).length : 0;
+    if (!labelCount) {
+      state.videoCache.delete(videoId);
+      cached = null;
+    }
+  }
   if (!cached) {
-    const [raw, metadata, centroidPayload] = await Promise.all([
+    const [raw, metadata, centroidPayload, objectLabelsPayload] = await Promise.all([
       fetchRelations(manifestEntry.relations_url),
       fetchMetadata(manifestEntry.metadata_url),
       fetchCentroids(videoId, manifestEntry),
+      fetchObjectLabels(manifestEntry.object_labels_url),
     ]);
-    cached = buildVideoData(manifestEntry, raw, metadata, centroidPayload);
+    cached = buildVideoData(manifestEntry, raw, metadata, centroidPayload, objectLabelsPayload);
     state.videoCache.set(videoId, cached);
   }
 
