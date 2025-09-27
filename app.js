@@ -1324,12 +1324,13 @@ function renderActiveRelations() {
         .join(', ');
       const from = rel.fromLabel || `Object ${rel.from}`;
       const to = rel.toLabel || `Object ${rel.to}`;
+      const predicateColor = style.edge || style.text || 'var(--text)';
       return `
         <div class="relation-item" data-category="${rel.category}">
           <div class="relation-item__header">
-            <span class="relation-item__label" style="color:${style.text}">
-              <span class="category-chip" style="background:${style.background};color:${style.text}">${catLabel}</span>
-              ${rel.predicate}
+            <span class="relation-item__label">
+              <span class="relation-item__category" style="background:${style.background};color:${style.text}">${catLabel}</span>
+              <span class="relation-item__predicate" style="color:${predicateColor}">${rel.predicate}</span>
             </span>
           </div>
           <div class="relation-item__entities">${from} → ${to}</div>
