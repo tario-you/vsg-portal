@@ -1307,10 +1307,10 @@ function updateNetwork() {
       color: { color: style.edge, highlight: style.edge },
       font: {
         color: '#0f172a',
-        background: 'rgba(255,255,255,0.92)',
+        strokeColor: 'rgba(255,255,255,0.95)',
+        strokeWidth: 4,
         face: 'Inter',
         size: 14,
-        strokeWidth: 0,
       },
     };
   });
