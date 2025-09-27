@@ -8,7 +8,7 @@ const CATEGORY_STYLES = {
   default: { background: '#723bf3', text: '#f8fafc', edge: '#8b5cf6' },
 };
 
-const manifestUrl = 'public/manifest.json';
+const manifestUrl = '/public/manifest.json';
 
 const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
 const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
