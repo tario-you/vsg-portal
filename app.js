@@ -12,6 +12,7 @@ const manifestUrl = 'public/manifest.json';
 
 const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
 const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
+const CATEGORY_STORAGE_PREFIX = 'vsg-portal:categories:';
 
 const state = {
   manifest: null,
@@ -189,6 +190,57 @@ function configureDebugMode() {
 function canonicalCategory(value) {
   if (!value) return 'default';
   return String(value).trim().toLowerCase().replace(/[\s-]+/g, '_');
+}
+
+function getCategoryStorageKey(videoId) {
+  if (!videoId) return null;
+  return `${CATEGORY_STORAGE_PREFIX}${videoId}`;
+}
+
+function restoreCategorySelection(videoId, availableCategories) {
+  const available = Array.isArray(availableCategories)
+    ? availableCategories
+    : Array.from(availableCategories || []);
+  const availableSet = new Set(available);
+  const fallback = new Set(available);
+  const key = getCategoryStorageKey(videoId);
+  if (!key || typeof window === 'undefined') {
+    return fallback;
+  }
+
+  try {
+    const stored = window.localStorage?.getItem(key);
+    if (!stored) {
+      return fallback;
+    }
+    const parsed = JSON.parse(stored);
+    if (Array.isArray(parsed)) {
+      if (parsed.length === 0) {
+        return new Set();
+      }
+      const valid = parsed.filter((cat) => availableSet.has(cat));
+      if (valid.length) {
+        return new Set(valid);
+      }
+    }
+  } catch (error) {
+    console.debug('Unable to restore category selection:', error);
+  }
+
+  return fallback;
+}
+
+function persistCategorySelection(videoId, categories) {
+  const key = getCategoryStorageKey(videoId);
+  if (!key || typeof window === 'undefined') {
+    return;
+  }
+  try {
+    const payload = JSON.stringify(Array.from(categories));
+    window.localStorage?.setItem(key, payload);
+  } catch (error) {
+    console.debug('Unable to persist category selection:', error);
+  }
 }
 
 function getCurrentStride() {
@@ -1512,7 +1564,8 @@ function updateCategoryFilters(categories) {
     button.type = 'button';
     button.className = 'category-chip';
     button.dataset.category = cat;
-    button.dataset.active = 'true';
+    const isActive = state.enabledCategories.has(cat);
+    button.dataset.active = isActive ? 'true' : 'false';
     button.textContent = formatCategoryLabel(cat);
     button.style.background = style.background;
     button.style.color = style.text;
@@ -1525,6 +1578,7 @@ function updateCategoryFilters(categories) {
         state.enabledCategories.add(cat);
         button.dataset.active = 'true';
       }
+      persistCategorySelection(state.currentVideoId, state.enabledCategories);
       updateNetwork();
       renderActiveRelations();
     });
@@ -1573,7 +1627,7 @@ async function loadVideo(videoId) {
 
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
-  state.enabledCategories = new Set(cached.categories);
+  state.enabledCategories = restoreCategorySelection(videoId, cached.categories);
 
   dom.videoSelect.value = videoId;
   dom.videoTitle.textContent = videoId;
