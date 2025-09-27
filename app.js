@@ -1283,17 +1283,33 @@ function updateNetwork() {
     activeNodeIds.add(rel.to);
   });
 
-  const edges = active.map((rel) => {
-    const style = CATEGORY_STYLES[rel.category] || CATEGORY_STYLES.default;
+  const grouped = new Map();
+  active.forEach((rel) => {
+    const key = `${rel.from}→${rel.to}`;
+    if (!grouped.has(key)) {
+      grouped.set(key, { from: rel.from, to: rel.to, relations: [] });
+    }
+    grouped.get(key).relations.push(rel);
+  });
+
+  const edges = Array.from(grouped.entries()).map(([key, group]) => {
+    let style = CATEGORY_STYLES.default;
+    if (group.relations.length === 1) {
+      const only = group.relations[0];
+      style = CATEGORY_STYLES[only.category] || CATEGORY_STYLES.default;
+    }
+    const label = group.relations.map((rel) => rel.predicate).join('\n');
     return {
-      id: `edge-${rel.index}`,
-      from: rel.from,
-      to: rel.to,
-      label: rel.predicate,
+      id: `edge-${key}`,
+      from: group.from,
+      to: group.to,
+      label,
       color: { color: style.edge, highlight: style.edge },
       font: {
-        color: style.text,
-        background: 'rgba(255,255,255,0.85)',
+        color: '#0f172a',
+        background: 'rgba(255,255,255,0.92)',
+        face: 'Inter',
+        size: 14,
         strokeWidth: 0,
       },
     };
