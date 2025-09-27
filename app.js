@@ -10,6 +10,9 @@ const CATEGORY_STYLES = {
 
 const manifestUrl = 'public/manifest.json';
 
+const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
+const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
+
 const state = {
   manifest: null,
   videos: [],
@@ -18,7 +21,7 @@ const state = {
   currentVideoData: null,
   currentTime: 0,
   playing: false,
-  speed: 0.125,
+  speed: 0.0625,
   timer: null,
   enabledCategories: new Set(),
   network: null,
@@ -1409,6 +1412,54 @@ function setCurrentTime(time) {
   prefetchNeighbors();
 }
 
+function nudgeCurrentTime(direction) {
+  if (!state.currentVideoData) return;
+  const stride = getCurrentStride();
+  const step = stride > 0 ? stride : 1;
+  const offset = step * direction;
+  const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
+    ? state.currentVideoData.sliderMax
+    : state.currentVideoData.maxFrame;
+  const next = Math.max(0, Math.min(state.currentTime + offset, upperBound));
+  setCurrentTime(next);
+}
+
+function isTypingContext(target) {
+  if (!target || !(target instanceof Element)) return false;
+  const tag = target.tagName;
+  if (!tag) return false;
+  const editable = target.isContentEditable;
+  if (editable) return true;
+  return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+}
+
+function handleGlobalKeydown(event) {
+  if (event.defaultPrevented) return;
+  if (isTypingContext(event.target)) return;
+
+  const key = event.key;
+  if (!key) return;
+  const lower = key.toLowerCase();
+  const code = typeof event.code === 'string' ? event.code.toLowerCase() : '';
+
+  if (key === ' ' || lower === 'spacebar' || lower === 'space' || code === 'space') {
+    event.preventDefault();
+    togglePlayback();
+    return;
+  }
+
+  if (KEY_BACKWARD.has(lower)) {
+    event.preventDefault();
+    nudgeCurrentTime(-1);
+    return;
+  }
+
+  if (KEY_FORWARD.has(lower)) {
+    event.preventDefault();
+    nudgeCurrentTime(1);
+  }
+}
+
 function stopPlayback() {
   if (state.timer) {
     clearInterval(state.timer);
@@ -1646,6 +1697,8 @@ function initialiseEventHandlers() {
       stopPlayback();
     }
   });
+
+  window.addEventListener('keydown', handleGlobalKeydown);
 }
 
 async function initialise() {
