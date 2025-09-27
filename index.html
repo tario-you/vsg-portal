@@ -65,6 +65,12 @@
       <div class="control-group">
         <span id="video-count" class="video-count">0 videos</span>
       </div>
+      <div class="control-group control-group--toggle">
+        <label for="mask-toggle" class="toggle">
+          <input type="checkbox" id="mask-toggle" />
+          <span>Show masks</span>
+        </label>
+      </div>
     </div>
   </header>
 
@@ -74,6 +80,7 @@
       <div class="frame-viewport">
         <img id="frame-image-a" class="frame-image" alt="Video frame A" decoding="async" fetchpriority="high" referrerpolicy="no-referrer" />
         <img id="frame-image-b" class="frame-image" alt="Video frame B" decoding="async" referrerpolicy="no-referrer" />
+        <canvas id="frame-mask" class="frame-mask" aria-hidden="true"></canvas>
         <div id="network" class="network-canvas" aria-label="Relationship graph"></div>
       </div>
     </section>

@@ -75,11 +75,59 @@ body {
   padding-inline: 0.55rem;
 }
 
+.control-group--toggle {
+  padding-right: 0.75rem;
+}
+
 .control-group label {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: rgba(226, 232, 240, 0.72);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  text-transform: none;
+  letter-spacing: normal;
+  color: rgba(226, 232, 240, 0.88);
+}
+
+.toggle input {
+  appearance: none;
+  width: 36px;
+  height: 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.5);
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.18s ease, border-color 0.18s ease;
+}
+
+.toggle input::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  transition: transform 0.18s ease;
+}
+
+.toggle input:checked {
+  background: rgba(37, 99, 235, 0.75);
+  border-color: rgba(96, 165, 250, 0.9);
+}
+
+.toggle input:checked::after {
+  transform: translateX(16px);
 }
 
 #time-slider {
@@ -184,6 +232,22 @@ body {
   background: #000;
   opacity: 0;
   transition: opacity 90ms linear;
+}
+
+.frame-mask {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 140ms ease;
+  image-rendering: pixelated;
+  mix-blend-mode: normal;
+}
+
+.frame-mask[data-visible="true"] {
+  opacity: 1;
 }
 
 .network-canvas {

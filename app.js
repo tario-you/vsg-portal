@@ -42,6 +42,14 @@ const state = {
   renderStride: 6,
   lastRenderedFrame: null,
   debug: { enabled: false, overlay: null },
+  mask: {
+    enabled: false,
+    store: new Map(),
+    colorCache: new Map(),
+    preferenceKey: 'vsg-portal:mask-enabled',
+    activeVideoId: null,
+    lastRenderedFrame: null,
+  },
 };
 
 function exposeStateForDebug() {
@@ -72,6 +80,8 @@ const dom = {
   frameImage: document.getElementById('frame-image'),
   frameImageA: document.getElementById('frame-image-a'),
   frameImageB: document.getElementById('frame-image-b'),
+  maskToggle: document.getElementById('mask-toggle'),
+  maskCanvas: document.getElementById('frame-mask'),
   network: document.getElementById('network'),
   videoTitle: document.getElementById('video-title'),
   videoDescription: document.getElementById('video-description'),
@@ -188,6 +198,87 @@ function configureDebugMode() {
     ensureDebugOverlay();
     console.info('VSG debug mode enabled. Append ?debug=0 to the URL to disable.');
   }
+}
+
+const MASK_ALPHA = 118;
+
+function hslToRgb(h, s, l) {
+  const hueToRgb = (p, q, t) => {
+    let tt = t;
+    if (tt < 0) tt += 1;
+    if (tt > 1) tt -= 1;
+    if (tt < 1 / 6) return p + (q - p) * 6 * tt;
+    if (tt < 1 / 2) return q;
+    if (tt < 2 / 3) return p + (q - p) * (2 / 3 - tt) * 6;
+    return p;
+  };
+
+  let r;
+  let g;
+  let b;
+
+  if (s <= 0) {
+    r = g = b = l;
+  } else {
+    const q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+    const p = 2 * l - q;
+    r = hueToRgb(p, q, h + 1 / 3);
+    g = hueToRgb(p, q, h);
+    b = hueToRgb(p, q, h - 1 / 3);
+  }
+
+  return {
+    r: Math.round(r * 255),
+    g: Math.round(g * 255),
+    b: Math.round(b * 255),
+  };
+}
+
+function maskColorForIndex(index) {
+  const cache = state.mask?.colorCache;
+  if (cache && cache.has(index)) {
+    return cache.get(index);
+  }
+
+  const hue = ((index * 47) % 360) / 360;
+  const tier = Math.floor(index / 12);
+  const saturation = Math.max(0.55, 0.75 - tier * 0.04);
+  const lightness = Math.max(0.38, 0.62 - tier * 0.05);
+  const rgb = hslToRgb(hue, saturation, lightness);
+  const color = { r: rgb.r, g: rgb.g, b: rgb.b, a: MASK_ALPHA };
+  if (cache) {
+    cache.set(index, color);
+  }
+  return color;
+}
+
+const scheduleMicrotask = typeof queueMicrotask === 'function'
+  ? (callback) => queueMicrotask(callback)
+  : (callback) => Promise.resolve().then(callback).catch(() => {});
+
+function persistMaskPreference(enabled) {
+  if (typeof window === 'undefined') return;
+  const key = state.mask?.preferenceKey;
+  if (!key) return;
+  try {
+    window.localStorage?.setItem(key, enabled ? '1' : '0');
+  } catch (error) {
+    console.debug('Unable to persist mask preference:', error);
+  }
+}
+
+function restoreMaskPreference() {
+  if (typeof window === 'undefined') return false;
+  const key = state.mask?.preferenceKey;
+  if (!key) return false;
+  try {
+    const stored = window.localStorage?.getItem(key);
+    if (stored === '1') return true;
+    if (stored === '0') return false;
+  } catch (error) {
+    console.debug('Unable to restore mask preference:', error);
+  }
+  return false;
 }
 
 function canonicalCategory(value) {
@@ -853,6 +944,7 @@ function prefetchNeighbors() {
   const orderedFrames = Array.from(frames).sort((a, b) => a - b);
   const cache = state.prefetch.cache;
   const limit = state.prefetch.limit || 24;
+  prefetchMaskFrames(orderedFrames);
   orderedFrames.forEach((f) => {
     const url = formatFrameUrl(data.frameTemplate, f);
     if (!url || url === '—' || cache.has(url)) return;
@@ -945,6 +1037,503 @@ function displayFrame(url) {
           };
         });
     });
+}
+
+// Mask overlay helpers -----------------------------------------------------
+
+function decodeCompressedCounts(input) {
+  if (input == null) return [];
+  if (Array.isArray(input)) {
+    return input.map((value) => Number(value) || 0);
+  }
+  const source = String(input);
+  const out = [];
+  let value = 0;
+  let shift = 0;
+  for (let i = 0; i < source.length; i += 1) {
+    const charCode = source.charCodeAt(i) - 48;
+    if (charCode < 0) {
+      continue;
+    }
+    value |= (charCode & 0x1f) << shift;
+    if ((charCode & 0x20) === 0) {
+      out.push(value);
+      value = 0;
+      shift = 0;
+    } else {
+      shift += 5;
+    }
+  }
+  if (value) {
+    out.push(value);
+  }
+  return out;
+}
+
+function ensureMaskBuffers(entry) {
+  if (!entry) return null;
+  const total = Math.max(1, Math.trunc(Number(entry.width) || 0) * Math.trunc(Number(entry.height) || 0));
+  if (!Number.isFinite(total) || total <= 0) {
+    return null;
+  }
+  if (!entry.colBuffer || entry.colBuffer.length !== total) {
+    entry.colBuffer = new Uint8Array(total);
+  }
+  if (!entry.rowBuffer || entry.rowBuffer.length !== total) {
+    entry.rowBuffer = new Uint8Array(total);
+  }
+  return { column: entry.colBuffer, row: entry.rowBuffer };
+}
+
+function normaliseMaskPayload(payload) {
+  let framesRaw = null;
+  if (Array.isArray(payload)) {
+    framesRaw = payload;
+  } else if (payload && typeof payload === 'object') {
+    if (Array.isArray(payload.frames)) {
+      framesRaw = payload.frames;
+    } else if (Array.isArray(payload.masks)) {
+      framesRaw = payload.masks;
+    }
+  }
+
+  if (!framesRaw) {
+    return null;
+  }
+
+  const frames = framesRaw.map((frame) => {
+    if (!Array.isArray(frame)) {
+      return [];
+    }
+    return frame
+      .map((mask) => {
+        if (!mask) return null;
+        if (Array.isArray(mask) && mask.length >= 2) {
+          const candidate = mask.find((item) => item && typeof item === 'object' && 'counts' in item);
+          if (candidate) {
+            mask = candidate;
+          }
+        }
+        if (typeof mask !== 'object') {
+          return null;
+        }
+        const size = Array.isArray(mask.size) ? mask.size : Array.isArray(mask.Size) ? mask.Size : null;
+        const counts = mask.counts ?? mask.Counts;
+        if (!size || size.length < 2 || counts == null) {
+          return null;
+        }
+        return {
+          size: [Number(size[0]), Number(size[1])],
+          counts,
+        };
+      })
+      .filter(Boolean);
+  });
+
+  let width = null;
+  let height = null;
+  for (const frame of frames) {
+    for (const mask of frame) {
+      const size = mask.size;
+      if (!size || size.length < 2) continue;
+      const w = Number(size[0]);
+      const h = Number(size[1]);
+      if (Number.isFinite(w) && w > 0 && !width) {
+        width = w;
+      }
+      if (Number.isFinite(h) && h > 0 && !height) {
+        height = h;
+      }
+      if (width && height) break;
+    }
+    if (width && height) break;
+  }
+
+  return { frames, width, height };
+}
+
+function applyMaskDimensionHints(entry, imageHint) {
+  if (!entry) return;
+  if (!Number.isFinite(entry.width) || entry.width <= 0 || !Number.isFinite(entry.height) || entry.height <= 0) {
+    if (imageHint && Number.isFinite(imageHint.width) && Number.isFinite(imageHint.height)) {
+      if (!Number.isFinite(entry.width) || entry.width <= 0) {
+        entry.width = imageHint.width;
+      }
+      if (!Number.isFinite(entry.height) || entry.height <= 0) {
+        entry.height = imageHint.height;
+      }
+    }
+  }
+
+  if (Number.isFinite(entry.width) && Number.isFinite(entry.height)) {
+    return;
+  }
+
+  for (const frame of entry.frames || []) {
+    for (const mask of frame) {
+      const size = mask.size;
+      if (!Array.isArray(size) || size.length < 2) continue;
+      const w = Number(size[0]);
+      const h = Number(size[1]);
+      if (!Number.isFinite(entry.width) && Number.isFinite(w) && w > 0) {
+        entry.width = w;
+      }
+      if (!Number.isFinite(entry.height) && Number.isFinite(h) && h > 0) {
+        entry.height = h;
+      }
+      if (Number.isFinite(entry.width) && Number.isFinite(entry.height)) {
+        return;
+      }
+    }
+  }
+}
+
+function buildMaskImageData(entry, frameIndex) {
+  if (!entry || !Array.isArray(entry.frames)) return null;
+  const masks = entry.frames[frameIndex];
+  if (!Array.isArray(masks) || masks.length === 0) {
+    return null;
+  }
+
+  const width = Math.trunc(entry.width || 0);
+  const height = Math.trunc(entry.height || 0);
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return null;
+  }
+
+  const totalPixels = width * height;
+  const buffers = ensureMaskBuffers(entry);
+  if (!buffers) {
+    return null;
+  }
+
+  const surface = new Uint8ClampedArray(totalPixels * 4);
+
+  for (let idx = 0; idx < masks.length; idx += 1) {
+    const mask = masks[idx];
+    const runs = decodeCompressedCounts(mask.counts);
+    if (!runs.length) {
+      continue;
+    }
+
+    buffers.column.fill(0);
+    buffers.row.fill(0);
+
+    let cursor = 0;
+    let value = 0;
+    for (let i = 0; i < runs.length && cursor < totalPixels; i += 1) {
+      const runLength = runs[i];
+      if (!Number.isFinite(runLength) || runLength <= 0) {
+        value ^= 1;
+        continue;
+      }
+      if (value === 1) {
+        const end = Math.min(cursor + runLength, totalPixels);
+        buffers.column.fill(1, cursor, end);
+        cursor = end;
+      } else {
+        cursor = Math.min(cursor + runLength, totalPixels);
+      }
+      value ^= 1;
+    }
+
+    let dest = 0;
+    for (let row = 0; row < height; row += 1) {
+      const base = row;
+      for (let col = 0; col < width; col += 1) {
+        buffers.row[dest] = buffers.column[col * height + base];
+        dest += 1;
+      }
+    }
+
+    const colour = maskColorForIndex(idx);
+    const r = colour.r;
+    const g = colour.g;
+    const b = colour.b;
+    const a = colour.a;
+
+    for (let pixel = 0; pixel < totalPixels; pixel += 1) {
+      if (!buffers.row[pixel]) continue;
+      const offset = pixel * 4;
+      const existingAlpha = surface[offset + 3];
+      if (existingAlpha === 0) {
+        surface[offset] = r;
+        surface[offset + 1] = g;
+        surface[offset + 2] = b;
+        surface[offset + 3] = a;
+      } else {
+        surface[offset] = Math.min(255, Math.round((surface[offset] + r) / 2));
+        surface[offset + 1] = Math.min(255, Math.round((surface[offset + 1] + g) / 2));
+        surface[offset + 2] = Math.min(255, Math.round((surface[offset + 2] + b) / 2));
+        surface[offset + 3] = Math.max(existingAlpha, Math.round((existingAlpha + a) / 2));
+      }
+    }
+  }
+
+  if (typeof ImageData === 'function') {
+    return new ImageData(surface, width, height);
+  }
+
+  const ctx = dom.maskCanvas ? dom.maskCanvas.getContext('2d') : null;
+  if (ctx && typeof ctx.createImageData === 'function') {
+    const imageData = ctx.createImageData(width, height);
+    imageData.data.set(surface);
+    return imageData;
+  }
+
+  return null;
+}
+
+function getMaskImage(entry, frameIndex) {
+  if (!entry) return null;
+  if (!entry.cache) {
+    entry.cache = new Map();
+  }
+  if (entry.cache.has(frameIndex)) {
+    const cached = entry.cache.get(frameIndex);
+    // Promote for basic LRU behaviour.
+    entry.cache.delete(frameIndex);
+    entry.cache.set(frameIndex, cached);
+    return cached;
+  }
+
+  const imageData = buildMaskImageData(entry, frameIndex);
+  if (!imageData) {
+    return null;
+  }
+
+  entry.cache.set(frameIndex, imageData);
+  const limit = entry.cacheLimit || 28;
+  while (entry.cache.size > limit) {
+    const oldest = entry.cache.keys().next().value;
+    if (oldest === undefined || oldest === frameIndex) break;
+    entry.cache.delete(oldest);
+  }
+  return imageData;
+}
+
+function clearMaskCanvas() {
+  const canvas = dom.maskCanvas;
+  if (!canvas) return;
+  canvas.dataset.visible = 'false';
+  const ctx = canvas.getContext('2d');
+  if (ctx) {
+    ctx.clearRect(0, 0, canvas.width || 0, canvas.height || 0);
+  }
+}
+
+async function fetchMaskPayload(videoId, manifestEntry) {
+  const baseHref = typeof window !== 'undefined' && window.location ? window.location.href : 'http://localhost/';
+  const candidates = [];
+  const seen = new Set();
+
+  const pushCandidate = (value) => {
+    if (value == null) return;
+    const str = String(value).trim();
+    if (!str || seen.has(str)) return;
+    seen.add(str);
+    candidates.push(str);
+    try {
+      const absolute = new URL(str, baseHref).href;
+      if (!seen.has(absolute)) {
+        seen.add(absolute);
+        candidates.push(absolute);
+      }
+    } catch (error) {
+      // ignore resolution errors
+    }
+  };
+
+  if (manifestEntry?.mask_url) {
+    pushCandidate(manifestEntry.mask_url);
+  }
+
+  if (manifestEntry?.relations_url) {
+    const relUrl = manifestEntry.relations_url;
+    pushCandidate(relUrl.replace(/sav_rels/gi, 'masks'));
+    pushCandidate(relUrl.replace(/sav_rels\/([^/]+)\.json/gi, 'masks/$1_merged.json'));
+    pushCandidate(relUrl.replace(/sav_rels\//gi, 'masks/').replace(/\.json$/i, '_merged.json'));
+    pushCandidate(relUrl.replace(/\bpublic\//gi, '').replace(/sav_rels\//gi, 'masks/').replace(/\.json$/i, '_merged.json'));
+  }
+
+  const slug = videoId;
+  [
+    `public/masks/${slug}_merged.json`,
+    `/public/masks/${slug}_merged.json`,
+    `./public/masks/${slug}_merged.json`,
+    `masks/${slug}_merged.json`,
+    `/masks/${slug}_merged.json`,
+    `./masks/${slug}_merged.json`,
+    `public/masks/${slug}.json`,
+    `/public/masks/${slug}.json`,
+    `./public/masks/${slug}.json`,
+  ].forEach(pushCandidate);
+
+  for (const url of candidates) {
+    try {
+      const response = await fetch(url, { cache: 'no-cache' });
+      if (!response.ok) continue;
+      const data = await response.json();
+      if (data) {
+        return { data, source: url };
+      }
+    } catch (error) {
+      console.debug(`Mask fetch failed for ${url}:`, error);
+    }
+  }
+
+  return null;
+}
+
+function ensureMaskEntry(videoId, manifestEntry) {
+  if (!videoId) {
+    return Promise.resolve(null);
+  }
+
+  let entry = state.mask.store.get(videoId);
+  if (entry && entry.frames && entry.frames.length) {
+    return Promise.resolve(entry);
+  }
+  if (entry?.promise) {
+    return entry.promise;
+  }
+
+  entry = entry || { videoId, cache: new Map(), cacheLimit: 28 };
+  const promise = fetchMaskPayload(videoId, manifestEntry)
+    .then((result) => {
+      if (!result) {
+        entry.error = 'not_found';
+        entry.frames = [];
+        return entry;
+      }
+      const normalised = normaliseMaskPayload(result.data);
+      if (!normalised) {
+        entry.error = 'invalid_data';
+        entry.frames = [];
+        return entry;
+      }
+      entry.frames = normalised.frames;
+      entry.width = Number.isFinite(normalised.width) ? normalised.width : entry.width;
+      entry.height = Number.isFinite(normalised.height) ? normalised.height : entry.height;
+      entry.source = result.source;
+      entry.error = null;
+      return entry;
+    })
+    .catch((error) => {
+      entry.error = error;
+      entry.frames = [];
+      return entry;
+    })
+    .finally(() => {
+      entry.promise = null;
+    });
+
+  entry.promise = promise;
+  state.mask.store.set(videoId, entry);
+  return promise;
+}
+
+function renderMaskOverlay(frameIndex) {
+  const canvas = dom.maskCanvas;
+  if (!canvas) return;
+
+  const enabled = Boolean(state.mask.enabled);
+  if (!enabled) {
+    state.mask.lastRenderedFrame = null;
+    clearMaskCanvas();
+    return;
+  }
+
+  const videoId = state.currentVideoId;
+  if (!videoId) {
+    state.mask.lastRenderedFrame = null;
+    clearMaskCanvas();
+    return;
+  }
+
+  if (state.mask.activeVideoId === videoId && state.mask.lastRenderedFrame === frameIndex && canvas.dataset.visible === 'true') {
+    return;
+  }
+
+  const manifestEntry = state.videos.find((video) => video.video_id === videoId) || null;
+  state.mask.activeVideoId = videoId;
+
+  ensureMaskEntry(videoId, manifestEntry)
+    .then((entry) => {
+      if (!entry || state.currentVideoId !== videoId || !state.mask.enabled) {
+        return;
+      }
+
+      applyMaskDimensionHints(entry, state.imageSize);
+
+      const width = Math.trunc(entry.width || 0);
+      const height = Math.trunc(entry.height || 0);
+      if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+        clearMaskCanvas();
+        return;
+      }
+
+      if (canvas.width !== width || canvas.height !== height) {
+        canvas.width = width;
+        canvas.height = height;
+      }
+
+      const targetFrame = Math.max(0, Math.min(frameIndex, (entry.frames?.length || 1) - 1));
+      const imageData = getMaskImage(entry, targetFrame);
+      const ctx = canvas.getContext('2d');
+      if (!ctx || !imageData) {
+        clearMaskCanvas();
+        return;
+      }
+
+      ctx.putImageData(imageData, 0, 0);
+      canvas.dataset.visible = 'true';
+      state.mask.lastRenderedFrame = targetFrame;
+    })
+    .catch((error) => {
+      console.warn(`Mask overlay failed for ${videoId}:`, error);
+      if (state.currentVideoId === videoId) {
+        clearMaskCanvas();
+      }
+    });
+}
+
+function prefetchMaskFrames(frames) {
+  if (!state.mask.enabled) return;
+  const videoId = state.currentVideoId;
+  if (!videoId) return;
+  const entry = state.mask.store.get(videoId);
+  if (!entry || entry.promise || !Array.isArray(entry.frames) || !entry.frames.length) return;
+
+  const selected = frames.slice(0, 6);
+  selected.forEach((frame) => {
+    if (!Number.isFinite(frame) || frame < 0 || frame >= entry.frames.length) return;
+    if (entry.cache && entry.cache.has(frame)) return;
+    scheduleMicrotask(() => {
+      try {
+        getMaskImage(entry, frame);
+      } catch (error) {
+        console.debug('Mask prefetch skipped:', error);
+      }
+    });
+  });
+}
+
+function setMaskEnabled(nextValue) {
+  const enabled = Boolean(nextValue);
+  state.mask.enabled = enabled;
+  persistMaskPreference(enabled);
+  if (dom.maskToggle) {
+    dom.maskToggle.checked = enabled;
+  }
+  if (!enabled) {
+    state.mask.lastRenderedFrame = null;
+    clearMaskCanvas();
+    return;
+  }
+
+  const frame = getRenderFrame(state.currentTime || 0);
+  renderMaskOverlay(frame);
 }
 
 async function fetchManifest() {
@@ -1684,6 +2273,7 @@ function renderFrameDisplay() {
     dom.frameDisplay.textContent = `Frame ${displayFrameIndex}`;
     hideBothFrames();
   }
+  renderMaskOverlay(displayFrameIndex);
 }
 
 function setPlaybackSpeed(value, options = {}) {
@@ -1995,6 +2585,15 @@ async function loadVideo(videoId, options = {}) {
   };
   exposeStateForDebug();
 
+  state.mask.activeVideoId = videoId;
+  state.mask.lastRenderedFrame = null;
+  clearMaskCanvas();
+  if (state.mask.enabled) {
+    ensureMaskEntry(videoId, manifestEntry).catch((error) => {
+      console.debug(`Mask warm-up failed for ${videoId}:`, error);
+    });
+  }
+
   if (Number.isFinite(fpsValue) && fpsValue > 0) {
     state.baseFps = fpsValue;
   } else {
@@ -2090,6 +2689,15 @@ function initialiseEventHandlers() {
       const parsed = parseInt(event.target.value, 10);
       const strideValue = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
       setRenderStride(strideValue, { updateSelect: false, sync: true });
+    });
+  }
+
+  if (dom.maskToggle) {
+    const restored = restoreMaskPreference();
+    state.mask.enabled = restored;
+    dom.maskToggle.checked = restored;
+    dom.maskToggle.addEventListener('change', (event) => {
+      setMaskEnabled(event.target.checked);
     });
   }
 

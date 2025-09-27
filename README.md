@@ -46,6 +46,12 @@ python3 scripts/build_portal_assets.py \
 - The script mirrors every `sav_*.json` into `portal/public/sav_rels/`
 - The manifest records the relations URL plus fully-qualified frame/metadata URL templates
 - Rerun the script whenever you regenerate predictions or if the hosting endpoint changes
+- Include `--mask-root /path/to/sav_masks` to copy per-video mask JSON into
+  `portal/public/masks/` and automatically add `mask_url` entries to the
+  manifest. Dropping `sav_XXXXX_merged.json` files into that directory manually
+  also works because the portal falls back to `/public/masks/{video_id}_merged.json`
+  when no explicit URL is provided. With masks present, the UI exposes a
+  **Show masks** toggle that draws translucent overlays on top of each frame.
 
 ## Local Preview
 
