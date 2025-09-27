@@ -14,6 +14,9 @@ const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
 const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
 const CATEGORY_STORAGE_PREFIX = 'vsg-portal:categories:';
 
+let urlSyncEnabled = false;
+let suspendUrlSync = false;
+
 const state = {
   manifest: null,
   videos: [],
@@ -243,6 +246,83 @@ function persistCategorySelection(videoId, categories) {
   }
 }
 
+function canonicaliseCategorySet(selection) {
+  if (!selection) return new Set();
+  if (selection instanceof Set) {
+    const next = new Set();
+    selection.forEach((value) => {
+      const canon = canonicalCategory(value);
+      if (canon) next.add(canon);
+    });
+    return next;
+  }
+  if (Array.isArray(selection)) {
+    return canonicaliseCategorySet(new Set(selection));
+  }
+  return new Set();
+}
+
+function normaliseCategorySelection(selection, availableCategories) {
+  const available = Array.isArray(availableCategories) ? availableCategories : Array.from(availableCategories || []);
+  const availableSet = new Set(available.map((value) => canonicalCategory(value)));
+  const desired = canonicaliseCategorySet(selection);
+  if (!desired.size) {
+    return new Set();
+  }
+  const filtered = new Set();
+  desired.forEach((cat) => {
+    if (availableSet.has(cat)) {
+      filtered.add(cat);
+    }
+  });
+  return filtered;
+}
+
+function parseCategoryListParam(value) {
+  if (value === undefined) return undefined;
+  if (value === null) return undefined;
+  if (value === '') return new Set();
+  const parts = String(value)
+    .split(',')
+    .map((part) => canonicalCategory(part))
+    .filter(Boolean);
+  return new Set(parts);
+}
+
+function deriveCategorySelectionFromFilter(availableCategories, filter) {
+  if (!filter || typeof filter !== 'object') return undefined;
+  const available = Array.isArray(availableCategories) ? availableCategories : Array.from(availableCategories || []);
+  const availableSet = new Set(available.map((value) => canonicalCategory(value)));
+
+  if (Object.prototype.hasOwnProperty.call(filter, 'visible') && filter.visible !== undefined) {
+    const requested = canonicaliseCategorySet(filter.visible);
+    if (requested.size === 0) {
+      return new Set();
+    }
+    const resolved = new Set();
+    requested.forEach((cat) => {
+      if (availableSet.has(cat)) {
+        resolved.add(cat);
+      }
+    });
+    return resolved;
+  }
+
+  if (Object.prototype.hasOwnProperty.call(filter, 'hidden') && filter.hidden !== undefined) {
+    const hidden = canonicaliseCategorySet(filter.hidden);
+    const resolved = new Set();
+    available.forEach((cat) => {
+      const canonical = canonicalCategory(cat);
+      if (!hidden.has(canonical)) {
+        resolved.add(canonical);
+      }
+    });
+    return resolved;
+  }
+
+  return undefined;
+}
+
 function getCurrentStride() {
   const parsed = Number(state.renderStride);
   const valid = Number.isFinite(parsed) && parsed >= 1 ? Math.floor(parsed) : 1;
@@ -286,12 +366,162 @@ function updateTimeSliderStep() {
   dom.timeSlider.step = step.toString();
 }
 
+function syncUrl(replace = true) {
+  if (suspendUrlSync || !urlSyncEnabled) return;
+  if (typeof window === 'undefined') return;
+
+  let path = '/';
+  const videoId = state.currentVideoId;
+  if (videoId) {
+    path = `/v/${encodeURIComponent(videoId)}`;
+    const frame = Number.isFinite(state.currentTime) ? Math.max(0, Math.round(state.currentTime)) : null;
+    if (frame !== null) {
+      path += `/f/${padFrame(frame)}`;
+    }
+  }
+
+  const params = new URLSearchParams();
+  if (Number.isFinite(state.speed) && state.speed > 0) {
+    params.set('speed', state.speed.toString());
+  }
+  if (Number.isFinite(state.renderStride) && state.renderStride > 0) {
+    params.set('stride', state.renderStride.toString());
+  }
+  if (Number.isFinite(state.baseFps) && state.baseFps > 0) {
+    params.set('fps', state.baseFps.toString());
+  }
+
+  if (state.currentVideoData && Array.isArray(state.currentVideoData.categories)) {
+    const categories = state.currentVideoData.categories.map((cat) => canonicalCategory(cat));
+    if (categories.length) {
+      const visible = categories.filter((cat) => state.enabledCategories.has(cat));
+      const hidden = categories.filter((cat) => !state.enabledCategories.has(cat));
+      params.set('visible', visible.join(','));
+      params.set('hidden', hidden.join(','));
+    }
+  }
+
+  const query = params.toString();
+  const url = query ? `${path}?${query}` : path;
+  const method = replace ? 'replaceState' : 'pushState';
+  if (typeof window.history?.[method] === 'function') {
+    window.history[method]({}, '', url);
+  }
+}
+
 function formatCategoryLabel(cat) {
   return cat.replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
 function padFrame(frame) {
   return frame.toString().padStart(4, '0');
+}
+
+function parseRouteFromLocation() {
+  if (typeof window === 'undefined') {
+    return {
+      videoId: null,
+      frame: null,
+      speed: undefined,
+      stride: undefined,
+      baseFps: undefined,
+      categoryFilter: undefined,
+    };
+  }
+
+  const { pathname, search } = window.location;
+  const segments = pathname ? pathname.split('/').filter(Boolean) : [];
+  let videoId = null;
+  let frame = null;
+
+  if (segments.length >= 2 && segments[0].toLowerCase() === 'v') {
+    videoId = decodeURIComponent(segments[1]);
+    if (segments.length >= 4 && segments[2].toLowerCase() === 'f') {
+      const parsedFrame = parseInt(segments[3], 10);
+      if (Number.isFinite(parsedFrame) && parsedFrame >= 0) {
+        frame = parsedFrame;
+      }
+    }
+  }
+
+  const params = new URLSearchParams(search || '');
+  const speedParam = params.has('speed') ? parseFloat(params.get('speed')) : undefined;
+  const strideParam = params.has('stride') ? parseInt(params.get('stride'), 10) : undefined;
+  const fpsParam = params.has('fps') ? parseFloat(params.get('fps')) : undefined;
+
+  const categoryFilter = {};
+  if (params.has('visible')) {
+    categoryFilter.visible = parseCategoryListParam(params.get('visible'));
+  }
+  if (params.has('hidden')) {
+    categoryFilter.hidden = parseCategoryListParam(params.get('hidden'));
+  }
+
+  const hasCategoryFilter =
+    Object.prototype.hasOwnProperty.call(categoryFilter, 'visible') ||
+    Object.prototype.hasOwnProperty.call(categoryFilter, 'hidden');
+
+  return {
+    videoId,
+    frame,
+    speed: Number.isFinite(speedParam) && speedParam > 0 ? speedParam : undefined,
+    stride: Number.isFinite(strideParam) && strideParam >= 1 ? strideParam : undefined,
+    baseFps: Number.isFinite(fpsParam) && fpsParam > 0 ? fpsParam : undefined,
+    categoryFilter: hasCategoryFilter ? categoryFilter : undefined,
+  };
+}
+
+async function applyRoute(route, options = {}) {
+  if (!state.videos.length) return;
+
+  const suppressHistory = options.suppressHistory ?? true;
+  const availableIds = new Set(state.videos.map((entry) => entry.video_id));
+  const fallbackVideo = state.videos[0]?.video_id || null;
+  const targetVideoId = route.videoId && availableIds.has(route.videoId) ? route.videoId : fallbackVideo;
+  if (!targetVideoId) return;
+
+  const initialFrame = Number.isFinite(route.frame) && route.frame >= 0 ? route.frame : 0;
+
+  const previousSuspend = suspendUrlSync;
+  suspendUrlSync = true;
+  try {
+    if (state.currentVideoId !== targetVideoId) {
+      await loadVideo(targetVideoId, {
+        categoryFilter: route.categoryFilter,
+        initialFrame,
+        suppressUrlSync: true,
+      });
+    } else {
+      if (route.categoryFilter && state.currentVideoData) {
+        const derived = deriveCategorySelectionFromFilter(state.currentVideoData.categories, route.categoryFilter);
+        if (derived !== undefined) {
+          state.enabledCategories = derived;
+          persistCategorySelection(state.currentVideoId, state.enabledCategories);
+          updateCategoryFilters(state.currentVideoData.categories);
+          updateNetwork();
+          renderActiveRelations();
+        }
+      }
+      if (Number.isFinite(route.frame) && route.frame >= 0) {
+        setCurrentTime(route.frame);
+      }
+    }
+
+    if (Number.isFinite(route.speed) && route.speed > 0) {
+      setPlaybackSpeed(route.speed, { updateSelect: true, restartTimer: state.playing, sync: false });
+    }
+    if (Number.isFinite(route.stride) && route.stride >= 1) {
+      setRenderStride(route.stride, { updateSelect: true, sync: false });
+    }
+  } finally {
+    suspendUrlSync = previousSuspend;
+  }
+
+  if (!suppressHistory) {
+    syncUrl(false);
+  } else if (urlSyncEnabled) {
+    syncUrl(true);
+  }
 }
 
 function formatFrameUrl(template, frame) {
@@ -1064,6 +1294,17 @@ function initialiseNetwork(nodes) {
         type: 'cubicBezier',
         roundness: 0.25,
       },
+      arrows: {
+        to: { enabled: true, scaleFactor: 1.35, type: 'arrow' },
+      },
+      arrowStrikethrough: false,
+      shadow: {
+        enabled: true,
+        color: 'rgba(15, 23, 42, 0.35)',
+        size: 6,
+        x: 2,
+        y: 2,
+      },
       font: {
         face: 'Inter',
         size: 14,
@@ -1445,6 +1686,40 @@ function renderFrameDisplay() {
   }
 }
 
+function setPlaybackSpeed(value, options = {}) {
+  const { updateSelect = true, restartTimer = true, sync = true } = options;
+  const parsed = Number(value);
+  if (!Number.isFinite(parsed) || parsed <= 0) {
+    return state.speed;
+  }
+  const changed = state.speed !== parsed;
+  state.speed = parsed;
+
+  if (dom.speedSelect && updateSelect) {
+    const targetValue = parsed.toString();
+    const optionsArray = Array.from(dom.speedSelect.options || []);
+    const hasOption = optionsArray.some((opt) => opt.value === targetValue);
+    if (!hasOption) {
+      const option = document.createElement('option');
+      option.value = targetValue;
+      option.textContent = `${targetValue}×`;
+      dom.speedSelect.appendChild(option);
+    }
+    dom.speedSelect.value = targetValue;
+  }
+
+  if (changed && restartTimer && state.playing) {
+    stopPlayback();
+    startPlayback();
+  }
+
+  if (sync && changed) {
+    syncUrl(true);
+  }
+
+  return state.speed;
+}
+
 function setCurrentTime(time) {
   if (!state.currentVideoData) return;
   const upperBound = Number.isFinite(state.currentVideoData.sliderMax)
@@ -1460,8 +1735,46 @@ function setCurrentTime(time) {
     renderFrameDisplay();
     updateNetwork();
     renderActiveRelations();
+    syncUrl(true);
   }
   prefetchNeighbors();
+}
+
+function setRenderStride(value, options = {}) {
+  const { updateSelect = true, sync = true } = options;
+  const parsed = Math.max(1, Math.floor(Number(value) || 1));
+  const changed = state.renderStride !== parsed;
+  state.renderStride = parsed;
+
+  if (dom.renderRate && updateSelect) {
+    const targetValue = parsed.toString();
+    const optionsArray = Array.from(dom.renderRate.options || []);
+    const hasOption = optionsArray.some((opt) => opt.value === targetValue);
+    if (!hasOption) {
+      const option = document.createElement('option');
+      option.value = targetValue;
+      option.textContent = `Every ${parsed}th`;
+      dom.renderRate.appendChild(option);
+    }
+    dom.renderRate.value = targetValue;
+  }
+
+  if (!changed) {
+    updateTimeSliderStep();
+    return state.renderStride;
+  }
+
+  updateTimeSliderStep();
+
+  const previousSuspend = suspendUrlSync;
+  if (!sync) {
+    suspendUrlSync = true;
+  }
+  state.lastRenderedFrame = null;
+  setCurrentTime(state.currentTime);
+  suspendUrlSync = previousSuspend;
+
+  return state.renderStride;
 }
 
 function nudgeCurrentTime(direction) {
@@ -1566,6 +1879,7 @@ function updateCategoryFilters(categories) {
     button.dataset.category = cat;
     const isActive = state.enabledCategories.has(cat);
     button.dataset.active = isActive ? 'true' : 'false';
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
     button.textContent = formatCategoryLabel(cat);
     button.style.background = style.background;
     button.style.color = style.text;
@@ -1574,19 +1888,22 @@ function updateCategoryFilters(categories) {
       if (isActive) {
         state.enabledCategories.delete(cat);
         button.dataset.active = 'false';
+        button.setAttribute('aria-pressed', 'false');
       } else {
         state.enabledCategories.add(cat);
         button.dataset.active = 'true';
+        button.setAttribute('aria-pressed', 'true');
       }
       persistCategorySelection(state.currentVideoId, state.enabledCategories);
       updateNetwork();
       renderActiveRelations();
+      syncUrl(true);
     });
     container.appendChild(button);
   });
 }
 
-async function loadVideo(videoId) {
+async function loadVideo(videoId, options = {}) {
   stopPlayback();
   dom.frameDisplay.textContent = 'Loading relationships…';
   dom.activeRelations.innerHTML = '';
@@ -1627,7 +1944,25 @@ async function loadVideo(videoId) {
 
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
-  state.enabledCategories = restoreCategorySelection(videoId, cached.categories);
+
+  const restoredCategories = restoreCategorySelection(videoId, cached.categories);
+  let categorySelection = restoredCategories;
+
+  if (Object.prototype.hasOwnProperty.call(options, 'categorySelection')) {
+    categorySelection = normaliseCategorySelection(options.categorySelection, cached.categories);
+  } else {
+    const derived = deriveCategorySelectionFromFilter(cached.categories, options.categoryFilter);
+    if (derived !== undefined) {
+      categorySelection = derived;
+    }
+  }
+
+  if (!(categorySelection instanceof Set)) {
+    categorySelection = restoredCategories;
+  }
+
+  state.enabledCategories = categorySelection;
+  persistCategorySelection(videoId, state.enabledCategories);
 
   dom.videoSelect.value = videoId;
   dom.videoTitle.textContent = videoId;
@@ -1666,16 +2001,29 @@ async function loadVideo(videoId) {
     state.baseFps = 24;
   }
   state.lastRenderedFrame = null;
-  setCurrentTime(0);
+  const hasInitialFrame = Object.prototype.hasOwnProperty.call(options, 'initialFrame');
+  const initialTime = hasInitialFrame && Number.isFinite(options.initialFrame) && options.initialFrame >= 0 ? options.initialFrame : 0;
+  const previousSuspend = suspendUrlSync;
+  if (options.suppressUrlSync) {
+    suspendUrlSync = true;
+  }
+  setCurrentTime(initialTime);
+  suspendUrlSync = previousSuspend;
 }
 
 function handleVideoChange(e) {
   const videoId = e.target.value;
   if (videoId && videoId !== state.currentVideoId) {
-    loadVideo(videoId).catch((error) => {
-      console.error(error);
-      dom.frameDisplay.textContent = 'Failed to load video data.';
-    });
+    loadVideo(videoId, { suppressUrlSync: true })
+      .then(() => {
+        if (urlSyncEnabled) {
+          syncUrl(false);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        dom.frameDisplay.textContent = 'Failed to load video data.';
+      });
   }
 }
 
@@ -1685,10 +2033,16 @@ function selectAdjacentVideo(offset) {
   const nextIndex = (currentIndex + offset + state.videos.length) % state.videos.length;
   const nextVideo = state.videos[nextIndex];
   if (nextVideo) {
-    loadVideo(nextVideo.video_id).catch((error) => {
-      console.error(error);
-      dom.frameDisplay.textContent = 'Failed to load video data.';
-    });
+    loadVideo(nextVideo.video_id, { suppressUrlSync: true })
+      .then(() => {
+        if (urlSyncEnabled) {
+          syncUrl(false);
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        dom.frameDisplay.textContent = 'Failed to load video data.';
+      });
   }
 }
 
@@ -1722,27 +2076,20 @@ function initialiseEventHandlers() {
   dom.speedSelect.addEventListener('change', (event) => {
     const parsed = parseFloat(event.target.value);
     const value = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
-    state.speed = value;
-    if (state.playing) {
-      stopPlayback();
-      startPlayback();
-    }
+    setPlaybackSpeed(value, { updateSelect: false, restartTimer: true, sync: true });
   });
 
   if (dom.renderRate) {
     // Initialize from current select value
     const initialStride = parseInt(dom.renderRate.value, 10);
     if (Number.isFinite(initialStride) && initialStride >= 1) {
-      state.renderStride = initialStride;
+      setRenderStride(initialStride, { updateSelect: false, sync: false });
     }
     updateTimeSliderStep();
     dom.renderRate.addEventListener('change', (event) => {
       const parsed = parseInt(event.target.value, 10);
-      state.renderStride = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
-      updateTimeSliderStep();
-      // Force a refresh so the new stride is reflected everywhere
-      state.lastRenderedFrame = null;
-      setCurrentTime(state.currentTime);
+      const strideValue = Number.isFinite(parsed) && parsed >= 1 ? parsed : 1;
+      setRenderStride(strideValue, { updateSelect: false, sync: true });
     });
   }
 
@@ -1753,6 +2100,12 @@ function initialiseEventHandlers() {
   });
 
   window.addEventListener('keydown', handleGlobalKeydown);
+  window.addEventListener('popstate', () => {
+    const route = parseRouteFromLocation();
+    applyRoute(route, { suppressHistory: true }).catch((error) => {
+      console.error('Failed to apply route from history navigation:', error);
+    });
+  });
 }
 
 async function initialise() {
@@ -1778,7 +2131,11 @@ async function initialise() {
     dom.videoSelect.innerHTML = '';
     dom.videoSelect.appendChild(fragment);
 
-    await loadVideo(state.videos[0].video_id);
+    const route = parseRouteFromLocation();
+    await applyRoute(route, { suppressHistory: true });
+
+    urlSyncEnabled = true;
+    syncUrl(true);
   } catch (error) {
     console.error(error);
     dom.frameDisplay.textContent = 'Unable to load manifest or relations. Check console for details.';
