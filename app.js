@@ -1517,60 +1517,13 @@ function createColorStruct(r, g, b, a) {
   };
 }
 
-function colorDistanceSquared(a, b) {
-  if (!a || !b) return Number.POSITIVE_INFINITY;
-  const dr = a.r - b.r;
-  const dg = a.g - b.g;
-  const db = a.b - b.b;
-  return dr * dr + dg * dg + db * db;
-}
-
 function resolveMaskEntryForColor(color) {
   if (!color) return null;
   const lookup = state.mask.colorLookup;
-  if (lookup && lookup.has(color.key)) {
-    return lookup.get(color.key);
-  }
-
-  const objectColorMap = state.mask.objectColorMap;
-  if (!lookup || !(objectColorMap instanceof Map) || objectColorMap.size === 0) {
+  if (!lookup) {
     return null;
   }
-
-  let bestObjectId = null;
-  let bestColor = null;
-  let bestDist = Number.POSITIVE_INFINITY;
-  objectColorMap.forEach((candidateColor, objectId) => {
-    const dist = colorDistanceSquared(candidateColor, color);
-    if (dist < bestDist) {
-      bestDist = dist;
-      bestObjectId = objectId;
-      bestColor = candidateColor;
-    }
-  });
-
-  if (bestObjectId == null || bestColor == null) {
-    return null;
-  }
-
-  const tolerance = 45 * 45; // allow slight colour variation
-  if (bestDist > tolerance) {
-    return null;
-  }
-
-  let matchedEntry = null;
-  lookup.forEach((entry) => {
-    if (matchedEntry) return;
-    if (Array.isArray(entry?.objectIds) && entry.objectIds.includes(String(bestObjectId))) {
-      matchedEntry = entry;
-    }
-  });
-
-  if (matchedEntry) {
-    return matchedEntry;
-  }
-
-  return null;
+  return lookup.get(color.key) || null;
 }
 
 function sampleMaskColorAt(x, y) {
@@ -1613,26 +1566,69 @@ function sampleNearestMaskColor(x, y, radius = 3) {
   return null;
 }
 
-function collectUnmappedPreviewColors(existingLookup) {
-  const results = [];
-  const imageData = state.mask.previewImageData;
-  if (!imageData) return results;
-  const { data } = imageData;
-  const seen = new Set();
-  for (let i = 0; i < data.length; i += 4) {
-    const a = data[i + 3];
-    if (a < 32) continue;
-    const r = data[i];
-    const g = data[i + 1];
-    const b = data[i + 2];
-    const color = createColorStruct(r, g, b, a);
-    if (existingLookup.has(color.key) || seen.has(color.key)) {
+function resolveMaskDimensions(mask, entry) {
+  if (!mask) return null;
+  const size = Array.isArray(mask.size) ? mask.size : null;
+  let height = size && Number(size[0]);
+  let width = size && Number(size[1]);
+
+  if (!Number.isFinite(height) || height <= 0) {
+    height = Number(entry?.height);
+  }
+  if (!Number.isFinite(width) || width <= 0) {
+    width = Number(entry?.width);
+  }
+
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return null;
+  }
+
+  return {
+    width: Math.trunc(width),
+    height: Math.trunc(height),
+  };
+}
+
+function findFirstMaskPixel(mask, entry) {
+  if (!mask) return null;
+  const dimensions = resolveMaskDimensions(mask, entry);
+  if (!dimensions) {
+    return null;
+  }
+  const { width, height } = dimensions;
+  const totalPixels = width * height;
+  if (!Number.isFinite(totalPixels) || totalPixels <= 0) {
+    return null;
+  }
+
+  const runs = decodeCompressedCounts(mask.counts);
+  if (!runs.length) {
+    return null;
+  }
+
+  let cursor = 0;
+  let value = 0;
+  for (let i = 0; i < runs.length && cursor < totalPixels; i += 1) {
+    const runLength = runs[i];
+    if (!Number.isFinite(runLength) || runLength <= 0) {
+      value ^= 1;
       continue;
     }
-    seen.add(color.key);
-    results.push(color);
+    const remaining = totalPixels - cursor;
+    const clampedLength = Math.min(runLength, remaining);
+    if (value === 1 && clampedLength > 0) {
+      const index = cursor;
+      const row = index % height;
+      const col = Math.floor(index / height);
+      if (col < width) {
+        return { x: col, y: row };
+      }
+    }
+    cursor += clampedLength;
+    value ^= 1;
   }
-  return results;
+
+  return null;
 }
 
 function getPreviewGeometry(preview) {
@@ -1704,7 +1700,6 @@ function buildMaskLegend() {
   const videoId = state.currentVideoId;
   const maskEntry = videoId ? state.mask.store.get(videoId) : null;
   const firstFrameMasks = Array.isArray(maskEntry?.frames?.[0]) ? maskEntry.frames[0] : [];
-  const paletteColors = generatePreviewPalette(firstFrameMasks.length, 255);
   if (!preview || !list || !panel || !imageData || !state.currentVideoData) {
     if (panel) {
       panel.hidden = true;
@@ -1721,88 +1716,69 @@ function buildMaskLegend() {
   const objectColorMap = new Map();
   const data = state.currentVideoData;
   const labels = data.objectLabels || {};
-  const imgWidth = preview.naturalWidth || imageData.width;
-  const imgHeight = preview.naturalHeight || imageData.height;
-  const originX = Number.isFinite(state.imageSize?.originX) ? state.imageSize.originX : 0;
-  const originY = Number.isFinite(state.imageSize?.originY) ? state.imageSize.originY : 0;
-
-  data.nodes.forEach((node) => {
-    const point = getCentroidPoint(node.id, 0);
-    if (!point) return;
-    const imgX = Math.round(point.x - originX);
-    const imgY = Math.round(point.y - originY);
-    if (!Number.isFinite(imgX) || !Number.isFinite(imgY)) return;
-    const color = sampleNearestMaskColor(imgX, imgY, 4);
-    if (!color) return;
-    const entry = colorLookup.get(color.key);
-    const objectId = String(node.id);
-    const label = labels?.[objectId] || node.label || `Object ${objectId}`;
-    if (entry) {
-      if (!entry.objectIds.includes(objectId)) {
-        entry.objectIds.push(objectId);
-        entry.labelSet.add(label);
-      }
-    } else {
-      colorLookup.set(color.key, {
-        color,
-        objectIds: [objectId],
-        labelSet: new Set([label]),
-      });
+  const ensureEntry = (color) => {
+    if (!color) return null;
+    const existing = colorLookup.get(color.key);
+    if (existing) {
+      return existing;
     }
-  });
+    const entry = {
+      color,
+      objectIds: [],
+      labelSet: new Set(),
+    };
+    colorLookup.set(color.key, entry);
+    return entry;
+  };
 
   firstFrameMasks.forEach((mask, idx) => {
-    const colour = paletteColors[idx];
-    if (!colour) return;
-    const key = `${colour.r},${colour.g},${colour.b},${colour.a}`;
-    if (!colorLookup.has(key)) {
-      colorLookup.set(key, {
-        color: colour,
-        objectIds: [],
-        labelSet: new Set(),
-      });
-    }
-    const entry = colorLookup.get(key);
+    if (!mask) return;
+    const samplePoint = findFirstMaskPixel(mask, maskEntry);
+    if (!samplePoint) return;
+    const color = sampleMaskColorAt(samplePoint.x, samplePoint.y);
+    if (!color) return;
+
+    const entry = ensureEntry(color);
     if (!entry) return;
 
-    if (!entry.color) {
-      entry.color = colour;
-    }
+    const rawObjectId = mask.objectId;
+    const objectId = rawObjectId != null && rawObjectId !== 'null' ? String(rawObjectId) : null;
+    const fallbackId = objectId ?? String(idx);
+    const preferredLabel = labels?.[fallbackId] || data.objectLabels?.[fallbackId];
+    const label = preferredLabel || `Object ${fallbackId}`;
 
-    let labelSet = entry.labelSet;
-    if (!(labelSet instanceof Set)) {
-      labelSet = new Set(Array.isArray(labelSet) ? labelSet : labelSet ? [labelSet] : []);
-      entry.labelSet = labelSet;
-    }
+    entry.labelSet.add(label);
 
-    const objectId = mask?.objectId ?? (typeof idx === 'number' ? String(idx) : null);
-    if (objectId != null && objectId !== 'null') {
+    if (objectId) {
       if (!entry.objectIds.includes(objectId)) {
         entry.objectIds.push(objectId);
       }
-      const preferred = labels?.[objectId] || data.objectLabels?.[objectId];
-      if (preferred) {
-        labelSet.add(preferred);
-      }
       if (!objectLabelMap.has(objectId)) {
-        objectLabelMap.set(objectId, preferred || `Object ${objectId}`);
+        objectLabelMap.set(objectId, label);
       }
       if (!objectColorMap.has(objectId)) {
-        objectColorMap.set(objectId, colour);
+        objectColorMap.set(objectId, color);
       }
     }
   });
 
-  const unmatchedColors = collectUnmappedPreviewColors(colorLookup);
-  unmatchedColors.forEach((color) => {
-    if (!colorLookup.has(color.key)) {
-      colorLookup.set(color.key, {
-        color,
-        objectIds: [],
-        labelSet: new Set(),
-      });
+  if (imageData?.data) {
+    const { data: pixels } = imageData;
+    const seen = new Set(colorLookup.keys());
+    for (let i = 0; i < pixels.length; i += 4) {
+      const alpha = pixels[i + 3];
+      if (alpha < 32) continue;
+      const color = createColorStruct(pixels[i], pixels[i + 1], pixels[i + 2], alpha);
+      if (seen.has(color.key)) {
+        continue;
+      }
+      seen.add(color.key);
+      const entry = ensureEntry(color);
+      if (entry) {
+        entry.labelSet.add('Unknown object');
+      }
     }
-  });
+  }
 
   state.mask.colorLookup = colorLookup;
 
