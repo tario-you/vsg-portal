@@ -53,6 +53,9 @@ const state = {
     previewContext: null,
     previewImageData: null,
     colorLookup: new Map(),
+    objectLabelMap: new Map(),
+    objectColorMap: new Map(),
+    showAllLabels: false,
   },
 };
 
@@ -85,8 +88,10 @@ const dom = {
   frameImageA: document.getElementById('frame-image-a'),
   frameImageB: document.getElementById('frame-image-b'),
   maskToggle: document.getElementById('mask-toggle'),
+  maskLabelsToggle: document.getElementById('mask-labels-toggle'),
   maskCanvas: document.getElementById('frame-mask'),
   maskPreview: document.getElementById('mask-preview'),
+  maskLabelsLayer: document.getElementById('mask-labels-layer'),
   network: document.getElementById('network'),
   frameViewport: document.querySelector('.frame-viewport'),
   maskPanel: document.getElementById('mask-panel'),
@@ -109,6 +114,9 @@ if (dom.maskPreview) {
       dom.frameViewport.classList.add('mask-preview-active');
     }
     prepareMaskLegend();
+    if (state.mask.showAllLabels) {
+      updateMaskLabelsOverlay();
+    }
   });
   dom.maskPreview.addEventListener('error', () => {
     dom.maskPreview.dataset.loaded = 'false';
@@ -120,6 +128,22 @@ if (dom.maskPreview) {
   dom.maskPreview.addEventListener('mousemove', handleMaskPreviewPointerMove, { passive: true });
   dom.maskPreview.addEventListener('mouseleave', () => {
     hideMaskTooltip();
+  });
+}
+
+window.addEventListener('resize', () => {
+  if (state.mask.showAllLabels) {
+    updateMaskLabelsOverlay();
+  }
+});
+
+if (dom.maskLabelsToggle) {
+  dom.maskLabelsToggle.checked = state.mask.showAllLabels;
+  dom.maskLabelsToggle.disabled = !state.mask.enabled;
+  dom.maskLabelsToggle.addEventListener('change', (event) => {
+    const target = event.target;
+    const desired = Boolean(target?.checked);
+    setMaskLabelsVisible(desired);
   });
 }
 
@@ -1364,6 +1388,8 @@ function hideMaskPreview() {
   } else {
     state.mask.colorLookup = new Map();
   }
+  state.mask.objectLabelMap = new Map();
+  state.mask.objectColorMap = new Map();
   const preview = dom.maskPreview;
   if (preview) {
     preview.dataset.loaded = 'false';
@@ -1478,6 +1504,34 @@ function collectUnmappedPreviewColors(existingLookup) {
   return results;
 }
 
+function getPreviewGeometry(preview) {
+  if (!preview) return null;
+  const rect = preview.getBoundingClientRect();
+  const naturalWidth = preview.naturalWidth || preview.width;
+  const naturalHeight = preview.naturalHeight || preview.height;
+  if (!naturalWidth || !naturalHeight) {
+    return null;
+  }
+  const scale = Math.min(rect.width / naturalWidth, rect.height / naturalHeight);
+  if (!Number.isFinite(scale) || scale <= 0) {
+    return null;
+  }
+  const displayWidth = naturalWidth * scale;
+  const displayHeight = naturalHeight * scale;
+  const offsetX = (rect.width - displayWidth) / 2;
+  const offsetY = (rect.height - displayHeight) / 2;
+  return {
+    rect,
+    naturalWidth,
+    naturalHeight,
+    scale,
+    displayWidth,
+    displayHeight,
+    offsetX,
+    offsetY,
+  };
+}
+
 function prepareMaskLegend() {
   if (!state.mask.enabled) {
     hideMaskPreview();
@@ -1528,6 +1582,8 @@ function buildMaskLegend() {
   }
 
   const colorLookup = new Map();
+  const objectLabelMap = new Map();
+  const objectColorMap = new Map();
   const data = state.currentVideoData;
   const labels = data.objectLabels || {};
   const imgWidth = preview.naturalWidth || imageData.width;
@@ -1577,6 +1633,15 @@ function buildMaskLegend() {
     const objectIds = entry.objectIds.slice().sort((a, b) => Number(a) - Number(b));
     const labelsArray = Array.from(entry.labelSet);
     const label = labelsArray.length ? labelsArray.join(', ') : 'Unknown object';
+    objectIds.forEach((objectId) => {
+      if (!objectLabelMap.has(objectId)) {
+        const fallback = labels?.[objectId] || `Object ${objectId}`;
+        objectLabelMap.set(objectId, labelsArray.length ? labelsArray.join(', ') : fallback);
+      }
+      if (!objectColorMap.has(objectId)) {
+        objectColorMap.set(objectId, entry.color);
+      }
+    });
     return {
       color: entry.color,
       objectIds,
@@ -1593,12 +1658,24 @@ function buildMaskLegend() {
     return a.label.localeCompare(b.label);
   });
 
+  state.mask.objectLabelMap = objectLabelMap;
+  state.mask.objectColorMap = objectColorMap;
+
   panel.hidden = false;
   panel.dataset.visible = 'true';
 
   if (!items.length) {
     list.innerHTML = '<p class="panel__note">No mask labels available.</p>';
+    if (state.mask.showAllLabels) {
+      clearMaskLabelsOverlay();
+    }
     return;
+  }
+
+  if (state.mask.showAllLabels) {
+    updateMaskLabelsOverlay();
+  } else {
+    clearMaskLabelsOverlay();
   }
 
   const frag = document.createDocumentFragment();
@@ -1636,31 +1713,19 @@ function getPreviewCoordinates(event) {
   if (!preview || preview.dataset.loaded !== 'true') {
     return null;
   }
-  const rect = preview.getBoundingClientRect();
-  const naturalWidth = preview.naturalWidth || preview.width;
-  const naturalHeight = preview.naturalHeight || preview.height;
-  if (!naturalWidth || !naturalHeight) {
+  const geometry = getPreviewGeometry(preview);
+  if (!geometry) {
     return null;
   }
 
-  const scale = Math.min(rect.width / naturalWidth, rect.height / naturalHeight);
-  if (!Number.isFinite(scale) || scale <= 0) {
+  const relativeX = event.clientX - geometry.rect.left - geometry.offsetX;
+  const relativeY = event.clientY - geometry.rect.top - geometry.offsetY;
+  if (relativeX < 0 || relativeY < 0 || relativeX > geometry.displayWidth || relativeY > geometry.displayHeight) {
     return null;
   }
 
-  const displayWidth = naturalWidth * scale;
-  const displayHeight = naturalHeight * scale;
-  const offsetX = (rect.width - displayWidth) / 2;
-  const offsetY = (rect.height - displayHeight) / 2;
-
-  const relativeX = event.clientX - rect.left - offsetX;
-  const relativeY = event.clientY - rect.top - offsetY;
-  if (relativeX < 0 || relativeY < 0 || relativeX > displayWidth || relativeY > displayHeight) {
-    return null;
-  }
-
-  const imageX = Math.floor(relativeX / scale);
-  const imageY = Math.floor(relativeY / scale);
+  const imageX = Math.floor(relativeX / geometry.scale);
+  const imageY = Math.floor(relativeY / geometry.scale);
   return { x: imageX, y: imageY };
 }
 
@@ -1668,6 +1733,105 @@ function formatMaskTooltipEntry(entry) {
   if (!entry) return '';
   const ids = entry.objectIds?.length ? ` (Obj ${entry.objectIds.join(', ')})` : '';
   return `${entry.label || 'Unknown object'}${ids}`;
+}
+
+function clearMaskLabelsOverlay() {
+  const layer = dom.maskLabelsLayer;
+  if (!layer) return;
+  layer.innerHTML = '';
+  layer.dataset.visible = 'false';
+}
+
+function updateMaskLabelsOverlay() {
+  const layer = dom.maskLabelsLayer;
+  const preview = dom.maskPreview;
+  if (!layer || !preview) return;
+  if (!state.mask.enabled || !state.mask.showAllLabels || preview.dataset.loaded !== 'true') {
+    clearMaskLabelsOverlay();
+    return;
+  }
+  const geometry = getPreviewGeometry(preview);
+  if (!geometry) {
+    clearMaskLabelsOverlay();
+    return;
+  }
+  const data = state.currentVideoData;
+  if (!data || !state.mask.objectLabelMap) {
+    clearMaskLabelsOverlay();
+    return;
+  }
+
+  const originX = Number.isFinite(state.imageSize?.originX) ? state.imageSize.originX : 0;
+  const originY = Number.isFinite(state.imageSize?.originY) ? state.imageSize.originY : 0;
+  const objectLabelMap = state.mask.objectLabelMap;
+  const objectColorMap = state.mask.objectColorMap || new Map();
+
+  const frag = document.createDocumentFragment();
+  const seen = new Set();
+
+  data.nodes.forEach((node) => {
+    const objectId = String(node.id);
+    if (seen.has(objectId)) return;
+    const point = getCentroidPoint(node.id, 0);
+    if (!point) return;
+    const imgX = point.x - originX;
+    const imgY = point.y - originY;
+    if (!Number.isFinite(imgX) || !Number.isFinite(imgY)) return;
+
+    const displayX = geometry.offsetX + imgX * geometry.scale;
+    const displayY = geometry.offsetY + imgY * geometry.scale;
+
+    const clampedX = Math.min(Math.max(displayX, 0), geometry.rect.width);
+    const clampedY = Math.min(Math.max(displayY, 0), geometry.rect.height);
+
+    const label = objectLabelMap.get(objectId) || data.objectLabels?.[objectId] || `Object ${objectId}`;
+    if (!label) return;
+
+    const chip = document.createElement('div');
+    chip.className = 'mask-label-chip';
+    chip.textContent = label;
+    chip.style.left = `${clampedX}px`;
+    chip.style.top = `${clampedY}px`;
+
+    const colorStruct = objectColorMap.get(objectId);
+    if (colorStruct) {
+      chip.dataset.color = colorStruct.hex;
+      chip.style.setProperty('--mask-swatch-color', colorStruct.rgba);
+    } else {
+      chip.removeAttribute('data-color');
+      chip.style.removeProperty('--mask-swatch-color');
+    }
+
+    frag.appendChild(chip);
+    seen.add(objectId);
+  });
+
+  layer.innerHTML = '';
+  layer.appendChild(frag);
+  layer.dataset.visible = layer.childElementCount > 0 ? 'true' : 'false';
+}
+
+function setMaskLabelsVisible(nextValue) {
+  const desired = Boolean(nextValue);
+  if (state.mask.showAllLabels === desired) {
+    if (desired) {
+      updateMaskLabelsOverlay();
+    }
+    return;
+  }
+  state.mask.showAllLabels = desired;
+  if (dom.maskLabelsToggle) {
+    dom.maskLabelsToggle.checked = desired;
+  }
+  if (!desired) {
+    clearMaskLabelsOverlay();
+    return;
+  }
+  if (!state.mask.enabled) {
+    clearMaskLabelsOverlay();
+    return;
+  }
+  updateMaskLabelsOverlay();
 }
 
 function handleMaskPreviewPointerMove(event) {
@@ -1851,13 +2015,20 @@ function setMaskEnabled(nextValue) {
   if (dom.maskToggle) {
     dom.maskToggle.checked = enabled;
   }
+  if (dom.maskLabelsToggle) {
+    dom.maskLabelsToggle.disabled = !enabled;
+  }
   if (!enabled) {
     state.mask.lastRenderedFrame = null;
     clearMaskCanvas();
+    clearMaskLabelsOverlay();
     return;
   }
 
   renderMaskOverlay();
+  if (state.mask.showAllLabels) {
+    updateMaskLabelsOverlay();
+  }
 }
 
 async function fetchManifest() {

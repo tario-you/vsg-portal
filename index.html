@@ -71,6 +71,12 @@
           <span>Show masks</span>
         </label>
       </div>
+      <div class="control-group control-group--toggle">
+        <label for="mask-labels-toggle" class="toggle">
+          <input type="checkbox" id="mask-labels-toggle" disabled />
+          <span>Show mask labels</span>
+        </label>
+      </div>
     </div>
   </header>
 
@@ -82,6 +88,7 @@
         <img id="frame-image-b" class="frame-image" alt="Video frame B" decoding="async" referrerpolicy="no-referrer" />
         <canvas id="frame-mask" class="frame-mask" aria-hidden="true"></canvas>
         <img id="mask-preview" class="mask-preview" alt="Mask preview" aria-hidden="true" />
+        <div id="mask-labels-layer" class="mask-labels-layer" aria-hidden="true"></div>
         <div id="network" class="network-canvas" aria-label="Relationship graph"></div>
       </div>
     </section>
