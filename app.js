@@ -504,16 +504,6 @@ function formatCategoryLabel(cat) {
   return cat.replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
-function escapeHtml(value) {
-  if (value == null) return '';
-  return String(value)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#39;');
-}
-
 function padFrame(frame) {
   return frame.toString().padStart(4, '0');
 }
@@ -1908,7 +1898,6 @@ function initialiseNetwork(nodes) {
         face: 'Inter',
         size: 14,
         align: 'horizontal',
-        multi: 'html',
       },
     },
   };
@@ -2256,20 +2245,18 @@ function updateNetwork() {
     const lines = [];
 
     if (entry.self) {
-      const label = escapeHtml(entry.nodeLabel || `Object ${entry.node}`);
+      const label = entry.nodeLabel || `Object ${entry.node}`;
       lines.push(`${label} -> ${label}:`);
       entry.relations.forEach((rel) => {
-        lines.push(`- ${escapeHtml(rel.predicate)}`);
+        const predicate = rel.predicate ? String(rel.predicate) : '—';
+        lines.push(`- ${predicate}`);
       });
-
-      const content = lines.map((line) => (line === '' ? '&nbsp;' : line)).join('<br/>');
-      const labelHtml = `<div style="text-align:left">${content}</div>`;
 
       return {
         id: `edge-${key}`,
         from: entry.node,
         to: entry.node,
-        label: labelHtml,
+        label: lines.join('\n'),
         color: { color: style.edge, highlight: style.edge },
         font: {
           color: '#0f172a',
@@ -2277,31 +2264,32 @@ function updateNetwork() {
           strokeWidth: 4,
           face: 'Inter',
           size: 14,
-          multi: 'html',
           align: 'horizontal',
         },
         arrows: { to: { enabled: true, scaleFactor: 1.35, type: 'arrow' } },
       };
     }
 
-    const labelA = escapeHtml(entry.nodeALabel || `Object ${entry.nodeA}`);
-    const labelB = escapeHtml(entry.nodeBLabel || `Object ${entry.nodeB}`);
+    const labelA = entry.nodeALabel || `Object ${entry.nodeA}`;
+    const labelB = entry.nodeBLabel || `Object ${entry.nodeB}`;
 
     if (entry.forward.length) {
       lines.push(`${labelA} -> ${labelB}:`);
       entry.forward.forEach((rel) => {
-        lines.push(`- ${escapeHtml(rel.predicate)}`);
+        const predicate = rel.predicate ? String(rel.predicate) : '—';
+        lines.push(`- ${predicate}`);
       });
+    }
+    if (entry.forward.length && entry.reverse.length) {
+      lines.push('');
     }
     if (entry.reverse.length) {
       lines.push(`${labelB} -> ${labelA}:`);
       entry.reverse.forEach((rel) => {
-        lines.push(`- ${escapeHtml(rel.predicate)}`);
+        const predicate = rel.predicate ? String(rel.predicate) : '—';
+        lines.push(`- ${predicate}`);
       });
     }
-
-    const content = lines.map((line) => (line === '' ? '&nbsp;' : line)).join('<br/>');
-    const labelHtml = `<div style="text-align:left">${content}</div>`;
 
     const hasForward = entry.forward.length > 0;
     const hasReverse = entry.reverse.length > 0;
@@ -2321,7 +2309,7 @@ function updateNetwork() {
       id: `edge-${key}`,
       from: edgeFrom,
       to: edgeTo,
-      label: labelHtml,
+      label: lines.join('\n'),
       color: { color: style.edge, highlight: style.edge },
       font: {
         color: '#0f172a',
@@ -2329,7 +2317,6 @@ function updateNetwork() {
         strokeWidth: 4,
         face: 'Inter',
         size: 14,
-        multi: 'html',
         align: 'horizontal',
       },
       arrows,
