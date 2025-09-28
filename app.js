@@ -504,6 +504,16 @@ function formatCategoryLabel(cat) {
   return cat.replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
+function escapeHtml(value) {
+  if (value == null) return '';
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 function padFrame(frame) {
   return frame.toString().padStart(4, '0');
 }
@@ -1898,6 +1908,7 @@ function initialiseNetwork(nodes) {
         face: 'Inter',
         size: 14,
         align: 'middle',
+        multi: 'html',
       },
     },
   };
@@ -2183,7 +2194,19 @@ function updateNetwork() {
       const only = group.relations[0];
       style = CATEGORY_STYLES[only.category] || CATEGORY_STYLES.default;
     }
-    const label = group.relations.map((rel) => rel.predicate).join('\n');
+    const label = group.relations.map((rel) => `• ${escapeHtml(rel.predicate)}`).join('<br/>');
+    const hasOpposite = grouped.has(`${group.to}→${group.from}`);
+    let smooth = undefined;
+    if (hasOpposite) {
+      const fromKey = String(group.from);
+      const toKey = String(group.to);
+      const useCw = fromKey < toKey;
+      smooth = {
+        enabled: true,
+        type: useCw ? 'curvedCW' : 'curvedCCW',
+        roundness: 0.35,
+      };
+    }
     return {
       id: `edge-${key}`,
       from: group.from,
@@ -2196,7 +2219,10 @@ function updateNetwork() {
         strokeWidth: 4,
         face: 'Inter',
         size: 14,
+        multi: 'html',
+        align: 'middle',
       },
+      smooth,
     };
   });
 
