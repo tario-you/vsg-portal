@@ -140,6 +140,11 @@ window.addEventListener('resize', () => {
 if (dom.maskLabelsToggle) {
   dom.maskLabelsToggle.checked = state.mask.showAllLabels;
   dom.maskLabelsToggle.disabled = !state.mask.enabled;
+  if (state.mask.enabled) {
+    dom.maskLabelsToggle.removeAttribute('disabled');
+  } else {
+    dom.maskLabelsToggle.setAttribute('disabled', '');
+  }
   dom.maskLabelsToggle.addEventListener('change', (event) => {
     const target = event.target;
     const desired = Boolean(target?.checked);
@@ -2017,6 +2022,11 @@ function setMaskEnabled(nextValue) {
   }
   if (dom.maskLabelsToggle) {
     dom.maskLabelsToggle.disabled = !enabled;
+    if (enabled) {
+      dom.maskLabelsToggle.removeAttribute('disabled');
+    } else {
+      dom.maskLabelsToggle.setAttribute('disabled', '');
+    }
   }
   if (!enabled) {
     state.mask.lastRenderedFrame = null;
