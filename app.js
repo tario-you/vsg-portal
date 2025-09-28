@@ -1636,7 +1636,12 @@ function buildMaskLegend() {
 
   const items = Array.from(colorLookup.values()).map((entry) => {
     const objectIds = entry.objectIds.slice().sort((a, b) => Number(a) - Number(b));
-    const labelsArray = Array.from(entry.labelSet);
+    const labelsArray = Array.isArray(entry.labelSet)
+      ? Array.from(new Set(entry.labelSet))
+      : entry.labelSet instanceof Set
+      ? Array.from(entry.labelSet)
+      : [];
+    labelsArray.sort((a, b) => a.localeCompare(b));
     const label = labelsArray.length ? labelsArray.join(', ') : 'Unknown object';
     objectIds.forEach((objectId) => {
       if (!objectLabelMap.has(objectId)) {
@@ -1773,6 +1778,46 @@ function updateMaskLabelsOverlay() {
 
   const frag = document.createDocumentFragment();
   const seen = new Set();
+  const placed = [];
+
+  const offsets = [
+    [0, 0],
+    [0, 18],
+    [0, -18],
+    [18, 0],
+    [-18, 0],
+    [18, 18],
+    [-18, 18],
+    [18, -18],
+    [-18, -18],
+    [0, 36],
+    [0, -36],
+    [36, 0],
+    [-36, 0],
+  ];
+
+  const isFarEnough = (x, y) => {
+    const threshold = 20;
+    return placed.every((pos) => {
+      const dx = pos.x - x;
+      const dy = pos.y - y;
+      return Math.hypot(dx, dy) >= threshold;
+    });
+  };
+
+  const choosePosition = (baseX, baseY) => {
+    for (const [dx, dy] of offsets) {
+      const x = Math.min(Math.max(baseX + dx, 0), geometry.rect.width);
+      const y = Math.min(Math.max(baseY + dy, 0), geometry.rect.height);
+      if (isFarEnough(x, y)) {
+        return { x, y };
+      }
+    }
+    return {
+      x: Math.min(Math.max(baseX, 0), geometry.rect.width),
+      y: Math.min(Math.max(baseY + 48, 0), geometry.rect.height),
+    };
+  };
 
   data.nodes.forEach((node) => {
     const objectId = String(node.id);
@@ -1786,8 +1831,7 @@ function updateMaskLabelsOverlay() {
     const displayX = geometry.offsetX + imgX * geometry.scale;
     const displayY = geometry.offsetY + imgY * geometry.scale;
 
-    const clampedX = Math.min(Math.max(displayX, 0), geometry.rect.width);
-    const clampedY = Math.min(Math.max(displayY, 0), geometry.rect.height);
+    const target = choosePosition(displayX, displayY);
 
     const label = objectLabelMap.get(objectId) || data.objectLabels?.[objectId] || `Object ${objectId}`;
     if (!label) return;
@@ -1795,8 +1839,8 @@ function updateMaskLabelsOverlay() {
     const chip = document.createElement('div');
     chip.className = 'mask-label-chip';
     chip.textContent = label;
-    chip.style.left = `${clampedX}px`;
-    chip.style.top = `${clampedY}px`;
+    chip.style.left = `${target.x}px`;
+    chip.style.top = `${target.y}px`;
 
     const colorStruct = objectColorMap.get(objectId);
     if (colorStruct) {
@@ -1809,6 +1853,7 @@ function updateMaskLabelsOverlay() {
 
     frag.appendChild(chip);
     seen.add(objectId);
+    placed.push({ x: target.x, y: target.y });
   });
 
   layer.innerHTML = '';
@@ -1849,7 +1894,7 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
-  const color = sampleNearestMaskColor(coords.x, coords.y, 2);
+  const color = sampleNearestMaskColor(coords.x, coords.y, 6);
   if (!color) {
     hideMaskTooltip();
     return;
@@ -1864,8 +1909,11 @@ function handleMaskPreviewPointerMove(event) {
     state.mask.colorLookup.set(color.key, entry);
   }
   const labelsArray = Array.isArray(entry.labelSet)
-    ? entry.labelSet
-    : Array.from(entry.labelSet ?? []);
+    ? Array.from(new Set(entry.labelSet))
+    : entry.labelSet instanceof Set
+    ? Array.from(entry.labelSet)
+    : [];
+  labelsArray.sort((a, b) => a.localeCompare(b));
   const label = formatMaskTooltipEntry({
     label: labelsArray.length ? labelsArray.join(', ') : 'Unknown object',
     objectIds: entry.objectIds,
