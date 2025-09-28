@@ -47,8 +47,8 @@ const state = {
     store: new Map(),
     colorCache: new Map(),
     preferenceKey: 'vsg-portal:mask-enabled',
-    activeVideoId: null,
     lastRenderedFrame: null,
+    previewVideoId: null,
   },
 };
 
@@ -82,7 +82,9 @@ const dom = {
   frameImageB: document.getElementById('frame-image-b'),
   maskToggle: document.getElementById('mask-toggle'),
   maskCanvas: document.getElementById('frame-mask'),
+  maskPreview: document.getElementById('mask-preview'),
   network: document.getElementById('network'),
+  frameViewport: document.querySelector('.frame-viewport'),
   videoTitle: document.getElementById('video-title'),
   videoDescription: document.getElementById('video-description'),
   frameTemplate: document.getElementById('frame-template'),
@@ -92,6 +94,22 @@ const dom = {
   categoryFilters: document.getElementById('category-filters'),
   activeRelations: document.getElementById('active-relations'),
 };
+
+if (dom.maskPreview) {
+  dom.maskPreview.addEventListener('load', () => {
+    dom.maskPreview.dataset.loaded = 'true';
+    if (dom.frameViewport && state.mask.enabled && dom.maskPreview.dataset.videoId === state.mask.previewVideoId) {
+      dom.frameViewport.classList.add('mask-preview-active');
+    }
+  });
+  dom.maskPreview.addEventListener('error', () => {
+    dom.maskPreview.dataset.loaded = 'false';
+    if (dom.maskPreview.dataset.videoId === state.mask.previewVideoId) {
+      console.warn(`Mask preview failed to load for ${state.mask.previewVideoId}`);
+      hideMaskPreview();
+    }
+  });
+}
 
 function detectDebugMode() {
   if (typeof window === 'undefined') return false;
@@ -1314,11 +1332,25 @@ function getMaskImage(entry, frameIndex) {
 
 function clearMaskCanvas() {
   const canvas = dom.maskCanvas;
-  if (!canvas) return;
-  canvas.dataset.visible = 'false';
-  const ctx = canvas.getContext('2d');
-  if (ctx) {
-    ctx.clearRect(0, 0, canvas.width || 0, canvas.height || 0);
+  if (canvas) {
+    canvas.dataset.visible = 'false';
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.clearRect(0, 0, canvas.width || 0, canvas.height || 0);
+    }
+  }
+  hideMaskPreview();
+}
+
+function hideMaskPreview() {
+  state.mask.previewVideoId = null;
+  const preview = dom.maskPreview;
+  if (preview) {
+    preview.dataset.loaded = 'false';
+    preview.removeAttribute('data-video-id');
+  }
+  if (dom.frameViewport) {
+    dom.frameViewport.classList.remove('mask-preview-active');
   }
 }
 
@@ -1433,90 +1465,30 @@ function ensureMaskEntry(videoId, manifestEntry) {
   return promise;
 }
 
-function renderMaskOverlay(frameIndex) {
-  const canvas = dom.maskCanvas;
-  if (!canvas) return;
-
+function renderMaskOverlay() {
+  const preview = dom.maskPreview;
+  const viewport = dom.frameViewport;
   const enabled = Boolean(state.mask.enabled);
-  if (!enabled) {
-    state.mask.lastRenderedFrame = null;
-    clearMaskCanvas();
-    return;
-  }
-
   const videoId = state.currentVideoId;
-  if (!videoId) {
+
+  if (!preview || !viewport || !enabled || !videoId) {
     state.mask.lastRenderedFrame = null;
-    clearMaskCanvas();
+    hideMaskPreview();
     return;
   }
 
-  if (state.mask.activeVideoId === videoId && state.mask.lastRenderedFrame === frameIndex && canvas.dataset.visible === 'true') {
-    return;
+  if (state.mask.previewVideoId !== videoId) {
+    state.mask.previewVideoId = videoId;
+    preview.dataset.loaded = 'false';
+    preview.dataset.videoId = videoId;
+    preview.src = `/public/mask_previews/${encodeURIComponent(videoId)}_frame0_multi.png`;
   }
 
-  const manifestEntry = state.videos.find((video) => video.video_id === videoId) || null;
-  state.mask.activeVideoId = videoId;
-
-  ensureMaskEntry(videoId, manifestEntry)
-    .then((entry) => {
-      if (!entry || state.currentVideoId !== videoId || !state.mask.enabled) {
-        return;
-      }
-
-      applyMaskDimensionHints(entry, state.imageSize);
-
-      const width = Math.trunc(entry.width || 0);
-      const height = Math.trunc(entry.height || 0);
-      if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
-        clearMaskCanvas();
-        return;
-      }
-
-      if (canvas.width !== width || canvas.height !== height) {
-        canvas.width = width;
-        canvas.height = height;
-      }
-
-      const targetFrame = Math.max(0, Math.min(frameIndex, (entry.frames?.length || 1) - 1));
-      const imageData = getMaskImage(entry, targetFrame);
-      const ctx = canvas.getContext('2d');
-      if (!ctx || !imageData) {
-        clearMaskCanvas();
-        return;
-      }
-
-      ctx.putImageData(imageData, 0, 0);
-      canvas.dataset.visible = 'true';
-      state.mask.lastRenderedFrame = targetFrame;
-    })
-    .catch((error) => {
-      console.warn(`Mask overlay failed for ${videoId}:`, error);
-      if (state.currentVideoId === videoId) {
-        clearMaskCanvas();
-      }
-    });
+  viewport.classList.add('mask-preview-active');
 }
 
-function prefetchMaskFrames(frames) {
-  if (!state.mask.enabled) return;
-  const videoId = state.currentVideoId;
-  if (!videoId) return;
-  const entry = state.mask.store.get(videoId);
-  if (!entry || entry.promise || !Array.isArray(entry.frames) || !entry.frames.length) return;
-
-  const selected = frames.slice(0, 6);
-  selected.forEach((frame) => {
-    if (!Number.isFinite(frame) || frame < 0 || frame >= entry.frames.length) return;
-    if (entry.cache && entry.cache.has(frame)) return;
-    scheduleMicrotask(() => {
-      try {
-        getMaskImage(entry, frame);
-      } catch (error) {
-        console.debug('Mask prefetch skipped:', error);
-      }
-    });
-  });
+function prefetchMaskFrames() {
+  // Mask previews are static images, so there is nothing to prefetch per frame.
 }
 
 function setMaskEnabled(nextValue) {
@@ -1532,8 +1504,7 @@ function setMaskEnabled(nextValue) {
     return;
   }
 
-  const frame = getRenderFrame(state.currentTime || 0);
-  renderMaskOverlay(frame);
+  renderMaskOverlay();
 }
 
 async function fetchManifest() {
@@ -2396,7 +2367,7 @@ function renderFrameDisplay() {
     dom.frameDisplay.textContent = `Frame ${displayFrameIndex}`;
     hideBothFrames();
   }
-  renderMaskOverlay(displayFrameIndex);
+  renderMaskOverlay();
 }
 
 function setPlaybackSpeed(value, options = {}) {
@@ -2708,14 +2679,8 @@ async function loadVideo(videoId, options = {}) {
   };
   exposeStateForDebug();
 
-  state.mask.activeVideoId = videoId;
   state.mask.lastRenderedFrame = null;
   clearMaskCanvas();
-  if (state.mask.enabled) {
-    ensureMaskEntry(videoId, manifestEntry).catch((error) => {
-      console.debug(`Mask warm-up failed for ${videoId}:`, error);
-    });
-  }
 
   if (Number.isFinite(fpsValue) && fpsValue > 0) {
     state.baseFps = fpsValue;

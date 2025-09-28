@@ -250,6 +250,33 @@ body {
   opacity: 1;
 }
 
+.mask-preview {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: none;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.mask-preview[data-loaded="true"] {
+  opacity: 1;
+}
+
+.frame-viewport.mask-preview-active .mask-preview {
+  display: block;
+}
+
+.frame-viewport.mask-preview-active .frame-image,
+.frame-viewport.mask-preview-active .frame-mask,
+.frame-viewport.mask-preview-active .network-canvas {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
 .network-canvas {
   position: absolute !important;
   inset: 0;
