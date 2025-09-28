@@ -1517,13 +1517,51 @@ function createColorStruct(r, g, b, a) {
   };
 }
 
-function resolveMaskEntryForColor(color) {
-  if (!color) return null;
+function colorDistanceSquared(a, b) {
+  if (!a || !b) return Number.POSITIVE_INFINITY;
+  const dr = a.r - b.r;
+  const dg = a.g - b.g;
+  const db = a.b - b.b;
+  return dr * dr + dg * dg + db * db;
+}
+
+function resolveMaskEntriesForColor(color) {
+  if (!color) return [];
   const lookup = state.mask.colorLookup;
   if (!lookup) {
-    return null;
+    return [];
   }
-  return lookup.get(color.key) || null;
+
+  const direct = lookup.get(color.key);
+  if (direct) {
+    return [direct];
+  }
+
+  const candidates = [];
+  lookup.forEach((entry) => {
+    if (!entry || !entry.color) return;
+    const distance = colorDistanceSquared(entry.color, color);
+    if (!Number.isFinite(distance)) return;
+    candidates.push({ entry, distance });
+  });
+
+  if (!candidates.length) {
+    return [];
+  }
+
+  candidates.sort((a, b) => a.distance - b.distance);
+  const best = candidates[0];
+  if (!best) {
+    return [];
+  }
+
+  const tolerance = 45 * 45;
+  if (best.distance > tolerance) {
+    return [];
+  }
+
+  const similar = candidates.filter((item) => item.distance <= best.distance * 1.1 && item.distance <= tolerance);
+  return similar.map((item) => item.entry);
 }
 
 function sampleMaskColorAt(x, y) {
@@ -1773,10 +1811,7 @@ function buildMaskLegend() {
         continue;
       }
       seen.add(color.key);
-      const entry = ensureEntry(color);
-      if (entry) {
-        entry.labelSet.add('Unknown object');
-      }
+      ensureEntry(color);
     }
   }
 
@@ -2047,20 +2082,41 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
-  const entry = resolveMaskEntryForColor(color);
-  if (!entry) {
+  const entries = resolveMaskEntriesForColor(color);
+  if (!entries.length) {
     hideMaskTooltip();
     return;
   }
-  const labelsArray = Array.isArray(entry.labelSet)
-    ? Array.from(new Set(entry.labelSet))
-    : entry.labelSet instanceof Set
-    ? Array.from(entry.labelSet)
-    : [];
-  labelsArray.sort((a, b) => a.localeCompare(b));
+  const labelSet = new Set();
+  const objectIdsSet = new Set();
+  entries.forEach((entry) => {
+    const labelsRaw = entry?.labelSet;
+    if (Array.isArray(labelsRaw)) {
+      labelsRaw.forEach((value) => {
+        if (value) {
+          labelSet.add(String(value));
+        }
+      });
+    } else if (labelsRaw instanceof Set) {
+      labelsRaw.forEach((value) => {
+        if (value) {
+          labelSet.add(String(value));
+        }
+      });
+    }
+    if (Array.isArray(entry?.objectIds)) {
+      entry.objectIds.forEach((id) => {
+        if (id != null) {
+          objectIdsSet.add(String(id));
+        }
+      });
+    }
+  });
+  const labelsArray = Array.from(labelSet).sort((a, b) => a.localeCompare(b));
+  const objectIds = Array.from(objectIdsSet).sort((a, b) => Number(a) - Number(b));
   const label = formatMaskTooltipEntry({
     label: labelsArray.length ? labelsArray.join(', ') : 'Unknown object',
-    objectIds: entry.objectIds,
+    objectIds,
   });
   if (!label) {
     hideMaskTooltip();
