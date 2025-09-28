@@ -1517,6 +1517,62 @@ function createColorStruct(r, g, b, a) {
   };
 }
 
+function colorDistanceSquared(a, b) {
+  if (!a || !b) return Number.POSITIVE_INFINITY;
+  const dr = a.r - b.r;
+  const dg = a.g - b.g;
+  const db = a.b - b.b;
+  return dr * dr + dg * dg + db * db;
+}
+
+function resolveMaskEntryForColor(color) {
+  if (!color) return null;
+  const lookup = state.mask.colorLookup;
+  if (lookup && lookup.has(color.key)) {
+    return lookup.get(color.key);
+  }
+
+  const objectColorMap = state.mask.objectColorMap;
+  if (!lookup || !(objectColorMap instanceof Map) || objectColorMap.size === 0) {
+    return null;
+  }
+
+  let bestObjectId = null;
+  let bestColor = null;
+  let bestDist = Number.POSITIVE_INFINITY;
+  objectColorMap.forEach((candidateColor, objectId) => {
+    const dist = colorDistanceSquared(candidateColor, color);
+    if (dist < bestDist) {
+      bestDist = dist;
+      bestObjectId = objectId;
+      bestColor = candidateColor;
+    }
+  });
+
+  if (bestObjectId == null || bestColor == null) {
+    return null;
+  }
+
+  const tolerance = 45 * 45; // allow slight colour variation
+  if (bestDist > tolerance) {
+    return null;
+  }
+
+  let matchedEntry = null;
+  lookup.forEach((entry) => {
+    if (matchedEntry) return;
+    if (Array.isArray(entry?.objectIds) && entry.objectIds.includes(String(bestObjectId))) {
+      matchedEntry = entry;
+    }
+  });
+
+  if (matchedEntry) {
+    return matchedEntry;
+  }
+
+  return null;
+}
+
 function sampleMaskColorAt(x, y) {
   const imageData = state.mask.previewImageData;
   if (!imageData) return null;
@@ -2015,14 +2071,10 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
-  let entry = state.mask.colorLookup.get(color.key);
+  const entry = resolveMaskEntryForColor(color);
   if (!entry) {
-    entry = {
-      color,
-      objectIds: [],
-      labelSet: new Set(),
-    };
-    state.mask.colorLookup.set(color.key, entry);
+    hideMaskTooltip();
+    return;
   }
   const labelsArray = Array.isArray(entry.labelSet)
     ? Array.from(new Set(entry.labelSet))
