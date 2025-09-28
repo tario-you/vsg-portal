@@ -1854,10 +1854,14 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
-  const entry = state.mask.colorLookup.get(color.key);
+  let entry = state.mask.colorLookup.get(color.key);
   if (!entry) {
-    hideMaskTooltip();
-    return;
+    entry = {
+      color,
+      objectIds: [],
+      labelSet: new Set(),
+    };
+    state.mask.colorLookup.set(color.key, entry);
   }
   const labelsArray = Array.isArray(entry.labelSet)
     ? entry.labelSet
