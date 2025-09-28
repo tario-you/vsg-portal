@@ -1907,7 +1907,7 @@ function initialiseNetwork(nodes) {
       font: {
         face: 'Inter',
         size: 14,
-        align: 'middle',
+        align: 'horizontal',
         multi: 'html',
       },
     },
@@ -2179,39 +2179,149 @@ function updateNetwork() {
     activeNodeIds.add(rel.to);
   });
 
-  const grouped = new Map();
+  const pairs = new Map();
   active.forEach((rel) => {
-    const key = `${rel.from}→${rel.to}`;
-    if (!grouped.has(key)) {
-      grouped.set(key, { from: rel.from, to: rel.to, relations: [] });
+    const fromKey = String(rel.from);
+    const toKey = String(rel.to);
+    const sameNode = fromKey === toKey;
+
+    if (sameNode) {
+      const key = `self:${fromKey}`;
+      if (!pairs.has(key)) {
+        pairs.set(key, {
+          self: true,
+          node: rel.from,
+          nodeLabel: rel.fromLabel || `Object ${rel.from}`,
+          relations: [],
+        });
+      }
+      const entry = pairs.get(key);
+      if (!entry.nodeLabel && rel.fromLabel) {
+        entry.nodeLabel = rel.fromLabel;
+      }
+      entry.relations.push(rel);
+      return;
     }
-    grouped.get(key).relations.push(rel);
+
+    const order = fromKey < toKey;
+    const key = order ? `${fromKey}↔${toKey}` : `${toKey}↔${fromKey}`;
+    if (!pairs.has(key)) {
+      pairs.set(key, {
+        self: false,
+        nodeA: order ? rel.from : rel.to,
+        nodeB: order ? rel.to : rel.from,
+        nodeALabel: null,
+        nodeBLabel: null,
+        forward: [],
+        reverse: [],
+      });
+    }
+
+    const entry = pairs.get(key);
+    const fromLabel = rel.fromLabel || `Object ${rel.from}`;
+    const toLabel = rel.toLabel || `Object ${rel.to}`;
+
+    if (!entry.nodeALabel) {
+      if (rel.from === entry.nodeA) {
+        entry.nodeALabel = fromLabel;
+      } else if (rel.to === entry.nodeA) {
+        entry.nodeALabel = toLabel;
+      }
+    }
+    if (!entry.nodeBLabel) {
+      if (rel.from === entry.nodeB) {
+        entry.nodeBLabel = fromLabel;
+      } else if (rel.to === entry.nodeB) {
+        entry.nodeBLabel = toLabel;
+      }
+    }
+
+    if (rel.from === entry.nodeA && rel.to === entry.nodeB) {
+      entry.forward.push(rel);
+    } else {
+      entry.reverse.push(rel);
+    }
   });
 
-  const edges = Array.from(grouped.entries()).map(([key, group]) => {
+  const edges = Array.from(pairs.entries()).map(([key, entry]) => {
     let style = CATEGORY_STYLES.default;
-    if (group.relations.length === 1) {
-      const only = group.relations[0];
-      style = CATEGORY_STYLES[only.category] || CATEGORY_STYLES.default;
+    const allRelations = entry.self
+      ? entry.relations
+      : entry.forward.concat(entry.reverse);
+    const primary = allRelations[0];
+    if (primary && allRelations.length === 1) {
+      style = CATEGORY_STYLES[primary.category] || CATEGORY_STYLES.default;
     }
-    const label = group.relations.map((rel) => `• ${escapeHtml(rel.predicate)}`).join('<br/>');
-    const hasOpposite = grouped.has(`${group.to}→${group.from}`);
-    let smooth = undefined;
-    if (hasOpposite) {
-      const fromKey = String(group.from);
-      const toKey = String(group.to);
-      const useCw = fromKey < toKey;
-      smooth = {
-        enabled: true,
-        type: useCw ? 'curvedCW' : 'curvedCCW',
-        roundness: 0.35,
+
+    const lines = [];
+
+    if (entry.self) {
+      const label = escapeHtml(entry.nodeLabel || `Object ${entry.node}`);
+      lines.push(`${label} -> ${label}:`);
+      entry.relations.forEach((rel) => {
+        lines.push(`- ${escapeHtml(rel.predicate)}`);
+      });
+
+      const content = lines.map((line) => (line === '' ? '&nbsp;' : line)).join('<br/>');
+      const labelHtml = `<div style="text-align:left">${content}</div>`;
+
+      return {
+        id: `edge-${key}`,
+        from: entry.node,
+        to: entry.node,
+        label: labelHtml,
+        color: { color: style.edge, highlight: style.edge },
+        font: {
+          color: '#0f172a',
+          strokeColor: 'rgba(255,255,255,0.95)',
+          strokeWidth: 4,
+          face: 'Inter',
+          size: 14,
+          multi: 'html',
+          align: 'horizontal',
+        },
+        arrows: { to: { enabled: true, scaleFactor: 1.35, type: 'arrow' } },
       };
     }
+
+    const labelA = escapeHtml(entry.nodeALabel || `Object ${entry.nodeA}`);
+    const labelB = escapeHtml(entry.nodeBLabel || `Object ${entry.nodeB}`);
+
+    if (entry.forward.length) {
+      lines.push(`${labelA} -> ${labelB}:`);
+      entry.forward.forEach((rel) => {
+        lines.push(`- ${escapeHtml(rel.predicate)}`);
+      });
+    }
+    if (entry.reverse.length) {
+      lines.push(`${labelB} -> ${labelA}:`);
+      entry.reverse.forEach((rel) => {
+        lines.push(`- ${escapeHtml(rel.predicate)}`);
+      });
+    }
+
+    const content = lines.map((line) => (line === '' ? '&nbsp;' : line)).join('<br/>');
+    const labelHtml = `<div style="text-align:left">${content}</div>`;
+
+    const hasForward = entry.forward.length > 0;
+    const hasReverse = entry.reverse.length > 0;
+
+    let edgeFrom = entry.nodeA;
+    let edgeTo = entry.nodeB;
+    const arrows = { to: { enabled: true, scaleFactor: 1.35, type: 'arrow' } };
+
+    if (hasForward && hasReverse) {
+      arrows.from = { enabled: true, scaleFactor: 1.35, type: 'arrow' };
+    } else if (!hasForward && hasReverse) {
+      edgeFrom = entry.nodeB;
+      edgeTo = entry.nodeA;
+    }
+
     return {
       id: `edge-${key}`,
-      from: group.from,
-      to: group.to,
-      label,
+      from: edgeFrom,
+      to: edgeTo,
+      label: labelHtml,
       color: { color: style.edge, highlight: style.edge },
       font: {
         color: '#0f172a',
@@ -2220,9 +2330,9 @@ function updateNetwork() {
         face: 'Inter',
         size: 14,
         multi: 'html',
-        align: 'middle',
+        align: 'horizontal',
       },
-      smooth,
+      arrows,
     };
   });
 
