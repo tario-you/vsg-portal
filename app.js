@@ -311,6 +311,69 @@ function maskColorForIndex(index) {
   return color;
 }
 
+function hsvToRgb(h, s, v) {
+  const hh = (h % 1 + 1) % 1;
+  const i = Math.floor(hh * 6);
+  const f = hh * 6 - i;
+  const p = v * (1 - s);
+  const q = v * (1 - f * s);
+  const t = v * (1 - (1 - f) * s);
+  let r;
+  let g;
+  let b;
+  switch (i % 6) {
+    case 0:
+      r = v;
+      g = t;
+      b = p;
+      break;
+    case 1:
+      r = q;
+      g = v;
+      b = p;
+      break;
+    case 2:
+      r = p;
+      g = v;
+      b = t;
+      break;
+    case 3:
+      r = p;
+      g = q;
+      b = v;
+      break;
+    case 4:
+      r = t;
+      g = p;
+      b = v;
+      break;
+    default:
+      r = v;
+      g = p;
+      b = q;
+      break;
+  }
+  return {
+    r: Math.round(r * 255),
+    g: Math.round(g * 255),
+    b: Math.round(b * 255),
+  };
+}
+
+function generatePreviewPalette(count, alpha = 255) {
+  const colours = [];
+  if (!Number.isFinite(count) || count <= 0) {
+    return colours;
+  }
+  for (let i = 0; i < count; i += 1) {
+    const h = (i / Math.max(1, count)) % 1;
+    const rgb = hsvToRgb(h, 0.75, 0.95);
+    const colour = createColorStruct(rgb.r, rgb.g, rgb.b, alpha);
+    colours.push(colour);
+  }
+  return colours;
+}
+
 const scheduleMicrotask = typeof queueMicrotask === 'function'
   ? (callback) => queueMicrotask(callback)
   : (callback) => Promise.resolve().then(callback).catch(() => {});
@@ -1178,12 +1241,19 @@ function normaliseMaskPayload(payload) {
         }
         const size = Array.isArray(mask.size) ? mask.size : Array.isArray(mask.Size) ? mask.Size : null;
         const counts = mask.counts ?? mask.Counts;
+        const objectIdRaw =
+          mask.object_id ??
+          mask.objectId ??
+          mask.id ??
+          mask.ID ??
+          (typeof mask.obj_id !== 'undefined' ? mask.obj_id : undefined);
         if (!size || size.length < 2 || counts == null) {
           return null;
         }
         return {
           size: [Number(size[0]), Number(size[1])],
           counts,
+          objectId: objectIdRaw != null ? String(objectIdRaw) : null,
         };
       })
       .filter(Boolean);
@@ -1575,6 +1645,10 @@ function buildMaskLegend() {
   const list = dom.maskObjectList;
   const panel = dom.maskPanel;
   const imageData = state.mask.previewImageData;
+  const videoId = state.currentVideoId;
+  const maskEntry = videoId ? state.mask.store.get(videoId) : null;
+  const firstFrameMasks = Array.isArray(maskEntry?.frames?.[0]) ? maskEntry.frames[0] : [];
+  const paletteColors = generatePreviewPalette(firstFrameMasks.length, 255);
   if (!preview || !list || !panel || !imageData || !state.currentVideoData) {
     if (panel) {
       panel.hidden = true;
@@ -1618,6 +1692,48 @@ function buildMaskLegend() {
         objectIds: [objectId],
         labelSet: new Set([label]),
       });
+    }
+  });
+
+  firstFrameMasks.forEach((mask, idx) => {
+    const colour = paletteColors[idx];
+    if (!colour) return;
+    const key = `${colour.r},${colour.g},${colour.b},${colour.a}`;
+    if (!colorLookup.has(key)) {
+      colorLookup.set(key, {
+        color: colour,
+        objectIds: [],
+        labelSet: new Set(),
+      });
+    }
+    const entry = colorLookup.get(key);
+    if (!entry) return;
+
+    if (!entry.color) {
+      entry.color = colour;
+    }
+
+    let labelSet = entry.labelSet;
+    if (!(labelSet instanceof Set)) {
+      labelSet = new Set(Array.isArray(labelSet) ? labelSet : labelSet ? [labelSet] : []);
+      entry.labelSet = labelSet;
+    }
+
+    const objectId = mask?.objectId ?? (typeof idx === 'number' ? String(idx) : null);
+    if (objectId != null && objectId !== 'null') {
+      if (!entry.objectIds.includes(objectId)) {
+        entry.objectIds.push(objectId);
+      }
+      const preferred = labels?.[objectId] || data.objectLabels?.[objectId];
+      if (preferred) {
+        labelSet.add(preferred);
+      }
+      if (!objectLabelMap.has(objectId)) {
+        objectLabelMap.set(objectId, preferred || `Object ${objectId}`);
+      }
+      if (!objectColorMap.has(objectId)) {
+        objectColorMap.set(objectId, colour);
+      }
     }
   });
 
