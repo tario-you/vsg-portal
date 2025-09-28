@@ -1637,11 +1637,31 @@ function getPreviewCoordinates(event) {
     return null;
   }
   const rect = preview.getBoundingClientRect();
-  const scaleX = (preview.naturalWidth || preview.width) / rect.width;
-  const scaleY = (preview.naturalHeight || preview.height) / rect.height;
-  const x = Math.floor((event.clientX - rect.left) * scaleX);
-  const y = Math.floor((event.clientY - rect.top) * scaleY);
-  return { x, y };
+  const naturalWidth = preview.naturalWidth || preview.width;
+  const naturalHeight = preview.naturalHeight || preview.height;
+  if (!naturalWidth || !naturalHeight) {
+    return null;
+  }
+
+  const scale = Math.min(rect.width / naturalWidth, rect.height / naturalHeight);
+  if (!Number.isFinite(scale) || scale <= 0) {
+    return null;
+  }
+
+  const displayWidth = naturalWidth * scale;
+  const displayHeight = naturalHeight * scale;
+  const offsetX = (rect.width - displayWidth) / 2;
+  const offsetY = (rect.height - displayHeight) / 2;
+
+  const relativeX = event.clientX - rect.left - offsetX;
+  const relativeY = event.clientY - rect.top - offsetY;
+  if (relativeX < 0 || relativeY < 0 || relativeX > displayWidth || relativeY > displayHeight) {
+    return null;
+  }
+
+  const imageX = Math.floor(relativeX / scale);
+  const imageY = Math.floor(relativeY / scale);
+  return { x: imageX, y: imageY };
 }
 
 function formatMaskTooltipEntry(entry) {
