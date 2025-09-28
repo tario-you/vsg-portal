@@ -49,6 +49,10 @@ const state = {
     preferenceKey: 'vsg-portal:mask-enabled',
     lastRenderedFrame: null,
     previewVideoId: null,
+    previewCanvas: null,
+    previewContext: null,
+    previewImageData: null,
+    colorLookup: new Map(),
   },
 };
 
@@ -85,6 +89,9 @@ const dom = {
   maskPreview: document.getElementById('mask-preview'),
   network: document.getElementById('network'),
   frameViewport: document.querySelector('.frame-viewport'),
+  maskPanel: document.getElementById('mask-panel'),
+  maskObjectList: document.getElementById('mask-object-list'),
+  maskTooltip: document.getElementById('mask-tooltip'),
   videoTitle: document.getElementById('video-title'),
   videoDescription: document.getElementById('video-description'),
   frameTemplate: document.getElementById('frame-template'),
@@ -101,6 +108,7 @@ if (dom.maskPreview) {
     if (dom.frameViewport && state.mask.enabled && dom.maskPreview.dataset.videoId === state.mask.previewVideoId) {
       dom.frameViewport.classList.add('mask-preview-active');
     }
+    prepareMaskLegend();
   });
   dom.maskPreview.addEventListener('error', () => {
     dom.maskPreview.dataset.loaded = 'false';
@@ -108,6 +116,10 @@ if (dom.maskPreview) {
       console.warn(`Mask preview failed to load for ${state.mask.previewVideoId}`);
       hideMaskPreview();
     }
+  });
+  dom.maskPreview.addEventListener('mousemove', handleMaskPreviewPointerMove, { passive: true });
+  dom.maskPreview.addEventListener('mouseleave', () => {
+    hideMaskTooltip();
   });
 }
 
@@ -1344,6 +1356,14 @@ function clearMaskCanvas() {
 
 function hideMaskPreview() {
   state.mask.previewVideoId = null;
+  state.mask.previewImageData = null;
+  state.mask.previewCanvas = null;
+  state.mask.previewContext = null;
+  if (state.mask.colorLookup) {
+    state.mask.colorLookup.clear();
+  } else {
+    state.mask.colorLookup = new Map();
+  }
   const preview = dom.maskPreview;
   if (preview) {
     preview.dataset.loaded = 'false';
@@ -1352,6 +1372,316 @@ function hideMaskPreview() {
   if (dom.frameViewport) {
     dom.frameViewport.classList.remove('mask-preview-active');
   }
+  if (dom.maskObjectList) {
+    dom.maskObjectList.innerHTML = '';
+  }
+  if (dom.maskPanel) {
+    dom.maskPanel.hidden = true;
+    dom.maskPanel.dataset.visible = 'false';
+  }
+  hideMaskTooltip();
+}
+
+function hideMaskTooltip() {
+  const tooltip = dom.maskTooltip;
+  if (!tooltip) return;
+  tooltip.hidden = true;
+  tooltip.dataset.visible = 'false';
+}
+
+function showMaskTooltip(text, clientX, clientY) {
+  const tooltip = dom.maskTooltip;
+  if (!tooltip) return;
+  tooltip.textContent = text;
+  tooltip.style.left = `${Math.round(clientX)}px`;
+  tooltip.style.top = `${Math.round(clientY)}px`;
+  tooltip.hidden = false;
+  tooltip.dataset.visible = 'true';
+}
+
+function createColorStruct(r, g, b, a) {
+  const alpha = Math.max(0, Math.min(255, a));
+  const key = `${r},${g},${b},${alpha}`;
+  const hex = `#${[r, g, b]
+    .map((value) => value.toString(16).padStart(2, '0'))
+    .join('')}`;
+  return {
+    r,
+    g,
+    b,
+    a: alpha,
+    key,
+    hex,
+    rgba: `rgba(${r}, ${g}, ${b}, ${(alpha / 255).toFixed(2)})`,
+  };
+}
+
+function sampleMaskColorAt(x, y) {
+  const imageData = state.mask.previewImageData;
+  if (!imageData) return null;
+  const { width, height, data } = imageData;
+  if (x < 0 || y < 0 || x >= width || y >= height) {
+    return null;
+  }
+  const idx = (y * width + x) * 4;
+  const r = data[idx];
+  const g = data[idx + 1];
+  const b = data[idx + 2];
+  const a = data[idx + 3];
+  if (a < 32) {
+    return null;
+  }
+  return createColorStruct(r, g, b, a);
+}
+
+function sampleNearestMaskColor(x, y, radius = 3) {
+  let color = sampleMaskColorAt(x, y);
+  if (color) return color;
+  for (let r = 1; r <= radius; r += 1) {
+    for (let dx = -r; dx <= r; dx += 1) {
+      const left = x + dx;
+      const top = y - r;
+      const bottom = y + r;
+      color = sampleMaskColorAt(left, top) || sampleMaskColorAt(left, bottom);
+      if (color) return color;
+    }
+    for (let dy = -r + 1; dy <= r - 1; dy += 1) {
+      const right = x + r;
+      const left = x - r;
+      const ny = y + dy;
+      color = sampleMaskColorAt(right, ny) || sampleMaskColorAt(left, ny);
+      if (color) return color;
+    }
+  }
+  return null;
+}
+
+function collectUnmappedPreviewColors(existingLookup) {
+  const results = [];
+  const imageData = state.mask.previewImageData;
+  if (!imageData) return results;
+  const { data } = imageData;
+  const seen = new Set();
+  for (let i = 0; i < data.length; i += 4) {
+    const a = data[i + 3];
+    if (a < 32) continue;
+    const r = data[i];
+    const g = data[i + 1];
+    const b = data[i + 2];
+    const color = createColorStruct(r, g, b, a);
+    if (existingLookup.has(color.key) || seen.has(color.key)) {
+      continue;
+    }
+    seen.add(color.key);
+    results.push(color);
+  }
+  return results;
+}
+
+function prepareMaskLegend() {
+  if (!state.mask.enabled) {
+    hideMaskPreview();
+    return;
+  }
+  const preview = dom.maskPreview;
+  if (!preview || preview.dataset.loaded !== 'true') {
+    return;
+  }
+  const width = preview.naturalWidth || preview.width;
+  const height = preview.naturalHeight || preview.height;
+  if (!width || !height) {
+    return;
+  }
+
+  const canvas = state.mask.previewCanvas || document.createElement('canvas');
+  if (canvas.width !== width || canvas.height !== height) {
+    canvas.width = width;
+    canvas.height = height;
+  }
+  const ctx = canvas.getContext('2d', { willReadFrequently: true });
+  if (!ctx) {
+    return;
+  }
+  ctx.clearRect(0, 0, width, height);
+  ctx.drawImage(preview, 0, 0, width, height);
+  state.mask.previewCanvas = canvas;
+  state.mask.previewContext = ctx;
+  state.mask.previewImageData = ctx.getImageData(0, 0, width, height);
+
+  buildMaskLegend();
+}
+
+function buildMaskLegend() {
+  const preview = dom.maskPreview;
+  const list = dom.maskObjectList;
+  const panel = dom.maskPanel;
+  const imageData = state.mask.previewImageData;
+  if (!preview || !list || !panel || !imageData || !state.currentVideoData) {
+    if (panel) {
+      panel.hidden = true;
+      panel.dataset.visible = 'false';
+    }
+    if (list) {
+      list.innerHTML = '';
+    }
+    return;
+  }
+
+  const colorLookup = new Map();
+  const data = state.currentVideoData;
+  const labels = data.objectLabels || {};
+  const imgWidth = preview.naturalWidth || imageData.width;
+  const imgHeight = preview.naturalHeight || imageData.height;
+  const originX = Number.isFinite(state.imageSize?.originX) ? state.imageSize.originX : 0;
+  const originY = Number.isFinite(state.imageSize?.originY) ? state.imageSize.originY : 0;
+
+  data.nodes.forEach((node) => {
+    const point = getCentroidPoint(node.id, 0);
+    if (!point) return;
+    const imgX = Math.round(point.x - originX);
+    const imgY = Math.round(point.y - originY);
+    if (!Number.isFinite(imgX) || !Number.isFinite(imgY)) return;
+    const color = sampleNearestMaskColor(imgX, imgY, 4);
+    if (!color) return;
+    const entry = colorLookup.get(color.key);
+    const objectId = String(node.id);
+    const label = labels?.[objectId] || node.label || `Object ${objectId}`;
+    if (entry) {
+      if (!entry.objectIds.includes(objectId)) {
+        entry.objectIds.push(objectId);
+        entry.labelSet.add(label);
+      }
+    } else {
+      colorLookup.set(color.key, {
+        color,
+        objectIds: [objectId],
+        labelSet: new Set([label]),
+      });
+    }
+  });
+
+  const unmatchedColors = collectUnmappedPreviewColors(colorLookup);
+  unmatchedColors.forEach((color) => {
+    if (!colorLookup.has(color.key)) {
+      colorLookup.set(color.key, {
+        color,
+        objectIds: [],
+        labelSet: new Set(),
+      });
+    }
+  });
+
+  state.mask.colorLookup = colorLookup;
+
+  const items = Array.from(colorLookup.values()).map((entry) => {
+    const objectIds = entry.objectIds.slice().sort((a, b) => Number(a) - Number(b));
+    const labelsArray = Array.from(entry.labelSet);
+    const label = labelsArray.length ? labelsArray.join(', ') : 'Unknown object';
+    return {
+      color: entry.color,
+      objectIds,
+      label,
+    };
+  });
+
+  items.sort((a, b) => {
+    if (a.objectIds.length && b.objectIds.length) {
+      return Number(a.objectIds[0]) - Number(b.objectIds[0]);
+    }
+    if (a.objectIds.length) return -1;
+    if (b.objectIds.length) return 1;
+    return a.label.localeCompare(b.label);
+  });
+
+  panel.hidden = false;
+  panel.dataset.visible = 'true';
+
+  if (!items.length) {
+    list.innerHTML = '<p class="panel__note">No mask labels available.</p>';
+    return;
+  }
+
+  const frag = document.createDocumentFragment();
+  items.forEach((item) => {
+    const entry = document.createElement('div');
+    entry.className = 'mask-object-item';
+
+    const swatch = document.createElement('span');
+    swatch.className = 'mask-object-swatch';
+    swatch.style.background = item.color.rgba;
+    swatch.title = item.color.hex;
+    entry.appendChild(swatch);
+
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'mask-object-label';
+    labelSpan.textContent = item.label;
+    entry.appendChild(labelSpan);
+
+    if (item.objectIds.length) {
+      const idSpan = document.createElement('span');
+      idSpan.className = 'mask-object-id';
+      idSpan.textContent = `Obj ${item.objectIds.join(', ')}`;
+      entry.appendChild(idSpan);
+    }
+
+    frag.appendChild(entry);
+  });
+
+  list.innerHTML = '';
+  list.appendChild(frag);
+}
+
+function getPreviewCoordinates(event) {
+  const preview = dom.maskPreview;
+  if (!preview || preview.dataset.loaded !== 'true') {
+    return null;
+  }
+  const rect = preview.getBoundingClientRect();
+  const scaleX = (preview.naturalWidth || preview.width) / rect.width;
+  const scaleY = (preview.naturalHeight || preview.height) / rect.height;
+  const x = Math.floor((event.clientX - rect.left) * scaleX);
+  const y = Math.floor((event.clientY - rect.top) * scaleY);
+  return { x, y };
+}
+
+function formatMaskTooltipEntry(entry) {
+  if (!entry) return '';
+  const ids = entry.objectIds?.length ? ` (Obj ${entry.objectIds.join(', ')})` : '';
+  return `${entry.label || 'Unknown object'}${ids}`;
+}
+
+function handleMaskPreviewPointerMove(event) {
+  if (!state.mask.enabled || !state.mask.previewImageData || !state.mask.colorLookup) {
+    hideMaskTooltip();
+    return;
+  }
+  const coords = getPreviewCoordinates(event);
+  if (!coords) {
+    hideMaskTooltip();
+    return;
+  }
+  const color = sampleNearestMaskColor(coords.x, coords.y, 2);
+  if (!color) {
+    hideMaskTooltip();
+    return;
+  }
+  const entry = state.mask.colorLookup.get(color.key);
+  if (!entry) {
+    hideMaskTooltip();
+    return;
+  }
+  const labelsArray = Array.isArray(entry.labelSet)
+    ? entry.labelSet
+    : Array.from(entry.labelSet ?? []);
+  const label = formatMaskTooltipEntry({
+    label: labelsArray.length ? labelsArray.join(', ') : 'Unknown object',
+    objectIds: entry.objectIds,
+  });
+  if (!label) {
+    hideMaskTooltip();
+    return;
+  }
+  showMaskTooltip(label, event.clientX, event.clientY);
 }
 
 async function fetchMaskPayload(videoId, manifestEntry) {
@@ -1485,6 +1815,9 @@ function renderMaskOverlay() {
   }
 
   viewport.classList.add('mask-preview-active');
+  if (preview.dataset.loaded === 'true') {
+    prepareMaskLegend();
+  }
 }
 
 function prefetchMaskFrames() {
