@@ -2245,6 +2245,8 @@ function ensureMaskEntry(videoId, manifestEntry) {
     return Promise.resolve(null);
   }
 
+  const sourceVideoId = getSourceVideoId(manifestEntry, videoId) || videoId;
+
   let entry = state.mask.store.get(videoId);
   if (entry && entry.frames && entry.frames.length) {
     return Promise.resolve(entry);
@@ -2253,8 +2255,8 @@ function ensureMaskEntry(videoId, manifestEntry) {
     return entry.promise;
   }
 
-  entry = entry || { videoId, cache: new Map(), cacheLimit: 28 };
-  const promise = fetchMaskPayload(videoId, manifestEntry)
+  entry = entry || { videoId, sourceVideoId, cache: new Map(), cacheLimit: 28 };
+  const promise = fetchMaskPayload(sourceVideoId, manifestEntry)
     .then((result) => {
       if (!result) {
         entry.error = 'not_found';
@@ -2293,6 +2295,7 @@ function renderMaskOverlay() {
   const viewport = dom.frameViewport;
   const enabled = Boolean(state.mask.enabled);
   const videoId = state.currentVideoId;
+  const baseVideoId = getSourceVideoId(state.currentVideoData?.manifest, videoId) || videoId;
 
   if (!preview || !viewport || !enabled || !videoId) {
     state.mask.lastRenderedFrame = null;
@@ -2304,7 +2307,8 @@ function renderMaskOverlay() {
     state.mask.previewVideoId = videoId;
     preview.dataset.loaded = 'false';
     preview.dataset.videoId = videoId;
-    preview.src = `/public/mask_previews/${encodeURIComponent(videoId)}_frame0_multi.png`;
+    preview.dataset.sourceVideoId = baseVideoId;
+    preview.src = `/public/mask_previews/${encodeURIComponent(baseVideoId)}_frame0_multi.png`;
   }
 
   viewport.classList.add('mask-preview-active');
@@ -2471,6 +2475,7 @@ async function fetchCentroids(videoId, manifestEntry) {
 }
 
 function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, objectLabelsPayload) {
+  const baseVideoId = getSourceVideoId(manifestEntry);
   const relationships = Array.isArray(rawData.relationships)
     ? rawData.relationships
     : Array.isArray(rawData.relations)
@@ -2602,6 +2607,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     centroidOriginY: centroidInfo.originY,
     centroidBounds: centroidInfo.bounds,
     fpsValue,
+    baseVideoId,
   };
 }
 
@@ -3679,3 +3685,25 @@ async function initialise() {
 configureDebugMode();
 initialiseEventHandlers();
 initialise();
+function deriveBaseVideoId(value) {
+  if (!value) return null;
+  const match = String(value).match(/(sav_\d{6})/i);
+  if (match && match[1]) {
+    return match[1];
+  }
+  return String(value);
+}
+
+function getSourceVideoId(entry, fallbackValue) {
+  if (entry && typeof entry.source_video_id === 'string' && entry.source_video_id.trim()) {
+    return entry.source_video_id.trim();
+  }
+  if (entry && typeof entry.video_id === 'string') {
+    const derived = deriveBaseVideoId(entry.video_id);
+    if (derived) return derived;
+  }
+  if (fallbackValue) {
+    return deriveBaseVideoId(fallbackValue);
+  }
+  return null;
+}
