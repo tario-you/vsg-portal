@@ -1,19 +1,7 @@
 {
-  "description": "Handheld footage inside a bar shows the camera starting close to a potted plant on the counter, then panning/zooming to a bartender who prepares a drink using a blender at the counter.",
+  "description": "The camera in a bar pans past plants and counter items, then zooms toward a bartender who mixes ingredients in a blender at the bar counter.",
   "place_env_id_name": "bar",
   "relationships": [
-    [
-      -1,
-      12,
-      "camera focusing on",
-      [
-        [
-          0,
-          120
-        ]
-      ],
-      "attentional"
-    ],
     [
       -1,
       3,
@@ -21,31 +9,23 @@
       [
         [
           0,
-          72
-        ]
-      ],
-      "attentional"
-    ],
-    [
-      -1,
-      23,
-      "tilt up toward",
-      [
+          48
+        ],
         [
-          168,
-          192
+          120,
+          168
         ]
       ],
       "attentional"
     ],
     [
       -1,
-      3,
+      10,
       "camera focusing on",
       [
         [
-          144,
-          264
+          72,
+          120
         ]
       ],
       "attentional"
@@ -64,12 +44,24 @@
     ],
     [
       -1,
-      25,
+      3,
       "camera focusing on",
       [
         [
-          192,
+          144,
           264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      23,
+      "tilt upward toward",
+      [
+        [
+          168,
+          192
         ]
       ],
       "attentional"
@@ -77,10 +69,10 @@
     [
       3,
       25,
-      "operating",
+      "holding",
       [
         [
-          144,
+          168,
           264
         ]
       ],
@@ -89,10 +81,10 @@
     [
       25,
       3,
-      "operated by",
+      "held by",
       [
         [
-          144,
+          168,
           264
         ]
       ],
@@ -101,14 +93,50 @@
     [
       3,
       25,
-      "stirring",
+      "mixing",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      25,
+      "looking at",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      3,
+      27,
+      "working at",
       [
         [
           144,
           264
         ]
       ],
-      "functional"
+      "higher_order"
+    ],
+    [
+      3,
+      25,
+      "preparing drink with",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "higher_order"
     ],
     [
       3,
@@ -116,65 +144,17 @@
       "using",
       [
         [
-          144,
+          168,
           264
         ]
       ],
       "functional"
-    ],
-    [
-      3,
-      25,
-      "looking at",
-      [
-        [
-          144,
-          264
-        ]
-      ],
-      "attentional"
-    ],
-    [
-      3,
-      33,
-      "looking at",
-      [
-        [
-          144,
-          264
-        ]
-      ],
-      "attentional"
-    ],
-    [
-      3,
-      25,
-      "preparing drink",
-      [
-        [
-          144,
-          264
-        ]
-      ],
-      "higher_order"
-    ],
-    [
-      3,
-      27,
-      "bartending",
-      [
-        [
-          144,
-          264
-        ]
-      ],
-      "higher_order"
     ]
   ],
   "activity_differential": [
-    "bartender preparing a drink",
-    "bartender mixing ingredients in a blender",
-    "person working behind a bar counter"
+    "bartender preparing drink",
+    "bartender mixing ingredients",
+    "bartender working at bar counter"
   ],
   "video_id": "sav_000020"
 }

@@ -1,11 +1,11 @@
 {
-  "description": "First-person view of people walking on a paved sidewalk at night; the camera is pointed down at the walker's feet while moving with companions.",
+  "description": "First-person view of someone walking on a brick sidewalk at night while other people\u2019s feet pass nearby. The camera looks downward at the walker's shoes and moves with them.",
   "place_env_id_name": "sidewalk",
   "relationships": [
     [
       -1,
       1,
-      "moving with",
+      "following",
       [
         [
           0,
@@ -13,6 +13,18 @@
         ]
       ],
       "motion"
+    ],
+    [
+      -1,
+      1,
+      "tilting downward toward",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "attentional"
     ],
     [
       -1,
@@ -21,10 +33,18 @@
       [
         [
           0,
-          144
-        ],
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      9,
+      "camera focusing on",
+      [
         [
-          264,
+          0,
           408
         ]
       ],
@@ -33,154 +53,62 @@
     [
       1,
       4,
-      "using to walk",
+      "walking with",
       [
         [
           0,
-          144
-        ],
-        [
-          264,
           408
-        ]
-      ],
-      "functional"
-    ],
-    [
-      4,
-      1,
-      "used for walking by",
-      [
-        [
-          0,
-          144
-        ],
-        [
-          264,
-          408
-        ]
-      ],
-      "functional"
-    ],
-    [
-      1,
-      9,
-      "stepping with",
-      [
-        [
-          0,
-          120
-        ],
-        [
-          168,
-          264
-        ],
-        [
-          336,
-          336
-        ]
-      ],
-      "functional"
-    ],
-    [
-      9,
-      1,
-      "moved by",
-      [
-        [
-          0,
-          120
-        ],
-        [
-          168,
-          264
-        ],
-        [
-          336,
-          336
-        ]
-      ],
-      "functional"
-    ],
-    [
-      1,
-      4,
-      "looking at",
-      [
-        [
-          0,
-          144
-        ],
-        [
-          264,
-          408
-        ]
-      ],
-      "attentional"
-    ],
-    [
-      1,
-      8,
-      "walking together",
-      [
-        [
-          0,
-          0
-        ],
-        [
-          72,
-          72
-        ],
-        [
-          144,
-          144
-        ],
-        [
-          240,
-          384
         ]
       ],
       "higher_order"
     ],
     [
       1,
-      8,
-      "moving in same direction as",
+      9,
+      "walking with",
       [
         [
           0,
-          0
-        ],
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      9,
+      4,
+      "stepping with",
+      [
         [
-          72,
-          72
-        ],
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      8,
+      "accompanying",
+      [
         [
-          144,
-          144
-        ],
-        [
-          240,
+          0,
           384
         ]
       ],
-      "motion"
+      "social"
     ],
     [
-      8,
+      4,
       2,
-      "using to walk",
+      "moving alongside",
       [
         [
           0,
-          0
+          24
         ],
         [
           72,
-          72
-        ],
-        [
-          144,
           144
         ],
         [
@@ -188,20 +116,20 @@
           336
         ]
       ],
-      "functional"
+      "motion"
     ],
     [
-      8,
+      4,
       3,
-      "using to walk",
+      "moving alongside",
       [
         [
           0,
-          0
+          24
         ],
         [
           72,
-          72
+          120
         ],
         [
           192,
@@ -212,13 +140,21 @@
           336
         ]
       ],
-      "functional"
+      "motion"
     ],
     [
       1,
       2,
-      "passing by",
+      "moving alongside",
       [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          144
+        ],
         [
           312,
           336
@@ -229,8 +165,20 @@
     [
       1,
       3,
-      "passing by",
+      "moving alongside",
       [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          120
+        ],
+        [
+          192,
+          216
+        ],
         [
           312,
           336
@@ -240,9 +188,9 @@
     ]
   ],
   "activity_differential": [
-    "people walking together on a sidewalk",
-    "group strolling outdoors",
-    "people commuting on foot"
+    "person walking on sidewalk",
+    "group strolling together",
+    "first person commuting on foot"
   ],
   "video_id": "sav_000015"
 }
