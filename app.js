@@ -1627,15 +1627,27 @@ function resolveMaskDimensions(mask, entry) {
   };
 }
 
-function findFirstMaskPixel(mask, entry) {
-  if (!mask) return null;
+function sampleMaskPreviewColorForMask(mask, entry, imageData) {
+  if (!mask || !imageData) return null;
   const dimensions = resolveMaskDimensions(mask, entry);
   if (!dimensions) {
     return null;
   }
-  const { width, height } = dimensions;
-  const totalPixels = width * height;
-  if (!Number.isFinite(totalPixels) || totalPixels <= 0) {
+
+  const { width: previewWidth, height: previewHeight, data } = imageData;
+  if (!Number.isFinite(previewWidth) || !Number.isFinite(previewHeight) || previewWidth <= 0 || previewHeight <= 0) {
+    return null;
+  }
+
+  const maskWidth = dimensions.width;
+  const maskHeight = dimensions.height;
+  if (!Number.isFinite(maskWidth) || !Number.isFinite(maskHeight) || maskWidth <= 0 || maskHeight <= 0) {
+    return null;
+  }
+
+  const scaleX = previewWidth / maskWidth;
+  const scaleY = previewHeight / maskHeight;
+  if (!Number.isFinite(scaleX) || !Number.isFinite(scaleY) || scaleX <= 0 || scaleY <= 0) {
     return null;
   }
 
@@ -1643,6 +1655,38 @@ function findFirstMaskPixel(mask, entry) {
   if (!runs.length) {
     return null;
   }
+
+  const totalPixels = maskWidth * maskHeight;
+  const maxX = previewWidth - 1;
+  const maxY = previewHeight - 1;
+
+  const sampleAtIndex = (index) => {
+    if (!Number.isFinite(index) || index < 0 || index >= totalPixels) {
+      return null;
+    }
+    const row = index % maskHeight;
+    const col = Math.floor(index / maskHeight);
+    const floatX = col * scaleX;
+    const floatY = row * scaleY;
+    const xCandidates = new Set([Math.floor(floatX), Math.round(floatX), Math.ceil(floatX)]);
+    const yCandidates = new Set([Math.floor(floatY), Math.round(floatY), Math.ceil(floatY)]);
+    for (const xCandidate of xCandidates) {
+      const clampedX = Math.min(Math.max(xCandidate, 0), maxX);
+      for (const yCandidate of yCandidates) {
+        const clampedY = Math.min(Math.max(yCandidate, 0), maxY);
+        const offset = (clampedY * previewWidth + clampedX) * 4;
+        const alpha = data[offset + 3];
+        if (alpha < 32) {
+          continue;
+        }
+        const r = data[offset];
+        const g = data[offset + 1];
+        const b = data[offset + 2];
+        return createColorStruct(r, g, b, alpha);
+      }
+    }
+    return null;
+  };
 
   let cursor = 0;
   let value = 0;
@@ -1652,17 +1696,27 @@ function findFirstMaskPixel(mask, entry) {
       value ^= 1;
       continue;
     }
-    const remaining = totalPixels - cursor;
-    const clampedLength = Math.min(runLength, remaining);
-    if (value === 1 && clampedLength > 0) {
-      const index = cursor;
-      const row = index % height;
-      const col = Math.floor(index / height);
-      if (col < width) {
-        return { x: col, y: row };
+    const end = Math.min(cursor + runLength, totalPixels);
+    if (value === 1) {
+      const startIndex = cursor;
+      const midIndex = startIndex + Math.floor(Math.max(0, end - startIndex - 1) / 2);
+      const endIndex = end - 1;
+      const candidates = [startIndex, midIndex, endIndex];
+      for (const candidate of candidates) {
+        const color = sampleAtIndex(candidate);
+        if (color) {
+          return color;
+        }
+      }
+      const stride = Math.max(1, Math.floor(runLength / 12));
+      for (let offset = 0; offset < runLength; offset += stride) {
+        const color = sampleAtIndex(startIndex + offset);
+        if (color) {
+          return color;
+        }
       }
     }
-    cursor += clampedLength;
+    cursor = end;
     value ^= 1;
   }
 
@@ -1771,9 +1825,7 @@ function buildMaskLegend() {
 
   firstFrameMasks.forEach((mask, idx) => {
     if (!mask) return;
-    const samplePoint = findFirstMaskPixel(mask, maskEntry);
-    if (!samplePoint) return;
-    const color = sampleMaskColorAt(samplePoint.x, samplePoint.y);
+    const color = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
     if (!color) return;
 
     const entry = ensureEntry(color);
