@@ -1,30 +1,50 @@
 {
-  "description": "The camera in a bar pans past plants and counter items, then zooms toward a bartender who mixes ingredients in a blender at the bar counter.",
+  "description": "A bar-counter scene. The camera starts very close to a foreground plant and pan-moves toward the bartender behind the counter, briefly tilts down to the countertop, then moves in and focuses on the bartender working. The bartender mixes a green preparation in a blender container on a chopping board, repeatedly holding and stirring the mixture while looking at it. Shelves with bottles and other utensils remain static in the background.",
   "place_env_id_name": "bar",
   "relationships": [
     [
       -1,
-      3,
-      "pan toward",
+      12,
+      "moves away from",
       [
         [
           0,
           48
-        ],
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "panning toward",
+      [
         [
-          120,
-          168
+          0,
+          72
         ]
       ],
       "attentional"
     ],
     [
       -1,
-      10,
-      "camera focusing on",
+      27,
+      "tilting down toward",
       [
         [
-          72,
+          48,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "focusing on",
+      [
+        [
+          48,
           120
         ]
       ],
@@ -33,19 +53,19 @@
     [
       -1,
       3,
-      "zoom toward",
+      "approaches",
       [
         [
           144,
-          216
+          264
         ]
       ],
-      "attentional"
+      "motion"
     ],
     [
       -1,
       3,
-      "camera focusing on",
+      "zooming toward",
       [
         [
           144,
@@ -57,11 +77,23 @@
     [
       -1,
       23,
-      "tilt upward toward",
+      "tilting up toward",
       [
         [
           168,
-          192
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      25,
+      "focusing on",
+      [
+        [
+          192,
+          264
         ]
       ],
       "attentional"
@@ -79,9 +111,21 @@
       "functional"
     ],
     [
+      16,
+      25,
+      "stirring",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
       25,
       3,
-      "held by",
+      "stirred by",
       [
         [
           168,
@@ -93,7 +137,7 @@
     [
       3,
       25,
-      "mixing",
+      "stirring",
       [
         [
           168,
@@ -101,6 +145,18 @@
         ]
       ],
       "functional"
+    ],
+    [
+      3,
+      25,
+      "mixing ingredients with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "higher_order"
     ],
     [
       3,
@@ -116,31 +172,19 @@
     ],
     [
       3,
-      27,
-      "working at",
+      33,
+      "using as work surface",
       [
         [
           144,
           264
         ]
       ],
-      "higher_order"
+      "functional"
     ],
     [
       3,
-      25,
-      "preparing drink with",
-      [
-        [
-          168,
-          264
-        ]
-      ],
-      "higher_order"
-    ],
-    [
-      3,
-      33,
+      19,
       "using",
       [
         [
@@ -152,9 +196,9 @@
     ]
   ],
   "activity_differential": [
-    "bartender preparing drink",
+    "bartender preparing beverage",
     "bartender mixing ingredients",
-    "bartender working at bar counter"
+    "bartender working behind bar"
   ],
   "video_id": "sav_000020"
 }

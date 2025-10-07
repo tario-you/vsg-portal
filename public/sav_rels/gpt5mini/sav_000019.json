@@ -1,105 +1,21 @@
 {
-  "description": "A person lying on a bed while another person stands beside the bed, approaches, adjusts the pillow/head area, then moves along the bed and uses a comb on their hair.",
-  "place_env_id_name": "bedroom",
+  "description": "An adult (wearing a dress) stands beside a bed and interacts with a person lying on the bed; the adult picks up a comb and grooms (combs) their hair while occasionally adjusting the pillow/attending to the person on the bed. A backpack and pillows remain on/near the bed throughout.",
+  "place_env_id_name": "living room",
   "relationships": [
     [
-      8,
-      2,
-      "approaching",
-      [
-        [
-          0,
-          120
-        ]
-      ],
-      "motion"
-    ],
-    [
-      8,
-      2,
-      "moving away from",
-      [
-        [
-          120,
-          264
-        ]
-      ],
-      "motion"
-    ],
-    [
-      8,
-      12,
-      "walking along",
-      [
-        [
-          0,
-          264
-        ]
-      ],
-      "motion"
-    ],
-    [
-      8,
-      13,
-      "adjusting",
-      [
-        [
-          24,
-          120
-        ]
-      ],
-      "functional"
-    ],
-    [
-      8,
-      2,
-      "touching",
-      [
-        [
-          24,
-          120
-        ]
-      ],
-      "functional"
-    ],
-    [
-      9,
-      8,
-      "held by",
+      -1,
+      14,
+      "camera focusing on",
       [
         [
           144,
           264
         ]
       ],
-      "functional"
+      "attentional"
     ],
     [
-      9,
       8,
-      "combing",
-      [
-        [
-          144,
-          264
-        ]
-      ],
-      "functional"
-    ],
-    [
-      2,
-      13,
-      "resting on",
-      [
-        [
-          0,
-          264
-        ]
-      ],
-      "functional"
-    ],
-    [
-      2,
       12,
       "lying on",
       [
@@ -111,94 +27,134 @@
       "functional"
     ],
     [
-      10,
+      8,
+      13,
+      "resting head on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      9,
       12,
       "resting on",
       [
         [
           0,
-          72
+          48
         ]
       ],
       "functional"
     ],
     [
-      13,
-      2,
-      "supporting",
+      14,
+      9,
+      "picks up",
       [
         [
-          0,
+          144,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      14,
+      9,
+      "holding",
+      [
+        [
+          144,
           264
         ]
       ],
       "functional"
     ],
     [
-      8,
-      2,
-      "interacting with",
+      14,
+      9,
+      "combing hair",
       [
         [
-          0,
-          264
-        ]
-      ],
-      "social"
-    ],
-    [
-      8,
-      2,
-      "caregiving",
-      [
-        [
-          0,
+          168,
           264
         ]
       ],
       "higher_order"
     ],
     [
-      8,
-      2,
-      "looking at",
+      14,
+      13,
+      "adjusting",
       [
         [
-          0,
-          144
+          96,
+          168
         ]
       ],
-      "attentional"
+      "functional"
     ],
     [
-      2,
+      14,
       8,
-      "looking at",
+      "checking on",
       [
         [
-          240,
+          96,
           264
         ]
       ],
-      "attentional"
+      "social"
     ],
     [
-      -1,
-      8,
-      "camera focusing on",
+      14,
+      12,
+      "approaches",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      14,
+      12,
+      "moves away from",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      10,
+      12,
+      "resting on",
       [
         [
           0,
+          96
+        ],
+        [
+          168,
           264
         ]
       ],
-      "attentional"
+      "functional"
     ]
   ],
   "activity_differential": [
-    "person caring for/adjusting a resting person on a bed",
-    "person checking or waking the person lying on the bed",
-    "person combing their hair while standing by the bed"
+    "adult grooming hair (combing)",
+    "adult checking on / adjusting pillow for person on bed",
+    "person resting / lying on bed"
   ],
   "video_id": "sav_000019"
 }
