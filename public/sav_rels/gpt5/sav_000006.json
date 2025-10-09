@@ -1,22 +1,42 @@
 {
-  "description": "Handheld camera walks down a clothing-mall corridor, initially behind a shopper in black, briefly glances at clothing displays, then continues down the aisle. Another shopper with a shopping bag appears early.",
-  "place_env_id_name": "indoor shopping mall corridor",
+  "description": "Handheld video in a clothing-market corridor. The camera walks forward down the aisle following a person in black. A shopper with a puffy coat and bags appears early. Mid-clip the camera briefly pans to clothing displays, then later pans to a mannequin/display near a red wall.",
+  "place_env_id_name": "shopping mall corridor",
   "relationships": [
     [
       -1,
-      2,
-      "approaching",
+      9,
+      "panning toward",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      -1,
+      "moving away from",
       [
         [
           24,
-          144
-        ],
-        [
-          216,
-          216
+          48
         ]
       ],
       "motion"
+    ],
+    [
+      1,
+      9,
+      "carrying",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "functional"
     ],
     [
       2,
@@ -25,23 +45,7 @@
       [
         [
           24,
-          144
-        ],
-        [
-          216,
           216
-        ]
-      ],
-      "motion"
-    ],
-    [
-      -1,
-      1,
-      "approaching",
-      [
-        [
-          24,
-          144
         ]
       ],
       "motion"
@@ -49,7 +53,35 @@
     [
       -1,
       2,
-      "camera focusing on",
+      "following",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "moving toward",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "focusing on",
       [
         [
           24,
@@ -63,21 +95,45 @@
       "attentional"
     ],
     [
-      -1,
-      21,
-      "pan toward",
+      2,
+      15,
+      "shopping",
       [
         [
-          168,
+          24,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      15,
+      "shopping",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      21,
+      "passing by",
+      [
+        [
+          120,
           192
         ]
       ],
-      "attentional"
+      "motion"
     ],
     [
       -1,
-      24,
-      "pan toward",
+      21,
+      "panning toward",
       [
         [
           168,
@@ -89,7 +145,7 @@
     [
       -1,
       39,
-      "pan toward",
+      "panning toward",
       [
         [
           240,
@@ -100,105 +156,21 @@
     ],
     [
       -1,
-      15,
-      "passing by",
+      38,
+      "panning toward",
       [
         [
-          24,
-          216
-        ]
-      ],
-      "motion"
-    ],
-    [
-      -1,
-      36,
-      "approaching",
-      [
-        [
-          216,
+          240,
           264
         ]
       ],
-      "motion"
-    ],
-    [
-      1,
-      9,
-      "holding",
-      [
-        [
-          24,
-          48
-        ]
-      ],
-      "functional"
-    ],
-    [
-      9,
-      1,
-      "held by",
-      [
-        [
-          24,
-          48
-        ]
-      ],
-      "functional"
-    ],
-    [
-      1,
-      13,
-      "looking at",
-      [
-        [
-          24,
-          48
-        ]
-      ],
       "attentional"
-    ],
-    [
-      1,
-      13,
-      "shopping for",
-      [
-        [
-          24,
-          48
-        ]
-      ],
-      "higher_order"
-    ],
-    [
-      1,
-      2,
-      "following",
-      [
-        [
-          24,
-          96
-        ]
-      ],
-      "motion"
-    ],
-    [
-      2,
-      1,
-      "moving away from",
-      [
-        [
-          24,
-          96
-        ]
-      ],
-      "motion"
     ]
   ],
   "activity_differential": [
-    "shopper browsing and buying clothes in a mall",
-    "camera following a shopper down a mall corridor",
-    "people walking through an indoor clothing market"
+    "person shopping in indoor clothing market",
+    "camera following a pedestrian down a mall corridor",
+    "browsing clothing displays"
   ],
   "video_id": "sav_000006"
 }
