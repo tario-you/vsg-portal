@@ -1,34 +1,18 @@
 {
-  "description": "A camera mounted on or very near a motorcycle shifts from a close dashboard view to a wider roadside market. Pedestrians walk along the street (some together), a woman inspects a shop/display, and multiple motorcycles and a car move through the scene while the camera follows the action.",
-  "place_env_id_name": "outdoor street market",
+  "description": "A handheld camera moves up from a vehicle dashboard into an outdoor roadside market. Shoppers and vendors interact at stalls while pedestrians walk down the street and motorcycles and a car move through the crowd.",
+  "place_env_id_name": "street market",
   "relationships": [
-    [
-      5,
-      -1,
-      "carrying camera",
-      [
-        [
-          0,
-          384
-        ]
-      ],
-      "functional"
-    ],
     [
       -1,
       6,
-      "camera focusing on",
+      "camera tilts up from",
       [
         [
           0,
           24
-        ],
-        [
-          384,
-          384
         ]
       ],
-      "attentional"
+      "motion"
     ],
     [
       -1,
@@ -44,112 +28,24 @@
     ],
     [
       -1,
-      37,
+      39,
       "camera follows",
       [
         [
-          288,
-          360
-        ]
-      ],
-      "motion"
-    ],
-    [
-      5,
-      37,
-      "following",
-      [
-        [
-          288,
-          360
-        ]
-      ],
-      "motion"
-    ],
-    [
-      37,
-      5,
-      "moving ahead of",
-      [
-        [
-          288,
-          360
-        ]
-      ],
-      "motion"
-    ],
-    [
-      37,
-      5,
-      "driving past",
-      [
-        [
-          288,
+          240,
           384
         ]
       ],
       "motion"
     ],
     [
-      18,
-      13,
-      "moving past",
+      -1,
+      21,
+      "camera pans toward",
       [
         [
           48,
-          120
-        ]
-      ],
-      "motion"
-    ],
-    [
-      24,
-      13,
-      "moving past",
-      [
-        [
-          96,
-          120
-        ]
-      ],
-      "motion"
-    ],
-    [
-      5,
-      18,
-      "moving past",
-      [
-        [
-          48,
-          120
-        ]
-      ],
-      "motion"
-    ],
-    [
-      5,
-      13,
-      "passing by",
-      [
-        [
-          48,
-          120
-        ],
-        [
-          168,
           288
-        ]
-      ],
-      "motion"
-    ],
-    [
-      5,
-      8,
-      "moving along",
-      [
-        [
-          48,
-          144
         ]
       ],
       "motion"
@@ -161,10 +57,18 @@
       [
         [
           48,
-          120
-        ],
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      39,
+      "walking with",
+      [
         [
-          168,
+          240,
           288
         ]
       ],
@@ -172,31 +76,27 @@
     ],
     [
       13,
-      19,
+      20,
       "focused on",
       [
         [
           48,
           120
-        ],
-        [
-          168,
-          288
         ]
       ],
       "attentional"
     ],
     [
-      13,
-      23,
-      "walking with",
+      19,
+      20,
+      "focused on",
       [
         [
-          168,
-          192
+          48,
+          120
         ]
       ],
-      "social"
+      "attentional"
     ],
     [
       23,
@@ -211,46 +111,82 @@
       "higher_order"
     ],
     [
+      13,
       23,
-      20,
-      "focused on",
+      "selling to",
       [
         [
           120,
           144
         ]
       ],
-      "attentional"
+      "social"
     ],
     [
       13,
       20,
-      "focused on",
+      "handling",
       [
         [
           48,
           120
         ]
       ],
-      "attentional"
+      "functional"
     ],
     [
-      -1,
-      20,
-      "camera focusing on",
+      39,
+      5,
+      "riding",
+      [
+        [
+          240,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      39,
+      "ridden by",
+      [
+        [
+          240,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      37,
+      "moving along",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      13,
+      "moving past",
       [
         [
           48,
-          144
+          312
         ]
       ],
-      "attentional"
+      "motion"
     ]
   ],
   "activity_differential": [
-    "pedestrians shopping and walking through a roadside market",
-    "motorcycle-mounted camera moving through a crowded street capturing pedestrians and stalls",
-    "motorcycles and a car driving through a pedestrian-filled road"
+    "people shopping at a roadside market",
+    "handheld camera following pedestrians through the market",
+    "motorcycles and cars navigating through a crowded street"
   ],
   "video_id": "sav_000013"
 }
