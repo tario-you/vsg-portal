@@ -3335,6 +3335,13 @@ function handleGlobalKeydown(event) {
   const lower = key.toLowerCase();
   const code = typeof event.code === 'string' ? event.code.toLowerCase() : '';
 
+  if (event.shiftKey && (lower === 'arrowleft' || lower === 'arrowright')) {
+    event.preventDefault();
+    const offset = lower === 'arrowleft' ? -1 : 1;
+    selectAdjacentVideo(offset);
+    return;
+  }
+
   if (key === ' ' || lower === 'spacebar' || lower === 'space' || code === 'space') {
     event.preventDefault();
     togglePlayback();
