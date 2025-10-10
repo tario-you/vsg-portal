@@ -1,0 +1,4553 @@
+{
+  "activity_differential": [
+    "group of adults socializing in a park at night",
+    "adults conversing and gesturing in a recreational area",
+    "group gathering and interacting under streetlights"
+  ],
+  "description": "A group of adults are gathered on a grassy area at night, some standing, some interacting, with one person sitting on the ground. A child is in the foreground, facing away from the group. The environment is an outdoor park or recreational area, illuminated by streetlights.",
+  "place_env_id_name": "outdoor park",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'standing right of' is spatial and plausible between two people, one moving dynamically and the other remaining stationary. There is no indication that the direction is incorrect or impossible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot generally be described as 'standing right of' a leg, especially when the leg is possibly their own. The relationship is ambiguous and does not make conventional spatial sense.",
+      "label": "physically_implausible",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'standing right of' between two persons is plausible, especially given no conflicting directional or positional details. Both subjects are described as moving and engaged in adjacent activities, making the spatial designation reasonable.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be standing to the right of a stationary object like a trash can, making this spatial relationship appropriate and sensible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be standing behind a streetlight, especially given that the streetlight is stationary and the person is dynamic. The spatial relationship 'standing behind' makes logical sense in this context.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be 'in front of' a large surface such as a concrete or stone slab. The spatial predicate fits the context and descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is common for a person to be positioned in front of (and thus behind, from the camera's point of view) a wall in a scene. The spatial predicate 'behind' is plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be 'in front of' a table, especially during actions like moving or performing gestures. The spatial relationship is valid based on typical video scene setups.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not plausible for a person to be behind grass in a general scene since grass is typically a ground cover and does not obscure a person; the spatial relationship does not make sense with typical scene geometry.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Given the descriptions, the person is moving energetically and the bottle is stationary and upright, making it implausible for the person to be 'on top of' the bottle.",
+      "label": "physically_implausible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be behind a stationary bottle in a scene. The description does not contradict the spatial relationship; thus, the relationship is reasonable and should be kept.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be positioned behind a jersey (e.g., if the jersey is hanging or suspended in the foreground), and the spatial predicate 'behind' makes sense in this context. The description supports a scenario where both objects are present in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'wearing' a streetlight, regardless of uncertainty about the object's identity. The relationship is semantically and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity has no name or description, so the 'right of' spatial relationship cannot be evaluated or validated for plausibility.",
+      "label": "invalid_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'standing left of' between two people is plausible and makes sense spatially. No indication subject/object should be flipped; both are physically capable of fulfilling this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing to the right of a leg is spatially plausible, especially in a dynamic scene where parts of the body may be at different positions. The semantic content and metadata do not contradict this relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'standing right of' is plausible between two people; nothing in the subject or object descriptions contradicts the possibility of one standing to the right of the other in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and semantically correct for a person to be standing right of a trash can in a spatial scene. There is no indication that the relationship is impossible or redundant, and the subject and object are in the correct order.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and physically possible for a person to be standing behind a streetlight, given the spatial arrangement such a predicate implies.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be positioned in front of a large flat surface, such as a wall or slab. The relationship 'person in front of surface' is semantically and physically reasonable given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a person to be described as 'behind' a wall from a certain viewpoint. The attributes and context do not contradict this relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be 'in front of' a table, as this commonly describes a typical spatial arrangement, especially in scenes where someone is standing or sitting near a table.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a person to be described as 'behind' grass, as this is a common spatial relationship in scenes where a person stands with grass in the foreground.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a person to be on top of a bottle, given typical object sizes and the provided scenario descriptions.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be behind a bottle in a scene, and the spatial relationship 'behind' is meaningful between these two objects.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and spatially logical for a person to be behind a jersey, especially if the jersey is either being worn, displayed, or hanging in front of the individual, given the described stationary posture of the person and the independent description of the jersey.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically wear a streetlight, making the 'wearing' spatial relationship implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is spatial and does not require the object to have a declared name or attributes; the subject being 'right of' an unspecified object is plausible if the scene annotator intended it so.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg (even if uncertain) to be standing left of a person, such as when the leg belongs to another individual or is a clear object in the frame. The spatial arrangement is reasonable.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more reasonable to describe a person as standing left of a leg (i.e., the person is left of a leg in the frame) rather than a leg standing left of a person. Flipping subject and object makes the statement semantically accurate.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a subject's leg to be described as standing to the right of a person in a spatial relationship, especially if the leg belongs to another person or is positioned beside the individual described.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg standing to the right of a trash can is spatially plausible, especially as the leg is in motion while the trash can remains stationary.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not plausible for a moving leg to be standing behind a stationary and typically much taller streetlight. The relationship does not make physical or semantic sense in this context.",
+      "label": "physically_implausible",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable and physically plausible for a leg (in motion, such as walking or stepping) to be in front of a surface (like a flat slab), especially in most typical video frames involving people moving. The relationship is semantically and spatially sensible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a leg could be behind a wall in a spatial context, especially given dynamic movement and the wall's stationary nature.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg to be 'in front of' a table, especially in a scene where the leg is in motion and the table is stationary. The spatial relationship makes sense and is not physically impossible or redundant.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot be 'behind' grass in the depicted context because grass forms a ground layer; such a spatial relationship is typically either ambiguous or not meaningful unless both are discrete objects.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is implausible for a leg to be on top of a bottle, especially since the bottle is described as upright and steady, and the leg is actively moving. The spatial relationship 'on top of' does not fit this context.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg (uncertain) to be positioned behind a bottle in a spatial scene, especially given that the leg is described as moving and the bottle is stationary.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg (in motion, likely walking) to be behind a jersey, especially in a scene depicting people. The spatial predicate 'behind' between a leg and jersey is semantically and physically possible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot plausibly wear a streetlight; the predicate 'wearing' does not fit this subject-object pairing.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial predicate 'right of' can apply even when the object is unidentified; as long as there is some object (object_id: 15), the relationship is possible given scene graph norms.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and semantically plausible for one person to be standing to the left of another person; nothing in the descriptions contradicts the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'standing left of' is spatial and plausible between two people observed together. There is no information suggesting that the orientation or relationship should be reversed or is physically implausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be standing to the left of a leg (even if the object is uncertain or not definitely the person\u2019s own leg), as the spatial 'standing left of' predicate makes sense in the physical layout, especially given the scene graph\u2019s uncertainty over object identity.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a person to be standing right of a stationary trash can. The relationship makes sense given the described attributes and actions of both objects.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and semantically plausible for a person to be standing behind a streetlight in a spatial sense, given common urban scenes and the described attributes.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be in front of a large, flat surface such as a slab; the spatial relationship is semantically valid and consistent with typical scene layouts.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and spatially plausible for a person to be behind a wall. The described attributes and actions do not contradict this relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and semantically correct for a person to be 'in front of' a table, as described in the subject and object details. No inversion is needed.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'person behind grass' is ambiguous; usually, grass forms the foreground with people standing on or above it. Without additional spatial context, 'behind' is not meaningful between these entities.",
+      "label": "spatially_ambiguous",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a person to be on top of a bottle, especially given a context where the bottle is described as remaining upright and steady.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and physically possible for a person to be behind a bottle, especially if the bottle is positioned in the foreground and the person in the background of a scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be behind a jersey, for example if the jersey is hanging or draped in front of the person. The spatial relationship 'behind' is reasonable in this context, given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a streetlight; this relationship is physically implausible based on the subject and object descriptions.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to evaluate the spatial relationship 'right of'.",
+      "label": "incomplete_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a trash can to be 'standing left of' a person in a spatial arrangement, and the description provides no contradictory indications.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is much more plausible to state that a person is standing left of a trash can, rather than a trash can standing left of a person. Flipping the subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable that a stationary trash can could be standing left of a moving leg; the spatial relationship 'standing left of' makes sense with these objects and actions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a trash can to be standing left of a person; the description and subject/object types support this configuration.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and common for a trash can to be standing behind a streetlight in an outdoor or urban setting. Both objects are described as stationary, and the spatial relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a trash can to be positioned in front of a surface such as a wall, slab, or ground area. The spatial relationship described as 'in front of' makes sense given the object types and their typical spatial arrangements.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a trash can to be behind a wall in a scene. The spatial relationship described is reasonable given the attributes and typical configurations of such objects.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a trash can to be in front of a table within a scene, and nothing in the attributes suggests this spatial relationship is incorrect. Both objects are stationary, consistent with the described arrangement.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a large trash can to be spatially 'behind' a grassy area, as this describes a typical outdoor or yard scene where objects are positioned relative to each other in space.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a bottle to be on top of a trash can than for a large trash can to be on top of a bottle, given their described sizes and attributes.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the bottle to be behind the large, stationary trash can, as the trash can's size and fixed position make it a more likely foreground object. Flipping the subject and object results in a reasonable spatial relationship: 'bottle behind trash can.'",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a trash can to be behind a jersey in a scene, and the spatial predicate 'behind' is appropriately applied.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can cannot be 'wearing' a streetlight; the predicate 'wearing' is not semantically or physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or descriptive attributes, so the relationship 'trash can right of [object]' cannot be evaluated or confirmed as meaningful.",
+      "label": "incomplete_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be in front of a streetlight and this spatial relationship is reasonable given the physical nature and positioning of the two objects in a typical outdoor scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be 'in front of' a person in a typical street scene, and the spatial relationship is semantically and physically valid.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be in front of a leg in a scene since both can be spatially related in this way depending on the camera angle and actor position.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a streetlight to be 'in front of' a person, depending on the camera's perspective. The predicate 'in front of' makes sense for static objects like a streetlight relative to a person in a scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a streetlight to be described as 'in front of' a trash can in a physical street scene, as their relative positions can be spatially described this way.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be in front of a surface (e.g., a wall or a ground surface). The spatial relationship aligns with how objects are typically situated in urban environments.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be positioned behind a wall in a scene, depending on the viewer's perspective. The relationship is spatially reasonable.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A streetlight can plausibly be positioned in front of a table (or vice versa) within a scene, especially outdoors or in some architectural settings. The relationship 'streetlight in front of table' is spatially reasonable given the subject and object descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a streetlight to be 'behind' grass in a scene, as the streetlight could be positioned further away in the background relative to the foreground grass.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is much more plausible for a bottle to be on top of a streetlight than for a streetlight to be on top of a bottle; streetlights are large, stationary, and typically fixed in place, while bottles are portable objects that could theoretically be placed atop something else.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be in front of a streetlight (i.e., the streetlight is behind the bottle from the camera viewpoint), and nothing in the descriptions suggests this is physically or semantically impossible.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be behind a jersey in a spatial arrangement, especially if the jersey is in the foreground of the scene and the streetlight is part of the background or environment.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one streetlight to be to the right of another, given the spatial predicate and the nature of both objects being stationary light sources.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship has no name or identifying attributes, making it impossible to evaluate the spatial relationship 'right of' meaningfully.",
+      "label": "object_missing",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be behind a large, flat surface such as a concrete or stone slab in a scene, given the spatial predicate 'behind' and typical configurations in visual settings.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'surface' being behind a 'person' is spatially ambiguous given the likely scenario that the person is standing on the surface, not in front of it as a distinct spatial separation.",
+      "label": "spatially_ambiguous",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a moving leg to be behind a stationary surface (such as a slab) in a video scene, given the spatial predicate 'behind' and the described attributes and actions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The original relationship asserts that the surface is behind the person, which is less plausible given that surfaces (like floors or slabs) are typically below or supporting people, not behind them in a spatial sense. Flipping this to have the person behind the surface makes more sense, as people are commonly described as behind large flat surfaces (e.g., walls, tables).",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is semantically more plausible that the trash can is behind the surface than the reverse; generally surfaces like floors or slabs provide context for location, while objects like trash cans are located in relation to them.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the streetlight is behind the surface (e.g., a slab or horizontal surface), rather than the surface being behind the streetlight, based on typical outdoor spatial arrangements.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a surface (such as the ground or floor) to be behind a wall depending on the camera angle and arrangement. No contradiction or implausibility is evident from the metadata.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the 'surface (uncertain)' and 'table (uncertain)' are described as large, flat, horizontal surfaces with similar features, making it unclear which is truly behind the other. The spatial ordering is ambiguous given the available descriptions.",
+      "label": "uncertain_spatial_order",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and semantically reasonable for a surface (such as a concrete or stone slab) to be 'behind' a grassy expanse, depending on the viewpoint. There is no information suggesting physical or semantic implausibility in this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Semantically and spatially, it's much more likely for the bottle to be behind the large surface than for the large surface to be behind the bottle; flipping makes the statement plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a bottle to be behind a large flat surface in a scene, especially if the surface is described as a slab or table.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey to be behind a large, flat surface like a slab, or vice versa, depending on camera perspective. No physical or semantic issues with the relationship as stated.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and semantically reasonable for a surface to be described as 'right of' a streetlight, depending on their spatial arrangement in a video frame. The directionality is correctly applied.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'right of' spatial relationship is plausible, even though the object is unlabeled, as surfaces are commonly used as spatial reference points and the relationship's semantics do not require further specification of the second object.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the wall, not the wall in front of the person, given typical scene descriptions and the provided metadata.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'in front of' is typically used with animated entities (like people) as the subject and inanimate objects (like walls) as the object. It is more plausible that the person is in front of the wall, rather than the wall being in front of the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the leg to be in front of the wall, rather than the wall being in front of the leg. Flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the person to be in front of the wall, rather than the wall being in front of the person. Flipping the subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the trash can is in front of the wall, not the other way around. Walls are usually background structures, while trash cans are placed in front of them.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a streetlight is in front of a wall or adjacent to it rather than a wall being in front of a streetlight. Flipping captures the plausible spatial relation: streetlight in front of wall.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more likely that the unidentified surface (possibly a floor or slab) is in front of the wall, rather than the wall being in front of the surface; flipping corrects the spatial relationship to match typical real-world layouts.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a table is in front of a wall, rather than a wall being in front of a table. Reversing the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Grass is typically on top of a horizontal surface or at the base of a vertical surface like a wall. Having the wall 'on top of' grass is semantically incorrect\u2014flipping to 'grass on top of wall' would fix it, but even then, it's more likely 'grass is at the base of wall.' Still, given the schema, the flip is more accurate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, in a spatial context, we say the bottle is 'in front of' the wall, rather than the wall being 'in front of' the bottle. Flipping subject and object makes the spatial relationship correct and intuitive.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle can be on top of a wall, but a wall cannot be on top of a bottle; the predicate is more plausible when the subject and object are reversed.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a jersey is on top of a wall than a wall being on top of a jersey. The original statement is physically unlikely, so flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a wall to be described as to the right of a streetlight, depending on the viewer's perspective. No physical or semantic issues are present with this relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship cannot be evaluated because the object lacks a name and descriptive details, making the spatial relationship unclear.",
+      "label": "missing_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the table rather than the table being behind the person, based on their described positions and typical scene layouts.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a person to be behind a table than for a table to be behind a person, given typical visual and spatial arrangements in scenes like this.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg (in motion) to be spatially 'behind' a table, as described in the scene, especially given the uncertainty of object categories and their typical physical arrangement.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary table to be behind a person, especially if the scene involves a person in front of a table. The spatial relationship 'behind' is semantically and physically reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a table to be behind a trash can in a scene, and nothing in the metadata contradicts this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A table is typically found indoors and at ground level, while a streetlight is usually outdoors and tall. It is highly unlikely for a table to be spatially 'behind' a streetlight in a physically plausible scene, especially given the typical environments for each object.",
+      "label": "physically_implausible",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the subject and object descriptions suggest they are referring to large, flat, horizontal surfaces\u2014possibly the same object or indistinguishable in the scene. The 'in front of' spatial relationship is not meaningful without clear differentiation.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a table to be positioned behind a wall (e.g., from the camera's perspective in a room), and the spatial relationship 'behind' makes sense considering typical scene arrangements.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a table to be physically 'behind' grass in typical visual or spatial scenes, as tables are usually placed on top of or separate from grassy surfaces, not behind them in a meaningful spatial sense.",
+      "label": "physically_implausible",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable and physically plausible for a table to be behind a bottle in a scene. The spatial predicate 'behind' does not require flipping, and the relationship is logically coherent given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The relationship 'table behind bottle' is less plausible in most spatial contexts, as a bottle is typically placed on a table, which would result in saying 'bottle behind table' only if the viewpoint puts the table between the camera and the bottle. However, normally, the bottle is described as being 'behind' the table (if the bottle was further from the viewer than the table), but with the given description, it is more semantically correct to state 'bottle behind table' if needed, so a flip may reveal the correct spatial ordering. If the bottle is located behind the table in the scene, flipping the relation to 'bottle behind table' would be appropriate.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey (likely worn by a person) to be spatially positioned behind a stationary table in a scene. The attributes and descriptions do not contradict such an arrangement.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a table to be positioned to the right of a streetlight within a scene, and nothing here indicates an impossible or redundant spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate spatial plausibility or referential integrity for the 'right of' relationship.",
+      "label": "unknown_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the grass, rather than grass being in front of the person, based on typical scene compositions.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'in front of' is directional; it's much more plausible for the person to be in front of the grass, not the grass in front of the person. Swapping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a leg is 'in front of' grass (as in a person walking on grass) rather than grass being 'in front of' a leg. Flipping the subject and object corrects the semantic orientation of the spatial predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the grass rather than the grass being in front of the person, based on typical scene composition and the descriptions provided.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a trash can to be in front of (on top of or near the edge of) a grassy expanse than for grass to be 'in front of' a trash can. Flipping the relationship makes the spatial statement correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible, and conventional, for the streetlight to be in front of the grass rather than the grass being in front of the streetlight, given that streetlights are upright structures that usually stand in front of low ground cover like grass.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'surface (uncertain)' label creates confusion regarding the physical positioning of 'grass in front of surface.' Without clear context or visual grounding, it's unclear how these elements relate spatially, making the relationship unreliable.",
+      "label": "ambiguous_reference",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for grass to be under a wall than for a wall to be under grass in a typical scene, so the subject and object should be switched.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a table is in front of grass (e.g., a table positioned on grass in an outdoor scene) than grass being in front of a table. Flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The relationship 'grass in front of bottle' is unlikely; it would be more appropriate to say the 'bottle is in front of grass,' as foreground objects like bottles visually occlude or precede background expanses such as grass in typical scenes.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a bottle to be on top of grass than for grass to be on top of a bottle. The subject and object should be reversed to make the relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a jersey to be on top of grass (e.g., lying on the ground) than for grass to be on top of a jersey. The subject and object should be reversed.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a stretch of grass to be spatially described as right of a streetlight, as these objects can commonly be oriented this way in an outdoor scene.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name or description, making it impossible to evaluate the spatial relationship 'right of' with respect to the subject 'grass.'",
+      "label": "incomplete_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a person to be under a bottle only if the bottle is positioned above them, but since the bottle is described as stable and upright while the person is moving and likely upright as well, it is more likely that the bottle is under the person (e.g., held by the person or placed on a surface below the person). Thus, the subject and object should be flipped.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is rarely under a person, but it is common for a person (even if standing) to be over or above a bottle placed on the ground or held. Flipping the subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle being under a leg (which is in motion and likely above the ground) is unlikely, especially since the bottle is described as remaining upright, steady, and prominent. The spatial relationship 'under' is not plausible here given their described states.",
+      "label": "physically_implausible",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more physically plausible that the bottle is on or above the person, but not that it is physically 'under' the person. Given the descriptions, 'person under bottle' should be flipped to 'bottle under person', which could describe the person holding or standing over the bottle.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a bottle to be under a trash can, such as if the trash can has space beneath it or is elevated. The attributes and descriptions provided do not contradict this spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot physically be under a streetlight in a spatially meaningful way if the bottle is 'standing prominently' and the streetlight is 'standing tall'; the spatial 'under' relationship is not plausible given their typical real-world arrangements and described attributes.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle being under a surface is spatially plausible, especially since the surface is described as large, flat, and stable. There is no contradictory evidence in the metadata.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible and semantically correct for a bottle to be in front of a wall, given the typical arrangement of objects in physical environments.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and physically reasonable for a bottle to be in front of a table, particularly in a scene where the bottle stands out prominently in the foreground relative to the stationary table.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be in front of grass in a scene, as objects like bottles are often placed on or in front of grassy areas. The spatial relationship makes sense given the object descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for one bottle to be in front of another, especially in a scene with two distinct bottles. The predicate 'in front of' applies plausibly between similar objects in spatial relationships.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and visually plausible for a cylindrical bottle to be positioned in front of a jersey, especially in a scene where both objects are described in detail and one (the bottle) is said to stand prominently. The spatial predicate 'in front of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Spatially, it is plausible for a bottle to be positioned to the right of a streetlight in a video scene, regardless of the physical scale difference or the streetlight's uncertainty. The predicate 'right of' is a standard spatial relation and is visually interpretable.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship cannot be verified because the object lacks a name and description, making spatial evaluation impossible.",
+      "label": "missing_object_info",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a bottle to be in front of a person, especially if the bottle is prominently featured and stationary while the person is in the background and in motion. The descriptions do not suggest an impossible arrangement.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be in front of a person, especially if the bottle is prominently featured and the person is stationary in the background. The spatial relationship 'in front of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary bottle to be spatially located in front of a moving leg, as described in the metadata. The relationship 'bottle in front of leg' is reasonable and semantically sound.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be in front of a person in a spatial context, especially given the bottle is described as prominently featured and stationary, suggesting its position in the foreground relative to the person.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be in front of a trash can; this arrangement is spatially and physically reasonable given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and semantically correct for a bottle to be in front of a streetlight in a scene, as this describes a typical spatial relationship where a smaller object (bottle) is positioned in front of a larger, background object (streetlight).",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle being in front of a large, flat surface is a plausible and spatially coherent relationship. The description supports the physical arrangement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a bottle to be under a wall, as walls generally extend to or below the surface or the ground, making it extremely unlikely that a bottle could be positioned underneath.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is common for a bottle to be positioned in front of a table, especially given the descriptions that the bottle is prominently featured and the table is a stable background element. The spatial arrangement is plausible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle being under grass is plausible, as objects can be beneath a surface if covered or partially buried. The description does not contradict this spatial relation.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'behind' spatial relationship between two visually distinct bottles is plausible, especially given both are described as stationary and could be positioned relative to each other. No information contradicts the possibility of one bottle being behind the other.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is semantically and physically plausible for a bottle to be right of a jersey as described; there is no violation of logic or spatial expectations.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'bottle right of streetlight (uncertain)' is spatially plausible and there is no information contradicting this spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object does not have a name, attributes, or description, making it impossible to validate the spatial relationship 'right of' between the bottle and the unnamed object.",
+      "label": "insufficient_information",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jersey is likely being worn by the person, making it reasonable for the jersey to be described as 'in front of' the person, as clothing is typically in front of the person's torso.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more reasonable for a person to be described as 'in front of' a jersey (e.g., a jersey in the background or hanging up), not vice versa. Flipping makes the spatial relationship valid.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey to be in front of a leg, for example if someone is wearing the jersey and their torso is in front of their leg. The spatial relationship 'in front of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a jersey is worn by a person, so it would be more correct to say the person is in front of the jersey (if referencing a display), or if it's being worn, the jersey can't be spatially 'in front of' the person. This relationship likely meant the person is in front of the jersey on display, so flipping makes sense.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey (likely worn by a person) to be positioned spatially in front of a trash can, especially in a casual or outdoor scene. The relationship 'in front of' is physically coherent given the described objects.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey (presumably worn by a person) to be positioned in front of a stationary streetlight in a spatial arrangement within a scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey to be 'in front of' a surface, such as a concrete slab or background. The spatial relationship makes sense given the likely context of the scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey being under a wall is physically implausible as walls are structural elements and typically much larger and immobile compared to clothing items like a jersey. The spatial relationship does not make sense in this context.",
+      "label": "physically_implausible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey to be in front of a table, for example if the jersey is draped over or positioned in front of the table. The relationship is spatially reasonable.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically improbable for a jersey (clothing item) to be under grass, as grass is typically on the ground and a jersey would be above or on top of it.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey (likely being worn by a person) to be positioned behind a bottle in a scene. The spatial relationship 'behind' is reasonable given no contrary evidence.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey to be located to the left of a bottle in a scene. The spatial relationship 'left of' makes sense given the described objects and does not require swapping.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jersey (presumably being worn or draped) to be spatially to the right of a streetlight within a scene. The 'right of' relation is spatial and reasonable unless the context strongly suggests otherwise.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object involved in the spatial relationship is missing a name and description, making it impossible to evaluate the plausibility of the 'right of' predicate.",
+      "label": "incomplete_object",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'worn by' is generally used with clothing or accessories, not with a streetlight as the subject and a person as the object. It is physically and semantically plausible if the relationship is 'person is wearing streetlight (uncertain)' only in a comical or costume context, but here, the description fits better if flipped to 'person is worn by streetlight,' which also does not make sense. The predicate is likely misapplied; however, if forced to choose, flipping makes slightly more sense, but ideally, the relationship should be dropped as neither configuration is plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "'Worn by' is intended for garments or accessories worn by a person; a streetlight cannot be worn by a person. Flipping makes plausible sense: a person might wear something (though not a streetlight), but as given it is physically impossible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot plausibly be 'worn by' a leg; the subject and object pair does not make sense spatially or contextually.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "'worn by' typically describes clothing or accessories that are put on by a person; a streetlight cannot be worn by a person, but a person can wear clothing (e.g. a hoodie) or possibly accessories. This relationship should be flipped or dropped, but here, flipping would result in 'person worn by streetlight', which is also nonsensical, so the correct action should actually be 'drop', but by instruction, 'flip' when reversing makes sense\u2014although this is still implausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot plausibly be 'worn by' a trash can. The predicate 'worn by' does not make sense for these inanimate, large municipal objects.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for two different streetlights to be positioned relative to each other as 'right of' in a scene. Nothing in the metadata contradicts this spatial relationship, and both objects are plausible as streetlights.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be described as 'right of' a surface such as a slab or concrete platform, especially in an outdoor or urban scene. The relationship is spatially reasonable and the subject/object ordering makes sense.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be positioned to the right of a wall in a scene, making the spatial relationship 'right of' semantically and physically reasonable.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a streetlight to be positioned to the right of a table in a scene. The spatial relation described ('right of') makes sense given the types of objects and does not contradict their attributes or expected positions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a streetlight to be to the right of a grassy area in a scene. The spatial relation 'right of' makes sense between these two objects.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be spatially located to the right of a bottle in a scene. The relationship makes sense given the spatial predicate and descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'streetlight (uncertain) right of bottle' is spatially plausible, as one object can be to the right of another without physical contradiction.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a streetlight to be spatially positioned to the right of a jersey in a scene, particularly if the jersey is closer to the viewer (e.g., being worn or displayed) and the streetlight is a background or environmental object. The spatial predicate 'right of' is applicable here and doesn't violate any semantic or physical expectation.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is a reasonable spatial predicate given a subject and object, even though the object is not well-identified. The subject's presence and static position make the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'left of' spatial relationship is plausible even though the subject's name is not given; object reference by ID is common in scene graphs. The described person can feasibly have another object to their right, making this a reasonable relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'left of' is a standard spatial predicate indicating the subject (object_id 15) is to the left of the person (object_id 2). There is nothing implausible or contradictory in the data to suggest otherwise.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an unspecified subject to be left of a moving leg in a video; spatially, this relationship makes sense.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'left of' is a common spatial relation and is plausible in a video scene. There is nothing physically or semantically impossible about one object being to the left of a person, even though the subject object is unnamed.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' is plausible as long as the subject (even if unnamed) is situated to the left of the trash can. There is nothing physically or logically impossible about this statement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an unspecified subject (object_id: 15) to be positioned 'left of' a stationary streetlight. The relationship is semantically and physically reasonable without additional context.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'subject is left of surface' is spatially plausible since no contradictory information is given, and the surface is described as stable and horizontally extended, making relative positioning possible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A subject (even if unnamed) being 'left of' a wall is spatially plausible and semantically reasonable; the relationship is clear and does not require modification.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "Without further information about the subject object (id 15), the relationship 'left of' with a clearly described stationary table as the object is plausible. The predicate and spatial relation make sense and do not violate any semantic or physical rules.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'left of' spatial relationship can apply to unspecified objects relative to a clearly described, visually dominant object like 'grass.' Without contradictory context, it's plausible that object 15 is situated left of the grass in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'subject is left of bottle' is spatial and plausible. There is nothing about the subject or object that makes the statement impossible or illogical.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject (object_id 15) is described as being 'left of' the clearly identified bottle. 'Left of' is a plausible spatial relation, even though the subject lacks details; as long as relative positioning is possible in the scene, the relationship can be deemed reasonable.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'left of' is a valid spatial relationship between two objects, even if the subject is unnamed. There is no indication that this relationship is incorrect or nonsensical.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'left of' is spatial and can logically describe the relative position between the subject (object_id: 15, unspecified) and the streetlight (object_id: 14). There is no information suggesting physical impossibility or redundancy.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both entities are persons and their descriptions do not contradict the possibility of conversing; social interaction is plausible based on posture and proximity implied.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'conversing with' a leg (even if the leg likely belongs to a person, it is not semantically plausible to describe this as a social interaction between a whole person and a leg object).",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'converse with' a trash can as it is an inanimate object; this social relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'person' cannot plausibly be 'conversing with' a 'leg,' as a leg is not a social agent or interlocutor. This relationship is physically and semantically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'conversing with' a trash can as a trash can cannot participate in social interactions. The relationship is semantically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot plausibly be 'conversing with' a trash can, as neither is capable of speech or social interaction. The predicate is not semantically or physically appropriate for these objects.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person performing a playful gesture with an extended arm to be gesturing toward another stationary person. There is no evidence in the descriptions that contradicts this functional relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "gesturing toward",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person who is stationary to be gesturing toward another moving person, especially given their described postures and actions. The dynamic person seems to be the target of the gesture.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "gesturing toward",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be looking at a streetlight, especially if the person is engaged in an energetic activity nearby and may direct attention towards objects in their environment.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be looking at a streetlight, given the typical spatial arrangement and behaviors described. The subject's head tilt also suggests possible attention toward the streetlight.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg (even if human) is not capable of 'looking at' a streetlight; legs do not possess visual organs or attentional agency. The relationship is not semantically or physically plausible.",
+      "label": "physically_implausible",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can is an inanimate object without visual attention or perception capabilities, so it cannot 'look at' a streetlight or anything else.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing near a trash can is a plausible and common scenario; the spatial relationship described is both semantically and physically reasonable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and semantically correct for a person to be standing near a trash can, and the relationship matches the descriptions provided for both entities.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a leg in motion (such as walking) to be standing near a stationary trash can. The relationship 'standing near' correctly describes the spatial arrangement between the moving leg and the stationary object.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be standing near a leg (even if the object is uncertain, the label seems to refer to a body part or similar physical object), and both are described as being in motion. There is no semantic or physical implausibility in this relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'person' standing near a 'leg' (which is most likely part of a person) is physically implausible unless it's a disembodied leg, which the context does not suggest. More likely, the leg belongs to the person, making the relationship nonsensical.",
+      "label": "physically_implausible",
+      "object_id": 3,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing near a trash can is a plausible and common scenario; the spatial relationship described is both semantically and physically reasonable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can cannot wear a streetlight; the predicate 'wearing' makes no sense for these object types and is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description and actions of both subjects are consistent with one person (subject) walking away from the other (object). Both are moving, and the motion predicate makes sense between two people in this context.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is remaining stationary with only subtle shifts in weight, which is incompatible with 'walking away from'. There is no evidence they are moving, so the described relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'leg' cannot 'walk away from' a 'person'; the motion is initiated by the person. The predicate does not logically apply in this direction.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A trash can cannot walk away from a person; only the person can walk away from the trash can. The movement and subject roles should be reversed.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a person to be 'standing on' a small bottle; the description of the person's movements and the bottle's steady, upright position make this relationship highly unlikely.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person standing on a bottle, especially one described as cylindrical and smooth, is physically implausible due to balance and size constraints.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible for a bottle to be standing on a leg, but it is far more common and logical for a leg to be standing on a bottle to be incorrect, while a bottle standing on a leg might occur in a balancing act; however, the typical scene is a bottle standing on a surface, not a leg. Nonetheless, 'bottle standing on leg' is more plausible than the reverse.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a bottle to be standing on a trash can than for a trash can to be standing on a bottle, given their respective sizes and attributes.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a person to be illuminated by a surface (especially a large, flat, and likely opaque surface like a slab), since typically, the surface would not function as a light source.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be illuminated by a surface, such as light reflecting off a large surface onto them, especially in uncertain lighting conditions. The relationship does not violate semantic or physical plausibility.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg being 'illuminated by' a surface does not make physical sense; typically, light sources illuminate objects, not surfaces. The predicate and objects are mismatched in a functional context.",
+      "label": "physically_implausible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'trash can' being 'illuminated by' a 'surface' is an unclear and unlikely functional relationship since a surface does not emit light; the predicate does not make sense in this context.",
+      "label": "semantically_unclear",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'camera focusing on' reasonably describes a typical video relationship where the subject (camera, even if implicit) is focusing on the object (person), matching standard annotation practices.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for the (implicit) camera to be focusing on a person in the scene. The relationship is semantically and physically plausible given typical video contexts, even though the subject is a generic or unmentioned camera.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject of the relationship is missing (object_id -1, name null), making the relationship incomplete and unverifiable.",
+      "label": "invalid_subject",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the camera (an implied subject) to focus on an object such as a trash can. The predicate 'camera focusing on' correctly describes the subject-object relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is natural for a camera to focus on a bottle in a video, and the predicate 'camera focusing on' correctly expresses an attentional relationship with the bottle as the object.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and common for a camera to focus on an object, such as a jersey, making the relationship 'camera focusing on jersey' reasonable even with an unspecified camera subject.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "standing behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "standing behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "standing behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "standing behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      12,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      6,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      7,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      8,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      10,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      11,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      12,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      11,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      12,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      14,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      2,
+      "gesturing toward",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      1,
+      "gesturing toward",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      6,
+      "looking at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      6,
+      "looking at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      3,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "walking away from",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      5,
+      "walking away from",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      11,
+      3,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      11,
+      5,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      7,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      5,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      12,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      13,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000012"
+}
