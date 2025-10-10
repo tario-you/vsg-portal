@@ -4,7 +4,7 @@ This folder contains a static portal for browsing the generated SAV scene-graph
 relationship JSON files. It is designed to be deployed to a static host such as
 Vercel and does **not** depend on the original Flask server.
 
-The UI mirrors the core features of the in-lab visualization:
+The UI mirrors the core features of the in-lab visualization: 
 
 - Manifest-driven list of available videos
 - Interactive vis-network graph that animates the active relationships per frame
