@@ -1,0 +1,724 @@
+{
+  "activity_differential": [
+    "dogs playing together on the road",
+    "dogs running and interacting",
+    "dogs being observed and followed by camera"
+  ],
+  "description": "Two dogs are interacting and moving on a road at dusk, with a car parked nearby. The camera follows the dogs as they move, play, and occasionally look at each other.",
+  "place_env_id_name": "road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Both the subject and object are described as dogs with similar attributes and actions, likely referring to the same or very similar entities. The spatial predicate 'below' does not add meaningful or likely information about their relationship in this context.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot be physically inside another dog; both are separate entities described as moving independently.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is highly unlikely for a dog (especially one described as moving and striding) to be inside a car that is concurrently described as gliding or moving in the scene. The spatial relationship 'inside' does not plausibly apply here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name or description, making it impossible to judge the plausibility of the 'below' spatial relationship involving the dog.",
+      "label": "incomplete_object",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the subject and object are dogs with similar attributes and actions, likely referring to the same or indistinguishable individuals. No information in the metadata warrants asserting one is physically above the other; the relationship is likely the result of a duplicate detection or ungrounded spatial relationship.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both entities are dogs actively moving in the scene, so it is plausible that their bodies or movements could overlap at some point, making the spatial predicate 'overlapping' reasonable.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a dog and a car to have overlapping spatial regions in a scene, especially if the dog passes in front of or beside the car. The relationship 'overlapping' does not specify directionality, so the current subject-object order is acceptable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (no name, attributes, or description), making it impossible to evaluate the 'above' spatial relationship with the subject dog.",
+      "label": "insufficient_information",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is implausible for a small dog to be 'surrounding' a larger dog, as 'surrounding' typically requires the subject to be spatially encompassing the object. This does not make sense for a single small dog surrounding another dog.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two dogs can physically overlap, especially if they are moving near each other, so the 'overlapping' predicate is plausible here between the described dogs.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a small dog and a car to have overlapping regions in a video scene, especially if they are close together; the spatial predicate 'overlapping' is appropriate and requires no modification.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object involved in the relationship lacks a name and description, making it impossible to determine if 'overlapping' is plausible or meaningful.",
+      "label": "incomplete_object",
+      "object_id": 6,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a car is surrounding a dog than a dog surrounding a car, as a car is larger and may encircle or pass around a dog, not the reverse.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a car and a dog to be overlapping in a video scene, especially if both are in motion and captured from certain camera angles. This spatial relationship is reasonable given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a moving car and a small dog to have overlapping positions in a scene, especially if their paths cross visually. The statement does not violate physical or semantic rules.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to verify or interpret the 'overlapping' spatial relationship.",
+      "label": "underspecified_object",
+      "object_id": 6,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name or description, making it impossible to judge whether it is plausible for it to be spatially above the dog.",
+      "label": "ambiguous_subject",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so its spatial relationship 'below' a 'dog' cannot be meaningfully assessed.",
+      "label": "unknown_subject",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name or description, making it impossible to assess whether it is plausible for it to be overlapping with the dog.",
+      "label": "incomplete_subject",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an unspecified subject (object_id 6) to be spatially overlapping with a moving car, as 'overlapping' is generic and does not contradict physical reality.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a crossbar to be physically located below a dog in a spatial arrangement, especially if the dog is elevated (jumping, standing on a platform) or the crossbar is part of an agility setup. There is no clear evidence in the metadata that this is physically impossible, so the relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is far more plausible for a small dog to be inside or under a crossbar (e.g., running under playground equipment), rather than a crossbar being inside a dog. The original subject and object are likely reversed in the context of the 'inside' spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A crossbar being 'inside' a car is unlikely given the descriptions. It is far more plausible for the car to be 'inside' (e.g., under or constrained by) the crossbar, such as passing under a barrier or gate. Flipping makes the relationship semantically and physically plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, or description, making it impossible to assess the plausibility of the 'below' spatial relationship between the crossbar and this unknown object.",
+      "label": "insufficient_information",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a dog to be above a crossbar, for example, if the dog is jumping over or passing above it in the scene. The relationship as stated is physically and semantically possible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for a small dog to be 'surrounding' a long, rigid crossbar; the spatial relationship does not make sense given the objects' described properties and typical physical configurations.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is implausible for a car to be 'surrounding' a crossbar, especially given the described forms and behaviors (car is moving; crossbar is stationary and linear). The spatial relationship described does not match real-world physics.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial predicate 'above' can plausibly relate a subject (possibly an object not named here) with a crossbar in a video context. Nothing about the physical or semantic context suggests the relationship is absurd or impossible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'playing with' between two dogs is semantically and physically plausible, especially given both are described with lively, interactive actions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and reasonable for two dogs to be 'running with' each other, especially given both are described as moving forward at a steady pace in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one dog (the more muscular, alert one) to be looking at another dog (the small, fluffy one), especially given the context that both are alert and moving. Nothing in the descriptions contradicts this attentional relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for two dogs to be 'playing with' each other. Both subjects are described with active, social, and playful behaviors, supporting the relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'running with' between two dogs is plausible, as dogs often run together. Both subjects are described as moving forward actively, making the motion relationship appropriate.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and natural for one dog to be 'looking at' another dog, especially given the attentive and curious behaviors described in their actions and attributes.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar cannot 'play with' a car; the predicate implies mutual interaction or volition which neither a stationary crossbar nor a car is capable of exhibiting. The relationship is not semantically or physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, which is described as stationary and unwavering, cannot be 'running with' a car. This relationship is not physically plausible; objects like crossbars do not perform actions like running, especially in conjunction with a car.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, being an inanimate object with no eyes or attention, cannot look at a car. The attentional predicate 'looking at' is only plausible for animate subjects capable of attention.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot 'play with' a crossbar, especially given the descriptions provided. The phrase is semantically and physically implausible between these objects.",
+      "label": "physically_implausible",
+      "object_id": 2,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot be 'running with' a crossbar, especially as the crossbar is described as stationary and unchanging. The predicate does not make sense for these objects.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is implausible for a car to be 'looking at' a crossbar, as vehicles do not exhibit attentional behavior like looking at objects.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and common for a camera to follow a moving dog in a scene, and the predicate accurately reflects this typical filming technique.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is common and semantically correct for a camera to follow a moving subject such as a dog. The undefined subject object implies the camera, which matches the predicate and motion context.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified (object_id: -1, name: null), making it impossible to determine what is supposed to be focusing on the crossbar. The relationship is invalid without a defined subject.",
+      "label": "missing_subject",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is missing (object_id is -1 and name is null), so the relationship 'camera focusing on car' cannot be validated without a defined subject.",
+      "label": "missing_subject",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "inside",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "inside",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "surrounding",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "below",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "below",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "surrounding",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "surrounding",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "playing with",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "running with",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      5,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      2,
+      "playing with",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      2,
+      "running with",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      2,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      5,
+      "camera focusing on",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000003",
+  "drop_relationships_only": true,
+  "drop_relationships_missing_spans": []
+}

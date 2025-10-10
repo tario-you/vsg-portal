@@ -1,0 +1,1093 @@
+{
+  "activity_differential": [
+    "child reading a book",
+    "child flipping through book pages",
+    "child studying alone in classroom"
+  ],
+  "description": "A child is sitting alone on a bench in a classroom, actively reading and flipping through a book. The camera remains static, capturing the child\u2019s focused engagement with the book throughout the sequence.",
+  "place_env_id_name": "classroom",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is much more plausible for a 'bench' to be sitting behind a 'wall' (or step), rather than a 'wall' (a large stationary structure) sitting behind a 'bench'. The subject and object are swapped semantically\u2014the bench should be the subject.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall cannot plausibly be described as 'sitting behind' a doormat; typically, a doormat is in front of or placed against a wall, not the other way around.",
+      "label": "physically_implausible",
+      "object_id": 4,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible for a step to be sitting behind a wall, but not physically meaningful for a wall to be 'sitting behind' a step. Flipping subject and object makes the relationship more sensible spatially.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Walls generally do not 'hold' crossbars in the manner implied by the spatial predicate 'holding'; if anything, a crossbar might be attached to or supported by a wall, but 'holding' incorrectly suggests agency or grasping, which is not plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a bench is in front of a wall, not the reverse. The relationship should state that the bench is in front of the wall for spatial accuracy.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a step to be below a wall than for a wall to be below a step, considering typical physical arrangements. The subject and object should be flipped.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for a step to be in front of a wall rather than a wall being in front of a step, given typical spatial arrangements. The current relationship likely has the subject and object reversed.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall (or similar large flat surface) is not usually 'in front of' a step in typical spatial arrangements; rather, steps are typically in front of or below walls. The relationship as stated is unlikely and semantically confusing.",
+      "label": "physically_implausible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a wall to be 'in front of' a bench from a certain camera perspective in a scene, especially if the wall is a visually dominant, stationary object and the bench is adjacent or near it.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the subject and object are described with uncertainty, and visually they could overlap (a blackboard is often mounted on a wall). The spatial relationship 'in front of' is unclear and possibly redundant, given their typical arrangement.",
+      "label": "uncertain_reference",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a step is below a wall than a wall being below a step; flipping subject/object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a step or platform to be in front of a wall in a spatial arrangement, so the relationship 'wall in front of step or platform' could also be plausible depending on perspective, but with the given descriptions, it's more likely the wall is behind the step/platform. Since the relationship is 'wall in front of step/platform', it may be less plausible, but there's insufficient information to confidently flip or drop without the visual scene. Keeping due to uncertainty and possible reasonable configuration.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the book (being held and upright) is in front of the wall (a large, stationary background), rather than the wall being in front of the book. The spatial relationship is likely reversed.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and spatially plausible for a curtain to be 'in front of' a wall, as curtains typically hang or are placed in front of walls or windows. No need to flip or drop the relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard would more plausibly be below a wall or attached to it, but the original relationship claims the wall is below the signboard. Flipping the subject and object makes the spatial relationship physically reasonable.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Desks are typically positioned below walls, rather than walls being below desks. Reversing the subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a bench to be in front of a wall, making the wall 'behind' the bench. The scene descriptions suggest a stationary wall and a bench in the foreground, so the relationship as stated is reasonable.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is semantically and physically plausible for a wall (or large surface) to be to the left of a wall panel, as both objects can exist in relation to each other within a scene. The relationship 'left of' is consistent with spatial arrangements for such surfaces.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a wall (even with uncertain identification) to be spatially to the left of a window in a scene, as both are architectural features. The description does not conflict with the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a window would be set within or above a wall rather than the wall being below a window; flipping makes 'window below wall' more plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The relationship states 'wall below air conditioner unit,' but typically, an air conditioner is mounted on a wall, meaning the air conditioner is above or attached to the wall, not vice versa. Flipping the subject and object to 'air conditioner unit below wall' makes the relationship correct if the intended meaning is spatial hierarchy, but the more accurate statement may be 'air conditioner unit below part of wall' (i.e., wall above unit).",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or any identifying features in its attributes or description, making it impossible to evaluate the plausibility of the 'below' spatial relationship.",
+      "label": "insufficient_object_info",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be in front of a wall, as benches are often positioned in front of structures like walls. There is no semantic or physical conflict here.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be in front of a doormat in a typical spatial arrangement, such as in a park or entrance setting, and there is no information to suggest this relationship is problematic.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a bench to be described as 'in front of' a step; this is a plausible and common spatial arrangement, especially in public spaces or architectural contexts.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be 'in front of' a crossbar (possibly a fence or railing). The spatial relationship is reasonable and both objects are described as stationary and horizontal, making the relationship semantically and physically correct.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are benches with highly similar physical descriptions and behaviors; a bench being 'in front of' another bench without distinguishing context is ambiguous and likely redundant.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a bench to be located below a step, especially if the step leads up to a platform or area where the bench is situated. The spatial relationship described is plausible given the physical characteristics.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be in front of a step in a scene, as benches are often placed in front of or near steps in public spaces or outdoor environments.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and semantically reasonable for a bench to be in front of a step, given their typical spatial arrangement in public environments. The descriptions suggest stationary objects, with no conflicting attributes.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the subject and object refer to benches with nearly identical descriptions, suggesting the relationship is redundant or self-referential and lacks practical meaning.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be in front of a blackboard in many spatial arrangements, such as in a classroom or outdoor setting. The relationship is semantically valid based on the given object descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a step is located below a bench (i.e., you step up to sit), not the other way around. Flipping the relationship makes it physically plausible: the step is below the bench.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be in front of a step or platform, as these objects are commonly found in such spatial arrangements, and nothing about the descriptions contradicts this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a bench to be in front of a book, especially if the book is being held or positioned further back in the scene. The spatial relationship 'in front of' makes sense given the described context and object attributes.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bench to be 'in front of' a curtain, especially in an indoor or staged environment. The spatial relationship makes sense given the types of objects involved.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a signboard is physically above (mounted on or placed atop) a bench rather than the bench being below the signboard. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is highly unlikely and physically implausible for a stationary bench to be positioned below a stationary desk, as benches are typically lower than desks.",
+      "label": "physically_implausible",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one bench to be behind another in a scene, and the relationship 'bench behind bench (uncertain)' is spatially meaningful and contextually reasonable based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a bench to be left of a wall panel in a scene; the relationship is logical and does not require modification.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially reasonable for a bench to be left of a window, and both objects are stationary according to the descriptions. The predicate 'left of' is appropriate given their physical plausibility as described.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a bench to be located below a window, especially in architectural settings. The attributes and descriptions do not contradict this arrangement.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the air conditioner unit is above the bench (e.g., mounted on a wall), rather than the bench being physically below the air conditioner. The predicate should relate the bench as being 'below' the air conditioner unit, so flipping the subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to determine if the 'below' relationship is plausible or meaningful.",
+      "label": "missing_object_info",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be positioned in front of a wall, as doormats are commonly placed near entrances, which are often adjacent to walls.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and semantically reasonable for a doormat to be behind a bench in a scene, especially given typical spatial arrangements in entryways or parks.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and contextually reasonable for a doormat to be in front of a step; this is a common spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be in front of a crossbar (such as at an entryway where a crossbar might mark a threshold). The spatial relationship using 'in front of' makes sense in common real-world settings.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be positioned in front of a bench, as doormats are often placed before seating or entryways. The spatial relationship 'in front of' is semantically and physically reasonable here.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is plausibly placed on a step, not the other way around. 'Step below doormat' makes more sense than 'doormat below step'; the subject and object should be flipped to reflect this correct spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is common for a doormat to be placed in front of a step, so the spatial relationship 'doormat in front of step' is plausible given typical real-world arrangements.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and common for a doormat to be positioned in front of a step, especially near entrances. The spatial relationship described fits typical physical arrangements.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and semantically reasonable for a doormat to be in front of a bench, as doormats are often placed in front of objects where people might sit or enter. The description supports the arrangement.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a doormat to be in front of a blackboard (e.g., at the entrance or near a display area), and the spatial relationship 'in front of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a doormat to be positioned below a step, as doormats are often placed at the base of steps or thresholds.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is semantically and physically plausible for a doormat to be in front of a step or platform, matching common real-world arrangements.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be positioned in front of a book (e.g., if the book is upright and the doormat is on the ground nearby), and the spatial relationship 'in front of' is suitable here with the provided context.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be in front of a curtain, such as at the entryway of a room. The spatial relationship makes sense given the likely positions of these objects.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be spatially below a signboard, especially if the signboard is mounted on a wall or above an entryway. The physical and spatial relationship makes sense.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A doormat is typically found below a desk, which is physically and semantically plausible. The relationship 'doormat below desk' is reasonable.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be behind a bench, especially in a spatial context such as an entrance or waiting area. The described positions and shapes make the relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically and semantically plausible for a doormat to be left of a wall panel, given their typical spatial arrangement in an environment such as a home entrance.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be spatially 'left of' a window in a scene, especially in entry areas; the spatial relationship makes sense.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be physically below a window in a scene, as doormats are typically placed on the ground and windows are elevated on a wall.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a doormat to be below an air conditioner unit, especially if the unit is wall-mounted and the doormat is on the floor beneath it.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to assess if the 'doormat below [object]' spatial relationship is plausible or meaningful.",
+      "label": "insufficient_object_info",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be in front of a wall in a spatial arrangement, such as a step leading up to a wall or at the base of it. The descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be behind a bench in a spatial arrangement, particularly in architectural or outdoor settings, and nothing in the metadata contradicts this possibility.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be physically located behind a doormat, such as at the entrance of a building where the doormat is placed in front of a step.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a crossbar to be spatially located in front of a step, or vice versa, as both are stationary architectural or constructed elements. The use of 'in front of' as a spatial relation is reasonable given the context.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and common for a step to be in front of a bench in a spatial arrangement, especially in architectural or outdoor settings. The description does not contradict this relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one step to be below another, especially if they are part of a staircase or similar structure. Both subjects are described as steps, and their attributes do not contradict this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one step to be in front of another in a spatial context (e.g., stairs or platforms). The descriptions indicate two similarly shaped but distinct objects, making this relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one step to be in front of another step, especially if they are part of a staircase or a series of steps. The spatial relationship 'in front of' makes sense here given the descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be in front of a bench in a spatial arrangement, as benches are often placed behind steps in public places or parks. The descriptions support fixed, adjacent positioning, making the relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a step to be in front of a blackboard, as this is a common configuration in classrooms and similar settings. The descriptions suggest both objects are stable and fixed in place, supporting the stated relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial predicate 'below' between two distinct step-like objects is plausible, as steps are often arranged vertically relative to each other; the descriptions support such a relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object refer to similar or indistinguishable step-like objects. Without clearer distinction or spatial cues, asserting 'in front of' between them is ambiguous and likely redundant.",
+      "label": "ambiguous_redundancy",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a book to be positioned in front of a step, especially if it is being held upright, so the spatial relationship 'in front of' is reasonable in this context.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be in front of a curtain, especially in indoor or stage settings. The relationship is spatially and contextually logical.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be physically below a signboard, given what is typical in real-world settings. The descriptions for both objects do not contradict this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be physically below a desk, as steps are often found underneath or in front of desks in certain layouts. The spatial relationship 'below' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be spatially 'behind' a bench, given their typical placements and the descriptions provided. The relationship 'step behind bench' can occur in many real-world settings, such as parks or public spaces.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and semantically correct for a step to be spatially left of a wall panel, especially given both objects are described as stationary and large. The step could easily be to the left of the panel in a scene.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a step to be physically positioned to the left of a window, given both are stationary architectural features. The predicate 'left of' is meaningful in this spatial context.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a step to be below a window, as steps are typically found beneath windows on a building or structure.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It's more plausible that the air conditioner unit is mounted above the step, not below it. The original relationship should be flipped, indicating the air conditioner is above the step.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship lacks a name and attributes, making it impossible to evaluate the plausibility of the subject being 'below' it.",
+      "label": "incomplete_object",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar being 'held by' a wall is not a plausible spatial relationship, as walls do not typically 'hold' objects in the sense used here; rather, objects might be 'attached to' or 'supported by' walls, but the predicate 'held by' does not fit this context.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a crossbar to be in front of a bench, especially if both are stationary and aligned horizontally as described. The spatial 'in front of' relationship makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a crossbar to be situated in front of a doormat in a physical setting, especially if the crossbar is part of a barrier or structural feature above or in front of a mat. The spatial relationship 'in front of' is sensible here.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a crossbar to be in front of a step in a spatial context, especially given the descriptions suggesting both are horizontal, stationary structures. The predicate 'in front of' describes a reasonable physical arrangement between these objects.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not plausible for a wall to be 'holding' a crossbar in the functional sense implied by 'holding'; walls may support or have objects attached, but 'holding' generally implies active grasp or support distinct from mere attachment.",
+      "label": "physically_implausible",
+      "object_id": 17,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Neither a wall nor a crossbar are capable of 'flipping pages.' This is a physically implausible relationship for these objects based on their descriptions.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "flipping pages of",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall or crossbar cannot perform the action 'reading' as they are inanimate objects with no cognitive ability.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall (or a similar flat surface) cannot attentively focus on a crossbar, as neither object possesses attentional capabilities. The 'focused on' predicate is not semantically or physically appropriate for inanimate and non-sentient objects like a wall and a crossbar.",
+      "label": "physically_implausible",
+      "object_id": 17,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'camera focusing on' is plausible with an unspecified subject (likely the camera itself) focusing on a wall; the relationship makes sense in the context of video scene graphs.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      4,
+      "sitting behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "holding",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      20,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "held by",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "holding",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      17,
+      "flipping pages of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      17,
+      "reading",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      17,
+      "focused on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000014",
+  "drop_relationships_only": true,
+  "drop_relationships_missing_spans": []
+}

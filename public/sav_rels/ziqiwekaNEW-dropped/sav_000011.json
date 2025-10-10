@@ -1,0 +1,655 @@
+{
+  "activity_differential": [
+    "child playing drum with toy mallets",
+    "child performing musical activity",
+    "child engaged in rhythmic play"
+  ],
+  "description": "A child is sitting in a living room, energetically playing a drum with two toy mallets, while the camera moves closer for a better view.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A balloon covering the lower body of a toy (both described as small, rounded objects) is not semantically or physically plausible\u2014the scale and typical context of these objects do not support this spatial relationship.",
+      "label": "physically_implausible",
+      "object_id": 3,
+      "predicate": "covering lower body of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a lightweight balloon to be positioned above a drum, especially given the actions described (moving, elongating) and the drum being played or moved.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a balloon (which is lightweight and mobile) to be above a suitcase (which is sturdy and stationary). There is nothing in the description to contradict this spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and physically reasonable for a toy to be in the left hand of a child, especially given the description that the child is manipulating or exploring the object.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in left hand of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be above a drum, as the child might be sitting or leaning over the drum while playing or exploring it. The spatial relationship fits the context described.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be situated above a suitcase, especially if the suitcase is on the floor and the child is seated or leaned forward. There is no semantic or physical contradiction in this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for a toy (or sports ball-like object) to be 'wearing' a balloon, given the described physical properties of both objects. The predicate 'wearing' is not suitable for these inanimate, non-wearable objects.",
+      "label": "physically_implausible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The current relationship states 'toy holding child', but given the subject and object descriptions, it is semantically and physically correct for the child to be holding the toy.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is highly unlikely for a toy (or small yellow ball) to be 'holding' a sports ball, as inanimate objects like toys or balls do not possess the capability to hold other objects. The relationship is not plausible.",
+      "label": "physically_implausible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a toy (possibly a ball or similar object) to be sitting on a drum, especially in an animated or active scene where both are in motion.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "sitting on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a toy (possibly moving or tossed) to be in front of a suitcase in a scene, given their described positions and actions. The relationship aligns with common physical arrangements.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy (especially of this described shape and motion) cannot 'wear' another object. The 'wearing' predicate here is not plausible with the subject and object provided.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'in right hand of' suggests the subject should be the hand-holder, not the object being held. Likely, the toy (yellow object) is in the right hand of the sports ball (red object) is semantically incorrect. Flipping the relationship makes sense if it's intended that the ball is in the right hand of the toy, but more likely, the toy or hand is holding the ball. Since both are objects and not anatomical hands, the original configuration is not plausible; flipping may bring it closer to plausibility, depending on the scene context.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in right hand of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sports ball to be spatially above a drum, especially given their described shapes and possible positions in a scene. The spatial predicate 'above' fits such objects without any evident contradiction.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sports ball to be positioned above a suitcase, especially given their described forms and behaviors. The ball's rotation and the suitcase's upright, stationary nature support this spatial relation.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a drum to be positioned in front of a door frame in a scene. The relationship accurately describes a potential spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a suitcase to be positioned in front of a door frame in a physical setting, aligning with typical spatial arrangements and the given object descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a suitcase to be attached to a mirror, such as in a situation where the suitcase is leaned against or secured to a mirror. The predicate 'attached to' can describe a legitimate spatial relation between these objects.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a vent to be in front of a door, as vents are often mounted on or in proximity to doors, and the scene descriptions do not contradict this spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a drum (potentially resting on or near the doorframe or above the ground against a door) to be described as 'above' a door in a spatial context, given typical visual compositions involving stacked or elevated objects.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a moving toy to be in front of a stationary curtain, especially given the descriptions of their positions and behaviors. The spatial relationship 'in front of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a drum to be in front of a curtain (e.g., in a stage or room setting), and nothing in the metadata contradicts this arrangement.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a suitcase (the more mobile, freestanding object) to be positioned in front of a curtain (typically stationary and covering a surface like a window or wall). The spatial relationship 'in front of' makes sense in this context and with the objects' described properties.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a pen (perhaps as a clip or holder) to be attached to a door, for example, by being hooked onto it or with a holder. The predicate 'attached to' works semantically and physically in this subject-object configuration.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is semantically plausible for a vent to be in front of a door, especially if the vent is mounted on or near the door's front side, and both objects are stationary. The relationship is spatially reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a drum to be above a door (such as on a shelf or platform) in a physical scene, and no attributes contradict the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the toy (small, lightweight object) to be under the drum (large, stable object) than the drum being under the toy. The current subject-object order is likely reversed.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'drum under suitcase (uncertain)' is unlikely, as drums are typically not found underneath suitcases. The descriptions indicate the drum is prominent and in motion, suggesting it is neither suppressed nor underneath another object.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship is completely unspecified (no name, attributes, or description), making it impossible to assess the plausibility of the spatial relation 'in front of'.",
+      "label": "object_unknown",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a suitcase to be in front of a toy, given their described shapes, sizes, and motion dynamics. The predicate 'in front of' fits typical visual scenarios involving these objects.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A suitcase (particularly an upright, sturdy one) being on top of a drum is plausible given both objects' described structures and the spatial predicate 'on top of.' The descriptions do not suggest any physical impossibility or reversal needed.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name, attributes, and description, making it impossible to evaluate or validate the spatial relationship 'in front of' with the subject.",
+      "label": "insufficient_information",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a remote control to be 'in front of' a door, especially since the remote is described as moving and the door as stationary, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a wall panel to be in front of a door, depending on the scene's spatial layout. The relationship 'in front of' appropriately reflects a potential real-world configuration.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a mirror to be described as 'left of' a door in a scene, especially considering both are prominent, stationary objects. The spatial relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and common for a mirror to be attached to a door. The relationship 'door attached to mirror (uncertain)' as stated means the door is attached to the mirror, which could describe a mirrored door or a door with a mounted mirror. Given the uncertainty in the object label and descriptors, but no direct contradiction, the spatial relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a door to be positioned to the left of a mirror in a scene, and the spatial relationship is clearly described. No evidence suggests a need to flip or drop.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is common and plausible for a mirror to be attached to a door, especially given the physical descriptions of both objects. The predicate 'attached to' is appropriate.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tall, slender, wooden object\u2014possibly a table leg or support\u2014to be positioned above a door, for example, as part of a structure or furniture design. The relationship adheres to plausible physical arrangements.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a red stool to be positioned to the left of a curtain within a scene. Both objects are stationary and their relative spatial arrangement is reasonable given the typical physical context.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a toy (moving in the foreground) to be in front of a curtain, making the curtain 'behind' the toy. The spatial relationship is reasonable given common scene arrangements.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a pole could be positioned above a door, such as a flagpole or a support structure. The provided descriptions do not contradict this spatial relationship, so it should be kept.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a shoe to be 'left of' a door in a scene, and nothing in the descriptions contradicts this spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'on feet of' semantically makes sense the other way around; a toy is more likely to be on the feet of another object, not the reverse. Flipping corrects the likely intended relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "on feet of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy (possibly a ball) playing a drum is not physically plausible; toys are inanimate and do not actively play instruments.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is highly implausible for a toy to be 'playing' a suitcase\u2014'playing' as a predicate typically describes an animate subject performing an activity with autonomy or agency, which neither inanimate objects possess.",
+      "label": "physically_implausible",
+      "object_id": 14,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is holding the toy than the toy is holding the child. The subject and object should be flipped to accurately represent the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy or small sports ball (subject) holding a sports ball (object) is not plausible, as neither object has the ability to hold another in a functional sense.",
+      "label": "physically_implausible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description suggests the child is manipulating or striking the toy, rather than the toy striking the child. The roles are reversed\u2014'child striking toy' is reasonable, while 'toy striking child' is less plausible in this context.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A toy (possibly designed for play) striking a sports ball is plausible, especially given both objects are described as moving, and the toy is involved in swinging/tossing actions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a toy to strike a drum, especially given the toy's actions indicating motion (swinging, tossing) and the drum's context of being played or moved. The relationship matches a common scene where a toy or mallet is used to strike a drum.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a toy to be striking a suitcase, especially since the toy is described as being in motion and swinging, which aligns with the action of striking.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a small toy or ball, especially one described as moving or being tossed, to be sitting on a curtain, particularly if the curtain is a vertical or loosely hanging surface as suggested by the description.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'camera moving toward toy' is plausible, as cameras can physically move toward an object, such as a vibrant yellow toy. The predicate and motion type are semantically appropriate with the described context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'camera focusing on' describes an attentional relationship that is typical in video annotations, with the camera (implicit subject) focusing on the toy object. The subject is unspecified (likely the camera or viewpoint), which is common in such context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      3,
+      "covering lower body of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "holding",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      26,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      26,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      26,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "playing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      14,
+      "playing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      4,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      23,
+      "sitting on",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000011",
+  "drop_relationships_only": true,
+  "drop_relationships_missing_spans": []
+}
