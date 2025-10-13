@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "group of people walking through indoor market",
+    "camera following group into food court",
+    "people socializing and moving through shopping area"
+  ],
+  "description": "A group of people walk through an indoor market or shopping area, passing through decorative doors and into a food court area. The camera follows their movement, panning and dollying forward as the group progresses through the space. Some people are seen sitting and eating at tables in the food court.",
+  "place_env_id_name": "indoor market / food court",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A booth cannot realistically be positioned 'over' a tall vertical pillar; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A booth cannot be plausibly positioned 'over' a vertical partition given their described orientations and typical spatial arrangements.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wooden booth cannot logically be spatially 'over' a moving jacket; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are signboards positioned close together; asserting one is spatially 'over' the other adds no meaningful new information since signboards are often arranged side by side rather than vertically overlapping.",
+      "label": "redundant",
+      "object_id": 36,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary signboard cannot realistically be positioned over a moving jacket in a way that implies direct spatial dominance. The relationship 'over' here is implausible given the objects and their described states.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tall vertical pillar cannot be spatially 'right of' a horizontal ceiling beam because the beam is typically above the pillar, making the stated left-right spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot be above a jacket since it is an inanimate object fixed in place, and the jacket moves through the scene; the spatial relationship 'above' is not plausible between them.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot approach a fixed ceiling beam in a meaningful way since it is overhead and stationary, making 'approaching' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The jacket is an object of clothing that cannot move on its own or be approached; the relationship 'person approaching jacket' implies motion towards an autonomous jacket, which is not physically plausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically walk toward a stationary, ceiling-mounted beam in a way that represents meaningful movement toward an object at that height and position.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket cannot actively walk toward anything; it is an inanimate object, so this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000018.json",
+    "total_relationships": 221
+  },
+  "relationships": [
+    [
+      26,
+      32,
+      "over",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      37,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      39,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      36,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      39,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      33,
+      "right of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      39,
+      "above",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      39,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "walking toward",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      39,
+      "walking toward",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000018"
+}

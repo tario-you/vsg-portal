@@ -1,0 +1,647 @@
+{
+  "activity_differential": [
+    "child dancing along with television characters",
+    "child imitating dance moves from TV",
+    "child playing an interactive dance game"
+  ],
+  "description": "A young child in a living room is actively dancing and mimicking the movements of animated characters displayed on a television screen, likely participating in a dance-along or rhythm game. The child is focused on the screen and moves energetically throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A television screen cannot be inside a sofa; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot be 'inside' a sofa in a spatial sense; socks typically are worn on feet or placed on top of furniture, not inside solid objects like sofas.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child's hair cannot physically cover the lower half of a solid vent object positioned with stability and fixed orientation.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "covering lower half of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot physically cover the upper half of a leaf-like shape, as clothing items are worn by beings, not natural objects.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "covering upper half of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt, being worn on a child, cannot occupy an identical spatial region with a fixed vent; these are distinct, separate objects.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "identical spatial region",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A character engaged in dynamic movement cannot be realistically 'inside' a sofa, which is a solid piece of furniture.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cartoonish creature being physically inside a photo album is implausible; the album is likely too small and not hollow to contain the creature.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sofa cannot physically 'surround' a television screen; their typical spatial arrangement does not support this relationship.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sofa, being stationary furniture, cannot spatially surround a sock that is moving.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sofa is a stationary object and cannot physically 'surround' a character; the spatial predicate 'surrounding' implies active spatial relationship not valid for a sofa.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sofa cannot physically surround a blanket; typically, a blanket is on or over the sofa, so the spatial relationship 'surrounding' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "Characters displayed on a television screen cannot physically be under sweatpants worn by a person.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Animated characters on a television screen cannot be physically located under a sweatshirt worn by a child; the spatial relationship is not physically possible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Characters on a TV screen cannot be spatially under a physical skirt; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The characters are displayed on a television screen, which cannot physically be under the cabinet; the cabinet and screen are separate objects with no plausible 'under' spatial relation here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Animated characters displayed on a television screen cannot be spatially located physically under a vent in the real environment.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot be physically inside a photo album; the spatial relationship 'inside' is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flat, rectangular vent cannot physically cover the lower half of a moving child; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "covering lower half of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent and a sweatshirt cannot occupy the identical spatial region; the vent is fixed and flat, while the sweatshirt is clothing worn and forming creases, making this spatial equivalence physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "identical spatial region",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flat vent cannot physically be spatially located on top of moving animated characters displayed on a TV screen; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent is an inanimate object and cannot perform the action of watching a photo album.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent as an inanimate object cannot imitate a child's actions; the predicate 'imitating' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "imitating",
+      "relation_type": "higher_order",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent cannot engage in the action of 'dancing with' a child, which is a human activity requiring movement and intent.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "dancing with",
+      "relation_type": "higher_order",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate vent cannot pay attention to a photo album; this relationship implies intentional focus, which is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fixed, stationary vent cannot logically be 'moving on' animated characters; the motion relationship as stated is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "moving on",
+      "relation_type": "motion",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent cannot logically wear a leaf-like shape; the predicate 'wearing' is not plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent cannot wear a child; the predicate 'wearing' is not plausible for these objects in this direction.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent, being an inanimate object, cannot wear sweatpants, so the 'wearing' relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 28,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000078.json",
+    "total_relationships": 52
+  },
+  "relationships": [
+    [
+      2,
+      16,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      21,
+      "covering lower half of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "covering upper half of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      21,
+      "identical spatial region",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      16,
+      "inside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "surrounding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "surrounding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      11,
+      "surrounding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      14,
+      "surrounding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      5,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      7,
+      "under",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      15,
+      "under",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      21,
+      "under",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      6,
+      "covering lower half of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      7,
+      "identical spatial region",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      19,
+      "on top of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "watching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      21,
+      20,
+      "imitating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      21,
+      20,
+      "dancing with",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      21,
+      3,
+      "paying attention to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      21,
+      19,
+      "moving on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      21,
+      8,
+      "wearing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      21,
+      6,
+      "wearing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      21,
+      5,
+      "wearing",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000078"
+}

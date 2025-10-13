@@ -1,0 +1,502 @@
+{
+  "activity_differential": [
+    "families and children socializing and queuing at arcade machines",
+    "adults supervising and assisting children in arcade activities",
+    "people conversing and moving through arcade environment"
+  ],
+  "description": "A busy arcade scene with multiple adults and children interacting, queuing, and moving around arcade machines. Some adults are supervising or assisting children, while others are engaged in conversation or handling baskets and bags. The camera moves through the environment, capturing the dynamic social and functional interactions.",
+  "place_env_id_name": "arcade",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person standing on top of a television is physically implausible given the descriptions of stability and size.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sweatshirt is worn by the person, so spatially it cannot logically be left of the person as a separate object; the relation is physically impossible as stated.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially located 'left of' their own sweatshirt as the sweatshirt is worn by the person; it is part of the person rather than a separate object to the side.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person standing 'on top of' a television is physically implausible given the size and stability described; typically, televisions are not suitable platforms for a person to stand on top.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot realistically be on top of a vertical, stable television; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person without any supportive context is generally not plausible; the metadata does not suggest physical contact that would support the 'holding' predicate between two standing individuals.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person is generally not physically plausible without explicit context such as carrying or supporting; the descriptions suggest both are standing independently.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'converse with' an inanimate signboard; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally 'converse with' a light fixture, which is an inanimate object with no capacity for conversation.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot realistically be holding another person in this context without additional supporting information.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person holding another person is not physically plausible in this context without additional supporting details.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically be 'conversing with' a light fixture, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot engage in social interaction such as conversing with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture is an inanimate object and cannot engage in social interactions like conversing with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot engage in social interaction such as 'conversing with'; moreover, the object involved lacks identification or attributes suggesting social behavior.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot engage in a social action like 'conversing with,' and the object has no name or description to suggest otherwise.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot wear a jacket; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot realistically wear a handbag; the 'wearing' predicate is not physically plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot wear anything, and the object involved lacks identification or description to support the relationship.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot hold a person; the subject appears fixed and inanimate, making the predicate 'holding' physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture, being a fixed and inanimate object, cannot hold a person.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot engage in social interactions like conversing with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture cannot logically engage in a conversation, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 35
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 23,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000043.json",
+    "total_relationships": 268
+  },
+  "relationships": [
+    [
+      1,
+      24,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      24,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      21,
+      "holding",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      20,
+      "conversing with",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      7,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      8,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      21,
+      "holding",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      7,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      1,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      23,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      35,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      10,
+      "wearing",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      26,
+      "wearing",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      8,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      21,
+      "holding",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      35,
+      7,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000043"
+}

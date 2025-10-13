@@ -1,0 +1,838 @@
+{
+  "activity_differential": [
+    "dog playing with toys",
+    "dog chasing and interacting with objects",
+    "dog exploring living room with person present"
+  ],
+  "description": "A dog is actively playing with various toys, including a rubber chicken toy and a ball, in a living room environment. A person, visible by their feet and slippers, is present and may be interacting with the dog. The camera follows the dog's movement, capturing the playful activity.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be to the right of a foot wearing a slipper in a meaningful spatial context; usually the foot wears the sandal or slipper, so the relationship as 'right of' between sandal and foot is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is a wearable item unlikely to be physically inside a sleek, metallic pipe; the spatial relationship 'inside' here is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar rubber chicken toys described together; stating one is 'beside' the other adds no substantial new spatial information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot cannot be positioned 'left of' the slipper it is wearing; the foot is inside the slipper, so this spatial relationship does not make physical sense.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot inside a metallic pipe is physically implausible, especially given the pipe's description and the foot's actions of stepping and shifting weight.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot and a sandal with the same duck face design cannot be spatially 'left of' each other as separate objects; the foot is expected to be inside or wearing the sandal, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair cannot be inside a pipe; the spatial relationship is physically implausible given their sizes and descriptions.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot realistically contain a sandal, especially one described as gliding smoothly and moving forward.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sleek, elongated metallic pipe is unlikely to physically contain a rubber chicken toy, especially given the pipe's shape and size constraints.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe-like object cannot realistically contain a slipper, especially given their described sizes and typical uses.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sleek metallic pipe is unlikely to contain a rubber chicken toy spatially as it seems solid and elongated with tapering ends, not hollow or open to contain another object inside.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe is a rigid elongated object unlikely to contain a foot, which is a much larger and differently shaped entity. The spatial containment relation is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot physically contain a chair, as a chair is larger and not enclosed by a pipe.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot realistically contain a sandal, especially one that is moving gracefully; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot move on its own to position itself spatially relative to a chair; the described actions imply autonomous motion which is physically impossible for a sandal.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is not capable of moving inside a pipe realistically; the 'inside' spatial relationship here is physically implausible given the objects described.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "Objects like sandals and slippers cannot 'play with' each other as they are inanimate footwear without consciousness or action capability.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot realistically play with a cell phone; the predicate 'playing with' is not physically plausible between these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot engage in the activity of playing with a chair.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Relationship 'interacting with' between two sandals with similar motion and whimsical descriptions is vague and adds no clear informative distinction.",
+      "label": "redundant",
+      "object_id": 25,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sandal is an inanimate object and cannot perform the action of moving around the rubber chicken toy which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot move around a dog; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal does not have the capability to move around a stationary scale on its own; the described movement is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sandal is described as moving smoothly while the toy remains steady with no visible movement; it is implausible that the sandal is 'moving around' the toy which does not move or interact.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sandal objects do not possess agency to 'interact with' each other in a meaningful way; their described movements are metaphorical, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot actively chase a chair; the action 'chasing' implies intent and motion not applicable to a sandal.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sandals are inanimate objects and cannot perform the action of chasing each other.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot physically chase a slipper as both are inanimate objects without autonomous motion.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot perform the action of 'chasing' a cell phone or any object.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot chase a foot; the 'chasing' action is not physically plausible for the sandal as subject.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot chase a bathtub, which is an inanimate and fixed object; the action is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot logically perform the action of chasing a handle; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to a cell phone; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot pay attention to anything, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, an inanimate object, cannot pay attention to a dog; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot pay attention to anything as it is an inanimate object without perception or attention capabilities.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to anything, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal as an inanimate object cannot pay attention to a sports ball; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 39,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000036.json",
+    "total_relationships": 163
+  },
+  "relationships": [
+    [
+      1,
+      8,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "inside",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "inside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "inside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "contains",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "contains",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "contains",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "contains",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      8,
+      "contains",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "contains",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      25,
+      "contains",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      13,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      14,
+      "inside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "playing with",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      20,
+      "playing with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      27,
+      "playing with",
+      [
+        [
+          216,
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      25,
+      "interacting with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      2,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      7,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      11,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      19,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      18,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      27,
+      "chasing",
+      [
+        [
+          216,
+          408
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      25,
+      "chasing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      3,
+      "chasing",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      20,
+      "chasing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      8,
+      "chasing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      22,
+      "chasing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      34,
+      "chasing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      9,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      2,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      4,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      7,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      11,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      19,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      26,
+      "paying attention to",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000036"
+}

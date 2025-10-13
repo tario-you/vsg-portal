@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "young goat foraging and approaching adult goat",
+    "goats foraging together in grassy field",
+    "camera tracking young goat's movement"
+  ],
+  "description": "A young goat wearing a shirt is moving across a grassy area, gradually approaching an adult goat. The adult goat is stationary and appears to be grazing or foraging. The camera follows the young goat as it moves toward the adult goat, capturing their interactions.",
+  "place_env_id_name": "grassy field",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The goat is described as moving across the scene and grazing, which implies it is on the ground near the plant, not on top of it. It is physically implausible for the goat to be on top of a dense, bushy plant.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a small, ground-dwelling rabbit to be spatially 'above' a goat that is moving on the terrain; the spatial relationship is physically implausible as rabbits are generally on or near the ground and goats are larger and taller.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The rabbit is small and stationary near the greenery, while the goat is moving on the ground; it is physically implausible for the rabbit to be spatially above the goat in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The driftwood, described as gliding and undulating, is unlikely to be physically positioned above a goat in a meaningful spatial relation; driftwood does not float above animals in natural scenes.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the goat to itself, which is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship shows the goat foraging itself, which is redundant and does not convey meaningful information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000002.json",
+    "total_relationships": 74
+  },
+  "relationships": [
+    [
+      1,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "above",
+      [
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      1,
+      "foraging",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      2,
+      "foraging",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000002"
+}

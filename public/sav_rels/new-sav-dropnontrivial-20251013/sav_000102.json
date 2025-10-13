@@ -1,0 +1,149 @@
+{
+  "activity_differential": [
+    "child reading a book",
+    "child turning pages of book",
+    "child focusing on book"
+  ],
+  "description": "A child is sitting at a table in a brightly colored room, interacting with a book, turning its pages, and focusing on its contents. The child remains engaged with the book throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar vibrant yellow chairs described together; specifying one's position as 'left of' the other does not add meaningful new information.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coaster cannot logically be positioned to the 'left of' a wall, as the wall is a large vertical structure and the coaster is typically placed on surfaces in front of or against the wall, not spatially to its side in such a manner.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot hold a wall; the relationship is physically impossible given the subject and object roles.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot turn the pages of a wall; the predicate implies an action the wall cannot perform or be subject to.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "turning pages of",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot focus attention on a wall; focusing is an attentional action typically attributed to sentient beings.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot perform the action of reading a wall; the predicate 'reading' is not physically plausible with the book as subject and wall as object.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000102.json",
+    "total_relationships": 61
+  },
+  "relationships": [
+    [
+      5,
+      7,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "holding",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "turning pages of",
+      [
+        [
+          48,
+          120
+        ],
+        [
+          336,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "focused on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      2,
+      "reading",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000102"
+}

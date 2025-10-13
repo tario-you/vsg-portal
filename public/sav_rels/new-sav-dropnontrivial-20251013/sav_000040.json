@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "car driving along mountain road",
+    "camera following car through landscape",
+    "vehicle traversing hilly terrain"
+  ],
+  "description": "A car is driving along a road through a mountainous and hilly landscape under a clear sky, as seen from a moving camera (likely a dashcam or following vehicle). The camera follows the car as it moves forward through the terrain.",
+  "place_env_id_name": "mountain road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A 'car' cannot be spatially 'behind' the 'sky' because the sky is a background element extending overhead and beyond physical objects; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky cannot 'drive through' a mountain; such motion is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "driving through",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky is not a physical entity capable of motion such as 'driving past' a hill; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "driving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000040.json",
+    "total_relationships": 39
+  },
+  "relationships": [
+    [
+      5,
+      1,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "driving through",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "driving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000040"
+}

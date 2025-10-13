@@ -1,0 +1,829 @@
+{
+  "activity_differential": [
+    "group of people walking together",
+    "person walking with companions",
+    "people strolling on walkway"
+  ],
+  "description": "Multiple people are walking together, as seen from a first-person perspective looking down at their legs and shoes. The camera moves in sync with the main person, capturing the coordinated walking motion of the group.",
+  "place_env_id_name": "outdoor walkway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A shoe (footwear) cannot be spatially 'left of' legs as it is part of the lower extremity of the legs; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot be above trousers; the shoe is worn on the foot below the trousers, so the spatial relationship 'above' is physically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe above a pair of shoes is redundant or ambiguous, as a pair includes multiple shoes; spatially labeling one shoe as 'above' the other shoes is not meaningful.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe cannot physically be above a pair of shoes; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe alone cannot physically be positioned 'left of' legs as it is usually part of the legs; the spatial relationship is not meaningful without a distinct separate context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are pairs of trousers with similar attributes and descriptions; stating one is below the other adds no meaningful or plausible spatial distinction.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are worn on legs and cannot be positioned 'left of' them separately; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes one pair of trousers being 'above' another nearly identical pair of trousers, which is unlikely and provides no meaningful information.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship stating one shoe is 'below' the other is redundant because both are shoes in close motion; this spatial relation adds no meaningful or distinctive information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are shoes with similar attributes and descriptions involving movement; stating one is 'below' the other adds no meaningful spatial distinction and is redundant.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shoes cannot contain trousers; the spatial relationship 'contains' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be contained within trousers; the intended spatial relationship likely should be reversed or clarified, but as given, 'person contains trousers' is implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of legs cannot be spatially 'right of' a shoe that is part of the legs; they are part of the same entity or overlapping, making this spatial relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of legs cannot be spatially to the right of a shoe that is part of those legs; the relationship is physically impossible due to the body parts' inherent connection.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'legs' include the feet/shoes as part of the same entity moving in unison, so stating 'legs right of shoe' is redundant and unclear spatially.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The legs are described wearing dark pants/trousers, so stating 'legs right of trousers' is semantically redundant and physically confusing.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The legs wearing dark pants and the trousers likely refer to the same clothing item in motion; indicating the legs are 'right of' the trousers is redundant and adds no meaningful spatial distinction.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs cannot be spatially to the right of the shoes they are wearing; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot 'walk with' trousers; walking is an action performed by a person wearing both, making the relationship between shoe and trousers incorrect.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe cannot 'walk with' another pair of shoes; walking is performed by a person wearing shoes, so this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe itself cannot 'walk with' legs; it is part of a foot or leg, so this relationship is physically impossible as stated.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shoes cannot walk independently; walking is an action performed by legs or a person, not shoes.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs cannot 'walk with' trousers as separate entities; trousers are worn on legs, so this spatial/social relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs wearing shoes cannot be 'walking with' the shoes as separate entities; the shoes are part of the legs' movement, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are shoes described in motion; stating one shoe is 'walking near' another shoe is redundant and lacks clear distinctiveness or meaningful interaction.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot wear trousers; the wearing relationship applies to a person or body part wearing clothes, not the shoe itself.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000015.json",
+    "total_relationships": 89
+  },
+  "relationships": [
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "below",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "above",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "contains",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "contains",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "walking with",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      6,
+      "walking with",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      8,
+      "walking with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      1,
+      "walking with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      4,
+      "walking with",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      6,
+      "walking with",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      3,
+      "walking near",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      5,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000015"
+}

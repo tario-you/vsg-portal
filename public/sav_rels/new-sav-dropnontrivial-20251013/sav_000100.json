@@ -1,0 +1,460 @@
+{
+  "activity_differential": [
+    "people collaboratively installing a banner",
+    "people adjusting a banner using a ladder",
+    "people working together to hang a banner in the rain"
+  ],
+  "description": "Three people are collaboratively installing or adjusting a large vertical banner on the exterior of a building using a ladder. One person is climbing and working at the top of the ladder, another is stabilizing the ladder and managing the banner at the bottom, and a third person appears on the balcony to assist. An umbrella is briefly used, likely to shield from rain.",
+  "place_env_id_name": "building exterior",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically stand on a poster, which is usually affixed to a wall or a flat surface and too fragile to support weight.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is ascending the ladder, so they cannot be 'in front of' the ladder in a spatial sense; this relationship is physically unrealistic in this context.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is an inanimate object and cannot stand in front of anything; the relationship implies agency which is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is usually a fixed structure and cannot be spatially located 'in front of' a flag that is presumably waving and elevated; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is typically fixed to a structure, and a poster is usually attached to or placed on a signboard or wall, so the signboard cannot be below the poster physically.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is typically a fixed object and cannot be located below a slender, elongated string that is moving and undulating, making the 'below' spatial relationship physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot climb a poster; climbing implies a physical ascent on something structurally climbable, which a flat, stationary poster is not.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "climbing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'collaborate' with a stationary signboard, as collaboration requires interactive agents.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot functionally stabilize a poster; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "stabilizing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object that cannot functionally hold a flag; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot engage in social actions like collaborating with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot 'hold' another signboard; the functional relationship 'holding' is implausible between two stationary signboards mounted on walls.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary signboard cannot use another signboard to shield; signboards themselves do not perform actions such as using objects to shield.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "using to shield",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is a stationary object and cannot 'hold' a ladder; the 'holding' predicate is not applicable here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'collaborate' with an inanimate window; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate signboard cannot collaborate with a window, as both are stationary objects without social interaction capabilities.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot engage in collaborating, which is a social action requiring agency possessed by persons.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window and a signboard are inanimate objects and cannot engage in social actions like collaborating.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot logically 'assist with' a flag; the relationship predicate is not physically or functionally plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "assisting with",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot assist with a poster in a functional sense; the predicate 'assisting with' is not physically or functionally plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "assisting with",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot assist with a ladder; the predicate describes a functional interaction that is not plausible given the objects involved.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "assisting with",
+      "relation_type": "functional",
+      "subject_id": 27
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 21,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000100.json",
+    "total_relationships": 116
+  },
+  "relationships": [
+    [
+      1,
+      7,
+      "standing on",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "standing in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      13,
+      "below",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      25,
+      "below",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "climbing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "collaborating",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      7,
+      "stabilizing",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      9,
+      "holding",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      1,
+      "collaborating",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      21,
+      "holding",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      21,
+      "using to shield",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      6,
+      "holding",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      27,
+      "collaborating",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      27,
+      "collaborating",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      27,
+      1,
+      "collaborating",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      27,
+      2,
+      "collaborating",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      27,
+      9,
+      "assisting with",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      7,
+      "assisting with",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      6,
+      "assisting with",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000100"
+}

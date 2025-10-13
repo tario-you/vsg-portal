@@ -1,0 +1,362 @@
+{
+  "activity_differential": [
+    "dogs playing together on the road",
+    "dogs running and interacting",
+    "dogs being observed and followed by camera"
+  ],
+  "description": "Two dogs are interacting and moving on a road at dusk, with a car parked nearby. The camera follows the dogs as they move, play, and occasionally look at each other.",
+  "place_env_id_name": "road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar dogs moving gracefully; stating one is 'below' the other adds no meaningful or credible spatial information.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One dog cannot be inside another dog; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both dogs are described similarly moving gracefully and alertly; stating one dog is 'above' the other adds no clear or meaningful spatial relationship.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "One dog cannot physically surround another simultaneously; 'surrounding' is not a plausible spatial relation between two individual dogs.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot spatially surround a dog; the relationship as stated is physically impossible and semantically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A moving car overlapping a small dog spatially is highly unlikely and would imply a collision, which contradicts normal scene depiction without injury.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar is a rigid linear object and cannot be inside a dog; the spatial relation is physically impossible with the given objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'dog' cannot 'surround' a long, slender, rigid crossbar; the predicate is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot plausibly be 'surrounding' a crossbar, as the crossbar is a linear, rigid object and the car moves around or past it, but does not encircle it.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, described as an inanimate, rigid object, cannot 'play with' a car; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary crossbar cannot 'run with' a car, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, an inanimate object, cannot 'look at' a car; the predicate is not plausible for the subject's nature.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot 'play with' a crossbar, which is an inanimate object; this predicate is implausible for the subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot realistically be 'running with' a crossbar, which is a stationary, rigid object; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "running with",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car does not look at objects; it lacks attention or gaze capability, making the 'looking at' predicate physically impossible for the car subject.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000003.json",
+    "total_relationships": 44
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "inside",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "surrounding",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "surrounding",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "inside",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "surrounding",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "surrounding",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "playing with",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "running with",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      5,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      2,
+      "playing with",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      2,
+      "running with",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      2,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000003"
+}

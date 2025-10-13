@@ -1,0 +1,1237 @@
+{
+  "activity_differential": [
+    "people walking and conversing in hallway",
+    "people approaching and waiting for elevator",
+    "people passing each other in office corridor"
+  ],
+  "description": "A group of people are walking and interacting in a modern hallway with glass panels and doors. Some people are moving toward the elevator area, some are conversing, and others are walking away from or toward the camera. The camera remains stationary, capturing the flow of people through the corridor.",
+  "place_env_id_name": "office hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so they cannot simultaneously be 'standing left of' the other person, making the spatial relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is walking forward and cannot simultaneously be 'standing right of' the door; the predicate conflicts with ongoing movement.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot simultaneously be standing right of the object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward while the relationship states the person is 'standing right of' the coat rack, which conflicts with the action of walking; one cannot be both walking and standing simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both people are described as walking steadily forward, so neither is standing; thus, the relationship 'standing right of' is physically impossible in this scenario.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is installed on or above the ceiling, not at ground level, so the concept of a walking person 'standing right of' it is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is typically above and attached to the ceiling, so it cannot be spatially 'right of' a door which is vertical and on a wall; this makes the stated spatial relation physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture hangs from the ceiling and cannot spatially be 'standing' or positioned to the right of a standing object; the spatial relationship 'standing right of' is not physically plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The coat rack is a tall object standing on the floor, while the ceiling light fixture is suspended from above; the spatial term 'standing right of' is not applicable between a floor-standing and a ceiling-suspended object.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as 'walking steadily forward,' which conflicts with the predicate 'standing left of' that implies being stationary.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so it cannot be standing; thus 'standing left of' the other walking person is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot simultaneously be standing left of the door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so they cannot be standing left of the object simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot be 'standing left of' the coat rack at the same time.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot be spatially positioned 'standing right of' a ceiling light fixture that is suspended above; they are not on the same plane for such a spatial relation to hold technically.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is a stationary object mounted on the ceiling and cannot 'stand left of' a person; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed to the ceiling and cannot physically stand or be positioned to the left of a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted above and cannot be spatially located to the left of a door in a meaningful standing position; the relationship 'standing left of' is not physically plausible for a ceiling fixture.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is suspended from above and cannot be 'standing left of' another object; the predicate is physically implausible for this subject.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted overhead and cannot be described as 'standing left of' another object; the predicate is spatially and physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed to the ceiling and cannot 'stand left of' a person; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed on the ceiling and cannot be 'in front of' a person who is walking below; spatially, the person is below or under the fixture, making the stated relationship physically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted on the ceiling, while a floor lamp stands on the floor; the ceiling fixture cannot be 'in front of' the floor lamp in a physically meaningful horizontal spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted on the ceiling above; a person cannot be positioned 'behind' it in a meaningful spatial context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is on the ground and a ceiling light fixture is mounted on the ceiling, so the floor lamp cannot be spatially behind the ceiling light fixture.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is standing mostly still while the other is walking; they cannot be 'walking together' simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a stationary ceiling light fixture; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with an inanimate floor lamp, which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a signboard, which is an inanimate object incapable of social or physical movement.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as holding and glancing at a small rectangular object, but the relationship states the person is approaching a tall, stationary metallic object; approaching implies movement towards, which counters the description of the person standing relaxed. Additionally, a person cannot 'approach' an inanimate object in this context without movement, which contradicts the subject's relaxed posture and lack of approach action.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a stationary ceiling light fixture; the spatial and social relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with an inanimate signboard, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door and a ceiling light fixture are inanimate objects incapable of motion such as walking; therefore, 'walking toward' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is an inanimate object and cannot perform actions like 'walking toward' another object.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door cannot approach an object, as it is non-moving and stationary; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door cannot walk past a coat rack, as both are inanimate objects incapable of motion.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is an inanimate object and cannot perform the action of 'walking away from' a column, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is an inanimate object and cannot engage in the social action of 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and inanimate, so it cannot walk together with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture and a signboard are inanimate objects that cannot perform the action of 'walking together.'",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is a stationary object fixed to the ceiling and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling light fixture remains stationary and does not move; it cannot be 'approaching' another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and mounted; it cannot walk past a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and cannot walk toward a person; the predicate is physically impossible given the subject's nature.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that cannot walk; thus, it cannot be 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp cannot walk together with a person as it is stationary and inanimate.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that remains stationary and cannot engage in social actions like 'walking together' with a signboard, which is also inanimate.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The floor lamp is described as stationary and cannot physically approach another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that remains stationary and cannot perform the action of 'walking past' a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot walk, so 'walking together' involving a signboard and person is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard, as an inanimate object, cannot engage in the social action 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard and a ceiling light fixture cannot walk together as both are inanimate and stationary objects.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object that cannot perform the action of 'approaching' another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot 'walk past' another object such as a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically walk toward a ceiling light fixture suspended overhead as if approaching it directly.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A column is a stationary architectural element incapable of walking away from a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 18
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 58,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000087.json",
+    "total_relationships": 130
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      7,
+      "walking together",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      9,
+      "walking together",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      15,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      7,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      15,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      7,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      15,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      18,
+      "walking away from",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      1,
+      "walking together",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      2,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      15,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      7,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      17,
+      "walking toward",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      9,
+      1,
+      "walking together",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      2,
+      "walking together",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      15,
+      "walking together",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      9,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      9,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      15,
+      1,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      15,
+      2,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      15,
+      7,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      15,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      15,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      15,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      7,
+      "walking toward",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      18,
+      3,
+      "walking away from",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000087"
+}

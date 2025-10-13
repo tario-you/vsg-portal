@@ -1,0 +1,775 @@
+{
+  "activity_differential": [
+    "customers browsing and queuing in a manga merchandise store",
+    "customers socializing and shopping together",
+    "customers handling and examining products"
+  ],
+  "description": "A series of frames inside a manga/anime merchandise store, showing multiple people browsing, queuing, and moving through the store. The camera is positioned at the entrance and remains mostly static, capturing the flow of customers as they interact with products and each other.",
+  "place_env_id_name": "retail store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically under another person while both are walking.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as wearing a cream-colored coat, but the object is a black coat; this mismatch makes the 'wearing' relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described wearing light gray pants, not olive green trousers; therefore, the 'wearing' relationship with the olive trousers is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear another person; the predicate 'wearing' is not plausible between two humans.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically above another person who is on the same floor level; the predicate 'above' implies spatial positioning that does not match the described scene.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two separate garments (coat and jacket) cannot physically be touching each other unless worn together, which is not indicated; the relationship is implausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards described as tall, rectangular, and prominently standing stationary; stating one is 'in front of' the other adds no meaningful new spatial information given the similar descriptions.",
+      "label": "redundant",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are signboards with distinct descriptions, so stating one signboard is 'under' another is unlikely or redundant without more spatial context.",
+      "label": "redundant",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards have arrows pointing in opposite directions (left and right), so one cannot be to the 'left of' the other in a way that matches their indicated directional arrows.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards described with specific colors and text; stating that one is 'left of' the other adds no meaningful new information given their similar context and stationary nature.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards, and spatially describing one as 'left of' the other adds no significant new information given the similar nature and static positioning described.",
+      "label": "redundant",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards are described as steady and maintaining their positions; specifying that one is 'right of' the other adds little new informative spatial distinction given the lack of explicit positional coordinates.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards are objects that are fixed in place and do not typically move relative to each other, making a spatial relationship of one being to the right of the other ambiguous or physically unsupported from the metadata provided.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat and a jacket are both clothing items typically worn separately; they cannot be touching each other independently without a wearer, so the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are tall signboards that remain stationary; stating one is behind the other adds minimal useful information about the scene.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described wearing a black coat, but the object is a cream-colored coat. The person cannot be touching a coat they are not wearing, so the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person touching 'trousers' as a separate object is unlikely since trousers would be worn by the person; claiming the person touches trousers as a distinct object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Books in a stationary upright stack cannot be touching a moving coat that sways with the wearer; these two objects are unlikely to be in contact given their described states and typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The stack of books is described as stationary and upright, and the person is not described as touching or interacting physically with the books; 'touching' relationship is implausible without direct interaction.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially 'on' another person is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person has hands tucked into their jacket pockets, so they are not touching the books; touching the books while hands are in pockets is implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person is physically implausible in this walking context.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot set down another person; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "setting down",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking steadily while the other is focused on a device and standing still; they cannot realistically be socializing simultaneously in this context.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot wear another person; the 'wearing' predicate between two persons is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is seen from behind, so they cannot be looking at the stack of books ahead as described.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person in the described context is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is focused intently on a handheld device they are holding, so they cannot be simultaneously looking at the signboard.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is focused on a handheld device and standing still, while the other is walking steadily and focused on their path; they are not interacting or socializing.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is walking steadily and the books are stationary; browsing implies looking through or examining books closely, which is incompatible with just walking past without interaction.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is depicted walking forward with relaxed arms and a forward lean, indicating movement away from the books rather than interacting with them; browsing books typically requires stopping and looking at them closely, which is not supported by the description.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as focused on a handheld device likely a smartphone, not on the signboard; 'browsing' the signboard is implausible as browsing implies interacting with digital content, not a static signboard.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described as walking steadily with consistent pace, not standing in line; 'queuing with' implies standing still in line, which conflicts with their described walking actions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking steadily, while the other is standing still and focused on a device; they are not simultaneously queuing together.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking with forward lean and movement, while the other is standing still and focused on a device; they cannot be queuing together as a group under these actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described as walking steadily and not standing in line; thus, 'queuing with' is not a physically plausible relationship.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 36,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000005.json",
+    "total_relationships": 200
+  },
+  "relationships": [
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      39,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      23,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      19,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      25,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      19,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      25,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      14,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      39,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      2,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      27,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      40,
+      "holding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      40,
+      "setting down",
+      [
+        [
+          240,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      22,
+      "socializing with",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      18,
+      39,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      18,
+      27,
+      "looking at",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      22,
+      40,
+      "holding",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      9,
+      "looking at",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      22,
+      5,
+      "socializing with",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      27,
+      "browsing",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      18,
+      27,
+      "browsing",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      22,
+      9,
+      "browsing",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      18,
+      "queuing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      22,
+      "queuing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      18,
+      22,
+      "queuing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "queuing with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000005"
+}

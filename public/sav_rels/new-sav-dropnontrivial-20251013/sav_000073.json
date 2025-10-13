@@ -1,0 +1,422 @@
+{
+  "activity_differential": [
+    "child and adult walking together with toy gun box",
+    "workers shoveling snow and collaborating",
+    "pedestrians passing by parked SUV"
+  ],
+  "description": "A busy urban sidewalk scene outside a building with a red SUV parked. Multiple people, including a child and an adult carrying a toy gun box, walk past. Two workers in green vests are shoveling snow near a fence. The camera tracks the scene, panning as people move through the frame.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A stationary SUV cannot be spatially described as 'right of' a moving boot; the relationship is semantically implausible given the subject/object types and their states.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV cannot be spatially below a boot; their relative sizes and positions make this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV being spatially 'below' trousers worn by a person is physically implausible since the vehicle is much larger and situated below is unlikely in typical scenes.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'right of' their own boot because the boot is part of the person's attire and moves with them; the spatial relation is not meaningful in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be spatially positioned 'left of' a person as an independent object given it is part of the person's attire or directly associated with them; this relationship does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are boots moving forward in the sequence; stating one boot is 'below' another adds no meaningful spatial distinction given the similar descriptions and actions.",
+      "label": "redundant",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be positioned above an SUV in a physical scene as described; boots are worn on feet and cannot spatially be above a large vehicle in a meaningful way.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be spatially 'above' a large stationary gate; the spatial relation 'above' is implausible here given the sizes and typical positions of these objects.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers as clothing cannot spatially exist 'above' a gate independently; the relationship is nonsensical without referencing the wearer.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers being 'right of' a roof is spatially implausible since trousers are worn on a person and typically located below or within a scene, whereas a roof is above; the spatial relation does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A roof and a pair of trousers are distinct objects in unrelated spatial contexts; the roof cannot be 'left of' trousers in a meaningful physical space.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV cannot carry a stationary metal gate; the relationship 'carrying' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV and a boot cannot logically be 'walking with' each other; vehicles do not walk, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot 'walk with' an SUV, which is a stationary vehicle; the predicate is not plausible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot hold a gate; the relationship is physically impossible given the described objects.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot engage in the motion of 'walking alongside' a stationary SUV; the boot is an object worn by a person, but alone it cannot move independently alongside a vehicle.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk past a single boot as if it were an independent object moving in space; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket is an inanimate object and cannot perform an action like 'walking past' a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An entity cannot converse with itself; both subject and object are identical with no additional context.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "conversing",
+      "relation_type": "social",
+      "subject_id": 23
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 19,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000073.json",
+    "total_relationships": 85
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      25,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      21,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "carrying",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      3,
+      "walking with",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      1,
+      "walking with",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      9,
+      "holding",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      1,
+      "walking alongside",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      3,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      6,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      23,
+      "conversing",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000073"
+}

@@ -1,0 +1,439 @@
+{
+  "activity_differential": [
+    "people shopping in warehouse store",
+    "people walking and browsing furniture aisles",
+    "people moving through store with carts"
+  ],
+  "description": "A group of people are walking and browsing in a large warehouse-style furniture store. The camera is steadily dollying forward down the main aisle, capturing people moving, browsing, and pushing carts.",
+  "place_env_id_name": "warehouse store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A walking person cannot be 'on top of' a cabinet in a realistic physical context as described.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a floor, as the floor is beneath, making the relationship incorrect in this spatial context.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a ceiling, which is overhead and above, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A walking person cannot be spatially 'under' stationary stacked cardboard boxes; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are stacks of cardboard boxes described similarly and aligned; stating one is 'under' the other is redundant and not clearly supported.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Cardboard boxes resting on a floor cannot be positioned 'left of' the floor itself, as the floor is a surface supporting the boxes rather than a separate spatial object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stack of cardboard boxes cannot be spatially left of a ceiling, as left/right spatial relationships are typically defined in a horizontal plane, not between floor objects and overhead ceilings.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are stacks of cardboard boxes described similarly and overlapping; stating one is 'under' the other provides no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster hanging vertically would not be 'on top of' a cabinet in a spatial, physical sense; it is more plausible that the poster is on a wall behind or above the cabinet rather than physically resting on top of it.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The floor cannot be to the right of the ceiling in a typical three-dimensional space; spatially the ceiling is above the floor, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially described as 'right of' a poster since it is positioned above, not to the side of such an object.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially positioned 'right of' a signboard since it is typically above; the spatial relationship is implausible and likely incorrect.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling, especially an expansive industrial ceiling, cannot realistically be spatially positioned to the 'right of' a signboard since ceilings are above and fixed overhead, not beside objects like a signboard.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling cannot be spatially 'right of' the table in a typical scene since ceilings are above tables, not positioned to their right.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two signboards cannot be above each other in the described manner; they are distinct objects and such a spatial relationship is unclear or unlikely based on the provided descriptions.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shelf is an inanimate object and cannot perform actions like walking away from something.",
+      "label": "physically_impossible",
+      "object_id": -1,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shelf is an inanimate object and cannot walk alongside a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The shelf is a stationary object and cannot walk near anything.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'walking on' is not physically possible with the shelf as subject and the cabinet as object; shelves do not walk and cannot walk on another piece of furniture.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary shelf cannot 'pass by' a poster which is also static; 'passing by' implies motion which does not apply to either object here.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 20,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000095.json",
+    "total_relationships": 183
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      27,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      17,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      25,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      -1,
+      "walking away from",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      1,
+      "walking alongside",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "walking near",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      9,
+      "walking on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      7,
+      "passing by",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000095"
+}

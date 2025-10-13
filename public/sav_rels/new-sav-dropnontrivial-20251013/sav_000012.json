@@ -1,0 +1,1006 @@
+{
+  "activity_differential": [
+    "group of adults socializing in a park at night",
+    "adults conversing and gesturing in a recreational area",
+    "group gathering and interacting under streetlights"
+  ],
+  "description": "A group of adults are gathered on a grassy area at night, some standing, some interacting, with one person sitting on the ground. A child is in the foreground, facing away from the group. The environment is an outdoor park or recreational area, illuminated by streetlights.",
+  "place_env_id_name": "outdoor park",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'standing right of' their own leg; the leg is part of the person, so this spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'on top of' a small bottle given the size difference; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a streetlight; the predicate 'wearing' is incorrectly applied between these objects.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially located to the right of a single leg as an independent object; the leg is part of a person and cannot serve as a separate spatial reference in this way.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'on top of' a bottle; the scale and physical arrangement make this relationship impossible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a streetlight; the spatial predicate 'wearing' is not plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg (uncertain) cannot independently stand left of a person; the leg is part of a body and cannot spatially stand separately.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single leg is identified as a subject and cannot stand left of a person independently; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot stand behind a streetlight as an independent entity; 'leg' here is part of a body, so this spatial relationship assigned to the leg alone is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "standing behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg on top of a bottle is physically implausible as the bottle is too small and unstable to support a leg in motion.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg (even if uncertain) cannot physically wear a streetlight; the 'wearing' relationship is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially positioned 'left of' a single leg, especially when the leg is likely part of a larger figure; the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is a piece of clothing, not an independent object that can be spatially behind a person in a meaningful way; the jersey is worn by the person, making 'behind' relationship implausible here.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a streetlight; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can being 'in front of' a surface, which likely represents the ground or floor, is semantically and spatially inconsistent because the trash can would be positioned on the surface rather than 'in front of' it.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can cannot wear a streetlight; the predicate 'wearing' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight is typically mounted on a tall pole and stationary on the street, so it cannot be 'in front of' a table; the table would more plausibly be in front of the streetlight or unrelated in position.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass is a surface ground cover and cannot be spatially positioned 'in front of' a streetlight, which is typically elevated and the grass would be beneath or around its base.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass growing in front of or spatially before a surface is not plausible; grass typically grows on a surface, not positioned in front of it as a separate object.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass cannot realistically be spatially positioned 'in front of' a table in a meaningful way given typical scene layouts; grass is generally beneath or around furniture rather than in front of it.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot realistically be 'under' a wall, as walls are vertical structures and bottles rest on surfaces beneath them.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and cannot be spatially positioned 'in front of' a leg as an independent object; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an inanimate piece of clothing and cannot be spatially located as 'in front of' a surface; it would be lying on or hanging from it, not 'in front of' in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and cannot physically be located 'under' a wall, making the spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an inanimate piece of clothing and cannot physically exist or be located 'in front of' a table in a meaningful spatial sense; it would generally lie on or hang near the table, not stand or position itself in front of it.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot be worn by a person; the spatial relationship 'worn by' is implausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot be worn by a person; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot be worn by a leg; the spatial relationship 'worn by' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot be worn by a person; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A streetlight cannot be worn by a trash can; the predicate 'worn by' is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'conversing with' a leg, which is an inanimate object or body part without agency.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot have a social conversation with an inanimate trash can; the predicate 'conversing with' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person conversing with a leg (an inanimate body part) is not physically possible as conversation requires an agent with communicative ability.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person conversing with an inanimate trash can is not physically or socially plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot literally converse with an inanimate trash can; the predicate 'conversing with' does not apply here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg (an inanimate body part or object) cannot perform the action of 'looking at' a streetlight; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can cannot perform the action of 'looking at'; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be near a single leg as an independent object; the leg is part of a body, making this relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can cannot wear a streetlight; the predicate 'wearing' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as remaining stationary with subtle weight shifts, which contradicts the predicate 'walking away from' another person; one cannot walk away while remaining stationary.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be standing on a bottle due to its small size and shape; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically stand on a bottle due to size and stability constraints.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg (or anything resembling a human leg) cannot be standing on a bottle, as this is physically implausible given typical sizes and balance.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'illuminated by' a surface; the direction of illumination is typically from a light source to the person, not from a surface.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is not 'illuminated by' a surface; typically, a person is illuminated by a light source, not a flat surface, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot be illuminated by a surface; illumination typically comes from a light source onto an object, not from the object onto a surface.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can does not emit light to illuminate a surface; the relationship 'trash can illuminated by surface' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 47,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000012.json",
+    "total_relationships": 247
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "standing behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "worn by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      5,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      5,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      5,
+      "conversing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      6,
+      "looking at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      6,
+      "looking at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      3,
+      "standing near",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "walking away from",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      11,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      11,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      11,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      7,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      7,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      7,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      7,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000012"
+}

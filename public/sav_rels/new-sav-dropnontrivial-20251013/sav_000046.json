@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "cat self-grooming and scratching",
+    "cat sitting and resting",
+    "cat yawning and relaxing"
+  ],
+  "description": "A cat is sitting on the floor in a living room, initially yawning, then sitting still, and later scratching itself. The environment includes another cat and a fabric object, but the main activity centers on the first cat's self-grooming and brief yawning.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One cat cannot realistically be 'on top of' another cat in a spatial sense described here; both cats are seated on the floor side by side.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One cat being under another is unlikely given both cats are described as sitting gracefully; the spatial relationship 'under' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'cat yawning cat' where subject and object are the same cat is not logically coherent; a cat cannot yawn another cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "yawning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the cat is sitting the cat, which is a self-referential and redundant statement without meaningful new information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "sitting",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The cat is described as sitting calmly with paws tucked and remains mostly still; it is not scratching itself as stated in the relationship.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "scratching itself",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000046.json",
+    "total_relationships": 18
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      1,
+      "yawning",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "sitting",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "scratching itself",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000046"
+}

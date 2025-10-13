@@ -1,0 +1,355 @@
+{
+  "activity_differential": [
+    "fish swimming in tanks",
+    "camera observing and focusing on fish and floating toys",
+    "floating toys and balls moving with water currents"
+  ],
+  "description": "The video shows a series of fish tanks in what appears to be an aquarium or pet store environment. The tanks contain live fish, decorative toys, balls, and other aquatic objects. A yellow bucket and a green net are present, likely for scooping fish. The camera moves around the tanks, focusing on different fish and objects, and transitions from one tank to another, showing a variety of fish and floating toys.",
+  "place_env_id_name": "aquarium or pet store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot be surrounded by a single small bowl; the spatial relationship is physically implausible given their sizes and typical arrangements.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish cannot swim near a stationary desk corner; the fish is part of a painting while the desk corner is a static object, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "swimming near",
+      "relation_type": "motion",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish moving through water can float or swim, but a stationary tray cannot 'float with' fish; the tray remains still and does not move in unison with the fish, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish cannot 'float with' a tank, as a tank is a static container and fish swim inside it; the predicate does not semantically apply between fish and tank.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish cannot 'float with' an inanimate and stationary fishbowl; the predicate is physically implausible as fish move within water, not with a container that remains still.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish can float or swim with other fish, but cannot float with an inanimate, stable ledge that does not move.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The tray and tank are stationary solid objects; 'floating with' implies motion that is not supported by their descriptions, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate, stationary object; it cannot realistically float with a fish in a natural way.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary tray cannot logically be floating with a fishbowl that also remains stationary; the relationship 'floating with' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary tray cannot realistically be floating with a stationary ledge; the predicate 'floating with' implies shared motion that is not supported by descriptions indicating both remain steady.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tank (likely a solid object) cannot realistically 'float with' a fish; the predicate implies a shared movement in water which a tank cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large tank and a stationary fishbowl cannot realistically be 'floating with' each other; the tank is a static object and does not float together with the fishbowl.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A rigid, stable ledge cannot physically float with a tank-like object; the relationship is implausible given the ledge's description of stability and lack of movement.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish cannot 'float with' a fishbowl; the fish is inside or near the fishbowl, so the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish floats and moves in water, but 'floating with' a rigid, stable ledge that does not move is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fishbowl cannot 'float with' a stationary ledge; the ledge is stable and solid, making the predicate physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 16,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000061.json",
+    "total_relationships": 131
+  },
+  "relationships": [
+    [
+      3,
+      2,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "swimming near",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      25,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      26,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      26,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      27,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      27,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      32,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000061"
+}

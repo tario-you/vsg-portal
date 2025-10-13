@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "person preparing a drink at the bar",
+    "person using blender to mix ingredients",
+    "person working behind bar counter"
+  ],
+  "description": "A person is working behind a bar counter, preparing a drink using a blender and various ingredients. The camera moves from a close-up of the counter and plants to a wider view of the person at work, then zooms in on the preparation process.",
+  "place_env_id_name": "bar counter",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A polished marble surface is an inanimate object and cannot be spatially positioned 'left of' a person in a meaningful way; marble is the surface or floor on which the person likely stands, so 'left of' does not apply as a relationship here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A marble surface is flat and horizontal, while the log is vertical; the log cannot be 'right of' the marble surface since the marble is a plane rather than a distinct object to the left/right in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log maintaining an upright position cannot plausibly be 'using' a bottle; logs are inanimate objects and cannot perform functional actions.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log (an inanimate object) cannot 'use' a bottle; the relationship implies agency that the log cannot have.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot perform actions related to 'preparing with' a bottle; the relationship is unrealistic given their physical properties and typical use.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An object focusing on itself is redundant; the subject and object are identical and the relationship 'focused on' is not meaningful in this context.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000020.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      7,
+      2,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      33,
+      "using",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      32,
+      "using",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      33,
+      "preparing with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      3,
+      "focused on",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000020"
+}

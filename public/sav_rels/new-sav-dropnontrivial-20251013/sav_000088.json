@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "people shopping and moving through a busy market street",
+    "motorcycle riders transporting passengers in the market",
+    "camera operator walking and filming through the market crowd"
+  ],
+  "description": "A bustling outdoor market scene with multiple people walking, interacting, and shopping. Motorcycles and cars move through the street, while vendors and buyers engage in commerce. The camera moves forward through the market, capturing the dynamic environment.",
+  "place_env_id_name": "outdoor market street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The person is riding the motorcycle; they cannot be walking alongside it simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is riding a motorcycle and wearing a safety vest with text on it, but is not physically carrying a large rectangular signboard; thus, the 'carrying' relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily and not interacting with the motorcycle functionally; riding the motorcycle contradicts the walking action.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily, not riding a motorcycle; riding a motorcycle while walking is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking while the other is seated on a motorcycle; they cannot be 'walking with' each other in a social sense in this scenario.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking, wearing flip-flops and not positioned as riding; thus, they cannot be 'riding' the motorcycle logically.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "being ridden by",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The signboard is static and large; it is not physically plausible that it is being carried by a person on a motorcycle.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "carried by",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A building cannot perform the action 'walking past' as it remains stationary and is an inanimate structure.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000088.json",
+    "total_relationships": 84
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "walking alongside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      13,
+      "carrying",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "riding",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      6,
+      "riding",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "walking with",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "social"
+    ],
+    [
+      6,
+      2,
+      "being ridden by",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      13,
+      1,
+      "carried by",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      32,
+      26,
+      "walking past",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000088"
+}

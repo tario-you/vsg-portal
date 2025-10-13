@@ -1,0 +1,166 @@
+{
+  "activity_differential": [
+    "people waiting for train on platform",
+    "people walking along platform",
+    "people sitting and waiting at subway station"
+  ],
+  "description": "A subway or train station platform with multiple people waiting, sitting, and walking. The camera remains mostly stationary, capturing the scene as people move along the platform and interact minimally.",
+  "place_env_id_name": "subway platform",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Both objects appear to be similar rails described with matching attributes and positions; stating one is 'in front of' the other adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crosswalk (ground-level structure) cannot plausibly be 'in front of' a ceiling beam (overhead structure) in a spatial sense; the relationship is physically inconsistent.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A train moving in front of a ceiling beam is unlikely as the beam is overhead and fixed; the spatial relationship 'in front of' does not physically apply given their typical vertical positions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A train cannot be under a stationary vent as it moves through a scene; the spatial relationship is implausible given their typical sizes and positions.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crosswalk cannot be under a line; typically, a line is painted on or near a crosswalk, not positioned above it in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent is typically fixed to a structure and would not be positioned in front of a crosswalk, which is a horizontal path on the ground; thus, the spatial relationship 'vent in front of crosswalk' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'under' between two vents with similar positions and descriptions adds no new or useful information, both vents are described with similar attributes and stationary positioning.",
+      "label": "redundant",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 7,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000070.json",
+    "total_relationships": 115
+  },
+  "relationships": [
+    [
+      7,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      31,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      21,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      18,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      31,
+      "under",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000070"
+}

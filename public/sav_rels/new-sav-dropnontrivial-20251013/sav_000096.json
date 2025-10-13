@@ -1,0 +1,388 @@
+{
+  "activity_differential": [
+    "person shopping for toys",
+    "person browsing and handling toy boxes",
+    "person exploring toy store aisles"
+  ],
+  "description": "A person is shopping in a toy store, browsing and interacting with toy boxes and displays. The camera follows the person as they move through the aisles, occasionally focusing on specific products.",
+  "place_env_id_name": "toy store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be wearing another object; 'wearing' implies a person or animal as the subject, not an inanimate garment.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially located in front of a box independently, as it is an article of clothing rather than an agent or object that can stand or move; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot be spatially positioned 'in front of' another object in a meaningful physical sense.",
+      "label": "physically_impossible",
+      "object_id": 57,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot physically position itself 'in front of' a box; as an inanimate clothing item, it cannot establish spatial relationships independently.",
+      "label": "physically_impossible",
+      "object_id": 58,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt being 'in front of' a box in a spatial sense is not plausible as the shirt is an article of clothing typically worn, not an independent object positioned spatially in front of a box.",
+      "label": "physically_impossible",
+      "object_id": 67,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially positioned in front of a box on its own; as an object without independent location, the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 74,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, being an inanimate piece of clothing, cannot be spatially positioned 'in front of' a toy xylophone box on its own; this relationship is not physically plausible without a wearer or support.",
+      "label": "physically_impossible",
+      "object_id": 76,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially located in front of a track lighting fixture independently; the relationship is physically implausible as the shirt is worn by a person and cannot be an independent object positioned in front of a light fixture.",
+      "label": "physically_impossible",
+      "object_id": 98,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is inanimate and cannot 'look at' something, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate object, cannot perform the action of 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate object, cannot look at anything; 'looking at' requires agency which a shirt lacks.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, being an inanimate object, cannot perform the action of looking at a box.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot perform the action of 'looking at' another object.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt as an inanimate object cannot perform the action of 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt as an inanimate piece of clothing cannot handle or manipulate another object.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot 'handle' a box; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot interact with a box.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 17,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000096.json",
+    "total_relationships": 123
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      57,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      58,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      67,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      74,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      76,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      98,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      7,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      17,
+      "looking at",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      21,
+      "looking at",
+      [
+        [
+          168,
+          192
+        ],
+        [
+          240,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      26,
+      "looking at",
+      [
+        [
+          192,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      25,
+      "looking at",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      17,
+      "handling",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      21,
+      "handling",
+      [
+        [
+          168,
+          192
+        ],
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      21,
+      "interacting with",
+      [
+        [
+          168,
+          192
+        ],
+        [
+          240,
+          264
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000096"
+}

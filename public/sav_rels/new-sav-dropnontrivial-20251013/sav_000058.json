@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "door being opened to reveal living room",
+    "camera panning to show interior",
+    "latch and handle being manipulated to open door"
+  ],
+  "description": "A camera records a living room as a door is gradually opened wider, revealing more of the interior, including chairs, a mat, and other furnishings. The latch and handle on the door are manipulated as the door swings open.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A door cannot be 'attached to' a chair since doors are typically attached to door frames or walls, not furniture like chairs.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair being left of a runner (a floor covering) is unlikely, as the runner usually lies on the floor and chairs are placed on top or partially overlapping it, making 'left of' spatial relation atypical or physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair cannot physically contain a door; their typical sizes and functions make the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hangs and does not physically rest on top of a mat on the floor; the spatial predicate 'on top of' with curtain as subject and mat as object is implausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the chair and the door are stationary objects; a chair cannot move with a door as neither is capable of independent motion.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is stationary and cannot actively be manipulated by a chair, which is also stationary; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "being manipulated by",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000058.json",
+    "total_relationships": 64
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "attached to",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "contains",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "moving with",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "being manipulated by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000058"
+}

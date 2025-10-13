@@ -1,0 +1,880 @@
+{
+  "activity_differential": [
+    "person shopping in supermarket",
+    "person pushing shopping cart down aisle",
+    "person navigating supermarket aisle"
+  ],
+  "description": "A person is shopping in a supermarket, pushing a shopping cart down an aisle decorated with lanterns. Other shoppers and staff are present, and the camera moves steadily forward, following the main shopper.",
+  "place_env_id_name": "supermarket",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart on the ground cannot be 'in front of' a ceiling fan blade, which is typically mounted on the ceiling far above the cart; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot be spatially 'under' another shopping cart in the usual sense due to their similar sizes; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot physically be under a fixed wall vent; their relative positions and sizes make this spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One shopping cart cannot be physically located under another shopping cart meaningfully; both carts are at similar ground level.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'shopping cart under signboard' is physically unlikely given the typical sizes and mounting of signboards above ground and the mobility of shopping carts; the metadata suggests the signboard is stationary and upright, making the cart being 'under' it implausible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart is wheeled on the floor and cannot be physically located under a wall-mounted vent; 'under' spatially here is implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plastic bags described are already inside the shopping cart's basket; stating the cart is 'left of' the bags adds no new or meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot physically be under a shopping cart since the cart's basket is elevated and the coat is worn by a person; the relationship 'under' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a ceiling fan blade in a meaningful way, as the fan is typically mounted on the ceiling above the person.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person moving forward cannot be physically 'under' a tall, upright trash can; the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person cannot be spatially 'under' the shopping cart due to the cart's typical size and structure; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially 'under' another person is physically implausible in this context where both are walking upright.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically located under a vent as vents are typically mounted high and small, making the 'under' spatial relationship implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'under' a shopping cart; the spatial relationship is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically be 'under' a vent as described; the vent is likely part of a ceiling or wall and the person is moving forward, so the spatial relationship 'under' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are very similar lanterns described together; stating one is left of the other adds no significant informative relationship given the near-identical descriptions.",
+      "label": "redundant",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern hanging and swaying in the air cannot logically be under a moving shopping cart; their spatial relationship as described is implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar hanging lanterns; stating one is 'under' the other adds no meaningful new information given their comparable descriptions and positions.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt, being an article of clothing worn on the body, cannot physically be positioned to the left of a ceiling fan blade suspended above; the spatial relationship is implausible due to differing contexts and typical relative positions.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be spatially located under a tall trash can; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be physically under a shopping cart; the relationship is not plausible as described.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being under a hanging spherical lantern is physically implausible since the sweatshirt is worn on a person indoors or on the body, while the lantern is hanging suspended in air, so the sweatshirt cannot be spatially under the lantern.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be physically located under a wall-mounted air conditioning unit in a spatial sense; the sweatshirt is worn on a person, and its spatial relation as 'under' the unit is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for a sweatshirt (a garment worn on the body) to be spatially under a shopping cart, given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being 'under' a mounted signboard is not physically plausible given typical spatial arrangements; these objects are unrelated in context and unlikely to be in such a spatial relation.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being 'under' a vent is unlikely since vents are usually fixed to ceilings or walls above a person wearing a sweatshirt.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fluorescent light fixture cannot realistically be 'under' a vent; typically, vents are installed on ceilings or walls above fixtures. The spatial relationship is implausible as stated.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be under a shopping cart, as the cart is typically on the floor and people stand or push carts above it.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot realistically be spatially 'under' another person in a standing scenario, as both are described upright and moving.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are similar lanterns hanging in air; stating one lantern is 'under' the other adds no meaningful spatial distinction given the descriptions.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern is typically hung above and would not be positioned under a shopping cart, making the spatial relationship 'lantern under shopping cart' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling fan blade is typically positioned above a vent, not under it, so the spatial relation 'under' is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart is an inanimate object incapable of looking at anything, so this attentional relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot perform the action 'walking past' as it lacks legs or the ability to walk; this predicate is not physically plausible for the subject.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart as an object cannot perform the action of 'walking past' a person, as it lacks autonomous motion and intent.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern cannot push a fluorescent light fixture; this action is physically implausible given their descriptions and typical interactions.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The vibrant red lantern is swaying and moving, while the fluorescent light fixture is fixed and steady; the lantern cannot be moving with the light fixture.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern cannot physically walk past a sweatshirt as it is an inanimate object hanging in the air, hence the predicate 'walking past' is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern, which hangs in the air, cannot perform the action 'walking past' a shopping cart.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically move together with a fixed fluorescent light fixture as the fixture is stationary and mounted.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt as an object cannot be 'walked past' as an independent entity; it is a garment worn by a person, so the predicate misapplies physical action between the person and clothing.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 16
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 41,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000081.json",
+    "total_relationships": 140
+  },
+  "relationships": [
+    [
+      1,
+      32,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      24,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      32,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      19,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      25,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      31,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      33,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      15,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      19,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      20,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "looking at",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      3,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      16,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      8,
+      "pushing",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      8,
+      "moving with",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      1,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      8,
+      "moving with",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000081"
+}

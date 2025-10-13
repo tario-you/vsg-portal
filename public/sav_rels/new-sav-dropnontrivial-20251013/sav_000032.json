@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "child running toward SUV",
+    "camera moving along street and focusing on vehicles",
+    "camera observing street environment"
+  ],
+  "description": "A child is seen running in a sandy outdoor area near a black SUV, with the camera following the scene and approaching the vehicles. The child is only present in the first frame, while the camera moves closer to the SUV and then toward the street, capturing various vehicles and street elements.",
+  "place_env_id_name": "outdoor street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A child is unlikely to be 'on top of' a large tent; this spatial relationship is physically implausible given the description.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The child is described as moving on foot and holding an object, but there is no indication or plausibility that the child is physically on top of a tall, narrow, vertical structure resembling a wall, making the relationship unlikely.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot cannot perform the action of 'looking at' another entity; this predicate requires an entity with vision and attention, such as the child.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000032.json",
+    "total_relationships": 78
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000032"
+}

@@ -1,0 +1,1258 @@
+{
+  "activity_differential": [
+    "child playing with toy",
+    "child focusing on handheld object",
+    "child sitting and engaging with toy"
+  ],
+  "description": "A girl is sitting on a blanket in a living room, holding and focusing on a toy for the entire duration. The camera remains stationary, capturing her activity.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a jacket to be positioned below a teddy bear, as the jacket would normally be worn on or above the teddy bear if placed on it or near it. The spatial relationship 'below' with jacket as subject and teddy bear as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket cannot be spatially positioned below a mouth as both are parts related to a person and the jacket would logically be below the mouth, so the current 'subject below object' relation is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket is an inanimate object and cannot have a meaningful spatial relationship like 'left of' a person in an active sense; the subject 'jacket' to 'girl' spatial relationship is not reasonable as stated.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock would typically be on a foot, and it is unlikely to be covering a tablecloth; the spatial relationship 'covering' with sock as subject and tablecloth as object is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "covering",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot reasonably be above a face in a meaningful spatial or semantic context; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot physically be positioned above a bear in a meaningful spatial relationship without additional context; the described scene suggests the sock is resting, making 'above' implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot realistically be spatially positioned below a mouth, especially without additional context indicating their relative placement.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweatpants cannot be spatially below a mouse ear; the objects are unrelated and the concept of 'below' does not apply meaningfully between clothing and an ear-shaped object in the image.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of sweatpants cannot be 'below' a mouth in a meaningful spatial relationship, especially given the mouth is an uncertain object with no fixed position relative to clothing.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (as a feature) cannot cover the lower half of a tablecloth; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "covering lower half of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cartoonish face cannot be spatially located 'below' a sock in a plausible physical scene.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (an abstract or depiction) cannot be spatially located above sweatpants in a physical, realistic way; face describes a cartoonish image, not a physical object positioned relative to clothing.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cartoonish face is unlikely to be physically located above a shoe in a meaningful spatial sense; as a disembodied face depiction, the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face itself cannot be spatially located below a teddy bear as it is not an independent object but a part of an entity; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (likely a cartoon or illustration) cannot be spatially below a child in a meaningful physical sense; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face alone cannot exist separately in space as an independent object to be left of a girl; the face likely belongs to a character, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe resting on top of a hanging curtain is physically implausible as curtains typically hang freely and cannot support the weight of a shoe on top.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe being spatially 'below' a mouth is implausible given typical human body arrangement; shoes are worn on feet below the mouth, not positioned below it in an observable spatial relation.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The shoe is described as maintaining orientation with elevated toe, suggesting it is above or level; the plush toy being 'below' the shoe is physically unlikely given typical scene arrangements where a shoe rests below or beside an object like a plush toy.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is a child and the object is a mouth (anatomic part) described as an independent object, making a spatial relationship 'right of' between the child's body and a mouth object as a separate entity physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hair tie being spatially below a mouth in a scene is unlikely given typical human anatomy and the described shapes; the relationship lacks physical plausibility.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'mouth' object cannot physically be positioned above a sock in a meaningful way; the relationship lacks realism due to the subject being a non-standard object likely part of a cartoon or abstract design.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth cannot physically be located spatially above a garment like sweatpants; the relationship lacks realistic physical grounding.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'mouth' cannot be an independent object located spatially relative to a bear; it is part of a face and not a separate entity to be 'left of' a bear.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth is a part of a face, not a separate object that can be positioned left of a child; treating 'mouth' as an independent object in spatial relation to a child is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The stylized bear figure is unlikely to be physically positioned below the sock in a meaningful spatial sense given typical scale and context; the relationship 'below' does not make sense here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth as an isolated object cannot have a spatial relationship 'right of' a bear figure unless it is part of or attached to a larger entity; thus the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "One curtain cannot be physically 'on top of' another curtain in a hanging arrangement as described; the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket is an inanimate object and cannot be positioned 'left of' another stationary object in a way that implies agency; the statement is spatially ambiguous and not meaningful as a relationship.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot have a spatial relationship 'left of' a 'mouth,' especially since the mouth is represented here as an object rather than part of a face; they are different entities, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket is typically lying on a surface and cannot be spatially 'above' a curtain that is hanging; the relationship is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially located 'under' a hair tie; this relationship does not make physical sense given their typical sizes and placements.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "One curtain being 'under' another curtain is unusual and physically implausible; curtains typically hang side by side or layered differently, not spatially under each other.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hanging cannot physically be under a tablecloth; spatially, a curtain is usually separate or behind windows whereas a tablecloth is on a table surface.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hanging and gently swaying cannot be spatially 'under' a sock, which is usually on a foot or flat surface; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially under a face; the relationship 'under' with curtain as subject and face as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially 'under' a child; typically, a curtain hangs above or beside a person.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot physically be positioned under a mouse ear; spatially this relationship is implausible given their descriptions.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain being spatially 'under' a mouth-shaped object is physically implausible given their typical positions and scales.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain is typically hung above and not positioned below a blanket; the relationship 'curtain below blanket' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweatpants are clothing and cannot occupy a spatial position relative to a person as independent objects; 'right of' relation is not meaningful here.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hair tie is typically very small and would not be spatially positioned to the right of a seated girl in a meaningful way; the physical plausibility of 'right of' for these described objects is doubtful.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A girl cannot be spatially right of a mouth as an isolated object; the relationship is nonsensical without a proper entity (a mouth is part of a face, not standalone).",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot wear a sock; the 'wearing' relationship is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot 'wear' a face; the predicate is physically impossible given the objects and their nature.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot wear sweatpants; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is a fabric laid over surfaces and does not have an independent spatial position to be 'in front of' a jacket; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is a flat fabric placed on a surface and cannot logically be positioned 'in front of' a plush toy; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be spatially positioned 'in front of' a shoe, as it typically drapes over surfaces rather than occupying a front spatial relation to footwear.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is an inanimate fabric draped over a surface and cannot be spatially 'in front of' a moving hairbrush; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be 'in front of' a small hair tie in a meaningful spatial sense, as a tablecloth typically lies flat or drapes on a surface, and the hair tie is an independent small object; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A delicate, translucent tablecloth resting on a surface cannot realistically be 'in front of' a small, swaying hair tie suspended in space; the spatial relation is implausible given their physical properties and typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth, being a fabric draped on a surface, cannot logically be 'in front of' a bear figure; the relationship is spatially and physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be spatially positioned below a mouth; the relationship is physically implausible given their typical arrangement.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A delicate tablecloth drapes over a surface and cannot logically be positioned below a blanket that is described as stationary and vibrant; the spatial relation 'below' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be positioned to the left of a girl in a meaningful spatial relationship; the tablecloth is an object that typically covers a surface rather than existing independently left of a person.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot hold a jacket; the predicate 'holding' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth, being an inanimate object, cannot perform the action of 'looking at' another object such as a jacket.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is an inanimate object and cannot perform the action of 'playing with' a jacket; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 59,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000024.json",
+    "total_relationships": 370
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "covering",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      20,
+      "covering lower half of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      18,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      17,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      10,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      15,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      20,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      2,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      4,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      8,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      11,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      3,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "holding",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      20,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      20,
+      1,
+      "playing with",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000024"
+}

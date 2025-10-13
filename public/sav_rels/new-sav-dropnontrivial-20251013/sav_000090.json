@@ -1,0 +1,40 @@
+{
+  "activity_differential": [
+    "cats relaxing on bed",
+    "cats observing camera",
+    "cats shifting position on bed"
+  ],
+  "description": "A black and white cat is lying on a bed in a living room, occasionally shifting position and gazing around. The camera gradually zooms in on the cat's face, capturing its attentive gaze and relaxed posture.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A drawer is typically part of a cabinet, not lying next to it; it doesn't make sense functionally for a drawer to be lying next to a cabinet.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "lying next to",
+      "relation_type": "functional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 1,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000090.json",
+    "total_relationships": 18
+  },
+  "relationships": [
+    [
+      3,
+      1,
+      "lying next to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000090"
+}

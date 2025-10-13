@@ -1,0 +1,321 @@
+{
+  "activity_differential": [
+    "people walking together in a mall corridor",
+    "camera following people through a commercial area",
+    "people socializing and moving in a public indoor space"
+  ],
+  "description": "A camera moves through a brightly lit indoor commercial corridor, likely a mall or food court, following two people walking together. Other people are present, some standing, some sitting, and some interacting with their surroundings. Multiple television screens and signboards are visible. The scene is dynamic, with people walking, pausing, and interacting in small groups.",
+  "place_env_id_name": "mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described as walking steadily forward, indicating motion, so one cannot be 'standing right of' the other simultaneously; thus, the spatial relation is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'standing on' a lamp, which is a light source and typically not a surface suitable for standing.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The trousers are part of the person's clothing; stating the person is 'in front of' their own trousers is redundant and adds no meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot be 'below' a vertically oriented pole since the pole's base is typically on the ground; the spatial relationship 'below' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described as walking steadily forward, so one cannot be 'standing left of' the other because neither is standing still.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot plausibly be standing on a lamp, which is an object likely smaller or elevated; the spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mural is a static wall painting and cannot be spatially located to the left of a moving pair of trousers; the relationship does not make physical sense.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary television cannot logically be left of a pair of trousers that are moving; the spatial relationship is unclear and likely incorrect in this context.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot be spatially 'above' a lamp since lamps are typically mounted higher or at the same level for optimal illumination; the described glowing lamp is unlikely to be positioned below the signboard.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard being above a lamp is unlikely since lamps are usually above or near signboards for illumination, not the other way around.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling lamp and the lamp are both light sources emitting light; stating that one lamp is 'above' another lamp is redundant, as the two objects are presumably part of the same lighting setup and no meaningful spatial distinction adds value.",
+      "label": "redundant",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are persons walking forward; stating one is 'walking' the other is redundant and adds no meaningful relational information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk' another person; the predicate 'walking' does not sensibly connect two people as subject and object in this context.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'approached by' a stationary gate; gates do not move toward people.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 14,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000072.json",
+    "total_relationships": 134
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          120,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "standing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          120,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "standing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      20,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      20,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      24,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      24,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "walking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      1,
+      "walking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      3,
+      "being approached by",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000072"
+}

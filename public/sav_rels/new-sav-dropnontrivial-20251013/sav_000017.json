@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "people shopping and walking in a busy street market",
+    "people navigating through traffic and stalls",
+    "people carrying bags and interacting with market goods"
+  ],
+  "description": "A bustling street market scene at night with multiple people walking, shopping, and interacting, as well as motorcycles and an auto rickshaw moving through the area. The camera moves forward, panning and tracking the flow of people and vehicles.",
+  "place_env_id_name": "street market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject has no identity or attributes, making it unclear who or what is walking toward the stationary mannequin; mannequin does not move, so walking toward it is not applicable.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as wearing a long, loose-fitting robe or cloak, not a shirt; thus, asserting 'wearing' a shirt is physically inconsistent with the described garment.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000017.json",
+    "total_relationships": 183
+  },
+  "relationships": [
+    [
+      4,
+      23,
+      "walking toward",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      8,
+      "wearing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000017"
+}

@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "people walking along a residential street",
+    "car approaching pedestrians on sandy road",
+    "camera observing street activity"
+  ],
+  "description": "A group of people are walking along a sandy road in a residential area, with a car approaching and a motorcycle entering the scene. The camera remains mostly stationary, capturing the gradual movement of people and vehicles.",
+  "place_env_id_name": "residential street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically on top of the sky; the relationship is spatially impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' the sky since the sky is above and surrounding the person; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky cannot be in front of a building from the viewer's perspective; buildings appear in front of the sky, not vice versa.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are large buildings described similarly and likely overlapping; stating one is above the other adds no clear distinct spatial information.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A house cannot be spatially above a large multi-story building; this relationship is physically implausible given typical building structures.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A building cannot be positioned 'right of' the sky, as the sky is a background element encompassing the whole scene.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally walk on the sky, which is an aerial expanse above ground.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sand cannot walk on the sky; the predicate 'walking on' is physically impossible between sand and sky.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'driving on' the sky; the relationship is physically impossible under normal circumstances.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "driving on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'walking together' with sand as sand is an inanimate substance that does not walk.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sand, being a non-sentient substance, cannot engage in the social action 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000079.json",
+    "total_relationships": 63
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "walking on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      4,
+      "walking on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "driving on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      3,
+      "walking together",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      2,
+      "walking together",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000079"
+}

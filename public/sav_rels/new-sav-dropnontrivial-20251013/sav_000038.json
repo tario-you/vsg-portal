@@ -1,0 +1,481 @@
+{
+  "activity_differential": [
+    "family shopping together in supermarket",
+    "adult supervising children during shopping",
+    "child riding in crate while adults interact"
+  ],
+  "description": "A group of people, including adults and children, are shopping in a supermarket aisle. One adult pushes a shopping cart, a child sits in a crate, and another adult and child join them. The camera remains stationary, capturing the progression of the group as they move and interact.",
+  "place_env_id_name": "supermarket aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot stand on a poster, which is typically a flat item attached to a wall or surface; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor cannot be positioned to the left of kitchen utensils as the floor is a surface beneath objects, not a distinct object that can spatially relate 'left of' another object in this manner.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor cannot logically be positioned to the right of a person as it is a static surface supporting the person, so this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture is typically fixed to the ceiling and does not have a defined lateral position relative to a bottle on a surface, making it implausible to say the fixture is 'right of' the bottle.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture is typically mounted above or on a ceiling, and a bottle is placed on a horizontal surface below; the light fixture cannot be spatially described as 'right of' the bottle in a meaningful horizontal context.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as sitting on a red crate, yet the relationship states the person is 'right of' the crate, which conflicts with the physical placement implied by sitting on it.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is moving steadily forward and the vent cover remains stationary; the action of pushing the vent cover is physically implausible given the stationary description of the vent cover and the person's forward movement.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is unlikely to be releasing a vent cover, which is a stationary, mounted object; no indication the vent cover is movable or held by the person.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "releasing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with an inanimate crate; the relationship is not physically or socially plausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as moving forward and walking, which conflicts with the predicate 'standing near' that implies being stationary.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large crate cannot engage in conversing, as it lacks capacity for social interaction; thus the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate is an inanimate object and cannot 'attend to' another object; the attentional predicate is not physically plausible for this subject.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "attending to",
+      "relation_type": "attentional",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate is an inanimate object and cannot perform the action of 'watching' the vent cover.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate cannot engage in social interactions such as conversing with a person; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate cannot literally 'supervise' a vent cover; the predicate is not plausible for the objects involved.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "supervising",
+      "relation_type": "higher_order",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot have a conversation with an inanimate object like a crate; the relationship is not physically or socially plausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically supervise an inanimate vent cover.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "supervising",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'watching' an inanimate vent cover, which lacks features that attract attention or that can be watched.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot watch a crate as an intentional attentional action because the crate is an inanimate object incapable of engagement or interaction.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate cannot literally supervise a vent cover; the predicate 'supervising' is not semantically or physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "supervising",
+      "relation_type": "higher_order",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate cannot perform the action of watching, which requires sentience or sensory capability.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crate cannot engage in conversation with a person; the predicate 'conversing with' is not physically possible for an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 14
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 22,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000038.json",
+    "total_relationships": 142
+  },
+  "relationships": [
+    [
+      2,
+      4,
+      "standing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      25,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "pushing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      15,
+      "releasing",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      14,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      15,
+      "standing near",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      14,
+      2,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      14,
+      15,
+      "attending to",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      14,
+      15,
+      "watching",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      14,
+      2,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      14,
+      15,
+      "supervising",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      14,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      15,
+      "supervising",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      15,
+      "watching",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      14,
+      "watching",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      14,
+      15,
+      "supervising",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      14,
+      15,
+      "watching",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      14,
+      2,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000038"
+}

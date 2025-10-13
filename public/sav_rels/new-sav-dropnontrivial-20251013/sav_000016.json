@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "child catching and holding rooster",
+    "child interacting with rooster in garden",
+    "camera panning through farmyard and garden"
+  ],
+  "description": "A rooster is present in a fenced outdoor area with logs, poles, trees, and tarps. The camera pans from the rooster's enclosure to a garden area, where a child is later seen holding the rooster, likely after catching it. The child interacts with the rooster and green gloves, while the camera continues to move through the environment.",
+  "place_env_id_name": "farmyard",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A rooster cannot realistically be physically located 'under' a vertical pole as poles are upright objects; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot be physically under a pole that is also standing upright; their vertical arrangements make this spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A slender, upright log cannot be under a tall tree in a spatial sense since logs are typically on or near the ground and the tree canopy is above; the relationship 'under' with the log as subject and tree as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000016.json",
+    "total_relationships": 136
+  },
+  "relationships": [
+    [
+      2,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000016"
+}

@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "vehicles traversing urban tunnel and road",
+    "camera vehicle following van through underpass",
+    "urban traffic moving through tunnel and onto open road"
+  ],
+  "description": "A van is driving through an urban underpass and tunnel, followed by another van, with several cars and a motorcycle appearing as the vehicles progress along a winding road. The camera, mounted inside or on a vehicle, moves forward, following the van and tracking the road as the scene transitions from underpass to open road.",
+  "place_env_id_name": "urban road and tunnel",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A van cannot be to the left of a road since the van must be on the road or off it, but not spatially left of the entire road object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot physically enter a fence, which is a stationary barrier; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "entering",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot physically 'exit' a stationary fence; it would instead pass through a gate or opening, but with just 'fence' the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "exiting",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000023.json",
+    "total_relationships": 129
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "entering",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "exiting",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000023"
+}

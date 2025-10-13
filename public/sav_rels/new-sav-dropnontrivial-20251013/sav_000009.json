@@ -1,0 +1,460 @@
+{
+  "activity_differential": [
+    "people dining together at an outdoor event",
+    "people conversing and socializing at a communal table",
+    "people listening to music or announcements from a speaker"
+  ],
+  "description": "A nighttime outdoor event with people sitting on chairs at a table, a speaker setup, blankets and mats on the ground, and various bags and objects scattered. The camera moves around the area, capturing people eating, sitting, and interacting in a communal setting.",
+  "place_env_id_name": "outdoor event space",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A box is an inanimate object and cannot perform the action of 'eating from' a pole.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "eating from",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box and a speaker are inanimate objects and cannot engage in social actions such as conversing.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box and a chair leg cannot engage in a social action like 'conversing with'; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "Inanimate objects like a box and a statue cannot engage in social actions such as 'sitting with'; the predicate is not physically or semantically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "sitting with",
+      "relation_type": "social",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker is an inanimate object and cannot engage in social actions like 'sitting with' a person.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "sitting with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker and a box are inanimate objects and cannot engage in a social action like 'conversing with'.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg and a box cannot engage in a social action like 'conversing with'; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot 'sit with' a statue; only whole animate beings can engage in a 'sitting with' social relationship.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "sitting with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot eat from a pole; the predicate 'eating from' is not physically plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "eating from",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary box cannot focus attention on another object; 'focused on' as an attentional predicate is not plausible for inanimate objects like a box.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg is an inanimate object and cannot 'focus on' anything, so the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate box cannot 'listen to' a blanket; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "listening to",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot listen to a blanket; the relationship is not physically or functionally plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "listening to",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker cannot listen to a blanket; the relationship 'listening to' is not physically plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "listening to",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot rest its feet on a plastic bag; the subject is an inanimate object that does not have feet or perform actions.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "resting feet on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box and a statue cannot realistically be engaged in 'dining with' each other as they are inanimate objects with no capability for such interaction.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot engage in the activity of 'dining with' a statue, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box cannot participate in 'dining with' an object like a chair leg; this relationship is not physically or semantically plausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker and a statue cannot engage in the activity 'dining with'; this relationship is physically and semantically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box cannot engage in the action of 'dining with' a speaker, as this is a higher-order social interaction requiring sentience and mobility, which inanimate objects lack.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot 'dining with' a speaker; the relationship is semantically and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "dining with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 21,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000009.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      22,
+      23,
+      "eating from",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      4,
+      "conversing with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      22,
+      1,
+      "conversing with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      22,
+      18,
+      "sitting with",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      3,
+      "sitting with",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      22,
+      "conversing with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      22,
+      "conversing with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      18,
+      "sitting with",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      23,
+      "eating from",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      23,
+      "focused on",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      23,
+      "focused on",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      22,
+      5,
+      "listening to",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      5,
+      "listening to",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      5,
+      "listening to",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      9,
+      "resting feet on",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      18,
+      "dining with",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      18,
+      "dining with",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      22,
+      1,
+      "dining with",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      18,
+      "dining with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      22,
+      4,
+      "dining with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      4,
+      "dining with",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000009"
+}

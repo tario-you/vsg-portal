@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "children playing and running outdoors",
+    "children moving toward a pavilion to join others",
+    "children socializing in a village square"
+  ],
+  "description": "A group of children and possibly adults are moving through an outdoor area with vehicles, buildings, and natural scenery. The camera follows the children as they run, walk, and interact, eventually approaching a pavilion where more people are gathered. The environment transitions from a parking area to a more open, social space.",
+  "place_env_id_name": "outdoor village square",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Two garments of similar type and plausible co-movement described together; stating 'moving with' between them adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 33,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Pants and trousers are inanimate objects and cannot 'interact' socially; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "interacting",
+      "relation_type": "social",
+      "subject_id": 33
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000034.json",
+    "total_relationships": 103
+  },
+  "relationships": [
+    [
+      1,
+      33,
+      "moving with",
+      [
+        [
+          192,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      33,
+      1,
+      "interacting",
+      [
+        [
+          192,
+          384
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000034"
+}

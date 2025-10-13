@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "person preparing food in kitchen",
+    "person handling kitchen appliances and utensils",
+    "person moving around and working at countertop"
+  ],
+  "description": "A person in a kitchen is preparing food, interacting with kitchen appliances and utensils, and moving around the countertop area. The camera tracks the person and pans to follow their actions.",
+  "place_env_id_name": "kitchen",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a backsplash, which is a fixed tiled surface, so the relationship 'wearing' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically stand on a cabinet door, which is a vertical flat surface designed to open, not support standing.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot stand on a wall; the wall is vertical and smooth, unsuitable as a surface to stand on.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pressure cooker is typically found in a kitchen and is unlikely to be spatially located beside a doormat, which is usually at an entrance area; this relationship is physically implausible in typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pressure cooker being 'under' a vent pipe (which is typically positioned above or alongside) is physically implausible in this context given their typical spatial arrangement.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000099.json",
+    "total_relationships": 86
+  },
+  "relationships": [
+    [
+      1,
+      36,
+      "wearing",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "standing on",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "standing on",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      38,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000099"
+}

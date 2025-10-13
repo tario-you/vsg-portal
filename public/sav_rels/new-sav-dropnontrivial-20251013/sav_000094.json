@@ -1,0 +1,691 @@
+{
+  "activity_differential": [
+    "dog playing fetch with ball",
+    "dogs socializing and playing together",
+    "dog exploring and interacting in living room"
+  ],
+  "description": "A dog in a striped shirt is active in a living room, initially alone and later joined by another dog. The main dog interacts with a blue ball, showing interest and playfulness. The camera follows the dog's movements, panning and tilting as the dog moves and plays. Social interaction occurs when a second dog enters, and both dogs engage with each other.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One dog being spatially 'under' another dog is generally implausible given their size and typical behavior; dogs are usually side by side or overlapping but not 'under' each other.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two small dogs cannot plausibly be described as one dog being 'on top of' the other in this context.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same dog; stating the dog is 'wagging tail' of itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "wagging tail",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship indicates the dog is playing with itself, which is not physically plausible or logical.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "playing with ball",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The dog cannot chase itself; subject and object are the same entity with no separate ball involved.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "chasing ball",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the dog to itself with a predicate that denotes a state; this self-relationship adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "waiting expectantly",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship is between the same dog node and uses 'alert' as a predicate, which does not form a meaningful relationship between the subject and object since they are identical; this is redundant.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "alert",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same dog entity; stating the dog is moving around itself is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same dog to itself with the action 'turning', which is redundant and adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "turning",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship is reflexive with the subject and object being the same dog; stating it is 'jumping' itself adds no useful relational information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "jumping",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same dog object to itself with 'approaching ball', which is semantically and physically nonsensical and adds no valid information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "approaching ball",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is the same dog as the subject; a dog cannot follow itself or be described as following a ball when the object is itself.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "following ball",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same dog, making the dog catching itself impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "catching ball",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The dog cannot paw at itself; the subject and object are the same entity, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "pawing at ball",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same dog; a dog cannot bite itself in the sense implied by the relationship 'biting ball' and the predicate is malformed, making the relationship nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "biting ball",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The dog cannot hold itself; having the dog as both subject and object with 'holding ball' is implausible and contradictory.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "holding ball",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot release itself as an object; the subject and object being the same dog makes the relationship nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "releasing ball",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An object cannot approach itself, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An entity cannot follow itself; subject and object are the same with no distinguishing details.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An object cannot approach itself; the subject and object are the same with no distinction.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same entity, making the 'following' relationship redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion is an inanimate object and cannot engage in playing with a dog.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "playing with",
+      "relation_type": "social",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot 'play with' anything as it is an inanimate object without agency.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "playing with",
+      "relation_type": "social",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot perform an action of 'playing with' anything as it is an inanimate object, and the object lacks identification or context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "playing with",
+      "relation_type": "social",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot wag a tail; the predicate is not physically possible for the given subject.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wagging tail",
+      "relation_type": "higher_order",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot perform the action of playing, especially on itself, as it is an inanimate object without agency.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The cushion is described as stationary throughout the sequence, so it cannot logically be 'moving around'.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The cushion remains stationary as described, so it cannot be turning; the relationship is physically impossible given the metadata.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "turning",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion, being an inanimate soft object, cannot perform the action of jumping.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "jumping",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot approach itself; an object cannot move toward itself, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the cushion follows itself, which is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 29,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cushion cannot be 'alert' as it is an inanimate object without consciousness or awareness.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "alert",
+      "relation_type": "higher_order",
+      "subject_id": 29
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 32,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000094.json",
+    "total_relationships": 171
+  },
+  "relationships": [
+    [
+      1,
+      12,
+      "under",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      12,
+      "on top of",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      1,
+      "wagging tail",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "playing with ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "chasing ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "waiting expectantly",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "alert",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "moving around",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      1,
+      "turning",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      1,
+      "jumping",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      1,
+      "approaching ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      1,
+      "following ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      1,
+      "catching ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "pawing at ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "biting ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "holding ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "releasing ball",
+      [
+        [
+          120,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      3,
+      "approaching",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      3,
+      "following",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      7,
+      "approaching",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      7,
+      "following",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      1,
+      "playing with",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      29,
+      3,
+      "playing with",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      29,
+      7,
+      "playing with",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      29,
+      29,
+      "wagging tail",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      29,
+      29,
+      "playing",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      29,
+      29,
+      "moving around",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      29,
+      "turning",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      29,
+      "jumping",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      29,
+      "approaching",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      29,
+      "following",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      29,
+      "alert",
+      [
+        [
+          192,
+          312
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000094"
+}

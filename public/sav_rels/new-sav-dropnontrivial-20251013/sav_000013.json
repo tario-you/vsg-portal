@@ -1,0 +1,397 @@
+{
+  "activity_differential": [
+    "camera traversing busy street market",
+    "people shopping and walking in market",
+    "motorcycle moving through crowded street"
+  ],
+  "description": "A moving camera (likely mounted on a motorcycle) traverses a busy street market, passing by motorcycles, people, vendors, and various market activities. The camera advances forward, capturing the dynamic interactions of people shopping, walking, and riding motorcycles.",
+  "place_env_id_name": "street market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot physically be below a signboard in this context as it is an object of clothing not independently positioned in space; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and cannot spatially exist below a tree as an independent object.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being a piece of clothing, cannot spatially be 'below' a signboard as an independent object since it is normally worn and not positioned separately in space below a signboard.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot be spatially below a fixed signboard in a meaningful way, as the jersey is an object of clothing likely worn and not independently positioned below the signboard.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (an article of clothing) cannot be spatially located to the right of a person as an independent object; it typically is worn by the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot be positioned spatially below a signboard as an independent object; the jersey is likely worn or hanging and does not function as a standalone object below the signboard.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey as an object cannot be spatially positioned below a signboard independently; the jersey is fabric likely worn by a person, so the relationship 'below' with the jersey as subject is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is a stationary object and cannot be spatially 'above' a lightweight, movable plastic bag which can be at various positions; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot realistically be positioned above a moving jersey, as the jersey likely belongs to a person and the spatial relationship is unclear or physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is a stationary part of a vehicle and cannot move or pass by a signboard independently.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard cannot approach a woman; dashboards are stationary parts of a vehicle and do not move independently.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A subject with no identity cannot logically 'walk with' an inanimate signboard, which remains steady and does not move.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking near' a wall.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sari is a garment and cannot walk with a subject; walking with a sari is not physically possible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot 'walk with' a sari, which is a piece of clothing; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is a fixed part of a motorcycle and cannot move independently to 'pass by' a person who is walking.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is an inanimate part of a motorcycle and cannot perform the action of 'passing by' a walking woman.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking near'.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 19
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000013.json",
+    "total_relationships": 118
+  },
+  "relationships": [
+    [
+      2,
+      8,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "right of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "below",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "above",
+      [
+        [
+          48,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      2,
+      "above",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      19,
+      "passing by",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      37,
+      "approaching",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      19,
+      "walking with",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      23,
+      "walking near",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      15,
+      "walking with",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      15,
+      "walking with",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      18,
+      "passing by",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      37,
+      "passing by",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      19,
+      39,
+      "walking near",
+      [
+        [
+          240,
+          312
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000013"
+}

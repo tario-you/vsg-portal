@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "group of people walking along roadside",
+    "group conversing while walking",
+    "camera tracking group movement"
+  ],
+  "description": "A group of people are walking along a dirt path beside a road with passing vehicles, under a partly cloudy sky. The camera tracks the group as they approach and pass by.",
+  "place_env_id_name": "roadside urban area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A minivan on the ground cannot be 'in front of' a cloud in a meaningful spatial sense, as clouds are in the sky above and behind physical ground-level objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A minivan cannot be physically positioned 'under' a horizontal barrier as described; the spatial relationship is implausible given typical sizes and arrangement.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relation 'right of' is ambiguous because the minivan is moving along a road and the person is walking, but their relative positions cannot be definitively established; no clear spatial context confirms the minivan is right of the person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be located 'in front of' a building in a meaningful spatial sense since clouds are in the sky above and far behind buildings from a typical observer's viewpoint.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A horizontal barrier cannot be spatially over tall trees, as trees are generally taller and the barrier typically lies below or in front of trees, making 'barrier over trees' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A long, horizontal barrier cannot physically be 'over' a large multi-story building; this spatial relationship is not plausible given their described sizes and orientations.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A continuous horizontal barrier described as sturdy and linear is unlikely to be physically 'over' a walking person in a spatial sense; the person is on the ground and the barrier is not described as elevated above the person.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking on the ground cannot be spatially 'left of' a cloud in a meaningful way since clouds are in the sky, making the spatial relation physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking, which makes it unlikely they are physically under a long, continuous barrier; 'under' relation is implausible here given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud, being a mass of water vapor in the sky, cannot physically walk together with a person; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud is an atmospheric formation and cannot physically walk parallel to a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking parallel to",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Clouds are not capable of walking, so describing them as 'walking in group' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking in group",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same person to themselves with 'walking in group', which is redundant and semantically incorrect.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "walking in group",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Clouds cannot engage in social actions such as 'conversing with' since they are non-sentient weather phenomena.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally converse with a cloud, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000098.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "over",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "left of",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "walking together",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      2,
+      "walking parallel to",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      4,
+      "walking in group",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      3,
+      "walking in group",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      4,
+      "conversing with",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      4,
+      "conversing with",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000098"
+}

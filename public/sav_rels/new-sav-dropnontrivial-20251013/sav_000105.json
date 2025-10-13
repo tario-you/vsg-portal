@@ -1,0 +1,103 @@
+{
+  "activity_differential": [
+    "people transitioning between floors in a shopping mall",
+    "people interacting at a counter and moving through mall",
+    "people using escalators and stairs in a public space"
+  ],
+  "description": "A shopping mall or entertainment complex with vibrant lighting, where several people interact with a counter, walk up and down stairs, and use escalators. The camera moves through the environment, following people as they transition between different areas.",
+  "place_env_id_name": "shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject is a person shown on a television screen, which is an image, not a physical person that can be spatially 'right of' a countertop. The relationship is physically impossible as stated.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'descending escalator' is being used as a relationship between a surface and a refrigerator, which is semantically incorrect and physically impossible; a surface cannot be a 'descending escalator' in relation to a refrigerator.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "descending escalator",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is on a descending escalator, but the refrigerator is a stationary object; the predicate 'descending escalator' does not apply to the refrigerator, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "descending escalator",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person standing on a moving escalator is not walking near a surface; the surface is likely a floor or decoration, and 'walking near' implies independent motion alongside, which does not fit the context described.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000105.json",
+    "total_relationships": 101
+  },
+  "relationships": [
+    [
+      26,
+      19,
+      "right of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      34,
+      "descending escalator",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      34,
+      "descending escalator",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      4,
+      "walking near",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000105"
+}

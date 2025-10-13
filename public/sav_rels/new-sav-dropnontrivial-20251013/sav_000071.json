@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "workers stocking shelves and loading boxes onto carts",
+    "workers collaborating and conversing while handling inventory",
+    "camera operator documenting warehouse stocking process"
+  ],
+  "description": "A camera moves through a supermarket or warehouse aisle, following and approaching people who are handling and moving boxes and carts. Multiple people are seen loading boxes onto carts, with some social interaction and collaboration.",
+  "place_env_id_name": "supermarket aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A poster cannot perform the action of lifting a structure; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "lifting",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster cannot perform the action of handling a box; the relationship is physically impossible given the subject's nature.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster is a stationary object and cannot physically handle a box; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster (an inanimate object) cannot look at a box; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster, being an inanimate object, cannot engage in social actions like collaborating with a person.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster is an inanimate object and cannot converse with a person.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically collaborate with an inanimate object like a poster.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally 'converse with' a poster, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000071.json",
+    "total_relationships": 50
+  },
+  "relationships": [
+    [
+      27,
+      37,
+      "lifting",
+      [
+        [
+          216,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      38,
+      "handling",
+      [
+        [
+          216,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      39,
+      "handling",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      40,
+      "looking at",
+      [
+        [
+          216,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      27,
+      3,
+      "collaborating",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      27,
+      3,
+      "conversing with",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      27,
+      "collaborating",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      27,
+      "conversing with",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000071"
+}

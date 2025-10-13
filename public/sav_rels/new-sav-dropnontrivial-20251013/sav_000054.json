@@ -1,0 +1,40 @@
+{
+  "activity_differential": [
+    "dog approaching and greeting observer",
+    "dog exploring living room",
+    "dog seeking attention from observer"
+  ],
+  "description": "A dog wearing a checkered garment walks from the back of a living room toward the camera, eventually approaching and interacting with the unseen observer. The environment is a domestic living room with various furniture and household items.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A blanket being 'in front of' a tile is a spatial relationship that is ambiguous and unlikely to be meaningful, as the tile likely lies flat and the blanket would more plausibly be 'on' or 'covering' the tile rather than strictly 'in front of' it.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 1,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000054.json",
+    "total_relationships": 87
+  },
+  "relationships": [
+    [
+      2,
+      38,
+      "in front of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000054"
+}

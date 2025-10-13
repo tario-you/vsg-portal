@@ -1,0 +1,1741 @@
+{
+  "activity_differential": [
+    "group grilling and preparing food outdoors",
+    "group socializing during a barbecue",
+    "group collaborating on outdoor cooking"
+  ],
+  "description": "A group of people are gathered outdoors under trees near water, collaboratively grilling meat on a barbecue. Several individuals are actively handling the grill and food, while others are present and interacting socially. The camera moves slightly to capture different angles of the group and the grilling activity.",
+  "place_env_id_name": "outdoor picnic area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' their own shirt in a physically meaningful way since the shirt is worn by the person; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person cannot plausibly be spatially 'right of' the entire sky; the sky is a background element that encompasses the upper visual field, making such a spatial relationship nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially right of a cloud in a meaningful way since clouds are in the sky at a distance and relative positioning on the ground does not apply.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of trousers cannot move by itself and cannot be 'in front of' a person in an independent spatial sense; the trousers are worn by a person and cannot have a separate spatial relationship as described.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' their own arm as the arm is part of their body; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'head of' typically implies a leadership or hierarchical relationship that cannot be determined or is unlikely from the given physical descriptions and interactions between two persons engaged in a shared activity.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "head of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be left of a shirt as a spatial relationship independent of the person wearing it; the shirt is part of or on the person, so 'left of' does not apply as a separate spatial relation here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a shirt as an independent object; the shirt is an article of clothing worn by a person, not a separate entity to be in front of.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'right of' the sky since the sky is the background above and around, making this spatial relationship illogical.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially positioned 'right of' a cloud in a meaningful way since clouds are high in the sky and spatial relationships like 'right of' typically apply to objects on the same plane or near each other.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot spatially be 'in front of' a single pair of trousers as trousers are typically worn on a person and do not independently occupy a front-facing spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm is part of a person and cannot be spatially 'in front of' the person as a separate entity.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'head of' spatially does not plausibly describe the relationship between two persons both engaged in similar activities; no evidence supports one person being head or above the other in a spatial or hierarchical sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "head of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'left of' their own shirt, as the shirt is worn by the person; this relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially 'beside' a mountain in a meaningful way; they exist at vastly different scales and contexts, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially positioned 'right of' the sky, as the sky encompasses the background and is not a discrete object in physical proximity to the shirt.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially right of a cloud meaningfully since the cloud is far away in the sky and the shirt is a worn garment on a person; their relative positions cannot be compared directly as stated.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate object, cannot be spatially positioned 'in front of' a branch without implying a wearer or support; lacking such context, the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be physically positioned under water as an object on its own; it would be worn by a person or submerged, but the relationship 'shirt under water' without a supporting subject like a person is not directly plausible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is a garment worn on a person; it physically overlaps with the person wearing it, so it is not plausible that the shirt is 'not overlapping' with the person.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "not overlapping",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar shirts described together; marking one as left of the other adds no meaningful new information and may be redundant.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat being under a shirt is physically impossible due to their relative sizes and typical positions.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat cannot be spatially beside a pair of trousers in a meaningful way in this context; the objects belong to completely different categories and settings.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat is on water and cannot be spatially 'beside' grass, which grows on land; therefore, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat gliding on water cannot be spatially beside a mountain in a way that is meaningful within the scene; the predicate 'beside' between a boat and mountain is not physically plausible given the context.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot be beside a boat in a spatial sense as separate objects; the relationship is physically implausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat is an object on water, and a person crouched down typically on land or a solid surface; describing the boat as 'behind' the person does not align with usual spatial positioning where a person and boat share a context. Without explicit spatial context tying them together, this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Spatially, a boat cannot be 'right of' the sky, as the sky is a background element above the water; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat cannot be spatially 'in front of' a handle in a meaningful scene context; the relationship is unlikely to represent a realistic spatial configuration.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat gliding on water and a grill rod, which is a fixed vertical metallic object, cannot be reasonably described with 'in front of' as a spatial relationship without further context; this relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat gliding on water cannot be spatially 'left of' a towel, which is likely resting on a surface away from the water; the relationship is implausible in a physical spatial context.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boat gliding on water and a piece of meat rotating are unrelated entities; spatially locating the boat as 'left of' the meat is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A spatial relationship 'left of' between a large boat on water and a shirt (article of clothing) is physically implausible because the shirt is typically worn and not independently positioned spatially relative to a boat in the environment.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers as clothing cannot spatially exist beside a boat independently; they are worn by a person, so the relationship 'beside' between trousers and boat is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are clothing worn by a person and cannot be physically positioned 'beside' a large mountain in a meaningful spatial relationship; this is an implausible spatial connection.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers cannot be positioned spatially 'right of' the sky as the sky encompasses the background and is not a localized object with a left-right position relative to the trousers.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of trousers cannot have a spatial position relative to a cloud in a meaningful or physically plausible way.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers, as inanimate clothing, cannot be spatially 'in front of' a branch independently; the relationship is physically impossible without a wearer.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are clothing items and cannot exist independently in front of a tree trunk; this relationship implies the trousers are separate objects, which is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers themselves cannot be spatially positioned in front of an object independently; the trousers are worn by a person who would be in front of the grill rod, not the trousers alone.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of trousers cannot physically be to the left of a rotating piece of meat as independent objects; trousers are worn by a person and not spatially positioned alone relative to meat.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers and shirt are clothing items typically worn on the same body and do not have independent spatial positions relative to each other; thus 'left of' is not a physically meaningful relationship here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass is on the ground and sky is above; grass cannot be to the right of the sky in a spatial context.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass on the ground cannot be spatially to the right of a cloud in the sky based on typical spatial orientations.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "Grass typically grows on hills and overlaps with the hill surface; 'not overlapping' between grass and hill is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "not overlapping",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot perform the action of 'grilling' on a shirt; 'grilling' is an action related to cooking, not applicable to a shirt object.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "grilling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is reaching toward the ground but handling a whole boat is not physically plausible given the scenario.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically 'use' an entire island as a tool or utensil; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'person' cannot logically collaborate with a 'head' alone; collaboration implies interaction between agents, not body parts.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with an inanimate object like a shirt; collaboration requires intentional agency.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with the sky; the relationship is physically and semantically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with a cloud, which is a non-sentient natural phenomenon; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot grill a shirt; grilling is an action typically performed on food items or grills, not clothing.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "grilling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as manipulating a small object with hands close together, which is inconsistent with handling an entire boat that is moving on water; physically implausible to be directly handling the boat in that manner.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically 'use' an entire island as an object in the functional sense; the predicate is inappropriate for this subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A head alone, separated from a person's body, cannot collaborate; collaboration requires social agency typically attributed to a whole person.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with an inanimate object like a shirt; 'collaborating' implies social interaction between agents.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with the sky; the relationship is physically and semantically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically collaborate with a cloud, as collaboration implies intentional social interaction which is not possible with a cloud.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'head' cannot perform the action 'grilling' on a 'shirt'; this predicate is not physically plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "grilling",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'head' alone, as a body part without the person, cannot physically handle a boat.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A human head cannot logically 'use' an island; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'head' as an isolated part cannot independently 'collaborate' with a person; collaboration requires agents capable of intentional social interaction.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A head cannot collaborate with a shirt; the relationship is semantically and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'head' cannot collaborate with the 'sky'; the predicate is not physically or semantically plausible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A human head cannot logically 'collaborate' with a cloud; this action is socially and physically impossible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, being an inanimate object, cannot participate in social actions like collaborating with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate clothing item, cannot 'collaborate' with a head; collaboration implies intentional social interaction between agents.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot collaborate with the sky; the social predicate is not physically plausible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, an inanimate object, cannot collaborate with a cloud; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sky cannot engage in a social activity like collaborating with a person; this relationship is not physically or semantically plausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sky cannot engage in social collaboration with a person; this relationship is physically and semantically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sky and a person's head cannot engage in a social action like 'collaborating'; this is physically and semantically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky and a shirt cannot engage in a social action like 'collaborating'; it is not physically or semantically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sky and cloud cannot socially collaborate; 'collaborating' is a social predicate not applicable to natural elements like sky and cloud.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot engage in social collaboration with a person; such interaction is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud, being a natural atmospheric phenomenon without consciousness, cannot engage in social activities like collaborating with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot engage in social collaboration with a human head; the predicate 'collaborating' is not physically plausible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot engage in social 'collaborating' with a shirt; the relationship is not physically or logically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "Clouds and sky cannot engage in social actions like 'collaborating'; this predicate is not applicable to these natural elements.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person focusing on a shirt as an independent object is not physically plausible; usually attention is on a whole person or an object they interact with, not on the shirt alone.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically focus their attention on a shirt as an object independently; the shirt is typically worn and does not attract focused attention on its own.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 82,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000060.json",
+    "total_relationships": 192
+  },
+  "relationships": [
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      34,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "head of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "head of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      15,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      32,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      21,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      23,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "not overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      8,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      29,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      34,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      18,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      15,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      32,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      21,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      25,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      32,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      9,
+      "not overlapping",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "grilling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      18,
+      "handling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      20,
+      "using",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      25,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      32,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      8,
+      "grilling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      18,
+      "handling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      20,
+      "using",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      25,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      32,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      8,
+      "grilling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      18,
+      "handling",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      20,
+      "using",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      2,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      25,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      32,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      2,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      25,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      32,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      25,
+      1,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      25,
+      2,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      25,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      25,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      25,
+      32,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      32,
+      1,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      32,
+      2,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      32,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      32,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      32,
+      25,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      8,
+      "focused on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      8,
+      "focused on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000060"
+}

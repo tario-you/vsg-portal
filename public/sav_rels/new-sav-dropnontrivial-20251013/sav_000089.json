@@ -1,0 +1,271 @@
+{
+  "activity_differential": [
+    "people walking and using phones in a shopping mall",
+    "camera moving forward through mall interior",
+    "groups and individuals navigating public indoor space"
+  ],
+  "description": "A shopping mall or entertainment complex interior with multiple people walking, interacting, and the camera moving steadily forward through the space. Some people are using their phones, some are walking together, and children are present. The camera advances through the open area toward escalators and kiosks.",
+  "place_env_id_name": "shopping mall interior",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The ceiling painting is part of or on the ceiling surface itself, so describing it as 'adjacent above' the ceiling is redundant or inaccurate.",
+      "label": "redundant",
+      "object_id": 12,
+      "predicate": "adjacent above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The track lighting fixture is suspended in the ceiling or on a track system, and popcorn is part of a poster (likely on a wall); spatially, the fixture cannot be positioned left of the popcorn image in a meaningful or physical sense.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The kiosk is a stationary object and cannot perform the action of walking past another object.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A kiosk, as an inanimate object, cannot perform the action 'talking on phone'.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "talking on phone",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'walking with' linking the same person to themselves is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same individual described identically; stating 'walking with' oneself adds no meaningful relationship.",
+      "label": "redundant",
+      "object_id": 20,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A suitcase cannot walk with itself; the subject and object being the same suitcase and the predicate 'walking with' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects a child to themselves with 'walking with', which is redundant and does not add meaningful information.",
+      "label": "redundant",
+      "object_id": 14,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same person object to itself with 'using phone', which is redundant and incorrect; it should reference the phone object instead.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "using phone",
+      "relation_type": "functional",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A kiosk is an object and cannot perform the action of 'using phone'; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "using phone",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A suitcase cannot use a phone as it is an inanimate object without the capability to perform actions like using a phone.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "using phone",
+      "relation_type": "functional",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same person; 'using phone' requires a phone object distinct from the person.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "using phone",
+      "relation_type": "functional",
+      "subject_id": 20
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000089.json",
+    "total_relationships": 172
+  },
+  "relationships": [
+    [
+      8,
+      12,
+      "adjacent above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      37,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      2,
+      "talking on phone",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      11,
+      11,
+      "walking with",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      20,
+      "walking with",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      30,
+      30,
+      "walking with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      14,
+      14,
+      "walking with",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      11,
+      11,
+      "using phone",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      2,
+      "using phone",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      30,
+      30,
+      "using phone",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      20,
+      20,
+      "using phone",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000089"
+}

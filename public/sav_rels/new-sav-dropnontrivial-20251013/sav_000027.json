@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "people walking and conversing on urban sidewalk",
+    "people exiting building and moving along street",
+    "people carrying items and interacting in public space"
+  ],
+  "description": "A group of people are seen exiting a building and walking along a busy urban sidewalk. The camera moves and shifts focus between groups of people and individuals, capturing their movement and interactions as they walk, converse, and carry items. Vehicles are parked along the street, and the environment is decorated with banners and lanterns.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be realistically 'under' a doormat, which is flat on the ground and intended to be stepped on; the spatial relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'wear' a window, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking on top of a swaying lantern is physically implausible given typical sizes and context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' a hanging lantern; spatially it is implausible for the person to be physically on the lantern.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk on a spherical lantern; the relationship 'walking on' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically walk on a lantern; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000027.json",
+    "total_relationships": 67
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "on top of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "walking on",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      16,
+      "walking on",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000027"
+}

@@ -1,0 +1,754 @@
+{
+  "activity_differential": [
+    "group distributing and organizing supplies",
+    "group collaborating and conversing during supply distribution",
+    "group walking together after supply distribution"
+  ],
+  "description": "A group of people, some in uniforms and others in civilian clothing, are gathered outside a building with visible supplies such as boxes and bottles. Several individuals appear to be organizing, distributing, or documenting the supplies, while others are observing or recording the scene. The camera moves forward, following the group as they walk away from the supply area toward a gate.",
+  "place_env_id_name": "outdoor supply distribution area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'left of' their own head as the head is part of the person; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be positioned spatially to the left of their own coat, as the coat is worn on the person; they occupy the same space or the coat is part of the person.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described wearing a green coat, and the coat object likely represents the same coat. Therefore, stating the person is to the right of their own coat is redundant and not informative.",
+      "label": "redundant",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially positioned 'right of' their own coat since the coat is worn by the person; they are not separate entities in space.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'left of' their own head; this relationship does not make physical or logical sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'left of' a coat as a separate object unless the coat is unattached; it's more plausible the coat is worn by or associated with the person. Without explicit context indicating an unattached coat, this relationship is not meaningful.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically above a tall, intricately stacked structure unless they are elevated; the relationship 'above' here is unlikely as described.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking steadily in a purposeful stride, unlikely engaged in a conversation with another standing individual; their described actions do not support simultaneous conversing.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person conversing with a coat is physically impossible as the coat is an inanimate object and cannot engage in social interaction.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally 'converse with' an inanimate banner; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot have a social conversation with a coat, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot have a social interaction like 'conversing with' a vent, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically 'converse with' an inanimate box, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with just a head; a head alone does not constitute an entity capable of conversation.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is walking and not shown interacting with the vent; handling a long, fixed vent is physically unlikely in this context.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'converse with' a coat, as a coat is an inanimate object without capacity for conversation.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with an inanimate banner; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person can converse but a coat cannot; the inanimate coat cannot engage in conversation, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with an inanimate vent; the relationship is not physically possible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with an inanimate box; the predicate 'conversing with' requires animate participants.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'person' can converse with another person, but 'conversing with' a 'head' alone is not physically possible as the head is a part of a person, not an independent entity for conversation.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person can walk but a banner cannot walk; the predicate 'walking with' is not physically plausible as the banner is stationary.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically 'walk with' an inanimate coat, as the coat does not have agency or movement.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk with' a vent, which is an inanimate, fixed object; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk with an inanimate, stationary awning; the predicate 'walking with' does not apply here.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot converse with a banner because it is an inanimate object incapable of communication.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'converse with' a coat, as the coat is an inanimate object incapable of social interaction.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally converse with a vent; the vent is an inanimate object, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'converse with' an awning, as it is an inanimate object incapable of communication.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person carrying a large, fixed vent structure is physically implausible given the object's size, material, and likely immobility.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically 'distribute' a vent, which is an inanimate object; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "distributing",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically collaborate with an inanimate banner as collaboration implies interactive intent and agency, which the banner lacks.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with an inanimate object like a coat; collaboration requires agency.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with an inanimate object like a vent; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot collaborate with an inanimate object like an awning; the relationship is not physically or logically plausible.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 20
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 35,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000106.json",
+    "total_relationships": 247
+  },
+  "relationships": [
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      36,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "right of",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      36,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      37,
+      "above",
+      [
+        [
+          240,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      36,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      18,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      26,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      31,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      13,
+      "conversing with",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      5,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      32,
+      "handling",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      36,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      18,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      26,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      31,
+      "conversing with",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      13,
+      "conversing with",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      5,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      18,
+      "walking with",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      26,
+      "walking with",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      31,
+      "walking with",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      28,
+      "walking with",
+      [
+        [
+          240,
+          432
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      18,
+      "conversing with",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      26,
+      "conversing with",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      31,
+      "conversing with",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      28,
+      "conversing with",
+      [
+        [
+          240,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      32,
+      "carrying",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      20,
+      32,
+      "distributing",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      20,
+      18,
+      "collaborating",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      26,
+      "collaborating",
+      [
+        [
+          192,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      31,
+      "collaborating",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      28,
+      "collaborating",
+      [
+        [
+          240,
+          432
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000106"
+}

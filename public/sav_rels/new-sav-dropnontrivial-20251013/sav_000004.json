@@ -1,0 +1,964 @@
+{
+  "activity_differential": [
+    "two people taking selfies in a shopping mall",
+    "two people conversing and shopping together",
+    "two people posing for photos in a decorated mall"
+  ],
+  "description": "A man and a woman are in a shopping mall, carrying bags and interacting. The man approaches the woman, they converse, and then take selfies together using a phone. The environment is decorated for the holidays, with Christmas trees and wreaths visible.",
+  "place_env_id_name": "shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot be on top of a ceiling since ceilings are above and not a surface where handbags can rest or be placed.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot be spatially positioned 'left of' a ceiling, which is typically above; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag swinging cannot be spatially 'in front of' a wooden frame, since the bag is typically carried and moves relative to a person, not positioned static in front of a frame. The relationship is not physically plausible as described.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot physically be 'in front of' a railing in a spatial sense; 'in front of' implies relative positioning by an agent or larger scene context, which is not applicable to an inanimate object like a handbag.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot be physically 'in front of' a dress as an independent object; the dress is worn by a person and the handbag typically hangs or is held, so this spatial relationship does not make sense on these object entities alone.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans cannot be on top of a ceiling, as ceilings are above and jeans are worn on legs below them.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans cannot be 'left of' a ceiling since jeans are worn on a person at floor level and ceilings are overhead; the spatial relation is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tile on the floor cannot be to the left of a ceiling above; their vertical relationship makes 'left of' spatially implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor tile cannot be positioned 'right of' a wreath in a spatial sense; the wreath would more likely be placed on or above the tiles.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are ceilings described in detail; stating one ceiling is 'under' another is redundant and not semantically meaningful.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments on hangers cannot be spatially 'left of' floor tiles, as the tiles constitute the floor beneath the garments rather than a side-by-side arrangement.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments arranged on hangers cannot physically be located to the left of a ceiling, which is above them; 'left of' is spatially implausible in this vertical context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The dress is a specific garment likely included in the collection labeled as garments; stating it is 'beside' the garments is redundant and adds no new meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be physically positioned relative to a handbag on a 'right of' spatial basis due to their fixed vertical location differences and scale.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially located 'right of' a pair of jeans, as it is fixed above and does not have a relative horizontal positional relationship with the jeans.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be positioned 'right of' a floor tile since ceilings are overhead and floors are below; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states one ceiling is on top of another ceiling, which is redundant and physically implausible; ceilings do not stack in this way.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially to the right of garments, as ceilings are typically above; the 'right of' spatial relationship is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be 'in front of' an object standing below it; typically, the frame would be in front of or below the ceiling, so this spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling is a stationary architectural element and cannot be beside a dress, which is a piece of clothing likely worn or placed below it; the spatial relationship 'beside' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling is a large stationary overhead structure and cannot be spatially 'beside' a small wreath; physically, the wreath would hang on or below the ceiling, making 'beside' relation implausible here.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be 'in front of' a wall panel as ceilings are positioned above walls; their spatial relationship does not support this predicate.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot logically be 'in front of' a dress as the ceiling is above and fixed; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially 'left of' a tile as it is an inanimate object without independent location; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot physically be on top of a ceiling; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be 'beside' a ceiling as these entities occupy different spatial planes; the ceiling is overhead while the dress is worn or placed below, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress is an inanimate piece of clothing and cannot have a spatial relationship like 'right of' relative to a frame; it cannot position itself in space independently.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially located 'right of' a railing as if it is an independent object; it exists as clothing worn or displayed, not as a separate entity positioned in space.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wreath is stationary and not a spatial reference point for a pair of jeans that are moving; it is physically implausible to define jeans as 'left of' a wreath in a meaningful way here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wreath is stationary and attached or placed decoratively; it does not have a meaningful spatial relation of 'left of' relative to floor tiles, which are beneath it.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wreath is typically hung on walls or doors and cannot be spatially 'beside' a ceiling in a plausible physical arrangement.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wall panel cannot logically be positioned 'left of' a dress, which is typically worn or hanging and not immobile in a scene; spatial relation implies physical proximity and orientation that is unclear here.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flowing dress cannot be physically on top of a ceiling; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments as objects do not have the capability to hold other garments like jeans; holding is an action performed by animate agents, not by clothes themselves.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot 'wear' a tile; this predicate is implausible given the object roles.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments as a collection cannot 'wear' a dress; the wearing action applies to people, not inanimate clothing items.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot wear objects; the wearing relationship is reversed or inapplicable here.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot look at the ceiling since they are inanimate objects without perception.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments are inanimate and cannot perform actions such as approaching; the frame remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot perform the action 'walking' as they are inanimate objects hanging on hangers.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'garments standing garments' is self-referential and provides no additional meaningful information.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "standing",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments as inanimate objects cannot perform the action 'posing'.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "posing",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot take selfies; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "taking selfie with",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments are inanimate objects and cannot engage in social interactions like 'conversing with'.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Garments cannot socially interact with themselves; the relationship is redundant and semantically incorrect.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 45,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000004.json",
+    "total_relationships": 146
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      12,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "holding",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      19,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      7,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      9,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      6,
+      6,
+      "walking",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      6,
+      "standing",
+      [
+        [
+          96,
+          336
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      6,
+      "posing",
+      [
+        [
+          168,
+          336
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      6,
+      "taking selfie with",
+      [
+        [
+          168,
+          336
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      6,
+      "conversing with",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      6,
+      6,
+      "interacting with",
+      [
+        [
+          72,
+          336
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000004"
+}

@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "dogs foraging and exploring sidewalk",
+    "dogs sniffing and moving along sidewalk",
+    "dogs interacting and moving near each other"
+  ],
+  "description": "Three small dogs are exploring and sniffing around a sidewalk and grassy area near a road. The dogs move independently, occasionally approaching or moving away from each other, and are engaged in foraging-like behavior. The camera slowly pans to follow the dogs' movement along the sidewalk.",
+  "place_env_id_name": "sidewalk near road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One dog foraging near another dog is semantically odd, as 'foraging' implies searching for food in natural surroundings, which typically does not involve another dog as the object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'foraging near' suggests one dog is foraging near another dog, which is semantically odd since dogs do not forage near each other as objects or locations; the relationship lacks physical meaning.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot engage in 'foraging near' another dog in a meaningful way since foraging implies searching for food in the environment, not near another moving animal.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog foraging near another dog is unlikely since dogs do not forage; the predicate is not appropriate for the subject object pairing here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot forage near another dog, as foraging typically involves searching for food in nature, which is not a plausible behavior directed toward another dog.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot forage near another dog in a meaningful ecological sense; foraging applies to searching for food typically by animals like birds or foraging mammals, not towards another similar dog.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000085.json",
+    "total_relationships": 72
+  },
+  "relationships": [
+    [
+      2,
+      3,
+      "foraging near",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "foraging near",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      2,
+      "foraging near",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      5,
+      "foraging near",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      2,
+      "foraging near",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      3,
+      "foraging near",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000085"
+}

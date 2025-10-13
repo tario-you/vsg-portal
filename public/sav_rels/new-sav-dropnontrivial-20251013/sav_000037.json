@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "people walking and conversing in a shopping mall corridor",
+    "people approaching and using escalator",
+    "people reading signboards and interacting with displays"
+  ],
+  "description": "A shopping mall corridor with several people walking, some interacting with displays, and the camera moving forward through the space. The environment includes escalators, signboards, and storefronts.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A decorative architectural element cannot realistically be attached to a person who is walking; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling is an overhead structure and cannot be standing on a railing, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling is typically above other objects and cannot realistically be to the left of a signboard attached to a stable structure; the spatial relationship 'left of' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling being 'left of' a carpet is physically impossible because the ceiling is above the carpet, not beside it in a left-right spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically be 'standing on' a railing, which is an elevated horizontal structure meant for support, not a surface to stand on.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking forward and taking steps, which is inconsistent with 'standing on' the railing, a narrow and elevated object typically not stood upon while walking.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A carpet lying on the floor cannot be spatially located 'behind' a vertical signboard; carpets are on the ground and signboards are typically mounted or upright.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can would not reasonably be positioned on top of a horizontal railing; this placement is physically implausible given typical object sizes and functions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk past' a floor, as the floor is beneath and stationary; the predicate is inappropriate for this subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is described as a tall, stationary, rectangular structure unlikely to be stepped onto by a person; 'stepping onto' suggests a surface suitable for standing, which this object does not plausibly provide.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "stepping onto",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person stepping onto a tall, stationary, rectangular object is physically unlikely unless it's a step or platform; the description suggests a solid vertical object, making this relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "stepping onto",
+      "relation_type": "functional",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000037.json",
+    "total_relationships": 94
+  },
+  "relationships": [
+    [
+      1,
+      7,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      18,
+      "on top of",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      24,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      20,
+      "stepping onto",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      20,
+      "stepping onto",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000037"
+}

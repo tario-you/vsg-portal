@@ -1,0 +1,775 @@
+{
+  "activity_differential": [
+    "person preparing dough balls for cooking",
+    "person placing dough balls on plate",
+    "person operating stove while preparing food"
+  ],
+  "description": "A person is preparing dough balls in a kitchen, picking them up and placing them on a plate, while operating the stove. The camera remains static, capturing the process.",
+  "place_env_id_name": "kitchen",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A plate that remains stationary cannot logically be 'handling' the dough, as it implies active manipulation which a plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot be handling a dough ball; handling implies active manipulation, which a plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of handling a dough ball.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, being an inanimate object that remains stationary, cannot actively place a container; the predicate 'placing' implies an agent performing an action, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot be 'turning' a pot lid; the relationship is not physically plausible as described.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "turning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is stationary and typically does not perform the action of 'turning' a chopping board; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "turning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate (inanimate object) cannot perform the action of handling a jar; 'handling' implies an animate agent interacting with an object, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object and cannot perform the action of handling a potato or any object.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is described as remaining stationary and is an inanimate object incapable of handling or manipulating a potato.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate remains stationary and cannot be handling the potato; handling implies active manipulation which the plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remaining stationary cannot be 'handling' a chopping board, as plates do not perform actions or hold objects.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remaining stationary cannot perform the action of handling a cabinet door; the subject cannot functionally handle the object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which remains stationary, cannot perform 'handling' of a bucket; the relationship is physically impossible as plates do not handle objects.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate remains stationary and cannot perform the action of handling the jar, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of handling a potato; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a drawer; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of 'handling' a faucet; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot handle a pot, making the 'handling' relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the plate and the strainer remain stationary, so the plate cannot be 'handling' the strainer.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a bowl, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a grater, which makes the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a knob; it is an inanimate object with no capability to handle anything.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action 'handling' of a frying pan; the predicate is not physically plausible for the subject.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform 'handling' of a cup; plates are inanimate and typically remain stationary and do not manipulate other objects.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary decorative plate cannot perform the action of handling a metallic knob; plates do not manipulate objects.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a colander because it is inanimate and remains stationary; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a cutting board; plates are inanimate objects not capable of handling other objects.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot perform the action of handling a drawer; the subject/object roles and predicate are not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate itself cannot perform the action of handling an object such as a shelf; handling implies intentional action by a capable agent.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which is stationary and an inanimate object, cannot 'handle' a pot; the action is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is stationary and the bowl is steady and slightly tilted, so the plate is not handling the bowl; plates do not handle bowls logically.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is described as remaining stationary and cannot functionally handle a pot.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which is an inanimate object that remains stationary, cannot perform the action of handling cylindrical objects.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and is not capable of handling a chopping board, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of placing another object; it is inanimate and remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of removing a container; the subject/object roles and predicate do not align with physical capabilities.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "removing",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 36,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000050.json",
+    "total_relationships": 77
+  },
+  "relationships": [
+    [
+      1,
+      35,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      30,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      34,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "placing",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      14,
+      "turning",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      26,
+      "turning",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      19,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      28,
+      "handling",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      29,
+      "handling",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      32,
+      "handling",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      31,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      3,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      40,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      21,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      18,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      7,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      24,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      11,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      9,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      12,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      13,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      22,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      20,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      25,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      15,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      16,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      5,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      6,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      8,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      17,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      33,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "placing",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "removing",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000050"
+}

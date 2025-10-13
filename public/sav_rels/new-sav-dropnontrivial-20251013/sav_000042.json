@@ -1,0 +1,376 @@
+{
+  "activity_differential": [
+    "person climbing outdoor staircase",
+    "person interacting with top of staircase",
+    "person sitting on elevated structure"
+  ],
+  "description": "A person ascends a steep outdoor staircase structure, interacts with the top, and then sits down, while a quadcopter drone hovers and moves nearby. The scene is set on a mountainside with safety netting below.",
+  "place_env_id_name": "mountainside outdoor structure",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The quadcopter drone is described as navigating through the air and gliding effortlessly, implying it is flying and not resting on the step; thus, it cannot be accurately 'on top of' the step.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The drone is described as navigating through the air, implying it is flying rather than resting. Labeling it as 'on top of' a step contradicts its airborne state.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is airborne and does not rest 'on top of' a step; the spatial predicate is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is described as flying and gliding through the air, not resting on top of a signboard; 'on top of' implies physical contact and resting, which is unlikely in this context.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree is unlikely to physically contain a step, as steps are typically distinct, separate structures, making this spatial containment implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree normally does not contain a step; the containment relationship is implausible given the typical definitions and descriptions of both objects.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely that a tree contains a rectangular, detailed signboard within its structure; 'contains' relationship is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree cannot contain a streetlight; the spatial relationship 'contains' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are likely steps with similar attributes and spatial relation 'in front of' among steps is common and adds no significant new information.",
+      "label": "redundant",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are likely steps with similar attributes and orientation; stating one is 'in front of' the other is redundant and adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are similar 'step' objects with shared attributes; stating one is 'in front of' the other adds no meaningful new information and seems redundant.",
+      "label": "redundant",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A step cannot realistically be positioned 'above' a mountain, especially given the fixed horizontal and stable description of the step and the natural scale of the mountain.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone navigates through the air and does not 'stand on' objects, especially not a tree; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is flying and gliding through the air, making it unlikely or physically implausible for it to be 'sitting on' a tree; the relationship does not match the drone's described action state.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A drone does not have eyes or attention to 'look at' objects; it navigates via sensors but cannot 'look at' a hillside in the human sense.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone does not have attention or cognitive ability to pay attention to a hillside; thus, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mountain cannot functionally protect a quadcopter drone in flight; the relationship 'being protected by' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "being protected by",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "nontrivial_dropped_relationships": 17,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000042.json",
+    "total_relationships": 103
+  },
+  "relationships": [
+    [
+      1,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      15,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      17,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      9,
+      "contains",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "standing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      20,
+      "sitting on",
+      [
+        [
+          264,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "looking at",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      2,
+      "paying attention to",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      5,
+      "being protected by",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000042"
+}
