@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "chickens foraging together near a parked car",
+    "chickens moving around the car",
+    "camera observing chickens foraging"
+  ],
+  "description": "A red car is parked on a dirt roadside near a yellow building. Several chickens (an adult and chicks) are foraging and moving around the car. The camera remains mostly stationary, capturing the scene as the chickens move and forage.",
+  "place_env_id_name": "roadside near residential building",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, the wheel is behind the car door from the viewer's perspective; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wheel is typically in front of or on a curb, not behind it; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car door cannot be 'attached to' a curb; the curb is a fixed structure and the door is part of the car. The correct relation is that the car door is attached to the car, not the curb, so flipping subject and object may make the statement more plausible if the car door is attached to the curb is reinterpreted as the curb being attached to or near the car door. However, since this is spatial and not action, flipping is the best adjustment.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bird can be located to the left of a window, but a window cannot be to the left of a bird in this spatial context; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car door can be behind a window (e.g., a building window), but more plausibly, the window (on the car) is behind the car door from the viewer's perspective; flipping subject and object aligns with typical spatial relationships in this context.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The chair is likely behind the window from the viewer's perspective; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000039.json",
+    "total_relationships": 63
+  },
+  "relationships": [
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      21,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000039"
+}

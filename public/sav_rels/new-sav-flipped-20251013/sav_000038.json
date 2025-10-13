@@ -1,0 +1,712 @@
+{
+  "activity_differential": [
+    "family shopping together in supermarket",
+    "adult supervising children during shopping",
+    "child riding in crate while adults interact"
+  ],
+  "description": "A group of people, including adults and children, are shopping in a supermarket aisle. One adult pushes a shopping cart, a child sits in a crate, and another adult and child join them. The camera remains stationary, capturing the progression of the group as they move and interact.",
+  "place_env_id_name": "supermarket aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A floor cannot stand on a poster; reversing subject and object makes the relationship physically plausible as the poster stands on the floor.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor cannot be to the left of the tall metallic object; rather, the object is located on or above the floor, so flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The light fixture is likely positioned to the right of the floor area, so flipping the subject and object aligns with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor is a large stationary surface; it is physically implausible for the floor to be 'right of' the box. Rather, the box is on or right of the floor, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A floor cannot logically be 'right of' a vent cover; the vent cover is likely on or part of the floor, so reversing the relationship makes sense.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is described as standing upright on the floor, so the bottle is on the floor, not the floor right of the bottle; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A floor cannot be right of a bottle; the bottle is physically located on the floor and thus is right of the floor. Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent cover is located on the floor, so it is more logical to state that the vent cover is on the floor rather than the floor being right of the vent cover.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the drawer is right of the floor area; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is an object likely placed on the floor; it's more plausible that the bottle is to the right of the floor area rather than the floor being to the right of the bottle.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely positioned on or above the floor; saying the floor is right of the signboard is semantically incorrect. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically placed on or above an object (like a stand or frame), not under it. Flipping subject and object makes the spatial relation 'under' physically plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Kitchen utensils are likely under the poster, not the poster under the utensils; flipping the subject and object makes the spatial relation 'under' plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically hung below a light fixture; flipping subject and object aligns with natural spatial arrangement where the light fixture is above (over) the poster.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster cannot be spatially under a box; it's more plausible that the box is under the poster, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a poster on the wall, but a poster cannot be under a person; reversing subject and object aligns with spatial logic.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster cannot be under a crate; typically a poster is displayed on or above surfaces. Flipping the subject and object to 'crate under poster' is more plausible.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent cover is typically below a poster, so flipping subject and object correctly reflects the spatial relationship 'under'.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically inconsistent for a poster to be under a bottle; the bottle is likely on or in front of the poster, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is typically placed under a poster, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent cover is typically below a poster when the poster is mounted on a wall; flipping the relationship to 'vent cover under poster' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster cannot be under a drawer; more plausible is that the drawer is under the poster.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is physically placed under a poster, not the other way around; flipping the subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard has a downward-pointing arrow suggesting it is above the poster; flipping subject and object makes 'poster under signboard' correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fixed light fixture is unlikely to be right of a box on the same plane; typically, the box is right of the light fixture from the viewer's perspective, so flipping makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The light fixture is typically mounted above or near a person; describing it as 'right of person' is less plausible than the person being to the right of the fixture.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is typically mounted above or to one side, and a bottle on a surface is more plausibly described as being to the right of the light fixture, not the other way around; flipping subject and object aligns better with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "In typical left-right spatial descriptions, a person would be on the right of a box rather than a box being to the right of a person; flipping subject and object aligns the predicate correctly.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a bottle can be to the right of a box, but here the box is stated to be right of the bottle, reversing subject/object aligns better with spatial logic.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is more likely to be right of the crate rather than the crate being right of the bottle in the scene.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the bottle is right of the vent cover rather than the vent cover being right of the bottle; flipping subject and object aligns spatial description correctly.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is more plausibly to the right of the vent cover, not the vent cover to the right of the bottle; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is more likely to be right of the vent cover, reversing the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 33,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000038.json",
+    "total_relationships": 142
+  },
+  "relationships": [
+    [
+      4,
+      3,
+      "standing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      3,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      12,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      12,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      14,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      15,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      20,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000038"
+}

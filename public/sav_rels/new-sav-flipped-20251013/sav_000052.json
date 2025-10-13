@@ -1,0 +1,439 @@
+{
+  "activity_differential": [
+    "musicians performing live concert",
+    "audience cheering and recording performance",
+    "musicians collaborating on stage"
+  ],
+  "description": "A live concert performance is taking place on a stage with multiple musicians playing instruments, while an enthusiastic audience waves foam noisemakers and records the event with cell phones. The camera viewpoint moves closer to the stage as the performance progresses.",
+  "place_env_id_name": "concert arena",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the foam noisemaker, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foam noisemaker is likely behind the cell phone, so flipping the subject and object aligns the predicate 'behind' with the spatial arrangement.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the cell phone rather than the cell phone being behind the arm; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be 'left of' a cell phone, but it is less plausible that a cell phone is 'left of' a person; flipping subject and object makes the spatial relationship more natural.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description suggests the bench is stable and in a fixed position, while the cell phone is handheld and likely mobile; it is more plausible that the bench is left of the cell phone.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely to be to the left of the cell phone rather than the phone being left of the person, given the typical spatial arrangement and description.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cell phone is unlikely to be 'left of' a person; more plausible is the person is left of the phone, so flipping subject and object corrects spatial relation.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the cell phone is right of the crossbar, not the other way around, as the crossbar is a large fixed object and the phone is held upright nearby.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A crossbar being on top of a light fixture is less plausible than the light fixture being on top of or attached to the crossbar; flipping subject and object makes the spatial relationship more physically reasonable.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be right of a crossbar, not the crossbar right of the person; flipping subject/object aligns with usual spatial description.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be right of a crossbar, but the phrase 'crossbar right of person' is less plausible; flipping subject and object makes the spatial relationship meaningful as the person is right of the crossbar.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the description, the person is likely to be to the right of the crossbar, so flipping subject and object correctly reflects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A crossbar is unlikely to be 'right of' a person; it is more plausible that the person is right of the crossbar based on spatial context.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foam noisemaker is rotating and actively manipulated in front of a stationary speaker; it is more plausible that the speaker is behind the noisemaker, so flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description implies the cell phone is held upright and likely to the right of the stationary speaker; flipping subject and object aligns the spatial predicate 'right of' correctly.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cell phone is likely right of the bench, not the other way around; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cell phone is more likely to be right of the jacket, not the jacket right of the phone, so reversing subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foam noisemaker is dynamic and likely in front; the stationary speaker being behind is more plausible when subject and object are flipped.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The phone is held upright glowing and is likely positioned to the left of the speaker, so flipping subject/object makes \"phone right of speaker\" correct as originally stated.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket cannot perform music with a person; likely the person is performing music while wearing the jacket. Flipping subject and object makes the relationship semantically plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "performing music with",
+      "relation_type": "higher_order",
+      "subject_id": 14
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 20,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000052.json",
+    "total_relationships": 114
+  },
+  "relationships": [
+    [
+      4,
+      1,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "right of",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "behind",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "right of",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "performing music with",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000052"
+}

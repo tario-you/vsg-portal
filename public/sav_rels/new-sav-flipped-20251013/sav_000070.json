@@ -1,0 +1,397 @@
+{
+  "activity_differential": [
+    "people waiting for train on platform",
+    "people walking along platform",
+    "people sitting and waiting at subway station"
+  ],
+  "description": "A subway or train station platform with multiple people waiting, sitting, and walking. The camera remains mostly stationary, capturing the scene as people move along the platform and interact minimally.",
+  "place_env_id_name": "subway platform",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vent is under the rail, not the rail under the vent, given their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A train is typically in front of the rail when viewed; reversing subject and object aligns with realistic spatial arrangement where the rail is behind the train.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically installed in or above a rail structure rather than a rail being under a vent; reversing subject and object aligns the spatial relationship logically.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The train likely moves in front of the beam; flipping subject and object fits the spatial relation 'behind' correctly.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically installed on or in a beam or ceiling; saying the beam is under the vent is unlikely. Flipping subject/object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is likely under the beam, not the beam under the vent; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The train moves across the scene likely crossing the crosswalk, so the train is in front of the crosswalk, not vice versa; flipping subject/object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent can be positioned under a crosswalk, but the crosswalk being 'under' the vent is unlikely; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is usually positioned above a vent; flipping subject and object makes the spatial predicate 'under' logical.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically under or attached to a ceiling beam, not above it; flipping subject and object aligns with common spatial structure.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slender yellow line is more likely to be below the cylindrical object; flipping subject and object makes the spatial predicate 'under' plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line is typically painted on or above a rail, so the 'line' is on or over the 'rail', not under it. Reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line is likely on or above the beam rather than the beam being under the line; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line (likely on the ground) is under the train; reversing subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling beam is structurally above, so the yellow line is likely under the beam; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically fixed on a surface and a yellow line could be on or below that surface; saying the vent is 'under' the line is unlikely, reversing subject/object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "The beam is large and likely in the background, so it is more plausible that the beam is behind the vent. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is a small stationary object and cannot realistically be 'in front of' a large moving train; flipping subject and object better reflects that the train is in front of the vent.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000070.json",
+    "total_relationships": 115
+  },
+  "relationships": [
+    [
+      31,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      9,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      10,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      10,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      16,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      18,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      20,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      22,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      8,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      19,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      31,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      32,
+      "behind",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      32,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000070"
+}

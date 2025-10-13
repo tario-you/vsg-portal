@@ -1,0 +1,775 @@
+{
+  "activity_differential": [
+    "two people taking selfies in a shopping mall",
+    "two people conversing and shopping together",
+    "two people posing for photos in a decorated mall"
+  ],
+  "description": "A man and a woman are in a shopping mall, carrying bags and interacting. The man approaches the woman, they converse, and then take selfies together using a phone. The environment is decorated for the holidays, with Christmas trees and wreaths visible.",
+  "place_env_id_name": "shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The handbag cannot be below the tile floor; flipping the subject and object correctly expresses that the tile floor is below the handbag.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tile floor is below the jeans; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The handbag is above the tile floor, not the other way around; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Jeans are likely above the tile floor, not the opposite; flipping subject/object corrects the spatial relation 'above'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling is above the tiles, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the dress is right of the tile rather than the tile being right of the dress, given tiles generally form the floor beneath or beside clothing.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the dress is in front of the tile floor rather than the tile being in front of the dress.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The handbag is under the ceiling, not the ceiling under the handbag; reversing subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Jeans are under the ceiling, not the ceiling under jeans; flipping subject and object aligns with physical reality and the predicate 'under'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling cannot be under the tile; tiles on the floor are under the ceiling, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Garments are physically below the ceiling, so flipping subject and object makes the spatial predicate 'under' correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling cannot be under a frame; typically, the frame (e.g., a door or window frame) is under the ceiling. Reversing subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress is physically under a ceiling, so reversing subject and object makes the 'under' predicate correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wreath is under the ceiling; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The railing is physically under the ceiling, not the ceiling under the railing; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling is typically above the wall panel, so the wall panel is under the ceiling; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress is physically under a ceiling, not the ceiling under a dress; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Garments cannot be on top of the ceiling; more plausible is that the ceiling is on top of the garments.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a railing is positioned in front of a ceiling from a viewer's perspective, not the ceiling in front of the railing; flipping subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A large tile floor is likely beneath or in front of the frame; saying the frame is behind the tile is less plausible than the tile being behind the frame.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A frame typically cannot be 'on top of' a ceiling; instead, the ceiling is above the frame, so flipping the relationship makes 'ceiling on top of frame' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling is typically above or behind objects like a frame when viewed from below, not the other way around; flipping the relationship makes spatial sense.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wreath cannot be 'on top of' a ceiling; instead, the wreath is typically 'on' or hanging from the ceiling or something below it. Flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The handbag is moving and swaying, likely positioned in front of the rigid, static railing; thus, reversing subject and object makes 'handbag behind railing' a plausible spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "Physically, jeans can be behind a railing, not the railing behind jeans; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The railing is described as extending over the tiled floor, making it more plausible that the tile is behind the railing, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "Ceilings are typically above railings, so the railing being 'on top of' the ceiling is physically implausible; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the colorful garments are behind the railing, not the railing behind the garments; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling is above and behind the railing, so 'ceiling behind railing' is less plausible than 'railing behind ceiling' in spatial terms.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "Jeans are typically worn in front of or on a person in front of the wall panel; saying the wall panel is 'behind' the jeans is more physically plausible when flipped to jeans behind wall panel.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall panel cannot logically be on top of a ceiling since ceilings are generally above wall panels; reversing subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling is typically above or behind the wall panel, not the other way around, so flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress is likely spatially positioned on or in front of the tiled floor, so the tile is behind the dress; flipping subject and object aligns with this spatial reality.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling is behind the dress, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Garments cannot hold a handbag, but a person (missing here) could be holding a handbag; flipping subject and object makes the statement plausible if the handbag is held by someone associated with the garments.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Garments do not wear items; a wreath could be worn as decoration. Reversing subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 36,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000004.json",
+    "total_relationships": 146
+  },
+  "relationships": [
+    [
+      3,
+      1,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      15,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "holding",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      13,
+      6,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000004"
+}

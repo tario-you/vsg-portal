@@ -1,0 +1,456 @@
+{
+  "activity_differential": [],
+  "description": "",
+  "place_env_id_name": "",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person's hand is above them, not that the hand is above the person as an independent object.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shelf is likely in front of the can rather than the can being in front of the shelf based on physical layout; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is described as standing on or in front of the shelf; flipping the relationship makes 'shelf behind bottle' which is physically plausible and semantically correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Glasses are likely placed on the shelf, so the shelf is in front of the glasses is incorrect; reversing subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand is more plausibly behind a stationary signboard rather than the signboard being behind the hand; flipping subject and object aligns with typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the signboard rather than the signboard being behind the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically mounted on or in front of a pole, so the pole is more likely to be behind the signboard; flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is rotating in front, so it is physically plausible that it is in front of the signboard; flipping subject and object corrects the spatial relationship 'behind'.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is stationary and typically in front of objects to be seen; it is more plausible that the bottle is behind the signboard, so reversing the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pole is more plausibly behind a signboard rather than the signboard being behind a pole; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "Glasses are likely in front of the signboard, so flipping subject and object aligns with the spatial predicate 'behind'.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain is typically behind a signboard; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is likely behind the signboard rather than the signboard being behind the can; flipping subject and object aligns with typical spatial relationships observed.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is likely in front of the shelf, not behind it; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is described as in front of the shelf; flipping subject and object correctly reflects that the can is in front of the shelf, not the shelf in front of the can.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the bottle is behind the curtain, not the curtain behind the bottle, given typical scene arrangements.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "A can being behind a pole is less plausible than a pole being behind a can in typical scenes; flipping subject and object makes the spatial relationship more reasonable.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description indicates glasses are arranged in a row and the can is a prominent object; it is more plausible that the glasses are behind the can, so flipping subject and object makes the 'behind' relationship correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A can is typically placed on or in front of a shelf, not behind it. Flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain is more likely to be behind the can rather than the can being behind the curtain; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically behind a can (viewer perspective), but given the description, it is more reasonable that the can is in front of the signboard, so flipping subject and object aligns the spatial relation correctly.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 21,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000044.json",
+    "total_relationships": 160
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "above",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      11,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      27,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      29,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000044"
+}

@@ -1,0 +1,523 @@
+{
+  "activity_differential": [
+    "person cooking pancakes over open fire",
+    "person tending firewood for cooking",
+    "person frying food in pan outdoors"
+  ],
+  "description": "A person is cooking over an open fire using a pan, with logs as fuel. The person manipulates the firewood and tends to the cooking process, while pancakes are being fried in the pan.",
+  "place_env_id_name": "outdoor cooking area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a fabric would lie on top of a log, not below it; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pancake is typically below a fabric (e.g., on a pan) only if the fabric is above it, but the given relationship has fabric as subject and pancake as object; flipping subject and object corrects the spatial 'below' relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the pancake is under the fabric, but the given relationship states the fabric is under the pancake, which is unlikely; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log is more likely to be under fabric than the fabric being under the log, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Fabric cannot physically be 'under' a large stationary pot; more plausible that the pot is on or above the fabric, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The fabric is draped over a surface and thus likely below the rock; flipping subject/object makes the spatial relationship 'rock below fabric' more plausible as the rock may be under the fabric or on the same surface above it.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a pan is placed above a log (firewood) to cook. Saying the pan is 'below' the log is incorrect; flipping the subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pancake is below the pan, not the pan below the pancake; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pancake is in the pan, so the relationship 'pan under pancake' is incorrect; flipping subject and object to 'pancake under pan' aligns with the spatial reality.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pan sits atop the fire fueled by the log, so the log is under the pan, not the other way around; flipping subject and object fixes the predicate.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The flat circular object (food) is above the pan, not the pan above the food; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pot can contain a wheel-like object, but it is unlikely that a wheel contains a pot; reversing subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "containing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Fabric is typically on top of a wheel or wheel-shaped object, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pan can be on top of a wheel (e.g., a stove or cart), but a wheel being on top of a pan is implausible. Reversing subject and object fits the spatial arrangement better.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pancake cannot physically support a wheel on top; flipping the subject and object makes the relationship plausible, as a wheel could be on top of a pancake in an unusual context.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The rock is observed rotating and moving, making it unlikely to be under the stationary log; flipping subject and object makes 'rock under log' plausible.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wheel is typically above or on top of a log, not under it; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pancake is likely below the log rather than the log being below the pancake; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log being 'under' the wheel is unlikely given the descriptions; usually a wheel would be under a log, so flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pancake is typically below a log in physical space, so flipping subject and object makes the 'below' predicate correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pancake is cooking in the pan, so the pan is physically below the pancake; flipping subject and object makes the spatial relation 'above' correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wheel (object) is more likely to be inside or contained by the pot (subject); reversing subject/object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The fabric is described as being draped and lying over a surface, likely below the flat circular object; flipping the relationship makes the spatial predicate 'below' accurate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pan is below the flat circular object; flipping subject and object corrects the spatial 'below' relation.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 15
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 24,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000064.json",
+    "total_relationships": 116
+  },
+  "relationships": [
+    [
+      7,
+      3,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      6,
+      "containing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      14,
+      "inside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      15,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000064"
+}

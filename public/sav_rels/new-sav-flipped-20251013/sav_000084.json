@@ -1,0 +1,69 @@
+{
+  "activity_differential": [
+    "camera operator walking along sidewalk and street",
+    "camera documenting street environment",
+    "camera panning and moving through urban area"
+  ],
+  "description": "A camera moves along a sidewalk and street in an urban outdoor environment, capturing various static objects such as cars, manhole covers, stones, and a toy on the ground. A person is briefly visible walking across the street. The camera's movement is the main source of temporal change, as it pans and moves forward through the scene.",
+  "place_env_id_name": "urban street sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The car is likely positioned to the right of the stationary mailbox; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary manhole cover cannot be right of a moving car; the car is more likely right of the manhole cover, so flipping the relationship makes it spatially plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000084.json",
+    "total_relationships": 255
+  },
+  "relationships": [
+    [
+      2,
+      9,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000084"
+}

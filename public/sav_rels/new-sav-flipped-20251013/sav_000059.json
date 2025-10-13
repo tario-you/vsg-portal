@@ -1,0 +1,271 @@
+{
+  "activity_differential": [
+    "people waiting or resting on sidewalk at night",
+    "people sitting together near street",
+    "motorcycles passing by people on sidewalk"
+  ],
+  "description": "Two people are sitting on stools on a sidewalk at night, near a well-lit area with bushes, billboards, and street signs. Several motorcycles pass by on the street in the background. The environment is calm, with the people appearing to be waiting or resting.",
+  "place_env_id_name": "sidewalk street at night",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A lightbulb being behind a bush is unlikely since the lightbulb is described as dominant and suspended; it makes more sense that the bush is behind the lightbulb.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt (part of or worn by a person) is typically in front of or covering an object like a bush, not behind it. Flipping subject and object makes 'skirt behind bush' plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot be on top of a tall tree, but a bush can be on the ground beneath a tree; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stone block can be behind a billboard, not the other way around; flipping subject and object makes the spatial relation logical.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tarp is more plausibly under the stone block, not the other way around; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is likely sitting under or above the stone structure (footrest), so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a bush would be positioned in front of a flowerpot rather than the flowerpot being behind the bush; flipping subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot on top of a tree is implausible; typically, a tree is below or supporting a flowerpot if at all. Flipping the relationship to 'tree on top of flowerpot' is still unlikely, but flipping better fits the physical arrangement where the flowerpot is on the ground and tree above.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush is naturally under a tree, not the other way around; flipping subject and object aligns with common spatial hierarchy.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree cannot be under a lightbulb in a typical scene; it is more plausible that the lightbulb is under the tree.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt can be under a tree, not the other way around; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot cannot realistically be under a tall tree; more plausible that the flowerpot is under the tree.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000059.json",
+    "total_relationships": 66
+  },
+  "relationships": [
+    [
+      9,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000059"
+}

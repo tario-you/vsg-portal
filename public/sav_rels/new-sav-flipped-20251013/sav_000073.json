@@ -1,0 +1,342 @@
+{
+  "activity_differential": [
+    "child and adult walking together with toy gun box",
+    "workers shoveling snow and collaborating",
+    "pedestrians passing by parked SUV"
+  ],
+  "description": "A busy urban sidewalk scene outside a building with a red SUV parked. Multiple people, including a child and an adult carrying a toy gun box, walk past. Two workers in green vests are shoveling snow near a fence. The camera tracks the scene, panning as people move through the frame.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "An SUV cannot be below a roof; however, the roof is above the SUV, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot is physically below a person, not the other way around; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn below a person; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn above boots, so the correct spatial relationship is trousers above the boot; flipping subject and object fixes the relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically implausible for a stationary gate to be below a moving boot; flipping the relationship to 'boot below gate' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers would be below a gate, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a gate is below a roof, not the other way around; flipping subject and object makes 'roof below gate' incorrect, so the original relationship should be flipped to 'gate below roof'.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person wearing boots is plausible, making it logical that the person is above the boot, not the boot above the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers cannot be above a person; rather, a person is above trousers or wears them. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "Boot is positioned above trousers in the spatial relationship is unlikely; flipping subject and object correctly reflects that trousers are above boots logically.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The SUV is physically below the roof; flipping subject and object makes the spatial predicate 'above' correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a stationary SUV, not the SUV walking past a person. Flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot cannot independently walk past a person; the person is likely walking past the boot, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a fence, but a fence cannot walk past a person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 37
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person walking past a stationary fence is plausible, but the original statement places the fence as subject and 'walking past' the person, which is illogical; flipping fixes this.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 37
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000073.json",
+    "total_relationships": 85
+  },
+  "relationships": [
+    [
+      25,
+      1,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "below",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      9,
+      "below",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      37,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ],
+        [
+          336,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      37,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ],
+        [
+          336,
+          384
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000073"
+}

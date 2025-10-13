@@ -1,0 +1,313 @@
+{
+  "activity_differential": [
+    "group shopping in supermarket",
+    "group selecting and placing items in cart",
+    "group conversing while shopping"
+  ],
+  "description": "A group of people are shopping in a supermarket aisle, interacting with shopping carts and baskets, and moving through the space. The camera is panning and tracking the group as they shop and interact.",
+  "place_env_id_name": "supermarket aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The stacked cylindrical objects are likely placed on or over the box, not under it; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The box is likely under the stack of bags; reversing subject and object fixes the spatial relationship 'under'.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The box is likely under the cylindrical objects (bags), so flipping the subject and object makes the 'under' relationship correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arrow sign points right but is described as 'left of' the box, suggesting the box is actually to the left of the arrow sign; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arrow sign is suspended in the air pointing right, likely above or directing towards the signboard; thus, the signboard is under the arrow sign, reversing subject and object makes the spatial 'under' relation correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arrow sign is suspended in the air and likely points to or is near the pipe, making it improbable that the sign is under the pipe. Flipping the subject and object aligns the spatial relation properly, indicating the pipe is under the arrow sign is more plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the box is under the arrow sign, not the other way around, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arrow sign is described as suspended in the air and pointing right, while the box is stable below. It's more plausible that the box is under the arrow sign, not the other way around.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The box is likely under the arrow sign; flipping subject and object aligns with the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arrow sign being 'under' a box is unlikely; flipping subject and object makes sense if the box is under the arrow sign.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arrow sign suspended in the air cannot be 'under' a box; likely the box is under the arrow sign, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A box is unlikely to be under a tall vertical pipe; flipping subject and object to state the pipe is under the box is physically more plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given both are boxes described with detailed designs, it is more plausible that the second box is under the first, not the first under the second; flipping corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given both objects are boxes with detailed descriptions, it is more plausible that the box currently labeled as object 23 is under the box labeled as object 9. Flipping the subject and object corrects the spatial relationship description.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 14,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000104.json",
+    "total_relationships": 171
+  },
+  "relationships": [
+    [
+      23,
+      4,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      4,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000104"
+}

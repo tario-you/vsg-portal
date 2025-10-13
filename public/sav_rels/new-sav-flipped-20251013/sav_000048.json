@@ -1,0 +1,212 @@
+{
+  "activity_differential": [
+    "person giving a speech or presentation",
+    "person hosting or emceeing an event",
+    "person addressing an audience with a microphone"
+  ],
+  "description": "A person in formal attire is speaking and gesturing with a microphone on a red carpet, likely addressing an audience at an indoor event with several other people present in the background.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A person is typically above a wall base rather than the wall being above the person; flipping subject and object makes the spatial predicate 'above' plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking on or over the mat, so the person is 'on' or 'above' the mat; flipping subject and object corrects the spatial 'under' predicate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot be 'under' a large wall; rather, the mat is on the floor beneath or in front of the wall, so flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is more plausibly behind a curtain than the curtain being behind the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is under the microphone, not that the microphone is under the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A step being 'under' a person is more accurately described as the person 'on' or 'over' the step; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person walking is more likely to be behind a carpet rather than a carpet behind a person; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely behind the carpet from the viewer's perspective; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand typically belongs to a person, so the person is likely behind the hand, not the hand behind the person; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 26
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 9,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000048.json",
+    "total_relationships": 73
+  },
+  "relationships": [
+    [
+      9,
+      16,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "behind",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "behind",
+      [
+        [
+          144,
+          192
+        ],
+        [
+          240,
+          240
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000048"
+}

@@ -1,0 +1,418 @@
+{
+  "activity_differential": [
+    "people shopping in grocery store",
+    "people browsing products on shelves",
+    "people navigating grocery store aisle"
+  ],
+  "description": "A grocery store aisle with multiple people shopping, several shopping carts, and shelves stocked with various products. The camera slowly pans or shifts position, capturing the activity and layout of the store.",
+  "place_env_id_name": "grocery store aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A bottle is unlikely to be 'left of' a shelf; rather, the shelf is left of the bottle, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is typically placed on or to the left of a shelf, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is likely on or to the right side of the shelf, so 'left of' is correct if the subject is the shelf and object is the bottle; flipping fixes the spatial relation.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle can be under a shopping cart, but the current subject/object order implies the cart is under the bottle; flipping fixes the spatial relation to be physically plausible.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shopping cart cannot realistically be under a cardboard box; it is more plausible that the cardboard box is under the shopping cart.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shopping cart cannot be under a plastic bag suspended in mid-air; flipping subject and object makes 'plastic bag under shopping cart' plausible.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle is typically under a shopping cart only if the bottle is on the floor beneath it; given the descriptions, it's more plausible that the bottle is under the cart rather than the cart being under the bottle, so flipping subject and object clarifies the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cardboard box can be under a shopping cart, but a shopping cart under a cardboard box is unlikely. Reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag could be under a shopping cart, not vice versa; flipping the subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle stands upright on or inside the box, so the box is under the bottle; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle being under a shelf is less plausible than a bottle on a shelf; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag can be under a bottle, but the relationship states the bottle is under the plastic bag, which is less plausible; flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shelf is typically positioned under a box, not the other way around; flipping subject and object makes the spatial predicate 'under' correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plastic bag is described as being suspended mid-air above the box, so the bag is more plausibly 'over' the box, not 'under'; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plastic bag is described as suspended above, while the shelf is stationary below; 'plastic bag under shelf' is incorrect, flipping subject and object makes 'plastic bag under shelf' into 'shelf under plastic bag,' which matches the physical arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the bottle to be left of the shelf rather than the shelf being left of the bottle, as shelves typically remain fixed and bottles are arranged on them.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the shelf is described as stationary and the bottle as upright, it is more plausible the bottle is to the left of the shelf; flipping subject and object reflects correct spatial relation.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is described as upright on the shelf, so the shelf is likely 'over' the bottle is incorrect; flipping makes sense as the bottle is on the shelf.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shelf is above the bottle, not the bottle above the shelf; flipping subject and object makes the spatial predicate 'over' correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 19,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000083.json",
+    "total_relationships": 195
+  },
+  "relationships": [
+    [
+      12,
+      3,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      11,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      14,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      14,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      40,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      40,
+      "over",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000083"
+}

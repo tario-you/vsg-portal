@@ -1,0 +1,565 @@
+{
+  "activity_differential": [
+    "people collaboratively installing a banner",
+    "people adjusting a banner using a ladder",
+    "people working together to hang a banner in the rain"
+  ],
+  "description": "Three people are collaboratively installing or adjusting a large vertical banner on the exterior of a building using a ladder. One person is climbing and working at the top of the ladder, another is stabilizing the ladder and managing the banner at the bottom, and a third person appears on the balcony to assist. An umbrella is briefly used, likely to shield from rain.",
+  "place_env_id_name": "building exterior",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically located in front of a door, not the door in front of the awning; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person standing on a ladder is more likely below the door rather than the door being below the person; flipping corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically displayed on or above a door, not below it; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A beam is typically an architectural element that can be in front of a door, not the door in front of a beam; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "An umbrella, being a small object, can be in front of a large door, but a door cannot be in front of an umbrella; reversing subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shopping bag cannot be above a door, but a door is typically above or behind a shopping bag; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The string is described as extending across the scene maintaining tension, likely positioned above or across the door; reversing subject/object makes 'string below door' plausible.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A window is typically above a door, so flipping the subject and object makes the spatial relation 'below' correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely positioned on or behind the door, so flipping subject and object to 'signboard behind door' aligns better with physical and spatial plausibility.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The window is above the door, so 'window below door' is incorrect; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person standing on a ladder is more likely below the large door than the door being below the person; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster cannot be under a person; more plausibly, the person is under the poster in the scene.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Since the person is standing on a ladder, they are likely above the poster, making 'person below poster' incorrect; flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically placed on or above a door or panel, not below it; flipping the relationship to 'door or panel below poster' is more plausible.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a poster would be hung above a shopping bag, not below it; flipping subject and object aligns the spatial relation more plausibly.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A string is typically below or under a poster if tensioned above it; reversing subject and object makes the spatial relation logical.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically displayed below a window, not the window below a poster; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the signboard is behind the poster rather than the poster being behind the signboard, given typical arrangements of posters and signboards.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is usually displayed below a window, not the other way around; flipping subject and object makes the spatial relation 'below' correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely below the poster rather than the poster being below the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is ascending the ladder, which suggests the person is in front or on the ladder rather than the ladder being behind the person; flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is on the ladder, so the person is above the ladder, not below; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is on the ladder, so the person is above the ladder, not below it. Flipping subject and object corrects the spatial predicate 'below'.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person standing on a ladder is likely below the signboard, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is described as affixed to a stable structure, likely above or beside the door or panel. It is more plausible that the door or panel is below the signboard, so flipping subject and object corrects the 'below' spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is described as affixed to a stable structure and likely positioned above, while the shopping bag stands upright below; flipping subject and object corrects the spatial 'below' predicate.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000100.json",
+    "total_relationships": 116
+  },
+  "relationships": [
+    [
+      10,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      4,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      4,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      4,
+      "behind",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "below",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      4,
+      "below",
+      [
+        [
+          168,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      7,
+      "behind",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      7,
+      "below",
+      [
+        [
+          144,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      7,
+      "below",
+      [
+        [
+          168,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      6,
+      "below",
+      [
+        [
+          168,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      21,
+      "below",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      21,
+      "below",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      21,
+      "below",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000100"
+}

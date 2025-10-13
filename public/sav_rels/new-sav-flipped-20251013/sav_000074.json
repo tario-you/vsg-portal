@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "people loading and securing boxes into car",
+    "people collaborating to tie down cargo",
+    "people working together in warehouse"
+  ],
+  "description": "Two people are collaboratively loading and securing large cardboard boxes into the trunk of a car in a warehouse or storage environment. They use ropes or cords to tie down the boxes, working together throughout the sequence.",
+  "place_env_id_name": "warehouse",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is right of the bucket (static object) rather than the bucket being right of the moving person; flipping subject and object aligns with typical spatial descriptions.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A smaller box containing a larger cardboard box is illogical; flipping subject and object makes sense since the large cardboard box likely contains the smaller box.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A label is typically affixed to a box, not positioned to the right of it; flipping subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is right of the stationary cardboard box, reversing subject and object aligns with typical spatial descriptions.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "The label is affixed to the cardboard box, making it more accurate to say the label is on or part of the box rather than the box being 'right of' the label; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "The label is likely affixed on the box, so the label should be above the box rather than the box being above the label.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "flip",
+      "explanation": "A label is typically attached to a box; thus, the label is on (or part of) the box, not to the left of it. Reversing subject/object aligns the spatial relation correctly.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "A label is typically attached to the cardboard box, so the box is not 'left of' the label; flipping subject and object correctly represents that the label is on the box.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000074.json",
+    "total_relationships": 153
+  },
+  "relationships": [
+    [
+      32,
+      23,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      24,
+      "contains",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      24,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      33,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      33,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      35,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      31,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      30,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000074"
+}

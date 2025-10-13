@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "child running toward SUV",
+    "camera moving along street and focusing on vehicles",
+    "camera observing street environment"
+  ],
+  "description": "A child is seen running in a sandy outdoor area near a black SUV, with the camera following the scene and approaching the vehicles. The child is only present in the first frame, while the camera moves closer to the SUV and then toward the street, capturing various vehicles and street elements.",
+  "place_env_id_name": "outdoor street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the foot is right of the child, not the other way around, making it necessary to flip the subject and object for the spatial predicate 'right of' to be correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A 'foot' typically belongs to a 'child', and the child's position can be left of the foot, not the foot left of the child. Flipping subject and object aligns the spatial relationship realistically.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foot is below the large circular object, not the other way around; reversing subject and object aligns with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be on the left of a stationary table, but not the table left of a walking child; flipping subject/object fits the physical scenario.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is under the tent, not the tent under the child, so reversing the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is likely to be left of the tank, reversing subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is logically behind the wire from the viewer's perspective, so flipping subject and object makes the 'behind' relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be under (below) a tall structure, but the given relationship incorrectly states the structure is under the child. Flipping subject and object corrects this spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is moving and can be positioned left or right of the stationary signboard, but it is more plausible to say the child is 'left of' the signboard if the child is on the left side; flipping makes 'child left of signboard' accurate and meaningful.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is left of the door, not the door left of the child, given the child's movement and typical spatial reference points.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot alone cannot run toward a child; it is more plausible that the child is running toward the foot (or the person to whom the foot belongs). Flipping subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "running toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000032.json",
+    "total_relationships": 78
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "behind",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "left of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "running toward",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000032"
+}

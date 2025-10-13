@@ -1,0 +1,565 @@
+{
+  "activity_differential": [
+    "person preparing a fruit bowl",
+    "person transferring fruit between bowls",
+    "person handling and pouring fruit"
+  ],
+  "description": "A person is transferring grapes and strawberries from one bowl to another on a table in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the strawberry is under the hand, not the hand under the strawberry, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe is more plausibly under the hand than the hand under the pipe; flipping subject and object aligns with physical context.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is likely under the hand, not the hand under the strawberry; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bowl is inside the refrigerator door, not the door inside the bowl; reversing subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside the bowl, so it is not 'left of' the bowl; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside the bowl, so the strawberry is under the bowl is incorrect; flipping to 'bowl under strawberry' makes no sense, but 'strawberry under bowl' should be reversed as 'bowl contains strawberry'; thus flipping subject and object corrects the spatial relation conceptually.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe is likely located above the bowl rather than under it; flipping aligns the 'under' predicate with physical reality.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside or on the bowl, so the strawberry is not 'under' the bowl; flipping the subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand is more likely to be contained within or inside a cabinet door (e.g., cabinet interior) rather than the cabinet door itself containing a hand; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Cabinet doors are typically positioned to the left of refrigerator doors; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A grape is more likely to be below a cabinet door than vice versa; flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bowl is likely below the cabinet door, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is likely positioned to the right of the cabinet door, so flipping subject and object correctly aligns the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strainer is likely to be right of the cabinet door; flipping subject and object aligns the spatial relation with their described positions.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is part of the refrigerator; it is plausible that the door is right of the refrigerator, not the other way around.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is typically above a refrigerator, not the other way around; flipping subject and object makes the 'above' spatial relation correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is unlikely to be right of a cabinet door; more plausible the cabinet door is right of the bowl based on typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is part of the refrigerator and cannot be to the left of it; flipping subject and object makes 'refrigerator left of refrigerator door' plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cabinet door is likely behind the strainer, not the other way around; reversing subject and object aligns the spatial relationship with the scene.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the grape is below the cabinet door rather than the cabinet door being below the grape; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cabinet door being inside a door (uncertain) is unlikely; flipping subject and object aligns with typical spatial relationships where a door is part of or inside a cabinet door frame.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is likely holding or supporting the strawberry, so 'strawberry on top of hand' is reversed to 'hand on top of strawberry' to maintain correct spatial relation with 'on top of'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is likely on top of the pipe rather than the pipe being on top of the hand; flipping subject and object restores physical plausibility.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is typically placed on top of a pipe, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is on top of the hand, so flipping subject and object better matches the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A strawberry being inside a refrigerator door is unlikely; more plausible the strawberry is inside or on the refrigerator (or its interior), flipping subject/object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000025.json",
+    "total_relationships": 99
+  },
+  "relationships": [
+    [
+      14,
+      1,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "under",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "inside",
+      [
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "under",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "contains",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "inside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "on top of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "on top of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "inside",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000025"
+}

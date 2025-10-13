@@ -1,0 +1,502 @@
+{
+  "activity_differential": [
+    "motorcyclists riding along sidewalk",
+    "camera tracking motorcyclists",
+    "motorcyclists passing and interacting briefly"
+  ],
+  "description": "A sequence of motorcyclists ride their scooters along a tiled sidewalk in an urban environment with skyscrapers, trees, and parked bicycles. The camera pans and tracks the movement of the riders as they enter and exit the frame.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "An awning is above and a motorcycle is typically below it; flipping subject and object makes 'motorcycle on top of awning' into 'awning on top of motorcycle', which is physically implausible. Therefore, flipping the relationship to 'awning on top of motorcycle' is not correct. Since 'motorcycle on top of awning' is false and the reverse is also false, the original is implausible. However, flipping the predicate and object makes more sense with awning being above motorcycle, so flipping is appropriate for spatial correctness.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car can be above and a motorcycle under spatially in a road scene, but the predicate 'under' is more plausible when the car is the subject and motorcycle the object.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically installed on or attached to a building, not the other way around; reversing the subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically implausible for a skyscraper to be under a car; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the bicycle is in front of the skyscraper, rather than the skyscraper being in front of the bicycle.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely in front of the skyscraper, not the other way around; flipping subject/object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a tree would be in front of or beside a skyscraper rather than a skyscraper being behind a tree; flipping the subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the tree is behind the skyscraper rather than the skyscraper being behind the tree given their relative sizes and typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the bicycle is behind the skyscraper rather than the skyscraper behind the bicycle due to their relative sizes and physical context.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tile surface is likely on the ground and the skyscraper is behind it; flipping subject/object aligns with correct spatial positioning.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is plausibly in front of the skyscraper, so flipping subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the tree is behind the building rather than the building behind the tree, given typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bicycle is likely in front of the building, so flipping the subject and object makes the spatial relationship 'behind' accurate.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Tiles form a surface on the ground and the building is likely behind them; reversing subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bicycle can be positioned behind a tree, but saying the tree is behind the bicycle is unlikely; flipping subject and object makes the spatial relationship more plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree is unlikely to be behind tiles on a ground surface; rather, the tiles are likely behind the tree.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely behind the tree, not the tree behind the signboard; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers can realistically be right of tiles, but a tile is unlikely to be right of sneakers; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car can be under an awning, but an awning being under a car is physically implausible; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A motorcyclist can follow a motorcycle, but a motorcycle cannot follow a motorcyclist; flipping subject and object corrects the predicate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A motorcyclist rides and passes a motorcycle; reversing subject and object makes the 'passing' predicate meaningful and physically plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "passing",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the motorcyclist is riding alongside the motorcycle, not that the motorcycle is riding alongside the motorcyclist.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "riding alongside",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A motorcyclist can glance at a motorcycle, but a motorcycle cannot look at the motorcyclist; flipping subject and object restores a plausible attentional relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 23,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000031.json",
+    "total_relationships": 85
+  },
+  "relationships": [
+    [
+      11,
+      2,
+      "on top of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "under",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "on top of",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "under",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "in front of",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "in front of",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      10,
+      "right of",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "following",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "passing",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "riding alongside",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      2,
+      "glancing at",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000031"
+}

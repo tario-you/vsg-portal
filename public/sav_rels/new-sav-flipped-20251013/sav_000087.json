@@ -1,0 +1,229 @@
+{
+  "activity_differential": [
+    "people walking and conversing in hallway",
+    "people approaching and waiting for elevator",
+    "people passing each other in office corridor"
+  ],
+  "description": "A group of people are walking and interacting in a modern hallway with glass panels and doors. Some people are moving toward the elevator area, some are conversing, and others are walking away from or toward the camera. The camera remains stationary, capturing the flow of people through the corridor.",
+  "place_env_id_name": "office hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be positioned right of a door, not the door right of a person; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor lamp is likely positioned in front of the door, not the other way around, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat rack is taller and more logically stands right of the smaller object; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is described as walking steadily forward, while the object is stationary; it is more plausible that the person is standing right of the object rather than the object standing right of the person.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking and the lamp is stationary; it is plausible for the person to be behind the floor lamp, not the lamp being behind the person.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door cannot walk toward a person; flipping subject and object makes 'person walking toward door' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door cannot walk toward a person; flipping subject and object to 'person walking toward door' makes sense.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk toward a door, but a door cannot walk toward a person. Reversing subject and object makes the predicate 'walking toward' plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A column cannot physically walk away from a person, but a person can walk away from a column; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A column cannot walk toward a person; reversing subject and object makes the predicate plausible as the person is walking toward the column.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 18
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 10,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000087.json",
+    "total_relationships": 130
+  },
+  "relationships": [
+    [
+      6,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      3,
+      "walking toward",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      18,
+      "walking away from",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      18,
+      "walking toward",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000087"
+}

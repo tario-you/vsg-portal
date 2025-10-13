@@ -1,0 +1,602 @@
+{
+  "activity_differential": [
+    "people walking together in a mall corridor",
+    "camera following people through a commercial area",
+    "people socializing and moving in a public indoor space"
+  ],
+  "description": "A camera moves through a brightly lit indoor commercial corridor, likely a mall or food court, following two people walking together. Other people are present, some standing, some sitting, and some interacting with their surroundings. Multiple television screens and signboards are visible. The scene is dynamic, with people walking, pausing, and interacting in small groups.",
+  "place_env_id_name": "mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A runner (rug) is likely below the person, not the person below the runner; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn by the person, so the trousers would be in front of the person, not the other way around; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The runner (a floor object) is below the person, so flipping the relationship to 'runner below person' is correct.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is typically below the counter in vertical space; flipping subject and object better fits the spatial predicate 'below'.",
+      "label": "flipped",
+      "object_id": 40,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a lamp, but a lamp being under a person is physically unlikely; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lamp cannot be under a person; it is more plausible the person is under the lamp.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be behind a mural, but the mural cannot be behind a person; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mural is static on a wall and cannot be behind a moving person. The person is likely behind the mural (e.g., in the scene), so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lamp can be positioned in front of a mural and the mural can be behind the lamp, reversing subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking forward and the trousers are part of the person\u2019s clothing; thus, the person is not behind the trousers but the trousers are behind the person when considering spatial relation from the person\u2019s perspective.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers do not typically exist independently behind a person; the person wearing the trousers is behind the trousers in the spatial relationship, so flipping subject and object makes the predicate 'behind' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is physically behind the television; flipping subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely physically behind the television, not the television behind the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the pipe rather than the pipe being behind the person; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is more likely to be above or near the signboard than the signboard being above the person; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is physically above the pole rather than the pole above the person; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely above the pole in spatial terms, not the pole above the person; flipping subject and object aligns better with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lamp emitting light is typically located above the pole; flipping the relationship to 'lamp above pole' fits the spatial and physical context better.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely above the runner (a fabric object like a carpet), not the runner above the person; reversing subject and object corrects spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A runner (a rug) cannot be above a person walking; it is more plausible that the person is above the runner on the floor.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lamp is the source of light and likely positioned above the runner; flipping subject and object makes 'lamp above runner' a spatially reasonable relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is above the counter is physically implausible; reversing subject and object to 'person above counter' better fits the predicate 'above'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be above a counter if standing on it or something higher; the current statement with the counter above the person is unlikely. Flipping subject and object makes the relationship more plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lamp is typically located above a counter, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "A gate is stationary and cannot approach a person, but a person can approach a gate; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A gate cannot approach a person; it is the person who can be approaching the gate. Reversing subject and object aligns with plausible motion.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is moving toward the gate, so the correct relationship is that the gate is being approached by the person; flipping subject and object aligns with the predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 27,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000072.json",
+    "total_relationships": 134
+  },
+  "relationships": [
+    [
+      18,
+      1,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      26,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      39,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      12,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      18,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      40,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "approaching",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "approaching",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      2,
+      "being approached by",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000072"
+}

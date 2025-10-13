@@ -1,0 +1,191 @@
+{
+  "activity_differential": [
+    "child playing drum with toy mallets",
+    "child performing musical activity",
+    "child engaged in rhythmic play"
+  ],
+  "description": "A child is sitting in a living room, energetically playing a drum with two toy mallets, while the camera moves closer for a better view.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The toy is likely held in the child's left hand, so flipping subject and object makes the spatial predicate 'in left hand of' correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in left hand of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is described as manipulating or exploring the toy, making it more plausible that the child is holding the toy, so flipping subject and object fits the predicate 'holding'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vibrant yellow toy is under the drum rather than the drum being under the toy, given typical physical arrangements and the descriptions provided.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The suitcase is upright and the drum is likely above or on top of it; flipping subject and object makes the 'under' relationship spatially accurate.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The door is more likely to be in front of the wall panel rather than the reverse, flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is described as holding or interacting with the toy, not the toy holding the child; flipping subject and object aligns with the plausible scenario.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The subject is described as a toy being swung or tossed, which suggests a person or hand would be holding the toy rather than the toy holding the sports ball. Flipping to have the sports ball holding the toy is also unlikely, so flipping subject and object improves plausibility.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A toy striking a child is unlikely; more plausible is that the child is striking or interacting with the toy, so reversing subject and object makes sense.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000011.json",
+    "total_relationships": 55
+  },
+  "relationships": [
+    [
+      3,
+      2,
+      "in left hand of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "holding",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "holding",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      3,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      3,
+      "striking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000011"
+}

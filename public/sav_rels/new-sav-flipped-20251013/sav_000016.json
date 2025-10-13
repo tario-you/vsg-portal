@@ -1,0 +1,166 @@
+{
+  "activity_differential": [
+    "child catching and holding rooster",
+    "child interacting with rooster in garden",
+    "camera panning through farmyard and garden"
+  ],
+  "description": "A rooster is present in a fenced outdoor area with logs, poles, trees, and tarps. The camera pans from the rooster's enclosure to a garden area, where a child is later seen holding the rooster, likely after catching it. The child interacts with the rooster and green gloves, while the camera continues to move through the environment.",
+  "place_env_id_name": "farmyard",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A log is typically under a tree, not the other way around; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pole is more plausibly under the log when flipped, as logs typically rest on or above poles rather than being under them.",
+      "label": "flipped",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log is standing upright under the tall tree; reversing subject and object fits the spatial predicate 'under' correctly.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pole is upright and slender; it is more plausible that the log is under the pole, not the other way around.",
+      "label": "flipped",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log cannot be under a tree, but a log is typically found on or under a tree; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A block is unlikely to be under a tall tree in a spatial hierarchy sense; more plausible that the tree is over or above the block, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pole standing upright is more likely to be above or on the block rather than the block being under the pole; flipping subject and object makes the spatial predicate 'under' accurate.",
+      "label": "flipped",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 7,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000016.json",
+    "total_relationships": 136
+  },
+  "relationships": [
+    [
+      11,
+      3,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      3,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      5,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      9,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000016"
+}

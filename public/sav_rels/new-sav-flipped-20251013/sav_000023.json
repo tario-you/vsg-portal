@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "vehicles traversing urban tunnel and road",
+    "camera vehicle following van through underpass",
+    "urban traffic moving through tunnel and onto open road"
+  ],
+  "description": "A van is driving through an urban underpass and tunnel, followed by another van, with several cars and a motorcycle appearing as the vehicles progress along a winding road. The camera, mounted inside or on a vehicle, moves forward, following the van and tracking the road as the scene transitions from underpass to open road.",
+  "place_env_id_name": "urban road and tunnel",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A road being 'left of' a fence is unlikely; more plausible that the fence is to the left of the road, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curb is usually in front of or below a structure like a bridge, so flipping subject and object makes 'structure behind curb' plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A billboard is typically elevated and above a curb, not under it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A billboard is typically positioned above or on a structure, not under it; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fence is typically below a billboard, not the other way around; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard likely stands to the right of the tunnel entrance, so flipping the subject and object makes the 'right of' spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The van is likely right of the wall; flipping the subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A van can approach a billboard but the billboard cannot approach the van; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 36
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000023.json",
+    "total_relationships": 129
+  },
+  "relationships": [
+    [
+      6,
+      3,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      21,
+      "right of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      36,
+      "approaching",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000023"
+}

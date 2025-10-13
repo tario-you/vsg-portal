@@ -1,0 +1,355 @@
+{
+  "activity_differential": [
+    "cats grooming and playing with toys",
+    "cats exploring and interacting with environment",
+    "cats taking turns on table and approaching camera"
+  ],
+  "description": "A white cat is initially on a table, grooming and interacting with a toy. Later, a gray cat appears, climbs onto the table, and approaches the camera. The cats are engaged in self-grooming, play, and exploration in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A blanket typically lies on top of a cat, not the other way around; flipping subject and object makes the relationship semantically and physically plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is likely located under the cabinet, not the cabinet under the vacuum cleaner; flipping makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the dishwasher is to the right of the cabinet; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a cabinet is positioned in front of a wall, not the other way around; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cabinet door is part of a cabinet; it is more logical that the cabinet door is right of (or attached to) the cabinet, so flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a smaller object like a pot is right of a larger object such as a cabinet; flipping subject and object aligns the spatial relationship plausibly.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the furniture is right of the cat, not the cat right of the furniture; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vacuum cleaner can be under a cabinet door, but the cabinet door cannot realistically be under the vacuum cleaner; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is located under the table, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is likely under the wooden beam, not the other way around. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the vacuum cleaner is under the wall, not the wall under the vacuum cleaner; flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cabinet door is typically part of the cabinet, so the cabinet door cannot be 'left of' the cabinet; flipping subject/object to 'cabinet left of cabinet door' is more plausible in physical context.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The table is typically above the vacuum cleaner, so flipping subject and object makes the predicate 'over' spatially correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pot is likely to be to the right of the dishwasher rather than the dishwasher being right of the pot; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the pot is on the table or to the right of it; 'left of' relation likely needs flipping to describe that the table is left of the pot.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is likely on or near the table; saying the bottle is 'left of' the table is less plausible than the table being left of the bottle.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 16,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000051.json",
+    "total_relationships": 140
+  },
+  "relationships": [
+    [
+      18,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000051"
+}

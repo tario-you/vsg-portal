@@ -1,0 +1,208 @@
+{
+  "activity_differential": [
+    "people walking and carrying goods in a busy market",
+    "camera moving through and overtaking people in a crowded outdoor market",
+    "individuals transporting items and interacting in a public space"
+  ],
+  "description": "A busy outdoor market scene with multiple people walking, carrying items, and the camera moving forward through the crowd. Some individuals are carrying large loads on their heads or in their hands, and the camera weaves through the market, passing by and overtaking people.",
+  "place_env_id_name": "outdoor market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The umbrella is physically closer and the cloud is in the sky behind; flipping subject and object makes the spatial relationship 'umbrella behind cloud' correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag is likely in front of a cloud from the viewer's perspective; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A headscarf is worn by a person, so the person should be the subject and the headscarf the object; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A headscarf cannot be 'left of' a person as an independent object, but the person can be left of the headscarf if interpreted as spatial surroundings; flipping subject/object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically installed above objects like poles, not above the pole itself. Flipping subject and object produces a more plausible relationship where the telephone pole is above the awning.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The skirt is described as worn by the person, so the person can be left of the skirt spatially, not the skirt left of the person.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, an awning is below a telephone pole rather than the pole being below the awning; flipping subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically positioned below or attached to a wall, not the other way around; flipping subject and object corrects the spatial relation 'below'.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person holds or carries an umbrella, so it is more accurate that the person is 'in front of' the umbrella rather than the umbrella being in front of the person.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 9,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000069.json",
+    "total_relationships": 134
+  },
+  "relationships": [
+    [
+      20,
+      4,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000069"
+}

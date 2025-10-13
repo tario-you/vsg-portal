@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "dogs foraging and exploring sidewalk",
+    "dogs sniffing and moving along sidewalk",
+    "dogs interacting and moving near each other"
+  ],
+  "description": "Three small dogs are exploring and sniffing around a sidewalk and grassy area near a road. The dogs move independently, occasionally approaching or moving away from each other, and are engaged in foraging-like behavior. The camera slowly pans to follow the dogs' movement along the sidewalk.",
+  "place_env_id_name": "sidewalk near road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A dog is more plausibly behind a road rather than a road being behind a dog; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dog can be behind a road, but saying the road is behind the dog is less plausible; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The radio tower is physically above the road, not below it; flipping subject and object aligns with the spatial reality.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bird is typically above a road, not below; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the radio tower, so the bird is 'on' or 'above' the tower, not 'below' it; flipping the subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the tower, so the tower is below the bird, making 'bird above tower' incorrect; flipping subject and object fixes the spatial predicate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000085.json",
+    "total_relationships": 72
+  },
+  "relationships": [
+    [
+      2,
+      6,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000085"
+}

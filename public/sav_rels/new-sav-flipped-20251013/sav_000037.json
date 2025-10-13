@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "people walking and conversing in a shopping mall corridor",
+    "people approaching and using escalator",
+    "people reading signboards and interacting with displays"
+  ],
+  "description": "A shopping mall corridor with several people walking, some interacting with displays, and the camera moving forward through the space. The environment includes escalators, signboards, and storefronts.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A column standing on top of a railing is unlikely; more plausible is the railing being on top of the column or the column supporting the railing, so flipping subject and object fixes the spatial predicate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The railing is typically above the carpet, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a railing is on top of a balcony, not the balcony on top of the railing; reversing subject and object makes the spatial relationship physiologically plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench being 'on top of' a railing is unlikely; typically a railing is 'on top of' or attached to a bench or similar structure. Reversing subject and object makes the relationship more plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tall, rectangular object is unlikely to be 'on top of' a railing; rather, the railing is an elevated structure on which an object could rest. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A railing is typically on top of the floor, not the floor on top of the railing; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "An unnamed subject cannot be attached to a person; it's more plausible the person is wearing or attached to the subject (likely clothing). Reversing subject and object makes the relationship reasonable.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A railing is typically on top of or attached to an escalator, not the other way around; reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the railing is on top of the stone sculpture rather than the stone sculpture being on top of the railing given the descriptions.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "flip",
+      "explanation": "A railing is typically on top of a ceiling; the current relationship is reversed and flipping subject and object makes the spatial predicate plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "A container is unlikely to be on top of a railing; more plausible that the railing is on top of or supporting the container. Flipping subject and object aligns predicate with physical context.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 38
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000037.json",
+    "total_relationships": 94
+  },
+  "relationships": [
+    [
+      18,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      12,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "on top of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "on top of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      24,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      25,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "on top of",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      28,
+      "on top of",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      33,
+      "on top of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      38,
+      "on top of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000037"
+}

@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "cat playing with twig on log",
+    "cat stretching and shifting on log",
+    "cat interacting with another cat"
+  ],
+  "description": "A white cat is lying and stretching on a log outdoors, occasionally interacting with a twig and shifting its gaze and posture.",
+  "place_env_id_name": "outdoor log area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Leaves are on top of branches, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cat can be on top of a branch, but a branch cannot realistically be on top of a cat; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Leaves grow on top of twigs, so the leaf should be the subject on top of the twig as the object to match the predicate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log cannot be spatially above a cat; it is more plausible that the cat is above the log, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Physically, the cat is likely above the log rather than the log being above the cat; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000097.json",
+    "total_relationships": 77
+  },
+  "relationships": [
+    [
+      7,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000097"
+}

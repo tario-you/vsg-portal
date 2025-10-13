@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "group distributing and organizing supplies",
+    "group collaborating and conversing during supply distribution",
+    "group walking together after supply distribution"
+  ],
+  "description": "A group of people, some in uniforms and others in civilian clothing, are gathered outside a building with visible supplies such as boxes and bottles. Several individuals appear to be organizing, distributing, or documenting the supplies, while others are observing or recording the scene. The camera moves forward, following the group as they walk away from the supply area toward a gate.",
+  "place_env_id_name": "outdoor supply distribution area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A head is part of the person; stating the person is 'right of' the head is less plausible than the head being right of the person.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is plausibly below the window, not the window below the person; flipping the subject and object aligns with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000106.json",
+    "total_relationships": 247
+  },
+  "relationships": [
+    [
+      5,
+      2,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      9,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000106"
+}

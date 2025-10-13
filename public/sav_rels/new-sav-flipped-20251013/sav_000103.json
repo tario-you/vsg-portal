@@ -1,0 +1,1237 @@
+{
+  "activity_differential": [
+    "person leading dog through hallway",
+    "dog being guided toward examination room",
+    "cat following person and dog in clinic"
+  ],
+  "description": "A person in a green jacket is leading a dog on a leash down a hallway, while a cat walks independently nearby. Another person in a blue puffer jacket stands by, observing. The dog initially resists but is gradually led forward. The camera remains stationary, capturing the scene as the main person and dog move toward a door, with the cat following.",
+  "place_env_id_name": "veterinary clinic hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A wall panel cannot be under a floor tile; it is more plausible that the marble floor tile is under the wall panel.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The poster is typically on top of or attached to the wall panel, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cat can be under a wall panel, but a wall panel cannot be under a cat; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The baseboard typically lies under the wall panel; reversing subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An electrical outlet plate is typically mounted on a wall panel, so it is more accurate that the outlet plate is on top of the wall panel, not the other way around.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person walking is typically to the right of a stationary wall panel, not the panel right of the person; flipping subject and object aligns with physical layout.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A baseball cap cannot be 'under' a wall panel; it is more plausible that the cap is under or below the panel, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall panel is typically stationary and would be behind the jacket, not the jacket behind the wall panel; flipping subject and object fits the spatial relationship better.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A marble floor tile is under a jacket, not the other way around; flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically on a surface such as a wall or worn item, not a jacket on top of a poster; flipping subject/object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cat can be under a puffer jacket, but the jacket cannot be under the cat; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The baseboard is typically located under other objects like a jacket; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "An electrical outlet plate is typically mounted on a wall and a jacket can be on or near it, but the jacket cannot be on top of the outlet plate; reversing the subject and object makes the predicate physically plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A puffer jacket being 'under' a baseball cap is unlikely; typically, a baseball cap is worn on top of or above the jacket, so flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Marble floor tile is below (under) the trousers, so flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the cat is on top of the trousers (being worn by a person) rather than the trousers being on top of the cat.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers cannot be under a baseboard; typically, a baseboard is under trousers or clothing worn by a person standing against a wall.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree-like arrangement cannot be under trousers; trousers would be under (worn on legs beneath) the tree or tree-like structure is likely above or unrelated. Flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A marble floor tile is physically below a tree-like arrangement; flipping subject and object corrects the 'under' spatial relation.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible the cat is under the tree-like structure rather than the tree being under the cat; flipping subject and object makes the spatial relation logical.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slender, delicate tree-like arrangement is unlikely to be under a baseboard; it is more plausible the baseboard is under the tree, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The electrical outlet plate is a fixed object typically on a wall, and the delicate miniature tree-like arrangement is more plausibly 'on top of' the outlet plate rather than the other way around.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A baseball cap is an object that can be under a tree, but a delicate, slender tree being under a baseball cap is unlikely. Reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cat is physically above the marble floor tile, so flipping subject and object makes the 'above' predicate spatially accurate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall panel is positioned above the floor tile, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The puffer jacket is plausibly lying above the marble floor tile, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The trousers are physically above the marble floor tile in the scene; flipping subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree cannot be above a floor tile; the tile is on the floor below the tree, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is usually above a floor tile, not the other way around; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are above the marble floor tile, not the other way around, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket is typically above a marble floor tile, so flipping subject and object makes the 'above' predicate plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ladder is physically above the marble floor tile, so flipping subject and object corrects the spatial 'above' relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The beanie is physically above the marble floor tile, so the relationship should have the beanie as the subject and the floor tile as the object to be accurate.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cat is physically above the floor tile, not the marble floor tile above the cat; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The door is physically above the marble floor tile, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a door is above a floor tile, not the other way around; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically above a floor tile, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically displayed above a floor tile, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket would typically be above a marble floor tile, not the other way around; flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Baseboards are typically installed above floor tiles, so flipping subject and object makes the spatial relationship 'baseboard above marble floor tile' correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The electrical outlet plate is typically above the floor tile, so flipping subject and object corrects the spatial predicate 'above'.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is above the marble floor tile, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The baseball cap can be above the marble floor tile, but not vice versa; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cat is likely under the poster (e.g., below a wall-mounted poster); flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The poster is likely displayed on or attached to the wall panel; flipping subject and object corrects the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the trousers are under the stationary poster, rather than the poster being under the trousers.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically displayed on or under a tree rather than the tree being under the poster; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is likely hanging on a wall above or adjacent to the marble floor tile, not physically under it; reversing subject and object aligns with the 'under' predicate.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Posters are typically displayed on walls above trousers; saying the poster is under the trousers is implausible. Flipping subject and object makes the statement plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically hung on a wall and would be physically above or on a surface, while a jacket can be worn and is typically below or in front of a poster. Flipping the subject and object to 'jacket under poster' makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A beanie is typically worn on or above a poster is stationary; it is more plausible that the beanie is above or on something, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The poster is likely displayed on or attached to the door; stating the poster is under the door is implausible. Flipping the subject and object makes the spatial relation reasonable.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically placed above a poster rather than a poster being under a signboard; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster is typically displayed on a surface like a wall, and a jacket can hang under or over it. Saying the poster is under the jacket is unusual; reversing the relationship to 'jacket under poster' makes more sense spatially.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The baseboard is physically situated under the poster, so reversing subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a poster, but a poster cannot be under a person; flipping subject and object corrects the spatial relation 'under'.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A baseball cap being under a poster is physically implausible; a poster can be under or behind a cap if placed on a surface, so reversing subject and object aligns better with their typical relative positions.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall panel is stationary; it is plausible the cat is moving toward the wall panel, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 58,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000103.json",
+    "total_relationships": 154
+  },
+  "relationships": [
+    [
+      6,
+      2,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      2,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      5,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      5,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      7,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "moving toward",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000103"
+}

@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "dog playing fetch with ball",
+    "dogs socializing and playing together",
+    "dog exploring and interacting in living room"
+  ],
+  "description": "A dog in a striped shirt is active in a living room, initially alone and later joined by another dog. The main dog interacts with a blue ball, showing interest and playfulness. The camera follows the dog's movements, panning and tilting as the dog moves and plays. Social interaction occurs when a second dog enters, and both dogs engage with each other.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The dog is moving, likely in front of the stationary cushion; the predicate 'behind' makes sense when flipping subject and object.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "A place mat lying on a surface cannot be correctly described as 'in front of' a wall panel; flipping subject and object better fits the spatial relation since the wall panel can be said to be behind (or the place mat in front of) it.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000094.json",
+    "total_relationships": 171
+  },
+  "relationships": [
+    [
+      8,
+      29,
+      "behind",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      18,
+      "in front of",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000094"
+}

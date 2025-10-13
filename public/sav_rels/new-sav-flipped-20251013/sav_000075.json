@@ -1,0 +1,674 @@
+{
+  "activity_differential": [
+    "people walking and passing by street vendors",
+    "people distributing or promoting items on the sidewalk",
+    "people loading and unloading a pickup truck"
+  ],
+  "description": "A busy urban sidewalk scene with multiple people walking, interacting, and some engaging in street vending or promotion. A pickup truck is being loaded/unloaded, and a group of people are distributing or promoting items near a signboard. The camera remains mostly static, capturing the flow of people and their interactions.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The person is described as moving forward with a directed gaze ahead, implying the pickup truck is behind the person, not the other way around. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is behind the pickup truck rather than the truck being behind the child given their sizes, so flipping subject/object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the coat is on the right of the person does not make sense; flipping subject and object to 'coat right of person' is more plausible.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is positioned right of the SUV; flipping the relationship to have the SUV as subject and signboard as object correctly reflects the spatial 'right of' predicate.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat itself cannot walk; the person wearing the coat walks past the bus stop shelter. Flipping subject and object aligns the action realistically.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot walk past a person, but a person wearing a coat can walk past; flipping subject and object corrects this.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat cannot walk past the fence, but a person wearing the coat can walk past the fence. Flipping subject and object makes the predicate reasonable in a typical scene.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat itself cannot 'walk past'; a person wearing the coat is implied. Flipping subject and object aligns with the likely intended meaning that a person walks past the truck.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by a person and likely walking past the stationary car; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot literally 'walk past' a child; it is the child wearing the coat who is walking past. Reversing subject and object makes the relationship physically and semantically plausible.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person wears a coat, not the other way around; flipping subject and object corrects the 'wearing' predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot 'walk past' an object; a person wearing the coat walks past the signboard. Reversing subject/object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Coats do not walk; the person wearing the coat is likely walking past the handcart, so flipping subject/object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot carry a person; reversing subject and object makes the relationship plausible, as a person can carry or wear a coat.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat does not perform actions like 'walking past'; it is worn by the person who is walking. Reversing subject and object aligns the action correctly with the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot walk past a person; flipping subject and object correctly attributes the walking action to the person moving past the coat.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is typically affixed to or on top of the bus stop shelter, so the bus stop shelter is 'sitting on' by the signboard; flipping the subject and object makes the predicate plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard cannot walk; the person is the one walking past the signboard. Reversing subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can wear a jacket, but a bench cannot wear a person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is the one walking past the bench, not the bench walking past the person; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking, so it is more accurate that the person is walking past the bench, not the bench walking past the person. Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the person is holding the bench or interacting with it, not the bench holding the person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be described as standing near a bench, not the bench standing near the child; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be walking past a bench, not the bench walking past the person. Flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a bench, but a bench cannot walk past a person; flipping subject and object makes the relationship logical.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "Object 27 is a person showing motion and gestures, and object 38 is a bench; it is more plausible that the person is holding or using the bench, not the bench holding the person.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot wear a person, but a person wearing clothing is plausible by flipping the subject and object.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot walk, but a person walking past a bench is plausible; reversing subject/object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a bench, but the current subject/object order suggests the bench is walking past the person, which is implausible. Flipping corrects the relationship.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot hold a person, but a person can be holding or using a bench (e.g., sitting on it), so flipping subject and object makes the relationship more plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be standing near a bench, but the relationship 'bench standing near child' is less plausible; flipping subject and object makes the statement correct.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 31,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000075.json",
+    "total_relationships": 168
+  },
+  "relationships": [
+    [
+      24,
+      18,
+      "behind",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      18,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      40,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      29,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      18,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      35,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      2,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      9,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      2,
+      "walking past",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      2,
+      "carrying",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      2,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      23,
+      "sitting on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      38,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      35,
+      38,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      38,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      35,
+      38,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000075"
+}

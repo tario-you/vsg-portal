@@ -1,0 +1,145 @@
+{
+  "activity_differential": [
+    "dog playing with toys",
+    "dog chasing and interacting with objects",
+    "dog exploring living room with person present"
+  ],
+  "description": "A dog is actively playing with various toys, including a rubber chicken toy and a ball, in a living room environment. A person, visible by their feet and slippers, is present and may be interacting with the dog. The camera follows the dog's movement, capturing the playful activity.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The foot is wearing the slipper; the slipper cannot be right of the foot in a meaningful spatial relation. Flipping subject and object fixes this.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slipper being inside a pipe is implausible; however, a pipe inside a slipper is physically possible and matches the descriptions.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The slipper is below the dog given the dog's position above; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is described as lying down with a relaxed posture, and the foot is stepping forward; physically, the dog would be below the foot, not the foot below the dog. Flipping subject and object corrects this spatial relationship.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot with a slipper can be right of a chair, but the relation 'right of' typically describes the position of the chair relative to the foot; flipping subject and object makes more sense here since the foot is moving and likely spatially described in relation to the stationary chair.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot wearing a sandal is plausible, so 'foot right of sandal' is unlikely; flipping subject and object aligns with the spatial relation meaning the sandal is right of the foot.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000036.json",
+    "total_relationships": 163
+  },
+  "relationships": [
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "inside",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      8,
+      "below",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000036"
+}

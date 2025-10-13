@@ -1,0 +1,245 @@
+{
+  "activity_differential": [
+    "person climbing outdoor staircase",
+    "person interacting with top of staircase",
+    "person sitting on elevated structure"
+  ],
+  "description": "A person ascends a steep outdoor staircase structure, interacts with the top, and then sits down, while a quadcopter drone hovers and moves nearby. The scene is set on a mountainside with safety netting below.",
+  "place_env_id_name": "mountainside outdoor structure",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A tree is unlikely to be above a mountain; reversing subject and object makes the relationship accurate as the mountain is above the tree.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the mountain contains the tree, rather than the tree containing the mountain; flipping subject and object corrects this relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mountain is above the person, not the other way around; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree can be left of a hillside, but a hillside cannot be left of a single tree; flipping subject and object fixes this spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is below the mountain, not the mountain below the person; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The step is below the mountain, not the mountain below the step; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mountain cannot be below a step, but a step being below a mountain is physically plausible.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A staircase is unlikely to be on top of a tree; rather, the tree can be on or near the staircase. Reversing subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "'Hovering near' is a motion predicate more appropriately describing the drone's action relative to the hillside; flipping the subject and object makes the relationship physically and semantically correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "hovering near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hillside cannot observe a drone, but a drone can observe a hillside; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being observed by",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 10,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000042.json",
+    "total_relationships": 103
+  },
+  "relationships": [
+    [
+      5,
+      20,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "contains",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      23,
+      "on top of",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          264
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "hovering near",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "being observed by",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000042"
+}

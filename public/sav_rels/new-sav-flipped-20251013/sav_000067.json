@@ -1,0 +1,1006 @@
+{
+  "activity_differential": [
+    "birds foraging and feeding at birdhouses",
+    "birds perching and interacting on wires",
+    "birds socializing and moving around garden"
+  ],
+  "description": "A group of birds are actively foraging, feeding, and interacting around birdhouses and wires in a small walled garden. The camera pans and zooms to follow the birds' activities.",
+  "place_env_id_name": "courtyard garden",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the cable, so the cable is actually below the bird; flipping subject and object makes the 'above' relation correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on a wire likely above the brick; thus, the brick is below the bird, not the other way around.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on a thin wire and likely above the brick; flipping subject and object makes 'brick below bird' correct.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on a wire and likely positioned below the wall is implausible; the wall is more likely above or behind the bird, so flipping the relationship makes it spatially reasonable.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on a wire above the birdhouse, so the birdhouse is below the bird. Flipping the subject and object makes the spatial predicate 'above' correct.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the wire, so the wire should be 'above' the bird; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the cable, so the cable is below the bird, not above; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the wire, which is attached to or on the pole; thus, the pole cannot be 'above' the bird, but the bird is above the pole.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched above the brick, so flipping subject and object makes the spatial relation 'below' accurate.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on a thin wire likely above the brick, so the brick is below the bird, not vice versa; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched on the wire or pole, so the pole is above (not below) the bird; flipping subject and object corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is perched above the birdhouse, so 'bird above birdhouse' is correct; however, the original relationship has subject as bird and object as birdhouse with predicate 'above' which is correct and no flip is needed.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wire is typically above a wall, not the wall above the wire; reversing subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant can be spatially below a wall, but a wall cannot be below a plant; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically on or above a wall, so reversing subject and object aligns with physical plausibility of the relationship.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is typically below a wall, not the other way around; flipping the subject and object aligns with realistic spatial arrangement.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is logically below a wall, not the other way around; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is typically below a wall, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall is typically above a brick, not below it; flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is typically below a wall, not the other way around; flipping subject and object aligns with real-world spatial arrangement.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A birdhouse is typically positioned above a wall or mounted on it, not the other way around; flipping subject and object makes 'birdhouse above wall' plausible.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a birdhouse is positioned above a wall or attached to it; stating the wall is above the birdhouse is unlikely, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bird is likely above the wall, not the wall above the bird; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vent is above the plant rather than the plant above the vent in a spatial relationship.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The brick is likely below the plant, not the other way around; flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is typically below a potted plant, not the other way around; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant is usually on or above the brick, not below it; reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible the brick is below the plant as plants typically sit on or above solid objects.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is typically below a plant; reversing the subject and object aligns with this spatial reality.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is physically below the plant (the plant sits in front of or on the floor near the wall); flipping makes the spatial relation 'below' correct.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a birdhouse is positioned above a plant rather than the plant being above the birdhouse. Reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The birdhouse is physically above the plant; flipping subject and object corrects the spatial relation 'below'.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bird is more likely to be below a potted plant than the other way around; flipping subject and object makes the 'below' predicate physically plausible.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potted plant is typically placed to the right of a wall, not the wall to the right of the plant; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tall, slender plant can be below a shorter potted plant, not the other way around; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the pole is above the potted plant rather than the plant above the pole, given typical object configurations.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically above a potted plant, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The brick is likely below the potted plant, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potted plant cannot be 'below' a brick; it is more plausible that the brick is below the plant, so flipping subject and object fixes the spatial relation.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The brick should be below the potted plant, not the other way around, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potted plant cannot be below a vertical pole; it is more plausible that the pole is below or behind the plant, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A brick is more plausibly below a potted plant than the plant being below the brick; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potted plant is unlikely to be below a brick; typically, the brick is below the plant, making the flipped relationship more plausible.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant cannot realistically be below the wall; rather, the plant is positioned below the wall, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A birdhouse is typically positioned above a potted plant; flipping subject and object aligns with physical plausibility of the spatial relationship 'above'.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The birdhouse is likely positioned above the potted plant; flipping the subject and object corrects the spatial predicate 'below'.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bird is more likely to be below a potted plant rather than the plant being below the bird; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 47,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000067.json",
+    "total_relationships": 169
+  },
+  "relationships": [
+    [
+      14,
+      2,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      2,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      2,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      2,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      2,
+      "above",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "above",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      3,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      3,
+      "above",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      4,
+      "above",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      4,
+      "below",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      4,
+      "above",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      4,
+      "above",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      4,
+      "above",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      6,
+      "above",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      6,
+      "above",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      6,
+      "below",
+      [
+        [
+          24,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      7,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      7,
+      "above",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      7,
+      "above",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      7,
+      "above",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000067"
+}

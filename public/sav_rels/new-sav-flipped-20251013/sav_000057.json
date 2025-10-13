@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "pedestrians walking and interacting with street environment",
+    "camera tracking and focusing on people crossing and moving along the street",
+    "person skipping rope on the sidewalk"
+  ],
+  "description": "A street scene where a woman walks across the road toward the camera, then exits the frame as the camera pans and tracks her. Another woman later walks past a parked car, and the camera pans to follow the street activity. A tricycle enters the scene, and another woman is seen skipping rope on the sidewalk.",
+  "place_env_id_name": "urban street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The person is likely to be to the left of the car, so flipping subject and object makes the spatial relation 'left of' plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is unlikely to be to the right of a building as a spatial reference; more plausibly, the building is right of the person, so flipping subject and object makes sense.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000057.json",
+    "total_relationships": 71
+  },
+  "relationships": [
+    [
+      2,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000057"
+}

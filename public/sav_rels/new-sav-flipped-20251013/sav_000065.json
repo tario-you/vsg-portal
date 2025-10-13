@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "group of people walking through shopping mall",
+    "group socializing while moving through indoor area",
+    "people exploring and observing shops and signs"
+  ],
+  "description": "A group of people are walking through a brightly lit indoor shopping or entertainment area, passing by various shops, signboards, and decorations. The camera moves steadily forward, following the group as they walk, while other people are seen walking, standing, or sitting throughout the environment.",
+  "place_env_id_name": "indoor shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The person is physically above the trash can rather than the trash can being above the person; flipping subject and object aligns with spatial plausibility.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be to the right of a stationary poster, not the poster to the right of the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be behind a backpack when viewed spatially, but the given relationship states 'backpack behind person,' which is less plausible; flipping subject and object makes 'person behind backpack,' aligning with typical spatial arrangements as the backpack is worn by or near the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is carrying the backpack, so it is more accurate to say the person is behind the backpack was incorrect; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person does not 'walk with' a backpack as a separate companion; reversing to indicate the backpack is carried or worn by the person makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000065.json",
+    "total_relationships": 161
+  },
+  "relationships": [
+    [
+      1,
+      11,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "walking with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000065"
+}

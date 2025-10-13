@@ -1,0 +1,418 @@
+{
+  "activity_differential": [
+    "vehicles moving along urban street",
+    "person walking on sidewalk",
+    "traffic passing parked cars at night"
+  ],
+  "description": "A nighttime urban street scene with parked vehicles, moving cars and scooters, and a person walking along the sidewalk. The camera remains mostly static, capturing the dynamic flow of traffic and pedestrian movement.",
+  "place_env_id_name": "urban street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A single tree cannot be 'in front of' a tree line; rather, the tree line is in front of the tree when viewed from the camera perspective, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the sedan is in front of the tree line; flipping subject and object aligns with natural spatial understanding.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The white fence is likely in front of the tree line in the scene; flipping subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is in front of the tree line; saying the tree line is behind the car is misleading. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tree line is not above the minivan; the minivan is on the ground below the tree line, so flipping subject and object makes the statement correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The banner is likely above the tree line, not the other way around; flipping subject and object aligns with this spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is physically below the tree line, not above; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree line usually appears behind individual trees, not the other way around; flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sedan can be behind a tree, but the original states the tree is behind the sedan, which contradicts common spatial arrangement; flipping subject and object corrects this.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A banner is typically hung above a tree or in the air, so 'banner above tree' is plausible. The current relationship 'tree above banner' is unlikely; reversing subject/object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tree, being tall, is plausibly above the fence; flipping subject and object aligns the predicate 'below' correctly.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a fence is stationary and upright, and a minivan would be below or behind the fence from the observer's viewpoint; stating 'fence below minivan' is less plausible than 'minivan below fence'.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car being 'below' a tall tree is unlikely; it is more reasonable that the tree is above the car, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fence cannot logically be behind a car as a moving object; usually, the car is behind the fence from the viewer's perspective, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The banner is typically positioned below the tree line in a scene; flipping subject and object makes the predicate 'below' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree is generally taller and located above a banner; flipping subject and object to have the tree below the banner is physically incorrect, so the original 'banner below tree' relationship is correct. However, since the predicate is 'below' with banner as subject and tree as object, the relationship as stated is reasonable and does not need flipping.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a car cannot be spatially below a tall tree; the tree would be below or above the car depending on perspective, but 'below' relation is more plausible if the tree is subject and car is object.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary tree cannot 'pass by' a banner; reversing subject and object makes 'banner passing by tree' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a vehicle follows another vehicle; here, flipping subject and object aligns the minivan following the sedan, which is physically plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 8
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 19,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000108.json",
+    "total_relationships": 198
+  },
+  "relationships": [
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "passing by",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      8,
+      "following",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000108"
+}

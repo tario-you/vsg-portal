@@ -1,0 +1,107 @@
+{
+  "activity_differential": [
+    "people shopping and moving through a busy market street",
+    "motorcycle riders transporting passengers in the market",
+    "camera operator walking and filming through the market crowd"
+  ],
+  "description": "A bustling outdoor market scene with multiple people walking, interacting, and shopping. Motorcycles and cars move through the street, while vendors and buyers engage in commerce. The camera moves forward through the market, capturing the dynamic environment.",
+  "place_env_id_name": "outdoor market street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The person is on the motorcycle, so the motorcycle is more naturally 'right of' the person, reversing subject and object aligns with spatial context.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The motorcycle is being ridden by the person, so reversing subject and object corrects the predicate relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "being ridden by",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is riding the motorcycle, so the person is moving alongside the motorcycle rather than vice versa; flipping subject and object fixes the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "moving alongside",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person carries the umbrella, not the umbrella being carried by the person as subject; flipping corrects the subject-object roles.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "carried by",
+      "relation_type": "functional",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000088.json",
+    "total_relationships": 84
+  },
+  "relationships": [
+    [
+      4,
+      1,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "being ridden by",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      6,
+      "moving alongside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      10,
+      "carried by",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000088"
+}

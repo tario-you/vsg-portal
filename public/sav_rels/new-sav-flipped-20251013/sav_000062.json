@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "adult supervising and interacting with children near a building",
+    "person walking along a residential pathway",
+    "camera panning to capture people and environment"
+  ],
+  "description": "A group of people, including adults and children, are present outside a building along a rough pathway. One adult interacts with two children near a window, while another person walks along the pathway. The camera moves and pans, shifting focus from the group near the building to the pathway and surroundings.",
+  "place_env_id_name": "outdoor residential pathway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a door is to the right of a window rather than the window being to the right of the door. Flipping subject and object corrects the spatial relationship for plausibility.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a window is part of or set into a wall, so the wall is in front of the window is unlikely; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The door or panel is likely part of or placed on the structure, so the structure stands on the ground and not on the panel. Flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely on or attached to the wall; reversing the subject and object makes the spatial relationship 'wall beside signboard' more physically plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A window cannot look at a child; reversing subject and object aligns with the natural attentional predicate where a child looks at a window.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000062.json",
+    "total_relationships": 113
+  },
+  "relationships": [
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "standing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      19,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000062"
+}

@@ -1,0 +1,670 @@
+{
+  "activity_differential": [
+    "person performing traditional dance",
+    "person dancing with expressive gestures",
+    "person giving solo performance"
+  ],
+  "description": "A person in traditional attire is performing a solo dance in a living room, making expressive hand and arm movements, occasionally lifting their dress, and moving rhythmically. The camera remains fixed, capturing the performance.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A cage cannot be under a large cartoonish figure; more plausible that the figure is under or inside the cage if enclosed, so subject and object should be reversed.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cage is a stationary structure and unlikely to be spatially under a pipe; more plausible is that the pipe is under the cage.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cage is under the ceiling tile, so flipping subject and object corrects the spatial relation 'under'.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cage being behind a door is less plausible than the door being behind the cage if the cage is a prominent foreground object; flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vent is to the right of the door, not the door right of the vent.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the cartoonish figure is under the door, not the door under the figure, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door frame typically surrounds the door, so the door frame is spatially right of the door, not vice versa; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe, being slender and extending diagonally, is more likely positioned under the door than the door being under the pipe; flipping subject and object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door cannot be under a ceiling tile; rather, the ceiling tile is above the door, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent cannot realistically be under a large cartoonish figure; flipping subject and object makes the figure be under the vent, which is more plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent being under a pipe is unlikely; more plausible that the pipe is under the vent, so subject and object should be swapped.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is typically installed within or on the ceiling tile, so stating the vent is 'under' the ceiling tile is incorrect; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "An air vent is typically above a figure, not the figure above the air vent; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling tile is above the cartoonish figure; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cage is more likely behind the door frame; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cartoonish figure with legs standing below a door frame is physically plausible; the door frame cannot be under the figure. Flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress is unlikely to be positioned 'right of' a door frame; typically, the door frame would be right of the dress, so flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air vent is centrally positioned and the door frame is likely to be to the right of the air vent rather than vice versa, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pipe is more plausibly under a door frame than the other way around; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door frame is typically under or below a ceiling tile, not above it; flipping the subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress cannot be spatially positioned relative to a person independently; reversing subject and object to 'person right of dress' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress is beneath the ceiling tile, so flipping the relationship subject and object aligns with the 'under' predicate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air vent is ceiling-mounted and would be above the figure, not under it; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more natural to say the person is right of the air vent rather than the air vent is right of the person.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe is described as diagonally positioned likely above the air vent; thus, flipping subject and object aligns the spatial 'under' relation correctly.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air vent is typically on or within the ceiling tile, not under it; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cage is likely below the ceiling tile, so reversing the subject and object correctly reflects the spatial relationship with the ceiling tile above the cage.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically installed on the ceiling or a surface above a ceiling tile; saying the ceiling tile is above the vent is unlikely. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling tile is typically above a figure, not below it; flipping the subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "Since ceiling tiles are typically installed above door frames, the door frame is below the ceiling tile. Flipping subject and object makes the 'above' predicate semantically correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "An air vent is typically installed on or above a ceiling tile, so the air vent is likely above the ceiling tile. Flipping subject and object correctly reflects this spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 31,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000101.json",
+    "total_relationships": 117
+  },
+  "relationships": [
+    [
+      4,
+      1,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000101"
+}

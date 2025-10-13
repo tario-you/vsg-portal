@@ -1,0 +1,733 @@
+{
+  "activity_differential": [
+    "child caring for younger child",
+    "children socializing and playing together",
+    "child feeding or helping another child eat"
+  ],
+  "description": "A group of children are interacting at the entrance of a home. One child is sitting on a stool, holding a younger child on their lap, while another child enters the scene holding a book and pen. The children interact with each other and with a bowl of noodles on the ground.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A book cannot be spatially 'behind' a dress in a way that makes sense; more plausibly, the dress is behind the book from the viewer's perspective, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A book cannot realistically be behind a child's head, but the child's head can be behind the book, making flipping subject and object appropriate.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A moving and tilted book is unlikely to be behind a stable chair leg; reversing subject and object makes the chair leg behind the book, which is plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wooden structure is likely behind the book rather than the book being behind the wooden structure; flipping subject and object aligns with the spatial description.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the book rather than the book being behind the arm, so reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the book, not the book behind the arm; flipping subject and object better matches physical arrangement.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the staircase is behind the book, not the book behind the staircase, given the descriptions and typical spatial relations.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the descriptions, the wooden stool likely is behind the book rather than the book being behind the stool; flipping subject and object aligns with physical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description suggests the book is held or manipulated by the child, so the child should be the subject and the book the object, making the spatial relationship 'behind' correct if reversed.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is holding or manipulating the book, so it is more appropriate to say the arm is in front of the book, not the other way around.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is more likely to be behind a book rather than the book being behind the shoe in typical spatial arrangements; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log is a static large object that can be behind the book, but the book being behind the log is more plausible; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress is unlikely to be below the staircase; reversing subject and object makes sense since the staircase is below the dress (the dress is on or above the stairs).",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is typically below a dress (on the foot) rather than the dress being below the shoe; flipping subject and object makes the 'below' relation physically plausible.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more physically plausible that the child's head is above the noodles, not the noodles above the child's head; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Noodles cannot cover a tall wooden structure; it is more plausible that the wooden structure covers or contains the noodles.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the arm covers the noodles rather than the noodles covering the arm; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are typically worn under a wooden structure (unlikely), but a wooden structure cannot be under shorts; flipping the relationship is more coherent if the wooden structure is above or behind the shorts.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the noodles are under the arm rather than the arm being under the noodles.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely under or inside the shorts (wearing them), so flipping subject and object makes the spatial relation 'shorts under arm' incorrect; the arm is under the shorts, not vice versa.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are typically worn on or covering a leg, not under it; flipping the subject and object makes the spatial relationship 'shorts under leg' correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is typically to the right of a leg, not the leg to the right of the shoe; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be under a staircase, but a staircase cannot be under shorts; flipping subject and object makes the spatial relation physically accurate.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be to the right of a staircase, but a staircase being 'right of' a child is unusual; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be to the right of a staircase, but the current subject and object positions make the relationship semantically incorrect; flipping corrects this spatial relation.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Noodles cannot be physically under a stool; the stool can be under the noodles or the bowl containing them. Flipping subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be 'under' a stool (e.g., someone wearing the shorts sitting on the stool), but a stool cannot be under shorts; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is extending outward and is likely positioned in front of the stationary stool; reversing the subject and object makes the spatial relation 'arm in front of stool' plausible.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are worn on the body and are not 'above' a wooden structure; flipping makes more sense if the wooden structure is above or near the shorts.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log, being a stable, rough, and weathered object, can support the lightweight fabric draped over it, but the fabric cannot support the log. Reversing subject and object makes the 'supporting' relation plausible.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "supporting",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log cannot focus attention on a child's head; flipping subject and object makes 'child's head focused on log' plausible, as a child can focus on the log.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shorts are likely 'sitting on' the piece of fabric if draped, not the fabric sitting on the shorts; reversing subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are worn by a person and can support a log placed on them; the current subject/object order is incorrect for the 'supported by' predicate.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "supported by",
+      "relation_type": "functional",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a person is holding the toothbrush rather than a book holding a toothbrush; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 36
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 34,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000093.json",
+    "total_relationships": 285
+  },
+  "relationships": [
+    [
+      4,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      4,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "covers",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "covers",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      8,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      9,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      11,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      12,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      16,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      38,
+      "supporting",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      31,
+      "focused on",
+      [
+        [
+          192,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      17,
+      38,
+      "sitting on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      17,
+      31,
+      "supported by",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      36,
+      "holding",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000093"
+}

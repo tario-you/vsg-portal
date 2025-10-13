@@ -1,0 +1,279 @@
+{
+  "activity_differential": [
+    "camera traversing busy street market",
+    "people shopping and walking in market",
+    "motorcycle moving through crowded street"
+  ],
+  "description": "A moving camera (likely mounted on a motorcycle) traverses a busy street market, passing by motorcycles, people, vendors, and various market activities. The camera advances forward, capturing the dynamic interactions of people shopping, walking, and riding motorcycles.",
+  "place_env_id_name": "street market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The dashboard is part of the motorcycle and is located in front of the rider, not the motorcycle being in front of the dashboard. Flipping the relationship makes spatial sense.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dashboard is part of or on the motorcycle, so 'dashboard behind motorcycle' is incorrect; flipping subject and object makes the relationship 'motorcycle behind dashboard,' which better aligns with the spatial relationship implied by the dashboard being on the motorcycle.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jersey cannot realistically be 'below' a person, but a jersey is typically worn by a person, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is described as stationary and mounted likely above the motorcycle; the relationship 'below' applies better when the signboard is the subject and the motorcycle is the object.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be below a motorcycle when standing near or beside it; flipping subject and object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically positioned above or in front of objects like motorcycles; stating the motorcycle is below the signboard is more plausible if the subject and object are reversed.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A large signboard is typically mounted above or behind a person, not below them; flipping subject and object makes 'person below signboard' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person stands below the large tree, not the other way around; flipping the relationship aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely below the tree rather than the tree being below the signboard; flipping subject and object makes the spatial relationship sensible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be below a signboard, but the signboard being below the person is unlikely; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is standing below the signboard, so flipping subject and object corrects the spatial 'below' relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The second signboard (vibrant blue) is described as shifting in perspective and slightly tilted, suggesting it is above and possibly in front of the dark, stationary signboard, so flipping subject and object makes 'subject below object' plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000013.json",
+    "total_relationships": 118
+  },
+  "relationships": [
+    [
+      5,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      8,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000013"
+}

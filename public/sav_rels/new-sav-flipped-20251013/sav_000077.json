@@ -1,0 +1,229 @@
+{
+  "activity_differential": [
+    "person walking down hallway to a door",
+    "person passing by shoes and sandals in hallway",
+    "person opening a door at the end of hallway"
+  ],
+  "description": "A person walks down a hallway lined with shoes and sandals, holding a green object, and eventually stops at a door.",
+  "place_env_id_name": "hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A shoe is part of or near the person; saying the person is 'right of' the shoe is unusual, whereas the shoe being 'right of' the person makes more spatial sense.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are physically on the floor, not the floor on the sneakers; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slipper can be beside a floor, but the current statement has the floor as the subject beside the slipper, which is less natural; flipping subject and object better fits the spatial relation.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are physically on the floor or ground near the wall, not the wall being on the sneakers; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sneakers are likely on the floor or ground, not on the door frame; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are typically on the floor or near the wall, not the wall on the sneakers; flipping better represents the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers can be on a vent, but a vent cannot be on sneakers; reversing the subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are on the door is unlikely; more plausible that the door is on or behind the sneakers, so flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the sneakers are above the baseboard rather than the baseboard being above the sneakers.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers would be on the door only if flipping subject and object; the door cannot be on the sneakers, but sneakers can be on the door as a floor or a surface.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 40
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 10,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000077.json",
+    "total_relationships": 111
+  },
+  "relationships": [
+    [
+      30,
+      2,
+      "right of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "on",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      16,
+      "beside",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      17,
+      "on",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      22,
+      "on",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      29,
+      "on",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      35,
+      "on",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      36,
+      "on",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      38,
+      "above",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      40,
+      "on",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000077"
+}

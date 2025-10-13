@@ -1,0 +1,127 @@
+{
+  "activity_differential": [
+    "people dining together at an outdoor event",
+    "people conversing and socializing at a communal table",
+    "people listening to music or announcements from a speaker"
+  ],
+  "description": "A nighttime outdoor event with people sitting on chairs at a table, a speaker setup, blankets and mats on the ground, and various bags and objects scattered. The camera moves around the area, capturing people eating, sitting, and interacting in a communal setting.",
+  "place_env_id_name": "outdoor event space",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person is expected to be spatially referenced relative to a doormat; saying the doormat is 'right of' the person is unusual. Flipping subject and object makes 'person is right of doormat' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The chair is physically above the doormat; flipping subject and object makes the spatial predicate 'below' correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can sit on a box, but a box cannot sit on a person; reversing subject and object makes the predicate physically plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A box cannot rest feet on a plastic bag, but a plastic bag could rest feet on a box; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "resting feet on",
+      "relation_type": "functional",
+      "subject_id": 22
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000009.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      26,
+      7,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          168,
+          192
+        ],
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      7,
+      "below",
+      [
+        [
+          24,
+          24
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      22,
+      "sitting on",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      9,
+      22,
+      "resting feet on",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000009"
+}

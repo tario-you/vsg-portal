@@ -1,0 +1,103 @@
+{
+  "activity_differential": [
+    "fish swimming in tanks",
+    "camera observing and focusing on fish and floating toys",
+    "floating toys and balls moving with water currents"
+  ],
+  "description": "The video shows a series of fish tanks in what appears to be an aquarium or pet store environment. The tanks contain live fish, decorative toys, balls, and other aquatic objects. A yellow bucket and a green net are present, likely for scooping fish. The camera moves around the tanks, focusing on different fish and objects, and transitions from one tank to another, showing a variety of fish and floating toys.",
+  "place_env_id_name": "aquarium or pet store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A bowl cannot be inside a bench, but a bowl can be placed on or inside a recess on a bench; flipping subject and object better reflects spatial plausibility.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl cannot be inside fabric; it is more plausible that the fabric is inside or inside is reversed, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl can be inside a tray, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl can be surrounded by fabric but fabric cannot be surrounded by a bowl; flipping the subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000061.json",
+    "total_relationships": 131
+  },
+  "relationships": [
+    [
+      3,
+      2,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000061"
+}

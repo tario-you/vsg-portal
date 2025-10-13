@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "people transitioning between floors in a shopping mall",
+    "people interacting at a counter and moving through mall",
+    "people using escalators and stairs in a public space"
+  ],
+  "description": "A shopping mall or entertainment complex with vibrant lighting, where several people interact with a counter, walk up and down stairs, and use escalators. The camera moves through the environment, following people as they transition between different areas.",
+  "place_env_id_name": "shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A ceiling would be above a structure, not below it; reversing subject and object aligns with common spatial understanding.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is physically in front of the ceiling panel, not vice versa; flipping subject and object correctly captures the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000105.json",
+    "total_relationships": 101
+  },
+  "relationships": [
+    [
+      16,
+      7,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000105"
+}

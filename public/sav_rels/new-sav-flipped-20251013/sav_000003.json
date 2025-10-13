@@ -1,0 +1,44 @@
+{
+  "activity_differential": [
+    "dogs playing together on the road",
+    "dogs running and interacting",
+    "dogs being observed and followed by camera"
+  ],
+  "description": "Two dogs are interacting and moving on a road at dusk, with a car parked nearby. The camera follows the dogs as they move, play, and occasionally look at each other.",
+  "place_env_id_name": "road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A crossbar is unlikely to be inside a car; it is more plausible that the car contains the crossbar.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 1,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000003.json",
+    "total_relationships": 44
+  },
+  "relationships": [
+    [
+      5,
+      2,
+      "inside",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000003"
+}

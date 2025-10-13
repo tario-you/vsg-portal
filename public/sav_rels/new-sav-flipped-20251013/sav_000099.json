@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "person preparing food in kitchen",
+    "person handling kitchen appliances and utensils",
+    "person moving around and working at countertop"
+  ],
+  "description": "A person in a kitchen is preparing food, interacting with kitchen appliances and utensils, and moving around the countertop area. The camera tracks the person and pans to follow their actions.",
+  "place_env_id_name": "kitchen",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The exhaust fan is typically installed above/to ventilate the area, so the pressure cooker would be under the exhaust fan, not the other way around. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a vent is installed above or over a pressure cooker (e.g., a stove vent hood); the pressure cooker would not physically be under the vent. Flipping subject and object aligns with expected spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is likely located under the pressure cooker rather than the pressure cooker being under the vent, so flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000099.json",
+    "total_relationships": 86
+  },
+  "relationships": [
+    [
+      4,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000099"
+}

@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "young goat foraging and approaching adult goat",
+    "goats foraging together in grassy field",
+    "camera tracking young goat's movement"
+  ],
+  "description": "A young goat wearing a shirt is moving across a grassy area, gradually approaching an adult goat. The adult goat is stationary and appears to be grazing or foraging. The camera follows the young goat as it moves toward the adult goat, capturing their interactions.",
+  "place_env_id_name": "grassy field",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a rabbit is below a goat when both are on the ground; the current relationship is reversed because the goat is not below the rabbit.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A goat can be under a plant, but a plant being under a goat is unlikely; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000002.json",
+    "total_relationships": 74
+  },
+  "relationships": [
+    [
+      14,
+      2,
+      "below",
+      [
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000002"
+}

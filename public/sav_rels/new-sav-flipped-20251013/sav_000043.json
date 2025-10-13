@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "families and children socializing and queuing at arcade machines",
+    "adults supervising and assisting children in arcade activities",
+    "people conversing and moving through arcade environment"
+  ],
+  "description": "A busy arcade scene with multiple adults and children interacting, queuing, and moving around arcade machines. Some adults are supervising or assisting children, while others are engaged in conversation or handling baskets and bags. The camera moves through the environment, capturing the dynamic social and functional interactions.",
+  "place_env_id_name": "arcade",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The handbag is described as being carried by the person and positioned against their side, so the handbag cannot be left of the person; reversing subject and object aligns with the spatial configuration.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the television is on top of the basket rather than the basket on top of the television, given their typical sizes and stability.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tablecloth typically lies on top of a table, not on top of a vertical television; reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be behind a signboard, but the signboard itself cannot be behind a person; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the stationary signboard, not the signboard behind the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is unlikely to be behind a basket since signboards are typically larger and fixed; flipping makes more sense as the basket being behind the signboard.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is unlikely to be above a tall television; it is more plausible that the person is under the television, so reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a television (e.g., standing below it), but the television being under the person is physically unlikely, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is unlikely the television is physically under the basket; more plausible is that the basket is under the television.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tablecloth typically lies under or on furniture like a television, not the other way around; flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A television is unlikely to be under a sweatshirt; flipping subject and object aligns with the sweatshirt being under or in front of the television, which is plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000043.json",
+    "total_relationships": 268
+  },
+  "relationships": [
+    [
+      10,
+      1,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "behind",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "behind",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "behind",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000043"
+}

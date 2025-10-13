@@ -1,0 +1,565 @@
+{
+  "activity_differential": [
+    "people shopping in warehouse store",
+    "people walking and browsing furniture aisles",
+    "people moving through store with carts"
+  ],
+  "description": "A group of people are walking and browsing in a large warehouse-style furniture store. The camera is steadily dollying forward down the main aisle, capturing people moving, browsing, and pushing carts.",
+  "place_env_id_name": "warehouse store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Cardboard boxes are stacked on top of the cabinet, not the other way around; flipping the subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely above or over the stack of boxes, so flipping subject and object makes the 'under' predicate correct.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the signboard is 'under' the stack of cardboard boxes rather than the boxes being under the signboard, given typical physical arrangements.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Signboard is likely positioned above the stack of boxes; flipping the subject and object makes 'signboard under boxes' correct as 'boxes under signboard'.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cardboard boxes are likely below the poster, so flipping the subject and object makes the spatial predicate 'under' accurate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a poster hangs on or above a signboard, not under it; reversing subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the cardboard boxes are under the poster, not the poster under the boxes.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Cardboard boxes are typically placed under cabinets, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard can be under a cabinet, but the given relationship states 'cabinet under signboard,' which is less plausible; flipping subject/object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely positioned above the cabinet rather than the cabinet being under the signboard; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Cardboard boxes are typically placed under a cabinet, not the cabinet under boxes, reversing subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is physically located on or above the floor, so it is more accurate to say the signboard is on or above the floor rather than the floor being under the signboard as subject/object.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The poster is likely on or above the floor, so the poster is to the right of the floor, not the floor to the right of the poster. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A floor cannot be to the right of a signboard, but a signboard can be to the right of a floor; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A poster can be right of a floor location, but the floor cannot be right of the poster; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A floor cannot be 'right of' a signboard; it is more plausible that the signboard is right of the floor, so flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A table can be to the right of the floor's perspective, but the predicate 'right of' here more naturally describes the table's position relative to the floor; flipping subject and object makes the spatial relation logically consistent.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cardboard boxes are placed on the floor, so the correct spatial relationship is that the floor is under the boxes; flipping subject and object corrects the predicate.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely positioned above the floor, so flipping subject and object to 'signboard under floor' makes no sense; keeping as 'floor under signboard' is correct, but the predicate 'under' with these subject/object roles implies the floor is under the signboard, so flipping is needed to correct the direction.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is positioned under the ceiling, not the ceiling under the signboard; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is physically located under the ceiling rather than the ceiling being under the signboard; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Cardboard boxes are physically located under the ceiling, not vice versa; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is located under the ceiling, not the ceiling under the signboard; flipping subject/object aligns the spatial predicate logically.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the descriptions, the red signboard with '18' and '20' appears above the pink signboard, so the pink signboard is likely under the red one; flipping corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cardboard boxes are physically below the signboard, so the predicate 'under' should be flipped with subject as the boxes and object as the signboard.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is described as maintaining a consistent orientation and being stationary above, while the cardboard boxes are stacked below; reversing the relationship to 'cardboard boxes under signboard' aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000095.json",
+    "total_relationships": 183
+  },
+  "relationships": [
+    [
+      9,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      3,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      7,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      7,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      9,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      9,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      9,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      12,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      12,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      12,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      13,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      13,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      13,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      20,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      20,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      24,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000095"
+}

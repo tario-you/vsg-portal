@@ -1,0 +1,523 @@
+{
+  "activity_differential": [
+    "people walking and using phones in a shopping mall",
+    "camera moving forward through mall interior",
+    "groups and individuals navigating public indoor space"
+  ],
+  "description": "A shopping mall or entertainment complex interior with multiple people walking, interacting, and the camera moving steadily forward through the space. Some people are using their phones, some are walking together, and children are present. The camera advances through the open area toward escalators and kiosks.",
+  "place_env_id_name": "shopping mall interior",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The floor is under the kiosk; flipping subject and object correctly reflects that the kiosk is on top of the floor.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling painting is located above; the kiosk cannot be under the painting physically, but the painting is above the kiosk, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A kiosk is stationary and the person can be spatially right of the kiosk, but saying the kiosk is 'right of' the person is uncommon; flipping subject and object to 'person right of kiosk' is more logical.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is likely on the right side of the kiosk, so flipping subject and object makes the 'right of' spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be described as standing to the right of a stationary kiosk rather than the kiosk being right of the person; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An object cannot realistically be 'under' a ceiling; the ceiling is above. Flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is physically below the ceiling. Flipping subject and object makes 'signboard above ceiling' which is incorrect; thus, original 'ceiling above signboard' is correct, but since predicate is 'above' with subject 'ceiling', it implies ceiling is above signboard which is true. However, per the example, 'ceiling above signboard' is correct, so no flip needed.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is typically positioned below the ceiling, so reversing subject and object better fits the spatial relationship 'above'.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is physically placed below the ceiling; stating the ceiling is 'above' the signboard is incorrect. Flipping the subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The painting is typically on a wall below the ceiling; flipping subject and object makes 'painting above ceiling' become 'ceiling above painting', which is spatially correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person is below a ceiling, not above it; flipping subject and object makes the spatial predicate 'above' correct.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling is above a column, not below it; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is physically below the ceiling, so flipping subject and object to 'signboard above ceiling' would be incorrect; thus, flipping subject and object to 'signboard above ceiling' corrects the spatial logic.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is below the ceiling; flipping subject and object makes 'above' predicate accurate.",
+      "label": "flipped",
+      "object_id": 36,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Popcorn (on a poster) is below the ceiling, so reversing the subject and object makes the spatial relation 'above' accurate.",
+      "label": "flipped",
+      "object_id": 37,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The track lighting fixture is installed on or above the ceiling, not the ceiling above the fixture; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling painting is located above the kiosk; stating the kiosk is 'under' the ceiling painting implies flipping subject and object for correct spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be to the right of a stationary kiosk but not vice versa; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is described as walking near the kiosk, so it is more logical that the child is right of the kiosk, not the kiosk right of the child; flipping subject/object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely to be right of the stationary kiosk, so flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The track lighting fixture is physically installed beneath the ceiling, so the fixture is under the ceiling, not the ceiling under the fixture. Reversing subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A track lighting fixture is typically installed on or under the ceiling painting, so the ceiling painting is above the fixture, not under it. Reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The track lighting fixture is suspended above the floor, not on top of it; flipping subject and object aligns the relationship correctly.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person is positioned to the right of a stationary track lighting fixture rather than the lighting fixture being to the right of the person. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 24,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000089.json",
+    "total_relationships": 172
+  },
+  "relationships": [
+    [
+      17,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      2,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      8,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      8,
+      "above",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      8,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      9,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      9,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      10,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000089"
+}

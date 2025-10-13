@@ -1,0 +1,1195 @@
+{
+  "activity_differential": [
+    "adult and child walking together through flower shop walkway",
+    "camera panning and moving through garden area",
+    "adult supervising child in outdoor flower shop"
+  ],
+  "description": "A camera moves through a flower shop or garden area at night, following two people (one adult, one child) walking along a pathway lined with plants and flowers. The camera then pans and moves past the people, focusing on the plants, flowers, and outdoor area.",
+  "place_env_id_name": "flower shop outdoor walkway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A boot cannot stand left of a person independently; more plausible that the person is standing left of the boot or that the boot is on the person. Flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot is unlikely to be under a flowerpot; the flowerpot is more plausibly on or above the boot, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant is lush and likely rooted in the ground, so the boot cannot be 'under' the plant; flipping the relationship to 'plant under boot' matches the usual spatial arrangement of a boot moving over or above a plant.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be under a bush, but a bush cannot be under a person; flipping the subject and object aligns with physical and spatial plausibility.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot can be under a bush, but a bush being under a boot is physically implausible; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a bush, but a bush being under a person is physically implausible; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot realistically be under a flowerpot; typically, a flowerpot sits under or on/near a bush. Reversing subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot be under a door; reversing the subject and object to 'door under bush' is more plausible spatially.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person, as a human figure, is likely in front of the flowers, so flipping makes 'person behind flowers' corrected to 'flowers behind person' which fits the spatial placement.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot is likely behind the flowers rather than the flowers being behind the boot given their descriptions; flipping subject/object makes the spatial relationship more plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Flowers are typically in or on a flowerpot, so the flowerpot is under the flowers; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The flowers would not be under the door; instead, the door is likely behind or above the flowers. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The flowers are more likely to be on or part of the plant rather than under it; flipping subject and object aligns with natural spatial arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is in front walking, and the tall plant is likely behind the person; flipping subject and object makes the spatial 'behind' predicate correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant cannot be 'under' a flowerpot; the plant is likely inside or on top of the flowerpot, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant is unlikely to be spatially under a door; the door is more plausibly above or in front of the plant. Flipping subject and object makes the 'under' predicate physically plausible.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a flowerpot would be under a light fixture, not the other way around; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door would be under a light fixture, not the other way around; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a plant would be under a light fixture rather than the light fixture being under the plant; reversing subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Flowers are typically inside or over a flowerpot, not the flowerpot over the flowers; reversing subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a plant would be 'over' a flowerpot if it is growing out of it; reversing the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot is unlikely to be physically 'over' a hanging light fixture; reversing the subject and object to 'light fixture over flowerpot' is more plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the plant is over the flowerpot rather than the flowerpot being over the plant, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant is typically over the flowerpot, not the other way around; flipping aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the descriptions, the crossbar is likely positioned over the flowerpot rather than the flowerpot being over the crossbar; flipping subject and object makes the spatial relationship more plausible.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The flower arrangement is positioned over the flowerpot, not the other way around; flipping subject and object makes the spatial relation 'over' correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant is typically over the flowerpot, not vice versa; flipping subject and object aligns with real-world spatial arrangement.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A crossbar is typically positioned over or above a door, not the door over the crossbar; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the bush rather than the bush being behind the person, given common spatial relationships in scene descriptions.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot moving is unlikely to be behind a stationary bush; better to say the boot is in front of or the bush is behind the boot, flipping subject/object resolves the spatial relation meaningfully.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically flowers are positioned in front of bushes; flipping subject and object corrects the spatial relationship to reflect the flowers being in front and the bush behind.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tall, slender plant is more likely to be behind the bush rather than the bush behind the plant given their described sizes and prominence.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush is typically in front of or beside a light fixture; it is more plausible that the light fixture is behind the bush rather than the bush being behind the light fixture.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush is unlikely to be under a flowerpot; typically, a flowerpot would be on or above a bush or ground. Flipping subject and object makes the spatial relation 'flowerpot under bush' plausible if the bush overhangs the flowerpot.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot be under a door; it's more plausible that the door is under or behind the bush, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot physically be under a plant; flipping the subject and object so the plant is under the bush makes more spatial sense given their descriptions.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant with leaves described is likely growing in or on the flowerpot, so the flowerpot is under the plant, not the other way around. Flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person (wearing a coat) is over the plant, rather than the plant being over the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant cannot be over the light fixture; it is more plausible that the light fixture is over the plant.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant is typically over a flowerpot, meaning the flowerpot supports the plant, so flipping subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant typically grows in or is supported by a flowerpot; thus, the flowerpot is 'over' the plant is unlikely, reversing subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely in front of the crossbar, so flipping subject and object makes 'person behind crossbar' plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot is more likely to be under the crossbar rather than the crossbar under the flowerpot; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description suggests the 'door' is vertical and the 'crossbar' is horizontal and below it; thus, the door is likely above the crossbar. Flipping subject and object makes the 'under' predicate correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant can be under a crossbar but not vice versa; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a flower arrangement is placed in or on top of a flowerpot, not under it. Reversing the subject and object makes the spatial relation 'flowerpot under flower arrangement' correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door is typically above or behind a flower arrangement, so flipping the relationship to 'door above flower arrangement' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flower arrangement is unlikely to be physically under a plant. It is more plausible that the plant is under the flower arrangement, so flipping the subject and object makes the spatial relation 'under' reasonable.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant is described as positioned on the left side, so it is more accurate to say the flower arrangement is to the right of the plant; flipping subject and object corrects the 'left of' predicate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the plant, so flipping subject and object aligns with the spatial predicate 'behind' when correctly oriented.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant typically is in or on a flowerpot, not under it; flipping the relationship aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plant is unlikely to be under a door; it is more plausible that the door is above or behind the plant, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant is described as positioned on the left side and the flower arrangement implied to be on the right; flipping the relationship to 'flower arrangement right of plant' makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "Flowers are likely in the flowerpot, so the relationship 'left of' should have flowers as the subject and flowerpot as the object for spatial correctness.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "The flowerpot is unlikely to be under the door; more reasonable is that the door is above the flowerpot.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "Plants typically grow in or on flowerpots, so the plant is more plausibly 'in' or 'on' the flowerpot rather than 'under' it. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 27
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 56,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000068.json",
+    "total_relationships": 240
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      9,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      9,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      12,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      15,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      15,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      15,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      16,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      16,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      17,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      17,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      17,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      18,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      27,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      27,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      27,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000068"
+}

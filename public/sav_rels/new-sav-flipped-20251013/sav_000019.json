@@ -1,0 +1,628 @@
+{
+  "activity_differential": [
+    "woman preparing child for the day",
+    "woman grooming herself or child",
+    "woman prompting child to get up"
+  ],
+  "description": "A woman in a floral dress interacts with a boy on a bed in a modest living room. The boy appears to be getting ready or being prompted to get up, and the woman later uses a comb, possibly preparing herself or the boy. The scene transitions from interaction to the woman focusing on grooming.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The dress is an attribute of a person and cannot logically be 'in front of' a bed alone; flipping to have the person in front of the bed would be correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is wearing the dress, so the dress is on top of the person; flipping the subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress cannot be on top of the pillow, but the pillow can be on top of the dress (worn by the person), so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb is in front of the dress (on the person), not the dress in front of the comb; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pillow cannot wear a dress; reversing subject and object makes sense as a dress can be 'worn by' a person, but here the 'dress' is currently the object, so flipping is correct given the predicate 'worn by'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pillow is typically on a bed, so the bed being 'in front of' the pillow is incorrect; flipping subject and object aligns with expected spatial arrangement.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is physically above a pillow, not the pillow above the person; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A blanket is usually on top of a person, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a pillow is placed on top of a blanket, not the blanket on top of the pillow; flipping subject and object aligns with common physical arrangements.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person cannot physically be 'on top of' a wall, but a person can be on top of a wall; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pillow is typically on top of a wall, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress cannot be spatially behind a bed, but a bed can be behind a dress (person wearing it), so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a pillow is placed on or behind the bed, not the bed behind the pillow; flipping subject and object makes the spatial relation 'behind' plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is more likely to be behind a bed than the bed behind the person; reversing subject and object makes spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the pillow is behind the bed rather than the bed behind the pillow, given their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plastic bag is likely behind the bed rather than the bed being behind the plastic bag; flipping subject and object matches the spatial arrangement better.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress is under the person, not the person under the dress; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A comb cannot hold a backpack; flipping subject and object makes the relationship plausible, as the backpack can be in the hand holding the comb.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "in right hand of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pillow is unlikely to be under a dress being worn by a person; typically a dress is worn over or on top of objects like pillows. Reversing subject and object aligns the spatial predicate 'under' more plausibly, with the dress under the pillow.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a pillow rests on or above a blanket, so flipping the subject and object makes the spatial relation 'blanket under pillow' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pillow cannot be under a wall; more plausible that the pillow is on or in front of the wall, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the pillow is overlapping the person (e.g., resting on them) rather than the person overlapping the pillow; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plastic bag appears to be suspended or held above, while the pillow is likely below it; flipping subject and object makes 'pillow under plastic bag' a correct spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb is under the head of the person, not the person under the head of the comb; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under head of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb is what the person is looking at, not the dress; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb is the tool responding to the person's use, not the dress responding to the comb; flipping subject and object aligns with the functional relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "responding to",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dress cannot lie on a person, but a person can be 'lying on' or 'wearing' a dress; flipping subject and object aligns with physical and semantic reality.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "lying on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb is the object being used to attend to the dress wearer; flipping the subject and object makes the 'attending to' predicate semantically plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "attending to",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The comb (held in hand) is looking at the dress makes no sense; reversing subject and object to 'person wearing dress looking at comb' is plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 29,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000019.json",
+    "total_relationships": 102
+  },
+  "relationships": [
+    [
+      6,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "worn by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "in right hand of",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      12,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "overlapping",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      12,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "under head of",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "looking at",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      8,
+      2,
+      "responding to",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      2,
+      "lying on",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      2,
+      "attending to",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      8,
+      2,
+      "looking at",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000019"
+}

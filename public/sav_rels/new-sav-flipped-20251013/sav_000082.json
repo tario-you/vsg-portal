@@ -1,0 +1,82 @@
+{
+  "activity_differential": [
+    "children dancing together",
+    "children playing a group game",
+    "children collaborating in a dance activity"
+  ],
+  "description": "A group of children and possibly a young adult are energetically dancing together in a living room. The camera remains mostly stationary, capturing the group as they move, gesture, and interact socially and physically through dance.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the trash can rather than the trash can being in front of the person, so reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary pipe cannot gesture toward a person, but a person can gesture toward the pipe; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "gesturing toward",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "An inanimate object cannot gesture toward a person, but the person gesturing toward the object is plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "gesturing toward",
+      "relation_type": "functional",
+      "subject_id": 12
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 3,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000082.json",
+    "total_relationships": 202
+  },
+  "relationships": [
+    [
+      33,
+      7,
+      "in front of",
+      [
+        [
+          72,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "gesturing toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      11,
+      12,
+      "gesturing toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000082"
+}

@@ -1,0 +1,144 @@
+{
+  "activity_differential": [
+    "cat playing with toy",
+    "cat interacting with moving object",
+    "cat engaging in play behavior"
+  ],
+  "description": "A cat inside a cage interacts with a moving toy, reaching and swatting at it repeatedly. The toy is manipulated by an unseen hand. The cat is attentive and engaged with the toy throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The tall, stationary object is unlikely to be behind the soft, moving toy; flipping the subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the descriptions, it is more logical for the tall rectangular object to be to the right of the bowl; flipping subject and object aligns with typical spatial arrangement semantics.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl being swatted by a toy is unlikely; it is more plausible the toy is being swatted by the bowl or person interacting with it. Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "being swatted by",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cat is performing actions such as extending its front paw, suggesting it manipulates or interacts with the bowl, not the other way around; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being manipulated by",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A toy (inactive object) cannot pay attention; the cat is the agent likely paying attention to the toy. Reversing subject and object corrects the attentional relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000107.json",
+    "total_relationships": 73
+  },
+  "relationships": [
+    [
+      2,
+      4,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          144,
+          240
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "being swatted by",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          144,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      3,
+      "being manipulated by",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          144,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "paying attention to",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          144,
+          336
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000107"
+}

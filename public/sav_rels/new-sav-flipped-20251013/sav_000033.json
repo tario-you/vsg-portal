@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "person walking along rural path and approaching group",
+    "group socializing near motorcycle and bicycle",
+    "bicycle riders passing by walking person"
+  ],
+  "description": "A person in traditional attire is walking along a dirt path, approaching a group of people near a motorcycle and a bicycle. As the person walks, two people on a bicycle pass by, and the walking person appears to interact with the group ahead.",
+  "place_env_id_name": "rural path",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "An object cannot wear a skirt; it is more plausible that the skirt is wearing or containing the small elongated object (e.g., as decoration or accessory). Reversing subject and object makes the relationship meaningful.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt being 'on' an object is unlikely; instead, the small elongated object could be on the skirt, so flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag lying on the ground is plausible; saying the bag is 'on' the small object is unlikely. The small object is more likely to be on or beneath the bag, so flipping subject and object makes the predicate 'on' correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The moving 'hand' approaching the static small object is more plausible; flipping subject and object corrects the direction of approach.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is approaching the object, not the other way around; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000033.json",
+    "total_relationships": 59
+  },
+  "relationships": [
+    [
+      3,
+      6,
+      "wearing",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "approaching",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "being approached by",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000033"
+}

@@ -1,0 +1,229 @@
+{
+  "activity_differential": [
+    "dog moving from house to car",
+    "dog descending stairs and exploring",
+    "dog interacting with child and entering vehicle"
+  ],
+  "description": "A small dog descends a staircase, moves through a living space, and enters a car, with a child briefly appearing on the stairs. The camera follows the dog's movement throughout.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The painting is below the dog on the staircase, not the dog below the painting; flipping subject and object makes the spatial relation 'below' accurate.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is below the wall panel, so flipping subject and object makes 'dog below wall panel' correct.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is moving down the stairs, likely in front of the light fixture; saying the fixture is behind the dog is more accurate when the relationship is flipped.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The painting is likely below the light fixture, reversing subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is typically on or attached to a wall or ceiling, not positioned to the right of a wall; flipping subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The 'light fixture' is described as suspended from the ceiling, so it should be above the 'chair'; flipping the subject and object aligns with correct spatial positioning.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A small light fixture is usually fixed and unlikely to be spatially right of a child; it is more plausible that the child is right of the light fixture, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is below the wall, not the wall below the dog; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A handle is typically on or left of a wall, not the wall left of the handle; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible that the dog is below the chair backrest, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 10,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000029.json",
+    "total_relationships": 62
+  },
+  "relationships": [
+    [
+      13,
+      1,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "below",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "below",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000029"
+}

@@ -1,0 +1,313 @@
+{
+  "activity_differential": [
+    "group grilling and preparing food outdoors",
+    "group socializing during a barbecue",
+    "group collaborating on outdoor cooking"
+  ],
+  "description": "A group of people are gathered outdoors under trees near water, collaboratively grilling meat on a barbecue. Several individuals are actively handling the grill and food, while others are present and interacting socially. The camera moves slightly to capture different angles of the group and the grilling activity.",
+  "place_env_id_name": "outdoor picnic area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A person is likely behind the shirt (i.e., wearing it), not the shirt behind the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be spatially behind a person; it makes sense to flip the relationship to 'person behind shirt' if the person is behind an object of clothing.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be spatially located in front of a person; rather, the person is in front of the shirt (worn on the person). Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The boat is on or above the water, not under it; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The boat is on the water, so the spatial relationship 'not overlapping' should be reversed: water not overlapping boat is incorrect, but boat not overlapping water is physically implausible in usual terms. Flipping subject and object resolves this inconsistency.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "not overlapping",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers cannot be spatially behind a person; the person is wearing the trousers, so the person should be the subject behind the trousers.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the trousers (worn by them), so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the trousers (being worn by the person), not trousers in front of a person.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are typically worn by a person, so the person cannot be 'not overlapping' the trousers; flipping subject and object aligns with the predicate 'not overlapping' due to uncertainty in the scene.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "not overlapping",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the grass, not the grass behind the person, given typical spatial arrangements in a scene with a person crouching near grass.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the grass rather than the grass being in front of the person.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "Water is typically under grass, not the other way around; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "A 'head' alone cannot collaborate; the person with the green cap can be collaborating with another person. Flipping subject/object to have the person as subject makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot collaborate; the person wearing the shirt is the proper subject for a social predicate like 'collaborating'. Flipping subject and object corrects this.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 14,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000060.json",
+    "total_relationships": 192
+  },
+  "relationships": [
+    [
+      1,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      18,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "not overlapping",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      29,
+      "not overlapping",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      27,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      5,
+      "collaborating",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000060"
+}

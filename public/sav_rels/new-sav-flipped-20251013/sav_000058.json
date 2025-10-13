@@ -1,0 +1,460 @@
+{
+  "activity_differential": [
+    "door being opened to reveal living room",
+    "camera panning to show interior",
+    "latch and handle being manipulated to open door"
+  ],
+  "description": "A camera records a living room as a door is gradually opened wider, revealing more of the interior, including chairs, a mat, and other furnishings. The latch and handle on the door are manipulated as the door swings open.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The clock is above the door in a typical indoor setting; reversing subject and object aligns with a physically plausible spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is likely mounted above the chair; flipping subject/object correctly represents that the clock is above the chair, not vice versa.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is typically in front of the chair, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot be on top of a wall since the wall is vertical and the mat is on the floor; flipping the relationship to 'wall on top of mat' makes no sense either, but flipping subject/object better fits spatial logic if interpreted as 'mat on floor below wall.' However, the relationship as 'mat on top of wall' is physically implausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain typically hangs above a mat on the floor, so the curtain should be the subject 'over' or 'above' the mat; flipping subject and object aligns the spatial relation properly.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A clock is typically mounted above a mat on the wall, not the mat above the clock; flipping makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot physically be above a rug lying on the floor; likely the rug is above the mat or on top of it, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is positioned on top of the floor, so the floor is below the mat, making the subject/object order incorrect for the predicate 'above'.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is above the wall is incorrect; the clock is mounted on the wall, so the correct relationship is the clock is above some part of the wall or the clock is on the wall. Flipping subject and object makes sense for 'above' to describe clock above the wall base or lower wall area.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the towel is below the door rather than the door being below the towel given their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat is typically on the floor, with the door behind it from a spatial perspective; flipping the subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a door is located on or in front of a wall, not behind it. Flipping subject and object to 'wall behind door' better reflects physical reality.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is likely on the floor, and the curtain hangs behind it; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall is the rigid surface on which a curtain hangs; saying the curtain is 'on top of' the wall is incorrect, but flipping subject and object makes the statement plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A clock is typically mounted on a wall above the floor rug; thus, the clock is above the rug, not below. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is vertically oriented, and the rug lies below it; flipping subject and object makes the spatial relation 'below' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A rug is typically placed on top of the floor, not below it; flipping subject and object makes the 'below' predicate accurate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the wall is vertical and the floor is horizontal; the wall is below the floor is incorrect. Flipping makes the floor below the wall relationship correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is likely mounted on a wall and the floor is below it; reversing subject and object aligns with the physical layout.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is mounted on the wall, so the wall is above the clock; flipping subject and object makes the spatial predicate 'below' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is located below the wall clock; flipping subject and object corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 21,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000058.json",
+    "total_relationships": 64
+  },
+  "relationships": [
+    [
+      12,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000058"
+}

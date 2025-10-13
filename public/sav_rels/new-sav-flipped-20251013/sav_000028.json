@@ -1,0 +1,271 @@
+{
+  "activity_differential": [
+    "mechanic repairing scooter",
+    "mechanic performing maintenance with tools",
+    "mechanic working in repair shop"
+  ],
+  "description": "A mechanic is working in a repair shop, performing maintenance or repair on a scooter using tools, with various parts and toolboxes around.",
+  "place_env_id_name": "repair shop",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A storage compartment is unlikely to be sitting on a motorcycle wheel; more likely, the motorcycle wheel is sitting on or inside the storage compartment or vice versa. Flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "sitting on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cardboard box likely sits on the storage compartment, not the other way around, given the typical physical arrangement of these objects.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "sitting on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tag is likely below the storage compartment; reversing subject and object fits the spatial relationship better.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely positioned above the shelf rather than the shelf being above the arm; flipping subject and object makes the relationship spatially accurate.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The motorcycle wheel is more likely positioned right of the shelf rather than the shelf being right of the wheel, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The box is likely positioned to the right of the shelf, not the shelf to the right of the box; flipping subject and object aligns with typical spatial description.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely above the pipe; flipping subject and object makes the spatial relation 'above' correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cardboard box is likely inside or under the storage compartment, so the predicate 'under' is correct when the storage compartment is the subject and the box is the object.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A storage compartment or cover would not realistically be sitting on a motorcycle wheel; rather, the wheel is part of the motorcycle likely contained or supported by the compartment.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bottle 'wearing' a storage compartment is more plausible than the reverse; flipping corrects the semantic relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A storage compartment cannot 'use' a shoe, but a shoe might be 'using' or inside the compartment; flipping subject and object makes the predicate plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the arm is using the storage compartment rather than the storage compartment using the arm, so reversing subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000028.json",
+    "total_relationships": 119
+  },
+  "relationships": [
+    [
+      17,
+      1,
+      "sitting on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "sitting on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      1,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "sitting on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      26,
+      1,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      10,
+      1,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000028"
+}

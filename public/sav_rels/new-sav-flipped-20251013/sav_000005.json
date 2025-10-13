@@ -1,0 +1,418 @@
+{
+  "activity_differential": [
+    "customers browsing and queuing in a manga merchandise store",
+    "customers socializing and shopping together",
+    "customers handling and examining products"
+  ],
+  "description": "A series of frames inside a manga/anime merchandise store, showing multiple people browsing, queuing, and moving through the store. The camera is positioned at the entrance and remains mostly static, capturing the flow of customers as they interact with products and each other.",
+  "place_env_id_name": "retail store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The jacket is worn by the person, so the person is on the jacket is incorrect; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket cannot be under a person; rather, a person wears or is over a jacket, so flipping subject and object makes the spatial relation 'under' plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is touching the jacket by wearing it; flipping subject and object makes the 'touching' relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is above the person as it is worn on them; flipping subject and object aligns with the predicate 'above' for spatial correctness.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot be 'on' a person; rather, the person wears the coat. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is physically 'under' the coat; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person and thus touches the person; flipping subject and object corrects the predicate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person wears the coat, so the coat is touching the person; flipping subject and object aligns with this natural relationship.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is 'on' the coat is incorrect; flipping subject and object makes it semantically correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is 'under' the coat, not the coat under the person; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is wearing a coat, so the person is touching the coat, not the coat touching the person; flipping subject and object makes the predicate accurate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is wearing the coat, so it makes more sense to say the person is touching the coat rather than the coat touching the person.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The trousers are worn by the person, so the person is 'on' the trousers is incorrect; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely touching the trousers, not the trousers touching the person; flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more natural to say the person is touching the trousers they are wearing, rather than the trousers touching the person.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling light fixture is typically above a signboard, so the relationship 'signboard under ceiling light fixture' makes sense only if the subject and object are flipped.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a banner would be displayed under a signboard, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A smaller signboard is unlikely to be under a taller signboard; likely the taller signboard is above the smaller one, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a poster is displayed on a wall above a television; saying the television is below the poster is correct when flipped to poster below television.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 24
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 19,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000005.json",
+    "total_relationships": 200
+  },
+  "relationships": [
+    [
+      2,
+      4,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      4,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      14,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      14,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      16,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      23,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      24,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000005"
+}

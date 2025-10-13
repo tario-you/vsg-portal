@@ -1,0 +1,149 @@
+{
+  "activity_differential": [
+    "person shopping for toys",
+    "person browsing and handling toy boxes",
+    "person exploring toy store aisles"
+  ],
+  "description": "A person is shopping in a toy store, browsing and interacting with toy boxes and displays. The camera follows the person as they move through the aisles, occasionally focusing on specific products.",
+  "place_env_id_name": "toy store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'worn by' suggests the shirt is worn by a subject, but here the subject is undefined and the shirt is the object; flipping subject and object aligns with typical usage that a shirt is worn by a person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person wearing the shirt can be in front of the shirt only if the objects are reversed; typically, the shirt is worn by the person, so flipping subject and object makes the relationship 'person in front of shirt' more plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be spatially in front of a person; more logical is that the person is in front of the shirt (wearing it).",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be to the left of a person, but a person can be to the left of a shirt; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be physically in front of a person; it is more accurate to say the person is in front of the shirt.",
+      "label": "flipped",
+      "object_id": 41,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shirt itself does not interact independently; the person wears the shirt, so reversing subject and object makes more sense.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 6,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000096.json",
+    "total_relationships": 123
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "worn by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      41,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "interacting with",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          240,
+          264
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000096"
+}

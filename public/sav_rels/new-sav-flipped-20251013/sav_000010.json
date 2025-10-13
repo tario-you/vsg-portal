@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "group setting up photography or video shoot",
+    "people collaborating to arrange studio equipment",
+    "people preparing lighting and camera setup"
+  ],
+  "description": "A group of people are setting up a photography or video shoot in a living room, involving lighting equipment, tripods, and other studio gear. Multiple people are interacting with the equipment and each other, preparing the scene.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The large light diffuser is likely positioned above the tripod, so flipping the subject and object corrects the 'below' spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lamp is typically above a light diffuser, so flipping subject and object makes 'lamp below light diffuser' into a correct 'light diffuser below lamp' spatial relation.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "The large light diffuser is typically positioned above the bucket to diffuse light downward, so flipping subject and object correctly reflects the spatial relation 'below'.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plastic bag is more plausibly in front of the desk rather than the desk being in front of the bag.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mirror is typically positioned in front of a desk, not the desk in front of a mirror; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A desk being below a large ceiling-mounted light diffuser is physically unlikely; the light diffuser is usually above the desk, so flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A table is typically below a light diffuser installed above it; flipping the subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mirror is unlikely to be below a large light diffuser; more plausible is that the light diffuser is below the mirror.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ring light cannot place an object on a table; rather, the table supports the ring light placing it on top, so subject and object should be flipped.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "placing object on",
+      "relation_type": "functional",
+      "subject_id": 39
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tripod is adjusted to position the ring light; reversing subject and object makes the predicate 'adjusting' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "adjusting",
+      "relation_type": "functional",
+      "subject_id": 39
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tripod adjusts the ring light's position; flipping the subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "adjusting",
+      "relation_type": "functional",
+      "subject_id": 39
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000010.json",
+    "total_relationships": 189
+  },
+  "relationships": [
+    [
+      24,
+      3,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      17,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      28,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      10,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      12,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      20,
+      "below",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      39,
+      "placing object on",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      39,
+      "adjusting",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      39,
+      "adjusting",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000010"
+}

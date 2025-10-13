@@ -1,0 +1,103 @@
+{
+  "activity_differential": [
+    "people shopping in mall corridor",
+    "people walking through clothing store area",
+    "people carrying shopping bags in mall"
+  ],
+  "description": "Two people are walking through a shopping mall corridor, carrying shopping bags and passing by various clothing displays and mannequins. The camera follows their movement, tracking their progress down the corridor.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the person is holding the floor lamp, not the floor lamp being held by the person; flipping the subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is a large, fixed vertical surface, and the floor lamp stands in front or to the right of the wall. Saying the lamp is 'right of' the wall is less plausible than the wall being 'right of' the lamp, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is to the right of the wall, not that the wall is to the right of the person; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be to the right of a wall, but saying the wall is to the right of the person is unlikely given the description; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000006.json",
+    "total_relationships": 74
+  },
+  "relationships": [
+    [
+      2,
+      9,
+      "held by",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000006"
+}

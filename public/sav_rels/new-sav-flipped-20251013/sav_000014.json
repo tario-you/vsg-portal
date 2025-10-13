@@ -1,0 +1,565 @@
+{
+  "activity_differential": [
+    "child reading a book",
+    "child flipping through book pages",
+    "child studying alone in classroom"
+  ],
+  "description": "A child is sitting alone on a bench in a classroom, actively reading and flipping through a book. The camera remains static, capturing the child\u2019s focused engagement with the book throughout the sequence.",
+  "place_env_id_name": "classroom",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A bench can sit behind a wall but a wall cannot sit behind a bench; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat can sit behind a wall but not vice versa; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A step can be sitting behind a wall, but a wall sitting behind a step is less plausible; flipping fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "sitting behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A step is typically below a wall, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A step is typically below a wall, so reversing subject and object makes the relationship 'step below wall' correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the book is in front of the wall, not the wall in front of the book; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a signboard is positioned on or above a wall; saying the wall is below the signboard is more plausible if the subject and object are flipped.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The desk is likely below the wall; flipping subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a window is set within or above a wall, so stating the wall is below the window is likely incorrect; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air conditioner unit is mounted on the wall, so the wall is above the air conditioner; flipping subject and object makes the 'below' relationship correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a wall is behind a bench, so flipping subject and object makes 'wall in front of bench' more plausible than 'bench in front of wall'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The step is plausibly below the bench, not vice versa; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The step is typically below the bench, not the other way around; flipping subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A book being held upright can be in front of a bench; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a signboard is positioned above a bench rather than below it; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A desk is typically below a bench in a spatial context; the current relationship is inverted.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air conditioner unit is mounted on the wall above the bench, so 'below' relationship should be reversed with the air conditioner as subject and bench as object.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically placed in front of or under a bench rather than behind it; flipping the subject and object to state the bench is behind the doormat makes spatial sense.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically placed on a step or floor; thus the step is below the doormat, not the other way around. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically placed on or below a step, so the step is not below the doormat; reversing the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the book is in front of the doormat, not the doormat in front of the book, given the descriptions and typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically below or on the floor, while a desk is elevated; thus, the desk is above the doormat, so flipping subject and object makes the 'below' relation correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically placed in front of or beneath a bench; saying the doormat is behind the bench is unlikely, so flipping subject/object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically below a window, so flipping the subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A doormat is typically placed in front of a step, so the doormat being 'behind' the step is more likely correct if reversed to the step is behind the doormat.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The crossbar is a stable object likely attached to or supported by the wall; it is implausible that the crossbar is 'held by' the wall as subject and object appear reversed.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 17
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000014.json",
+    "total_relationships": 97
+  },
+  "relationships": [
+    [
+      3,
+      1,
+      "sitting behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "sitting behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "sitting behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      1,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      3,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      4,
+      "behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      4,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "held by",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000014"
+}

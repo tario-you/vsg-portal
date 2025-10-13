@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "people walking along a residential street",
+    "car approaching pedestrians on sandy road",
+    "camera observing street activity"
+  ],
+  "description": "A group of people are walking along a sandy road in a residential area, with a car approaching and a motorcycle entering the scene. The camera remains mostly stationary, capturing the gradual movement of people and vehicles.",
+  "place_env_id_name": "residential street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Sand cannot be on top of the sky; rather, the sky is above the sand, so flipping subject and object fixes the predicate.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is on the sand, not the sand under the house; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is under the sky, not the sky under the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is under the sky, not the sky under the person; reversing subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sand is physically below the sky; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the house, so flipping subject and object makes the spatial predicate 'below' accurate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be above the house only if they are positioned on the roof or higher, but based on the descriptions, flipping the subject and object makes more sense: the house is above the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the house, not the house above the sky; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the building; flipping subject and object corrects the spatial predicate 'behind'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sand is typically in front of a building; the building being 'behind' the sand is more plausible if sand is the reference point, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is typically behind the building, not the building behind the sky; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is below the building, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is right of the building rather than the building being right of the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is likely below the larger multi-story building, so flipping subject and object corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'being approached by' implies the object is approaching the subject; flipping the subject and object aligns with the observed actions and spatial dynamics described.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000079.json",
+    "total_relationships": 63
+  },
+  "relationships": [
+    [
+      4,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "being approached by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000079"
+}

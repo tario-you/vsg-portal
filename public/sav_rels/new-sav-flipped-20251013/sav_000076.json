@@ -1,0 +1,127 @@
+{
+  "activity_differential": [
+    "person walking around living room",
+    "person recording their movement in living room",
+    "person exploring room while holding camera"
+  ],
+  "description": "A person, visible by their sneakers and trousers, is moving around a living room, at times sitting and at times walking. The camera, likely held by the person, pans and tilts to follow their movement and the environment. Various mats, doormats, tiles, and other inanimate objects are present but not manipulated. The person is briefly seen in a mirror, confirming their animate status and camera control.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are typically worn under trousers, so 'trousers on top of sneakers' is reversed; flipping subject and object makes the statement correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers cannot realistically be on top of a cabinet door, but the cabinet door can be on top of (or behind) the trousers; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn on top of a person, so the correct relationship is person on top of trousers reversed to trousers on top of person.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot wear sneakers, but sneakers can be worn by a person or be on a mat; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 19
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000076.json",
+    "total_relationships": 87
+  },
+  "relationships": [
+    [
+      17,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      19,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000076"
+}

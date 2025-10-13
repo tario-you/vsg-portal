@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "group of people walking along roadside",
+    "group conversing while walking",
+    "camera tracking group movement"
+  ],
+  "description": "A group of people are walking along a dirt path beside a road with passing vehicles, under a partly cloudy sky. The camera tracks the group as they approach and pass by.",
+  "place_env_id_name": "roadside urban area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Clouds are above barriers in the sky; flipping subject and object makes the spatial relation 'cloud over barrier' correct instead of 'cloud under barrier'.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A building is typically 'over' a barrier, not the barrier 'over' the building; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The relationship 'barrier over person' is physically implausible; likely the person is over or in front of the barrier, so flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Clouds are typically behind trees in a scene, so flipping subject and object makes the 'behind' relationship spatially correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A barrier is typically under trees rather than trees being under a barrier; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cloud is typically behind a building rather than a building being behind a cloud; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A building cannot be 'under' a barrier; more plausible is that the barrier is under the building.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the trees are behind the building rather than the building being behind the trees based on their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be to the right of a building, not vice versa; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is unlikely to be to the right of a building; more plausible is that the building is to the right of the person, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Clouds are naturally behind buildings when viewed from the ground; the current relationship incorrectly places the building behind the cloud.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The barrier is likely under the building; flipping subject and object aligns with physical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, trees stand in front of a building, not the building behind the trees; flipping subject and object improves spatial plausibility.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description and typical spatial relations suggest the modern building (object 7) is more likely in front, so flipping subject and object corrects the 'behind' predicate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely to be to the right of the building, so flipping the subject and object aligns with typical spatial descriptions.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000098.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "over",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "right of",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000098"
+}

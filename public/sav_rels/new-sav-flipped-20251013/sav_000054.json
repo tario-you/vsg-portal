@@ -1,0 +1,40 @@
+{
+  "activity_differential": [
+    "dog approaching and greeting observer",
+    "dog exploring living room",
+    "dog seeking attention from observer"
+  ],
+  "description": "A dog wearing a checkered garment walks from the back of a living room toward the camera, eventually approaching and interacting with the unseen observer. The environment is a domestic living room with various furniture and household items.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The blanket is soft and shows subtle movement, while the box remains stationary; it is more plausible that the box is moving past the blanket, not vice versa.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 1,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000054.json",
+    "total_relationships": 87
+  },
+  "relationships": [
+    [
+      21,
+      2,
+      "moving past",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000054"
+}

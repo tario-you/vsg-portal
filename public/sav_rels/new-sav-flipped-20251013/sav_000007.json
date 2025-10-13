@@ -1,0 +1,103 @@
+{
+  "activity_differential": [
+    "person shopping with cart",
+    "person walking in shopping mall",
+    "person carrying backpack while shopping"
+  ],
+  "description": "A shopping mall corridor with multiple people, one person pushing a shopping cart and carrying a backpack, another person walking, and the camera moving forward through the scene.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Tiles form the ground surface, and the shopping cart is on top of them; reversing subject and object correctly represents the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Tiles being under the person is correct physically; reversing subject and object aligns with the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shopping cart is physically above the tiles, not under them; flipping subject and object makes spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is to the right of the stationary signboard rather than the signboard being to the right of the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000007.json",
+    "total_relationships": 37
+  },
+  "relationships": [
+    [
+      9,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000007"
+}

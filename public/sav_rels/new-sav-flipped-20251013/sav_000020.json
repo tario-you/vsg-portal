@@ -1,0 +1,61 @@
+{
+  "activity_differential": [
+    "person preparing a drink at the bar",
+    "person using blender to mix ingredients",
+    "person working behind bar counter"
+  ],
+  "description": "A person is working behind a bar counter, preparing a drink using a blender and various ingredients. The camera moves from a close-up of the counter and plants to a wider view of the person at work, then zooms in on the preparation process.",
+  "place_env_id_name": "bar counter",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more logical and common that the person is to the right of the napkin, rather than the napkin being to the right of the person; flipping subject and object aligns better with typical spatial descriptions.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the person to be behind the log rather than the log being behind the person; flipping subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 2,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000020.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000020"
+}

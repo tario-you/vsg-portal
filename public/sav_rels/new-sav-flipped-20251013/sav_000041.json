@@ -1,0 +1,250 @@
+{
+  "activity_differential": [
+    "parrots and chick foraging and eating food",
+    "parrots and chick interacting with food and each other",
+    "mouse approaching food and observing birds"
+  ],
+  "description": "A group of parrots and a chick interact with food items on a mat, while a mouse is also present nearby. The animals are foraging, pecking, and eating, with some attentional focus on the food and each other. The scene is observed in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the mouse is below the parrot rather than the parrot being below the mouse.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mouse is likely below the container, not the container below the mouse; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The parrot can be below the tray, not the tray below the parrot; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The parrot is above the tray, not below; flipping subject/object aligns the predicate 'below' correctly.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mouse is likely on or above the mat, so flipping subject and object makes the spatial 'below' relationship accurate.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a parrot would be positioned above a mouse rather than the mouse being above the parrot; flipping the subject and object makes the spatial relation logical.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The parrot, likely flying or perched above the ground, is plausibly above the mouse; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mouse is moving above the mat; reversing subject and object aligns with the spatial predicate 'above'.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A chick can peck at a container, but the container cannot peck at the chick. Reversing subject and object corrects the predicate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "pecking at",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A non-living container cannot eat a chick; flipping the relationship to 'chick eating container' makes more sense, although still uncertain.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "eating",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tray cannot peck at a chick; logically, the chick would peck at the tray if anything.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "pecking at",
+      "relation_type": "functional",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000041.json",
+    "total_relationships": 98
+  },
+  "relationships": [
+    [
+      8,
+      2,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "above",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "above",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "above",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "pecking at",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      3,
+      "eating",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      5,
+      6,
+      "pecking at",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000041"
+}

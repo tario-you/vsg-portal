@@ -1,0 +1,355 @@
+{
+  "activity_differential": [
+    "child playing on trampoline",
+    "child jumping and bouncing on trampoline",
+    "child falling and getting up during trampoline play"
+  ],
+  "description": "A child is actively jumping, bouncing, and occasionally falling on a trampoline in an indoor play area, while other people are present in the background. The camera follows the child's activity, capturing dynamic trampoline play.",
+  "place_env_id_name": "indoor trampoline park",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person is above a mat, not the mat under the person, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely on or above the mat, so 'person under mat' is incorrect; flipping subject and object to 'person under mat' makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely standing on or above the mat, so flipping subject and object makes 'person under mat' into 'mat under person', which is physically plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is logically on or over the mat, not under it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is on or above the mat, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is stationary and flat, so the person would be on or above the mat, not the mat under the person; reversing subject/object fits the spatial predicate 'under' correctly.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person cannot be on a fluorescent tube light; it is more plausible that the fluorescent tube light is on (above) the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely behind the bench rather than the bench being behind the person; flipping subject and object makes spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the tall red object rather than the object being behind the person, based on typical spatial relations and the described orientation.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more natural to say the person is behind the pole rather than the pole being behind the person, so flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the mat rather than the mat being behind the person, given typical physical arrangements and the mat's stationary description.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cushion gliding behind a person is unlikely; more plausibly, the person is behind the cushion or the cushion is in front of the person. Flipping subject and object aligns better with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is described standing steady, and the pole is stationary and diagonal. It is more plausible that the person is behind the pole, so flipping the subject and object makes the spatial relationship 'behind' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary mat being behind a person is unlikely; usually, the person is behind the mat in spatial terms, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person likely stands behind the inflatable structure, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely to be behind the stationary cylindrical object rather than the cylindrical object being behind the person, so reversing subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 37
+    }
+  ],
+  "relationship_filter_summary": {
+    "flipped_relationships": 16,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000001.json",
+    "total_relationships": 82
+  },
+  "relationships": [
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "on",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000001"
+}
