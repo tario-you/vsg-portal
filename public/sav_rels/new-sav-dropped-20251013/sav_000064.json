@@ -1,0 +1,611 @@
+{
+  "activity_differential": [
+    "person cooking pancakes over open fire",
+    "person tending firewood for cooking",
+    "person frying food in pan outdoors"
+  ],
+  "description": "A person is cooking over an open fire using a pan, with logs as fuel. The person manipulates the firewood and tends to the cooking process, while pancakes are being fried in the pan.",
+  "place_env_id_name": "outdoor cooking area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the log.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The log is described as stationary and upright, while the rock is moving and rotating; thus, the log cannot be covering a moving rock underneath it.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "covering",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pan sitting atop a fire cannot be spatially under a stationary wheel-like object; the relationship 'pan under wheel' is physically implausible given their described contexts.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pan cannot be spatially 'under' a pot as both are usually placed on a stove or fire, with the pan typically above or inside the pot, not beneath it.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pan on a fire being spatially 'below' a rock is physically implausible; typically, the pan is above the ground or stable surface like a rock.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified with no name or description, making it impossible to validate the spatial relationship with the pan.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel, likely part of a structure, cannot plausibly contain a pancake; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "containing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel (stationary and part of a structure) cannot physically contain a log, as wheels are circular and typically open, making containment unlikely.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "containing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A frying pancake cannot physically be above a fabric in a stable spatial relationship during cooking; the pancake is in a hot pan, while fabric would not be near or above it due to safety and physical constraints.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake cannot plausibly be spatially 'under' a wheel-like object given the described context; the relationship is unlikely and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A frying pancake cannot be spatially above a stationary log as they are typically in different contexts and positions; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake cooking is not plausibly positioned above a heavy, rough log; such a spatial relationship is physically unlikely and not supported by typical cooking contexts.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake cooking in a pan cannot be inside a wheel; the spatial relationship is physically implausible given the objects' descriptions.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake cooking in a pan cannot be physically touching a log, which is an unrelated and likely distant object; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot realistically be 'inside' a wheel; the spatial relationship is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake described as being cooked should be on or in the pan, not to the left of it, making the spatial relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot perform the higher-order action of 'cooking' a pancake by itself; cooking involves more than just one hand and typically refers to the person or cook, not a hand.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "cooking",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand alone cannot perform 'cooking' as a higher order action; cooking requires more context involving food or cooking implements.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "cooking",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand alone cannot perform the act of cooking; cooking is an action by a person or agent, not just a hand.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "cooking",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel cannot perform the action of frying a pancake; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "frying",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel cannot perform the action of frying a log; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "frying",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel cannot perform the action of frying a pot; the relationship 'wheel frying pot' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "frying",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric cannot functionally fuel a wheel; the relationship 'fueling' is physically impossible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "fueling",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pan cannot 'fuel' a wheel; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "fueling",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot functionally 'fuel' a wheel; the relationship is physically implausible and incorrect in this context.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "fueling",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot realistically be 'fueling' a wheel; the predicate is implausible given the objects' nature.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "fueling",
+      "relation_type": "functional",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pancake cannot functionally fuel a wheel; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "fueling",
+      "relation_type": "functional",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it unclear what is focusing on the hand; insufficient information to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 28,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000064.json",
+    "total_relationships": 116
+  },
+  "relationships": [
+    [
+      2,
+      17,
+      "right of",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "covering",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      16,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "containing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "containing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "inside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "inside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "cooking",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      12,
+      "cooking",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      14,
+      "cooking",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      11,
+      "frying",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      12,
+      "frying",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      14,
+      "frying",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      6,
+      "fueling",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      6,
+      "fueling",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      6,
+      "fueling",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      9,
+      6,
+      "fueling",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      10,
+      6,
+      "fueling",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          48,
+          48
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000064"
+}

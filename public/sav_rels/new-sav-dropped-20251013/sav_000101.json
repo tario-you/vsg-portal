@@ -1,0 +1,418 @@
+{
+  "activity_differential": [
+    "person performing traditional dance",
+    "person dancing with expressive gestures",
+    "person giving solo performance"
+  ],
+  "description": "A person in traditional attire is performing a solo dance in a living room, making expressive hand and arm movements, occasionally lifting their dress, and moving rhythmically. The camera remains fixed, capturing the performance.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm a meaningful spatial relationship with the door.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent is typically fixed in place on a surface, and it cannot be spatially located 'behind' a cage, especially since the cage is described as stationary and the vent is a part of the environment rather than a separate movable object.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot plausibly be spatially under a large standing figure, as 'under' implies vertical positioning that isn't supported by the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'person left of dress' is physically impossible because the dress is part of the person's attire, not a separate object spatially positioned to the left of the person.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to assess the spatial relationship 'under' accurately.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'under' with the door frame.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress being spatially under a large, standing cartoonish figure is unlikely since dresses are worn on humans and do not independently position themselves under figures.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "It's unclear how a dress can be spatially located as 'left of' a door frame since a dress is worn, not a rigid object with fixed position; more context about wearer or scene is needed.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot physically be under a pipe in a spatial sense as it is a garment worn on the body, not an independent object positioned under a fixed pipe.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object lacks a name or description, making it impossible to evaluate the spatial relationship with the dress.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making the spatial relationship 'under' with the air vent unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling tile is typically a flat fixture mounted on a ceiling, making it physically unlikely to overlap a slender, diagonally positioned pipe in a way that the tile overlaps the pipe in space.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "overlaps",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is null with no details, making it impossible to verify or interpret the 'performing for' relationship involving the cage.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "performing for",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cage is an inanimate object and cannot perform the action 'looking at' another object.",
+      "label": "physically_impossible",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary cage, an inanimate object, cannot be 'dancing'.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "dancing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cage, being an inanimate object, cannot perform the action of 'gesturing with hands.'",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "gesturing with hands",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cage cannot 'lift dress'; the action is not physically possible for the cage to perform on itself.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "lifting dress",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cage is an inanimate object that cannot move arms expressively; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "moving arms expressively",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null), making it impossible to determine if it is a 'camera' focusing on the cage; relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 19,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000101.json",
+    "total_relationships": 117
+  },
+  "relationships": [
+    [
+      2,
+      11,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "overlaps",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      -1,
+      "performing for",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      -1,
+      "looking at",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      1,
+      "dancing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "gesturing with hands",
+      [
+        [
+          72,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "lifting dress",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "moving arms expressively",
+      [
+        [
+          120,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000101"
+}

@@ -1,0 +1,401 @@
+{
+  "activity_differential": [
+    "musicians performing live concert",
+    "audience cheering and recording performance",
+    "musicians collaborating on stage"
+  ],
+  "description": "A live concert performance is taking place on a stage with multiple musicians playing instruments, while an enthusiastic audience waves foam noisemakers and records the event with cell phones. The camera viewpoint moves closer to the stage as the performance progresses.",
+  "place_env_id_name": "concert arena",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relation or semantic plausibility.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity and description, making it impossible to evaluate the relationship with the person accurately.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker cannot perform music with a jacket; the relationship is physically impossible given the objects' nature.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "performing music with",
+      "relation_type": "higher_order",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker is an inanimate object and cannot perform music with a person; the phrase is semantically incorrect in this context.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "performing music with",
+      "relation_type": "higher_order",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker and a jacket cannot engage in a 'collaborating' social relationship as these are inanimate objects without agency or social behavior.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker is an inanimate object and cannot perform social actions like 'acknowledging' a cell phone.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "acknowledging",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket, as an inanimate object, cannot perform the social action of acknowledging a cell phone.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "acknowledging",
+      "relation_type": "social",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cell phone cannot perform the social action of 'waving at' a speaker, which is an inanimate object that remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "waving at",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cell phone cannot wave at a jacket; waving is an action performed by animate beings, so this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "waving at",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cell phone cannot wave at a person; the predicate 'waving at' is not physically plausible when the subject is a cell phone and the object is a person.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "waving at",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, an inanimate object, cannot perform an action like 'cheering for' a speaker; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "cheering for",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, an inanimate object, cannot perform the social action of cheering for a jacket.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "cheering for",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crossbar, an inanimate metallic bar, cannot perform the social action of 'cheering for' a person.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "cheering for",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically cheer for an inanimate speaker; the action 'cheering for' implies directed social support, which is not plausible toward a stationary object like a speaker.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "cheering for",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is unlikely to cheer for an inanimate object like a jacket; the relationship is unrealistic.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "cheering for",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker cannot perform the action of recording another speaker; recording is not a plausible functional relationship between two speaker devices.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "recording",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A speaker cannot perform the action of recording a jacket; recording is a function of a device capturing sound or video of a subject, not the object being recorded.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "recording",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary speaker cannot perform the action of recording a person; the predicate 'recording' is not plausible in this subject-object direction.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "recording",
+      "relation_type": "functional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000052.json",
+    "total_relationships": 114
+  },
+  "relationships": [
+    [
+      5,
+      19,
+      "right of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      13,
+      "moving toward",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      9,
+      14,
+      "performing music with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      9,
+      13,
+      "performing music with",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      9,
+      14,
+      "collaborating",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      2,
+      "acknowledging",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      14,
+      2,
+      "acknowledging",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      9,
+      "waving at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      14,
+      "waving at",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      13,
+      "waving at",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      9,
+      "cheering for",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      14,
+      "cheering for",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      13,
+      "cheering for",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      9,
+      "cheering for",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      14,
+      "cheering for",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      9,
+      "recording",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      14,
+      "recording",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      13,
+      "recording",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000052"
+}

@@ -1,0 +1,943 @@
+{
+  "activity_differential": [
+    "people shopping in warehouse store",
+    "people walking and browsing furniture aisles",
+    "people moving through store with carts"
+  ],
+  "description": "A group of people are walking and browsing in a large warehouse-style furniture store. The camera is steadily dollying forward down the main aisle, capturing people moving, browsing, and pushing carts.",
+  "place_env_id_name": "warehouse store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object involved in the 'under' spatial predicate has no name or description, making it impossible to evaluate the spatial relationship reliably.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A walking person cannot be 'on top of' a cabinet in a realistic physical context as described.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a floor, as the floor is beneath, making the relationship incorrect in this spatial context.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a ceiling, which is overhead and above, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A walking person cannot be spatially 'under' stationary stacked cardboard boxes; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are stacks of cardboard boxes described similarly and aligned; stating one is 'under' the other is redundant and not clearly supported.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Cardboard boxes resting on a floor cannot be positioned 'left of' the floor itself, as the floor is a surface supporting the boxes rather than a separate spatial object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stack of cardboard boxes cannot be spatially left of a ceiling, as left/right spatial relationships are typically defined in a horizontal plane, not between floor objects and overhead ceilings.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are stacks of cardboard boxes described similarly and overlapping; stating one is 'under' the other provides no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object lacks name and description, so the spatial relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify the spatial relationship 'left of' with the poster.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster hanging vertically would not be 'on top of' a cabinet in a spatial, physical sense; it is more plausible that the poster is on a wall behind or above the cabinet rather than physically resting on top of it.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to confirm the spatial relationship with the cabinet.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'under' with the cabinet cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what is below the cardboard boxes; spatial relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The floor cannot be to the right of the ceiling in a typical three-dimensional space; spatially the ceiling is above the floor, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, so the spatial relationship 'floor under object' cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the floor.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the floor.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to validate the spatial relationship with the floor.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the floor.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what it is or its position relative to the floor; relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making the spatial relationship 'ceiling under object' unclear and unsubstantiated.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially described as 'right of' a poster since it is positioned above, not to the side of such an object.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling cannot be spatially positioned 'right of' a signboard since it is typically above; the spatial relationship is implausible and likely incorrect.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling and poster descriptions do not clearly establish a spatial relationship specifying that the ceiling is to the right of the poster; the positioning is unclear from the metadata provided.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling, especially an expansive industrial ceiling, cannot realistically be spatially positioned to the 'right of' a signboard since ceilings are above and fixed overhead, not beside objects like a signboard.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling cannot be spatially 'right of' the table in a typical scene since ceilings are above tables, not positioned to their right.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'right of' cannot be verified or assessed.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to assess the spatial relationship with the ceiling.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two signboards cannot be above each other in the described manner; they are distinct objects and such a spatial relationship is unclear or unlikely based on the provided descriptions.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name, attributes, or description, making it impossible to assess the spatial relationship with the poster.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'left of' with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to evaluate the spatial relationship with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to verify the spatial relation 'left of' with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification or description; unable to determine the meaning of 'dolly forward toward' in this context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "dolly forward toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shelf is an inanimate object and cannot perform actions like walking away from something.",
+      "label": "physically_impossible",
+      "object_id": -1,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shelf is an inanimate object and cannot walk alongside a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The shelf is a stationary object and cannot walk near anything.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'walking on' is not physically possible with the shelf as subject and the cabinet as object; shelves do not walk and cannot walk on another piece of furniture.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject's identity and attributes are unknown, making it unclear who or what is walking on the cabinet, so the relationship cannot be properly validated.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 33
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the 'passing by' relationship with the shelf.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary shelf cannot 'pass by' a poster which is also static; 'passing by' implies motion which does not apply to either object here.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 44,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000095.json",
+    "total_relationships": 183
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      27,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      33,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      22,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      33,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      33,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      21,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      22,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      26,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      28,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      33,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "under",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      17,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      25,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      28,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      33,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      33,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      22,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      33,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      33,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "dolly forward toward",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      -1,
+      "walking away from",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      1,
+      "walking alongside",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "walking near",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      9,
+      "walking on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      33,
+      9,
+      "walking on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "passing by",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      7,
+      "passing by",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000095"
+}

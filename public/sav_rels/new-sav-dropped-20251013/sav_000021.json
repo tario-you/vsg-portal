@@ -1,0 +1,397 @@
+{
+  "activity_differential": [
+    "child playing with ball",
+    "child chasing after ball",
+    "child retrieving toy in living room"
+  ],
+  "description": "A young child in a blue dress is playing with a red ball in a living room. The child moves forward while holding the ball, then releases it, causing the ball to roll away. The child follows the ball, bends down, and picks it up again. The camera tracks the child's movement throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot hold a door; the predicate 'holding' is physically impossible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot physically be positioned 'behind' a door in a meaningful spatial context as it is typically on a foot; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal moving to the right of a stationary cabinet door is implausible in a spatial sense since sandals are typically worn on feet and do not 'move' independently, making their spatial relationship to a cabinet door unclear and physically improbable.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be 'in front of' the floor since the floor is a supporting surface beneath it; the spatial relationship is physically illogical.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be positioned to the left of the floor, as the floor is a supporting surface underneath, not a side object.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, which is typically worn on feet and moves along the ground, cannot plausibly be on top of a hanging curtain due to their typical spatial arrangement.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot be 'in front of' the floor in a meaningful spatial sense as the floor is beneath them; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor cannot be spatially located to the left of a child; the child is positioned above or on the floor, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot be physically on top of a curtain, which is typically hanging and not supporting weight.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'door' is vertical and the 'floor' is horizontal; the door cannot be 'left of' the floor as they are on different planes, making the spatial relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot functionally hold a door; holding implies grasping, which a sandal cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot 'release' a door; the predicate is not physically plausible given the subject and object descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "releasing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal (an inanimate object) cannot perform the action of 'following' another object, especially a stationary door; the relationship implies motion and intent which is not applicable.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot perform the action of 'picking up' a door, which is a large stationary object; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "picking up",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot functionally 'hold' a door; the relationship is physically impossible given the subject and object descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot be 'focused on' an object; it lacks attention or consciousness.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified (null), making it impossible to verify the 'being watched by' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified (null), so we cannot confirm or evaluate the 'camera tracking' relationship to the sandal.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera tracking",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000021.json",
+    "total_relationships": 79
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "holding",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "behind",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "holding",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "releasing",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "following",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "picking up",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "holding",
+      [
+        [
+          216,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "focused on",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      -1,
+      "being watched by",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "camera tracking",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000021"
+}

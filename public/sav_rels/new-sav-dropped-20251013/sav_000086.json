@@ -1,0 +1,1300 @@
+{
+  "activity_differential": [
+    "people playing claw machine",
+    "people attempting to win prize from arcade machine",
+    "people socializing at arcade"
+  ],
+  "description": "Two people are interacting with a claw arcade machine in an arcade or entertainment venue. One person is operating the machine, while the other is observing and holding a snack. The machine is actively grabbing and moving boxes (prizes) inside. The environment is lively with various machines and signboards.",
+  "place_env_id_name": "arcade",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A package being 'inside' a signboard is physically unlikely as signboards are typically flat and not containers.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A package cannot be spatially inside a floor; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A package cannot realistically be on top of a light fixture, especially one described as elongated and stationary like a light fixture; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A package maintaining consistent orientation and movement cannot be spatially under a stationary signboard without additional context indicating suspension or support; typically 'under' implies a fixed spatial relation that the moving package does not maintain here.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A package cannot be spatially 'under' a signboard in a physically plausible way given the typical mounting of signboards above packages; no context suggests the package is elevated above the signboard.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A package cannot be spatially 'under' a poster that typically hangs on a vertical surface; the spatial relationship as stated is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being clothing, cannot be 'inside' an arcade machine; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is a piece of clothing and cannot be spatially inside a signboard, which is a solid object; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey cannot be 'inside' a floor; the spatial relationship is physically impossible as described.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey cannot realistically be on top of a light fixture; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) being 'under' a signboard in a spatial sense is implausible, as clothing is worn on a person, not positioned under a signboard.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (an article of clothing) cannot be physically under a box as an object in space; it is more plausible that a jersey is worn by a person, not positioned under a box itself.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being a piece of clothing, cannot logically be spatially 'under' a signboard in a fixed spatial sense; the jersey is worn by a person and not an independent object that would be positioned under a signboard.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and cannot spatially exist 'left of' a telephone as an independent object; the relationship is semantically invalid.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an item of clothing and cannot be positioned spatially to the left of a signboard as an independent object; the jersey would be worn by a person, so this relation is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and does not possess a fixed spatial position relative to objects like a screen; it cannot be independently 'left of' another object in a meaningful way.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, a piece of clothing, cannot be spatially under a signboard in a meaningful physical sense; the jersey would be worn by a person and not positioned independently under a signboard.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being a piece of clothing, cannot realistically be positioned under a signboard in a meaningful spatial relationship; the signboard is typically mounted and the jersey worn by a person.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey cannot be under a poster since the poster is likely mounted or hanging, and the jersey is worn or draped over a body; physically placing the jersey under the poster is implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being clothing, cannot logically be spatially under a signboard which is likely mounted above; without a wearer or explicit context, the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey being spatially 'under' a stationary, upright speaker is not physically plausible given typical object arrangements; clothing is worn by a person and would not be under a standing speaker.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) being spatially located 'under' a lamp does not make sense physically; lamps are usually above or separate from clothing, but clothing cannot be 'under' a lamp in a meaningful spatial relationship in this context.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (an article of clothing) cannot logically be under a signboard; the spatial relationship is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being a piece of clothing worn on the body, cannot logically be under a stationary box as described; the spatial relationship is unlikely.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' the floor since the floor is beneath them; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is physically implausible for a person to be 'on top of' a light fixture, especially given the description of the person standing and leaning forward rather than being elevated or positioned above the fixture.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically located under a signboard in typical standing posture; the 'under' spatial relation is implausible here given the described context.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be under a box physically; this spatial relationship is not plausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be under a mask; the spatial relationship 'under' is implausible given the objects.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically be under a box given the description; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be spatially located 'under' a large rectangular box that is described as sturdy and upright; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically under a poster hanging on a wall; the spatial relationship 'under' does not make sense here.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be physically under a mounted signboard; this spatial relationship is unlikely given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically under a standing speaker; the spatial relationship 'under' is not plausible here given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'under' a signboard in this context, as signboards are typically mounted above or beside, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically 'under' a box in a plausible context given the descriptions; the spatial relation is unrealistic.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'in front of' the floor in a meaningful spatial sense as the floor is beneath them, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' a light fixture described as stationary and elongated; the relationship is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person's arm is raised upwards as if reaching; it is unlikely for the person to be physically under the box, making the 'under' spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is depicted reaching upward, so it is not plausible for the person to be under the box in this spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is extending their arm upwards while the speaker is stationary; it is physically implausible for the person to be under the speaker given the described postures and orientations.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is raising their arm upwards, but attempting to grab the floor above is physically implausible since floors are below or underfoot.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "attempting to grab",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is reaching upward with focused attention, making it implausible they are focused on a floor beneath them.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vending machine is an inanimate object and cannot engage in 'standing with' as a social relationship with a person.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing with",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Vending machines and arcade machines are inanimate objects; a vending machine cannot 'watch' an arcade machine.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The vending machine is an inanimate object that cannot perform the action of watching the floor.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vending machine is a stationary object and cannot actively 'hold' a box in a functional manner.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate arcade machine cannot perform the action of grabbing the floor, which is a static surface.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "grabbing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine typically does not 'contain' a cellular telephone functionally; the relationship is unlikely given the objects described.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine does not physically contain a signboard; these are separate objects and containing relationship is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine does not physically contain a signboard; the signboard is a separate mounted object, so this relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine typically does not 'contain' a box as described; the box appears as an independent object outside or near the machine, making the 'containing' relationship unlikely and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine typically does not contain a signboard; signboards are separate objects, so the relationship 'arcade machine containing signboard' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine containing a cellular telephone is unlikely and not supported by the descriptions; arcade machines do not functionally contain phones inside them.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine containing a signboard is implausible as signboards are typically separate fixtures, not contained within arcade machines.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine containing a signboard is physically implausible; signboards are typically separate, external objects.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine is unlikely to contain a large, standalone box inside it as described, making this relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "containing",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arcade machine does not physically display a signboard; the signboard is a separate object, so it is incorrect to state the machine is displaying the signboard.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "displaying",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'stand with' an inanimate object like a vending machine; this is not a plausible social relationship.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it impossible to confirm or validate the relationship with the vending machine.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined with no descriptive metadata, making it impossible to confirm or deny the 'camera focusing on' relationship.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 61,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000086.json",
+    "total_relationships": 161
+  },
+  "relationships": [
+    [
+      1,
+      7,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "inside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      30,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      31,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      22,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      25,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      27,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      28,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      29,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      31,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      32,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      25,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      29,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "attempting to grab",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      10,
+      "focused on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      4,
+      "standing with",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      6,
+      "watching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      10,
+      "watching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      19,
+      "holding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      10,
+      "grabbing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      18,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      20,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      26,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      33,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      15,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      18,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      20,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      26,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      33,
+      "containing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      24,
+      "displaying",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      5,
+      "standing with",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      -1,
+      5,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      6,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000086"
+}

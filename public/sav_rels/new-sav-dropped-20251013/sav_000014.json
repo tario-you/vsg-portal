@@ -1,0 +1,397 @@
+{
+  "activity_differential": [
+    "child reading a book",
+    "child flipping through book pages",
+    "child studying alone in classroom"
+  ],
+  "description": "A child is sitting alone on a bench in a classroom, actively reading and flipping through a book. The camera remains static, capturing the child\u2019s focused engagement with the book throughout the sequence.",
+  "place_env_id_name": "classroom",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A wall, being a stationary structure, cannot 'hold' a crossbar; 'holding' implies an animate or movable entity supporting another object.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are uncertainly identified as a wall and step, both stationary and adjacent; it's unclear whether the wall is actually in front of the step or vice versa, so the relationship lacks definitive support.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes one bench being 'in front of' another bench, which is redundant given the similar attributes and lack of additional spatial distinction. Both are stationary benches, making the relationship unnecessary.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are described as benches with similar attributes and fixed positions; stating one is 'in front of' the other adds no meaningful or credible spatial distinction.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Relationship between two benches where one is behind the other is spatially obvious and does not add meaningful information.",
+      "label": "redundant",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to assess the spatial relationship with the bench.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A doormat 'in front of' a crossbar is physically unlikely since doormats are typically placed on the ground and crossbars are horizontal bars, often elevated; the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A doormat is typically placed on the floor near doors, while a blackboard is usually vertical; thus, it is physically implausible for a doormat to be 'in front of' a blackboard in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A doormat on the floor cannot be spatially below an air conditioner unit mounted on a wall, as 'below' in this context would imply vertical positioning that does not align with typical indoor spatial arrangements where doormats lie on the floor and wall units are above them.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'below' involving the doormat cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are similar steps described with nearly identical features; stating one is 'in front of' the other adds no credible new information.",
+      "label": "redundant",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are described as steps with similar features and fixed positions; stating one is 'in front of' the other does not add meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'below' cannot be confirmed or evaluated for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall cannot perform the action of 'holding' a crossbar; the predicate is not physically plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall cannot flip pages of a crossbar; the action is physically impossible given the objects' nature and descriptions.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "flipping pages of",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall cannot perform the action of 'reading' a crossbar; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall (an inanimate object) cannot focus attention on a crossbar; the predicate 'focused on' implies intentionality not possible for walls.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and the object is uncertain; there's not enough context to confirm a meaningful relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000014.json",
+    "total_relationships": 97
+  },
+  "relationships": [
+    [
+      1,
+      17,
+      "holding",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "behind",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      25,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      26,
+      "below",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "holding",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      17,
+      "flipping pages of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      17,
+      "reading",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      17,
+      "focused on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000014"
+}

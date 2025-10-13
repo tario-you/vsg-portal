@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "child running toward SUV",
+    "camera moving along street and focusing on vehicles",
+    "camera observing street environment"
+  ],
+  "description": "A child is seen running in a sandy outdoor area near a black SUV, with the camera following the scene and approaching the vehicles. The child is only present in the first frame, while the camera moves closer to the SUV and then toward the street, capturing various vehicles and street elements.",
+  "place_env_id_name": "outdoor street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A child is unlikely to be 'on top of' a large tent; this spatial relationship is physically implausible given the description.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The child is described as moving on foot and holding an object, but there is no indication or plausibility that the child is physically on top of a tall, narrow, vertical structure resembling a wall, making the relationship unlikely.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot cannot perform the action of 'looking at' another entity; this predicate requires an entity with vision and attention, such as the child.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null), making it impossible to confirm or deny the relationship with the foot.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject entity has no name or description, making it impossible to evaluate the 'approaching' relationship to the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified and without description; cannot determine plausibility of 'watching' relationship with the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (name and description are null), making it impossible to verify the 'approaching' relationship to the wire; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification or description, making it impossible to verify the 'watching' relationship towards the awning.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000032.json",
+    "total_relationships": 78
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "watching",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "approaching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "watching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      12,
+      "approaching",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      19,
+      "watching",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000032"
+}

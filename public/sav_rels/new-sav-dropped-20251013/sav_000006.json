@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "people shopping in mall corridor",
+    "people walking through clothing store area",
+    "people carrying shopping bags in mall"
+  ],
+  "description": "Two people are walking through a shopping mall corridor, carrying shopping bags and passing by various clothing displays and mannequins. The camera follows their movement, tracking their progress down the corridor.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or attributes, making it unclear who or what is holding the floor lamp; no evidence supports this relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity lacks any identification, attributes, actions, or description, making it impossible to validate the spatial relationship 'behind' the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking and swinging arms would not be holding a floor lamp, which is typically heavy and stationary; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm a meaningful spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'opposite' cannot be meaningfully assessed or confirmed.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "opposite",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying details, making it impossible to verify or reason about the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to validate the 'held by' relationship with the floor lamp.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'right of' with the floor lamp.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to determine the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object lacks any name or description, making it impossible to evaluate the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify or interpret the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject of the relationship is undefined (null), so it is unclear what or who is doing the camera following; lacking context to validate or flip.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify that it can hold the floor lamp; insufficient information to keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object lacks a name and description, making it impossible to verify the 'walking toward' relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000006.json",
+    "total_relationships": 74
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "holding",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "behind",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "holding",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "opposite",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "held by",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      13,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera following",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      9,
+      "holding",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "walking toward",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000006"
+}

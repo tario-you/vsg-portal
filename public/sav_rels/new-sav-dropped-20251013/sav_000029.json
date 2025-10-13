@@ -1,0 +1,397 @@
+{
+  "activity_differential": [
+    "dog moving from house to car",
+    "dog descending stairs and exploring",
+    "dog interacting with child and entering vehicle"
+  ],
+  "description": "A small dog descends a staircase, moves through a living space, and enters a car, with a child briefly appearing on the stairs. The camera follows the dog's movement throughout.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot be spatially below a painting on a wall using 'below' in a way meaningful for placement because the painting is on the wall, and the dog is on the stairs; the relationship is unclear and not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog descending stairs cannot be spatially above a painting fixed on a wall; given typical setups, this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog descending stairs being described as 'above' a chair backrest is implausible given typical spatial arrangements; the dog is likely below or beside the chair, not above it.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and lacks description or attributes, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be positioned above a vertical wall, as the wall typically extends upward from the floor.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be physically left of a table located below it; their vertical spatial relationship makes 'left of' between them physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The light fixture is suspended from the ceiling above the painting; it cannot be spatially below the painting, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Since the light fixture is suspended from the ceiling, it cannot be located below the wall panel, which extends horizontally along the wall.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be located below a wall, as the wall is vertical and the fixture hangs downward; the spatial relationship 'below' between a hanging fixture and a wall is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wall cannot be to the left of a rotating, moving wheel in a spatial sense; the relationship as stated is physically implausible given the dynamic actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to validate the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information, making it impossible to validate the 'following' relationship with the known dog.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (name and description are null), making it impossible to confirm the dog's awareness of it.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "aware of",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog moving with a wall is physically impossible since the wall is stationary and does not move.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, so it is unclear what the dog is entering; thus, the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "entering",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair backrest cannot move away from a dog; the backrest is a static object and cannot perform the motion attributed to it.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "moving away from",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog paying attention to an inanimate chair backrest is unlikely; the object lacks features to attract or hold the dog's attention meaningfully.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what is 'entering' the wall; the predicate is not plausible without more context.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "entering",
+      "relation_type": "functional",
+      "subject_id": 10
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 18,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000029.json",
+    "total_relationships": 62
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "above",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "right of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "above",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      22,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      24,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "following",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      -1,
+      "aware of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      10,
+      "moving with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      24,
+      "entering",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      17,
+      1,
+      "moving away from",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      17,
+      "paying attention to",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      10,
+      24,
+      "entering",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000029"
+}

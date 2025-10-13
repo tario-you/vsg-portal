@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "parrots and chick foraging and eating food",
+    "parrots and chick interacting with food and each other",
+    "mouse approaching food and observing birds"
+  ],
+  "description": "A group of parrots and a chick interact with food items on a mat, while a mouse is also present nearby. The animals are foraging, pecking, and eating, with some attentional focus on the food and each other. The scene is observed in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to determine the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, providing no context to verify the spatial relation with the mat.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Parrots do not eat chicks; it is biologically and behaviorally implausible for a parrot to be eating a chick.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "eating",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A parrot foraging a chick is not plausible; foraging implies searching for food and would not involve a chick as an object of foraging.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A parrot pecking at a chick is unlikely and physically implausible, as parrots do not typically peck at live chicks in this manner.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "pecking at",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Parrots are not known to eat chicks; such behavior is biologically unlikely and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "eating",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A parrot foraging a chick is not a plausible behavior; parrots do not forage other animals as food, especially chicks.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary container cannot perform the action of foraging, which implies active searching typically done by animals like chicks.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate container cannot pay attention to a tray as attention implies conscious awareness which objects lack.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate container cannot pay attention to anything, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray cannot perform the action of eating; the relationship incorrectly attributes an animal action to an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "eating",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot perform the action 'foraging', which requires animal behavior.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "foraging",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot pay attention to a parrot; the attentional relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray, being an inanimate object, cannot pay attention to a parrot.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray, being an inanimate object, cannot pay attention to another object; the attentional relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000041.json",
+    "total_relationships": 98
+  },
+  "relationships": [
+    [
+      6,
+      9,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "below",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "eating",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      5,
+      "foraging",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "pecking at",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "eating",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      5,
+      "foraging",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      5,
+      "foraging",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      6,
+      "paying attention to",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      3,
+      9,
+      "paying attention to",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      5,
+      "eating",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      5,
+      "foraging",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      1,
+      "paying attention to",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      2,
+      "paying attention to",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      3,
+      "paying attention to",
+      [
+        [
+          0,
+          456
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000041"
+}

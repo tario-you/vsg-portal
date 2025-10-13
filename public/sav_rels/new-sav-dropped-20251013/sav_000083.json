@@ -1,0 +1,985 @@
+{
+  "activity_differential": [
+    "people shopping in grocery store",
+    "people browsing products on shelves",
+    "people navigating grocery store aisle"
+  ],
+  "description": "A grocery store aisle with multiple people shopping, several shopping carts, and shelves stocked with various products. The camera slowly pans or shifts position, capturing the activity and layout of the store.",
+  "place_env_id_name": "grocery store aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), so the spatial relationship 'left of' cannot be verified or assessed.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it impossible to validate spatially being 'left of' the cardboard box.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any name, attributes, actions, or description, making it impossible to assess the spatial relationship with the bottle.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot logically be positioned to the left of a shelf; typically, objects like bottles are placed on shelves, not positioned to the side in open space without additional context.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle is standing upright on a shelf; it cannot realistically be positioned left of the shelf itself since it is dependent on the shelf for support.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot be positioned 'left of' a shelf in a spatial sense because the shelf is a larger structure that typically supports bottles; the bottle would be on or in front of the shelf rather than to its left as an independent spatial relation.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both bottles are described as standing upright with similar attributes, making the 'under' spatial relationship ambiguous and not providing a meaningful distinction.",
+      "label": "redundant",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and any descriptive attributes, so the spatial relationship 'left of' cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship reliably.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'left of' with the bottle.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar bottles with very similar attributes; stating one is under the other adds no credible new spatial information given they both remain upright and stable.",
+      "label": "redundant",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically under a bottle; the predicate 'under' is spatially implausible with the given subject and object.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar bottles described as upright and stable; stating one is 'under' the other is redundant and lacks clear spatial plausibility given the descriptions.",
+      "label": "redundant",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "One shopping cart cannot be physically under another while both are moving steadily and maintaining orientation; this spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot be physically under a shelf because of the relative sizes and typical positioning of these objects.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot physically be under a shelf due to its size and typical positioning.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to assess the spatial relationship with the shelf.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is undefined and lacks description, so 'over' relationship cannot be confirmed or interpreted.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two similar upright bottles described together; asserting one is 'over' the other adds no significant or plausible spatial information given both remain stable and upright.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle being 'over' another in a spatial sense is unlikely without physical support or stacking, which is not described; both bottles remain upright and stable, making the 'over' relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot be spatially positioned 'over' a standing person in a realistic physical scenario; this relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object referred to by the relationship has no name or description, making it impossible to confirm or assess the spatial 'over' relationship.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'over' between two similar bottles standing upright is unclear and unsupported; no contextual indication that one bottle is physically over the other.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle 'over' another is physically unlikely unless one is stacked or held; here both are described as upright and stable, making 'over' implausible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are bottles standing upright; indicating one is 'over' the other adds little meaningful spatial information and may be redundant.",
+      "label": "redundant",
+      "object_id": 21,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar bottles with yellow caps; the metadata does not provide enough spatial detail to confirm one is physically 'over' the other.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle being 'over' another spatially is unlikely without additional support or stacking context, which is not described; both bottles are described as maintaining upright positions separately.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle being spatially 'over' another is unlikely given both are described as standing upright and steady; they are likely side-by-side rather than one over the other.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship lacks any identifying information, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship 'over' with the bottle.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the bottle is positioned 'over'; cannot confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what the bottle could be 'over' to confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar bottles standing upright; stating one is 'over' the other adds no meaningful spatial information given their descriptions.",
+      "label": "redundant",
+      "object_id": 34,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle being 'over' another implies spatial stacking or hovering that is not physically supported in the description; bottles are described as both upright and steady without indication of stacking or one being above the other.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bottle cannot physically be 'over' another while both remain upright and stable; the spatial relation is implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined and cannot perform the action 'camera focusing on' an object; this relationship is not meaningful.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown (null name and description), so it's impossible to confirm or deny that a camera is focusing on the bottle.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it unclear what or who is performing the camera panning action toward the shopping cart.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no attributes or description, making the relationship unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot look at a person; it is an inanimate object incapable of attention or gaze direction.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle, being an inanimate object, cannot perform the action of 'looking at' another object.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot look at another bottle as it is an inanimate object lacking perception or attention.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle, an inanimate object, cannot 'look at' anything; this predicate is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot look at a shopping cart; looking requires a sentient subject.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot perform the action of 'looking at' another bottle; this animates an inanimate object beyond physical plausibility.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle is an inanimate object without the capability to 'look at' anything, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 46,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000083.json",
+    "total_relationships": 195
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      29,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      37,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      40,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      40,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      40,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      19,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      1,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      2,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      3,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      5,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      6,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      10,
+      "over",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      17,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      21,
+      "over",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      22,
+      "over",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      23,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      25,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      28,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      29,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      30,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      32,
+      "over",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      34,
+      "over",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      35,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      36,
+      "over",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      5,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      35,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      8,
+      "camera panning toward",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      9,
+      "camera panning toward",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      5,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      6,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      35,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      8,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      9,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      10,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      11,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000083"
+}

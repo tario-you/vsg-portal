@@ -1,0 +1,1056 @@
+{
+  "activity_differential": [
+    "people walking and passing by street vendors",
+    "people distributing or promoting items on the sidewalk",
+    "people loading and unloading a pickup truck"
+  ],
+  "description": "A busy urban sidewalk scene with multiple people walking, interacting, and some engaging in street vending or promotion. A pickup truck is being loaded/unloaded, and a group of people are distributing or promoting items near a signboard. The camera remains mostly static, capturing the flow of people and their interactions.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A pickup truck cannot realistically be behind a small shopping bag in a spatial sense; the scale and typical spatial relationship make this physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pickup truck being spatially 'behind' a coat is physically implausible as coats are wearable items and generally smaller and mobile compared to large vehicles.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'behind' cannot be evaluated for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a small shopping bag in a meaningful way; the bag is typically carried or held by the person, not positioned behind them as a separate entity.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The handcart has a white signboard on top; stating the handcart is 'right of' a signboard is redundant given the signboard is part of the cart.",
+      "label": "redundant",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the coat.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "The coat itself cannot perform the action of walking; it is an inanimate object being worn by a person, so the relationship as stated is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot perform the action 'walking past'; it must be worn by a person who walks. The coat alone is stationary or moving only as the person moves.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot carry a shopping bag; carrying is an action performed by a person wearing the coat, not by the coat alone.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot wear a signboard; the relationship 'wearing' is physically impossible from coat to signboard.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot perform the action 'walking past' another coat since coats are inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat is an inanimate object and cannot perform actions like 'walking past' an SUV, which is stationary.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot perform the action 'walking past'; it is an inanimate object rather than an agent capable of motion.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot wear a streetlight; the predicate 'wearing' is incorrectly assigned here.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot hold a person; the subject and predicate relation is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate, fixed object and cannot hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear a person; the predicate 'wearing' is incorrectly applied here.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear another signboard; 'wearing' is not a plausible functional relationship between two signboards.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear a streetlight; the 'wearing' predicate is not physically plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot functionally hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a signboard; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the functional relationship 'wearing' is implausible between inanimate objects like a bench and streetlight.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate bench cannot 'interact with' a coat in a social sense; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a signboard are inanimate objects and cannot engage in a social interaction such as 'interacting with'.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, and a bench cannot engage in social interaction; the relationship is not plausible or supported by context.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate bench cannot socially 'interact with' a coat; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot engage in social interaction with an SUV, another inanimate object. The predicate 'interacting with' implies agency not present here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, as an inanimate object, cannot socially interact with a handcart; the relationship 'interacting with' implies an animate or agentive subject, which is not applicable here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a car; 'interacting with' is not physically or socially plausible here.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object that cannot functionally hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot wear a person; the predicate 'wearing' is incorrectly assigned to this subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a signboard; the predicate 'wearing' is implausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the predicate and relationship are not physically plausible given the objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or descriptive attributes, and the 'bench' as subject cannot 'interact' socially without clear context; lack of information prevents validation.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a coat are inanimate objects and cannot engage in a social interaction like 'interacting with'; therefore, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot engage in social interaction with an SUV; 'interacting with' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench (an inanimate object) cannot socially interact with a handcart; the 'interacting with' predicate implies an agent capable of interaction, which a bench is not.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a car.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being a stationary furniture object, cannot perform the action of holding a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot wear a signboard; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate a social interaction with the bench.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a coat cannot engage in a social interaction; 'interacting with' is not a plausible relationship for these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot 'interact' socially with an SUV, which is also inanimate; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a handcart; 'interacting with' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot engage in a social interaction such as 'interacting with' a car; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified with no attributes or description, making it impossible to confirm the 'camera focusing on' relationship to the coat.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any attributes or description, making it impossible to confirm a meaningful 'camera focusing on' relationship with the bench.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), so it's unclear what is focusing on the pickup truck; thus, the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 49,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000075.json",
+    "total_relationships": 168
+  },
+  "relationships": [
+    [
+      18,
+      19,
+      "behind",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      30,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      33,
+      "behind",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      29,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      33,
+      "right of",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      38,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      19,
+      "carrying",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      29,
+      "wearing",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      30,
+      "walking past",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      32,
+      "walking past",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      39,
+      "wearing",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      27,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      19,
+      "holding",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      29,
+      "wearing",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      39,
+      "wearing",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      19,
+      "holding",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      29,
+      "wearing",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      39,
+      "wearing",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      2,
+      "interacting with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      23,
+      "interacting with",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      33,
+      "interacting with",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      30,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      32,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      4,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      26,
+      "interacting with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      19,
+      "holding",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      29,
+      "wearing",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      39,
+      "wearing",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      33,
+      "interacting with",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      30,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      32,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      4,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      26,
+      "interacting with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      19,
+      "holding",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      29,
+      "wearing",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      39,
+      "wearing",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      33,
+      "interacting with",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      30,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      32,
+      "interacting with",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      4,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      38,
+      26,
+      "interacting with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      38,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      18,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000075"
+}

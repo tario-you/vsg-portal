@@ -1,0 +1,338 @@
+{
+  "activity_differential": [
+    "person giving a speech or presentation",
+    "person hosting or emceeing an event",
+    "person addressing an audience with a microphone"
+  ],
+  "description": "A person in formal attire is speaking and gesturing with a microphone on a red carpet, likely addressing an audience at an indoor event with several other people present in the background.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically stand on another person who is also walking; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically hold a large, smooth, and stationary wall; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot stand on a small, handheld microphone; this relationship is physically implausible given the microphone's size and function.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a hand as the hand is part of the person; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large, smooth, stationary wall cannot be 'held by' a person; the physical relationship does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being 'under' another person in a walking context is physically unlikely and unsupported by the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically positioned 'under' a wall, which is a vertical structure; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so it is unclear what object is under the person, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot hold a large stationary wall; the 'holding' predicate is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot speak into a wall as it lacks any functional capacity to receive speech like a device would.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "speaking into",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally 'address' an inanimate wall; this predicate implies communicative intent not applicable to a wall.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'address' an inanimate object; 'addressing' implies communication directed towards a sentient entity, so this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically 'address' a banner, which is an inanimate object; this predicate is not appropriate for such an object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically be 'addressing' an inanimate object like a fabric runner.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same person; it is redundant to state the person is gesturing to themselves.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "gesturing",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000048.json",
+    "total_relationships": 73
+  },
+  "relationships": [
+    [
+      1,
+      9,
+      "standing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "holding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "standing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "in front of",
+      [
+        [
+          144,
+          192
+        ],
+        [
+          240,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "held by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "holding",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      16,
+      "speaking into",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      10,
+      "addressing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      18,
+      "addressing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      4,
+      "addressing",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      6,
+      "addressing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      1,
+      "gesturing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000048"
+}

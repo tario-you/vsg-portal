@@ -1,0 +1,1069 @@
+{
+  "activity_differential": [
+    "fish swimming in tanks",
+    "camera observing and focusing on fish and floating toys",
+    "floating toys and balls moving with water currents"
+  ],
+  "description": "The video shows a series of fish tanks in what appears to be an aquarium or pet store environment. The tanks contain live fish, decorative toys, balls, and other aquatic objects. A yellow bucket and a green net are present, likely for scooping fish. The camera moves around the tanks, focusing on different fish and objects, and transitions from one tank to another, showing a variety of fish and floating toys.",
+  "place_env_id_name": "aquarium or pet store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the bowl.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship of the bowl being inside the object.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what is inside the bowl; cannot validate the 'inside' relationship.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what the bowl is inside; the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot be surrounded by a single small bowl; the spatial relationship is physically implausible given their sizes and typical arrangements.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to verify the spatial relation to the bench.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear what is surrounded by the bowl; thus, the relationship's meaning is indeterminate.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity lacks any identifying information, making it impossible to determine if the fabric is truly surrounded by it.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying name or description, making it impossible to determine if it being 'surrounded by' the bowl is reasonable or not.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify if it surrounds the tray.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making the spatial relationship 'beside' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined with no description, making it impossible to assess the relationship 'camera focusing on' the fish; metadata lacks necessary context.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified with no attributes or description, making it impossible to verify the 'camera focusing on' relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified with no name or description, making it impossible to confirm 'swimming with' relationship with the fish painting.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "swimming with",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unidentified subject cannot swim near a desk corner, which is stationary and not a body of water; swimming near a desk corner is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "swimming near",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unspecified subject cannot plausibly be 'swimming near' a stationary, solid desk corner, which is not an aquatic object or environment.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "swimming near",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish cannot swim near a stationary desk corner; the fish is part of a painting while the desk corner is a static object, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "swimming near",
+      "relation_type": "motion",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to confirm the relationship 'swimming near' as accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "swimming near",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and lacks any description or attributes, making it impossible to verify the relationship with the fish.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "swimming with",
+      "relation_type": "higher_order",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, making it impossible to assess the plausibility of 'floating with' the fish.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name, description, or attributes, making it impossible to evaluate the relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and descriptive attributes, making it impossible to verify the relationship 'floating with' to the fishbowl, which remains stationary; insufficient information to confirm the interaction.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, making it impossible to verify plausibility of 'floating with' relationship to a stable, unmoving ledge.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish moving through water can float or swim, but a stationary tray cannot 'float with' fish; the tray remains still and does not move in unison with the fish, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish cannot 'float with' a tank, as a tank is a static container and fish swim inside it; the predicate does not semantically apply between fish and tank.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to verify the relationship with the fish.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish cannot 'float with' an inanimate and stationary fishbowl; the predicate is physically implausible as fish move within water, not with a container that remains still.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fish can float or swim with other fish, but cannot float with an inanimate, stable ledge that does not move.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The tray and tank are stationary solid objects; 'floating with' implies motion that is not supported by their descriptions, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate, stationary object; it cannot realistically float with a fish in a natural way.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object connected to the tray is unidentified with no description or attributes; thus, we cannot confirm the motion relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary tray cannot logically be floating with a fishbowl that also remains stationary; the relationship 'floating with' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's identity and the other entity are uncertain or missing, making it impossible to validate the 'floating with' relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary tray cannot realistically be floating with a stationary ledge; the predicate 'floating with' implies shared motion that is not supported by descriptions indicating both remain steady.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tank (likely a solid object) cannot realistically 'float with' a fish; the predicate implies a shared movement in water which a tank cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the 'floating with' relationship with the tank (uncertain).",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, and description, so it is unclear what is floating with the tank; the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large tank and a stationary fishbowl cannot realistically be 'floating with' each other; the tank is a static object and does not float together with the fishbowl.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making it impossible to assess the plausibility of 'floating with' relationship with the tank.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A rigid, stable ledge cannot physically float with a tank-like object; the relationship is implausible given the ledge's description of stability and lack of movement.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a specified name or description, making it impossible to confirm a meaningful 'floating with' relationship with the fish.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish cannot 'float with' a fishbowl; the fish is inside or near the fishbowl, so the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the relationship 'floating with' cannot be confirmed or evaluated reliably.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fish floats and moves in water, but 'floating with' a rigid, stable ledge that does not move is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so we cannot confirm what is floating with the fishbowl; the relationship is unclear.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 28
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown (no name or description), making it impossible to verify the plausibility of floating with the ledge.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 28
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no identifying information or description, making it impossible to assess plausibility of 'floating with' the fishbowl, which itself is stationary; unable to confirm relationship correctness.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what is floating with the fishbowl; thus, the relationship can't be validated.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fishbowl cannot 'float with' a stationary ledge; the ledge is stable and solid, making the predicate physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "floating with",
+      "relation_type": "motion",
+      "subject_id": 32
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 50,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000061.json",
+    "total_relationships": 131
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "inside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "beside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "surrounded by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "beside",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      10,
+      "camera focusing on",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      25,
+      "camera focusing on",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      10,
+      "swimming with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      9,
+      "swimming near",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      9,
+      "swimming near",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      10,
+      9,
+      "swimming near",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      1,
+      "swimming near",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      10,
+      "swimming with",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      29,
+      24,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      27,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      29,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      25,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      26,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      28,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      26,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      27,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      28,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      33,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      25,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      27,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      28,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      30,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      33,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      28,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      30,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      33,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      28,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      28,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      30,
+      32,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      32,
+      33,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      32,
+      35,
+      "floating with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000061"
+}

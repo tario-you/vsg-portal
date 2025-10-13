@@ -1,0 +1,481 @@
+{
+  "activity_differential": [
+    "people walking and conversing in a shopping mall corridor",
+    "people approaching and using escalator",
+    "people reading signboards and interacting with displays"
+  ],
+  "description": "A shopping mall corridor with several people walking, some interacting with displays, and the camera moving forward through the space. The environment includes escalators, signboards, and storefronts.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear if the decorative element is plausibly attached to it.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A decorative architectural element cannot realistically be attached to a person who is walking; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object is unnamed and undescribed, making it unclear what is attached to the person.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling is an overhead structure and cannot be standing on a railing, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling is typically above other objects and cannot realistically be to the left of a signboard attached to a stable structure; the spatial relationship 'left of' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling being 'left of' a carpet is physically impossible because the ceiling is above the carpet, not beside it in a left-right spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically be 'standing on' a railing, which is an elevated horizontal structure meant for support, not a surface to stand on.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking forward and taking steps, which is inconsistent with 'standing on' the railing, a narrow and elevated object typically not stood upon while walking.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to evaluate the 'attached to' relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A carpet lying on the floor cannot be spatially located 'behind' a vertical signboard; carpets are on the ground and signboards are typically mounted or upright.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, so the spatial relationship 'below' cannot be validated between the railing and an undefined object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and undescribed, so it is unclear what is below the railing or the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trash can would not reasonably be positioned on top of a horizontal railing; this placement is physically implausible given typical object sizes and functions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the box is attached to; therefore the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, so the spatial relationship 'attached to' cannot be confirmed or validated.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity and description; 'camera approaching' as a predicate is unusual and unclear without further information.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and the predicate 'camera passing by' is unclear as a relationship; insufficient information to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "camera passing by",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk past' a floor, as the floor is beneath and stationary; the predicate is inappropriate for this subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is described as a tall, stationary, rectangular structure unlikely to be stepped onto by a person; 'stepping onto' suggests a surface suitable for standing, which this object does not plausibly provide.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "stepping onto",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person stepping onto a tall, stationary, rectangular object is physically unlikely unless it's a step or platform; the description suggests a solid vertical object, making this relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "stepping onto",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of reading is undefined and lacks description, making it impossible to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so it is unclear what is being read; the context is insufficient to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 22,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000037.json",
+    "total_relationships": 94
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      18,
+      "on top of",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      25,
+      "attached to",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      6,
+      "camera approaching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "camera passing by",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      24,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      20,
+      "stepping onto",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      20,
+      "stepping onto",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      10,
+      "reading",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      6,
+      10,
+      "reading",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000037"
+}

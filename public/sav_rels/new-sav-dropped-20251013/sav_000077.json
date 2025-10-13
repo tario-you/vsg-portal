@@ -1,0 +1,334 @@
+{
+  "activity_differential": [
+    "person walking down hallway to a door",
+    "person passing by shoes and sandals in hallway",
+    "person opening a door at the end of hallway"
+  ],
+  "description": "A person walks down a hallway lined with shoes and sandals, holding a green object, and eventually stops at a door.",
+  "place_env_id_name": "hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what the wall is above, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally be standing on their own sneakers as separate objects; the sneakers are worn by the person, so 'standing on' this relationship is physically inaccurate.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'right of' a floor since the floor is a horizontal surface beneath the person; the relationship is nonsensical in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown (no name or description), so it's unclear what 'on' relation to the sneakers means; insufficient information to assess plausibility.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information, making it impossible to verify the spatial relationship 'beside' with the shoe.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown and has no description; cannot confirm the spatial relation 'beside' with the baseboard.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks a name and description, providing no context to reliably assess spatial relation to the slipper.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A baseboard is typically positioned directly in front of or attached to a wall near the floor, not behind or spatially behind it; 'wall in front of baseboard' is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window is a stationary architectural element that cannot be on top of moving sneakers; the spatial relationship 'on' is physically impossible here.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity and description, making it impossible to verify if it is tracking the person's movement.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "tracking movement of",
+      "relation_type": "functional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it unclear what entity is 'camera following' the person; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot hold a wall, as a wall is a large, fixed structure not physically held by a person.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information, making it unclear what the person is walking past.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, which contradicts the relationship 'standing at' the slipper; a walking person cannot be standing at the slipper simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing at",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is 'opening' a slipper, which is not a reasonable interaction since slippers do not open.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "opening",
+      "relation_type": "functional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 15,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000077.json",
+    "total_relationships": 111
+  },
+  "relationships": [
+    [
+      3,
+      12,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "standing on",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "on",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      30,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      20,
+      "in front of",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      9,
+      "on",
+      [
+        [
+          120,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "tracking movement of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      2,
+      "camera following",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      29,
+      "holding",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "walking past",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      18,
+      "standing at",
+      [
+        [
+          264,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      18,
+      "opening",
+      [
+        [
+          264,
+          264
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000077"
+}

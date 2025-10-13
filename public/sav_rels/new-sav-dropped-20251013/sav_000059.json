@@ -1,0 +1,523 @@
+{
+  "activity_differential": [
+    "people waiting or resting on sidewalk at night",
+    "people sitting together near street",
+    "motorcycles passing by people on sidewalk"
+  ],
+  "description": "Two people are sitting on stools on a sidewalk at night, near a well-lit area with bushes, billboards, and street signs. Several motorcycles pass by on the street in the background. The environment is calm, with the people appearing to be waiting or resting.",
+  "place_env_id_name": "sidewalk street at night",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A billboard, typically elevated, cannot logically be positioned under a tarp that is stretched horizontally; the spatial relationship 'under' is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lightbulb being on top of a tree is physically unlikely without some artificial support, and the description suggests the lightbulb is suspended separately. This spatial relation is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flowing skirt cannot be physically positioned on top of a tall tree as implied; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stone-like object cannot be on top of a person seated; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tarp, which is typically flexible and low-lying, cannot be physically positioned above a tall billboard; the spatial relationship 'above' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is unlikely to be seated on top of a bush due to its physical nature; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person being 'under' a stone-like object is unlikely given the descriptions; no indication that the person is beneath or covered by the object.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot be spatially below a plant in a way that makes sense given typical growth patterns; usually plants or parts thereof are below or on bushes, but here 'bush below plant' is unlikely physically.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator is a large stationary object and cannot be spatially 'beside' a headscarf, which is a movable piece of fabric; the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'sitting together' with a bush, as this relationship implies social interaction between sentient beings which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "sitting together",
+      "relation_type": "social",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a stone structure, as this is not a wearable object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person wearing a rough, stone-like object is not physically plausible, as the object's texture and nature do not correspond to wearable garments or accessories.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot 'wear' a stone structure; the predicate 'wearing' is not plausible for these entities.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot 'wear' a stone-like object as clothing or accessories; the predicate 'wearing' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'wait with' a bush in a meaningful relational sense, as a bush is an inanimate object incapable of participating in social actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "waiting with",
+      "relation_type": "higher_order",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be illuminated by a plant, as plants do not emit light; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plant cannot illuminate a bush; plants are not light sources, so this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically rest on a bush; it is not suitable for supporting a seated person.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bush resting on another bush is physically implausible as bushes grow from the ground and do not rest on each other in a supporting manner.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pathway cannot perform the action 'moving along' relative to a bush; paths are inanimate and fixed structures.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pathway is an inanimate structure and cannot perform the motion of 'passing by' a bush.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), so it is impossible to confirm or evaluate the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject entity is undefined with no attributes or description, making it impossible to verify the relationship with the motorcycle.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera observing",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks detail, making it impossible to confirm the 'camera observing' relationship with the pathway.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera observing",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 24,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000059.json",
+    "total_relationships": 66
+  },
+  "relationships": [
+    [
+      6,
+      19,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      21,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      6,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      13,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      15,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      10,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      14,
+      "beside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "sitting together",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      21,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      21,
+      15,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      15,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      21,
+      22,
+      "waiting with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      21,
+      10,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      10,
+      "illuminated by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      21,
+      4,
+      "resting on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      22,
+      4,
+      "resting on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      4,
+      "moving along",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      4,
+      "passing by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      21,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "camera observing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      3,
+      "camera observing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000059"
+}

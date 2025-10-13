@@ -1,0 +1,187 @@
+{
+  "activity_differential": [
+    "person inspecting tray",
+    "person picking up and rotating tray",
+    "person shopping for kitchenware"
+  ],
+  "description": "A person is picking up and inspecting a metal tray from a shelf in a store or kitchen supply area, manipulating and rotating it to view different angles.",
+  "place_env_id_name": "store shelf",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'behind' between a 'tag' and a 'shelf' is unclear and lacks sufficient contextual information to confirm its accuracy given the vague positional descriptions.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A packaging bag cannot plausibly be positioned on top of a light fixture, which is typically mounted on ceilings or walls, making this spatial relationship physically unlikely.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A spatula being under a tag is physically unlikely given the spatula's stable position and typical usage, and tags are usually flat items that would lie on or be attached to surfaces, not be over spatulas in a way making 'spatula under tag' plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A spatula being under a packaging bag is unlikely since the spatula is an elongated object likely on top or separate from the bag, not positioned beneath it.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot perform the action of picking up a shelf.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "picking up",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stainless steel tray is an inanimate object that cannot rotate itself; it would only rotate if manipulated externally, and there is no context suggesting this.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "rotating",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot perform the action 'inspecting'.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "inspecting",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks any identifying attributes or description, making it impossible to determine if it can focus a camera on the shelf.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 8,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000091.json",
+    "total_relationships": 83
+  },
+  "relationships": [
+    [
+      7,
+      2,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "picking up",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "rotating",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "inspecting",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000091"
+}

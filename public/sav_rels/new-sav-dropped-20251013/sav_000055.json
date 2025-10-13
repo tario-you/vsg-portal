@@ -1,0 +1,124 @@
+{
+  "activity_differential": [
+    "dog sleeping outdoors",
+    "dog resting on soil",
+    "camera observing sleeping dog"
+  ],
+  "description": "A dog is lying on the ground outdoors, appearing to be asleep or resting, while the camera gradually moves closer for a close-up of the dog's face.",
+  "place_env_id_name": "outdoor natural area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A plant cannot be spatially positioned below a dog's paw as the paw is part of an animal typically above the ground, while plants grow from the ground, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear what 'right of' spatial relation is being referred to with respect to the rock.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information or description, making the spatial relationship 'right of' to the leaf unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, preventing validation of its spatial relation to the rock.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mound of soil cannot perform the action of sleeping; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "sleeping",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 5,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000055.json",
+    "total_relationships": 59
+  },
+  "relationships": [
+    [
+      3,
+      6,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      1,
+      "sleeping",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000055"
+}

@@ -1,0 +1,208 @@
+{
+  "activity_differential": [
+    "camera moving forward along sidewalk",
+    "pedestrians walking toward and past camera",
+    "person using phone at curb"
+  ],
+  "description": "A camera moves steadily forward along a city sidewalk. Initially, a person stands at the curb using a phone, then leaves the frame as the camera advances. Multiple pedestrians are seen walking toward the camera along the pathway, with some approaching and passing by as the camera continues to move forward. The environment includes buildings, trees, poles, and various tactile paving strips, but the main temporal changes involve the people and the camera's movement.",
+  "place_env_id_name": "city sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name, attributes, and description, making it impossible to confirm the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making the spatial relationship 'right of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making the spatial relationship 'right of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to confirm a spatial relationship 'on' with the pole.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, so the spatial relationship 'pole on object' cannot be confirmed or evaluated for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the manhole cover is 'on'; the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship has no name or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making it unclear what the banner is spatially related to.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any descriptive metadata, making it impossible to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 9,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000092.json",
+    "total_relationships": 66
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      34,
+      "on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      35,
+      "on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      34,
+      "on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      35,
+      "on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      34,
+      "on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      -1,
+      "standing near",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000092"
+}

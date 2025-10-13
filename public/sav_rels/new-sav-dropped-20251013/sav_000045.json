@@ -1,0 +1,560 @@
+{
+  "activity_differential": [
+    "adults engaging in social interaction at a festive event",
+    "woman receiving and displaying money during celebration",
+    "group conversing and celebrating under a canopy tent"
+  ],
+  "description": "A group of adults in traditional attire are standing and interacting at a festive indoor event under a canopy tent. One woman is holding a handbag and later handles and displays currency notes, while others are engaged in social interaction. The camera moves around the group, capturing their actions and interactions.",
+  "place_env_id_name": "event hall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically be 'under' another person in a standing posture as described; the spatial relationship is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot hold a person; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot hold another handbag; the 'holding' predicate with handbag as subject is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot be held by another handbag; this relationship between two handbags is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot be an independent object to be 'standing next to' a person; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially inside another person is physically impossible; the relationship 'inside' does not apply between two people.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically contain another person; the 'contains' spatial relationship is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot stand next to a canopy tent on its own; the relationship is implausible without a full person as subject.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically 'above' another in a standing context as described here; the spatial predicate is not plausible for two standing people.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm a social interaction with the arm.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An 'arm (uncertain)' as a separate entity cannot engage in a social action like 'conversing with' a person; conversation requires a full person, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm gesturing with a canopy is implausible because a canopy is an architectural or large fabric structure, not something typically used for gesturing.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "gesturing with",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm the plausibility of the 'receiving money from' relationship with the uncertain 'arm' subject.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "receiving money from",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm a meaningful 'conversing with' relationship with an arm alone.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot engage in a social act like conversing; the subject should be the whole person.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot 'converse with' a canopy tent as one is a body part and the other an inanimate object, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot perform the action of smiling at someone; smiling is a facial expression requiring a face, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "smiling at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified and the object is an arm, which cannot receive money; no clear context to validate the functional relationship.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "giving money to",
+      "relation_type": "functional",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unknown subject cannot be conversing with an arm, as conversing requires two persons or entities capable of communication.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and the object is an arm; smiling is an action performed by a face, so smiling at an arm is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "smiling at",
+      "relation_type": "attentional",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot engage in 'conversing with' a person, as conversation requires a full person or agent.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A canopy tent cannot engage in social interactions such as 'conversing with' an arm; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify any social interaction with the canopy tent, which itself cannot converse.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, making the 'camera panning around' predicate unclear and ambiguous in this context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning around",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null) which makes it impossible to verify the relationship; lacking necessary context to confirm the camera focusing action.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 25,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000045.json",
+    "total_relationships": 73
+  },
+  "relationships": [
+    [
+      1,
+      11,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "holding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "holding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "held by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "standing next to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "inside",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          216,
+          216
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "contains",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          216,
+          216
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "standing next to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      1,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "conversing with",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      8,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "gesturing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      12,
+      "receiving money from",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      12,
+      "conversing with",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      9,
+      "conversing with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      10,
+      "conversing with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      12,
+      "smiling at",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      12,
+      2,
+      "giving money to",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      12,
+      2,
+      "conversing with",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      12,
+      2,
+      "smiling at",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      8,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      10,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      10,
+      12,
+      "conversing with",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      -1,
+      2,
+      "camera panning around",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000045"
+}

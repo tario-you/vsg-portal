@@ -1,0 +1,376 @@
+{
+  "activity_differential": [
+    "people loading and securing boxes into car",
+    "people collaborating to tie down cargo",
+    "people working together in warehouse"
+  ],
+  "description": "Two people are collaboratively loading and securing large cardboard boxes into the trunk of a car in a warehouse or storage environment. They use ropes or cords to tie down the boxes, working together throughout the sequence.",
+  "place_env_id_name": "warehouse",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The person is described as moving away and walking with a relaxed posture, not crouching; also, a bucket's size and shape make it unlikely for a person to crouch under it.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "crouching under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to validate if the person is crouching behind it.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "crouching behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as moving away and walking, which conflicts with crouching behind the box, making the relationship physically unlikely in the given context.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "crouching behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, making the relationship 'contains' with the cardboard box unclear and unsupported by the data.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object on the right side is unidentified with no name or description, making the 'right of' spatial relation unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object has no name or description, so spatial relation 'right of' cannot be confirmed as meaningful.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject's lack of name and description makes it impossible to confirm a meaningful spatial relationship with the cardboard box.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description, making it impossible to assess the spatial relationship with the labeled object.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to determine the spatial relationship with the car accurately.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary large box cannot be spatially 'above' a person who is walking; typically, a person would be above or relative to the box, not the box above the person.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are large, rectangular, slightly worn cardboard boxes with similar descriptions and close spatial relation; stating one is 'above' the other adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 31,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are large cardboard boxes described similarly and stationary; stating one is 'above' the other does not add meaningful spatial distinction in this context.",
+      "label": "redundant",
+      "object_id": 30,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "The description of the bucket is uncertain and lacks information about whether the person is actually placing it, making the relationship unclear and not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The description of the object as a 'bucket (uncertain)' and lack of any mention of rope or securing action make it unclear whether the person is actually securing the bucket with a rope.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "securing with rope",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any name or description, making it impossible to assess if collaboration with the person is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm the plausibility of the person loading it.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "loading",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unnamed and lacks any description or attributes, making it impossible to verify the 'camera focusing on' relationship; thus, the relationship is unreliable.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 17,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000074.json",
+    "total_relationships": 153
+  },
+  "relationships": [
+    [
+      1,
+      23,
+      "crouching under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "crouching behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "crouching behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      33,
+      "contains",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      29,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      38,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      33,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      40,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      29,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      32,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      31,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      30,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "placing",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "securing with rope",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      1,
+      "collaborating",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      20,
+      "loading",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      23,
+      "camera focusing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000074"
+}

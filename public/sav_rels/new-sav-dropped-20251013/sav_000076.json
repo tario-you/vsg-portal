@@ -1,0 +1,774 @@
+{
+  "activity_differential": [
+    "person walking around living room",
+    "person recording their movement in living room",
+    "person exploring room while holding camera"
+  ],
+  "description": "A person, visible by their sneakers and trousers, is moving around a living room, at times sitting and at times walking. The camera, likely held by the person, pans and tilts to follow their movement and the environment. Various mats, doormats, tiles, and other inanimate objects are present but not manipulated. The person is briefly seen in a mirror, confirming their animate status and camera control.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any name or description, making it impossible to verify or interpret the spatial relationship to the person.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'over' cannot be meaningfully validated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship with the trousers.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified with no name or description, making it impossible to verify the spatial relationship with the trousers.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are clothing worn on a person and cannot be spatially located to the 'left of' a floor tile as an independent entity; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'left of' cannot be evaluated or confirmed as meaningful.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to validate the spatial relationship 'left of' with the trousers.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (name and description are null), so it is unclear what the trousers are over, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'over' with the trousers cannot be verified or validated.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what the trousers are on top of, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship between the trousers and the object below.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, making the spatial relationship 'on top of' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'trousers on top of trousers' is redundant since both objects are essentially the same clothing item; stating one is on top of the other adds no meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to confirm the spatial relationship 'over' with the trousers.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to verify the spatial relation with the trousers.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and has no descriptive metadata, making it impossible to confirm a camera panning action following the mat.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera panning to follow",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot wear anything, so the relationship 'mat wearing ...' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot wear trousers; the subject and object roles make the predicate 'wearing' physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot wear another doormat; 'wearing' is not a plausible functional relationship between two mats.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot wear a doormat; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks identity and description, making the 'holding' relationship with the mat unclear and unsupported.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat is an inanimate object and cannot perform a social action like 'walking with' another entity, especially given the object lacks identification or description.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unidentified subject cannot physically wear a cabinet door, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unspecified subject cannot realistically wear a doormat, as doormats are inanimate objects typically laid on the ground and not wearable.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unknown subject cannot plausibly be 'walking with' a mat, which is an inanimate object lacking agency or mobility.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat, being an inanimate object, cannot participate in the social action 'walking with'.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat is an inanimate object and cannot engage in 'walking with' any entity.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot perform the action 'walking' as it is an inanimate, stationary object.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat, being an inanimate flat object, cannot perform the action of walking.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot perform the action 'walking'; the subject is an inanimate object incapable of walking.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "walking",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks detail, so the relationship 'camera tilting' involving the mat cannot be adequately evaluated or confirmed.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera tilting",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 31,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000076.json",
+    "total_relationships": 87
+  },
+  "relationships": [
+    [
+      1,
+      32,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "over",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "over",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "over",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "over",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      38,
+      "over",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      39,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      19,
+      "camera panning to follow",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      19,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      2,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      11,
+      "wearing",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      20,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      -1,
+      "holding",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      29,
+      "walking with",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "social"
+    ],
+    [
+      29,
+      28,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      29,
+      20,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      29,
+      19,
+      "walking with",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      40,
+      "walking with",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      35,
+      "walking with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "social"
+    ],
+    [
+      19,
+      29,
+      "walking",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      19,
+      40,
+      "walking",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      19,
+      35,
+      "walking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      -1,
+      19,
+      "camera tilting",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000076"
+}

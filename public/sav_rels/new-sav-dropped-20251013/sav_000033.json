@@ -1,0 +1,439 @@
+{
+  "activity_differential": [
+    "person walking along rural path and approaching group",
+    "group socializing near motorcycle and bicycle",
+    "bicycle riders passing by walking person"
+  ],
+  "description": "A person in traditional attire is walking along a dirt path, approaching a group of people near a motorcycle and a bicycle. As the person walks, two people on a bicycle pass by, and the walking person appears to interact with the group ahead.",
+  "place_env_id_name": "rural path",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A small, elongated object like a piece of bark cannot realistically 'wear' a plastic bag; the predicate is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small elongated object like a piece of dried vegetation cannot have 'hands attached' as the predicate suggests.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "hands attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to evaluate the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt being attached to a small, rough, natural object like a piece of bark or dried vegetation is physically implausible based on the descriptions provided.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'behind' between a pair of jeans and an uncertain small object lacks clear spatial context and cannot be definitively confirmed or refuted given ambiguous descriptions.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object being followed is unspecified and lacks description, preventing evaluation of the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks any description or attributes, so it is unclear what is following the object; thus, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small object cannot perform the action of 'looking at' a sweater, which is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate object like a piece of bark or dried vegetation cannot perform the action 'looking at' a pair of jeans.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate object like a small piece of dried vegetation cannot perform the action 'looking at'.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small object resembling dried vegetation cannot perform the action 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'interacting with' is social and does not plausibly apply between a small, undefined object and a sweater; there is no clear social interaction possible, nor detailed context to justify it.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small, elongated rough object (likely plant material) cannot engage in a social interaction with a pair of jeans; the predicate 'interacting with' in a social sense is not physically plausible for these inanimate items.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweater and jeans are clothing items and cannot engage in a social action like 'riding with' each other.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweater cannot 'ride with' a sandal, as clothing items do not perform actions or socially interact with footwear in this way.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no identified name or description, and the relationship 'riding with' does not logically apply to a sweater alone; the context is insufficient to validate this relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans and sweater are clothing items that cannot 'ride with' each other as this implies a social or interactive action inappropriate for inanimate clothing.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans cannot ride with a sandal; both are inanimate clothing items, making the 'riding with' relationship physically impossible and nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans as an inanimate clothing item cannot 'ride with' another entity; the subject is not capable of this action.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Clothing items like jeans do not move independently to pass by objects; the relationship 'passing by' is implausible between jeans and an object.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 9
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 20,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000033.json",
+    "total_relationships": 59
+  },
+  "relationships": [
+    [
+      6,
+      4,
+      "wearing",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "hands attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "right of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "behind",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      -1,
+      "being followed by",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      6,
+      "following",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      6,
+      8,
+      "looking at",
+      [
+        [
+          312,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      9,
+      "looking at",
+      [
+        [
+          312,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      10,
+      "looking at",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      12,
+      "looking at",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      8,
+      "interacting with",
+      [
+        [
+          312,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      6,
+      9,
+      "interacting with",
+      [
+        [
+          312,
+          384
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      9,
+      "riding with",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      10,
+      "riding with",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      8,
+      12,
+      "riding with",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      8,
+      "riding with",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      10,
+      "riding with",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      12,
+      "riding with",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "social"
+    ],
+    [
+      9,
+      6,
+      "passing by",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000033"
+}

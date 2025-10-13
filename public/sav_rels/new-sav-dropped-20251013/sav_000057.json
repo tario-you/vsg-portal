@@ -1,0 +1,292 @@
+{
+  "activity_differential": [
+    "pedestrians walking and interacting with street environment",
+    "camera tracking and focusing on people crossing and moving along the street",
+    "person skipping rope on the sidewalk"
+  ],
+  "description": "A street scene where a woman walks across the road toward the camera, then exits the frame as the camera pans and tracks her. Another woman later walks past a parked car, and the camera pans to follow the street activity. A tricycle enters the scene, and another woman is seen skipping rope on the sidewalk.",
+  "place_env_id_name": "urban street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or identity, making it impossible to assess the spatial relationship 'behind' meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name, attributes, actions, or description, making it impossible to verify the spatial relation with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to confirm any spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks a name or description, making it impossible to verify spatial relation 'right of' with the telephone pole.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it unclear who or what is panning toward the person; thus, the relationship cannot be reliably confirmed.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown with no description or name, making it impossible to confirm 'focusing on' relationship towards the person.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is undefined (null), making it impossible to confirm the 'walking past' interaction.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity is undefined with no attributes or description, making it impossible to validate the 'looking at' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified with no name or description, making it impossible to determine who or what is focusing on the car.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description, making it impossible to confirm the 'panning toward' relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any descriptive information, making it impossible to validate the 'moving into frame' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "moving into frame",
+      "relation_type": "motion",
+      "subject_id": 5
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 13,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000057.json",
+    "total_relationships": 71
+  },
+  "relationships": [
+    [
+      2,
+      1,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      6,
+      "panning toward",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      6,
+      "focusing on",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      6,
+      -1,
+      "walking past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      6,
+      -1,
+      "looking at",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      5,
+      "focusing on",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      5,
+      "panning toward",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      -1,
+      "moving into frame",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000057"
+}

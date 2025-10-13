@@ -1,0 +1,607 @@
+{
+  "activity_differential": [
+    "person preparing a fruit bowl",
+    "person transferring fruit between bowls",
+    "person handling and pouring fruit"
+  ],
+  "description": "A person is transferring grapes and strawberries from one bowl to another on a table in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be physically inside a refrigerator door, which is a solid object; 'inside' predicate here is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bowl is typically inside a cabinet or on a surface, not inside a cabinet door. The relationship is physically implausible as the cabinet door is a flat component, not an enclosure containing the bowl.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to verify the spatial plausibility of the bowl being 'under' an unidentified entity.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door does not contain a bowl; typically, the cabinet body contains items, not the door itself.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are cabinet doors that remain stationary and likely part of the same cabinet; stating one is 'in front of' the other adds no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door typically cannot be described as 'in front of' a bowl in a meaningful spatial relationship because it is usually part of a larger fixture and does not independently position itself in front of small objects.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot contain a hand; the hand is outside or in front of the door, so the spatial relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot physically contain a bowl; the bowl is likely inside the refrigerator, not contained by the door itself.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door does not contain a pipe; the pipe is unlikely to be inside or part of the door, making the spatial relationship incorrect.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door does not contain a strawberry; the strawberry would be inside the refrigerator, not contained by the door itself.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The metallic bowl cannot be spatially above the cabinet door without support; no indication the bowl is elevated above or hanging over the door, so the spatial relationship 'above' is implausible with bowl as subject and door as object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be inside a refrigerator door; typically, items are inside the refrigerator compartment, not the door itself.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A slender pipe cannot realistically be inside a refrigerator door, as doors are solid objects without interior space suitable for such a pipe.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small grape cannot hold or grasp a refrigerator door, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of 'pouring into' a refrigerator door, as it is an inanimate fruit and not capable of pouring.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "pouring into",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of 'pouring into' a cabinet door, which is stationary and non-liquid; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "pouring into",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of placing an object such as a cabinet door; this is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot hold a strawberry; the 'holding' relationship is not physically plausible between fruits.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of placing an object such as a strawberry; this action requires agency usually attributed to animate beings.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot receive contents from a cabinet door; both are stationary objects and do not transfer contents to each other.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "receiving contents from",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door cannot be filled by a refrigerator door; the predicate 'being filled by' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "being filled by",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be poured into a cabinet door; the action is physically impossible given the objects' properties.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot be 'being poured into' a cabinet door, which is a solid object that cannot receive a poured substance; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be 'being poured into' a cabinet door; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no description, and the object is a stationary cabinet door, making it implausible that any substance is being poured into it without further context.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be transferred into a cabinet door; the phrase is physically impossible given the described entities and their typical functions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being transferred into",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bowl being transferred into a stationary cabinet door is not physically plausible; cabinet doors are not receptacles that receive bowls.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being transferred into",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot release a cabinet door; the relationship is physically and functionally implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "releasing",
+      "relation_type": "functional",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 28,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000025.json",
+    "total_relationships": 99
+  },
+  "relationships": [
+    [
+      1,
+      8,
+      "inside",
+      [
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "inside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      18,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "contains",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "contains",
+      [
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "contains",
+      [
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      15,
+      "contains",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "contains",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      8,
+      "inside",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "inside",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "holding",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      8,
+      "pouring into",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "pouring into",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "placing",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      13,
+      "holding",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      13,
+      "placing",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      4,
+      "receiving contents from",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      8,
+      "being filled by",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      14,
+      4,
+      "being poured into",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      15,
+      4,
+      "being poured into",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      17,
+      4,
+      "being poured into",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      18,
+      4,
+      "being poured into",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "being transferred into",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      4,
+      "being transferred into",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "releasing",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000025"
+}

@@ -1,0 +1,481 @@
+{
+  "activity_differential": [
+    "person preparing a drink at the bar",
+    "person using blender to mix ingredients",
+    "person working behind bar counter"
+  ],
+  "description": "A person is working behind a bar counter, preparing a drink using a blender and various ingredients. The camera moves from a close-up of the counter and plants to a wider view of the person at work, then zooms in on the preparation process.",
+  "place_env_id_name": "bar counter",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object linked to the log is unspecified and lacks any descriptive information, making it impossible to verify the 'below' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship of the streetlight being 'below' it cannot be assessed for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A polished marble surface is an inanimate object and cannot be spatially positioned 'left of' a person in a meaningful way; marble is the surface or floor on which the person likely stands, so 'left of' does not apply as a relationship here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A marble surface is flat and horizontal, while the log is vertical; the log cannot be 'right of' the marble surface since the marble is a plane rather than a distinct object to the left/right in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so its spatial relation to the marble cannot be verified or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so we cannot verify the spatial relationship 'under' relative to the well-described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name, attributes, actions, or description, making it impossible to verify or interpret the spatial relationship with the log-like object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it impossible to confirm a meaningful 'above' spatial relation to the streetlight.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any name, attributes, actions, or description, making it impossible to interpret what is left of the stones or if 'left of' applies logically.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it impossible to confirm if it can spatially contain the napkin; thus, the relationship is unsupported.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "containing",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified with no attributes or description, making it impossible to confirm spatial relation 'right of' the streetlight.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or interpret the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to validate the spatial relationship with the stones.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), making it impossible to evaluate the relationship; the predicate involves a camera action which cannot be assigned a subject here.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null name and description), making it impossible to confirm the 'camera zooming in on' relationship; lacking necessary context to validate.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera zooming in on",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a defined name or description, making it unclear what the log is using; the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log maintaining an upright position cannot plausibly be 'using' a bottle; logs are inanimate objects and cannot perform functional actions.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log (an inanimate object) cannot 'use' a bottle; the relationship implies agency that the log cannot have.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, and the predicate 'preparing with' is vague without context; the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot perform actions related to 'preparing with' a bottle; the relationship is unrealistic given their physical properties and typical use.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'preparing with' is vague and the entities are uncertain logs and bottles; there is not enough context to confirm a meaningful or plausible relationship.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An object focusing on itself is redundant; the subject and object are identical and the relationship 'focused on' is not meaningful in this context.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 22,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000020.json",
+    "total_relationships": 81
+  },
+  "relationships": [
+    [
+      3,
+      8,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "containing",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "camera panning toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "camera zooming in on",
+      [
+        [
+          72,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      25,
+      "using",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      33,
+      "using",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      32,
+      "using",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      25,
+      "preparing with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      33,
+      "preparing with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      32,
+      "preparing with",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      3,
+      "focused on",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000020"
+}

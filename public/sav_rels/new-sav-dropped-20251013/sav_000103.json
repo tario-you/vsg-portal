@@ -1,0 +1,586 @@
+{
+  "activity_differential": [
+    "person leading dog through hallway",
+    "dog being guided toward examination room",
+    "cat following person and dog in clinic"
+  ],
+  "description": "A person in a green jacket is leading a dog on a leash down a hallway, while a cat walks independently nearby. Another person in a blue puffer jacket stands by, observing. The dog initially resists but is gradually led forward. The camera remains stationary, capturing the scene as the main person and dog move toward a door, with the cat following.",
+  "place_env_id_name": "veterinary clinic hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot be spatially 'under' a flat marble floor tile; the tile is a horizontal solid surface above the floor level, so 'under' relationship is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot physically be on top of a poster since posters are typically flat on walls or surfaces and not capable of supporting the cat's weight.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are cats moving gracefully together; stating one is 'under' the other is redundant and lacks clear spatial distinction.",
+      "label": "redundant",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot realistically be on top of an electrical outlet plate which is mounted against a wall and too small for the cat to stand on.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat being under a baseball cap is physically implausible given the cap's typical size compared to a cat.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'wall panel right of trousers' is spatially illogical as a stationary wall panel cannot be positioned 'right of' an article of clothing like trousers which are typically worn or laid out; spatial orientation does not apply meaningfully between these object types.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large tall wall panel cannot plausibly be positioned to the left of a small beanie worn on someone's head in a meaningful spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers cannot realistically be on top of a tree or a miniature tree-like arrangement; this spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers cannot be physically on top of a vertically displayed poster; the relationship is spatially and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers cannot physically be on top of an electrical outlet plate as one is worn on the body and the other is mounted on a wall.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are worn by a person and cannot be spatially located independently to the left of a person; the relationship is physically implausible as trousers are part of the person's clothing.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers cannot plausibly be spatially 'under' a baseball cap given their typical positions on a person; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A delicate, natural tree structure cannot be physically located on top of a flat, stationary poster; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster cannot be physically located under a puffer jacket, as posters are typically mounted or displayed on flat surfaces; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster cannot be physically positioned under a ladder in a meaningful spatial arrangement as posters are flat objects typically placed on walls or flat surfaces, not underneath standing ladders.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster cannot be under a cat, as posters are usually fixed to vertical surfaces and cats move across horizontal planes; the spatial relation 'under' here is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two posters are described as stationary and prominently displayed; one cannot be physically under the other in a clear spatial sense without additional context such as layering or mounting details.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A poster is typically hung on a wall and cannot logically be located under an electrical outlet plate, which is mounted on the wall itself; the spatial relationship 'poster under outlet plate' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot be led by an inanimate object like a coat; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "being led by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot be 'being pulled by' a coat, which is an inanimate object; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "being pulled by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot perform the action of 'leading' a cat; it is an inanimate object without agency to lead.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "leading",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat is an inanimate object and cannot handle a leash; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "handling leash of",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wall panel cannot logically 'follow' a moving coat; the motion predicate is not plausible with the given subject and object.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat, being an inanimate object, cannot perform the action of watching a wall panel.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers, as inanimate clothing items, cannot perform the action of watching; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers and a coat are inanimate clothing items and cannot perform the action 'watching'.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), so the relationship 'camera focusing on cat' lacks a valid subject to confirm the interaction.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 27,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000103.json",
+    "total_relationships": 154
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      21,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      22,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      26,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      21,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "being led by",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "being pulled by",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      1,
+      "leading",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      1,
+      "handling leash of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      23,
+      "following",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      2,
+      "watching",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      1,
+      "watching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      23,
+      "watching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000103"
+}

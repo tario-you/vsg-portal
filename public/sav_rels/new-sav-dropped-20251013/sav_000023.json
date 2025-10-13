@@ -1,0 +1,544 @@
+{
+  "activity_differential": [
+    "vehicles traversing urban tunnel and road",
+    "camera vehicle following van through underpass",
+    "urban traffic moving through tunnel and onto open road"
+  ],
+  "description": "A van is driving through an urban underpass and tunnel, followed by another van, with several cars and a motorcycle appearing as the vehicles progress along a winding road. The camera, mounted inside or on a vehicle, moves forward, following the van and tracking the road as the scene transitions from underpass to open road.",
+  "place_env_id_name": "urban road and tunnel",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A van cannot be to the left of a road since the van must be on the road or off it, but not spatially left of the entire road object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the van is to the left of, so the spatial relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to confirm the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what the van is under; thus the spatial relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'right of' with the van.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the road.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name and description, making it impossible to confirm the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm or validate the spatial relation 'under' with the van.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to verify the 'left of' relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified with no name or description, making it impossible to verify the 'left of' spatial relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified with no description or attributes, making it impossible to confirm the 'following' relationship to the van.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks description; cannot confirm the plausibility of moving through the fence, which is described as a stationary barrier.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "moving through",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), so the movement 'moving past' in relation to the van cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object is undefined and lacks description, making it impossible to verify the approaching relationship to the billboard.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the van could be leading; thus the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "leading",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to assess the plausibility of the 'following' relationship with the van.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot physically enter a fence, which is a stationary barrier; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "entering",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot physically 'exit' a stationary fence; it would instead pass through a gate or opening, but with just 'fence' the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "exiting",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to accurately assess the 'approaching' relationship with the billboard.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying name or description, making it unclear what the van is passing.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "passing",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 25,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000023.json",
+    "total_relationships": 129
+  },
+  "relationships": [
+    [
+      1,
+      3,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "left of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "under",
+      [
+        [
+          144,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "under",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      35,
+      "right of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "right of",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      29,
+      "left of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      30,
+      "left of",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      32,
+      "under",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      34,
+      "left of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      35,
+      "left of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      38,
+      "left of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      40,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "following",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      6,
+      "moving through",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "moving past",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      36,
+      "approaching",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      16,
+      "leading",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      1,
+      "following",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "entering",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "exiting",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      36,
+      16,
+      "approaching",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      9,
+      "passing",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000023"
+}

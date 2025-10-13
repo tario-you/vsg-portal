@@ -1,0 +1,859 @@
+{
+  "activity_differential": [
+    "baby playing with own feet",
+    "baby self-exploring while lying on bed",
+    "baby moving and playing on bed"
+  ],
+  "description": "A baby in pajamas is lying on a bed, actively moving, grabbing their own feet, and playing with their body. The camera remains fixed, capturing the baby's playful and self-exploratory movements throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify the spatial relationship with the hands.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to assess the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A baby cannot be 'attached to' a blanket in a spatial sense; blankets cover or lie under babies but are not attached to them.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "One baby lying on top of another is physically unlikely and not supported by the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A baby is a living being and the blanket is an inanimate object; the baby cannot be 'attached to' the blanket in a biological or physical attachment sense.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A baby lying on top of a trash can is highly unlikely and unsafe, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set cannot wear another pair of pajamas; the relationship 'wearing' between two pajama sets is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set is clothing to be worn, but it cannot wear a blanket; wearing relationship here is incorrect between these objects.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set is clothing and cannot physically be 'on top of' a trash can as an object; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set cannot be spatially positioned relative to a tablecloth by itself; clothing items are not independent entities and cannot be 'right of' an object without a wearer or context.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Pajamas are clothing and cannot be attached to a blanket; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Pajamas are clothing items and cannot be 'attached to' a blanket; they are worn by a person, not attached to objects like blankets.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Pajamas are clothing and cannot physically be 'on top of' a trash can as an object; they are normally worn or placed flat, not situated spatially on top of such an object in this way.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to evaluate the spatial relationship with the pajamas.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket is an inanimate object and cannot be 'attached to' a baby in a meaningful, intentional way; the spatial relationship 'attached to' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot be 'attached to' pajamas in a spatial or physical sense as described; the relationship is implausible given the object types.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets do not physically attach to each other; 'attached to' is not a plausible spatial relationship between two blankets.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket being 'on top of' a trash can is unlikely given typical spatial arrangements; blankets usually lie on flat surfaces, not on top of trash cans, which are rigid and upright.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'blanket under blanket' is redundant and adds no meaningful spatial distinction between two overlapping blankets described in the same scene.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for one blanket to be 'under' another blanket since blankets typically lie on top of or cover surfaces rather than being spatially 'under' other blankets in the described context.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship or even identify the object the blanket is positioned relative to.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'baby' is related to its own 'foot', so stating the foot is 'under' the baby is redundant and adds no new significant spatial information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One baby cannot be physically under another baby while both are lying down; this spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot be 'attached to' a baby; blankets typically cover or drape over but are not physically attached to living beings in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot be inside a pajama set; this spatial relationship is physically implausible given their descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket being 'attached to' pajamas is unlikely as blankets typically drape over or cover clothing but do not attach to them.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets are distinct objects that do not physically attach to each other; saying one blanket is attached to another is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are blankets described as draped and stationary; stating one is on top of the other adds no clear distinct or plausible spatial hierarchy based on the descriptions provided.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth being 'left of' a baby spatially is plausible, but since a tablecloth is typically spread beneath or around objects rather than positioned to the side, this spatial relationship is semantically odd and physically unlikely in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be positioned left of a tile since a tablecloth would cover tiles rather than spatially be left of them; the spatial relation is not meaningful here.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor tile cannot be to the right of a tablecloth, as the tile is part of the floor and the tablecloth is typically above the floor, making 'right of' spatial relation physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making the spatial relationship with the tile vague and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any name or description, so spatial relationship 'left of' to the baby cannot be confirmed as meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set is an inanimate object and cannot perform the action of grabbing a baby.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "grabbing",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same pajama set; it cannot logically play itself, making the relationship redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set is an inanimate object that cannot perform actions like playing with a baby; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pajama set is an inanimate object and cannot move a foot; movement ascribed to the pajama set is a misattribution, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "moving",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "'Self-exploring' is not a plausible action for an inanimate object like a pajama set.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "self-exploring",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks any description, making it impossible to verify or confirm the 'camera focusing on' relationship with the pajama set.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 40,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000030.json",
+    "total_relationships": 164
+  },
+  "relationships": [
+    [
+      1,
+      13,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "wearing",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "wearing",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "right of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "inside",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "attached to",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "left of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "grabbing",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      4,
+      "playing",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      3,
+      "playing with",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      2,
+      "moving",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      4,
+      "self-exploring",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      -1,
+      4,
+      "camera focusing on",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000030"
+}

@@ -1,0 +1,754 @@
+{
+  "activity_differential": [
+    "group shopping in supermarket",
+    "group selecting and placing items in cart",
+    "group conversing while shopping"
+  ],
+  "description": "A group of people are shopping in a supermarket aisle, interacting with shopping carts and baskets, and moving through the space. The camera is panning and tracking the group as they shop and interact.",
+  "place_env_id_name": "supermarket aisle",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person moving is unlikely to be spatially 'under' a tall, vertical pipe as described; the relationship lacks physical plausibility given the objects' typical spatial arrangement.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be physically under a box in a plausible way given the descriptions and typical scene context.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to verify the spatial relationship 'under' with the subject.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically under a box, especially a rectangular decorative box, in a plausible scene; the spatial relationship 'under' is incorrect here.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'under' a box, especially given the box is stationary and the person is moving; the spatial relationship is unlikely.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'under' a box; the spatial relationship is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to evaluate the 'under' relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A walking person cannot be under a box that is part of a stacked arrangement; physical plausibility and scene context do not support this spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship stating the cylindrical objects are 'under' the box is uncertain; the descriptions do not clearly establish a spatial arrangement to confirm this.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stack of cylindrical objects being spatially 'under' a long, slender, fixed pipe is unlikely given the pipe is described as elevated or suspended; typically, the pipe would be above or independent, making the relationship 'under' physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'cylindrical objects under box' is physically implausible since the stacked cylindrical objects are described as prominently featured and layered, unlikely to be beneath a decorated box while maintaining such description.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The arrow sign is suspended in the air and points to the right, so it cannot be spatially 'left of' the box if it's floating; the described spatial relationship is inconsistent with physical positioning.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The arrow sign is described as pointing to the right, so it cannot plausibly be 'left of' the signboard while indicating direction to the right; this spatial relation contradicts the arrow's orientation.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to confirm the spatial relationship with the arrow sign.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name, attributes, or description, making it impossible to assess the spatial relationship with the arrow sign.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the arrow sign.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name, attributes, or description, making it impossible to assess the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box being under a signboard is unlikely since signboards are typically elevated and boxes placed below might not be considered in a direct 'under' spatial relation as described.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are described as the same or very similar branded boxes with matching attributes; asserting one is 'under' the other is redundant without clear spatial distinction.",
+      "label": "redundant",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are boxes with similar characteristics; stating one is under the other adds redundant spatial information without clear distinction.",
+      "label": "redundant",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A box being spatially 'under' a long, slender pipe that is fixed or suspended seems physically implausible given the descriptions; typically, pipes would not be positioned above a small, steady box in this manner without additional context.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name, attributes, actions, or description, making it impossible to confirm or evaluate the 'left of' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to validate the relationship with the person object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to confirm the validity of the 'walking with' relationship.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'shop with' a signboard as it is an inanimate object incapable of any social interaction.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "shopping with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and the object is a signboard; 'shopping with' is inappropriate and there's insufficient context to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "shopping with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically be 'shopping with' a signboard, which is an inanimate object; the relationship is not semantically plausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "shopping with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information and description, making it unclear if a social interaction like conversing with a person is plausible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both people are described as moving independently with no indication of interaction; there's no evidence to confirm they are conversing.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person placing items in a tall, smooth, metallic signboard is physically unlikely; signboards are not containers.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "placing items in",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and cannot place items in a metallic signboard; placing items in a signboard is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "placing items in",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is a walking person and the object is a tall, vertical signboard unlikely to be a container for placing items; thus 'placing items in' the signboard is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "placing items in",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person removing items from a signboard is implausible as signboards are typically stationary objects that do not contain or hold items to be removed.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "removing items from",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically remove items from a tall, sleek, fixed signboard, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "removing items from",
+      "relation_type": "functional",
+      "subject_id": 3
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 35,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000104.json",
+    "total_relationships": 171
+  },
+  "relationships": [
+    [
+      1,
+      13,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      29,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      40,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      22,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      31,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      37,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      12,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      26,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      27,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      29,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      39,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      2,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "panning toward",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "walking with",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      35,
+      "shopping with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      35,
+      "shopping with",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      3,
+      35,
+      "shopping with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      35,
+      "placing items in",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      35,
+      "placing items in",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      35,
+      "placing items in",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      35,
+      "removing items from",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      35,
+      "removing items from",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000104"
+}

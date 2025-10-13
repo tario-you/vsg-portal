@@ -1,0 +1,103 @@
+{
+  "activity_differential": [
+    "person shopping with cart",
+    "person walking in shopping mall",
+    "person carrying backpack while shopping"
+  ],
+  "description": "A shopping mall corridor with multiple people, one person pushing a shopping cart and carrying a backpack, another person walking, and the camera moving forward through the scene.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what is being referred to as left of the tiles; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object has no name, attributes, actions, or description to establish what it is, making the spatial relationship with the shopping cart unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm the relationship 'walking toward'.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any description, so the direction or intention of 'walking toward' cannot be substantiated.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 4,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000007.json",
+    "total_relationships": 37
+  },
+  "relationships": [
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      -1,
+      "walking toward",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      -1,
+      "walking toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000007"
+}

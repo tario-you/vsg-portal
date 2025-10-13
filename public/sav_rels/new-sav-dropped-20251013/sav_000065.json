@@ -1,0 +1,880 @@
+{
+  "activity_differential": [
+    "group of people walking through shopping mall",
+    "group socializing while moving through indoor area",
+    "people exploring and observing shops and signs"
+  ],
+  "description": "A group of people are walking through a brightly lit indoor shopping or entertainment area, passing by various shops, signboards, and decorations. The camera moves steadily forward, following the group as they walk, while other people are seen walking, standing, or sitting throughout the environment.",
+  "place_env_id_name": "indoor shopping mall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The subject is moving forward with a purposeful stride while the predicate states 'standing right of' the object who is walking; conflicting movement states make the spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A subject described as moving forward with a consistent pace cannot be accurately described as 'standing' left of another who is walking; standing implies no movement, conflicting with the described actions.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, so it's unclear who or what the person is standing left of; the relationship lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship cannot be verified or interpreted accurately.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making the spatial relationship 'left of' unconfirmable and insufficiently supported.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as moving steadily forward, with no indication of being under the trash can, which is typically a larger object standing on the ground; being 'under' a trash can is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is unlikely to be 'wearing' a suspended, irregularly shaped, undulating object that resembles floating fabric or paper; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to confirm or refute the spatial relation 'under'.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person cannot be under a plastic bag that is drifting through the air; spatially and physically, the bag would more likely be above or around the person, making 'under' an implausible relation.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the 'under' spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to evaluate the spatial relationship 'under' with confidence.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily, which conflicts with the predicate 'standing left of'; one cannot be both walking and standing simultaneously in this spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are walking with a steady gait, making it implausible for one to be standing left of the other simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so spatial relationship cannot be reliably determined.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and undescribed, so the spatial relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is uncertain and appears suspended or moving independently; it is unclear or implausible that the person is wearing it based on the metadata provided.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what the person is wearing; relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking and moving, so they cannot be 'standing right of' the other person who is also moving; thus, the spatial relationship is incompatible with the described actions.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described as walking, which conflicts with the relationship predicate 'standing right of' that implies a stationary position.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or identification, making it impossible to verify the spatial relationship 'standing left of' with the person.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is uncertain, resembling fabric or paper, not clearly wearable; the 'wearing' relationship is not conclusively supported by the description.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, so it's unclear what the person is 'wearing'; relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to evaluate the spatial relationship with the known person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to assess the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has null name and description, making it impossible to determine spatial relation accurately to the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it impossible to confirm the spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify the relationship 'on lower body of' relative to the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "on lower body of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject's name and description are missing, making it impossible to verify the spatial relationship with the person described.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "on lower body of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name, attributes, actions, or description, so its spatial relation 'behind' to the described person cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to verify the validity of the 'following' relationship to the described person.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and descriptive context, making it impossible to validate the 'following' relationship to the backpack.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear who or what the person could be 'walking with'; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "'Walking with' implies social interaction which is not plausible between a person and an inanimate backpack object.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what or who the person is walking with, so the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to determine if 'walking with' applies meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A backpack, being an inanimate object, cannot engage in a social action like 'walking with' a subject, especially when the subject's identity is unknown.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A backpack cannot 'walk with' a subject; the relationship is physically impossible as a backpack is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to confirm what the person is wearing.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot have a conversational interaction with a backpack, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A backpack cannot engage in conversing as it is an inanimate object without communicative ability.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 4
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 41,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000065.json",
+    "total_relationships": 161
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "standing right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "on lower body of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "on lower body of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "following",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      21,
+      "following",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "walking with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      21,
+      "walking with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      4,
+      "walking with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      5,
+      "walking with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      21,
+      "walking with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      21,
+      "walking with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      16,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      21,
+      "conversing with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      21,
+      "conversing with",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000065"
+}

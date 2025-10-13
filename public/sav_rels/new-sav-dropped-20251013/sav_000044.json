@@ -1,0 +1,246 @@
+{
+  "activity_differential": [],
+  "description": "",
+  "place_env_id_name": "",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be spatially behind a can in a meaningful way when the can is described as prominent and rotating; typically, the hand would be in front or interacting with it, making 'behind' an unlikely spatial relation here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The fabric is part of the green jacket worn by the person; stating the person is in front of their own jacket's fabric adds no meaningful new information and is redundant.",
+      "label": "redundant",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are similar cans described as next to each other; stating one is 'in front of' the other adds no meaningful new information given the overlap and similarity.",
+      "label": "redundant",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'under' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's lack of name and description makes it unclear what the can is attached to, so the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot physically be above a pole in space without support; typically, a pole extends vertically and a bottle stands on a surface, making this spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a tall slender bottle to be physically above a vertical pole in a stable scenario, especially since the bottle 'remains upright' and the pole is described as vertical and stationary; 'above' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Glasses arranged in a row are unlikely to be positioned to the left of a vertical pole; their spatial context and descriptions do not support this arrangement.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the glasses could be 'under'; this hinders meaningful spatial relationship evaluation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard typically is mounted or in front of a shelf rather than behind it; also, the signboard described as stationary with text is unlikely to be physically behind the shelf in a meaningful spatial manner.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 11,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000044.json",
+    "total_relationships": 160
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      15,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      5,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      10,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      10,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      27,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000044"
+}

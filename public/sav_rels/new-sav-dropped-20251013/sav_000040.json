@@ -1,0 +1,271 @@
+{
+  "activity_differential": [
+    "car driving along mountain road",
+    "camera following car through landscape",
+    "vehicle traversing hilly terrain"
+  ],
+  "description": "A car is driving along a road through a mountainous and hilly landscape under a clear sky, as seen from a moving camera (likely a dashcam or following vehicle). The camera follows the car as it moves forward through the terrain.",
+  "place_env_id_name": "mountain road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so we cannot verify the spatial relationship of 'sky' being 'on top of' it.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship is undefined, making it impossible to verify the spatial relationship with the terrain.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified with no name or description, so the spatial relationship 'under' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify or assess the spatial relationship with the hill.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'car' cannot be spatially 'behind' the 'sky' because the sky is a background element extending overhead and beyond physical objects; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or assign a meaningful spatial relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any description or attributes, making it impossible to verify the spatial relation 'below' to the terrain.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), so the relationship 'following' to the sky lacks sufficient context to evaluate or confirm its plausibility.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky cannot 'drive through' a mountain; such motion is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "driving through",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky is not a physical entity capable of motion such as 'driving past' a hill; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "driving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (null), and the predicate 'moving ahead of' does not apply meaningfully to the sky as subject without a clear object.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "moving ahead of",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no attributes or description, making it impossible to validate the relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000040.json",
+    "total_relationships": 39
+  },
+  "relationships": [
+    [
+      1,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "following",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      3,
+      "driving through",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "driving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "moving ahead of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      5,
+      "moving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000040"
+}

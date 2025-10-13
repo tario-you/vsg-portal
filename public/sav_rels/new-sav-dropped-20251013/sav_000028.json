@@ -1,0 +1,691 @@
+{
+  "activity_differential": [
+    "mechanic repairing scooter",
+    "mechanic performing maintenance with tools",
+    "mechanic working in repair shop"
+  ],
+  "description": "A mechanic is working in a repair shop, performing maintenance or repair on a scooter using tools, with various parts and toolboxes around.",
+  "place_env_id_name": "repair shop",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A motorcycle wheel cannot physically be 'under' a storage compartment; typically, the wheel is beneath the vehicle frame, not under a separate storage compartment placed above it.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot perform the action of repairing a shelf; no agent capable of repair is indicated.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "repairing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment or cover cannot realistically handle a shelf; handling implies an active agent managing an object, which is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate storage compartment cannot 'focus on' a shelf as it lacks attention or cognitive ability.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a car bumper; the predicate 'using' implies agency which an object lacks.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate storage compartment cannot be 'focused on' as it lacks attention or consciousness to direct focus.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'storage compartment' and 'vent' are uncertain objects with no explicit indication that the compartment is 'using' the vent; this functional relationship is not supported by the descriptions.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'storage compartment' and 'vent' are only uncertain identifications; there is no clear indication that the storage compartment 'controls' the vent, so the functional relationship is unsubstantiated.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "controlling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment (an inanimate object) cannot perform the action 'using' a plastic bag; it lacks agency to use objects.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are both uncertain in identification and their interaction is unclear; the relationship 'using' is not supported by the available descriptions.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject 'storage compartment (uncertain)' and object 'metal panel' lack clear interaction details; 'using' is not semantically supported by provided descriptions.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The descriptions of both objects are uncertain and lack clear functional roles, making it implausible to confirm that the storage compartment is 'using' the pipe.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are described with uncertainty, and it is unclear how a storage compartment could be 'using' a plastic bag; the functional relationship is not supported by the metadata.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are described with uncertain identities and no indication that the storage compartment is 'using' the metal panel; their static and structural descriptions suggest no functional interaction.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is an uncertain storage compartment and the object is a cabinet; the predicate 'using' is unclear and lacks context, making it impossible to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a mirror; the functional relationship is not physically plausible between these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' tape; the predicate 'using' implies an agent capable of action, which the storage compartment is not.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot logically 'use' a laptop; the predicate 'using' does not apply between these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate storage compartment cannot 'use' a cardboard box; the subject lacks agency to perform the action.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment using a surface does not make sense functionally or physically; the action 'using' is inappropriate for these two objects.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a mat, as using implies an agent with intent or capability which an inanimate object like a storage compartment lacks.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment, being an inanimate object with no agency, cannot 'use' a motorcycle seat; such functional use is implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a pipe; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a motorcycle kickstand, as it is a passive object without agency.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot realistically 'use' a mat; the relationship 'using' implies agency that the inanimate storage compartment does not have.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment or cover cannot 'use' a cardboard box; the subject is an object without agency to perform the action 'using'.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment or cover cannot realistically 'use' a cardboard box; the relationship is not functionally plausible as stated.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Neither the storage compartment nor the cardboard is described as capable of 'using' anything; the functional relationship is unclear and unsupported by the metadata.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The metadata does not provide evidence that the storage compartment is actively using the plastic bag; the bag is described as lying flat and still, and the compartment as stable and fixed, so the relationship 'using' is not supported.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment (an object) cannot 'use' a piece of paper; the predicate 'using' implies an agent action which a storage compartment cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A storage compartment cannot 'use' a tag; the functional predicate 'using' is implausible between these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object 33 has no name or description, making it impossible to assess the plausibility of 'using' between the storage compartment and this unknown object.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 32,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000028.json",
+    "total_relationships": 119
+  },
+  "relationships": [
+    [
+      17,
+      1,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "repairing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      2,
+      "handling",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "focused on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      4,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "focused on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      11,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      11,
+      "controlling",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      14,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      20,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      6,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      5,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      30,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      15,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      24,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      31,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      28,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      29,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      13,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      12,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      16,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      7,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      8,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      9,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      18,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      19,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      21,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      22,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      25,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      32,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      33,
+      "using",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000028"
+}

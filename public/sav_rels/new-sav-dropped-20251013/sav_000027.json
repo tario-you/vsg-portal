@@ -1,0 +1,451 @@
+{
+  "activity_differential": [
+    "people walking and conversing on urban sidewalk",
+    "people exiting building and moving along street",
+    "people carrying items and interacting in public space"
+  ],
+  "description": "A group of people are seen exiting a building and walking along a busy urban sidewalk. The camera moves and shifts focus between groups of people and individuals, capturing their movement and interactions as they walk, converse, and carry items. Vehicles are parked along the street, and the environment is decorated with banners and lanterns.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object entity lacks a name and description, making it unclear what the person is standing on; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be realistically 'under' a doormat, which is flat on the ground and intended to be stepped on; the spatial relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'left of' cannot be verified or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to assess the spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive attributes or identification, making the spatial relationship 'left of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'wear' a window, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking on top of a swaying lantern is physically implausible given typical sizes and context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' a hanging lantern; spatially it is implausible for the person to be physically on the lantern.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely unspecified, making it impossible to determine if it can focus on the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown and cannot be evaluated; insufficient detail to support or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "panning along",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described walking, but there is no evidence or indication they are interacting or conversing; the relationship is unsupported by the descriptions.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk on a spherical lantern; the relationship 'walking on' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically walk on a lantern; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely unspecified with no name, attributes, actions, or description, making it impossible to validate the predicate 'walking on' with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and no description), so it's unclear who or what is 'walking on' the lantern; the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear who or what is 'walking with' the person; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or descriptive attributes, making it impossible to verify or confirm the 'carrying' relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to assess the plausibility of 'parked on' with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "parked on",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "stationary on",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it impossible to verify the relationship with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 26
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 20,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000027.json",
+    "total_relationships": 67
+  },
+  "relationships": [
+    [
+      1,
+      5,
+      "standing on",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "on top of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "focusing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      16,
+      "panning along",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      16,
+      "walking on",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      16,
+      "walking on",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      16,
+      "walking on",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      26,
+      16,
+      "walking on",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      26,
+      2,
+      "walking with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      27,
+      "carrying",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      16,
+      "parked on",
+      [
+        [
+          72,
+          144
+        ],
+        [
+          240,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      27,
+      16,
+      "stationary on",
+      [
+        [
+          72,
+          144
+        ],
+        [
+          240,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      26,
+      16,
+      "moving along",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000027"
+}

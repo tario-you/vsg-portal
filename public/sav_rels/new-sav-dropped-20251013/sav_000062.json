@@ -1,0 +1,355 @@
+{
+  "activity_differential": [
+    "adult supervising and interacting with children near a building",
+    "person walking along a residential pathway",
+    "camera panning to capture people and environment"
+  ],
+  "description": "A group of people, including adults and children, are present outside a building along a rough pathway. One adult interacts with two children near a window, while another person walks along the pathway. The camera moves and pans, shifting focus from the group near the building to the pathway and surroundings.",
+  "place_env_id_name": "outdoor residential pathway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically stand on a tall, vertical concrete block structure; the spatial relationship is implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child running or playing cannot realistically be standing on a tall, rectangular concrete block structure; the relationship is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to confirm the spatial relationship 'standing on' with the child.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot stand on a structure; typically, the structure supports the window, making the stated relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot physically be 'standing on' another object; the spatial predicate is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unclear from the metadata whether the window is physically in front of the signboard or vice versa, so the spatial relationship lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the window could be 'on'; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is a door or panel, which does not typically stand on something, and the object lacks description or identity to assess plausibility.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify if it can be 'touching' the door or panel; insufficient detail to assess the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's description is detailed but the related object lacks any identification or attributes, making it impossible to evaluate the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's identity and description are unknown, making it impossible to verify the 'covering' relationship.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "covering",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot meaningfully 'interact with' a window as it is an inanimate object incapable of social interaction.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot engage in a social interaction such as 'interacting with' a child.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, making it impossible to confirm the relationship 'being watched by camera' is valid.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by camera",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to confirm or refute the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown with no attributes or description, making it unclear who or what is focusing on the window; thus the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 16,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000062.json",
+    "total_relationships": 113
+  },
+  "relationships": [
+    [
+      1,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      18,
+      "standing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      22,
+      "standing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      37,
+      "on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      22,
+      "standing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      37,
+      "on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      22,
+      "covering",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "interacting with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      2,
+      "interacting with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      3,
+      -1,
+      "being watched by camera",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "panning toward",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "focusing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000062"
+}

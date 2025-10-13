@@ -1,0 +1,699 @@
+{
+  "activity_differential": [
+    "camera operator walking along sidewalk and street",
+    "camera documenting street environment",
+    "camera panning and moving through urban area"
+  ],
+  "description": "A camera moves along a sidewalk and street in an urban outdoor environment, capturing various static objects such as cars, manhole covers, stones, and a toy on the ground. A person is briefly visible walking across the street. The camera's movement is the main source of temporal change, as it pans and moves forward through the scene.",
+  "place_env_id_name": "urban street sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the car is touching; cannot confirm relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to confirm the spatial relationship; 'pole on top of null' is unclear and lacks context.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the pole could be on top of; relationship lacks sufficient context for validation.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear what the pole is on top of, making the relationship unclear and unreliable.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the pole could be on top of; thus, the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's counterpart in the relationship is unnamed and undescribed, providing no context to validate a 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relation 'beside' cannot be confirmed or evaluated properly.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so spatial relation 'beside' cannot be confirmed or evaluated properly.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description; the spatial relationship 'beside' cannot be verified or understood without context.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying attributes or description, making the spatial relationship 'beside' with the car unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making the spatial relationship 'right of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, preventing validation of the spatial relation 'left of' with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information or description, making it unclear what is performing the 'camera panning toward' action; cannot validate relationship without context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, making the relationship 'camera panning past' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object is undefined and lacks description, making it impossible to verify the relationship with the pole; thus the relationship is not evaluable.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any descriptive metadata, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "No information about subject or object makes it impossible to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "No information about the subject or object to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks any identifying information, making it unclear what is performing the 'camera panning past' action; the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack identifiable names or descriptions, making it impossible to validate or understand the relationship.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), making it impossible to validate the relationship 'camera panning past' involving the toy.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any identifying information, making the relationship unverifiable and semantically unclear.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any identifying information or descriptions, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description, making it impossible to confirm the 'camera panning past' relationship with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, making it unclear what is performing the 'camera panning past' action, so the relationship can't be confirmed or validated.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack names and descriptions, making it impossible to assess the relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object lack identification, and 'camera panning past' is an action performed by the camera, not a relationship between unknown objects.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any attributes or description, making it impossible to validate the 'camera panning past' relationship with the object.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it unclear what is performing the 'camera panning past' action; the relationship is ambiguous without more context.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 32,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000084.json",
+    "total_relationships": 255
+  },
+  "relationships": [
+    [
+      2,
+      3,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      30,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "touching",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      29,
+      "on top of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      38,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      35,
+      "on top of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      39,
+      "on top of",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      10,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      30,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      37,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera panning toward",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      5,
+      "camera panning past",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      8,
+      "camera moving toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      29,
+      "camera panning past",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "camera panning past",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      10,
+      "camera panning past",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      11,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      14,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      15,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      22,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      30,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      13,
+      "camera panning past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      16,
+      "camera panning past",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      17,
+      "camera panning past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      25,
+      "camera panning past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      27,
+      "camera panning past",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      32,
+      "camera panning past",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000084"
+}

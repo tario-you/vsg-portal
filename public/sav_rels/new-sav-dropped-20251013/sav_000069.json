@@ -1,0 +1,812 @@
+{
+  "activity_differential": [
+    "people walking and carrying goods in a busy market",
+    "camera moving through and overtaking people in a crowded outdoor market",
+    "individuals transporting items and interacting in a public space"
+  ],
+  "description": "A busy outdoor market scene with multiple people walking, carrying items, and the camera moving forward through the crowd. Some individuals are carrying large loads on their heads or in their hands, and the camera weaves through the market, passing by and overtaking people.",
+  "place_env_id_name": "outdoor market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A headscarf as an object cannot be spatially 'in front of' a person wearing it; the headscarf is part of or on the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a skirt alone, as the skirt is an article of clothing worn by a person rather than a separate spatial object.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf as an object cannot be spatially 'in front of' a person; typically, the person wears or is in front of the headscarf, not the other way around.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt as an inanimate clothing item cannot be spatially in front of a person as an independent entity; the skirt would typically be worn by a person, so the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially in front of a headscarf as a separate object; the headscarf is worn by the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially located 'in front of' their own skirt, which they are wearing; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'beside' a person in a meaningful, grounded way since clouds are far above and not adjacent to a person on the ground.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be physically located in front of a headscarf, as clouds are in the sky and headscarves are worn on the body; the spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud in the sky cannot be 'in front of' a skirt on a person; they occupy separate spatial contexts.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'in front of' a person on the ground given typical perspective; clouds are in the sky above and behind individuals from a ground viewpoint.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'in front of' a person on the ground; this relationship is not physically meaningful in this context.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud is in the sky and cannot be spatially in front of a barrel on the ground in a meaningful physical sense.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud in the sky cannot be spatially 'in front of' a barrel on the ground in a meaningful, physical sense.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A static van cannot be spatially in front of a headscarf, which is an article of clothing and not an independent object that can be positioned in space relative to the van.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot be spatially positioned in front of a skirt as the skirt is an article of clothing worn by a person and is not a stationary or independent object in space relative to a vehicle.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf, worn on the upper body and head, cannot be spatially 'left of' the skirt, which is worn on the lower body; the spatial relationship is implausible given their described positions.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf alone cannot be spatially located as 'left of' a person since it is a clothing item worn by or attached to someone, not an independent object.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an article of clothing and cannot spatially exist independently 'left of' a person; it is typically worn by a person, so this spatial relation is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an inanimate clothing item and cannot spatially be 'left of' a person in a meaningful way; the relationship assumes subject agency or spatial independence not applicable to clothing alone.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'beside' a cloud in a physical sense, as clouds are distant atmospheric phenomena and not physically adjacent.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'in front of' a headscarf as an independent object because a headscarf is an item worn by the person; the spatial relationship does not make sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an article of clothing, not an independent object that can be spatially in front of a person; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), so we cannot confirm its motion toward the van that remains stationary.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), so the relationship involving 'moving toward' a person cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject information is missing, making it impossible to evaluate the relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown with no description, preventing confirmation of movement toward the telephone pole.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity or description, making it unclear who or what is moving toward the person; therefore, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and lacks any description or attributes, so it's unclear what is moving toward the cloud.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to assess the plausibility of moving past the umbrella.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it impossible to verify if it can move parallel to a headscarf; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "moving parallel to",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object lacks any identification or description, making it impossible to verify the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot logically be described as 'walking past' a plastic bag; vehicles do not walk and the action is incompatible with the van's stationary state.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plastic bag cannot perform the action 'walking past' a stationary van; it does not have the ability to walk.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally walk together with a cloud; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud is an atmospheric phenomenon and cannot perform the action 'walking past' an umbrella, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plastic bag cannot carry a wall as it is physically impossible for a lightweight flexible object to carry a large solid structure like a wall.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot perform the action of 'looking at'; it lacks perception, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 37,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000069.json",
+    "total_relationships": 134
+  },
+  "relationships": [
+    [
+      1,
+      7,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "beside",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      21,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      15,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "beside",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      6,
+      "moving toward",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "moving toward",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "moving toward",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      17,
+      "moving toward",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      16,
+      "moving toward",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      4,
+      "moving toward",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      20,
+      "moving past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      7,
+      "moving parallel to",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      12,
+      "moving toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      6,
+      13,
+      "walking past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      6,
+      "walking past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      4,
+      "walking together",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      20,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      14,
+      "carrying",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      13,
+      "looking at",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000069"
+}

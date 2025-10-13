@@ -1,0 +1,817 @@
+{
+  "activity_differential": [
+    "families shopping together in supermarket",
+    "adults pushing strollers and carts while conversing",
+    "children accompanying adults during grocery shopping"
+  ],
+  "description": "A busy supermarket scene with multiple adults and children shopping, pushing strollers and carts, carrying bags, and interacting. The camera moves steadily forward through the aisle, capturing various interactions and activities among shoppers.",
+  "place_env_id_name": "supermarket",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the child is under it or to interpret the spatial relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what the child is in front of; insufficient context to confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for one child to be 'under' another child in this context; the spatial relationship does not make sense given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to confirm the child's position 'in front of' it.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'under' between a child and a small plastic bag is physically implausible given the descriptions; a child is unlikely to be under a plastic bag.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be physically under a standing child due to relative size and positioning.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot realistically be under a plastic bag; the spatial predicate 'under' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot be positioned spatially under a window as described; the relationship 'under' is not plausible given the typical vertical placement of windows.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear what is above the person; thus, the spatial relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify the spatial relation to the person.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject entity lacks any name or description, making it unclear what object is above the screen; the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name or description, making it impossible to evaluate the spatial relationship with the light fixture.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to confirm a meaningful spatial relationship above the display stand.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks name and description, making it impossible to confirm spatial relationship to the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object is unnamed and undescribed, making it impossible to confirm or assess the plausibility of it being spatially 'under' the child.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to confirm the spatial relationship 'left of' with the person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making the spatial relationship 'right of' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or understand the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to validate the spatial relationship 'right of'.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject details are missing or unknown, making it impossible to confirm or evaluate the 'moving toward' relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined and lacks information to verify the 'moving past' relation to the banner, which remains steady; cannot confirm the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name and description, making it impossible to verify the 'moving toward' relationship with the display stand.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified with no attributes or description, making it impossible to verify the 'moving toward' relationship with the wall panel.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined and has no attributes, actions, or description, making it impossible to confirm or interpret its movement toward the trousers.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A display stand is a stationary object and cannot perform the action of pushing a banner.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall panel cannot ride in a banner; the relationship 'riding in' between a stationary wall panel and a banner is physically impossible and nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "riding in",
+      "relation_type": "functional",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child carrying a large, tall, stationary screen is physically implausible based on size and context.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any attributes, name, or description, so it is unclear what the display stand is carrying.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, and a wall panel typically does not functionally hold objects, making the relationship unsupported by available metadata.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall panel cannot be 'sitting in' a banner; the spatial and functional relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "sitting in",
+      "relation_type": "functional",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unknown subject cannot realistically 'walk with' a stationary wall panel; the action is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A display stand cannot engage in social interaction like conversing with an undefined object.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unidentified subject cannot logically converse with a pair of trousers, which are inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "A display stand and a banner are inanimate objects incapable of attentional focus; therefore, the 'focused on' relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall panel, which is an inanimate object, cannot focus attention on a banner; the attentional predicate implies consciousness or intent, which the subject lacks.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description details, making the 'focused on' attentional relationship unclear and unsupported.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear how a wall panel could be 'focused on' this unknown entity; lacking context to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall panel, being an inanimate object, cannot focus attention on another object, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 24
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 38,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000080.json",
+    "total_relationships": 158
+  },
+  "relationships": [
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "under",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      29,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      33,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "above",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      20,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "moving toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      8,
+      "moving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      20,
+      "moving toward",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "moving toward",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      30,
+      "moving toward",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      20,
+      8,
+      "pushing",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      24,
+      8,
+      "riding in",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      10,
+      "carrying",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      20,
+      12,
+      "carrying",
+      [
+        [
+          120,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      24,
+      14,
+      "holding",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      24,
+      8,
+      "sitting in",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      23,
+      24,
+      "walking with",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      23,
+      "conversing with",
+      [
+        [
+          120,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      39,
+      30,
+      "conversing with",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      20,
+      8,
+      "focused on",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      24,
+      8,
+      "focused on",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      20,
+      12,
+      "focused on",
+      [
+        [
+          120,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      24,
+      14,
+      "focused on",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      24,
+      8,
+      "focused on",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000080"
+}

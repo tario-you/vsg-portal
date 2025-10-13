@@ -1,0 +1,838 @@
+{
+  "activity_differential": [
+    "adult and child walking together through flower shop walkway",
+    "camera panning and moving through garden area",
+    "adult supervising child in outdoor flower shop"
+  ],
+  "description": "A camera moves through a flower shop or garden area at night, following two people (one adult, one child) walking along a pathway lined with plants and flowers. The camera then pans and moves past the people, focusing on the plants, flowers, and outdoor area.",
+  "place_env_id_name": "flower shop outdoor walkway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially described as 'standing right of' a single boot that is moving as part of that person's own foot; the boot moves with the person and is not a separate static object to the right.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically stand on a bush; the relationship is implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking is unlikely to be physically under a plant; their relative positions and sizes make 'under' spatial relation implausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot moving with a rhythmic walking motion cannot logically be standing stationary on a bush, which is delicate and small; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be spatially located under a stationary, vertically oriented door; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a boot alone, as the boot is an individual body part and typically attached to a person; the size and physical relationship make this spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically under a flowerpot; the spatial relationship 'under' is implausible given their relative sizes and typical positions.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially located 'under' a vertical, tall, rectangular door; this is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot be physically 'under' a plant since plants are typically small and above ground; the spatial relation 'under' here is implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot be spatially positioned 'between' flowers in a meaningful way; typically, flowers are found on or around a bush rather than the bush being between them.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "between",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot be under a plant as both are ground-based plants; the spatial relation 'under' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for 'flowers' to be spatially located 'between' a single 'bush', as 'between' implies an arrangement involving two or more separate objects.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "between",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'flowerpot over person' spatial relationship is physically implausible given a flowerpot cannot realistically be positioned over a walking person in this context.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary flowerpot cannot be spatially 'over' a moving boot, which is unlikely given their typical arrangement; the predicate 'over' here lacks physical plausibility.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flowerpot cannot spatially be 'over' a bush since bushes typically grow out of or above flowerpots, not below them; the described spatial relation is implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door cannot physically be 'over' a person in a spatial relationship as described; the door is vertical and stationary, not positioned above the person in a manner that fits 'over'.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The door is vertical and stationary, while the boot is moving on the ground; it is physically implausible for a door to be spatially 'over' a boot in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject's identity as a door is uncertain and the spatial relation 'over' between a door and a plant is unclear without more context; thus, the relationship cannot be confirmed as plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The descriptions are incomplete and ambiguous ('door (uncertain)' and 'light fixture (uncertain)') with unclear spatial relation; thus, it's uncertain if the door is actually 'over' the light fixture.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is an uncertain 'door' with physical attributes, and the predicate 'over' suggests spatial relation. However, the metadata is incomplete and vague about the relative positioning to the bush, making it unclear if 'door over bush' is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The door, being stationary and vertical, cannot plausibly be spatially 'over' the plant, which grows upward; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is uncertainly identified as a door, and 'over' as a spatial predicate is ambiguous without specific spatial arrangement details; thus, the relationship cannot be confidently validated.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Uncertain door and flower arrangement with no clear spatial indication of one being 'over' the other; context is insufficient to confirm this relationship.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is uncertainly identified as a door and the relationship 'over' with the plant lacks clear spatial evidence or description confirming the door is physically above the plant.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are uncertain ('door (uncertain)', 'flowerpot (uncertain)'), and their relative spatial relation 'over' cannot be confidently confirmed from the descriptions alone.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plant with upright, slender leaves cannot realistically be positioned 'under' a tall, vertical door object; spatially this is implausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plant cannot physically be positioned 'over' a long, sturdy crossbar as described; such a spatial relationship is implausible given the objects' physical properties.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'behind' between a crossbar and a boot is uncertain due to limited spatial context and uncertain identification of the crossbar.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "One plant being spatially under another plant is unlikely since plants generally do not overlap vertically in that way; they grow side by side or one behind another, but 'under' is not a plausible spatial relation here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plant is described as potted, making it physically part of or inside the flowerpot, so it cannot be 'right of' the flowerpot as separate objects.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "One flowerpot being 'under' another flowerpot is physically unlikely given both are solid objects usually placed side-by-side or on surfaces, not stacked spatially underneath each other without support.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown, making it impossible to confirm or refute the 'following' relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it impossible to assess the relationship's plausibility; thus, it should be dropped due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification or description, making the relationship 'panning past' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and lacks any description or attributes, making it impossible to confirm the relationship 'panning past' with the plant.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk with' a boot as a separate entity; the boot is part of the person (wearing), not a walking companion.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot itself cannot walk; it is an inanimate object that must be worn by a person or animal to create walking motion. Associating 'walking along' directly with the boot is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking along",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot attend to a boot as an intentional social action; the relationship 'attending to' is not appropriate between a person and an inanimate boot.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "attending to",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot, being an inanimate object, cannot 'attend to' a person; this social predicate applied to a boot is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "attending to",
+      "relation_type": "social",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 39,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000068.json",
+    "total_relationships": 240
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "between",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      15,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "between",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      18,
+      "over",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      27,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      12,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      16,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      9,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "following",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      5,
+      "moving along",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      6,
+      "panning past",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      14,
+      "panning past",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "walking with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      5,
+      "walking along",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "attending to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      1,
+      "attending to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000068"
+}

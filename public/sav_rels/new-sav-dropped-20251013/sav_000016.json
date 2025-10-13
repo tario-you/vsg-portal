@@ -1,0 +1,271 @@
+{
+  "activity_differential": [
+    "child catching and holding rooster",
+    "child interacting with rooster in garden",
+    "camera panning through farmyard and garden"
+  ],
+  "description": "A rooster is present in a fenced outdoor area with logs, poles, trees, and tarps. The camera pans from the rooster's enclosure to a garden area, where a child is later seen holding the rooster, likely after catching it. The child interacts with the rooster and green gloves, while the camera continues to move through the environment.",
+  "place_env_id_name": "farmyard",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'under' cannot be validated or confirmed.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A rooster cannot realistically be physically located 'under' a vertical pole as poles are upright objects; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the 'under' spatial relation with the pole.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar poles standing upright; without clear spatial placement or reference, asserting one is 'under' the other is unsupported.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot be physically under a pole that is also standing upright; their vertical arrangements make this spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A slender, upright log cannot be under a tall tree in a spatial sense since logs are typically on or near the ground and the tree canopy is above; the relationship 'under' with the log as subject and tree as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are slender, elongated, standing upright with uncertain identities; spatially stating 'log under pole' is unclear and lacks sufficient context to confirm.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to confirm a spatial relation with the log.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are uncertain and similarly described as elongated vertical elements; asserting 'log under pole' spatially lacks clear context and distinction to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null), making it impossible to validate the 'camera panning away from' relationship with the rooster object.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning away from",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it unclear what entity is performing the camera panning action; thus, the relationship cannot be properly evaluated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning back toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification or description, making it unclear who or what is holding the rooster, so the relationship cannot be confidently validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 12,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000016.json",
+    "total_relationships": 136
+  },
+  "relationships": [
+    [
+      2,
+      19,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      19,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      19,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      36,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera panning away from",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "camera panning back toward",
+      [
+        [
+          264,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "holding",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000016"
+}

@@ -1,0 +1,589 @@
+{
+  "activity_differential": [
+    "child playing on trampoline",
+    "child jumping and bouncing on trampoline",
+    "child falling and getting up during trampoline play"
+  ],
+  "description": "A child is actively jumping, bouncing, and occasionally falling on a trampoline in an indoor play area, while other people are present in the background. The camera follows the child's activity, capturing dynamic trampoline play.",
+  "place_env_id_name": "indoor trampoline park",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be surrounded by a single rectangular mat; 'surrounded by' implies enclosure on all sides, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be realistically surrounded by a single trampoline spring, which is a small, cylindrical object.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person standing on top of another person is implausible given the described postures and typical physical constraints.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear another person; the 'wearing' predicate is incorrectly assigned between two people.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be wearing a fluorescent tube light; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for one standing person to be physically 'under' another standing person without additional context like lifting or elevated positioning.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot logically be 'surrounding' a person since it is a flat object lying beneath or under an object, not encircling it.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot spatially 'surround' a person; the person may be on or near the mat, but the mat does not enclose or surround the person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trampoline spring cannot surround a person as it is a small, rigid object designed to connect to a trampoline frame, making the spatial relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trampoline spring cannot physically surround a person due to its size and structure.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One standing person being 'under' another person who is also upright and only slightly crouched is unlikely given their described postures and spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm any focus or attention relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being focused on",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), making it impossible to confirm that a camera is following the person; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, not jumping. Thus, 'jumping on' the mat is incompatible with the described posture and actions.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "jumping on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as maintaining a steady stance with crossed arms, not performing any bouncing action on the mat, which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "bouncing on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is maintaining a steady stance and not described as moving or falling; therefore, 'falling on' the mat is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "falling on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with a steady stance and arms crossed, indicating they are not in the process of standing up from the mat; thus, the relationship 'standing up from' the mat is not accurate.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing up from",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'playing near' a fluorescent tube light, which is a stationary, functional object with no interactive properties.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person typically does not 'play near' a mat, which is an inanimate object; the predicate 'playing near' is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat is an inanimate object and cannot engage in the action of playing near; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, so they cannot be 'jumping near' the mat.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as maintaining a steady stance with arms crossed and not jumping; hence, jumping near the mat is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, making the predicate 'jumping near' incorrect given the absence of jumping action.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is described as standing still with a contemplative posture, while the other is engaged in dynamic movement; it is unlikely the still person is 'playing near' the moving person.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person with a steady stance and crossed arms is unlikely to be 'playing near' a mat, as the described posture indicates no active play behavior nearby.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'playing near' a fluorescent tube light, which is a fixed, inanimate object not associated with play activities.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 26,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000001.json",
+    "total_relationships": 82
+  },
+  "relationships": [
+    [
+      2,
+      7,
+      "surrounded by",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "surrounded by",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "on top of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "wearing",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "surrounding",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "surrounding",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "surrounding",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "surrounding",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      2,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      -1,
+      "being focused on",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "camera following",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      5,
+      "jumping on",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "bouncing on",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "falling on",
+      [
+        [
+          72,
+          96
+        ],
+        [
+          168,
+          192
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          360,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "standing up from",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          288,
+          312
+        ],
+        [
+          384,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      26,
+      "playing near",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      23,
+      "playing near",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      36,
+      "playing near",
+      [
+        [
+          408,
+          480
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      7,
+      "jumping near",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      14,
+      "jumping near",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      18,
+      "jumping near",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      11,
+      "playing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      36,
+      "playing near",
+      [
+        [
+          408,
+          480
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      26,
+      "playing near",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000001"
+}

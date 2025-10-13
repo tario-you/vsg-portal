@@ -1,0 +1,796 @@
+{
+  "activity_differential": [
+    "group of people walking through indoor market",
+    "camera following group into food court",
+    "people socializing and moving through shopping area"
+  ],
+  "description": "A group of people walk through an indoor market or shopping area, passing through decorative doors and into a food court area. The camera follows their movement, panning and dollying forward as the group progresses through the space. Some people are seen sitting and eating at tables in the food court.",
+  "place_env_id_name": "indoor market / food court",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, so the spatial relationship 'under' cannot be confirmed or evaluated properly.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship 'over' with the booth.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A booth cannot realistically be positioned 'over' a tall vertical pillar; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A booth cannot be plausibly positioned 'over' a vertical partition given their described orientations and typical spatial arrangements.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wooden booth cannot logically be spatially 'over' a moving jacket; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are signboards positioned close together; asserting one is spatially 'over' the other adds no meaningful new information since signboards are often arranged side by side rather than vertically overlapping.",
+      "label": "redundant",
+      "object_id": 36,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary signboard cannot realistically be positioned over a moving jacket in a way that implies direct spatial dominance. The relationship 'over' here is implausible given the objects and their described states.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no name or description, making it impossible to confirm the spatial relation 'right of' with the jacket.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tall vertical pillar cannot be spatially 'right of' a horizontal ceiling beam because the beam is typically above the pillar, making the stated left-right spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot be above a jacket since it is an inanimate object fixed in place, and the jacket moves through the scene; the spatial relationship 'above' is not plausible between them.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making spatial relation 'left of' unverifiable and thus unreliable.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship or meaningfully interpret 'left of' in this context.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what or who the person is walking with, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what is following the person, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by camera",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described as walking steadily with no mention of interaction or eye contact, so there is no clear evidence they are conversing.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined with no name or description, making the relationship meaning unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "walking forward with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null); thus, 'panning toward' cannot be evaluated or linked to a known entity.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified (null), so the relationship 'panning toward' cannot be validated as it lacks a clear subject.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null), so the relationship 'dollying forward with' involving the person as the object cannot be reliably evaluated or maintained.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "dollying forward with",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information or name, making the relationship 'walking along' unclear and unsupported.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "walking along",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no attributes or description, so it's unclear who or what is approaching the wall; this lacks sufficient context to keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no identity or attributes, making it impossible to assess the plausibility of the 'approaching' action towards the signboard.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified and lacks description; cannot confirm the plausibility of 'approaching' relationship with the train track.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot approach a fixed ceiling beam in a meaningful way since it is overhead and stationary, making 'approaching' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "There is no information about the subject, making it impossible to assess the plausibility of the subject 'approaching' the partition.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The jacket is an object of clothing that cannot move on its own or be approached; the relationship 'person approaching jacket' implies motion towards an autonomous jacket, which is not physically plausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no name or description, making it impossible to confirm it is physically approaching the jacket.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification or description, making it impossible to verify the 'approaching' action towards the stationary signboard.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the 'approaching' relationship is meaningful.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying name or description, making it impossible to confirm the 'passing by' relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no description, making it unclear what is moving under the stationary booth; unable to confirm relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "moving under",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject information is missing (name and description are null), making it impossible to confirm or infer the relationship with the caution tape.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "moving under",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically walk toward a stationary, ceiling-mounted beam in a way that represents meaningful movement toward an object at that height and position.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket cannot actively walk toward anything; it is an inanimate object, so this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks description or attributes, making it impossible to verify the 'moving past' relationship with the poster.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks any description or attributes, making it impossible to validate the relationship of moving past the column.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks identification or attributes, making it impossible to verify the plausibility of it moving past the object.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 37,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000018.json",
+    "total_relationships": 221
+  },
+  "relationships": [
+    [
+      25,
+      39,
+      "under",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      40,
+      "over",
+      [
+        [
+          144,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      32,
+      "over",
+      [
+        [
+          144,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      37,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      39,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      36,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      39,
+      "over",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      39,
+      "right of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      33,
+      "right of",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      39,
+      "above",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      35,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      35,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "walking with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      -1,
+      "being followed by camera",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "conversing with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "walking forward with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "panning toward",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "panning toward",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "dollying forward with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      25,
+      "walking along",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      27,
+      "approaching",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      29,
+      "approaching",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      30,
+      "approaching",
+      [
+        [
+          144,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      37,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      39,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      39,
+      "approaching",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      34,
+      "approaching",
+      [
+        [
+          240,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      40,
+      "approaching",
+      [
+        [
+          144,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      23,
+      "passing by",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      26,
+      "moving under",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      28,
+      "moving under",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      33,
+      "walking toward",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      39,
+      "walking toward",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "moving past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      17,
+      "moving past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      16,
+      "moving past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000018"
+}

@@ -1,0 +1,610 @@
+{
+  "activity_differential": [
+    "cat playing with twig on log",
+    "cat stretching and shifting on log",
+    "cat interacting with another cat"
+  ],
+  "description": "A white cat is lying and stretching on a log outdoors, occasionally interacting with a twig and shifting its gaze and posture.",
+  "place_env_id_name": "outdoor log area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A cat being 'inside' a slender branch is physically impossible as the branch is too small and solid to contain the cat.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot realistically be inside a twig; the spatial relationship is not physically plausible given the sizes and descriptions of the objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are cats described together in similar postures and proximity; stating one is 'above' the other is redundant without clear spatial distinction.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small, delicate twig cannot realistically be 'on top of' a moving cat in a meaningful, plausible way.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are logs described with natural positioning; stating one log is 'above' another adds no meaningful new information beyond their coexistence.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar logs with nearly identical attributes and stationary positions; stating one log is 'above' the other adds no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship 'right of' accurately.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are logs described together with no clear vertical spatial distinction; stating one log is 'above' the other lacks credible new information.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship has no name or description, making it unclear what the log is spatially related to.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and lacks description or attributes, making it impossible to confirm the spatial relationship with the cat.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unnamed and undescribed, making it impossible to confirm or refute its spatial relation 'left of' the leaf.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot physically perform the action of 'batting at' a log, as it lacks agency or ability to deliberately interact in this way.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "batting at",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot perform the action 'looking at' a cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot look at or attend to a cat.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot perform the action 'looking at'; thus, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Branches and twigs, as plant parts, do not socially interact; 'interacting with' as a social relation is not physically meaningful here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Branches and twigs are inanimate plant parts and cannot perform the action 'grooming with' each other.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "grooming with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot 'play with' a twig; the predicate implies intentional action not plausible for non-sentient plant parts.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot perform a social action like 'ignoring' especially towards an undefined object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Plant parts like twigs and branches do not engage in social interactions; 'interacting with' is not appropriate for these natural objects.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig, being an inanimate plant part, cannot engage in the attentional action of 'looking at' a cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig (inanimate plant matter) cannot look at anything; thus 'looking at' between twig and cat is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig is an inanimate object and cannot perform the action of 'looking at' another object like a log.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig or branch cannot groom another branch; the predicate 'grooming with' is not plausible for plant parts.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "grooming with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig cannot engage in the complex action of 'playing with' a branch; this is physically and biologically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig cannot perform a social action like ignoring, and the object has no details to support this relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it unclear who or what is ignoring the branch; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 12
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 27,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000097.json",
+    "total_relationships": 77
+  },
+  "relationships": [
+    [
+      1,
+      2,
+      "inside",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "inside",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "above",
+      [
+        [
+          0,
+          504
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      12,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      12,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "left of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "batting at",
+      [
+        [
+          48,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          264
+        ],
+        [
+          432,
+          528
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          240,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      5,
+      "looking at",
+      [
+        [
+          48,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      4,
+      "interacting with",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      4,
+      "grooming with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      4,
+      "playing with",
+      [
+        [
+          48,
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      12,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      2,
+      "interacting with",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "social"
+    ],
+    [
+      4,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          264
+        ],
+        [
+          432,
+          528
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          240,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      5,
+      "looking at",
+      [
+        [
+          48,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      4,
+      2,
+      "grooming with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      2,
+      "playing with",
+      [
+        [
+          48,
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      4,
+      12,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      12,
+      2,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000097"
+}

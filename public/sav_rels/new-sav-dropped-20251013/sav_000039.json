@@ -1,0 +1,544 @@
+{
+  "activity_differential": [
+    "chickens foraging together near a parked car",
+    "chickens moving around the car",
+    "camera observing chickens foraging"
+  ],
+  "description": "A red car is parked on a dirt roadside near a yellow building. Several chickens (an adult and chicks) are foraging and moving around the car. The camera remains mostly stationary, capturing the scene as the chickens move and forage.",
+  "place_env_id_name": "roadside near residential building",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The spatial predicate 'hanging right of' suggests one object is suspended next to another, which is physically implausible for a bird relative to a chicken, both described as standing on the ground.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "hanging right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the wheel.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car door is part of a car and cannot be attached to a curb, which is a fixed concrete structure.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car door cannot be attached to a chicken; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the car door.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chicken cannot be physically attached to a concrete curb as they are distinct objects with no plausible attachment.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chicken cannot be 'attached to' a car door in a meaningful or physically plausible way.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chicken cannot be 'attached to' a curb; this spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window being spatially behind a wheel is physically implausible since windows are typically fixed used in buildings, and wheels are smaller movable objects likely positioned in front or below windows, not the other way around.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window is typically part of a building facade and positioned above ground level, whereas a curb is at ground level outdoors. The window cannot be spatially positioned behind a curb in a meaningful physical sense.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fixed, solid window cannot be behind a moving chicken in a spatial sense; typically, the chicken would be behind the window if spatially related, but here the relationship is stated the opposite way, which is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair cannot physically engage in 'foraging with' a wheel; this relationship is implausible and should be dropped.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "foraging with",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair, being an inanimate object, cannot engage in 'foraging near' behavior, which is characteristic of living beings.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel cannot engage in 'foraging with' a chair; the predicate is not physically or semantically plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "foraging with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wheel cannot perform the action of foraging near fabric; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric cannot perform the action 'foraging near' a chair, which is physically impossible for an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric cannot perform the action 'foraging near' a wheel, which is not a plausible or physically possible relationship.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "foraging near",
+      "relation_type": "higher_order",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The chair is stationary and does not move with the wheel; a chair moving with a wheel is physically implausible without additional context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A rugged wheel can move, but the chair is described as stationary; the wheel cannot be 'moving with' a stationary chair, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The chair remains stationary and maintains its position, so it cannot be 'moving near' the fabric; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "moving near",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The fabric is described as largely stationary and hanging with gentle drape, making it implausible for it to be 'moving near' the stationary chair.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "moving near",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fabric as an inanimate, hanging object cannot actively move near a wheel, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "moving near",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is completely unidentified with no description, making it impossible to confirm a watching relationship toward the chair.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification or description, making it unclear who or what is 'watching' the wheel; relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified (null), so it's unclear who or what is watching the fabric.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 25,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000039.json",
+    "total_relationships": 63
+  },
+  "relationships": [
+    [
+      1,
+      18,
+      "hanging right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      18,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      2,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      18,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      2,
+      "foraging with",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      19,
+      7,
+      "foraging near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      19,
+      "foraging with",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      7,
+      "foraging near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      7,
+      19,
+      "foraging near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      7,
+      2,
+      "foraging near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      19,
+      2,
+      "moving with",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      19,
+      "moving with",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      19,
+      7,
+      "moving near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      19,
+      "moving near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      2,
+      "moving near",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      19,
+      "watching",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "watching",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      7,
+      "watching",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000039"
+}

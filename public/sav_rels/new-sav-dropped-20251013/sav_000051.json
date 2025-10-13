@@ -1,0 +1,355 @@
+{
+  "activity_differential": [
+    "cats grooming and playing with toys",
+    "cats exploring and interacting with environment",
+    "cats taking turns on table and approaching camera"
+  ],
+  "description": "A white cat is initially on a table, grooming and interacting with a toy. Later, a gray cat appears, climbs onto the table, and approaches the camera. The cats are engaged in self-grooming, play, and exploration in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The cabinet door is a part of the cabinet, so describing the cabinet as 'in front of' its own door is redundant and not meaningful.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sink being spatially 'under' a vacuum cleaner is physically implausible given their typical orientations and sizes.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door is typically attached to or part of a wall or cabinet; it cannot be 'left of' a wall as an independent object in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The vacuum cleaner is described as stationary and typically positioned on the floor, while the cabinet is tall and vertical; the vacuum cleaner cannot be physically 'over' the cabinet in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vacuum cleaner cannot logically be positioned 'over' a sink given their typical spatial arrangement; the vacuum cleaner is used on floors, not above sinks.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Inanimate fabrics cannot 'play with' each other; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "playing with",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action 'grooming self'; this action is not applicable to inanimate objects like fabric.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "grooming self",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any description or attributes, making it impossible to verify the 'looking at' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks description or attributes, so we cannot confirm that the 'camera focusing on' relationship is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform self-grooming actions; it is an inanimate object without agency.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "grooming self",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action of sniffing an object, which is a behavior associated with living creatures.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "sniffing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action of sniffing, as it is an inanimate object without sensory capabilities.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "sniffing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket, being an inanimate object, cannot look at anything, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets, as inanimate objects, cannot approach each other on their own; the predicate 'approaching' implies intentional motion that a blanket cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot independently approach another fabric; 'approaching' implies intentional motion by a sentient subject, which a blanket lacks.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets cannot perform actions like 'approaching' objects, as they are inanimate and typically stationary; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 16,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000051.json",
+    "total_relationships": 140
+  },
+  "relationships": [
+    [
+      5,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "over",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "playing with",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      1,
+      "grooming self",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      -1,
+      "looking at",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      19,
+      19,
+      "grooming self",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      19,
+      24,
+      "sniffing",
+      [
+        [
+          312,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      25,
+      "sniffing",
+      [
+        [
+          360,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      19,
+      -1,
+      "looking at",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      19,
+      1,
+      "approaching",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      19,
+      22,
+      "approaching",
+      [
+        [
+          288,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      19,
+      24,
+      "approaching",
+      [
+        [
+          312,
+          360
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000051"
+}

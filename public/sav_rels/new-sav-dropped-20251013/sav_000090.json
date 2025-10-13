@@ -1,0 +1,166 @@
+{
+  "activity_differential": [
+    "cats relaxing on bed",
+    "cats observing camera",
+    "cats shifting position on bed"
+  ],
+  "description": "A black and white cat is lying on a bed in a living room, occasionally shifting position and gazing around. The camera gradually zooms in on the cat's face, capturing its attentive gaze and relaxed posture.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making the spatial relationship 'left of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to verify the 'right of' spatial relationship relative to the cabinet.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's not possible to verify the relationship with the cabinet.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A drawer is typically part of a cabinet, not lying next to it; it doesn't make sense functionally for a drawer to be lying next to a cabinet.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "lying next to",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, so it is unclear what the drawer could be looking at, making the relationship unsupported.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description or attributes, making it impossible to confirm the 'zooming toward' relationship with the cabinet.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "zooming toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is missing crucial identification and description, making it impossible to verify the 'zooming toward' action in relation to the drawer.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "zooming toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 7,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000090.json",
+    "total_relationships": 18
+  },
+  "relationships": [
+    [
+      3,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      -1,
+      "looking at",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      3,
+      1,
+      "lying next to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      -1,
+      "looking at",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      1,
+      "zooming toward",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "zooming toward",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000090"
+}

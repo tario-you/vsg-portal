@@ -1,0 +1,523 @@
+{
+  "activity_differential": [
+    "woman preparing child for the day",
+    "woman grooming herself or child",
+    "woman prompting child to get up"
+  ],
+  "description": "A woman in a floral dress interacts with a boy on a bed in a modest living room. The boy appears to be getting ready or being prompted to get up, and the woman later uses a comb, possibly preparing herself or the boy. The scene transitions from interaction to the woman focusing on grooming.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot wear a pillow; the predicate 'wearing' reversed or as-is does not make sense with these objects.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress itself cannot be beside a blanket independently, as it is worn by a person; the relationship incorrectly attributes an action to the dress rather than the person.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be 'beside' a wall on its own; the relationship incorrectly treats the dress as an agent separate from the person wearing it.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress being described as 'beside' a wall is physically nonsensical since the dress itself is an article of clothing and cannot exist independently beside an object; the person wearing the dress can be beside the wall, but the dress alone cannot.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially under a plastic bag; the plastic bag is likely held or suspended, making the relationship 'dress under plastic bag' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bed is a large stationary object and cannot be positioned behind a small, actively moving comb; the spatial relation does not make sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be under a pillow; the spatial relationship 'under' makes no physical sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb cannot wear a pillow; 'wearing' as a spatial predicate here is physically impossible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wall cannot be positioned to the left of a pillow in a meaningful spatial sense as the wall is typically a fixed background and the pillow is in the foreground; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lanyard cannot be spatially 'under head of' a comb, because a lanyard is an accessory typically worn around the neck and a comb is an object used near hair; the predicate does not make physical sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under head of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sink edge being attached to a bed is not physically plausible as these are distinct furniture and fixture items that are not connected.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plastic bag cannot be attached to a sink edge in a fixed or permanent manner; the bag appears suspended or held, not attached.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb, as an inanimate object, cannot 'prompt' a dress, which is also inanimate; the predicate 'prompting' is not semantically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "prompting",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb, being an inanimate object, cannot perform the action of 'gesturing toward' a dress.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "gesturing toward",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb is an inanimate object incapable of 'looking at' anything; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb cannot hold a backpack; the holding action should involve a human hand, not the comb itself.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb cannot functionally comb through a backpack; combing hair with a backpack is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "combing with",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb cannot prepare a dress; the relationship 'preparing' between comb and dress is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "preparing",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress (clothing) cannot functionally rest its head on a person; this action attribute mistakenly applies human behavior to an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "resting head on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress itself cannot rest its head on anything; the action must refer to a person rather than the dress.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "resting head on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot cover a wall; the physical arrangement and predicate are not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "covered by",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb cannot use a backpack; the predicate 'using' implies an agent performing an action that is not plausible for an inanimate object like a comb with respect to a backpack.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb as an inanimate object cannot attend to a dress; the predicate does not semantically fit the subject-object roles here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "attending to",
+      "relation_type": "attentional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A comb, being an inanimate object, cannot 'look at' a dress; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 8
+    }
+  ],
+  "relationship_filter_summary": {
+    "dropped_relationships": 24,
+    "source_file": "tmp/new_sav_000_100_filtered/sav_000019.json",
+    "total_relationships": 102
+  },
+  "relationships": [
+    [
+      2,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "beside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "beside",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "beside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "wearing",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      12,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      8,
+      "under head of",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      6,
+      "attached to",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      15,
+      "attached to",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "prompting",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      2,
+      "gesturing toward",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      2,
+      "looking at",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      8,
+      9,
+      "holding",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      9,
+      "combing with",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      2,
+      "preparing",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      13,
+      "resting head on",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      4,
+      "resting head on",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "covered by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      9,
+      "using",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      2,
+      "attending to",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      8,
+      2,
+      "looking at",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000019"
+}
