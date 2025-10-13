@@ -1,0 +1,2762 @@
+{
+  "activity_differential": [
+    "cats grooming and playing with toys",
+    "cats exploring and interacting with environment",
+    "cats taking turns on table and approaching camera"
+  ],
+  "description": "A white cat is initially on a table, grooming and interacting with a toy. Later, a gray cat appears, climbs onto the table, and approaches the camera. The cats are engaged in self-grooming, play, and exploration in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A lightweight fabric like a blanket can plausibly rest on top of a stable, flat surface such as a cabinet.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A blanket typically lies on top of a cat, not the other way around; flipping subject and object makes the relationship semantically and physically plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blue fabric (likely a blanket) having gentle undulations and being described as draping, with the cabinet door being stationary, supports the spatial relationship that the blanket is in front of the cabinet door.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blue blanket appearing in front of the stationary wooden table is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight blanket can reasonably be positioned in front of a sink; the spatial relationship is plausible given the described scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the blue blanket is positioned in front of the wooden beam given their descriptions and spatial predicate.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight blue blanket with subtle movement positioned in front of a stationary vacuum cleaner is plausible in a scene and aligns with spatial relationship 'in front of'.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a blue blanket to be positioned spatially to the right of a white dishwasher in a scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between two blankets is physically plausible and supported by their similar descriptions involving flowing fabric and position.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight blue blanket draped with gentle movement can plausibly be positioned in front of a smooth, light blue wall.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned to the right of a cabinet door is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blue fabric (likely a blanket) being right of a stationary metallic pot is spatially plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket being 'right of' the bottle is a plausible spatial relationship based on their described positions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket is spatially positioned right of the furniture, which is plausible given their descriptions and typical arrangements.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a cat to be overlapping with a cabinet in a spatial sense, given the cat's described motion and proximity to the cabinet.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The cabinet door is a part of the cabinet, so describing the cabinet as 'in front of' its own door is redundant and not meaningful.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tall cabinet to be positioned in front of a table in a room setting, and both are described as stationary furniture pieces.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cabinet being in front of a sink is physically plausible in a room setting, matching their spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cabinet can reasonably be positioned in front of a wooden beam; the spatial relationship is plausible and supported by their described attributes.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is likely located under the cabinet, not the cabinet under the vacuum cleaner; flipping makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the dishwasher is to the right of the cabinet; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary cabinet and a flowing blanket is plausible and consistent with their described locations and states.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a cabinet is positioned in front of a wall, not the other way around; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cabinet door is part of a cabinet; it is more logical that the cabinet door is right of (or attached to) the cabinet, so flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a smaller object like a pot is right of a larger object such as a cabinet; flipping subject and object aligns the spatial relationship plausibly.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle can plausibly be positioned to the left or right of a cabinet; the relationship 'cabinet right of bottle' is spatially appropriate and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the tall cabinet is positioned to the right of another piece of light-colored wooden furniture; spatial relation 'right of' is consistent with their described positioning.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cat is plausibly positioned in front of the stationary cabinet door, consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat being in front of a table is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a gray, fluffy cat to be in front of a sleek modern sink; the spatial relationship is physically possible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat being in front of a wooden beam is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat being under a stationary vacuum cleaner is physically plausible and consistent with the descriptions given.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The gray cat is plausibly located to the right of the stationary dishwasher based on spatial description; this placement is reasonable and physically possible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a moving cat and a nearby flowing blanket is plausible given the descriptions and does not conflict with physical or semantic knowledge.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat being in front of a wall is both physically and spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat can plausibly be situated to the right of a stationary cabinet door, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the cat is spatially positioned to the right of the stationary pot based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a moving cat and a stationary bottle is plausible given the described scene and object positions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the furniture is right of the cat, not the cat right of the furniture; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vacuum cleaner can be under a cabinet door, but the cabinet door cannot realistically be under the vacuum cleaner; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is located under the table, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sink being spatially 'under' a vacuum cleaner is physically implausible given their typical orientations and sizes.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vacuum cleaner is likely under the wooden beam, not the other way around. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the vacuum cleaner is under the wall, not the wall under the vacuum cleaner; flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cabinet door is typically part of the cabinet, so the cabinet door cannot be 'left of' the cabinet; flipping subject/object to 'cabinet left of cabinet door' is more plausible in physical context.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door can plausibly be to the left of the cat in the described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cabinet doors described with distinct positions and features can plausibly be spatially related as 'left of' one another.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door with a handle on the left side is spatially plausibly described as being left of the table; their relative positions and stationary states support this relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cabinet door positioned left of a sink is spatially plausible and consistent with typical kitchen layouts described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a cabinet door is positioned to the left of a wooden beam described as a baseboard; the spatial relationship fits the scene description.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door can physically be positioned to the left of the vacuum cleaner; the spatial relationship is plausible given both objects are stationary and described clearly.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary cabinet door with a metallic handle can logically be positioned left of a stationary dishwasher appliance; the spatial relationship is plausible based on typical kitchen layouts.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door and blanket have spatially plausible positions; the door can logically be to the left of the blanket in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door is typically attached to or part of a wall or cabinet; it cannot be 'left of' a wall as an independent object in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door being to the left of the pot is spatially plausible given the stationary and stable descriptions of both objects.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a cabinet door to be positioned to the left of a bottle in a scene; no conflicts or physical impossibilities are evident.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door being left of a piece of wooden furniture is plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vacuum cleaner can be positioned spatially over a cabinet door, which is plausible given their relative sizes and arrangement in a scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The table is typically above the vacuum cleaner, so flipping subject and object makes the predicate 'over' spatially correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The vacuum cleaner is described as stationary and typically positioned on the floor, while the cabinet is tall and vertical; the vacuum cleaner cannot be physically 'over' the cabinet in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vacuum cleaner cannot logically be positioned 'over' a sink given their typical spatial arrangement; the vacuum cleaner is used on floors, not above sinks.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary vacuum cleaner with a raised base could plausibly be spatially located over a wooden beam (baseboard), matching the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary vacuum cleaner positioned over or near a wall is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "over",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a dishwasher to be positioned to the left of a cabinet in a kitchen setting based on their described features and stationary positions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dishwasher and the cat are distinct objects, and it is plausible that the dishwasher is positioned to the left of the cat in the scene spatially.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dishwasher is positioned to the left of the cabinet door, which is plausible in a kitchen layout.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dishwasher being left of the table is spatially plausible and consistent with their descriptions and stationary state.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dishwasher being to the left of a sink is spatially plausible in a kitchen setting and matches the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dishwasher located to the left of a wooden beam is a plausible spatial relationship given their described positions and stable presence.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dishwasher is likely positioned to the left of the vacuum cleaner, and the spatial relationship 'left of' is plausible based on their descriptions and stationary positions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a stationary dishwasher could be positioned left of a flowing blanket in the scene as described.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dishwasher being positioned left of a wall is spatially plausible and consistent with typical kitchen layouts.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a dishwasher to be positioned to the right of a cabinet door in a kitchen setting, with both objects stationary and adjacent.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pot is likely to be to the right of the dishwasher rather than the dishwasher being right of the pot; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the dishwasher is positioned to the right of the bottle in the scene as described.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dishwasher can be spatially located to the right of a piece of furniture; both descriptions suggest stationary, plausible positioning.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket being positioned to the left of a stationary cabinet is spatially plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket described as flowing with gentle ripples being left of the moving, stretching cat is spatially plausible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A soft, flowing blanket being left of a stationary cabinet door is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The soft, flowing blanket positioned left of the stationary wooden table is a plausible spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket and sink are both stationary objects, and stating the blanket is 'left of' the sink is a plausible spatial relationship given the scene description.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket flowing with gentle ripples can plausibly be spatially positioned to the left of a stable wooden beam, which is consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a blanket and a vacuum cleaner to have a spatial relationship such as 'left of' in a scene, and the detailed descriptions support their distinct positions without conflict.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The soft, textured blanket can plausibly be located to the right of the stationary dishwasher, a spatial relationship that is physically possible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'blanket left of wall' is plausible given the descriptions; the blanket being positioned to the left of the stationary wall makes sense.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket being positioned to the right of the cabinet door is spatially plausible given their described attributes and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket can plausibly be positioned to the right of the stationary pot in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket being right of a bottle is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket is described as stretching across the scene and flowing, while the furniture is a stable, wooden object; it is plausible for the blanket to be right of the furniture in spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot being to the left of the cabinet is a spatial relationship that is plausible given their stationary nature and described positions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship of a stationary metallic pot being left of a moving fluffy gray cat is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pot being to the left of a tall wooden cabinet door is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the pot is on the table or to the right of it; 'left of' relation likely needs flipping to describe that the table is left of the pot.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot being positioned to the left of the sink is a spatial relationship that is plausible given the descriptions of both objects and their stationary nature.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot is described as stationary and the wooden beam as steady and extending horizontally. It is plausible for the pot to be positioned spatially to the left of the beam.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot remaining stationary and positioned to the left of a stationary vacuum cleaner is spatially plausible and consistent with the detailed descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot is described as stationary and stable, and the dishwasher is a fixed appliance; it is plausible to spatially describe the pot as to the left of the dishwasher.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pot is stationary while the blanket flows with gentle ripples, positioning the pot plausibly to the left of the blanket in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary metallic pot to be located to the left of a stationary wall; the spatial relationship 'left of' is reasonable given their descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metallic pot can plausibly be located to the right of a stationary cabinet door, making the spatial relationship credible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pot and a bottle can be positioned spatially with one to the right of the other; the description supports their stationary placement and distinct forms.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metallic pot being right of a light-colored wooden furniture piece is spatially plausible given their described positions and characteristics.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bottle to be positioned left of a cabinet; the spatial relationship is consistent with the objects' described stationary positions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary translucent bottle positioned to the left of a moving gray cat is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary bottle positioned left of a stationary cabinet door is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is likely on or near the table; saying the bottle is 'left of' the table is less plausible than the table being left of the bottle.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary translucent bottle positioned to the left of a sleek modern sink is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle can be positioned spatially to the left of a wooden beam, making the relationship plausible based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle and vacuum cleaner are stationary objects described with clear spatial characteristics; the bottle being to the left of the vacuum cleaner is plausible and physically possible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The translucent bottle being to the left of the dishwasher is spatially plausible and consistent with their described stationary positions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle being left of the flowing blanket is spatially plausible given their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle being left of a wall is spatially plausible as the bottle can be positioned relative to the wall.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle being right of the stationary cabinet door is spatially plausible given the described scenario and objects.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle being to the left of the pot is spatially plausible given their described positions and stationary nature.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle being right of a piece of furniture is spatially plausible based on their described positions and orientations.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The light-colored rectangular wooden furniture is plausibly positioned to the left of the tall cabinet, both described as stationary and stable furniture pieces.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It's plausible for a piece of furniture to be spatially positioned to the left of a cat in a scene.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light-colored wooden furniture piece being spatially left of a tall wooden cabinet door is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The furniture is described as a light-colored wooden object with flat surfaces, and the table is also light-colored and wooden; positioning one left of the other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light-colored wooden furniture piece positioned to the left of a sleek black sink is spatially plausible in a typical kitchen or bathroom setting.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The light-colored, rectangular wooden furniture is plausibly located left of the brown wooden beam, both stable and well-defined objects.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The light-colored wooden furniture being to the left of a stationary vacuum cleaner is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light-colored, rectangular wooden furniture piece positioned to the left of a sleek, white dishwasher is a plausible spatial relationship in a kitchen setting.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The furniture-like object can plausibly be positioned to the left of the blanket in the scene, and the spatial relationship is consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A piece of furniture positioned to the left of a stationary wall is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The light-colored wooden furniture being to the right of the stationary cabinet door is a spatial relationship that is plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stable, flat wooden furniture piece positioned left of a stationary metallic pot is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a rectangular wooden furniture piece to be positioned left of a translucent bottle given their described characteristics and spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Inanimate fabrics cannot 'play with' each other; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "playing with",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action 'grooming self'; this action is not applicable to inanimate objects like fabric.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "grooming self",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any description or attributes, making it impossible to verify the 'looking at' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks description or attributes, so we cannot confirm that the 'camera focusing on' relationship is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform self-grooming actions; it is an inanimate object without agency.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "grooming self",
+      "relation_type": "higher_order",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action of sniffing an object, which is a behavior associated with living creatures.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "sniffing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot perform the action of sniffing, as it is an inanimate object without sensory capabilities.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "sniffing",
+      "relation_type": "functional",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket, being an inanimate object, cannot look at anything, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, making it unclear what or who is focusing the camera on the blanket, so the relationship is uncertain but plausible.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets, as inanimate objects, cannot approach each other on their own; the predicate 'approaching' implies intentional motion that a blanket cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot independently approach another fabric; 'approaching' implies intentional motion by a sentient subject, which a blanket lacks.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Blankets cannot perform actions like 'approaching' objects, as they are inanimate and typically stationary; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 19
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "overlapping",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      8,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "over",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "over",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "over",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      15,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      16,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      15,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      17,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      4,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      7,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      9,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      15,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      19,
+      "camera focusing on",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000051"
+}

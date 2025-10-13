@@ -1,0 +1,1921 @@
+{
+  "activity_differential": [
+    "person climbing outdoor staircase",
+    "person interacting with top of staircase",
+    "person sitting on elevated structure"
+  ],
+  "description": "A person ascends a steep outdoor staircase structure, interacts with the top, and then sits down, while a quadcopter drone hovers and moves nearby. The scene is set on a mountainside with safety netting below.",
+  "place_env_id_name": "mountainside outdoor structure",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The drone hovering or being 'on top of' the tree is plausible based on the descriptions of both entities and the spatial predicate.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The drone is described as navigating through the air, but the object it is 'on top of' is unspecified, so the relationship cannot be fully verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The quadcopter drone is described as navigating through the air and gliding effortlessly, implying it is flying and not resting on the step; thus, it cannot be accurately 'on top of' the step.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The drone is described as navigating through the air, implying it is flying rather than resting. Labeling it as 'on top of' a step contradicts its airborne state.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is airborne and does not rest 'on top of' a step; the spatial predicate is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone can physically be on top of a step; the described spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is described as flying and gliding through the air, not resting on top of a signboard; 'on top of' implies physical contact and resting, which is unlikely in this context.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The quadcopter drone flying above a rectangular signboard is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a staircase is physically plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a mountain is physically plausible and aligns with the described spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a quadcopter drone to be positioned above a seated person, consistent with the spatial relationship 'above' described.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a stable, horizontal step is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a step is spatially plausible given the drone's described flight and the step's stationary position.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone positioned to the right of a hillside is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a crossbar is physically plausible and spatially described accurately.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone navigating the air above a streetlight is plausible and consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A drone being located spatially to the right of a crossbar is plausible given their described features and spatial context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone is plausibly above a step, given its flight and the step's stable position.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The quadcopter drone is described as flying and maintaining altitude above the mountain, which is physically plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The quadcopter drone navigating through the air can plausibly be above the sleek, gliding object; spatial relationship 'above' is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a slender pole is a physically plausible spatial relationship with no contradictions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone flying above a stationary staircase is physically plausible and fits the described scene.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to determine the validity of the 'built on' relationship with the uncertain tree subject.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "built on",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree is described as a sturdy object and the step as a solid angular object; it is plausible that the tree 'contains' the step (e.g., the step could be part of the surrounding environment or under branches), but the uncertainty in object identities leaves the relationship plausible but not fully confirmable.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the tree likely contains smaller objects like steps is unusual, the word 'contains' could mean spatial inclusion (e.g., a step at the base or within the scene around the tree). The uncertain labels and lack of clear context make it plausible to keep as is.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree is unlikely to physically contain a step, as steps are typically distinct, separate structures, making this spatial containment implausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree normally does not contain a step; the containment relationship is implausible given the typical definitions and descriptions of both objects.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely that a tree contains a rectangular, detailed signboard within its structure; 'contains' relationship is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary, sturdy tree with dense foliage being in front of a signboard is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree positioned in front of a staircase is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree is unlikely to be above a mountain; reversing subject and object makes the relationship accurate as the mountain is above the tree.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree is naturally located above a seated person in the spatial hierarchy; 'above' is a plausible spatial relationship here.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree-like object could plausibly be above the step given the descriptions, but uncertainty in exact object identification means the relationship cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree being spatially above a step is plausible as trees are higher than steps; the attributes support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a tree is located to the right of a hillside in the scene; the spatial relationship fits the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The tree is described as stationary with healthy foliage, and the crossbar is likely part of a structure like a railing. There is no clear indication or sufficient context that the tree contains the crossbar spatially.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree cannot contain a streetlight; the spatial relationship 'contains' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a likely tree and a likely crossbar is plausible, but the description is uncertain about both objects, so the context is insufficient to confirm or reject the relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is only likely a tree and the object is only likely a step; without more certainty or context, it is unclear if the tree contains the step, making the relationship unreliable.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the mountain contains the tree, rather than the tree containing the mountain; flipping subject and object corrects this relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary tree-like object being above a moving sleek, metallic object is spatially plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree can be spatially above a pole due to its canopy extending higher; the description supports this plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree positioned above a staircase spatially is plausible in a scene where the tree canopy or upper parts extend over the staircase structure.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the object is uncertainly identified as a step; without further details, interpreting 'contains' is unclear but possible, so keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear what contains the step; however, the relationship 'contains' is plausible given the step's description, so the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined and the object is an uncertain step; lacking clear information to confirm or deny the 'contains' relationship.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and the object is uncertainly identified as a step; insufficient information to confirm or reject the 'contains' relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any descriptive information to verify if it can contain the signboard, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so it is unclear what is in front of the signboard, but the relationship 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no attributes or description, so it's unclear if 'in front of' the staircase is accurate, but the spatial relationship itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, so we cannot verify the 'above' spatial relationship to the mountain with the information given.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks identification and description, so it's unclear what it is; the 'above' spatial relationship to the person might be plausible but cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks descriptive information, so the 'above' spatial relationship to the step cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying details, making it impossible to confirm or refute the 'above' spatial relationship with the step.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, making it unclear if it can be spatially positioned relative to the hillside, but the 'right of' spatial relation is plausible in principle.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it's unclear what contains the crossbar; however, the relationship 'contains' is plausible and cannot be rejected without further data.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified, and the relationship 'contains' with the object 'streetlight (uncertain)' lacks sufficient context to confirm or deny plausibility.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so spatial relationship 'right of' cannot be confirmed or denied with current metadata.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear whether it can contain the object; thus, the relationship cannot be fully verified but should be kept.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to evaluate the 'contains' relationship with the mountain object.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear what is above the sleek elongated object, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, making it unclear what is above the pole; therefore, the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it's unclear what is above the staircase; however, the spatial predicate 'above' with the staircase as the object is plausible, so the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar dark, angular step-like objects can logically be positioned such that one is in front of the other; the relationship is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar, stable, angular-edged 'step' objects can logically be spatially related with one in front of the other.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between two similar step-like objects with consistent and distinct descriptions is plausible and consistent with their orientation and position.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A step being in front of a signboard is spatially plausible based on their descriptions and stability.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "One step being in front of another step in a sequence is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are likely steps with similar attributes and spatial relation 'in front of' among steps is common and adds no significant new information.",
+      "label": "redundant",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dark, angular step being in front of a rectangular signboard is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are likely steps with similar attributes and orientation; stating one is 'in front of' the other is redundant and adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A step and a signboard can plausibly have a spatial relationship where the step is in front of the signboard; the metadata supports stable positions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sleek, elongated object described as a step positioned in front of a signboard is a plausible spatial relationship given their descriptions and typical scene layout.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is seated on stairs and can reasonably be described as being 'in front of' a step.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person seated on metal stairs can plausibly be described as 'in front of' a step, given the spatial arrangement and posture described.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mountain is above the person, not the other way around; flipping the relationship corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are similar 'step' objects with shared attributes; stating one is 'in front of' the other adds no meaningful new information and seems redundant.",
+      "label": "redundant",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A step cannot realistically be positioned 'above' a mountain, especially given the fixed horizontal and stable description of the step and the natural scale of the mountain.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is uncertainly identified as a step and the spatial relationship 'above' with a mountain is unclear; the metadata does not provide enough context to confirm this relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hillside can be positioned to the left of a drone flying in the scene, making the spatial relation plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree can be left of a hillside, but a hillside cannot be left of a single tree; flipping subject and object fixes this spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the hillside.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is below the mountain, not the mountain below the person; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The step is below the mountain, not the mountain below the step; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mountain cannot be below a step, but a step being below a mountain is physically plausible.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender pole positioned above a mountain is spatially plausible, matching the described vertical extension and slight tilt above the mountain's rugged terrain.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender, vertically extending pole being positioned above a seated person is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender pole being positioned above a step is spatially plausible and consistent with their described orientations and features.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender pole being positioned above a step is spatially plausible and consistent with the described objects.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A staircase is unlikely to be on top of a tree; rather, the tree can be on or near the staircase. Reversing subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information, making it impossible to verify the plausibility of the 'on top of' relationship with the uncertain staircase subject.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A quadcopter drone ascending near a stationary tree is physically plausible and consistent with the described actions and scene.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "ascending",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone navigates through the air and does not 'stand on' objects, especially not a tree; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "standing on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone is flying and gliding through the air, making it unlikely or physically implausible for it to be 'sitting on' a tree; the relationship does not match the drone's described action state.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The quadcopter drone can feasibly be touching the tree, given its flight and proximity to natural outdoor objects like trees.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "touching",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A drone does not have eyes or attention to 'look at' objects; it navigates via sensors but cannot 'look at' a hillside in the human sense.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A quadcopter drone does not have attention or cognitive ability to pay attention to a hillside; thus, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mountain cannot functionally protect a quadcopter drone in flight; the relationship 'being protected by' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "being protected by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "'Hovering near' is a motion predicate more appropriately describing the drone's action relative to the hillside; flipping the subject and object makes the relationship physically and semantically correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "hovering near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hillside cannot observe a drone, but a drone can observe a hillside; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being observed by",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it unclear what 'camera focusing on' refers to; thus the relationship cannot be confirmed as valid.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and the predicate 'camera panning along' applies to a camera motion, not an object, making the relationship unclear and context insufficient.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera panning along",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the predicate 'camera tracking' may refer to a camera motion relative to the hillside; lacking subject details, relationship plausibility cannot be fully assessed.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera tracking",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      20,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "above",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "above",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          264
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      7,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      20,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      6,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "contains",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      21,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      23,
+      "above",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          264
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      7,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      12,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      15,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      16,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      17,
+      "contains",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      5,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      6,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      14,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      2,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      8,
+      "contains",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      9,
+      "contains",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      10,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      11,
+      "contains",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      22,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      21,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      23,
+      "above",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          264
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      5,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      6,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      14,
+      "above",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      23,
+      "on top of",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          264
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "ascending",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      20,
+      "touching",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "hovering near",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "being observed by",
+      [
+        [
+          48,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "camera tracking",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000042"
+}

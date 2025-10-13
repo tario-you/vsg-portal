@@ -1,0 +1,743 @@
+{
+  "activity_differential": [
+    "person shopping with cart",
+    "person walking in shopping mall",
+    "person carrying backpack while shopping"
+  ],
+  "description": "A shopping mall corridor with multiple people, one person pushing a shopping cart and carrying a backpack, another person walking, and the camera moving forward through the scene.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The description supports the person being spatially left of the shopping cart as they stand engaged with an object, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing on top of tiles is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification or description, so the spatial relationship 'left of' cannot be validated or refuted; retaining relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person is positioned to the left of the tall, stationary signboard as described in the scene.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's position relative to an unspecified object cannot be confirmed or denied due to lack of information about the object.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shopping cart moving forward and being positioned to the right of a person is a plausible spatial relationship in a shopping scenario.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Tiles form the ground surface, and the shopping cart is on top of them; reversing subject and object correctly represents the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shopping cart is described with detailed attributes and actions, but the object lacks any identification or description, so spatial relationship cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shopping cart moving and being positioned left of a stationary signboard is spatially and physically plausible.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shopping cart is described clearly, but the object has no name or description, making it impossible to confirm the spatial relation; thus, the relationship is kept with low confidence due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Tiles being under the person is correct physically; reversing subject and object aligns with the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shopping cart is physically above the tiles, not under them; flipping subject and object makes spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what is being referred to as left of the tiles; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tiles are plausibly positioned left of the signboard as described, making the spatial relationship consistent and reasonable.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object has no identifying information, so it's unclear what it is or if the spatial relationship is correct.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, making it unclear what is to the right of the person, but the spatial relationship 'right of' is plausible in context.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object has no name, attributes, actions, or description to establish what it is, making the spatial relationship with the shopping cart unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is to the right of the tiles; unable to confirm or deny the spatial relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, but the predicate 'right of' can be valid spatially relative to the described signboard; insufficient details prevent more precise evaluation.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the spatial relation 'right of' cannot be validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is to the right of the stationary signboard rather than the signboard being to the right of the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard being right of a moving shopping cart is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary signboard could logically be positioned to the right of a strip of tiles in a scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, making it unclear what it is relative to the signboard; spatial relation may be accurate but context is insufficient.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described in detail, but the object lacks name and description, so the spatial relation 'left of' cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification, so it's unclear what is to the right of the person; insufficient information to validate or reject the spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified, so it is unclear what is to the right of the shopping cart, but the spatial relation 'right of' is plausible given more context.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, making it unclear but not implausible for it to be right of the tiles.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to confirm the validity of the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is not identified but the relationship 'right of' the signboard is spatially plausible; however, lack of subject details prevents full assessment.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown, so it's unclear if the camera moving toward the person is accurate, but the predicate suggests a camera motion toward the person, which is plausible given the described person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person leaning slightly while shifting weight and pushing a sturdy shopping cart is a plausible interaction consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person appears engaged and possibly holding something, but the object lacks identification, so the carrying relationship cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person wearing a puffer jacket and skirt is plausibly walking with a shopping cart; the descriptions support this common scenario.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "walking with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm the relationship 'walking toward'.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be walking near a shopping cart that is also moving forward steadily.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "walking near",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any description, so the direction or intention of 'walking toward' cannot be substantiated.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "left of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      31,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      40,
+      "left of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      31,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      40,
+      "left of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      31,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      40,
+      "right of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      8,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      10,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      40,
+      "left of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      1,
+      "right of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      8,
+      "right of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      9,
+      "right of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      10,
+      "left of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      31,
+      "right of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "camera moving toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      8,
+      "pushing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      40,
+      "carrying",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      8,
+      "walking with",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      8,
+      "walking near",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000007"
+}

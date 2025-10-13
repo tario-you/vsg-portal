@@ -1,0 +1,1457 @@
+{
+  "activity_differential": [
+    "child playing with ball",
+    "child chasing after ball",
+    "child retrieving toy in living room"
+  ],
+  "description": "A young child in a blue dress is playing with a red ball in a living room. The child moves forward while holding the ball, then releases it, causing the ball to roll away. The child follows the ball, bends down, and picks it up again. The camera tracks the child's movement throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A sandal cannot wear a child, but a child can wear a sandal; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot hold a door; the predicate 'holding' is physically impossible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving forward in front of a stationary door is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving to the right of a stationary door is spatially plausible given their described positions and orientations.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot physically be positioned 'behind' a door in a meaningful spatial context as it is typically on a foot; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal being left of a stationary door is spatially plausible given their descriptions and does not conflict with physical or contextual information.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal moving forward can reasonably be positioned in front of a stationary door, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal being positioned to the right of a wall panel is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving in front of a stationary wall panel is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving left of the wall panel is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal moving to the right of a stationary cabinet door is implausible in a spatial sense since sandals are typically worn on feet and do not 'move' independently, making their spatial relationship to a cabinet door unclear and physically improbable.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving sandal can plausibly be in front of a stationary cabinet door, consistent with the spatial predicate.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal is described as moving forward and maintaining orientation, which fits well with it being 'in front of' a stationary doormat on the floor.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sandal to be positioned left of a doormat in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be 'in front of' the floor since the floor is a supporting surface beneath it; the spatial relationship is physically illogical.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be positioned to the left of the floor, as the floor is a supporting surface underneath, not a side object.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sandal moves over the runner (a floor covering), so the runner is on top of the sandal is incorrect; flipping subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal being on top of a floor surface is physically plausible and well-supported by the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can plausibly be on top of a marble tile, indicating spatial relation that is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, which is typically worn on feet and moves along the ground, cannot plausibly be on top of a hanging curtain due to their typical spatial arrangement.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can be positioned to the left of a stationary doormat, and the spatial relationship is plausible given the metadata.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can be positioned in front of a doormat as it moves forward, making the spatial relationship 'in front of' plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal is described as moving forward while the sofa remains stationary, making it reasonable that the sandal is 'in front of' the sofa in the spatial context.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'sandal left of sofa' is plausible and consistent with the scene's descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can plausibly be positioned to the left of a doormat in a spatial context; the relationship is consistent with the metadata provided.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving in front of a stationary doormat is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being under a door (likely the lower part or threshold) is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child positioned to the right of a door is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child being behind a door is spatially plausible, given the descriptions of the child and the door.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is plausibly located to the left of a stationary door; the spatial relationship fits the described scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child can plausibly be in front of a door, and the descriptions support a spatial relationship where the child is positioned before the door.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be positioned to the right of a wall panel; the spatial relationship fits the described scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child standing or moving in front of a wall panel is physically and contextually plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child positioned left of a tall, rectangular wall panel is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being to the right of the cabinet door is spatially plausible given the descriptions; no contradictions or physical impossibilities are indicated.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child standing or moving in front of a stationary cabinet door is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being in front of a doormat on the floor is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's position to the left of a stationary doormat is spatially plausible given the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot be 'in front of' the floor in a meaningful spatial sense as the floor is beneath them; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor cannot be spatially located to the left of a child; the child is positioned above or on the floor, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child standing or walking on top of a floor runner carpet is physically plausible and the descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child is plausibly standing or moving on top of a floor, matching the spatial relationship logically.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child can be physically on top of a marble tile that lies flat on the ground, making the relationship plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot be physically on top of a curtain, which is typically hanging and not supporting weight.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child can plausibly be spatially positioned to the left of a doormat; both objects' descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be in front of a doormat; spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the child is standing or moving in front of a stationary ornate sofa; the spatial relationship 'in front of' fits well given the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child being positioned to the left of a sofa is spatially plausible and fits the scene description.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be positioned left of a doormat within a scene; the spatial relationship is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be in front of a doormat, given the spatial descriptions and typical positioning in a home environment.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door is plausibly positioned to the right of the wall panel as both are similarly described vertical and rectangular objects with horizontal lines, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door and wall panel are both stationary and similar in appearance; being 'in front of' is plausible but cannot be fully confirmed due to uncertain object identification.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door and wall panel are both described as tall, rectangular, smooth, and with horizontal lines indicating panel designs; spatially, it is plausible for the door to be left of the wall panel.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door (possibly an entry door) can logically be to the right of a cabinet door; the spatial relationship 'right of' between these two plausible objects is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A larger door can plausibly be positioned in front of a smaller cabinet door in a scene; no contradictions in spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door standing upright in front of a doormat lying flat on the floor is a plausible spatial relationship given their typical arrangement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall door positioned to the left of a stationary doormat is a spatially plausible relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor is in front of the door from a spatial standpoint; reversing subject and object makes the 'in front of' relationship plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'door' is vertical and the 'floor' is horizontal; the door cannot be 'left of' the floor as they are on different planes, making the spatial relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door would not be on top of a floor runner; rather, the runner is on the floor beneath the door. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor is 'on top of' the door is physically incorrect; flipping subject and object to 'door on top of floor' makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door typically stands on top of a marble tile, not the other way around; flipping subject and object makes the 'on top of' predicate correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Curtains hang on top of doors, not doors on top of curtains; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door can be positioned left of a doormat; both objects' descriptions support a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door can plausibly be located in front of a doormat, matching spatial and physical expectations.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door being in front of a sofa is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door being to the left of a sofa in a typical room layout is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door positioned left of a doormat is a plausible spatial relationship given their descriptions and typical real-world arrangement.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The doormat lies on the ground, so it is in front of the door, not the door being in front of the doormat; flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot functionally hold a door; holding implies grasping, which a sandal cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot 'release' a door; the predicate is not physically plausible given the subject and object descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "releasing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal moving toward a stationary door is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal (an inanimate object) cannot perform the action of 'following' another object, especially a stationary door; the relationship implies motion and intent which is not applicable.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot perform the action of 'picking up' a door, which is a large stationary object; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "picking up",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot functionally 'hold' a door; the relationship is physically impossible given the subject and object descriptions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot be 'focused on' an object; it lacks attention or consciousness.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified (null), making it impossible to verify the 'being watched by' relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sandal can roll away from a door, but a door rolling away from a sandal is not physically plausible; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "rolled away from",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified (null), so we cannot confirm or evaluate the 'camera tracking' relationship to the sandal.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera tracking",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "right of",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "left of",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          288,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "in front of",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          240,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          288,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "right of",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "behind",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "left of",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "in front of",
+      [
+        [
+          288,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "in front of",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "left of",
+      [
+        [
+          240,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          288,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "in front of",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "left of",
+      [
+        [
+          240,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "in front of",
+      [
+        [
+          288,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "left of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "in front of",
+      [
+        [
+          192,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "rolled away from",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000021"
+}

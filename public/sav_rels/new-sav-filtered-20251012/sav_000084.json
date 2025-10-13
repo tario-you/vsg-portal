@@ -1,0 +1,5057 @@
+{
+  "activity_differential": [
+    "camera operator walking along sidewalk and street",
+    "camera documenting street environment",
+    "camera panning and moving through urban area"
+  ],
+  "description": "A camera moves along a sidewalk and street in an urban outdoor environment, capturing various static objects such as cars, manhole covers, stones, and a toy on the ground. A person is briefly visible walking across the street. The camera's movement is the main source of temporal change, as it pans and moves forward through the scene.",
+  "place_env_id_name": "urban street sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject car is well described and the predicate 'behind' is spatially plausible, but there is insufficient information about the unnamed object to fully confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cars moving in the same scene can plausibly have a spatial relationship where one is behind the other.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A car can plausibly be positioned to the left of a stationary manhole cover, making the spatial relationship reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving silver car can be located to the left of a stationary mailbox; this spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'left of' cannot be fully verified or falsified, though the car's location relative to the unnamed object remains possible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, making it unclear what the car is positioned left of; unable to verify or refute the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it's unclear what object is to the right of the car. However, the spatial relation 'right of' is plausible in general, so keep as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions, so the spatial relationship 'behind' cannot be conclusively evaluated.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so the spatial relationship 'behind' to the car cannot be fully verified, but it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information, so it is not possible to confirm or deny the spatial relation 'right of' to the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description; cannot confirm spatial relation but relationship is plausible with the mailbox.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names and descriptions prevents verifying spatial relationship, so relation is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is spatial and plausible, but both subject and object lack identifying information to confirm details; thus, context is insufficient to reject or modify.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying or descriptive information, so the spatial relationship 'right of' cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information, making it unclear what is touching the car; thus the relationship cannot be verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what is in front of the car; however, the spatial relationship 'in front of' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, so its exact nature is unknown. It is plausible it can be left of the manhole cover, but lack of subject detail means we cannot confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the car is touching; cannot confirm relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "One moving car being in front of another moving car is plausible in a driving context.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car is described as moving and likely could be in front of another object, but the lack of details about the object prevents full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving car being left of a stationary manhole cover is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks any identifying description or attributes, so it's unclear what the car is on top of, but the spatial relationship remains plausible based on available data.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, making it unclear if being under the car is plausible. Cannot confirm or refute the relationship with available information.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to confirm the spatial relationship; 'pole on top of null' is unclear and lacks context.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the pole could be on top of; relationship lacks sufficient context for validation.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear what the pole is on top of, making the relationship unclear and unreliable.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the pole could be on top of; thus, the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is likely positioned to the right of the stationary mailbox; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mailbox is described clearly, but the object lacks any description or name making it impossible to verify the spatial relationship accurately. Therefore, the relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject mailbox is well described, but the object lacks any identifying information, so the spatial relationship cannot be fully evaluated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary mailbox to be positioned to the right of a manhole cover on a street or sidewalk.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, making it unclear what is to the right of the car, but the spatial predicate 'right of' is plausible and not contradicted by the metadata.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object have no descriptive metadata, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so it is unclear if being 'right of' the mailbox is accurate, but the spatial relation itself is plausible with more context.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks a name or description, making it unclear what is 'right of' the manhole cover, but the spatial relationship predicate is plausible.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'beside' is plausible but the object lacks descriptive metadata to fully confirm the spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object beside the wooden plank is unspecified, so the spatial relationship cannot be fully confirmed but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden plank positioned beside a small moving toy is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden plank positioned beside a car is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object related to the wooden plank is not identified or described, so the spatial relationship 'beside' cannot be fully evaluated, but it's plausible.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a wooden plank, but the object's identity is unknown; without details about the object beside it, the relationship cannot be fully evaluated but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail but the object lacks identity or description, making it unclear what 'beside' refers to precisely; however, the spatial predicate is plausible.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plank is confidently described, but the object it is beside lacks any identifying information, making it unclear if the spatial relation is meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a wooden plank with detailed description, but the object lacks any identifying information, so it's unclear if the relationship 'beside' is accurate or meaningful, yet no grounds to drop or flip.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so we cannot verify the 'beside' spatial relationship with the wooden plank; however, no contradiction exists.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, making it impossible to verify the relationship, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, so it's unclear if 'beside' the toy applies, but the relationship is plausible given the object details.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's uncertain what it is and whether it can be spatially beside the car; relationship remains plausible but unconfirmed.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so spatial relation 'beside' cannot be verified or falsified.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information; unable to assess relationship validity confidently.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata; cannot verify the spatial relationship but 'beside' is plausible generally.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive details, so spatial relation 'beside' cannot be confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying information, but 'beside' is a plausible spatial relationship; cannot confirm or deny correctness without more context.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary manhole cover positioned beside a moving car is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's counterpart in the relationship is unnamed and undescribed, providing no context to validate a 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a likely manhole cover beside an unspecified object with no description, so the relationship is plausible but lacks enough context for a definitive judgment.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relation 'beside' cannot be confirmed or evaluated properly.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a manhole cover with detailed attributes, but the object has no identifying information, so we cannot confirm or deny the spatial relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two manhole covers with different shapes being described as beside each other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so spatial relation 'beside' cannot be confirmed or evaluated properly.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, so it's unclear what it is; therefore, the spatial relation 'beside' to the wooden plank cannot be fully assessed but is plausible, so keep it.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the spatial relationship 'beside' cannot be fully verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks name and description, making it unclear what is beside the toy; however, the 'beside' predicate is plausible without contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is beside the car, but the spatial relation 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "No names or descriptions are provided for either subject or object; cannot verify the spatial relation but it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial 'beside' relation cannot be fully evaluated but is plausible as is.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relation 'beside' cannot be confirmed but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive information, making it impossible to verify or refute the spatial relationship 'beside'.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small toy moving steadily can plausibly be beside a wooden plank; both objects' spatial arrangement and descriptions support the 'beside' relationship.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The toy is described with detail, but the object it is beside is unidentified, so we cannot fully confirm or reject the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described as a colorful toy moving steadily, but the object lacks identification or description, making it unclear whether the 'beside' relationship is accurate, yet plausible.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small toy moving steadily beside a car is plausible, as both can coexist in the same scene and be described as spatially adjacent.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a small colorful object likely a toy moving steadily, and the object is unspecified with no description; the relationship 'beside' is possible but the lack of information prevents a confident judgment.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a toy moving beside an unknown object with no description; the spatial relationship 'beside' is plausible but lacks full context.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a small toy-like object moving steadily, but the object has no name or description, so we cannot confirm the spatial relationship precisely; however, 'beside' is plausible given no contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The toy is described with sufficient detail, but the object beside it lacks any identification or description, making it unclear if the spatial relationship is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a small, colorful toy with a detailed description, but the object lacks any identifying information, making it unclear whether the 'beside' relationship is meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving car being beside a stationary manhole cover is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a described car beside an unknown object with no details; while 'beside' is plausible, insufficient object information prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a well-described car, but the object lacks any description or name, making it unclear what the car is beside; however, the 'beside' relationship is plausible, so it is kept.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a well-described car beside an undefined object; insufficient information about the object to dismiss or modify the relationship.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description; the spatial relationship 'beside' cannot be verified or understood without context.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving car can plausibly be spatially described as 'beside' a manhole cover on or near a road; the relationship is consistent and plausible.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a car in motion, but the object lacks any identification or description, so we cannot confirm or deny the 'beside' relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it's unclear what is beside the manhole cover, but the spatial predicate is plausible.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity and attributes are unknown, so the spatial relationship 'beside' to the car cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack name and description, so cannot confirm or deny the spatial relationship; keep the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack name and description, so cannot confirm plausibility, but spatial 'beside' is generic and possible.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, making the spatial relationship 'beside' uncertain but plausible.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is beside the manhole cover; however, the spatial relationship 'beside' is plausible but uncertain.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, making it impossible to verify the 'beside' spatial relationship, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A car can reasonably be positioned beside a long, narrow wooden plank; the spatial relationship 'beside' is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a moving car, but the object lacks a name and description, so the spatial relationship 'beside' cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a car moving forward, but the object lacks name and description, so presence beside the car is plausible but not confirmed.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving car can plausibly be beside a small moving toy; their spatial relationship as neighbors is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a moving car, so it is plausible to be beside another object, but the object lacks identification or description to confirm the context.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it's unclear what the car is beside; relationship cannot be confirmed or dismissed.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a moving car with detailed description, but the object lacks any name or description, so the spatial relation 'beside' cannot be fully verified but remains possible.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying attributes or description, making the spatial relationship 'beside' with the car unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a car but the object lacks any identifying information or description, so it is unclear what the car is beside; insufficient context to discard or flip the relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, but the spatial relation 'beside' to a manhole cover is plausible; lack of subject details prevents more precise evaluation.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unidentified but located beside a described moving car; lacking details about the subject leads to uncertainty, so keeping the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are given to confirm or deny the plausibility of the 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names or descriptions, making it impossible to assess the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and descriptive details, so the spatial relationship 'beside' cannot be fully validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, making it unclear what is beside the manhole cover; the relationship cannot be fully verified or dismissed.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object is provided to assess the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks description, so the spatial relationship 'beside' cannot be fully confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, so we cannot confirm or deny the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying information, so the spatial relationship 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed with no description, and while the object is likely a toy moving steadily, there is not enough context to confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so we cannot fully confirm its spatial relationship to the car, but the relationship itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of information about either object prevents evaluation; spatial relationship 'beside' is plausible but unconfirmed.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so we cannot judge the relationship's validity, but the spatial predicate 'beside' is plausible generally.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, making it impossible to assess the plausibility of the 'beside' relationship, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, so the 'beside' spatial relationship cannot be fully evaluated but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what the relationship 'beside' specifically entails, but the relationship is plausible as stated.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names or descriptions prevents accurate evaluation, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified; without information about it, the 'beside' spatial relation to the toy is plausible but not confirmed.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unknown with no description; relationship 'beside' to a moving car is plausible but cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither object has identifying information, so the plausibility of 'beside' cannot be confidently assessed.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the 'beside' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'beside' between two unknown objects cannot be confirmed or denied due to lack of descriptive metadata.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions provided to confirm or deny the plausibility of the 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is beside the wooden plank; however, the spatial relationship 'beside' is plausible without contradiction.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the spatial relationship 'beside' cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, making it impossible to confirm the spatial relationship but not implausible.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifiable name or description, making it unclear what is beside the toy, so the relationship cannot be verified or corrected.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it is unclear what objects are beside the car, but the spatial relation 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the spatial relationship 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of any metadata or descriptions about subject or object prevents definitive evaluation, so relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "No detailed metadata about either object to determine the accuracy of the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "No details are provided about the subject or object to confirm or refute their spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, making it impossible to verify or refute the 'beside' spatial relationship with the wooden plank.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata to verify the spatial relationship, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so the spatial relationship to the toy cannot be fully confirmed but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks descriptive metadata, so it's unclear what is beside the car, but the spatial relation 'beside' is plausible to keep.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names and descriptions makes it unclear if 'beside' is reasonable, so relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, so we cannot assess the relationship's validity but can't rule it out either.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information on the subject or object to validate the 'beside' relationship; retain due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what it is or how it relates spatially to the wooden plank; thus, the relationship cannot be confirmed but may be reasonable.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack sufficient description to verify or refute the 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is identified or described, so spatial relationship 'beside' cannot be verified or falsified.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks description, making it uncertain what is beside the toy; the relationship cannot be fully validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, so it's unclear what it is, but the predicate 'beside' with a car could be reasonable; lacking enough info to reject or flip.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "No descriptive information is available about the subject or object to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, but the spatial relation 'beside' is plausible without further detail.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of names and descriptions for both entities prevents a definitive judgment; spatial relationship 'beside' is plausible but unconfirmable.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, making it impossible to confirm the spatial relationship, but 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, so the spatial relation 'beside' to the manhole cover cannot be verified yet is plausible; insufficient information to modify.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so the spatial relation 'beside' to the car cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive metadata, so the spatial relation 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are provided to confirm or deny the spatial relationship 'beside', so it is kept by default.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, and the object is uncertainly identified; spatial relation 'beside' cannot be confirmed or denied with given information.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to validate the spatial relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks identification and description, making it unclear what is beside the manhole cover; however, the spatial relationship 'beside' is plausible but cannot be fully verified.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, so it is unclear what is beside the car, but the spatial relation 'beside' is plausible without contradicting information.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack name and description, so plausibility of 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object to verify spatial relation; keeping relationship as is due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "There is no descriptive metadata for subject or object to evaluate the plausibility of 'beside' relationship.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, so it is unclear what is beside the manhole cover; relationship cannot be fully evaluated.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack naming and descriptive details, making it impossible to determine the plausibility of the 'beside' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two different manhole covers, one rectangular and one circular, can plausibly be located beside each other in an urban setting.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a rectangular, metallic manhole cover to be located beside a moving car in an urban setting.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail, but the object lacks both a name and description, so spatial relation 'beside' cannot be fully verified; however, it is plausible to keep it.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described as a manhole cover-like object, but the object lacks any identifying information; without details about the object, the spatial relationship is unclear but cannot be ruled out.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The manhole cover is described with plausible attributes, but the object it is beside lacks any description or identification, making it impossible to assess the relationship fully.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a described metallic rectangular object believed to be a manhole cover; the object has no identifying details but being 'beside' an unnamed object is plausible though context is lacking.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any identifying details, so the spatial relationship 'beside' cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear if being 'beside' the manhole cover is plausible, so relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, so the spatial relation 'beside' to the car cannot be fully confirmed but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship 'beside' cannot be confirmed or denied with available metadata.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship 'beside' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "No detailed metadata is provided about the subject or object to confirm or deny the spatial relationship 'beside'.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object have identifiable attributes or descriptions to verify the spatial relationship 'beside'.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks identification and description, making it unclear what is beside the manhole cover; thus the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, while the object is a tall pole; without knowing what the subject is, it's unclear if it is under the pole but the relationship is plausible and cannot be rejected.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object has a name or description, making it impossible to assess the plausibility of the 'under' relationship.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the spatial relationship 'right of' relative to the described car cannot be fully assessed, but is not implausible.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object identities or descriptions, so cannot verify the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, making it impossible to verify the 'right of' spatial relationship with the manhole cover; thus, the relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are provided, so spatial relation 'left of' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown with no description, so we cannot confirm the spatial relationship 'behind' relative to the car; however, no contradictions exist.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying information, making it impossible to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's movement suggests it is on something, but the object is undefined, preventing validation of the spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of information about both subject and object makes it impossible to evaluate the spatial relationship 'on top of'.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lack of any descriptive metadata about the subject and object prevents evaluating the plausibility of the 'on top of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown, so it's unclear what is under the pole; the spatial relationship 'under' is plausible but cannot be confirmed or denied given limited information.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks details, so it is unclear if being 'under' the manhole cover is correct, but the spatial relation is plausible enough to keep.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of names or descriptions for both subject and object makes it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and descriptive information, making it impossible to verify or reject the spatial relationship 'under'.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary manhole cover cannot be right of a moving car; the car is more likely right of the manhole cover, so flipping the relationship makes it spatially plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "The manhole cover is described clearly, but the object lacks a name and description, making it unclear if 'left of' is accurate or meaningful; however, there's no contradiction, so keep it.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "The manhole cover lying flat can reasonably be located to the right of the stationary mailbox; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making the spatial relationship 'right of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, preventing validation of the spatial relation 'left of' with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown with no attributes or description, making it unclear what object is to the right of the car; however, the spatial predicate 'right of' is plausible so the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "keep",
+      "explanation": "There is no identifying information about subject or object, so the spatial 'left of' relation cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying attributes and descriptions, so the spatial relationship cannot be confidently confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, making it impossible to verify the spatial relationship with the manhole cover; thus, the relationship's correctness cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what is under the pole, but no contradiction is evident.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names or descriptions prevents confirming the plausibility of the 'on top of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unidentified with no description; cannot confirm if it is plausible to be 'under' the pole, but the relationship is spatially possible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and its relation to the pole are unclear due to missing subject name and description, but the spatial predicate 'under' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information or description, making it unclear what is performing the 'camera panning toward' action; cannot validate relationship without context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of information about subject and object makes it impossible to verify the relationship's validity, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions and names, making it unclear what is involved in the 'camera panning past' relationship.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, making the relationship 'camera panning past' unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, making it unclear what is performing the camera panning past the car; however, the relationship phrase could describe a camera movement capturing the car, so the relationship is plausible but lacks full context.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of specific information about subject and object prevents validation of the 'camera panning past' relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object is undefined and lacks description, making it impossible to verify the relationship with the pole; thus the relationship is not evaluable.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any descriptive metadata, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description; the relationship 'camera panning past' implies a camera motion that is plausible relative to the manhole cover, but insufficient details prevent a more precise assessment.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "No information about subject or object makes it impossible to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identity but the predicate suggests camera movement past a mailbox, which is plausible; insufficient details about the subject prevent a better classification.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "No information about the subject or object to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks any identifying information, making it unclear what is performing the 'camera panning past' action; the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of detailed metadata about subject and object makes it uncertain, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack identifiable names or descriptions, making it impossible to validate or understand the relationship.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), making it impossible to validate the relationship 'camera panning past' involving the toy.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined but the predicate implies a camera movement past the car; without more detail about the subject, the relationship is plausible but context is lacking.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification or description to evaluate the 'camera panning past' relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to confirm or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any identifying information, making the relationship unverifiable and semantically unclear.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identity and description, preventing a definitive plausibility judgment; the relationship 'camera panning past' can be plausible but context is insufficient.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and object lack details; unable to verify the 'camera panning past' motion relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any identifying information or descriptions, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so it is unclear if the relationship is accurate or plausible, but the predicate could apply in a video scene.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "There is insufficient metadata about the subject and object to determine the correctness of the 'camera panning past' relationship.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description, making it impossible to confirm the 'camera panning past' relationship with the manhole cover.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject has no name or description, making it unclear what is performing the 'camera panning past' action, so the relationship can't be confirmed or validated.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack names and descriptions, making it impossible to assess the relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the relationship cannot be fully validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object lack identification, and 'camera panning past' is an action performed by the camera, not a relationship between unknown objects.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of detailed metadata for subject and object prevents verification of the camera panning past relationship.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any attributes or description, making it impossible to validate the 'camera panning past' relationship with the object.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to verify the relationship's appropriateness or correctness.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it unclear what is performing the 'camera panning past' action; the relationship is ambiguous without more context.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of descriptive metadata for subject and object prevents full validation, but camera panning past an object is a plausible motion relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither the subject nor the object is described, so it is unclear if the camera panning past is accurate, but the predicate suggests a camera action rather than a typical object relation; lacking details, the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject and object lack details, making it impossible to fully assess the plausibility of the camera panning past relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject and object lack identification and details, making it impossible to validate the plausibility of the camera motion.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and object lack identifying information, making it impossible to evaluate the plausibility of the 'camera panning past' relationship.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "camera panning past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No specific information about subject or object to validate camera movement toward object, but the relationship is conceptually plausible.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject object is unknown, but the predicate 'camera focusing on' applied to the pole is plausible; lack of subject details prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metadata lacks any identification or description of the subject or object, so the relationship cannot be verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      4,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "left of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      36,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      30,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      37,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "touching",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      36,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      36,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "on top of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "left of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      36,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "left of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      36,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      24,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      11,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      12,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      14,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      15,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      18,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      20,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      21,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      22,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      23,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      28,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      13,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      16,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      17,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      19,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      25,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      26,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      27,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      8,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      38,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      2,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      3,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      36,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      37,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      2,
+      "behind",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      3,
+      "behind",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      35,
+      "on top of",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      35,
+      "on top of",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      35,
+      "on top of",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      8,
+      "under",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      32,
+      "under",
+      [
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      33,
+      "under",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      34,
+      "under",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      3,
+      "left of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      9,
+      "right of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      2,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      3,
+      "left of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      30,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      36,
+      "right of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      38,
+      8,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      38,
+      29,
+      "on top of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      8,
+      "under",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      8,
+      "under",
+      [
+        [
+          288,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "camera panning toward",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      4,
+      "camera panning past",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      6,
+      "camera panning past",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      7,
+      "camera panning past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      36,
+      "camera panning past",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      9,
+      "camera panning past",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      12,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      18,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      20,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      21,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      23,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      31,
+      "camera panning past",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      37,
+      "camera panning past",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      19,
+      "camera panning past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      26,
+      "camera panning past",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      28,
+      "camera panning past",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      33,
+      "camera panning past",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      34,
+      "camera panning past",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      35,
+      "camera panning past",
+      [
+        [
+          168,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      39,
+      "camera panning past",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      40,
+      "camera panning past",
+      [
+        [
+          288,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      38,
+      "camera moving toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      8,
+      "camera focusing on",
+      [
+        [
+          96,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      38,
+      "camera focusing on",
+      [
+        [
+          192,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000084"
+}

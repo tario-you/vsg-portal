@@ -1,0 +1,1439 @@
+{
+  "activity_differential": [
+    "child and adult walking together with toy gun box",
+    "workers shoveling snow and collaborating",
+    "pedestrians passing by parked SUV"
+  ],
+  "description": "A busy urban sidewalk scene outside a building with a red SUV parked. Multiple people, including a child and an adult carrying a toy gun box, walk past. Two workers in green vests are shoveling snow near a fence. The camera tracks the scene, panning as people move through the frame.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the stationary maroon SUV is positioned in front of the moving person; the spatial relation 'in front of' makes sense here given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary SUV cannot be spatially described as 'right of' a moving boot; the relationship is semantically implausible given the subject/object types and their states.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary maroon SUV can plausibly be located to the left of a stationary green metal gate; the spatial relationship is physically plausible and semantically consistent.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to assess the spatial relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV cannot be spatially below a boot; their relative sizes and positions make this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV being spatially 'below' trousers worn by a person is physically implausible since the vehicle is much larger and situated below is unlikely in typical scenes.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "An SUV cannot be below a roof; however, the roof is above the SUV, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving behind a stationary SUV is a plausible spatial relationship given the described scenario.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'right of' their own boot because the boot is part of the person's attire and moves with them; the spatial relation is not meaningful in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving near a stationary gate plausibly can be touching it in the scene described.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject person is clearly described and located spatially 'left of' another object, but the object lacks description or identification, making it unclear but not impossible or incorrect to keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot is physically below a person, not the other way around; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn below a person; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person being below a roof is a physically plausible spatial relationship in the scene.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It's plausible for a boot to be positioned to the left of an SUV in a spatial context, and no contradictory information is present.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be spatially positioned 'left of' a person as an independent object given it is part of the person's attire or directly associated with them; this relationship does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The boot moving steadily is plausibly positioned to the left of the stationary gate, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The boot's position relative to an unspecified object labeled as null cannot be invalidated without more details; relationship is plausible but lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are boots moving forward in the sequence; stating one boot is 'below' another adds no meaningful spatial distinction given the similar descriptions and actions.",
+      "label": "redundant",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn above boots, so the correct spatial relationship is trousers above the boot; flipping subject and object fixes the relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A boot being positioned below a roof is physically plausible and spatially logical, with the roof above and the boot on the ground or below it.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The green metal gate being right of the stationary maroon SUV is a plausible spatial relationship given the descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary gate being touched by a moving person is a physically plausible and contextually reasonable relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary green metal gate positioned to the right of a moving boot is spatially plausible and clearly described.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship is spatially plausible but the object lacks description or name to clarify the relation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically implausible for a stationary gate to be below a moving boot; flipping the relationship to 'boot below gate' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers would be below a gate, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a gate is below a roof, not the other way around; flipping subject and object makes 'roof below gate' incorrect, so the original relationship should be flipped to 'gate below roof'.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks identification and description, so it's unclear what is behind the SUV, but spatial relation 'behind' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it's unclear what object 10 is, making spatial relation 'right of' difficult to confirm or deny.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying name or description, making it impossible to verify the spatial relationship with the boot.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information, so it is unclear what object is left of the gate; the spatial relationship may be plausible but cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown with no description or attributes, making it impossible to confirm the 'below' spatial relation to the boot.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined and the spatial relation 'below' to 'trousers' is ambiguous without knowing what the subject is, so the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, making it unclear what is below the roof; the spatial relationship may be accurate but lacks detail to confirm.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be positioned above an SUV in a physical scene as described; boots are worn on feet and cannot spatially be above a large vehicle in a meaningful way.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person wearing boots is plausible, making it logical that the person is above the boot, not the boot above the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "One boot being positioned above another in a forward stepping motion is physically plausible and coherent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot be spatially 'above' a large stationary gate; the spatial relation 'above' is implausible here given the sizes and typical positions of these objects.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so we cannot verify if the relationship 'boot above object' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The boot and the trousers are described as parts of a walking individual, so the boot being to the left of the trousers (likely the left boot relative to the right-legged trousers) is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A boot is physically below a roof in typical spatial arrangements; this relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "Trousers worn by a person can be spatially above the ground or a vehicle body like an SUV, so the trousers being above the SUV is plausible as a relative vertical placement.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers cannot be above a person; rather, a person is above trousers or wears them. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "Boot is positioned above trousers in the spatial relationship is unlikely; flipping subject and object correctly reflects that trousers are above boots logically.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers as clothing cannot spatially exist 'above' a gate independently; the relationship is nonsensical without referencing the wearer.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to evaluate the spatial relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The trousers moving dynamically and the boot moving forward are consistent; spatial relation 'right of' is plausible given typical foot placement next to trousers.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers being 'right of' a roof is spatially implausible since trousers are worn on a person and typically located below or within a scene, whereas a roof is above; the spatial relation does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The SUV is physically below the roof; flipping subject and object makes the spatial predicate 'above' correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A roof being above a person is physically and spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A roof being above a boot is spatially consistent and plausible within typical real-world physical arrangements.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A roof being above a gate is a spatial relationship that is logical and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The roof is plausibly above some unspecified object, but lack of information about the object prevents detailed validation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A roof is normally positioned above a boot, making the 'above' spatial relationship plausible in this context.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A roof and a pair of trousers are distinct objects in unrelated spatial contexts; the roof cannot be 'left of' trousers in a meaningful physical space.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV cannot carry a stationary metal gate; the relationship 'carrying' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "An SUV and a boot cannot logically be 'walking with' each other; vehicles do not walk, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot 'walk with' an SUV, which is a stationary vehicle; the predicate is not plausible between these entities.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot hold a gate; the relationship is physically impossible given the described objects.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A boot cannot engage in the motion of 'walking alongside' a stationary SUV; the boot is an object worn by a person, but alone it cannot move independently alongside a vehicle.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a stationary SUV, not the SUV walking past a person. Flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A boot cannot independently walk past a person; the person is likely walking past the boot, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subjects are persons in motion, and one walking past the other is a physically plausible and contextually consistent relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary green metal gate is a plausible action and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk past a single boot as if it were an independent object moving in space; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person passing by a stationary SUV is a plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket is an inanimate object and cannot perform an action like 'walking past' a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, making it unclear what is standing near the person; thus, the relationship cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying information, but the relationship 'standing near' to a person in motion is plausible; insufficient details prevent further evaluation.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "standing near",
+      "relation_type": "motion",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to confirm the plausibility of 'working near' the described person.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "working near",
+      "relation_type": "motion",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object have no names or descriptions, and they are the same entity, making collaboration meaningless or unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "collaborating",
+      "relation_type": "social",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identity and description, making it impossible to verify the relationship's plausibility with the described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "shoveling snow near",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object lack any identifying information, making it impossible to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "shoveling snow with",
+      "relation_type": "higher_order",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it's unclear who or what is shoveling snow near the person; however, the relationship is plausible and cannot be confirmed false.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "shoveling snow near",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "An entity cannot converse with itself; both subject and object are identical with no additional context.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "conversing",
+      "relation_type": "social",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject and object refer to the same unidentified entity, making the relationship ambiguous and not meaningful.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "working together",
+      "relation_type": "social",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a fence, but a fence cannot walk past a person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 37
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fence is stationary and cannot perform the action 'walking past' on an unidentified object.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 37
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person walking past a stationary fence is plausible, but the original statement places the fence as subject and 'walking past' the person, which is illogical; flipping fixes this.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 37
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified (null), making it unclear who or what is doing the camera panning; therefore, the relationship cannot be fully evaluated but is plausible as a camera action directed toward a person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning toward",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined with no name or description, so it's unclear what or who is performing the 'camera following' action on the SUV.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera following",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it impossible to confirm the 'camera following' relationship with the boot.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera following",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so we cannot confirm or reject the relationship but it is plausible that a camera is focusing on something.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and unnamed, so the plausibility of the camera focusing on the fence cannot be fully confirmed, but it is not implausible.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      1,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "left of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      25,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "below",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      9,
+      "below",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      21,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      25,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      21,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      25,
+      "below",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      1,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      15,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      2,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      9,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      10,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      15,
+      "above",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      9,
+      "walking past",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      1,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      14,
+      2,
+      "standing near",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      2,
+      "standing near",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      5,
+      "working near",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      23,
+      5,
+      "shoveling snow near",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      37,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ],
+        [
+          336,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      37,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ],
+        [
+          336,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "camera panning toward",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      23,
+      "camera focusing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      37,
+      "camera focusing on",
+      [
+        [
+          168,
+          216
+        ],
+        [
+          336,
+          384
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000073"
+}

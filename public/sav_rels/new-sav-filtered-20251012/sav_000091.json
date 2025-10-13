@@ -1,0 +1,1661 @@
+{
+  "activity_differential": [
+    "person inspecting tray",
+    "person picking up and rotating tray",
+    "person shopping for kitchenware"
+  ],
+  "description": "A person is picking up and inspecting a metal tray from a shelf in a store or kitchen supply area, manipulating and rotating it to view different angles.",
+  "place_env_id_name": "store shelf",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A tray touching a shelf is physically plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tray and vent are both described with a metallic, polished appearance and seem to have a fixed spatial relation; 'in front of' is plausible given their described positions and orientation.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tray is more likely to be touching the shelf rather than the shelf being touched by the tray; flipping subject and object aligns with typical physical interaction.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "touched by",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary perforated metal shelf plausibly can be positioned in front of a large flat rectangular object; the spatial relationship is physically possible and contextually reasonable.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a drawer is part of or adjacent to a shelf; saying the shelf is 'right of' the drawer is less plausible than the drawer being right of the shelf.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shelf is typically below or supporting objects placed on it rather than being on top of a vent; flipping subject and object aligns with typical real-world spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a tag is in front of a shelf, not the other way around; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metal shelf can plausibly be positioned in front of a packaging sleeve; their described attributes and positions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A packaging bag is likely on top of a shelf, not the shelf on top of the bag; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The spatula is likely to be on top of the stationary shelf, not the shelf on the spatula; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a light fixture is mounted on or above a shelf, not vice versa; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large flat object being behind the perforated metal shelf is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between an uncertain large flat object and a drawer is plausible, but the vague descriptions prevent a more definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects have uncertain identification and lack clear depth or spatial context, so the 'above' relationship cannot be confirmed or dismissed with given information.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large flat object and the red tag have unclear spatial relations; the description suggests the object dominates the scene and the tag is visible but does not specify their vertical positions. Keeping the relationship with uncertain spatial arrangement is reasonable given the ambiguous context.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The large flat object is likely a surface beneath the packaging sleeve, so saying it is 'above' the sleeve is incorrect; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large flat object described as possibly metal or plastic is spatially above the packaging bag, which is plausible, but the incomplete description and uncertainty about both objects prevent a definitive conclusion.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The spatula is likely above the large flat object, so reversing subject and object makes the spatial relation 'above' correct.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The light fixture is typically above other objects; flipping subject and object aligns with usual spatial arrangement where the light fixture is above the large flat object.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'drawer left of shelf' is plausible given their stationary nature and distinct descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial predicate 'left of' between the drawer and the large uncertain object is plausible, but the vague and partial description of the second object prevents full verification.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The drawer is described as stationary and the vent as a fixed architectural element; it is plausible for the drawer to be located left of the vent in the spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary drawer positioned to the left of a vibrant red tag is spatially plausible based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The drawer being left of the packaging sleeve is spatially plausible given the stationary drawer and the sleeve's position and subtle movements.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The drawer and packaging bag described with respective spatial attributes can plausibly have a 'left of' relationship in the visual frame.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The drawer and spatula are both stationary objects in the scene, and positioning the drawer to the left of the spatula is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A drawer positioned spatially to the left of a light fixture is plausible based on their descriptions and stationary nature.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent is plausibly positioned behind the tray, consistent with typical spatial arrangements in a scene with ceiling or wall vents above countertops holding trays.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shelf is below the vent, so flipping subject/object corrects the spatial 'under' relation.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent being below the large, flat, rectangular object is spatially plausible given the descriptions of position and orientation.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent is described as part of a larger structure, possibly above or near the drawer, so it being right of the drawer is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tag is more likely to be under a vent, not the vent under the tag; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically located above or on a ceiling/wall, while a packaging sleeve would be below it; thus, the packaging sleeve is likely under the vent, so flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The packaging bag is likely under the vent rather than the vent being under the bag; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A spatula is typically placed under a vent, not the vent under the spatula; flipping subject and object aligns with plausible spatial arrangement.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Light fixtures are typically mounted on ceilings or walls above vents, so the vent is likely under the light fixture; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'behind' between a 'tag' and a 'shelf' is unclear and lacks sufficient contextual information to confirm its accuracy given the vague positional descriptions.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A smaller tag positioned below a larger flat rectangular object is a spatial relation that is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A red tag positioned right of a drawer is plausible given their descriptions and static positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tag positioned on top of a vent is physically plausible based on their described locations and appearances.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tag resting on top of a packaging sleeve is physically plausible given the described attributes and spatial relation.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tag positioned on top of a packaging bag is a plausible and common spatial relationship.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tag resting on top of a spatula is physically plausible given the descriptions of both objects and their stability and positions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vibrant red tag plausibly resting on top of a flat light fixture surface is physically reasonable and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a packaging sleeve would be on or in front of a shelf rather than behind it; flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'below' between a packaging sleeve and a large flat object is plausible, but the descriptions are uncertain and incomplete, so confirmation is not possible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The packaging sleeve is plausibly positioned to the right of the drawer, a reasonable spatial relationship given the descriptions and lack of contradictions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'packaging sleeve on top of vent' is spatially plausible but the metadata is uncertain and does not fully clarify their exact spatial configuration or interaction.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metadata describes a packaging sleeve and a tag both with red, curved surfaces, but does not provide clear spatial arrangement details to confirm or refute the 'under' relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A packaging sleeve resting on top of a packaging bag is a plausible spatial relationship given the described shapes and materials.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A packaging sleeve typically goes on top of a spatula, not the spatula on top of the sleeve; reversing subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A packaging sleeve resting on top of a light fixture is physically plausible given both objects' descriptions and stability.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the packaging bag is positioned under the shelf, consistent with typical spatial arrangements and the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The packaging bag being below a large flat rectangular object is physically plausible given their described attributes and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The packaging bag is likely positioned spatially to the right of the drawer; this spatial relation is plausible given their descriptions and stationary states.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A packaging bag being on top of a vent is physically plausible given the descriptions; the spatial predicate fits the scenario.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tag is typically below or under a packaging bag, not vice versa; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A packaging bag being 'under' a packaging sleeve is unlikely; more plausible that the sleeve is under or around the bag, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A spatula is more likely to be on top of a packaging bag, not the other way around; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A packaging bag cannot plausibly be positioned on top of a light fixture, which is typically mounted on ceilings or walls, making this spatial relationship physically unlikely.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A spatula is unlikely to be 'under' a shelf; the shelf is plausibly above the spatula, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatula being below a large flat rectangular object (likely a countertop or similar surface) is spatially plausible given their descriptions and consistent positions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A spatula being positioned to the right of a drawer in a scene is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A spatula resting on top of a vent-like structure is physically plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A spatula being under a tag is physically unlikely given the spatula's stable position and typical usage, and tags are usually flat items that would lie on or be attached to surfaces, not be over spatulas in a way making 'spatula under tag' plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the packaging sleeve is under the spatula, not the spatula under the sleeve; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A spatula being under a packaging bag is unlikely since the spatula is an elongated object likely on top or separate from the bag, not positioned beneath it.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A spatula placed beside a stationary light fixture is spatially plausible and consistent with the given descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is typically above a shelf, so flipping subject and object makes 'shelf under light fixture' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both the light fixture and the uncertain large flat object are described with similar shapes and materials, but the spatial relationship 'below' is plausible and there is no contradictory information; however, the object 'uncertain' lacks clear identification, so we keep the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports a static spatial relationship where the light fixture can be positioned to the right of the drawer, both being stationary objects.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically mounted on or part of a surface that supports a light fixture; the light fixture is unlikely to be on top of the vent. Reversing subject and object aligns with typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tag is more plausibly under a light fixture than the light fixture being under the tag; reversing subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture typically is above a packaging sleeve, not under it; flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the packaging bag is under the light fixture, not the other way around.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The light fixture and spatula are described as stationary and distinct objects, and their spatial relation 'beside' is plausible and physically reasonable.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot perform the action of picking up a shelf.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "picking up",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tray typically rests on a shelf, not holds it; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stainless steel tray is an inanimate object that cannot rotate itself; it would only rotate if manipulated externally, and there is no context suggesting this.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "rotating",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tray is an inanimate object and cannot perform the action 'inspecting'.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "inspecting",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tray being placed back on a stationary, sturdy shelf is a physically plausible and functionally consistent relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "placing back",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is not identified, so it's unclear what is focusing on the tray; the relationship is plausible but lacks enough detail to confirm correctness.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks any identifying attributes or description, making it impossible to determine if it can focus a camera on the shelf.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "touching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "touched by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "beside",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "holding",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "placing back",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000091"
+}

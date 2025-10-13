@@ -1,0 +1,1652 @@
+{
+  "activity_differential": [
+    "person preparing food in kitchen",
+    "person handling kitchen appliances and utensils",
+    "person moving around and working at countertop"
+  ],
+  "description": "A person in a kitchen is preparing food, interacting with kitchen appliances and utensils, and moving around the countertop area. The camera tracks the person and pans to follow their actions.",
+  "place_env_id_name": "kitchen",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'standing in front of' is plausible, but the object lacks a name or description, so context is insufficient to fully confirm or refute it.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as standing in front of something, but the object's identity and attributes are unknown, providing insufficient context to evaluate further.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any description or name, so it is not possible to confirm or deny the spatial relation accurately.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person and the pressure cooker are spatially arranged with the person standing to the left of the cooker, which is plausible given their descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing to the left of a drawer is spatially plausible and consistent with the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making it impossible to confirm the spatial relationship or its validity.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be standing to the right of a doormat given the spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be standing in front of a cabinet door, given the described spatial relationship and scene details.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a cabinet is a physically plausible spatial relationship given the described scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a backsplash, which is a fixed tiled surface, so the relationship 'wearing' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described clearly, but the object lacks any identifying attributes or description, so the spatial relationship cannot be fully verified but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a doormat is a common, physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as standing and engaged in a task but the object lacks a name or description, so the spatial relation cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically stand on a cabinet door, which is a vertical flat surface designed to open, not support standing.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot stand on a wall; the wall is vertical and smooth, unsuitable as a surface to stand on.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a cabinet door that is opening or closing is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as standing in front of an unidentified object with no attributes or description; the relationship is plausible but lacks detail to fully verify.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the person to be standing to the left of the drawer given the spatial descriptions and no conflicting details are present.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing to the right of a pipe is spatially plausible given the descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a smooth white wall is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing under a mounted exhaust fan indoors is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be standing under a ceiling vent; the spatial relationship is physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be standing under a vent; the spatial relationship fits the described scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can reasonably be standing under a large, flat vent, and the metadata supports this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a tile-like surface is plausible given the descriptions and spatial predicate.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can reasonably be standing in front of a wall panel; the descriptions support this spatial relationship plausibly.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing left of a stable, long drawer is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a metallic bowl while engaged in a task is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a dark, rectangular drawer is spatially plausible given the descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a person standing, and 'standing under' suggests a spatial relation to something overhead. However, the object has no name or description to verify the exact spatial relation, making it plausible but uncertain.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to confirm or validate the 'standing in front of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description places the person spatially to the left of the microwave oven, which is plausible and physically possible.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a wall-mounted electrical outlet is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described in detail, but there is no information about the object in front of which they are standing, making it unclear but plausible.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "standing in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can reasonably be standing under a vent pipe; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described in detail, but the object lacks any description or name, making it impossible to verify the spatial relationship precisely.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "standing under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker is described clearly, but the lack of description or identity of the object it is 'on top of' limits confirmation of this spatial relationship, so it is retained with caution.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker being beside an unspecified object is plausible, but the missing information about the object prevents a more specific evaluation.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'in front of' cannot be verified or meaningfully assessed.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker being beside a drawer is a plausible spatial relationship in a kitchen setting.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker being beside an unspecified object is plausible, but the lack of details about the other object limits certainty.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can plausibly be positioned beside a doormat, both described as stationary and placed in adjacent spatial locations.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker placed beside a cabinet door is a spatial relationship that is both plausible and contextually consistent given the kitchen setting.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker placed beside a cabinet is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described and the predicate 'beside' is plausible for spatial relation, but lack of information about the object makes it impossible to further confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pressure cooker is typically found in a kitchen and is unlikely to be spatially located beside a doormat, which is usually at an entrance area; this relationship is physically implausible in typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker is stationary, and the predicate 'beside' indicates spatial relation, but lack of description about the other object makes it unclear yet plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker remaining stationary beside a cabinet door that is sliding open is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can plausibly be placed beside a wall, and the spatial relationship 'beside' fits the description provided.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker being beside a cabinet door that is gently moving is a spatially plausible and coherent relationship.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker is described clearly, but the object it is beside lacks any information, making it impossible to assess the spatial relationship fully.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can reasonably be beside a drawer in a kitchen setting; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can reasonably be placed beside a pipe-like object; the spatial relationship 'beside' is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can be positioned beside a stationary wall in a kitchen setting; this spatial relationship is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The exhaust fan is typically installed above/to ventilate the area, so the pressure cooker would be under the exhaust fan, not the other way around. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a vent is installed above or over a pressure cooker (e.g., a stove vent hood); the pressure cooker would not physically be under the vent. Flipping subject and object aligns with expected spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker being under a vent is spatially plausible as vents are often mounted above kitchen appliances for ventilation.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is likely located under the pressure cooker rather than the pressure cooker being under the vent, so flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can plausibly be positioned beside a tile or tiled surface; this spatial relationship is realistic and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker placed beside a wall panel is plausible spatially, with no contradictions in the description.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pressure cooker being beside a stable drawer is spatially plausible and consistent with their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'pressure cooker beside unknown object' is spatially plausible, but lack of object name or description limits deeper evaluation.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pressure cooker can plausibly be placed beside a rotating metallic bowl; the spatial relationship 'beside' is reasonable in this context.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can plausibly be located beside a drawer in a kitchen setting, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is undefined (name and description are null), so the spatial relationship 'under' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pressure cooker is likely beside something, but the lack of information about the second object prevents confirming the relationship more specifically.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can plausibly be positioned beside a microwave oven in a kitchen setting; their spatial relationship as neighbors is reasonable and supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pressure cooker can reasonably be located beside a wall-mounted electrical outlet; their spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relation 'beside' cannot be confirmed as meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pressure cooker being 'under' a vent pipe (which is typically positioned above or alongside) is physically implausible in this context given their typical spatial arrangement.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the 'under' spatial relationship's accuracy or relevance.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as engaged in a task and handling something, but the object is unspecified with no attributes or description, so the relationship cannot be further validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person engaged in a task involving placing, but the object is unspecified, so the relationship cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is engaging with the pressure cooker, making 'operating' a plausible functional interaction.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "operating",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person performing a focused action while handling a drawer is physically plausible and contextually consistent given the visual descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described performing a focused task, but the object lacks description or identification, making it unclear whether 'working at' is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "working at",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person looking at an exhaust fan is plausible in the given context where the fan is stationary and the person is engaged in a task.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person focusing on and looking at a pressure cooker during cooking or adjustment is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person appears to be focusing attention on the drawer, which is plausible given the described attentive posture and action.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described in detail but the object lacks any information, so it's unclear what they are looking at, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a person engaged in a task and looking at an unspecified object; lack of object details prevents full validation but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm the 'moving along' relationship as meaningful or valid.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified (null), so the relationship 'camera panning to follow' cannot be properly attributed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera panning to follow",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and descriptive metadata; cannot confirm the 'camera focusing on' relationship but it is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly a person engaged in a task, likely food preparation, but the object lacks description and identity, preventing full validation of the relationship.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "preparing food at",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      29,
+      "standing in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "standing in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "standing next to",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "standing left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "standing right of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "standing in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "standing in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      40,
+      "standing in front of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "standing in front of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "standing in front of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "standing in front of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "standing in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "standing left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "standing right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "standing in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "standing under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "standing under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "standing under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "standing under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "standing in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "standing in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "standing left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "standing in front of",
+      [
+        [
+          120,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "standing in front of",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "standing under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      34,
+      "standing left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      35,
+      "standing in front of",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      37,
+      "standing in front of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      38,
+      "standing under",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      39,
+      "standing under",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "on top of",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "under",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "beside",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      31,
+      "beside",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "beside",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "beside",
+      [
+        [
+          144,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "handling",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      10,
+      "placing",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "operating",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      22,
+      "handling",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      29,
+      "working at",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      4,
+      "looking at",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      2,
+      "looking at",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      22,
+      "looking at",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      29,
+      "looking at",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      10,
+      "looking at",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      29,
+      "camera focusing on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      29,
+      "preparing food at",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000099"
+}

@@ -1,0 +1,308 @@
+{
+  "activity_differential": [
+    "cats relaxing on bed",
+    "cats observing camera",
+    "cats shifting position on bed"
+  ],
+  "description": "A black and white cat is lying on a bed in a living room, occasionally shifting position and gazing around. The camera gradually zooms in on the cat's face, capturing its attentive gaze and relaxed posture.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A cat is lying on the floor and the cabinet is stationary, so it is more natural to say the cat is in front of the cabinet rather than the cabinet in front of the cat.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cabinet being spatially located to the right of a pillow is plausible based on their described positions and no contradictions in the metadata.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'cabinet' is described well but the object lacks any descriptive information or even a name, making it unclear what is to the right of the cabinet. Without further details about the object, it is not possible to fully verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary drawer can be spatially described as being in front of a lying cat; no physical or semantic contradictions arise from this relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A spatial relationship indicating the drawer is right of the pillow is plausible given their described stationary positions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making the spatial relationship 'left of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat lying comfortably behind a cabinet with no contradictory details is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat lying on its back behind a stationary drawer is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pillow being positioned to the left of the cabinet is a plausible spatial relationship given their descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pillow can reasonably be positioned to the left of a drawer; the spatial relationship is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to verify the 'right of' spatial relationship relative to the cabinet.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks name and description, so it's unclear what it is, but the spatial relationship 'right of' relative to a drawer is plausible; insufficient detail prevents a definitive judgment.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The drawer is part of the cabinet and not lying next to it; flipping subject/object correctly represents the drawer lying inside or part of the cabinet.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "lying next to",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's not possible to verify the relationship with the cabinet.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A drawer is typically part of a cabinet, not lying next to it; it doesn't make sense functionally for a drawer to be lying next to a cabinet.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "lying next to",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, so it is unclear what the drawer could be looking at, making the relationship unsupported.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks description or attributes, making it impossible to confirm the 'zooming toward' relationship with the cabinet.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "zooming toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is missing crucial identification and description, making it impossible to verify the 'zooming toward' action in relation to the drawer.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "zooming toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "behind",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "lying next to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "functional"
+    ]
+  ],
+  "video_id": "sav_000090"
+}

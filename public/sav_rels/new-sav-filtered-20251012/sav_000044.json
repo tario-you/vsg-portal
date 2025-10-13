@@ -1,0 +1,3238 @@
+{
+  "activity_differential": [],
+  "description": "",
+  "place_env_id_name": "",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The hand is described clearly, but the object is unspecified, so it's impossible to confirm the plausibility of the 'on top of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be spatially behind a can in a meaningful way when the can is described as prominent and rotating; typically, the hand would be in front or interacting with it, making 'behind' an unlikely spatial relation here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand and fabric positions suggest a plausible spatial relationship, but without clarity on exact depth or layering, the 'behind' predicate cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand can be positioned spatially behind a shelf; the description supports this physical arrangement.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand extending forward and pointing plausibly touches the bottle that is upright and steady; this interaction is consistent and physically possible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand extending and pointing in front of a stationary signboard is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand extending forward and pointing plausibly can be positioned above a row of glasses; the spatial relationship 'above' is physically possible and contextually sensible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand extending forward and pointing above a stationary can is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand can reasonably be positioned above a stationary pole; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand is described as extending forward and pointing, plausibly positioned above a vertical, stationary pole.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship of a hand being behind a curtain is physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand extending forward above a can is a plausible spatial relationship given their descriptions and typical physical positioning.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person's hand is above them, not that the hand is above the person as an independent object.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and predicate are plausible, but the object lacks identifying information to confirm or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person seated can plausibly be positioned in front of a rotating can, indicating a spatial relationship consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The fabric is part of the green jacket worn by the person; stating the person is in front of their own jacket's fabric adds no meaningful new information and is redundant.",
+      "label": "redundant",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated person being in front of a fixed shelf is spatially plausible given the described positions and settings.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person sitting in front of a tall bottle is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as seated and the signboard is stationary; it is plausible for the person to be positioned in front of the signboard in the scene.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated person can plausibly be positioned in front of a neatly arranged row of glasses; the spatial relationship is logical and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is seated and holding a phone, and the can is described as upright and in a stack; the person being 'in front of' the can is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person seated can physically be positioned in front of a stationary metallic pole, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a seated person to be positioned in front of a stationary pole; the described spatial relationship makes sense given the scene.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be in front of a curtain in a casual indoor setting; the spatial relationship is sensible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated person holding a phone can reasonably be positioned in front of a stable, upright can; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a can to be positioned to the left of a pole in a stable spatial arrangement, given their descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object related to the can is unspecified, preventing confirmation whether 'can under object' is correct or not; thus keep as is pending more information.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The can is described as part of a stack and remaining upright, and the glasses are arranged in a row; it is plausible for the can to be to the right of the glasses spatially.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A can positioned left of a stationary metallic pole is spatially plausible given their described attributes and arrangement.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A can positioned in front of a stationary signboard is a plausible spatial relationship based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A deep blue can being in front of a tall red bottle is spatially plausible and consistent with the described stable positioning of both objects.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cylindrical cans where one is spatially positioned in front of the other is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A can positioned spatially in front of a fabric is physically plausible based on their descriptions and does not violate any spatial or semantic norms.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shelf is likely in front of the can rather than the can being in front of the shelf based on physical layout; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The can standing in front of the curtain is a physically plausible spatial relationship given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subject and object are similar cans described as next to each other; stating one is 'in front of' the other adds no meaningful new information given the overlap and similarity.",
+      "label": "redundant",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pole being right of a can is spatially plausible given both objects remain stationary and there is no contradictory information.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'under' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pole standing vertically to the right of a row of glasses is spatially plausible given the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar poles described with relative spatial position 'right of' is plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender pole standing in front of a signboard is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender metallic pole standing vertically and a tall slender bottle in front fits a plausible spatial relationship of 'in front of'.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pole being in front of a rotating can is spatially plausible and consistent with the objects' descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pole can plausibly be positioned in front of fabric; the spatial relationship is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender metallic pole positioned in front of a rectangular shelf-like object is spatially plausible based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pole standing in front of a gently swaying curtain is plausible and consistent with the spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pole positioned in front of a can is a spatially plausible and coherent relationship given their descriptions and stationary states.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's lack of name and description makes it unclear what the can is attached to, so the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a rotating cylindrical can to be positioned parallel to a piece of fabric nearby.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The can rotating and being spatially parallel to a stable, rectangular shelf is physically plausible given their described orientations and attributes.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The can and the curtain are spatially distinct objects; describing the can as 'parallel to' the curtain is a plausible spatial relationship given their relative positioning and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The red cylindrical can rotating in front of the tall bottle is a plausible spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rotating can positioned in front of a stationary signboard is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rotating can positioned in front of stationary glasses is physically plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "One can being in front of another is a plausible spatial arrangement as described by their positioning and appearance.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rotating red cylindrical can positioned in front of a stationary metallic pole is a spatially plausible scenario.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rotating can being in front of a stationary metallic pole is a plausible spatial relationship given the described scene.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cans are described with distinct colors and surfaces; one rotating and one stable. It is plausible for one can to be spatially in front of the other.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what is above the can, but the spatial relationship 'above' is plausible without contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified, so it is unclear if it is plausibly located above the pole, but there is no direct contradiction.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks description, so it is unclear what is 'above' the glasses; cannot confirm or refute the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description; cannot confirm the correctness of 'above' relationship to the pole without more details.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is attached to the can; therefore, retaining the relationship is appropriate due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification but the fabric's description supports plausibility of attachment; insufficient detail to confirm or reject.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identifying details, making it unclear what is attached to the shelf; relationship is plausible but details are insufficient to confirm.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what is attached to the curtain; relationship plausibility cannot be fully assessed but it is not inherently impossible.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, making it unclear what is in front of the bottle, so the relationship cannot be confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is not identified, so it is unclear what entity is in front of the signboard, but the spatial relationship 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the spatial relationship 'above' with the 'can' cannot be fully verified but is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand extending and pointing could be touching a tall bottle; the spatial relationship is plausible given the described actions and attributes.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle's position being described as 'behind' another object with unknown identity and no description makes it impossible to fully confirm or deny the relationship, so keep it as is.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle being behind the can in a spatial arrangement is plausible given their described positions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle being behind the fabric spatially is plausible given the descriptions; no contradictions or physical impossibilities are evident.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is described as standing on or in front of the shelf; flipping the relationship makes 'shelf behind bottle' which is physically plausible and semantically correct.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle standing upright can reasonably be positioned behind a curtain, especially given the curtain's motion and placement described.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bottle is described as standing upright and steady in front of a stationary signboard, making the spatial relationship 'in front of' plausible.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tall bottle to be spatially above a row of glasses, given their relative sizes and arrangement described.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall bottle is plausibly positioned above the can in a spatial context given their descriptions and stable upright positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bottle cannot physically be above a pole in space without support; typically, a pole extends vertically and a bottle stands on a surface, making this spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a tall slender bottle to be physically above a vertical pole in a stable scenario, especially since the bottle 'remains upright' and the pole is described as vertical and stationary; 'above' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bottle standing upright above a can is plausible; the spatial relationship 'above' fits the scene description.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark green fabric and the red cylindrical can can be spatially parallel as both are positioned with some alignment; the description supports plausible relative positioning without contradiction.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fabric is described as likely part of a jacket, suggesting attachment, but the object is unidentified, making it unclear; thus keeping the relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fabric surface being spatially parallel to a shelf is plausible given both are described as flat or draped surfaces; their relative orientations can reasonably be parallel.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two pieces of fabric (a dark green fabric and a patterned curtain) can plausibly be spatially parallel as described.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark green fabric described as part of a jacket positioned behind a tall, slender bottle is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fabric is described as draped or held in front of a stationary signboard, making 'fabric in front of signboard' a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fabric can plausibly be positioned in front of a row of glasses in a spatial arrangement, especially if the fabric is part of clothing or held in front of them.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fabric in front of a can is spatially plausible; the descriptions support a scenario where fabric's folds and can's position coexist without conflict.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fabric being in front of a stationary pole is a spatial relationship that is plausible and supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark green fabric can reasonably be in front of a slender metallic pole, as spatial placement is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark green fabric being in front of the blue can is spatially plausible given the descriptions and does not contradict physical context.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic pole positioned to the right of a cylindrical can is spatially plausible and consistent with their described upright and stationary positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar poles described as stationary and vertical can plausibly have a spatial relationship of 'left of' one another.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it's unclear what the pole is under; can't confirm correctness but no contradiction observed.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metallic pole being located to the right of a row of glasses is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender metallic pole standing in front of a stationary signboard is spatially plausible and fits the described scene.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a slender, polished pole to be positioned in front of a tall, slender bottle; the spatial relationship 'in front of' is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metal pole can reasonably be positioned in front of a rotating red can; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metallic pole being in front of a dark green fabric with slight movement is plausible in the scene context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic pole can plausibly be positioned in front of a rectangular shelf, both described as stable and stationary objects.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic pole standing in front of a softly swaying curtain is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pole positioned in front of a stable, upright can is plausible and physically possible.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a row of glasses and a can is plausible given their described arrangement and stationary positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Glasses arranged in a row are unlikely to be positioned to the left of a vertical pole; their spatial context and descriptions do not support this arrangement.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the glasses could be 'under'; this hinders meaningful spatial relationship evaluation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stationary row of glasses and a metallic pole is plausible given their described positions and no contradictory details.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a row of glasses to be positioned in front of a rectangular signboard in an orderly arrangement within a scene.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A row of glasses being 'in front of' a bottle is spatially plausible and consistent with the description provided.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A row of stationary glasses can plausibly be positioned in front of a rotating can, making the spatial relationship 'in front of' sensible and supported by their descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description plausibly places a row of glasses in front of a piece of fabric (likely a jacket), making the spatial relationship 'in front of' appropriate and physically plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "Glasses are likely placed on the shelf, so the shelf is in front of the glasses is incorrect; reversing subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A row of glasses positioned in front of a curtain is spatially plausible and consistent with scene descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Glasses arranged in a row being in front of a can is spatially plausible given the descriptions of their positions and attributes.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand is more plausibly behind a stationary signboard rather than the signboard being behind the hand; flipping subject and object aligns with typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the signboard rather than the signboard being behind the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary signboard can logically be positioned behind a can in a scene; the spatial relationship is plausible given their described positions and appearances.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically mounted on or in front of a pole, so the pole is more likely to be behind the signboard; flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is rotating in front, so it is physically plausible that it is in front of the signboard; flipping subject and object corrects the spatial relationship 'behind'.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is stationary and typically in front of objects to be seen; it is more plausible that the bottle is behind the signboard, so reversing the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary signboard being behind a piece of fabric (such as a jacket) is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pole is more plausibly behind a signboard rather than the signboard being behind a pole; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "Glasses are likely in front of the signboard, so flipping subject and object aligns with the spatial predicate 'behind'.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard typically is mounted or in front of a shelf rather than behind it; also, the signboard described as stationary with text is unlikely to be physically behind the shelf in a meaningful spatial manner.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain is typically behind a signboard; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is likely behind the signboard rather than the signboard being behind the can; flipping subject and object aligns with typical spatial relationships observed.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf and a rotating can being parallel to each other spatially is plausible given their described orientations and positions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is likely a shelf, typically attached to a wall or another structure, but the object is undefined, so the relationship cannot be definitively confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shelf and fabric being parallel to each other spatially is plausible given the descriptions of their orientations and positions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf being parallel to a curtain is spatially plausible as they can be mounted or arranged in parallel planes.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bottle is likely in front of the shelf, not behind it; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shelf being in front of the signboard is spatially plausible as both are described as stationary rectangular objects with distinct positions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf positioned in front of a row of glasses is plausible given their relative positioning and the described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf described as stable and flat can reasonably be 'in front of' a can, which is upright and steady; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf, described as a stable, horizontal object, can plausibly be positioned in front of a stationary vertical pole; the spatial relationship is reasonable based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shelf can reasonably be positioned in front of a pole; the spatial relation is plausible given their described attributes and orientation.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "flip",
+      "explanation": "The can is described as in front of the shelf; flipping subject and object correctly reflects that the can is in front of the shelf, not the shelf in front of the can.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain and a rotating can can physically be positioned parallel to each other in a scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain is described as swaying and likely attached to an object (e.g., a rod), but the object has no name or description to confirm the relationship explicitly.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vibrant curtain gently swaying can be spatially parallel to a piece of fabric, such as a jacket, with both displaying natural movement and situated side by side.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can be spatially parallel to a shelf if they align side by side or in the same plane; the descriptions support this plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "parallel to",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the bottle is behind the curtain, not the curtain behind the bottle, given typical scene arrangements.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can physically be positioned in front of a signboard; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain with described attributes can plausibly be positioned in front of a row of glasses, consistent with spatial relationship and scene description.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can reasonably be positioned in front of a can, as curtains hang and objects like cans can be behind them; the spatial relationship is plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain swaying in front of a stationary pole is a plausible spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain swaying in front of a stationary metallic pole is a physically and spatially plausible scenario.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a curtain to be in front of a can, especially given their described positions and motions; this spatial relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "One can being behind another similar can is spatially plausible and consistent with the description of aligned cans.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A can being behind a pole is less plausible than a pole being behind a can in typical scenes; flipping subject and object makes the spatial relationship more reasonable.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a can with detailed description, but the object lacks name and description, making it unclear what the can is under; however, the relationship is plausible and cannot be rejected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'can behind pole' is spatially plausible given their descriptions and consistent vertical positions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description indicates glasses are arranged in a row and the can is a prominent object; it is more plausible that the glasses are behind the can, so flipping subject and object makes the 'behind' relationship correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cans described with distinct colors and positions can plausibly be arranged with one behind the other; the red can rotating does not contradict the blue can being behind it.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A can can physically be positioned behind fabric; given the descriptions, the spatial relationship 'behind' is plausible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A can is typically placed on or in front of a shelf, not behind it. Flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain is more likely to be behind the can rather than the can being behind the curtain; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blue can positioned behind a tall red bottle is spatially plausible given their descriptions and consistent upright positions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically behind a can (viewer perspective), but given the description, it is more reasonable that the can is in front of the signboard, so flipping subject and object aligns the spatial relation correctly.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      10,
+      "on top of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "touching",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "above",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "in front of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      19,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      15,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      27,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      29,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      19,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      15,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      13,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      27,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      29,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      1,
+      "touching",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      11,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      29,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      19,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "above",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      27,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      29,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      19,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      4,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      15,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      4,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      13,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      6,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      13,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      29,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      27,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      6,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      10,
+      "attached to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      13,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      27,
+      "parallel to",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      29,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      10,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      15,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      13,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      18,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000044"
+}

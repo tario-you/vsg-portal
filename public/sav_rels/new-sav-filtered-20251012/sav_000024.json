@@ -1,0 +1,6992 @@
+{
+  "activity_differential": [
+    "child playing with toy",
+    "child focusing on handheld object",
+    "child sitting and engaging with toy"
+  ],
+  "description": "A girl is sitting on a blanket in a living room, holding and focusing on a toy for the entire duration. The camera remains stationary, capturing her activity.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A curtain is typically hanging and a jacket can be placed on top of it, but more plausibly, the jacket would be on top of or hanging on the curtain, reversing the subject and object makes the spatial relation 'on top of' more sensible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between the jacket and the plush toy is plausible given their described positions; no contradictory information is present.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a jacket and a hair tie is plausible, but the context does not confirm their relative positions definitively.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jacket to be spatially positioned to the left of a curtain in the scene given the described attributes and positioning.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jacket being right of the shoe is a plausible spatial relationship given their descriptions and typical scene arrangements.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the dark blue jacket to be spatially positioned to the right of the hairbrush, both being distinct objects with clear spatial relation.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a jacket to be spatially positioned to the right of a hair tie-like object, given their descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jacket and bear are distinct objects and their relative spatial positioning as 'jacket right of bear' is plausible based on the description.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A jacket can physically be positioned in front of a tablecloth; spatially this is plausible in the scene.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'jacket in front of face' is plausible but uncertain given the face is described as 'uncertain' and cartoonish; more context is needed to confirm spatial accuracy.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jacket being positioned to the left of the sweatpants is spatially plausible given they are distinct clothing items; no contradiction or physical impossibility is present.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sock is likely below the jacket, not the jacket below the sock; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for a jacket to be positioned below a teddy bear, as the jacket would normally be worn on or above the teddy bear if placed on it or near it. The spatial relationship 'below' with jacket as subject and teddy bear as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket cannot be spatially below a child; the child is more likely below the jacket as worn on them, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'below' between a jacket and an uncertain mouse ear object is unclear and not sufficiently supported by the descriptions provided.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket cannot be spatially positioned below a mouth as both are parts related to a person and the jacket would logically be below the mouth, so the current 'subject below object' relation is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A blanket is typically below a jacket, not the other way around; reversing the subject and object aligns spatial relations correctly.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plush toy being below a jacket is plausible, but the input states the jacket is below the plush toy, which is less likely. Flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jacket is an inanimate object and cannot have a meaningful spatial relationship like 'left of' a person in an active sense; the subject 'jacket' to 'girl' spatial relationship is not reasonable as stated.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock would typically be on a foot, and it is unlikely to be covering a tablecloth; the spatial relationship 'covering' with sock as subject and tablecloth as object is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "covering",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot reasonably be above a face in a meaningful spatial or semantic context; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sweatpants are typically worn above socks, so flipping subject and object makes the 'above' spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sock positioned above the jacket is physically plausible given their descriptions and spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A white sock positioned above a vibrant yellow plush toy is plausible in a spatial context given their descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sock is typically worn inside a shoe, so the shoe is above the sock; flipping subject and object makes the 'above' relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The white sock is plausibly positioned spatially above the hairbrush, which is moving below it; this is a reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sock being positioned above a hair tie is physically plausible given the objects' descriptions and lack of contradictory context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The white sock is positioned above the hair tie, which is plausible given the described spatial arrangement and lack of conflicting information.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot physically be positioned above a bear in a meaningful spatial relationship without additional context; the described scene suggests the sock is resting, making 'above' implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a sock to be positioned to the left of a curtain; both objects' descriptions fit a spatial relationship without conflict.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The teddy bear is likely below the sock, not the other way around; flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sock is below the child, not the child below the sock; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'sock below mouse ear (uncertain)' is unclear due to insufficient spatial context and ambiguous descriptions; the positional relation cannot be confidently established.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sock cannot realistically be spatially positioned below a mouth, especially without additional context indicating their relative placement.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sock is described as resting likely on a flat surface, and the blanket likely covers or is positioned over the sock; therefore, the blanket is above the sock, making 'blanket below sock' incorrect. Flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sock and plush toy positions relative to each other are unclear and ambiguous, making the 'below' spatial relationship uncertain and not meaningful.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sock positioned left of a seated girl is a spatial relationship that is plausible given the scene description.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a face is above sweatpants on a person, so flipping the subject and object better fits the spatial relationship 'below'.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the sweatpants are positioned to the right of the jacket based on the spatial relationship, and both descriptions support them being distinct clothing items that can be arranged side by side.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sock is typically below the sweatpants on a person; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing the sweatpants as being to the right of the plush toy is plausible spatial information given the scene descriptions; nothing contradicts this arrangement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Sweatpants can be spatially located to the right of a shoe in a scene; this spatial relationship is plausible given their physical nature and typical arrangement.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatpants being spatially right of the hairbrush is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the sweatpants to be spatially positioned to the right of the hair tie; neither physical nor semantic conflicts arise.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hair tie is more likely to be right of sweatpants in spatial context; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatpants being positioned to the right of the cartoonish bear figure is a spatial relationship consistent with the descriptions and plausible in the scene.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Sweatpants being to the left of a curtain in a spatial arrangement is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Sweatpants can physically be located below a teddy bear in a scene; the spatial relationship is plausible here.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sweatpants cannot be spatially below a child; more plausibly, the child is above or wearing the sweatpants, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweatpants cannot be spatially below a mouse ear; the objects are unrelated and the concept of 'below' does not apply meaningfully between clothing and an ear-shaped object in the image.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of sweatpants cannot be 'below' a mouth in a meaningful spatial relationship, especially given the mouth is an uncertain object with no fixed position relative to clothing.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A blanket is typically below sweatpants when placed on a surface; flipping subject and object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plush toy, being small and soft, is more likely to be below the sweatpants rather than the sweatpants being below the plush toy; reversing subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A pair of sweatpants cannot be 'left of' a girl; the girl can be to the left of the sweatpants, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (as a feature) cannot cover the lower half of a tablecloth; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "covering lower half of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cartoonish face cannot be spatially located 'below' a sock in a plausible physical scene.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (an abstract or depiction) cannot be spatially located above sweatpants in a physical, realistic way; face describes a cartoonish image, not a physical object positioned relative to clothing.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cartoonish face depicted above a jacket in a series of frames is spatially plausible, as the face can be positioned above the jacket in the scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The face is described as cartoonish and cheerful and plausibly positioned above a plush toy, but without explicit spatial context, the relationship cannot be confirmed or refuted definitively.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cartoonish face is unlikely to be physically located above a shoe in a meaningful spatial sense; as a disembodied face depiction, the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'face' is likely a cartoon representation with uncertain position relative to the 'hairbrush'; insufficient detail to confirm a spatial 'above' relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'face above hair tie' is plausible, but given the uncertainty in object identification and limited context, the relationship is maintained without flipping or dropping.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The face being spatially above the hair tie is plausible, but descriptions are uncertain and insufficient to fully verify the relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cartoonish face being spatially above the bear is plausible given typical composition in illustrations, with the face possibly representing the bear's head or positioned above it.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' between a whimsical face and a nearby curtain is plausible and consistent with the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face itself cannot be spatially located below a teddy bear as it is not an independent object but a part of an entity; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face (likely a cartoon or illustration) cannot be spatially below a child in a meaningful physical sense; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mouse ear is more plausibly below a face rather than the face being below the mouse ear; flipping subject and object aligns with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mouth is part of the face and located below it; flipping subject and object aligns the spatial relation correctly.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cartoon face is part of the blanket's design, so the face is on the blanket rather than below it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'face below plush toy' is plausible but the uncertain and partial descriptions do not confirm exact relative positioning.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A face alone cannot exist separately in space as an independent object to be left of a girl; the face likely belongs to a character, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy resting on top of a curtain is physically plausible given the descriptions; nothing contradicts this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a plush toy and a jacket is plausible based on described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the sock is likely on a foot and the plush toy could be below it, flipping subject and object to 'sock below plush toy' aligns better with physical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy is spatially described as left of the sweatpants, which is plausible given both are physical objects that can be arranged spatially.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy being below the face is spatially plausible given the descriptions; the toy's position below the face fits the scene context.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing the plush toy as left of the shoe is spatially plausible given their distinct and consistent placements.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a plush toy and a hairbrush is plausible and consistent with the descriptions of their positions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'left of' between two spatially described objects with consistent orientation and shape is plausible.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a plush toy and a hair tie is physically plausible with no contradictions in the descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy positioned left of a bear toy is a spatial relationship that is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a plush toy and a curtain is plausible and supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vibrant yellow plush toy being positioned below a deep red teddy bear is spatially plausible given the described scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy being below the child is physically plausible as children often hold or have toys on their laps or in front of them.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are uncertain plush toy parts with spatial relationship 'below' plausible, but lack detailed context to fully confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Descriptions are uncertain and stylized; it's plausible that the plush toy is below the mouth representation, but lack precise spatial context to confirm.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The yellow plush toy is likely on the pink blanket, so the blanket is below the plush toy. Reversing the subject and object makes the spatial relation 'below' accurate.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are plush toys with no explicit spatial reference in the description; 'below' is plausible but not confidently supported.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy is positioned left of the girl, which is a spatial relationship consistent with the given descriptions and does not contradict physical plausibility.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe resting on top of a hanging curtain is physically implausible as curtains typically hang freely and cannot support the weight of a shoe on top.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe being left of a jacket is spatially plausible given the descriptions; the relationship direction makes sense without conflict.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sock is typically worn inside and below a shoe, so the sock should be subject and shoe the object to maintain the correct spatial relationship for 'below'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe being positioned left of a pair of sweatpants in the scene is spatially plausible given their described positions and consistent orientation.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe being below a face is spatially plausible and consistent with typical orientations in imagery or scenes.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe being spatially right of a plush toy is plausible given the descriptions and spatial predicate.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe being spatially 'left of' the hairbrush is plausible based on the descriptions and does not conflict with physical or semantic constraints.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe being spatially to the left of the hair tie is physically plausible based on their descriptions and orientations.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe being 'left of' the hair tie is a spatial relationship that is plausible given the descriptions; there is no conflict or implausibility.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'shoe left of bear' is plausible as it simply describes the relative positions of two distinct objects.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe positioned to the left of a curtain is spatially plausible given both objects' typical placements and descriptors.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe being positioned below the teddy bear in the scene is physically plausible given their descriptions and typical spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is likely above the shoe, not the shoe below the child; flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe being below the large, rounded object described as a mouse ear is plausible spatially, but the uncertain identification and lack of clear spatial cues make it difficult to confirm definitively.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe being spatially 'below' a mouth is implausible given typical human body arrangement; shoes are worn on feet below the mouth, not positioned below it in an observable spatial relation.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shoe is likely on top of the blanket rather than below it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The shoe is described as maintaining orientation with elevated toe, suggesting it is above or level; the plush toy being 'below' the shoe is physically unlikely given typical scene arrangements where a shoe rests below or beside an object like a plush toy.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe positioned to the left of the seated girl is a plausible spatial relationship given the described scene and orientation.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hairbrush moving on top of a gently swaying curtain is physically plausible and consistent with the described motion and attributes.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the hairbrush is positioned to the left of the jacket, and the spatial relationship does not conflict with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush is moving and observed below the stationary sock, which is plausible given their positions and motion descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush being left of the sweatpants is a plausible spatial relationship given the descriptions and no contradictions present.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hairbrush moving below a face in a sequence is spatially plausible and consistent with the described movement and position.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing the hairbrush as right of the plush toy is a plausible spatial relationship given their distinct and coherent descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a hairbrush and a shoe is plausible given their described positions and orientations in the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a hairbrush to be positioned to the left of a hair tie, and the spatial relation 'left of' aligns with the described scene and attributes.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' is plausible between a hairbrush and a hair tie, but the uncertain identification and vague positional details prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush is described as being to the left of the bear figure; a spatial left_of relationship is plausible based on their relative placement.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush being to the left of the curtain is a plausible spatial relationship given the descriptions and no contradicting details.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush is described as moving and located below the stationary teddy bear; the spatial relation 'below' is plausible and consistent with the metadata.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is below or beneath the hairbrush rather than the hairbrush being below the child; flipping subject and object aligns the spatial relationship with typical positioning.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Descriptions indicate uncertain identities but spatial relation 'below' between the hairbrush-like object and mouse ear-like object is plausible; lack of clear spatial positioning or interaction means the relationship cannot be confirmed or refuted definitively.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush is plausibly positioned below the mouth, consistent with typical usage where a hairbrush moves below or near the mouth area but does not overlap it.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hairbrush moving below a stationary blanket in the scene is physically plausible and consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hairbrush being below the plush toy is spatially plausible given a typical setup where a brush might be slightly lower or in front, and no contradictory details exist in the metadata.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the girl is left of the hairbrush rather than the hairbrush being left of the girl given the descriptions and typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is interacting with an object and facing forward; the teddy bear being 'above' the child is physically plausible given seating and positioning descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the child is positioned above the tablecloth, which typically covers a table surface, matching the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child interacting with an object and having a sock positioned below is physically plausible; the spatial relation 'above' indicating the child is above the sock fits the scenario.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'above' between the child and the cartoonish face is plausible, as the face may be displayed or held above the child's line of sight during interaction.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the child to be spatially above the sweatpants they are wearing or positioned over; the relationship 'above' is consistent with the description.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The jacket is above or on the child, not the child above the jacket; flipping subject/object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child is likely positioned above or holding a plush toy, making the 'above' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible and common for a child to be positioned above a shoe, for example, while sitting or standing near it, so the 'above' spatial relation is reasonable given the context.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is interacting with an object (likely a hairbrush) positioned above, which is plausible given the description and actions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is likely above the child as it could be worn on the head or in the pigtails, but uncertainty in descriptions prevents full confirmation; relationship is plausible given the spatial predicate.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's hair tie being above the child is spatially plausible, as hair ties are typically worn in the hair above the face.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is interacting with an object described as a cartoonish bear figure; it is plausible for the child to be positioned above the bear in the scene, making the 'above' spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child sitting below a curtain is spatially plausible, and the predicate 'above' correctly indicates the curtain is above the child.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' between the child and the mouse ear-like object is plausible but the descriptions do not provide enough precise context to confirm the exact spatial arrangement.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is a child and the object is a mouth (anatomic part) described as an independent object, making a spatial relationship 'right of' between the child's body and a mouth object as a separate entity physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports the child being spatially positioned to the right of the blanket, a plausible and non-contradictory spatial relationship.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's position being right of the plush toy is spatially plausible given the descriptions; there is no conflict in the metadata.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two young children described with similar hairstyles and seated positions, where one is to the left of the other, is spatially plausible given the detailed descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tablecloth is typically above or on the table surface, with the teddy bear likely placed on the tablecloth; flipping subject and object makes the spatial predicate 'above' correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear sitting above the sock is a plausible spatial relationship given both objects are stationary and positioned in the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The teddy bear is stationary and the 'face' is described as a cartoonish image; without clear spatial positioning or depth context, it's unclear how the teddy bear is 'above' the face.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sweatpants are typically worn below or under something, so stating the teddy bear is 'above' the sweatpants makes more sense when flipped to 'sweatpants above teddy bear'.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear is positioned above the jacket in the scene, which is plausible given the descriptions and spatial relation.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear positioned above another plush toy is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear described sits with extended arms and legs splayed on a surface, with the shoe below it; it is plausible for the teddy bear to be spatially above the shoe in the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary teddy bear being above the moving hairbrush is spatially plausible without contradiction.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear is spatially above the hair tie, which is plausible given their descriptions and static positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hair tie is described as moving slightly and maintaining vertical orientation beneath the stationary teddy bear, making it plausible that the hair tie is below the teddy bear rather than the teddy bear above the hair tie.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear is described as sitting prominently with arms outstretched, while the cartoonish bear figure is positioned below it; indicating the teddy bear is spatially above the bear is plausible.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The curtain hangs vertically and is likely above the teddy bear; flipping subject and object makes the 'above' relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear being to the right of the child is spatially plausible given their described positions and descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear being left of the mouse ear-shaped object is a plausible spatial relationship given their descriptions as plush toys and their relative placement in the scene.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a teddy bear and a mouth-like object is plausible, but without clear positional metadata, the exact relative placement cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary teddy bear positioned to the right of a blanket is a spatial relationship consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are similarly described plush toys with spatial positions; the teddy bear being right of the plush toy is plausible based on their stationary states and relative positions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The teddy bear is described as stationary and placed prominently, while the girl is seated cross-legged nearby. It is plausible for the teddy bear to be positioned left of the girl in the scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hair tie resting on top of a curtain is physically plausible given their described attributes and the curtain's gentle swaying motion.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hair tie positioned left of a jacket is spatially plausible given their descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie being below the sock is spatially plausible given their descriptions and no contradictory context is present.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie, as an object separate from the sweatpants, being spatially left of the sweatpants is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hair tie being spatially below a face in an image or scene is physically plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a dark hair tie is located to the right of a yellow plush toy in the scene, supporting the spatial relationship as described.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie being to the right of the shoe is spatially plausible based on the descriptions; no contradictions are evident.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is plausibly positioned to the right of the hairbrush, and the spatial relationship is consistent with their descriptions and physical layout.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two hair tie-like objects with distinct spatial and motion attributes can plausibly be positioned relative to each other; subject being to the right of the object is reasonable.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is spatially located right of the bear figure, which is plausible given their described positions in the scene.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is plausibly positioned left of the curtain in the scene; both object descriptions and spatial relation are consistent and reasonable.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hair tie is a small object typically placed on or around hair and would likely be above the teddy bear in a physical arrangement rather than below it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hair tie is unlikely to be below a child; more plausible that the child is below or above the hair tie in spatial relations, so flipping subject and object makes the spatial predicate more reasonable.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'below' between the uncertain objects 'hair tie' and 'mouse ear' is plausible but the ambiguous descriptions prevent a definitive validation.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hair tie being spatially below a mouth in a scene is unlikely given typical human anatomy and the described shapes; the relationship lacks physical plausibility.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hair tie is unlikely to be below a blanket; usually, a blanket would be beneath or below a hair tie if placed on a surface. Flipping subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'below' between a hair tie and a plush toy is plausible, but the uncertain identification of both objects and lack of explicit positional details mean the relationship cannot be fully verified or dismissed.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description indicates the hair tie is stationary and left of the girl, a spatial relationship that is plausible and consistent with the context.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'mouse ear' object is described as a large, rounded, plush-like item near a teddy bear; spatially 'right of' is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mouse ear-like object being above a tablecloth is spatially plausible and consistent with the descriptions given.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large, rounded mouse ear-like object being above the white sock is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports a plausible spatial relationship with the 'mouse ear' object positioned above the 'face' object, consistent with physical arrangement of such features.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mouse ear-shaped object positioned above sweatpants is plausible in a scene; the spatial relationship 'above' makes sense here.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mouse ear-like object plausibly appears spatially above the jacket given their descriptions and spatial relation 'above' fits the context.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'mouse ear' object being spatially above the 'plush toy' is plausible given their described forms and placement; no contradictory details are present.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large, rounded object resembling a mouse ear plausibly positioned above a shoe is spatially reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'above' between the mouse ear-like object and the hairbrush is plausible, but the uncertainty and descriptions do not provide enough clear context to confirm the exact positional relationship.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'above' between a plush mouse ear-like object and a hair tie is plausible, but the uncertain identification and lack of spatial detail prevents confident validation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the large, rounded mouse ear-like object to be situated to the right of the elongated hair tie-like object; spatial relation is consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description suggests the 'mouse ear' is an object located spatially to the right of the bear figure, which is plausible given the scene description.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between the mouse ear-like object and the curtain is plausible given their descriptions and does not conflict with any physical or contextual information.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a large mouse ear-like object and a child is plausible, but the uncertainty and limited context prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the large, rounded 'mouse ear' object is positioned spatially to the right of the crescent-shaped 'mouth' object given their described shapes and relative positions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large, rounded, plush object (mouse ear) is plausibly positioned to the right of the soft, colorful blanket described, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large rounded object resembling a mouse ear being right of a plush toy is spatially plausible based on their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object resembling a mouse ear positioned to the left of the seated girl is spatially plausible given the descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hair tie-like object can plausibly be resting on top of a curtain, and both are described as fabric-like materials with gentle movements, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie appearing to the left of the jacket is a spatial relationship that is plausible given the descriptions and does not contradict the scene's context.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sock is typically below a hair tie if worn on a foot, but the hair tie cannot realistically be below the sock; flipping subject and object aligns with physical arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is described as a separate object exhibiting motion to the left of the sweatpants, which is plausible in a scene where both objects coexist spatially.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The uncertain nature of the hair tie and its spatial relation below the face is plausible, but the provided metadata does not clearly confirm this spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a hair tie and a plush toy is plausible based on their described positions and no contradictions in the metadata.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie-like object positioned right of the shoe is spatially plausible and consistent with described placements.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is described as positioned with a consistent vertical orientation and slight movements, while the hairbrush is nearby and moving steadily; stating the hair tie is right of the hairbrush is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar hair tie objects described with distinct positions and orientations; stating one is left of the other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie object being to the left of the bear figure is a plausible spatial relationship given their descriptions and no contradictions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hair tie positioned left of a curtain is spatially plausible given both objects' described vertical orientation and location.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Although the subject and object have detailed descriptions, the spatial relation 'below' between a hair tie-like object and a teddy bear is plausible but uncertain without explicit positional information.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' between a 'hair tie (uncertain)' and a 'child (uncertain)' is plausible but the descriptions lack precise spatial coordinates to affirm or reject the relation definitively.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between the hair tie-like object and the mouse ear-like object is plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a hair tie-like object and a mouth-like object is plausible but uncertain due to ambiguous object identification and limited scene context.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie is described with motion and the blanket as stationary; spatially, the hair tie being to the right of the blanket is plausible given their descriptions and no conflicting info.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hair tie being right of the plush toy in the scene is a plausible spatial relationship given the described positions and orientations of both objects.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark elongated hair tie-like object being left of the seated girl is spatially plausible given the descriptions and no contradictory details.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The crescent-shaped mouth-like object can plausibly be positioned to the left of the teddy bear in the scene; the spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'mouth above tablecloth' is spatially possible but the subject is uncertain and stylized, and the metadata does not clarify the actual scene context sufficiently to confirm the accuracy.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'mouth' object cannot physically be positioned above a sock in a meaningful way; the relationship lacks realism due to the subject being a non-standard object likely part of a cartoon or abstract design.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a mouth is located below the face; flipping the subject and object makes the 'above' relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth cannot physically be located spatially above a garment like sweatpants; the relationship lacks realistic physical grounding.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stylized mouth appearing above a jacket is a plausible spatial arrangement, consistent with how a mouth would be positioned above clothing on a person.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'above' between a stylized mouth and a plush toy-like object is plausible, but due to uncertainty in object identification and lack of clear physical context, the relationship cannot be conclusively verified or discarded.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mouth-shaped object above a shoe is spatially plausible given the descriptions; the mouth is represented as an object above the shoe.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'mouth above hairbrush' is plausible if the mouth is part of a face above a hairbrush object, but uncertainty in object identification prevents a definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and object are uncertain and stylized; the spatial relationship 'above' is plausible but cannot be confirmed without more context.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The positional relationship 'left of' between a stylized mouth-like object and an elongated hair tie-like object is plausible, but uncertainty in object identification and lack of explicit spatial reference points prevent a definitive assessment.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'mouth' cannot be an independent object located spatially relative to a bear; it is part of a face and not a separate entity to be 'left of' a bear.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'mouth' and 'curtain' are both uncertain objects, and their relative spatial position 'right of' is plausible. The metadata does not provide enough definitive context to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth is a part of a face, not a separate object that can be positioned left of a child; treating 'mouth' as an independent object in spatial relation to a child is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object are uncertain stylized parts with plausible spatial relation; no clear evidence contradicts 'left of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mouth-like object is described near the blanket but its exact spatial relationship as 'right of' is plausible yet not fully confirmed due to abstract descriptions.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a vibrant red, crescent-shaped mouth-like object and a deep red plush toy is plausible but the uncertainty and abstract nature of the descriptions prevent full confirmation; therefore, keeping the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'mouth (uncertain)' object is described visually but not explicitly as part of the girl; its spatial relation 'right of' the girl is plausible but cannot be confirmed without more context.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stylized bear figure can plausibly be on top of a curtain, as the curtain's gentle swaying and the bear's description support a spatial relationship of 'on top of'.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bear figure being to the left of the jacket is a plausible spatial relation given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The stylized bear figure is unlikely to be physically positioned below the sock in a meaningful spatial sense given typical scale and context; the relationship 'below' does not make sense here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stylized bear figure being described as 'left of' the sweatpants is plausible as a spatial relationship given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cartoonish bear figure being below a playful, friendly face in a scene is spatially plausible given the description.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stylized bear figure being spatially to the right of the plush toy is a plausible positional relationship given their descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between the bear figure and the shoe is plausible given their separate descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stylized bear figure being right of the hairbrush (ambiguous but possibly in frame or near it) is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stylized bear figure and a hair tie is plausible based on their descriptions and does not violate any physical context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stylized bear figure and an elongated object resembling a hair tie is plausible given their descriptions and no indication that the positioning is incorrect.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cartoonish bear being to the left of a slender curtain is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stylized bear figure positioned below a teddy bear is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between the stylized bear figure and the child is plausible given the descriptions; the bear is positioned to the left of the child.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bear figure is left of the mouse ear object, and their spatial relationship is plausible, but the description does not provide clear scene context to confirm precisely.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mouth as an isolated object cannot have a spatial relationship 'right of' a bear figure unless it is part of or attached to a larger entity; thus the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cartoonish bear figure positioned to the right of a pink, playful blanket with whimsical design elements is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stylized bear is plausibly located to the right of the plush toy based on the spatial relationship and descriptions provided.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stylized bear figure and a girl is plausible and consistent with their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "One curtain cannot be physically 'on top of' another curtain in a hanging arrangement as described; the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slender, translucent curtain is plausibly positioned to the right of the jacket; the spatial relationship 'right of' fits the described scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain and sock are distinct objects; the curtain being to the right of the sock is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a curtain to be positioned spatially right of a pair of sweatpants in the scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metadata is ambiguous about the relative positioning of the curtain-like object and the cartoonish face; 'right of' is plausible but cannot be confirmed or rejected definitively.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'curtain' and 'plush toy' are spatially related with one on the right, but their uncertain identification and incomplete descriptions limit firm confirmation; still, the spatial relation is plausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a curtain and a shoe is plausible, but the incomplete description does not provide enough detail to fully verify the positioning.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the objects are described in detail, their spatial relationship 'right of' cannot be fully confirmed or denied without scene layout context; thus, the relationship is plausible but uncertain.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a likely curtain and a likely hair tie is plausible, but the uncertain identification and lack of clear scene context prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a curtain and a hair tie is plausible but the uncertainty about the objects and limited scene context prevent a definitive validation.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain and bear are spatially arranged, but without clear scene context, 'right of' placement is reasonable though not confirmed.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain can plausibly be positioned to the right of the teddy bear in the scene, matching the spatial relationship given.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain's position relative to the child is plausible, but uncertainty in object identities and lack of clear positional indicators make definitive evaluation difficult.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'right of' between a curtain-like object and a mouse ear-like object is plausible, but the uncertain identification and incomplete descriptions mean there is not enough context to fully confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a translucent curtain and a stylized mouth is plausible but uncertain due to vague context and partial descriptions.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a curtain is positioned to the right of a blanket in an indoor scene with both described objects and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain positioned to the right of a plush toy is spatially plausible without contradiction.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'curtain right of girl' is physically plausible given the curtain's description and the girl's seated position; the positions can reasonably coexist as described.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary blanket positioned left of a plush toy in a scene is spatially plausible and consistent with the described attributes.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be positioned spatially to the left of a tablecloth; the relationship 'left of' is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned to the left of a sock is a plausible spatial relationship given both are stationary objects likely on a flat surface.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket with the cartoon character design can plausibly be to the left of the face depicted in a series of frames; the spatial relationship is sensible given the decorated elements.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be positioned to the left of sweatpants in a scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stationary blanket and a jacket in close proximity is plausible and well supported by their descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be located spatially to the left of a plush toy; their descriptions support this spatial relationship plausibly.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary blanket can reasonably be positioned left of a shoe in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary blanket could plausibly be located to the left of a moving hairbrush; the spatial relationship is logically consistent.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket and hair tie are described with spatial and stationary attributes; the blanket being left of the hair tie is plausible and consistent with their static positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'blanket left of hair tie' is plausible given the blanket is stationary and the hair tie is described as an object with a consistent vertical orientation nearby.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket has a design that includes a bear figure, so describing the blanket as spatially 'left of' the bear decoration on it is spatially plausible within the image context.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket being positioned to the left of a curtain is spatially plausible and consistent with their stationary and hanging descriptions respectively.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket is an inanimate object and cannot be positioned 'left of' another stationary object in a way that implies agency; the statement is spatially ambiguous and not meaningful as a relationship.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a blanket (stationary object) to be spatially located left of a seated child; the description supports a static spatial relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stationary blanket and a nearby mouse ear-like object is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket cannot have a spatial relationship 'left of' a 'mouth,' especially since the mouth is represented here as an object rather than part of a face; they are different entities, making the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket is typically lying on a surface and cannot be spatially 'above' a curtain that is hanging; the relationship is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the girl is left of the blanket rather than the blanket left of the girl, given the girl is seated and the blanket remains stationary.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket being under a hanging curtain is plausible; reversing subject and object aligns with typical spatial relationships where the curtain is above the jacket.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plush toy is likely under the curtain, not the curtain under the plush toy; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible for a shoe to be under a curtain, not for a curtain to be under a shoe; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain is typically hanging and not physically located under a hairbrush; instead, the hairbrush could be under the curtain, making flipping the subject and object correct for the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially located 'under' a hair tie; this relationship does not make physical sense given their typical sizes and placements.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the hair tie is under the curtain rather than the curtain being under the hair tie, given their typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain hanging under a bear is unlikely; more plausible is the bear being under the curtain.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "One curtain being 'under' another curtain is unusual and physically implausible; curtains typically hang side by side or layered differently, not spatially under each other.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hanging cannot physically be under a tablecloth; spatially, a curtain is usually separate or behind windows whereas a tablecloth is on a table surface.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hanging and gently swaying cannot be spatially 'under' a sock, which is usually on a foot or flat surface; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially under a face; the relationship 'under' with curtain as subject and face as object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sweatpants would logically be worn under the curtain (such as by a person behind the curtain), not the curtain being under the sweatpants; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain hanging over a teddy bear is plausible, but a curtain being under a teddy bear is unlikely; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially 'under' a child; typically, a curtain hangs above or beside a person.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot physically be positioned under a mouse ear; spatially this relationship is implausible given their descriptions.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain being spatially 'under' a mouth-shaped object is physically implausible given their typical positions and scales.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain is typically hung above and not positioned below a blanket; the relationship 'curtain below blanket' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "Physically, a plush toy can be below a curtain, but saying a curtain is below a plush toy is incorrect. Flipping the subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain being left of a seated girl is spatially plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a small plush toy to be positioned to the right of a stationary blanket, given their described spatial arrangement and characteristics.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the tablecloth is behind the plush toy rather than the toy being behind the tablecloth, given the typical arrangement where a tablecloth covers a table surface and objects rest upon it.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy can reasonably be behind a sock in a physical setting; their spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy being behind the cartoonish face is spatially plausible given their descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy can reasonably be positioned behind a pair of sweatpants in a scene, and the spatial relationship 'behind' is plausible given their described attributes and positions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the plush toy is positioned behind the jacket in the spatial layout described.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A deep red plush toy can plausibly be positioned behind a vibrant yellow plush toy; their spatial arrangement is coherent and physically possible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy positioned behind a shoe is spatially plausible given their descriptions and typical relative sizes.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy can be located spatially behind a hairbrush; the relationship 'behind' is plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy being behind the hair tie is spatially plausible given their descriptions; no contradiction or physical impossibility is evident.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy positioned behind the hair tie is spatially plausible given their described attributes and motions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy being behind a bear figure is spatially plausible given their descriptions and usual positioning of objects.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the curtain is behind the plush toy, not the other way around, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy being behind the teddy bear is spatially plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plush toy cannot realistically be spatially 'behind' a child; it is more plausible that the child is behind the toy from the camera's perspective, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plush toy can plausibly be positioned behind the mouse ear object in the scene; the spatial relationship is coherent given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'behind' between a plush toy and a mouth-like object is plausible but the uncertain descriptions prevent definitive confirmation.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The curtain is typically above the plush toy; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plush toy can plausibly be positioned left of a girl sitting cross-legged; the spatial relationship 'left of' between the two is reasonable given the context.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The girl is sitting on the floor and the delicate tablecloth likely covers a nearby table; being to the right spatially is plausible given the provided attributes and descriptions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A girl seated on the floor can plausibly be positioned to the right of a sock lying nearby; the spatial relation is coherent with the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'right of' between a seated girl and a cartoonish face is plausible but unclear due to partial description and uncertainty about the face's physical location or representation.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweatpants are clothing and cannot occupy a spatial position relative to a person as independent objects; 'right of' relation is not meaningful here.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "The girl is described as holding the jacket, making it more plausible that the jacket is right of the girl; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated girl holding a small object can reasonably be positioned to the right of a plush toy, making the spatial relation plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated girl can reasonably be located to the right of a shoe; the spatial relationship is plausible based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a seated girl and a moving hairbrush is plausible given the context and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'right of' between a seated girl and a small hair tie is ambiguous and lacks sufficient context to verify positioning; the hair tie is uncertain and the spatial layout is unclear.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hair tie is typically very small and would not be spatially positioned to the right of a seated girl in a meaningful way; the physical plausibility of 'right of' for these described objects is doubtful.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'right of' between the seated girl and the bear figure is plausible based on their descriptions and typical scene arrangements.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The girl seated cross-legged can plausibly be to the right of the curtain; spatial relationship is consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "The teddy bear is described as stationary and likely positioned relative to the girl; saying the girl is 'right of' the bear is less intuitive than the bear being 'right of' the girl, so flipping subject/object better matches spatial roles.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between two young children seated and engaged in activities is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relative spatial positioning of the girl and the large mouse ear object is plausible; however, the vague description of 'mouse ear' and incomplete context prevent a definitive spatial confirmation.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A girl cannot be spatially right of a mouth as an isolated object; the relationship is nonsensical without a proper entity (a mouth is part of a face, not standalone).",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The young girl sitting on the floor holding a small object can plausibly be positioned to the right of the stationary blanket as described.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a seated girl to be positioned to the right of a hanging curtain with described attributes; the spatial relationship is consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The girl is seated on the floor with the plush toy nearby; it is plausible the toy is to the right of her as described.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot wear a sock; the 'wearing' relationship is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot 'wear' a face; the predicate is physically impossible given the objects and their nature.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot wear sweatpants; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is a fabric laid over surfaces and does not have an independent spatial position to be 'in front of' a jacket; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is a flat fabric placed on a surface and cannot logically be positioned 'in front of' a plush toy; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be spatially positioned 'in front of' a shoe, as it typically drapes over surfaces rather than occupying a front spatial relation to footwear.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is an inanimate fabric draped over a surface and cannot be spatially 'in front of' a moving hairbrush; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be 'in front of' a small hair tie in a meaningful spatial sense, as a tablecloth typically lies flat or drapes on a surface, and the hair tie is an independent small object; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A delicate, translucent tablecloth resting on a surface cannot realistically be 'in front of' a small, swaying hair tie suspended in space; the spatial relation is implausible given their physical properties and typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth, being a fabric draped on a surface, cannot logically be 'in front of' a bear figure; the relationship is spatially and physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The delicate tablecloth is plausibly positioned left of the translucent curtain; spatial relation is consistent with their descriptions and typical physical arrangement.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The teddy bear is likely below the tablecloth, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is below the tablecloth since the tablecloth drapes over a surface above; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mouse ear is likely below the tablecloth, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be spatially positioned below a mouth; the relationship is physically implausible given their typical arrangement.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A delicate tablecloth drapes over a surface and cannot logically be positioned below a blanket that is described as stationary and vibrant; the spatial relation 'below' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plush toy being below the tablecloth is unlikely; it is more plausible the tablecloth is below or over the plush toy, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot be positioned to the left of a girl in a meaningful spatial relationship; the tablecloth is an object that typically covers a surface rather than existing independently left of a person.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, so it's unclear what is on top of the curtain; therefore, the relationship cannot be assessed fully but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth cannot hold a jacket; the predicate 'holding' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth, being an inanimate object, cannot perform the action of 'looking at' another object such as a jacket.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tablecloth is an inanimate object and cannot perform the action of 'playing with' a jacket; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined with no details, so the relationship 'being recorded by' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being recorded by",
+      "relation_type": "functional",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown, so it is unclear what is focusing on the tablecloth; however, 'camera focusing on' is a plausible relationship if the subject is a camera.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      17,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      6,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      16,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      18,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      7,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      12,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      15,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      9,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      20,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      15,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      4,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      10,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      12,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      9,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      11,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      13,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      19,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      18,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      4,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      6,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      10,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      12,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      11,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      16,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      17,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      17,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      18,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      10,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      12,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      14,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      9,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      13,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      19,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      20,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      4,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      14,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      15,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      19,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      11,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      16,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      17,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      15,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      20,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      20,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      20,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000024"
+}

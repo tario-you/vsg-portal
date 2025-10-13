@@ -1,0 +1,1185 @@
+{
+  "activity_differential": [
+    "people walking and conversing on urban sidewalk",
+    "people exiting building and moving along street",
+    "people carrying items and interacting in public space"
+  ],
+  "description": "A group of people are seen exiting a building and walking along a busy urban sidewalk. The camera moves and shifts focus between groups of people and individuals, capturing their movement and interactions as they walk, converse, and carry items. Vehicles are parked along the street, and the environment is decorated with banners and lanterns.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A person walking under a horizontally stretched banner is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity lacks a name and description, making it unclear what the person is standing on; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be realistically 'under' a doormat, which is flat on the ground and intended to be stepped on; the spatial relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'left of' cannot be verified or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a steady, mounted signboard is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily can plausibly be located to the left of a stationary, upright banner as described.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as walking steadily and the curtain is stationary with slight undulations; the person being in front of the curtain is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to assess the spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive attributes or identification, making the spatial relationship 'left of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the person to be positioned to the left of a tall stationary poster in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'wear' a window, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any detail to confirm the spatial relationship; however, the predicate is plausible as stated.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking on top of a swaying lantern is physically implausible given typical sizes and context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steadily could plausibly be positioned under the tall, stationary pole; the spatial relationship 'under' is consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' a hanging lantern; spatially it is implausible for the person to be physically on the lantern.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'left of' is spatially plausible, but the object lacks any identifying attributes or description to confirm the spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any identifying information, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object's identity and description are missing, so it's unclear if the person is indeed 'in front of' it; however, the relationship is plausible and cannot be ruled out.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking is plausibly located to the left of a hanging lantern, which is a reasonable spatial relationship given the described positions and context.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person can be spatially positioned to the left of a pillar; this spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person logically can be positioned in front of a tall, slender banner, which is plausible given the spatial relationship and descriptions.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person described in detail, but the object lacks any description or name, so the spatial relation 'in front of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, making it unclear what is on top of the lantern, but the relationship 'on top of' is physically plausible.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive attributes or names, making it impossible to fully evaluate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions, so spatial relationship cannot be evaluated for correctness; keeping as is.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "No identifying information about the subject or object to verify the spatial relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, making it unclear what object is to the left of the lantern, but the spatial relationship is plausible and no evidence contradicts it.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description; cannot confirm or deny the plausibility of its position 'in front of' the banner.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the plausibility of the spatial relationship cannot be determined.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject and its description are unknown, so the plausibility of it being 'on top of' the lantern cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object to assess spatial relationship, so keep as is due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names or descriptions, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object have identifying details, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unspecified, so spatial relation 'left of' to the described lantern cannot be confirmed but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unspecified but spatial relation 'left of' is plausible with respect to the detailed pillar; no contradiction or impossibility is found.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, preventing assessment of the spatial relationship with the banner.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the spatial relationship 'in front of' cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely unspecified, making it impossible to determine if it can focus on the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lack of specific information about the subject and object prevents validating the 'focusing on' relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it is unclear who or what is focusing on the person; cannot confirm correctness but relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive information, making it impossible to confirm or deny the plausibility of 'focusing on'.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of identifying information for both subject and object prevents verifying the relationship.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown and cannot be evaluated; insufficient detail to support or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "panning along",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described as a person but the object lacks description or identification, making it unclear if a 'conversing with' relationship is accurate; lacking enough information to confidently drop or flip.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described walking, but there is no evidence or indication they are interacting or conversing; the relationship is unsupported by the descriptions.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object's identity and description are missing, making it uncertain but still plausible that the person is conversing with another entity.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people walking together is a plausible social relationship given the descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any identifying information, so it is unclear who or what the person is walking with.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it is unclear who or what the person is walking with; keeping the relationship despite insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot walk on a spherical lantern; the relationship 'walking on' is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically walk on a lantern; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely unspecified with no name, attributes, actions, or description, making it impossible to validate the predicate 'walking on' with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and no description), so it's unclear who or what is 'walking on' the lantern; the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person walking, but the object lacks any name or description, so the plausibility of 'walking with' cannot be fully assessed.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear who or what is 'walking with' the person; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a person walking past an unspecified object; lack of object details makes it impossible to verify or reject the relationship, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information; cannot determine correctness but walking past as a predicate is plausible.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or descriptive attributes, making it impossible to verify or confirm the 'carrying' relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive information, making it impossible to confirm or deny the carrying relationship.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to assess the plausibility of 'parked on' with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "parked on",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "stationary on",
+      "relation_type": "functional",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking steadily and moving away from the lantern, which is swaying gently; this spatial and motion relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "moving away from",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear who or what is moving away from the lantern, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving away from",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is moving while the lantern is swaying; it is plausible the person is moving along with the lantern in the scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it impossible to verify the relationship with the lantern.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed person, but the object lacks any identifying information, making it unclear yet plausible they are conversing.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear if 'conversing with' involving the identified person is accurate; insufficient context to confirm or deny.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 26
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      39,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "on top of",
+      [
+        [
+          24,
+          48
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      27,
+      "left of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      29,
+      "in front of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      33,
+      "in front of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      34,
+      "left of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      39,
+      "in front of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      40,
+      "in front of",
+      [
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      16,
+      "on top of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      27,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      29,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      33,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      34,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      35,
+      "left of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      39,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      40,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      3,
+      "focusing on",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "focusing on",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      26,
+      "focusing on",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      27,
+      "focusing on",
+      [
+        [
+          96,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "conversing with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      2,
+      "walking with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      3,
+      "walking with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "walking with",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      26,
+      "walking with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      27,
+      "walking past",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      27,
+      "walking past",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      27,
+      "carrying",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      16,
+      "moving away from",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      16,
+      "moving away from",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      16,
+      "moving along",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      26,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      26,
+      2,
+      "conversing with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000027"
+}

@@ -1,0 +1,1175 @@
+{
+  "activity_differential": [
+    "child reading a book",
+    "child turning pages of book",
+    "child focusing on book"
+  ],
+  "description": "A child is sitting at a table in a brightly colored room, interacting with a book, turning its pages, and focusing on its contents. The child remains engaged with the book throughout the sequence.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A book can plausibly be positioned in front of a wall; the spatial relationship is sensible given the described scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A book is typically positioned on or in front of a table, not the other way around. Flipping the subject and object makes the spatial relation 'table in front of book' correct as the book is likely on the table.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The window is likely behind the book, not the book behind the window; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A book being to the right of a chair is a spatial relation that is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The book being right of the coaster is a plausible spatial relationship given the objects' descriptions and placements.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The book being positioned right of the chair is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the book is spatially related to.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The book is in front, and the wall is behind; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The table is likely in front of the wall; flipping subject and object makes the spatial relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A window is typically set in or mounted on a wall, not on top of it; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more logical that the chair is to the right of the wall rather than the wall being to the right of the chair, given typical scene layouts and descriptions.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall is typically fixed and large, and a coaster is a small object placed on or near a surface; it is more logical that the coaster is to the right of the wall rather than the wall being to the right of the coaster.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The chair being 'right of' the wall makes spatial sense; reversing subject and object aligns the predicate with the scene's spatial arrangement.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to determine the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Physically, the book can be behind the table, but it is more natural to say the table is behind the book as the book is likely on the table or in front of it. Flipping subject and object aligns better with typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a table is in front of a wall, so flipping the subject and object makes the 'behind' spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The window is likely behind the table rather than the table behind the window, flipping subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a chair is placed to the right of a table, not the table to the right of the chair; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Coaster is likely to be on or to the right of the table, not the table right of the coaster; flipping subject and object fixes the spatial predicate.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a chair is positioned to the right of a table, not the table being right of the chair; flipping subject and object aligns with common spatial arrangements.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks name and description, making it unclear what is in front of the table, so the relationship cannot be verified or rejected confidently.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The book is described as moving and being interacted with, while the window remains stationary; it is more plausible that the book is in front of the window, so flipping the subject/object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A window is typically installed in or on a wall, not beneath it; flipping subject and object to 'wall under window' makes spatial sense.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A table is commonly in front of a window, not the other way around; flipping subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A window can be positioned spatially to the right of a chair in a scene; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coaster is likely to be positioned right of the window rather than the window being right of the coaster; flipping subject and object corrects spatial plausibility.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A window being 'right of' a chair is a plausible spatial relationship based on their described positions and stationary nature.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relation with the window.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The chair and book can be spatially arranged such that the chair is left of the book in the scene, which is plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description plausibly positions the chair to the left of the wall, which is spatially consistent and reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair being to the left of a table is spatially plausible given their described stationary positions and typical furniture arrangements.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The chair being left of the window is spatially plausible and consistent with the descriptions of their positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair being to the left of a coaster-like object is spatially plausible and supported by their descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar vibrant yellow chairs described together; specifying one's position as 'left of' the other does not add meaningful new information.",
+      "label": "redundant",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a well-described chair, but object lacks any description or name, so spatial relation 'left of' cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coaster being to the left of a book is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coaster cannot logically be positioned to the 'left of' a wall, as the wall is a large vertical structure and the coaster is typically placed on surfaces in front of or against the wall, not spatially to its side in such a manner.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coaster is typically positioned on a table, so the table is left of the coaster is unlikely; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coaster being left of a window is spatially plausible with no contradictory attributes.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The coaster is spatially positioned to the right of the chair, which is plausible given their stationary descriptions and distinct locations.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coaster can logically be positioned to the left of a chair in a scene, and both objects are stationary and well described, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The coaster is positioned 'left of' an unidentified object with no description, so spatial relation is plausible but details are insufficient to fully confirm or deny.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stationary chair and a moving book is plausible and consistent with their described positions and actions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A chair is typically positioned in front of or near a wall rather than to the left of it; flipping the relationship to 'wall left of chair' is more plausible given the scene description.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair can plausibly be positioned to the left of a table in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary vibrant yellow chair to be left of a tall, rectangular window in a room setting.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar yellow chairs positioned spatially with one to the right of the other is plausible given their described attributes and stationary positions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair being located to the right of a coaster is spatially plausible based on their descriptions and typical relative positioning.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'chair' is described clearly and 'left of' is a plausible spatial predicate, but the object is unidentified with no attributes or description, so we cannot verify the relationship's accuracy or feasibility.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, so it is unclear what it is; therefore, the spatial relation 'behind' in relation to the book cannot be fully evaluated but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is behind the wall, but the spatial relationship 'behind' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description; without more information about the subject, the 'behind' spatial relation to the table cannot be fully validated, but it is possible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information but 'behind' a window is plausible; lack of subject details prevents definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks name and description, but relation 'right of' to a chair is spatially plausible; insufficient details prevent full verification.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying information, so it is unclear what is to the right of the coaster; cannot confirm spatial relationship fully.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject's identity is unknown, but spatial relation 'right of' with a detailed chair is plausible; insufficient details to confirm or deny.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot hold a wall; the relationship is physically impossible given the subject and object roles.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot turn the pages of a wall; the predicate implies an action the wall cannot perform or be subject to.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "turning pages of",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot focus attention on a wall; focusing is an attentional action typically attributed to sentient beings.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot perform the action of reading a wall; the predicate 'reading' is not physically plausible with the book as subject and wall as object.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "reading",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified (null name and no description), so it is unclear what the camera focusing action refers to, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "behind",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "left of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "right of",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000102"
+}

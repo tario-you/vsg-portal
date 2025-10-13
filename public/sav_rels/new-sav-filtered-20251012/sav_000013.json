@@ -1,0 +1,2088 @@
+{
+  "activity_differential": [
+    "camera traversing busy street market",
+    "people shopping and walking in market",
+    "motorcycle moving through crowded street"
+  ],
+  "description": "A moving camera (likely mounted on a motorcycle) traverses a busy street market, passing by motorcycles, people, vendors, and various market activities. The camera advances forward, capturing the dynamic interactions of people shopping, walking, and riding motorcycles.",
+  "place_env_id_name": "street market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle is described clearly, but the object lacks any identifying information; adjacency is plausible but cannot be fully confirmed without more details.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "adjacent to",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dashboard is part of the motorcycle and is located in front of the rider, not the motorcycle being in front of the dashboard. Flipping the relationship makes spatial sense.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification and description, making it unclear what is in front of the dashboard; cannot assess relationship accuracy but no evidence to discard or flip.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dashboard is part of or on the motorcycle, so 'dashboard behind motorcycle' is incorrect; flipping subject and object makes the relationship 'motorcycle behind dashboard,' which better aligns with the spatial relationship implied by the dashboard being on the motorcycle.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what it is and whether being adjacent to the motorcycle is plausible.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "adjacent to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it's unclear what is behind the dashboard; the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight plastic bag overlapping a soft jersey fabric is spatially plausible given their described attributes and movements.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plastic bag overlapping a motorcycle's surface is spatially plausible as both objects could be in close proximity with the bag partially covering the motorcycle.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag is described in detail, but the object it is 'below' is unidentified, so the spatial relationship cannot be fully validated.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plastic bag can be physically located below a large signboard in a scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plastic bag moving below a large tree with a thick canopy is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is plausible spatially, but the object lacks any descriptive metadata, preventing full validation or correction.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject's detailed description is clear, but the object lacks any identifying information, making it impossible to verify the spatial relation or physical plausibility.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag is plausibly positioned spatially below the stationary signboard; the spatial relationship is consistent and physically possible.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight, flexible plastic bag can reasonably be located below a stationary signboard, making the 'below' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag is described in detail, but the object below which it is located is unnamed and undescribed, so the spatial relationship cannot be fully confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plastic bag moving and positioned to the right of a walking person is plausible and matches the spatial 'right of' relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports the plastic bag being positioned below the steady signboard, making the 'below' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plastic bag swaying or fluttering below a standing person is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description plausibly supports a plastic bag being positioned below a signboard, which is spatially reasonable and physically possible.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship 'below' with the plastic bag.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jersey moving fluidly and overlapping a sleek curved surface described as likely a motorcycle is plausible, but due to the uncertainty in identification and lack of definitive context, the relationship is maintained as is.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship involves a jersey and an unidentifiable object with no description, making it impossible to confirm the spatial relation 'below' as meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot physically be below a signboard in this context as it is an object of clothing not independently positioned in space; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey is an article of clothing and cannot spatially exist below a tree as an independent object.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject jersey has detailed description but the object lacks any information, so spatial relation 'right of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey, being a piece of clothing, cannot spatially be 'below' a signboard as an independent object since it is normally worn and not positioned separately in space below a signboard.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot be spatially below a fixed signboard in a meaningful way, as the jersey is an object of clothing likely worn and not independently positioned below the signboard.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a jersey with detailed attributes suggesting movement, but the object lacks any description or name, making it unclear what is 'below' the jersey; therefore, the relationship cannot be confirmed or dismissed definitively.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (an article of clothing) cannot be spatially located to the right of a person as an independent object; it typically is worn by the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey (clothing) cannot be positioned spatially below a signboard as an independent object; the jersey is likely worn or hanging and does not function as a standalone object below the signboard.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jersey cannot realistically be 'below' a person, but a jersey is typically worn by a person, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A jersey as an object cannot be spatially positioned below a signboard independently; the jersey is fabric likely worn by a person, so the relationship 'below' with the jersey as subject is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relation 'below' with the jersey.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject appears to be a motorcycle or similar object, but the object is unknown with no description; the spatial relation 'below' cannot be confirmed or denied with missing object information.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle below a signboard is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle is plausibly below the tree given a typical outdoor scene, and the spatial predicate 'below' logically describes their relative positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is likely a motorcycle, but the object is not identified, so the spatial relationship 'right of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks description and identification, making it impossible to verify the spatial relationship 'below' with the uncertain motorcycle subject.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle's curved side being spatially below the signboard is a plausible arrangement in the scene.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is described as stationary and mounted likely above the motorcycle; the relationship 'below' applies better when the signboard is the subject and the motorcycle is the object.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is likely a motorcycle part, but the object's identity and location are unknown, so the spatial relationship 'below' cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sleek motorcycle positioned to the right of a person walking is plausible in a spatial context.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description suggests the motorcycle is below the signboard spatially, but uncertainty about the exact nature of the motorcycle and limited spatial detail prevent a more definitive classification.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be below a motorcycle when standing near or beside it; flipping subject and object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard is typically positioned above or in front of objects like motorcycles; stating the motorcycle is below the signboard is more plausible if the subject and object are reversed.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject likely represents a motorcycle surface, but the object lacks any identifying information, so the spatial relation 'below' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject has no name or description, so it is unclear what the entity is, but the spatial relation 'right of' can still be plausible with the known signboard object.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is to the right of the tree; the spatial relationship is plausible but cannot be fully evaluated.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no attributes or description, so the spatial relationship 'left of' relative to the signboard is plausible but not confirmable.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified with no description or attributes; without knowing what it is, we cannot confirm a spatial relationship to the signboard.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description; unable to judge the spatial relationship properly.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it's unclear if 'below' accurately describes the spatial relation to the person; cannot determine correctness without more context.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it uncertain what is below the signboard, but the spatial predicate 'below' is plausible without contradictory evidence.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "There is no information about the subject or object, so the spatial relationship 'below' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large signboard positioned to the right of a large, dense tree is a plausible spatial relationship given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two stationary signboards with distinct colors and features can plausibly be positioned relative to each other, with one left of the other.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards positioned such that one is to the left of the other is spatially plausible given their described mounted and stationary nature.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'below' is plausible for a signboard relative to another object, but lack of information about the object makes full assessment impossible.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A large signboard is typically mounted above or behind a person, not below them; flipping subject and object makes 'person below signboard' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "One signboard being spatially below another is plausible given their mounting and the slight angle descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it is unclear whether the signboard being below it is plausible or not.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large tree can plausibly be located to the left of the stationary signboard as described in the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large tree being left of a stationary signboard in a spatial sense is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree's spatial relation 'below' an unidentified object is plausible but cannot be confirmed due to lack of details about the object.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person stands below the large tree, not the other way around; flipping the relationship aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely below the tree rather than the tree being below the signboard; flipping subject and object makes the spatial relationship sensible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'below' with the tree cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names or descriptions prevents verification, so keep the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity is unknown and lacks description, making it unclear if it can be spatially positioned left of the signboard, but the relationship is plausible as stated.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description to assess its position relative to the signboard, but the spatial relationship 'left of' is plausible without contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards described with distinct features are plausibly positioned with one to the left of the other.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'below' cannot be meaningfully evaluated.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be below a signboard, but the signboard being below the person is unlikely; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that one signboard is physically positioned below another in the scene, and the metadata describes two different signboards with distinct attributes.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'below' with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a stationary signboard-like object; the object lacks description but the spatial relation 'below' is plausible if the unnamed object is above, so without more details, the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is standing below the signboard, so flipping subject and object corrects the spatial 'below' relationship.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The second signboard (vibrant blue) is described as shifting in perspective and slightly tilted, suggesting it is above and possibly in front of the dark, stationary signboard, so flipping subject and object makes 'subject below object' plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard's position relative to the unidentifiable object labeled as null cannot be confirmed or denied due to lack of information about the second object's location or identity.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear whether 'left of' relationship with the person is correct, but spatial relation is plausible.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying details, so it is unclear what object is to the left of the signboard, but the spatial relationship 'left of' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about the subject or object to assess the spatial relationship; cannot judge validity.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steadily on a path can be reasonably positioned left of a swaying plastic bag in the scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking to the left of a jersey (possibly worn by another person) is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steadily along a path being to the left of a stationary motorcycle is plausible and consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making spatial relationship evaluation with the signboard impossible.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is a stationary object and cannot be spatially 'above' a lightweight, movable plastic bag which can be at various positions; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot realistically be positioned above a moving jersey, as the jersey likely belongs to a person and the spatial relationship is unclear or physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard being above the motorcycle is a plausible spatial relationship given their descriptions and typical physical arrangement.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "It's plausible that the person is spatially positioned to the right of the signboard given the described posture and surroundings.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a person with a plausible spatial relation 'right of' to an unspecified object; lack of details about the object prevents full verification but the relationship is semantically plausible.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a signboard described in detail, but the object lacks any descriptive information, making it unclear what 'right of' spatial relation implies; cannot confirm correctness but cannot reject either.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to validate the 'moving forward with' relationship involving the dashboard.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "moving forward with",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions or names, making it impossible to confirm the relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so it is unclear what 'camera focusing on' relates to; no firm conclusion can be drawn.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined, so it is unclear what the camera focusing on predicate refers to.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (name and description missing), so we cannot confirm the camera's focus on the woman.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the dashboard is attached to.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "dashboard attached to",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dashboard is part of the motorcycle, so it is reasonable that it is moving together with the motorcycle.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "moving together with",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it unclear what the dashboard could be passing by; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is a stationary part of a vehicle and cannot move or pass by a signboard independently.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle dashboard (part of a moving vehicle) passing by a stationary wall is a plausible motion relationship.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard cannot approach a woman; dashboards are stationary parts of a vehicle and do not move independently.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A subject with no identity cannot logically 'walk with' an inanimate signboard, which remains steady and does not move.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description; while the wall is well-described, it's unclear what the subject is to assess walking near it accurately.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking near' a wall.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sari is a garment and cannot walk with a subject; walking with a sari is not physically possible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot 'walk with' a sari, which is a piece of clothing; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack defining details, so plausibility of 'walking near' relationship cannot be assessed.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is an inanimate signboard that cannot walk; the object lacks any identifying details, making the 'walking near' relationship implausible.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is a fixed part of a motorcycle and cannot move independently to 'pass by' a person who is walking.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to confirm the 'passing by' relationship with the dashboard.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dashboard is an inanimate part of a motorcycle and cannot perform the action of 'passing by' a walking woman.",
+      "label": "physically_impossible",
+      "object_id": 37,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the relationship 'passing by' cannot be meaningfully evaluated or confirmed.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, making it impossible to verify the plausibility of their spatial relation.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking near'.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 19
+    }
+  ],
+  "relationships": [
+    [
+      4,
+      6,
+      "adjacent to",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "adjacent to",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "overlapping",
+      [
+        [
+          48,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "overlapping",
+      [
+        [
+          48,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "right of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "below",
+      [
+        [
+          48,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "right of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "below",
+      [
+        [
+          48,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "overlapping",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "right of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "right of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      18,
+      "right of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "below",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      22,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      20,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      21,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      22,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      16,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      8,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      21,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      22,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      14,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      16,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "left of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      19,
+      "left of",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "left of",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      16,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      21,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      17,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      16,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      22,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      20,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      21,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      22,
+      "left of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "left of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      2,
+      "left of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "left of",
+      [
+        [
+          48,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      3,
+      "above",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      21,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "right of",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      13,
+      "camera focusing on",
+      [
+        [
+          48,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      19,
+      "camera focusing on",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      4,
+      "moving together with",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      23,
+      "passing by",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      23,
+      "walking near",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      39,
+      "walking near",
+      [
+        [
+          240,
+          312
+        ]
+      ],
+      "motion"
+    ],
+    [
+      13,
+      39,
+      "walking near",
+      [
+        [
+          240,
+          312
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000013"
+}

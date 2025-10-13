@@ -1,0 +1,2440 @@
+{
+  "activity_differential": [
+    "people walking and carrying goods in a busy market",
+    "camera moving through and overtaking people in a crowded outdoor market",
+    "individuals transporting items and interacting in a public space"
+  ],
+  "description": "A busy outdoor market scene with multiple people walking, carrying items, and the camera moving forward through the crowd. Some individuals are carrying large loads on their heads or in their hands, and the camera weaves through the market, passing by and overtaking people.",
+  "place_env_id_name": "outdoor market",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "Two people walking steadily forward alongside each other can reasonably be described as 'beside' one another.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one person to be in front of another while both are walking, matching the spatial relationship predicate 'in front of'.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf as an object cannot be spatially 'in front of' a person wearing it; the headscarf is part of or on the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a skirt alone, as the skirt is an article of clothing worn by a person rather than a separate spatial object.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two individuals walking steadily forward in traditional robes with distinct descriptions; it is plausible for one to be in front of the other spatially.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a plastic bag that is swaying slightly is spatially plausible given the description.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject person walking steadily forward can plausibly be 'in front of' the other person walking away; their positions and predicates align logically.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking can realistically be positioned to the left of a stationary telephone pole.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person is positioned in front of a large barrel-like object; the spatial relationship 'in front of' fits the described scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person walking, and the object is a large barrel-like object; stating the person is 'in front of' the barrel is plausible but uncertain due to vague object identification and lack of explicit positional data.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people walking steadily, one described as in front of the other, is spatially plausible and supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two persons walking side by side with described attire and postures are plausibly beside each other.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the first person is walking in front of the second person, given their described postures and movement.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf as an object cannot be spatially 'in front of' a person; typically, the person wears or is in front of the headscarf, not the other way around.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt as an inanimate clothing item cannot be spatially in front of a person as an independent entity; the skirt would typically be worn by a person, so the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking in front of another is plausible given their described actions and posture.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking with a plastic bag nearby, spatially in front of the bag, is a plausible and reasonable relationship based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The first person walking with a steady stride plausibly being in front of the second person who is walking away is consistent and physically possible.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person can be spatially located to the left of a telephone pole in a scene; the relationship is consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a large, stable barrel-shaped object is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a large, stable barrel-like object is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subjects are persons walking with purposeful strides; one can plausibly be in front of the other in a spatial context.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person described as behind another in a spatial relationship is plausible and consistent with their walking directions and postures.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'behind' is plausible as one person is described as behind another, consistent with their walking and positioning in the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially in front of a headscarf as a separate object; the headscarf is worn by the person, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially located 'in front of' their own skirt, which they are wearing; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between two walking persons with described clothing and movement is plausible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can reasonably be in front of a plastic bag described as swaying nearby; the spatial relationship is plausible given the context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The first person is described from behind and is moving, while the second person is walking away from the viewer; it is plausible that the first person is in front of the second person in the scene.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be positioned to the left of a telephone pole in a scene; the spatial relationship makes sense given the descriptions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between the person and the barrel is plausible, but uncertainty in their identification and lack of precise positional data means the relationship should be kept as is.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description suggests a person moving near a large, stable object resembling a barrel, which plausibly could be in front of the person. However, the uncertainty about object identities and lack of explicit spatial cues means the relationship cannot be conclusively confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person in a yellow shirt moving can logically be in front of another person walking in the scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'beside' a person in a meaningful, grounded way since clouds are far above and not adjacent to a person on the ground.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The umbrella is physically closer and the cloud is in the sky behind; flipping subject and object makes the spatial relationship 'umbrella behind cloud' correct.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object is unspecified, so it is unclear whether 'cloud behind object' is accurate; however, the relationship is plausible and cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be physically located in front of a headscarf, as clouds are in the sky and headscarves are worn on the body; the spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud in the sky cannot be 'in front of' a skirt on a person; they occupy separate spatial contexts.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'in front of' a person on the ground given typical perspective; clouds are in the sky above and behind individuals from a ground viewpoint.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag is likely in front of a cloud from the viewer's perspective; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud cannot be spatially 'in front of' a person on the ground; this relationship is not physically meaningful in this context.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud is in the sky and cannot be spatially in front of a barrel on the ground in a meaningful physical sense.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud in the sky cannot be spatially 'in front of' a barrel on the ground in a meaningful, physical sense.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cloud can appear visually in front of a person from the camera perspective, making the 'in front of' spatial relationship plausible in this scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is holding a large barrel above their head with arms extended upwards, so the barrel being 'above' the person is physically plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A static van cannot be spatially in front of a headscarf, which is an article of clothing and not an independent object that can be positioned in space relative to the van.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot be spatially positioned in front of a skirt as the skirt is an article of clothing worn by a person and is not a stationary or independent object in space relative to a vehicle.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary van positioned in front of a walking person is plausible and consistent with the detailed descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary white van can naturally be positioned in front of a moving plastic bag; the spatial relationship is plausible and consistent with their described states.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary van positioned in front of a walking person is a spatially plausible relationship.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The van can plausibly be positioned in front of the barrel, which is described as stable and upright; the spatial relationship 'in front of' is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A white van can plausibly be in front of a large, barrel-like object described as stable and upright; the spatial relationship 'in front of' is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary van being 'in front of' a walking person is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf, worn on the upper body and head, cannot be spatially 'left of' the skirt, which is worn on the lower body; the spatial relationship is implausible given their described positions.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A headscarf alone cannot be spatially located as 'left of' a person since it is a clothing item worn by or attached to someone, not an independent object.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The headscarf and plastic bag are described as moving objects with similar lightweight, flexible features; it is plausible for the headscarf to be spatially located to the left of the bag in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A headscarf is worn by a person, so the person should be the subject and the headscarf the object; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The headscarf and the barrel are spatially described with plausible attributes and the headscarf can be positioned to the left of the barrel in the scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a headscarf and a barrel-like object is plausible, but without precise spatial coordinates, the correctness cannot be fully confirmed.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A headscarf cannot be 'left of' a person as an independent object, but the person can be left of the headscarf if interpreted as spatial surroundings; flipping subject/object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically installed above objects like poles, not above the pole itself. Flipping subject and object produces a more plausible relationship where the telephone pole is above the awning.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an article of clothing and cannot spatially exist independently 'left of' a person; it is typically worn by a person, so this spatial relation is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A skirt and a plastic bag can logically be positioned spatially with one to the left of the other; the descriptions support physical proximity and plausible relative location.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an inanimate clothing item and cannot spatially be 'left of' a person in a meaningful way; the relationship assumes subject agency or spatial independence not applicable to clothing alone.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The skirt and barrel can plausibly be positioned side by side, making 'skirt left of barrel' spatially reasonable.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A skirt's position being to the left of a large, stable barrel is spatially plausible with no contradictions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The skirt is described as worn by the person, so the person can be left of the skirt spatially, not the skirt left of the person.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, an awning is below a telephone pole rather than the pole being below the awning; flipping subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'right of' between a walking person and a nearby plastic bag is physically plausible, but metadata does not clarify exact positioning to confirm or deny the relationship conclusively.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people walking in proximity can reasonably be positioned with one to the right of the other.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steadily forward can plausibly be positioned to the right of the large barrel; the spatial relationship is consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'person' walking and the object 'barrel' are plausibly positioned spatially with the person to the right of the barrel, but there is no explicit spatial detail to confirm this; however, nothing contradicts the relationship.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people walking side by side with one positioned to the right of the other is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking can reasonably be positioned spatially to the right of a plastic bag; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people are walking in the scene; stating that one is 'right of' the other is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing a person as being to the right of a large, stable object like a barrel is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person can plausibly be located to the right of the large barrel-like object in a spatial context.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag described as moving and swaying gently plausibly can be positioned to the right of a person walking away; the spatial relationship 'right of' is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag is described as elongated and lightweight, and the barrel as large and stable; the bag being spatially to the right of the barrel is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plastic bag described as swaying gently being to the right of a stable, large barrel is spatially plausible and consistent with their attributes and descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "An awning is typically positioned below or attached to a wall, not the other way around; flipping subject and object corrects the spatial relation 'below'.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person described walking away wearing distinctive clothes plausibly being positioned to the right of a large, stable barrel-like object as described is a reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a person and a large rectangular barrel-like object is plausible, but the uncertain identification of the barrel and lack of precise positional details prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'beside' a cloud in a physical sense, as clouds are distant atmospheric phenomena and not physically adjacent.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be spatially behind an umbrella, as described by their positions and attributes.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail but the object lacks identification or description, making it unclear if the spatial 'behind' relationship is accurate, yet no evidence contradicts it.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'in front of' a headscarf as an independent object because a headscarf is an item worn by the person; the spatial relationship does not make sense in this context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A skirt is an article of clothing, not an independent object that can be spatially in front of a person; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both uncertain persons are described as walking steadily forward, so one being in front of the other is spatially and physically plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward with a small bag in front of them is plausible, and the plastic bag described as in motion in front aligns with the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person moving steadily forward could plausibly be in front of another person walking away, so the 'in front of' spatial relationship is reasonable here.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as moving forward and can plausibly be positioned in front of the large, solid, barrel-like object; the spatial relationship 'in front of' is semantically and physically coherent.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward being in front of a large, stable barrel-like object is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person moving steadily forward being in front of another person walking with a similar pace is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary telephone pole being right of a walking person is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The telephone pole is described as stationary and the person as walking, making it plausible for the pole to be to the right of the person in the scene spatially.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A telephone pole positioned to the right of a person is spatially plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large tree can plausibly be located to the right of a walking person; the spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree being to the right of the barrel is spatially plausible given the descriptions; no contradictions are evident.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two large, stable barrel-like objects described spatially as one to the left of the other is plausible.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The umbrella is physically closer to the camera and can plausibly be described as 'in front of' the cloud, which is distant and in the background.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person holds or carries an umbrella, so it is more accurate that the person is 'in front of' the umbrella rather than the umbrella being in front of the person.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The umbrella is described clearly, but the object has no name or description, making it impossible to confirm the 'beside' spatial relationship, so it's kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar large barrels with distinct colors positioned spatially as one being right of the other is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks description, making it unclear what is in front of the cloud, but the spatial relationship is plausible without further detail.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear if being 'in front of' the person is plausible; cannot confirm correctness but no contradiction either.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear what is beside the umbrella, but the spatial relationship 'beside' is plausible given the umbrella's stationary and robust nature.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), so we cannot confirm its motion toward the van that remains stationary.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified, making it unclear what is moving toward the plastic bag, so the relationship cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), so the relationship involving 'moving toward' a person cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject information is missing, making it impossible to evaluate the relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so there is insufficient context to confirm or deny the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown with no description, preventing confirmation of movement toward the telephone pole.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity or description, making it unclear who or what is moving toward the person; therefore, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and lacks any description or attributes, so it's unclear what is moving toward the cloud.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to assess the plausibility of moving past the umbrella.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is identified or described, so the plausibility of the 'moving past' relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null name and description), making it impossible to verify if it can move parallel to a headscarf; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "moving parallel to",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object lacks any identification or description, making it impossible to verify the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot logically be described as 'walking past' a plastic bag; vehicles do not walk and the action is incompatible with the van's stationary state.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plastic bag cannot perform the action 'walking past' a stationary van; it does not have the ability to walk.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both individuals are described as walking steadily and in similar traditional attire, making 'walking together' a plausible social relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two individuals walking past each other is a plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person walking with a purposeful stride can walk past another person casually strolling nearby.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary telephone pole is a common and physically plausible scenario.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally walk together with a cloud; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward can plausibly be walking past a stationary umbrella; the descriptions support this spatial and motion relationship.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cloud is an atmospheric phenomenon and cannot perform the action 'walking past' an umbrella, which is an inanimate object.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship indicates the umbrella is stationary near an unknown object with no description, so there is not enough context to evaluate or discard the relationship.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "stationary near",
+      "relation_type": "motion",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plastic bag cannot carry a wall as it is physically impossible for a lightweight flexible object to carry a large solid structure like a wall.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A van cannot perform the action of 'looking at'; it lacks perception, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metadata describes two people walking but provides no clear indication of eye direction or gaze; it's plausible the first person is looking at the second, but not certain.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship describes one person looking at another, which is plausible, but the metadata does not explicitly confirm the direction of gaze or interaction, so it cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person walking might look at a large, softly shifting cloud in the sky.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 16
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "beside",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "left of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "beside",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "left of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "behind",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "behind",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "left of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      22,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      19,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      21,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      7,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      19,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      21,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      19,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      21,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      9,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      21,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      21,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      15,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      21,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      21,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      22,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      11,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      15,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      19,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      12,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "right of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      2,
+      "right of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "right of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      21,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "beside",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      19,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      4,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      16,
+      "in front of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      20,
+      "beside",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      13,
+      "moving toward",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "moving toward",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      22,
+      "moving past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "walking together",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      3,
+      "walking past",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "walking past",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      17,
+      "walking past",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      20,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      20,
+      22,
+      "stationary near",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "looking at",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      3,
+      "looking at",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      16,
+      4,
+      "looking at",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000069"
+}

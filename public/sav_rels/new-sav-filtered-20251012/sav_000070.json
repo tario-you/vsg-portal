@@ -1,0 +1,2213 @@
+{
+  "activity_differential": [
+    "people waiting for train on platform",
+    "people walking along platform",
+    "people sitting and waiting at subway station"
+  ],
+  "description": "A subway or train station platform with multiple people waiting, sitting, and walking. The camera remains mostly stationary, capturing the scene as people move along the platform and interact minimally.",
+  "place_env_id_name": "subway platform",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The rail being 'in front of' the cylindrical metallic object is plausible given their descriptions and relative positions; the spatial relationship is coherent.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects appear to be similar rails described with matching attributes and positions; stating one is 'in front of' the other adds no meaningful new information.",
+      "label": "redundant",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rail being 'in front of' the beam is a plausible spatial relationship based on their descriptions and does not conflict with physical expectations.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A long, horizontal rail can plausibly be positioned behind a large, angular beam with these characteristics; the spatial relationship 'behind' is semantically consistent and physically possible.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The descriptions suggest spatial plausibility, but the uncertainty about the object being a crosswalk and the imprecise spatial relation 'in front of' make it unclear whether the rail is truly in front of the crosswalk.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rail positioned in front of a train is a plausible spatial relationship given the rail's fixed location and the train's motion along a track.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'rail in front of light fixture' is plausible given the descriptions; the rail's position can be in front of the light fixture.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'in front of' between a rail and a ceiling beam is unclear without additional scene context or viewpoint information.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vent is under the rail, not the rail under the vent, given their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cylindrical metallic object positioned behind a rail-like metallic object is plausible and consistent with the spatial descriptions provided.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The objects are described as two horizontal, solid structures, with one behind the other; without more scene context, this spatial relation is plausible but not definitively confirmed.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relative spatial positioning of two metallic objects described as 'behind' is plausible, but the uncertainty and limited spatial detail prevent a definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Descriptions are uncertain and do not provide clear spatial context to confirm if the cylindrical object is realistically behind the crosswalk; thus, keeping the relationship.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'behind' between a cylindrical object and a train is plausible, but the uncertain identifications and lack of explicit spatial arrangement details mean the context is insufficient to confirm.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'behind' between two uncertain objects\u2014a cylindrical object and a light fixture\u2014is plausible but cannot be confirmed without more precise spatial details.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cylindrical object positioned behind a ceiling beam is spatially plausible given their described orientations and attributes.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A long cylindrical object being positioned under a vent is a spatially plausible arrangement, especially given the descriptions of both objects being steady and solid.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are uncertain and described as stable, elongated structures with metallic properties; it's plausible for one to be behind the other but lacking definitive context.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'rail behind beam' is plausible given the descriptions of the objects as stable, metallic structures with one extending horizontally and the other diagonally, allowing for a behind relationship.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are uncertain structural elements with similar descriptions and their spatial relation 'behind' is not contradicted, but insufficient context prevents a definitive assessment.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A train is typically in front of the rail when viewed; reversing subject and object aligns with realistic spatial arrangement where the rail is behind the train.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'rail behind light fixture' is plausible given their descriptions, but uncertainty about the exact identities and spatial setup means we cannot confirm or reject the relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A long metallic rail positioned behind a large, flat ceiling beam is spatially plausible given their described relative positions and stationary nature.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically installed in or above a rail structure rather than a rail being under a vent; reversing subject and object aligns the spatial relationship logically.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are beams with uncertain position; 'behind' is plausible but exact spatial arrangement is not fully confirmed.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are uncertain in identification and described as stationary structures with no explicit spatial relation; the 'behind' predicate is plausible but cannot be confirmed definitively.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The train likely moves in front of the beam; flipping subject and object fits the spatial relation 'behind' correctly.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The descriptions of the beam and light fixture are uncertain and lack explicit spatial positioning details to definitively confirm or refute the 'behind' relationship, so it is reasonable to keep as is.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject beam plausibly being behind another ceiling beam is spatially consistent given both are structural elements with stable positions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically installed on or in a beam or ceiling; saying the beam is under the vent is unlikely. Flipping subject/object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The beam and crosswalk are both large, solid structures; it is plausible that the beam is positioned in front of the crosswalk in a spatial sense.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large beam positioned in front of a moving train is spatially plausible within the scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large beam can plausibly be positioned in front of a light fixture in a scene, and the spatial predicate 'in front of' fits the description.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large diagonal beam can plausibly be positioned in front of a horizontal ceiling beam, making the spatial relationship reasonable given their descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is likely under the beam, not the beam under the vent; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The train moves across the scene likely crossing the crosswalk, so the train is in front of the crosswalk, not vice versa; flipping subject/object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'crosswalk in front of light fixture' is plausible as a spatial relation, but uncertainty about the exact nature of the objects means we cannot fully confirm its accuracy.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crosswalk (ground-level structure) cannot plausibly be 'in front of' a ceiling beam (overhead structure) in a spatial sense; the relationship is physically inconsistent.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent can be positioned under a crosswalk, but the crosswalk being 'under' the vent is unlikely; flipping subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Descriptions indicate the train is moving and the light fixture is fixed, so the train being 'in front of' the light fixture is plausible, but uncertainty in object identification leaves some ambiguity.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A train moving in front of a ceiling beam is unlikely as the beam is overhead and fixed; the spatial relationship 'in front of' does not physically apply given their typical vertical positions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A train cannot be under a stationary vent as it moves through a scene; the spatial relationship is implausible given their typical sizes and positions.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Descriptions suggest both objects are stationary and horizontally aligned, but uncertain identification and lack of explicit spatial depth cues mean the 'in front of' relation cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is usually positioned above a vent; flipping subject and object makes the spatial predicate 'under' logical.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically under or attached to a ceiling beam, not above it; flipping subject and object aligns with common spatial structure.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slender yellow line is more likely to be below the cylindrical object; flipping subject and object makes the spatial predicate 'under' plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line is typically painted on or above a rail, so the 'line' is on or over the 'rail', not under it. Reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line is likely on or above the beam rather than the beam being under the line; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large beam extending diagonally being under a horizontal line is a spatially plausible relationship given their described forms and orientations.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A crosswalk cannot be under a line; typically, a line is painted on or near a crosswalk, not positioned above it in a spatial sense.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A yellow line (likely on the ground) is under the train; reversing subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are slender, elongated, and horizontally aligned, so one being under the other is plausible, but the uncertain nature of both objects and limited spatial detail means we cannot confirm or refute the relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling beam is structurally above, so the yellow line is likely under the beam; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is typically fixed on a surface and a yellow line could be on or below that surface; saying the vent is 'under' the line is unlikely, reversing subject/object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent being in front of a cylindrical metallic object is spatially plausible given their described shapes and positions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary vent can reasonably be positioned in front of a long rail-like object; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent being positioned in front of the beam is spatially plausible given their descriptions and no conflicting context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "The beam is large and likely in the background, so it is more plausible that the beam is behind the vent. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A vent is typically fixed to a structure and would not be positioned in front of a crosswalk, which is a horizontal path on the ground; thus, the spatial relationship 'vent in front of crosswalk' is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is a small stationary object and cannot realistically be 'in front of' a large moving train; flipping subject and object better reflects that the train is in front of the vent.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent can reasonably be positioned in front of a light fixture as described; the spatial relationship is plausible based on the metadata.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent being positioned in front of a ceiling beam is spatially plausible given their described stationary positions and relative sizes.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'under' between two vents with similar positions and descriptions adds no new or useful information, both vents are described with similar attributes and stationary positioning.",
+      "label": "redundant",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null) and lacks descriptive metadata, making it impossible to confirm or evaluate the 'camera focusing on' relationship with the door.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so it is unclear what is focusing on the door, but the predicate 'camera focusing on' in relation to the door is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks description, making it unclear what is focusing on the polo shirt; thus, the relationship can't be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject entity is undefined (no name or description), making it impossible to confirm or assess the relationship to the door.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unspecified but the camera focusing on a tactile paving strip is plausible; lack of subject details prevents full certainty.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and unspecified, but the relationship 'camera focusing on' the rail is plausible; lack of subject details prevents confirmation or correction.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown (null), providing no basis to confirm or deny the camera focusing on the object.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no descriptive metadata to confirm what is focusing, but it is plausible a camera focuses on the rail; more context is needed to verify.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying information, and while the object is described in detail, we cannot confirm if a camera is focusing on the beam without more context.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it uncertain who or what is focusing the camera on the poster.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified and lacks description, making it impossible to confirm the camera focusing on the door.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification, but the predicate 'camera focusing on' and identified object 'door' is plausible; insufficient detail prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no descriptive metadata, making it impossible to validate the camera focusing action on the object.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, making it unclear what the camera focusing on relationship refers to or if it is correct.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the beam is uncertain; the relationship 'camera focusing on' is plausible but cannot be verified with the given incomplete metadata.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "No information about the subject (camera) is provided, making it impossible to confirm the camera focusing on the object.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the object is an uncertain crosswalk; due to lack of clear identification of the subject, the relationship cannot be fully confirmed but is plausible as a camera can focus on a crosswalk.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so we cannot confirm or deny the relationship, but 'camera focusing on' the train is plausible.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity and attributes are missing, so it is unclear what is focusing on the light fixture, but the relationship is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified (null), so it's unclear what is focusing on the line; insufficient information to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it impossible to confirm if a camera is focusing on the ceiling beam.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unknown, so it's unclear if the camera focusing on the ceiling beam is accurate, but the relationship is plausible and cannot be confirmed or denied definitively.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to verify the plausibility of the camera focusing relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification, so it is unclear what is focusing on what, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of subject and object details prevents confirming the 'camera focusing on' relationship, but it's plausible.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of subject and object details makes it unclear if the camera is focusing as described, so the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so we cannot confirm the relationship, but the vent can be a plausible focus of a camera.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and not described, so it is unclear what the camera is focusing on; however, the object vent is described, and focusing on it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 29,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so it's unclear what is focusing on the vent; thus, the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined with no description, so it's unclear if the camera focusing on the vent is plausible or not.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unidentified and has no description, but it is plausible that a camera focuses on a vent; lack of subject detail prevents a definitive judgment.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so it's unclear what is focusing on the vent; relationship is plausible but cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the relationship cannot be verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is described; cannot confirm the accuracy of 'camera focusing on' relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, making it impossible to confirm or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, so it is unclear but plausible that the subject (likely a camera) is focusing on the object.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject object is unknown but the predicate 'camera focusing on' with 'ceiling' as the object is plausible; unclear details prevent discarding or flipping.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so it's unclear if it can focus a camera on the column; therefore, insufficient context to confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack sufficient detail, making it impossible to verify the correctness of the 'camera focusing on' relationship.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identity and description, making it impossible to verify the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 101,
+      "predicate": "sitting near",
+      "relation_type": "social",
+      "subject_id": 100
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about the subject or object makes it impossible to verify the sitting near relationship; retain as is due to lack of details.",
+      "label": "insufficient_context",
+      "object_id": 100,
+      "predicate": "sitting near",
+      "relation_type": "social",
+      "subject_id": 101
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is identified, so the relationship cannot be confirmed or denied with given metadata.",
+      "label": "insufficient_context",
+      "object_id": 100,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 102
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it uncertain if 'walking past' is accurate but plausible.",
+      "label": "insufficient_context",
+      "object_id": 101,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 102
+    },
+    {
+      "decision": "keep",
+      "explanation": "There is no information about the subject or object, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 100,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 103
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, but 'walking past' is plausible between any two entities; insufficient data to reject or flip.",
+      "label": "insufficient_context",
+      "object_id": 101,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 103
+    },
+    {
+      "decision": "keep",
+      "explanation": "No entity names or descriptions are provided to assess the plausibility, so the relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 102,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 104
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so we cannot assess the relationship's plausibility but will keep by default.",
+      "label": "insufficient_context",
+      "object_id": 105,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 104
+    },
+    {
+      "decision": "keep",
+      "explanation": "No details are available about the entities involved, so the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 104,
+      "predicate": "standing near",
+      "relation_type": "social",
+      "subject_id": 105
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about the subjects is provided; cannot confirm or deny the plausibility of them waiting together.",
+      "label": "insufficient_context",
+      "object_id": 101,
+      "predicate": "waiting together",
+      "relation_type": "social",
+      "subject_id": 100
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship involves unknown entities with no descriptive metadata, so the validity of 'watching' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 102,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 100
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about the subject or object makes it impossible to confirm or deny the watching relationship.",
+      "label": "insufficient_context",
+      "object_id": 102,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 101
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying information or descriptions, making it impossible to verify the plausibility of the 'watching' relationship.",
+      "label": "insufficient_context",
+      "object_id": 104,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": 105
+    }
+  ],
+  "relationships": [
+    [
+      7,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      16,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      16,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      19,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      22,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      31,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      20,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      22,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      9,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      16,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      10,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      20,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      22,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      10,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      16,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      18,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      20,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      22,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      8,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      19,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      21,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      31,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      8,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      9,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      10,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      32,
+      "behind",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      32,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      20,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      22,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      6,
+      "camera focusing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      7,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      9,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      10,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      11,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      13,
+      "camera focusing on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      16,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      18,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      19,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      20,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      23,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      24,
+      "camera focusing on",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      25,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      26,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      27,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      28,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      29,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      30,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      31,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      32,
+      "camera focusing on",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      33,
+      "camera focusing on",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      34,
+      "camera focusing on",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      35,
+      "camera focusing on",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      36,
+      "camera focusing on",
+      [
+        [
+          216,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      37,
+      "camera focusing on",
+      [
+        [
+          240,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      38,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      39,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      40,
+      "camera focusing on",
+      [
+        [
+          48,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      100,
+      101,
+      "sitting near",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      101,
+      100,
+      "sitting near",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      102,
+      100,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      102,
+      101,
+      "walking past",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      103,
+      100,
+      "walking past",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      103,
+      101,
+      "walking past",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      104,
+      102,
+      "walking toward",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      104,
+      105,
+      "walking toward",
+      [
+        [
+          192,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      105,
+      104,
+      "standing near",
+      [
+        [
+          192,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      100,
+      101,
+      "waiting together",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "social"
+    ],
+    [
+      100,
+      102,
+      "watching",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      101,
+      102,
+      "watching",
+      [
+        [
+          24,
+          192
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      105,
+      104,
+      "watching",
+      [
+        [
+          192,
+          336
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000070"
+}

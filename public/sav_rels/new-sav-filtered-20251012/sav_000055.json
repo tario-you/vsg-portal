@@ -1,0 +1,1193 @@
+{
+  "activity_differential": [
+    "dog sleeping outdoors",
+    "dog resting on soil",
+    "camera observing sleeping dog"
+  ],
+  "description": "A dog is lying on the ground outdoors, appearing to be asleep or resting, while the camera gradually moves closer for a close-up of the dog's face.",
+  "place_env_id_name": "outdoor natural area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a large mound of soil and a nearby small rock is plausible given their descriptions and positioning.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mound of soil and a plant coexisting in a scene with spatial positioning is plausible; saying the mound is left of the plant is a reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mound of soil being to the right of the log is spatially plausible given their descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A leaf is typically above a mound of soil if resting on it; flipping subject and object corrects the spatial 'above' relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dog's paw can be above a mound of soil, but the mound of soil cannot be above the dog's paw; flipping subject and object makes spatial relation correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mound of soil is plausibly located above the smaller gliding rock, indicating a spatial relationship that fits the described scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mound of soil's position relative to an unspecified object with no description cannot be fully verified, but the spatial predicate 'left of' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A smaller rock-like object being positioned to the left of a larger mound of soil is spatially plausible and consistent with the description.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a rock to be positioned to the left of a plant in a natural setting.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rock being below the log is physically plausible given their natural descriptions and relative positioning.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rock above a leaf is spatially plausible; the rock can be positioned above the leaf in the scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dog's paw is physically below a small rock resting on it; flipping subject and object makes the 'above' relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A larger rock being spatially above a smaller, moving rock is plausible given their described sizes and positions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'left of' between a rock and an unknown object lacks sufficient detail about the second object to fully assess plausibility, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plant positioned to the right of a mound of soil is a plausible spatial relation in a natural scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plant positioned to the right of a rock is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plant positioned to the right of a slender, slightly curved log is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A leaf is part of or below a plant; the relationship 'below' is more accurate if the leaf is the subject and the plant the object.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plant cannot be spatially positioned below a dog's paw as the paw is part of an animal typically above the ground, while plants grow from the ground, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The rock, being small and possibly on the ground, is more plausibly below the plant rather than the plant being below the rock; flipping subject and object better fits spatial reality.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject plant is described in detail, but the object has no name or description. Spatial relation 'left of' is plausible, but insufficient information about the object prevents full verification.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender log positioned horizontally to the left of a large mound of soil is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender log can plausibly be positioned above a small rock in a natural setting as described.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A log being positioned left of a plant is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A log positioned above a leaf is spatially plausible given their natural sizes and arrangement.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dog's paw is plausibly above a log, but the relationship states the log is above the paw; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender log positioned above a small rock is spatially plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a slender log described in detail, but the object lacks any identifying information, so the spatial relationship 'left of' cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The leaf is described as resting on the ground, which means the soil is below the leaf, not the other way around. Flipping subject and object makes the 'below' relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The rock is more likely to be below the leaf, as a leaf typically rests on or above the ground/rock, making flipping subject and object correct for the 'below' predicate.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plant with broad leaves is likely above the leaf resting on the ground; flipping subject and object corrects this spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The leaf resting on the ground would be below the log, so flipping subject and object aligns with the predicate 'below'.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a leaf lies below a dog's paw, so flipping subject and object aligns with common spatial arrangement where the dog's paw is above the leaf.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The rock is gliding and moving over the ground, so it is more plausible that the leaf is below the rock rather than the rock below the leaf.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject leaf is described with attributes but the object lacks name and description, so spatial relation 'left of' cannot be fully confirmed or denied. Keeping it due to lack of object details.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mound of soil can be below the dog's paw, not the paw below the mound. Reversing subject and object aligns with expected spatial relationships.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dog's paw resting on a surface can reasonably be described as below a rock-like object, indicating a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dog's paw can plausibly rest above a plant physically, making the spatial relationship 'above' reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog's paw is below the log, so flipping subject and object makes the spatial relation 'below' correct with the log as subject and dog's paw as object.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dog's paw resting above a leaf on the ground is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dog's paw resting gently above or near a small rock is plausible, and the paw being 'below' the rock spatially fits a realistic physical setup.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object's lack of identification and description prevents confirming the spatial relationship, but 'left of' is plausible for a dog's paw relative to another entity.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rock gliding below a large mound of soil is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small moving rock is spatially positioned below the larger oval-shaped rock, which is plausible given their described features and arrangement.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rock gliding above a plant is plausible, as the rock could be carried or suspended above the plant without contradicting the described motion or spatial relations.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rock gliding below a log is spatially plausible and consistent with the described motion and positioning.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rock gliding above a stationary leaf is plausible in the described scene; the spatial relationship 'above' fits the observed interaction.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rock-like object gliding above a dog's paw is physically plausible given the movement and spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's position relative to an unidentified object with no description or attributes cannot be confidently validated, so retaining the relationship is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so positional relation 'right of' relative to the mound is unclear but not implausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear what 'right of' spatial relation is being referred to with respect to the rock.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the 'right of' spatial relationship with the plant cannot be fully validated or corrected.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what entity is right of the log; insufficient context to confirm or reject the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information or description, making the spatial relationship 'right of' to the leaf unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, making it unclear what is to the right of the dog's paw; more context is needed to validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, preventing validation of its spatial relation to the rock.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mound of soil cannot perform the action of sleeping; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "sleeping",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so we cannot confirm the camera movement toward the mound is correct, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification but the predicate 'camera focusing on' with object 'mound of soil' is plausible; insufficient details about the subject to confirm or reject the relation.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "camera moving toward",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000055"
+}

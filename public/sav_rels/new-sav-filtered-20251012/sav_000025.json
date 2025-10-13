@@ -1,0 +1,1757 @@
+{
+  "activity_differential": [
+    "person preparing a fruit bowl",
+    "person transferring fruit between bowls",
+    "person handling and pouring fruit"
+  ],
+  "description": "A person is transferring grapes and strawberries from one bowl to another on a table in a living room environment.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A hand positioned inside a cabinet door area, such as reaching into the cabinet or near its handle, is plausible and physically possible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be physically inside a refrigerator door, which is a solid object; 'inside' predicate here is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand being spatially 'left of' the rotating strawberry is a plausible spatial relationship given the described scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the strawberry is under the hand, not the hand under the strawberry, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe is more plausibly under the hand than the hand under the pipe; flipping subject and object aligns with physical context.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is likely under the hand, not the hand under the strawberry; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a hand described in detail, but the object has no name or description, so it's unclear if the spatial relation 'under' is valid; thus, we keep it due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bowl is typically inside a cabinet or on a surface, not inside a cabinet door. The relationship is physically implausible as the cabinet door is a flat component, not an enclosure containing the bowl.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bowl is inside the refrigerator door, not the door inside the bowl; reversing subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside the bowl, so it is not 'left of' the bowl; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside the bowl, so the strawberry is under the bowl is incorrect; flipping to 'bowl under strawberry' makes no sense, but 'strawberry under bowl' should be reversed as 'bowl contains strawberry'; thus flipping subject and object corrects the spatial relation conceptually.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The pipe is likely located above the bowl rather than under it; flipping aligns the 'under' predicate with physical reality.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is inside or on the bowl, so the strawberry is not 'under' the bowl; flipping the subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name and description, making it impossible to verify the spatial plausibility of the bowl being 'under' an unidentified entity.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand is more likely to be contained within or inside a cabinet door (e.g., cabinet interior) rather than the cabinet door itself containing a hand; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door does not contain a bowl; typically, the cabinet body contains items, not the door itself.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are cabinet doors that remain stationary and likely part of the same cabinet; stating one is 'in front of' the other adds no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door being 'left of' the refrigerator is spatially plausible given they are adjacent household fixtures in the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door typically cannot be described as 'in front of' a bowl in a meaningful spatial relationship because it is usually part of a larger fixture and does not independently position itself in front of small objects.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Cabinet doors are typically positioned to the left of refrigerator doors; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary cabinet door being in front of a lifted and rotated metallic strainer is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A grape is more likely to be below a cabinet door than vice versa; flipping subject and object makes the spatial predicate correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The bowl is likely below the cabinet door, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary cabinet door to be positioned to the left of a rotating strawberry in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a stationary cabinet door to be described as 'left of' a gently rotating strawberry, indicating their spatial relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door being to the left of the pipe is spatially plausible given their stationary positions and described orientations.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Spatially, a cabinet door can be positioned left of a strawberry; the relationship is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door's position relative to an unnamed object cannot be confirmed or denied due to lack of details for the object.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two cabinet doors can be spatially arranged so that one is behind the other; the attributes and descriptions support this spatial relationship plausibly.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall cabinet door can plausibly be positioned to the left of a refrigerator in a kitchen setting; the spatial relationship 'left of' is consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary cabinet door being left of a metallic bowl is spatially plausible given their described positions and no movement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is likely positioned to the right of the cabinet door, so flipping subject and object correctly aligns the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strainer is likely to be right of the cabinet door; flipping subject and object aligns the spatial relation with their described positions.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cabinet door being above the grape is spatially plausible, given the size and typical positioning of these objects.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Cabinet door being above the bowl is plausible given typical arrangements and the metadata descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a refrigerator to be positioned to the right of a cabinet door, both described as stationary objects in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a refrigerator to be positioned to the right of a cabinet door in a kitchen scene; the spatial relationship is consistent with the described attributes.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The refrigerator being to the right of a stationary bowl is a plausible spatial relationship given their described positions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is part of the refrigerator; it is plausible that the door is right of the refrigerator, not the other way around.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a refrigerator to be positioned to the right of a strainer; the relationship aligns with the described scene layout.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The refrigerator is larger and typically positioned above small items like grapes in a spatial relationship; the predicate 'above' is plausible as the grape is likely below or in front of the refrigerator.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is typically above a refrigerator, not the other way around; flipping subject and object makes the 'above' spatial relation correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary metallic bowl being behind a stationary cabinet door spatially is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is unlikely to be right of a cabinet door; more plausible the cabinet door is right of the bowl based on typical spatial arrangements.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metallic bowl being positioned to the left of the stationary refrigerator is plausible and consistent with the spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metallic bowl being 'right of' the metallic conical strainer is a plausible spatial relationship given their descriptions and does not conflict with any physical or contextual information.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot contain a hand; the hand is outside or in front of the door, so the spatial relationship is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot physically contain a bowl; the bowl is likely inside the refrigerator, not contained by the door itself.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The refrigerator door being to the left of the cabinet door is spatially plausible based on their descriptions and stationary positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'refrigerator door left of cabinet door' is plausible given their typical arrangement in a kitchen setting and their described stationary positions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The refrigerator door is part of the refrigerator and cannot be to the left of it; flipping subject and object makes 'refrigerator left of refrigerator door' plausible.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the refrigerator door is positioned to the right of the strainer; the spatial relationship is consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A refrigerator door can be spatially located to the left of a strawberry; the relationship describes their relative positions plausibly.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A refrigerator door can contain strawberries placed inside it, making the 'contains' relationship plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door does not contain a pipe; the pipe is unlikely to be inside or part of the door, making the spatial relationship incorrect.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door does not contain a strawberry; the strawberry would be inside the refrigerator, not contained by the door itself.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The refrigerator door plausibly contains items inside, but the object lacks description or a name, preventing full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The cabinet door is likely behind the strainer, not the other way around; reversing subject and object aligns the spatial relationship with the scene.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A strainer being left of a cabinet door is a spatially plausible arrangement in a kitchen scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic strainer positioned left of a refrigerator is a plausible spatial relationship in a kitchen scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic conical strainer being 'left of' a metallic bowl is spatially plausible and consistent with their described positions and appearances.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic strainer being left of a stationary refrigerator door is a plausible spatial relationship given the described scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A grape above a cabinet door is plausible in a spatial context, as the grape could be positioned or held above the door; nothing contradicts this relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the grape is below the cabinet door rather than the cabinet door being below the grape; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A grape is plausibly located below a refrigerator, making the spatial relationship sensible given the typical arrangement.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cabinet door being inside a door (uncertain) is unlikely; flipping subject and object aligns with typical spatial relationships where a door is part of or inside a cabinet door frame.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The metallic bowl cannot be spatially above the cabinet door without support; no indication the bowl is elevated above or hanging over the door, so the spatial relationship 'above' is implausible with bowl as subject and door as object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The strawberry is described as rotating and distinct from the hand, which is reaching or adjusting nearby; it is plausible for the strawberry to be positioned to the right of the hand.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A strawberry being right of a bowl in the scene is plausible based on their described spatial arrangement and the details provided.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a rotating strawberry to be positioned spatially to the right of a stationary cabinet door in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The strawberry rotating right of a stationary refrigerator door is spatially plausible and consistent with the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is likely holding or supporting the strawberry, so 'strawberry on top of hand' is reversed to 'hand on top of strawberry' to maintain correct spatial relation with 'on top of'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A strawberry being on top of a bowl is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be inside a refrigerator door; typically, items are inside the refrigerator compartment, not the door itself.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is likely on top of the pipe rather than the pipe being on top of the hand; flipping subject and object restores physical plausibility.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bowl is typically placed on top of a pipe, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A slender pipe cannot realistically be inside a refrigerator door, as doors are solid objects without interior space suitable for such a pipe.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The strawberry is on top of the hand, so flipping subject and object better matches the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A strawberry rotating on top of a bowl containing fruits is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A strawberry being inside a refrigerator door is unlikely; more plausible the strawberry is inside or on the refrigerator (or its interior), flipping subject/object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so it is unclear what object is 'on top of' the hand; more context is needed to evaluate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification but the predicate 'on top of' with the bowl is plausible; insufficient details to confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or descriptive attributes, making it unclear what is inside the refrigerator door; thus, keeping the relationship due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small grape cannot hold or grasp a refrigerator door, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of 'pouring into' a refrigerator door, as it is an inanimate fruit and not capable of pouring.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "pouring into",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of 'pouring into' a cabinet door, which is stationary and non-liquid; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "pouring into",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of placing an object such as a cabinet door; this is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot hold a strawberry; the 'holding' relationship is not physically plausible between fruits.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot perform the action of placing an object such as a strawberry; this action requires agency usually attributed to animate beings.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator door cannot receive contents from a cabinet door; both are stationary objects and do not transfer contents to each other.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "receiving contents from",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cabinet door cannot be filled by a refrigerator door; the predicate 'being filled by' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "being filled by",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be poured into a cabinet door; the action is physically impossible given the objects' properties.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot be 'being poured into' a cabinet door, which is a solid object that cannot receive a poured substance; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A strawberry cannot be 'being poured into' a cabinet door; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no description, and the object is a stationary cabinet door, making it implausible that any substance is being poured into it without further context.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "being poured into",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A hand cannot be transferred into a cabinet door; the phrase is physically impossible given the described entities and their typical functions.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being transferred into",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bowl being transferred into a stationary cabinet door is not physically plausible; cabinet doors are not receptacles that receive bowls.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "being transferred into",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A grape cannot release a cabinet door; the relationship is physically and functionally implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "releasing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is focusing, but it is plausible that a camera is focusing on the grape.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      4,
+      "inside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "under",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "inside",
+      [
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "under",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "under",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "contains",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "left of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "left of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "left of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      17,
+      "left of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "left of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      12,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "left of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      14,
+      "contains",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "contains",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "above",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "below",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "inside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "right of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "right of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "right of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "right of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "on top of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "on top of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "inside",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      3,
+      "on top of",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      8,
+      "inside",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000025"
+}

@@ -1,0 +1,1464 @@
+{
+  "activity_differential": [
+    "child playing on trampoline",
+    "child jumping and bouncing on trampoline",
+    "child falling and getting up during trampoline play"
+  ],
+  "description": "A child is actively jumping, bouncing, and occasionally falling on a trampoline in an indoor play area, while other people are present in the background. The camera follows the child's activity, capturing dynamic trampoline play.",
+  "place_env_id_name": "indoor trampoline park",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A person standing on top of an exercise mat is a physically plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be surrounded by a single rectangular mat; 'surrounded by' implies enclosure on all sides, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be realistically surrounded by a single trampoline spring, which is a small, cylindrical object.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "surrounded by",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing on top of a mat is a common and physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing on top of a mat, which is described as stable and flat, is physically plausible and commonly observed.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person standing on top of another person is implausible given the described postures and typical physical constraints.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear another person; the 'wearing' predicate is incorrectly assigned between two people.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be wearing a fluorescent tube light; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of a sturdy red bench is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of a tall, stationary rectangular object is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a tall pole is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing with a steady stance and the tall, upright object described as a fixed structure supports the spatial relationship 'in front of' as plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship states the person is 'in front of' an unknown object with no description; lack of information prevents full evaluation, so keep as is.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any identification or description, making it unclear what the person is in front of. However, the relationship is plausible and cannot be disproven.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a mat is a common and plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a cushion is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be positioned in front of a stationary pole, and the descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a stationary gym mat is spatially plausible given descriptions and typical use scenarios.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A standing person in front of a seated person on a trampoline is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of an inflatable structure is spatially plausible given the descriptions of both objects and their relative positioning.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a person standing; however, the object lacks any identifying information, so the spatial relationship 'in front of' cannot be fully verified but cannot be ruled out either.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person positioned in front of an unknown object, but the object's identity and description are missing, so the spatial relation cannot be fully verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of a tall, stationary cylindrical object is a plausible spatial relationship based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unlikely for one standing person to be physically 'under' another standing person without additional context like lifting or elevated positioning.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person actively moving can plausibly be touching an exercise mat used for stability and support during dynamic activities.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving energetically can be touching a gym mat; this spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person engaged in dynamic activity can plausibly be touching a trampoline spring; the description supports physical contact during movement.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person dynamically moving and extending arms can plausibly be touching a stable blue mat designed for gym or play activities.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as moving energetically and extending arms, suggesting interaction; touching a stationary gym mat is plausible in this dynamic activity context.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people described with dynamic postures and motions plausibly can be touching during an interaction or game.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person is above a mat, not the mat under the person, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely on or above the mat, so 'person under mat' is incorrect; flipping subject and object to 'person under mat' makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot logically be 'surrounding' a person since it is a flat object lying beneath or under an object, not encircling it.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat cannot spatially 'surround' a person; the person may be on or near the mat, but the mat does not enclose or surround the person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trampoline spring cannot surround a person as it is a small, rigid object designed to connect to a trampoline frame, making the spatial relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A trampoline spring cannot physically surround a person due to its size and structure.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely standing on or above the mat, so flipping subject and object makes 'person under mat' into 'mat under person', which is physically plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is logically on or over the mat, not under it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is on or above the mat, so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is stationary and flat, so the person would be on or above the mat, not the mat under the person; reversing subject/object fits the spatial predicate 'under' correctly.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "One standing person being 'under' another person who is also upright and only slightly crouched is unlikely given their described postures and spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person in crouched position beneath or slightly lower than another moving person is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person cannot be on a fluorescent tube light; it is more plausible that the fluorescent tube light is on (above) the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a moving person with extended arms could be touching a fixed fluorescent tube light in the environment.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely behind the bench rather than the bench being behind the person; flipping subject and object makes spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the tall red object rather than the object being behind the person, based on typical spatial relations and the described orientation.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more natural to say the person is behind the pole rather than the pole being behind the person, so flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, stationary object can plausibly be located behind a standing person, making the spatial relationship 'behind' reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown with no attributes or description, so it is unclear what is behind the person; however, the spatial relation 'behind' is plausible without conflicting information.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks name and description, so it's unclear what it is; the spatial predicate 'behind' is plausible but cannot be confirmed or rejected without more context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is behind the mat rather than the mat being behind the person, given typical physical arrangements and the mat's stationary description.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cushion gliding behind a person is unlikely; more plausibly, the person is behind the cushion or the cushion is in front of the person. Flipping subject and object aligns better with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is described standing steady, and the pole is stationary and diagonal. It is more plausible that the person is behind the pole, so flipping the subject and object makes the spatial relationship 'behind' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary mat being behind a person is unlikely; usually, the person is behind the mat in spatial terms, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one person seated on a trampoline to be positioned behind another person standing nearby, indicating correct spatial relation.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person likely stands behind the inflatable structure, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it's unclear what is behind the person; however, the spatial predicate 'behind' is plausible, so the relationship is kept but noted as insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it is unclear what is behind the person; relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely to be behind the stationary cylindrical object rather than the cylindrical object being behind the person, so reversing subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm any focus or attention relationship.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being focused on",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), making it impossible to confirm that a camera is following the person; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, not jumping. Thus, 'jumping on' the mat is incompatible with the described posture and actions.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "jumping on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as maintaining a steady stance with crossed arms, not performing any bouncing action on the mat, which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "bouncing on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is maintaining a steady stance and not described as moving or falling; therefore, 'falling on' the mat is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "falling on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with a steady stance and arms crossed, indicating they are not in the process of standing up from the mat; thus, the relationship 'standing up from' the mat is not accurate.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing up from",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'playing near' a fluorescent tube light, which is a stationary, functional object with no interactive properties.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person typically does not 'play near' a mat, which is an inanimate object; the predicate 'playing near' is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is detailed and seems to be looking at an object, but the object lacks identification or description, making it unclear what or who is being looked at.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "occasionally looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A mat is an inanimate object and cannot engage in the action of playing near; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, so they cannot be 'jumping near' the mat.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as maintaining a steady stance with arms crossed and not jumping; hence, jumping near the mat is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as standing with arms crossed and maintaining a steady stance, making the predicate 'jumping near' incorrect given the absence of jumping action.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "jumping near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person occasionally glancing at a moving sports ball is a plausible attentional behavior given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person occasionally glances at the stationary red bench, consistent with the described attentional relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary person occasionally glancing at a dynamically moving person is plausible and consistent with their described actions and posture.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly occasionally glance at a stationary mat, consistent with the attentive predicate and described postures.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person occasionally glancing at a stationary mat they are facing is plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description indicates the person glances at the fluorescent tube light occasionally, which is plausible, but there is limited context to fully confirm the nature of attention.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "occasionally glancing at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any identifying details, making it impossible to fully confirm or reject the plausibility of 'playing near' the object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is described as standing still with a contemplative posture, while the other is engaged in dynamic movement; it is unlikely the still person is 'playing near' the moving person.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person with a steady stance and crossed arms is unlikely to be 'playing near' a mat, as the described posture indicates no active play behavior nearby.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot plausibly be 'playing near' a fluorescent tube light, which is a fixed, inanimate object not associated with play activities.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "playing near",
+      "relation_type": "social",
+      "subject_id": 2
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "on top of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "on top of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "in front of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "in front of",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      28,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      1,
+      "under",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "on",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      1,
+      "touching",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      2,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      2,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      2,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      2,
+      "behind",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "behind",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "occasionally looking at",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          312,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      4,
+      "occasionally glancing at",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          312,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      6,
+      "occasionally glancing at",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          312,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      11,
+      "occasionally glancing at",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          312,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      23,
+      "occasionally glancing at",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          144,
+          192
+        ],
+        [
+          312,
+          360
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      36,
+      "occasionally glancing at",
+      [
+        [
+          408,
+          480
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      26,
+      "occasionally glancing at",
+      [
+        [
+          0,
+          432
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      3,
+      "playing near",
+      [
+        [
+          0,
+          480
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000001"
+}

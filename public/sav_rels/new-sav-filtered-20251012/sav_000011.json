@@ -1,0 +1,1089 @@
+{
+  "activity_differential": [
+    "child playing drum with toy mallets",
+    "child performing musical activity",
+    "child engaged in rhythmic play"
+  ],
+  "description": "A child is sitting in a living room, energetically playing a drum with two toy mallets, while the camera moves closer for a better view.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A lightweight, small balloon-like object cannot physically cover the lower body of a small toy; the spatial relationship is implausible based on sizes and descriptions.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "covering lower body of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight balloon being above a drum is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight balloon-like object being above a suitcase is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The toy is likely held in the child's left hand, so flipping subject and object makes the spatial predicate 'in left hand of' correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in left hand of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is described as engaged and leaning forward, plausibly placing their hands or body above the drum, which is being played and is in motion.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be positioned above or leaning over a suitcase given the described posture and engagement with an object in front of them.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy or ball cannot physically 'wear' a balloon; the predicate 'wearing' does not apply to objects like these.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is described as manipulating or exploring the toy, making it more plausible that the child is holding the toy, so flipping subject and object fits the predicate 'holding'.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for a toy to be holding a sports ball; the spatial predicate 'holding' is typically attributed to animate agents or hands, not inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The toy is described as swinging or tossing in motion, making it unlikely to be stationary and 'sitting on' the drum as claimed.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "sitting on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A toy-like object swinging or moving can plausibly be in front of a suitcase; spatial relationship makes sense given the descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy cannot be wearing another object, especially when the object is undefined; the predicate 'wearing' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sports ball cannot be in the right hand of a toy, as the toy is unlikely to possess a hand to hold an object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "in right hand of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rotating sports ball positioned above a drum is a physically plausible spatial arrangement in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The red sports ball is plausibly positioned above the suitcase, given the descriptions and spatial context.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door frame stands vertically and the drum is in front of it spatially; this is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door frame standing in front of a suitcase is plausible given the spatial descriptions and object positions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A suitcase and a mirror can be spatially attached, for example with the mirror on a luggage surface or nearby; the metadata does not contradict this.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent positioned in front of a door is spatially plausible based on their described physical characteristics and typical scene setup.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A drum can plausibly be positioned above a door in a scene, and both objects remain stationary, making the spatial relationship 'above' reasonable.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary curtain plausibly positioned in front of a swinging or moving toy is physically and spatially reasonable given the described attributes.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can physically be positioned in front of a drum; this spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary curtain is plausibly positioned in front of a suitcase that shifts slightly in position; this spatial relationship is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pen being attached to a door (possibly by a clip or magnet) is plausible given the pen's and door's physical description.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent positioned in front of a door is spatially plausible given their descriptions and fixed positions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The drum is described as stationary and prominently featured at a lower position than the tall door; it is unlikely for the drum to be physically above the door given the typical size and positioning of these objects.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the vibrant yellow toy is under the drum rather than the drum being under the toy, given typical physical arrangements and the descriptions provided.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The suitcase is upright and the drum is likely above or on top of it; flipping subject and object makes the 'under' relationship spatially accurate.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a drum with detailed description, but the object's identity and description are unknown, making it impossible to confirm spatial relation correctness; thus, keep by default.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The metadata describes a suitcase-like object and a toy-like object with ambiguous spatial orientation; 'in front of' is plausible but not definitively confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The suitcase-like object is positioned upright with subtle movement, plausibly on top of the drum, which is in motion. The context is unclear but relationship is reasonable.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described as a suitcase-like object, but the object lacks any identifying information, so the spatial relation cannot be verified or corrected.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "A remote control moving in front of a stable door is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The door is more likely to be in front of the wall panel rather than the reverse, flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The mirror is described in relation to a tall rectangular door; stating the mirror is 'left of' the door is spatially plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mirror can plausibly be attached to a door, and the attributes and descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports a stable spatial relationship and the door can plausibly be positioned left of the mirror.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A mirror is plausibly attached to a door as described, given the spatial and physical characteristics provided.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "The uncertain tall, slender wooden object cannot realistically be above the tall, rectangular metallic door as both appear vertical and standing upright; 'above' spatially does not make sense here.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stool and curtain are described as stationary and positioned such that the stool is plausibly to the left of the curtain, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain is likely behind the toy, and this spatial relationship is plausible; however, the uncertain object descriptions prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pole standing above a door spatially is plausible because poles are often positioned higher or projecting above doors.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe moving gracefully to the left of the stationary large door is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks name and description, so it's unclear what 'on feet of' precisely means with the toy; the relationship cannot be confidently validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "on feet of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy object cannot 'play' a drum; the relationship 'playing' requires animate subjects capable of intentional action.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A toy playing a suitcase is not physically plausible; 'playing' as a higher-order predicate requires an animate subject.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "playing",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is described as holding or interacting with the toy, not the toy holding the child; flipping subject and object aligns with the plausible scenario.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The subject is described as a toy being swung or tossed, which suggests a person or hand would be holding the toy rather than the toy holding the sports ball. Flipping to have the sports ball holding the toy is also unlikely, so flipping subject and object improves plausibility.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A toy striking a child is unlikely; more plausible is that the child is striking or interacting with the toy, so reversing subject and object makes sense.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vibrant yellow toy swinging and striking a red sports ball is plausible given the described motion and physical attributes of both objects.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A toy or small ball striking a drum is plausible given both objects' descriptions and the motion involved.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A toy swinging or tossing can plausibly strike a nearby suitcase, and both objects' descriptions support this possible interaction.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "striking",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lightweight, swinging toy cannot logically be 'sitting on' a curtain, which is fabric that hangs and does not serve as a solid surface for sitting objects.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks detail, making it unclear if the 'camera moving toward' relationship is accurate, but the object is a toy in motion; thus, the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear what is focusing on the toy, but the relationship is plausible if the subject is a camera.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      13,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in left hand of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "holding",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      20,
+      "attached to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          144,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          144,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          144,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      18,
+      "attached to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "under",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      26,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      26,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "left of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          144,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "attached to",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      20,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      18,
+      "attached to",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      23,
+      "left of",
+      [
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          192,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      3,
+      "behind",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      18,
+      "above",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      19,
+      "left of",
+      [
+        [
+          0,
+          72
+        ],
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      3,
+      "on feet of",
+      [
+        [
+          0,
+          144
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "holding",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      3,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      3,
+      "striking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      4,
+      "striking",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      13,
+      "striking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      14,
+      "striking",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      3,
+      "camera moving toward",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "camera focusing on",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000011"
+}

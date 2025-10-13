@@ -1,0 +1,1431 @@
+{
+  "activity_differential": [
+    "person giving a speech or presentation",
+    "person hosting or emceeing an event",
+    "person addressing an audience with a microphone"
+  ],
+  "description": "A person in formal attire is speaking and gesturing with a microphone on a red carpet, likely addressing an audience at an indoor event with several other people present in the background.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically stand on another person who is also walking; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking can be described as standing on the mat as part of their motion; this spatial relationship is plausible given the context.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically hold a large, smooth, and stationary wall; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking slightly forward tilted can plausibly be in front of a tall, stationary wall.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking is plausibly in front of another person standing; the spatial relationship is consistent with the described postures and actions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking and is positioned in front of a stationary window, matching the spatial relationship plausibly.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be in front of a long, narrow runner on the floor, and the spatial predicate 'in front of' fits the scene description.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as walking and slightly forward-tilted; 'standing on' some object without details may still be plausible, but the object is unspecified, making it uncertain yet possible.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be in front of a tall, stationary rectangular object; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking and positioned in front of a stationary pole; this spatial relationship is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be positioned in front of a curtain, especially as described with spatial context and movement.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking slightly forward and a nearby curtain are plausibly arranged with the person in front of the curtain spatially.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot stand on a small, handheld microphone; this relationship is physically implausible given the microphone's size and function.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person can be standing on a step, and the step's description matches a plausible surface to stand on.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking slightly forward-tilted can plausibly be in front of another person walking upright and confident.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a carpet is spatially plausible and consistent with the description provided.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking can be positioned in front of a stationary carpet; the spatial relationship is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking with a slight forward tilt can plausibly be positioned in front of the carpet; this spatial relationship is consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The walking person in front of the seated person is a plausible spatial relationship given their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking with a slight forward tilt plausibly positioned in front of another person standing attentively, making the spatial relationship 'in front of' reasonable.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a walking person to be in front of a seated child examining an object, consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One walking person positioned 'in front of' another standing person is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person can plausibly be positioned in front of a gently swaying balloon-like object, making the spatial relationship credible.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking is plausibly positioned in front of flowing fabric, making the spatial relationship 'in front of' reasonable.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can be positioned in front of a stationary poster; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a hand as the hand is part of the person; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A large, smooth, stationary wall cannot be 'held by' a person; the physical relationship does not make sense.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is typically above a wall base rather than the wall being above the person; flipping subject and object makes the spatial predicate 'above' plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wall being above a mat is spatially and physically plausible according to the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being 'under' another person in a walking context is physically unlikely and unsupported by the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically positioned 'under' a wall, which is a vertical structure; this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking adjacent to a mat is physically plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "adjacent to",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking on or over the mat, so the person is 'on' or 'above' the mat; flipping subject and object corrects the spatial 'under' predicate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary gym mat being adjacent to a walking person is physically plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "adjacent to",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot be 'under' a large wall; rather, the mat is on the floor beneath or in front of the wall, so flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wall can be spatially behind a person walking nearby, which is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the standing, slightly leaning person is positioned behind the walking person; the spatial 'behind' relationship fits the described scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The window is a stationary architectural element, and the person is moving in front of it; it is plausible that the window is behind the person from the camera's viewpoint.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object identified as a runner (a long narrow carpet or mat) can logically be behind a walking person in the scene; the spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so it is unclear what object is under the person, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'behind' between a tall, stable object and a walking person is plausible and well supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary slender pole can plausibly be positioned behind a walking person, matching the spatial predicate 'behind'.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain swaying behind a person who is walking in front of it is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is more plausibly behind a curtain than the curtain being behind the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is under the microphone, not that the microphone is under the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A step being 'under' a person is more accurately described as the person 'on' or 'over' the step; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking behind another with these described attributes and spatial positions is plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person walking is more likely to be behind a carpet rather than a carpet behind a person; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The carpet is stationary and a person is walking; it is plausible for the carpet to be behind the person spatially.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is more likely behind the carpet from the viewer's perspective; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "One seated individual being behind another person walking in front is spatially and contextually plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The first person standing confidently can plausibly be behind the second person who is walking slightly forward-tilted; the spatial relation 'behind' fits the described postures and actions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'child behind person' is plausible given the descriptions, with the child seated and person walking forward nearby.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person standing behind another person walking is spatially plausible given the descriptions of posture and actions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A metallic balloon-like object swaying gently behind a walking person is plausible based on the descriptions and spatial relation.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fabric undulating behind a person walking is a plausible spatial relationship consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary poster can plausibly be located behind a walking person; the spatial relationship 'behind' is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand typically belongs to a person, so the person is likely behind the hand, not the hand behind the person; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot hold a large stationary wall; the 'holding' predicate is not plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot speak into a wall as it lacks any functional capacity to receive speech like a device would.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "speaking into",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks descriptive information, making it unclear what the person is looking at, but the relationship is plausible as is.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally 'address' an inanimate wall; this predicate implies communicative intent not applicable to a wall.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'address' an inanimate object; 'addressing' implies communication directed towards a sentient entity, so this relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person can reasonably be addressing a crouched person engaged in contemplation, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking and appearing to address another person crouched and relaxed is semantically and physically plausible.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically 'address' a banner, which is an inanimate object; this predicate is not appropriate for such an object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot logically be 'addressing' an inanimate object like a fabric runner.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person slightly leaning forward can plausibly be addressing another standing person engaged and focused in the scene.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking and slightly leaning forward can realistically be addressing the seated child, which is plausible in a social context.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking and slightly leaning forward can be addressing another person standing and gesturing, making the relationship plausible given their described actions and postures.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person slightly leaning forward and swinging arms plausibly addressing a seated person showing subtle hand gestures and attentiveness.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "addressing",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same person; it is redundant to state the person is gesturing to themselves.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "gesturing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification, but 'camera focusing on person' is a plausible relationship given the person's detailed description; context is insufficient to confirm otherwise.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      21,
+      "standing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "standing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      31,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "standing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      28,
+      "in front of",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          96
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          96
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      21,
+      "adjacent to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "adjacent to",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      1,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "behind",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      1,
+      "behind",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      1,
+      "behind",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      1,
+      "behind",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      1,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          96
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      1,
+      "behind",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          96,
+          96
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      1,
+      "behind",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      1,
+      "behind",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "behind",
+      [
+        [
+          144,
+          192
+        ],
+        [
+          240,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      -1,
+      "looking at",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      1,
+      2,
+      "addressing",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      3,
+      "addressing",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      27,
+      "addressing",
+      [
+        [
+          24,
+          72
+        ],
+        [
+          216,
+          240
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      28,
+      "addressing",
+      [
+        [
+          24,
+          96
+        ],
+        [
+          216,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      29,
+      "addressing",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          96,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      22,
+      "addressing",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000048"
+}

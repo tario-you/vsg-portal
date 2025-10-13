@@ -1,0 +1,1307 @@
+{
+  "activity_differential": [
+    "cat playing with twig on log",
+    "cat stretching and shifting on log",
+    "cat interacting with another cat"
+  ],
+  "description": "A white cat is lying and stretching on a log outdoors, occasionally interacting with a twig and shifting its gaze and posture.",
+  "place_env_id_name": "outdoor log area",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A cat being 'inside' a slender branch is physically impossible as the branch is too small and solid to contain the cat.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A cat cannot realistically be inside a twig; the spatial relationship is not physically plausible given the sizes and descriptions of the objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat being inside or partially inside a hollow log or natural cavity is plausible given the log's description and the cat's exploratory actions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cat positioned above a log is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cat is spatially above the leaf during its fluid movement, which is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat positioned above a log is physically plausible given the descriptions; the spatial relationship 'above' makes sense.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat positioned above a log is plausible given the descriptions, as cats often rest or perch on logs and the relationship 'above' fits the spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are cats described together in similar postures and proximity; stating one is 'above' the other is redundant without clear spatial distinction.",
+      "label": "redundant",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, so it's unclear what the cat is positioned right of, but the spatial relationship could be plausible.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cat being to the left of the leaf is a physically plausible spatial relationship given their descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A branch and a twig with leaves can reasonably overlap spatially in a natural setting, as both have slender elongated forms with clusters of leaves and may partially cover each other.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch overlapping a stationary log with moss is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch resting on top of a log is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Leaves are on top of branches, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch being next to a slender, elongated log is spatially plausible and supported by the detailed descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "next to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch being next to a log is a plausible spatial relationship given the natural setting described.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "next to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cat can be on top of a branch, but a branch cannot realistically be on top of a cat; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object has no provided information to verify the spatial relationship; therefore, the relationship is kept with uncertainty.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A branch is a larger structure that can be spatially to the left of one of its leaves; the relationship 'branch left of leaf' is plausible within the scene context.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig overlapping a stationary log with moss is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig can plausibly be on top of a log, matching the descriptions provided and the spatial predicate.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Leaves grow on top of twigs, so the leaf should be the subject on top of the twig as the object to match the predicate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig being next to a log is a physically plausible spatial relationship given their described attributes and positions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "next to",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig next to a rugged log is a plausible spatial relationship given their natural coexistence and described positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "next to",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small, delicate twig cannot realistically be 'on top of' a moving cat in a meaningful, plausible way.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification and description, making it unclear what the twig is spatially related to, but no contradiction exists to drop or flip.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slender twig and leaf are spatially related plausibly, with the twig positioned left of the leaf as described; both have compatible attributes and the spatial predicate makes sense.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rough, textured log positioned above a smoother, slightly curved log is spatially plausible as described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary log being above a leaf is spatially plausible, as leaves often lie beneath logs in natural settings.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are logs described with natural positioning; stating one log is 'above' another adds no meaningful new information beyond their coexistence.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar logs with nearly identical attributes and stationary positions; stating one log is 'above' the other adds no meaningful new spatial information.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log cannot be spatially above a cat; it is more plausible that the cat is above the log, so flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship 'right of' accurately.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary log can physically be located to the left of a moving leaf; the spatial relationship 'left of' is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A log being right of a leaf is spatially plausible and consistent with their described positions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two logs described with similar spatial attributes can logically be positioned relative to each other; stating one is 'right of' the other is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description indicates two logs positioned so that one is to the right of the other, which is a plausible spatial relationship given their stationary nature and physical characteristics.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary log situated beside a cat in motion is spatially plausible and consistent with their described appearances.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The log's position to the right of an undefined object cannot be fully confirmed or denied due to missing details about the second object.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary log positioned to the left of a small, swaying leaf is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vibrant leaf can plausibly be positioned to the right of a stationary log in a natural setting, making the 'right of' spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The leaf being positioned right of the stationary log is spatially plausible given their descriptions and no conflicting context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leaf beside a cat is a physically plausible spatial relationship, and the detailed descriptions support this scenario.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a leaf, and the relationship 'right of' is spatially plausible, but the object lacks any description or identification; thus, the accuracy of the spatial relation cannot be fully assessed.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leaf can be spatially positioned to the left of another leaf in a natural context, and the descriptions indicate they are separate leaves with distinct positions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are logs described together with no clear vertical spatial distinction; stating one log is 'above' the other lacks credible new information.",
+      "label": "redundant",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A log can be positioned above a cat in a scene, making the spatial relationship 'above' plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The log's position 'right of' an unidentified object cannot be confirmed or denied due to lack of information about the other object.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary slender log placed left of a small, swaying leaf is spatially plausible and fits the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Physically, the cat is likely above the log rather than the log being above the cat; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship has no name or description, making it unclear what the log is spatially related to.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The log is stationary and the leaf is subtly moving; it is plausible for the log to be positioned left of the leaf in a natural scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and lacks description or attributes, making it impossible to confirm the spatial relationship with the cat.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cat can plausibly be positioned left of the leaf in a spatial relationship, and the descriptions support a scenario where both coexist in spatial proximity.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unnamed and undescribed, making it impossible to confirm or refute its spatial relation 'left of' the leaf.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch can reasonably be touching a stationary log, especially with moss present, making this relationship plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot physically perform the action of 'batting at' a log, as it lacks agency or ability to deliberately interact in this way.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "batting at",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender branch resting on a log is plausible in a natural setting; the descriptions support this relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A branch can subtly shift position on a log, especially in a natural setting with slight movements caused by breeze or contact.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "shifting position on",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot perform the action 'looking at' a cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot look at or attend to a cat.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch is an inanimate object and cannot perform the action 'looking at'; thus, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Branches and twigs, as plant parts, do not socially interact; 'interacting with' as a social relation is not physically meaningful here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Branches and twigs are inanimate plant parts and cannot perform the action 'grooming with' each other.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "grooming with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot 'play with' a twig; the predicate implies intentional action not plausible for non-sentient plant parts.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A branch cannot perform a social action like 'ignoring' especially towards an undefined object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Plant parts like twigs and branches do not engage in social interactions; 'interacting with' is not appropriate for these natural objects.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig with leaves touching a stationary log with moss is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender twig resting on a stationary log is physically plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig, being an inanimate plant part, cannot engage in the attentional action of 'looking at' a cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig (inanimate plant matter) cannot look at anything; thus 'looking at' between twig and cat is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig is an inanimate object and cannot perform the action of 'looking at' another object like a log.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig or branch cannot groom another branch; the predicate 'grooming with' is not plausible for plant parts.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "grooming with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig cannot engage in the complex action of 'playing with' a branch; this is physically and biologically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A twig cannot perform a social action like ignoring, and the object has no details to support this relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it unclear who or what is ignoring the branch; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the predicate 'ignoring' implies a social interaction that cannot be confirmed with an object likely being a twig; lacking sufficient context to determine correctness.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 12
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      5,
+      "inside",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "above",
+      [
+        [
+          0,
+          504
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          96,
+          480
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "overlapping",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "overlapping",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "next to",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "next to",
+      [
+        [
+          0,
+          504
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          96,
+          480
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "overlapping",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "on top of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "next to",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "next to",
+      [
+        [
+          0,
+          504
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "left of",
+      [
+        [
+          96,
+          480
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "left of",
+      [
+        [
+          96,
+          480
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "beside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "left of",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "beside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "left of",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "above",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      12,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "above",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "left of",
+      [
+        [
+          96,
+          480
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "left of",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "touching",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      6,
+      "resting on",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      6,
+      "shifting position on",
+      [
+        [
+          72,
+          360
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      5,
+      "touching",
+      [
+        [
+          0,
+          528
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      6,
+      "resting on",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "functional"
+    ],
+    [
+      12,
+      4,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000097"
+}

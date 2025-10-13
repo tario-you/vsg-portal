@@ -1,0 +1,1121 @@
+{
+  "activity_differential": [
+    "people walking along a residential street",
+    "car approaching pedestrians on sandy road",
+    "camera observing street activity"
+  ],
+  "description": "A group of people are walking along a sandy road in a residential area, with a car approaching and a motorcycle entering the scene. The camera remains mostly stationary, capturing the gradual movement of people and vehicles.",
+  "place_env_id_name": "residential street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically on top of the sky; the relationship is spatially impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be under parts of a large house, such as the roof overhang or scaffolding, matching the spatial predicate 'under'.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person is spatially positioned in front of a large building, matching the scene description.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person is to the left of a large building in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object is unnamed and lacks description, so spatial relation 'left of' involving the person cannot be fully assessed but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'on top of' the sky since the sky is above and surrounding the person; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking can plausibly be under some part of the large house (e.g., porch or overhang), making the 'under' spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a large building is a plausible spatial relationship given the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking can be spatially located to the left of a large building; this is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described as a person, but the object lacks identification and description, making it impossible to verify the spatial relation precisely, though it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sand cannot be on top of the sky; rather, the sky is above the sand, so flipping subject and object fixes the predicate.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is on the sand, not the sand under the house; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sand is plausibly located in front of the large building, making the spatial relationship realistic and coherent.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between the sand and the building is plausible, given the sand is a large area and the building is distinct and positioned beside it.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to interpret or verify the spatial relationship with the sand.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is under the sky, not the sky under the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is under the sky, not the sky under the person; reversing subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sand is physically below the sky; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the house, so flipping subject and object makes the spatial predicate 'below' accurate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky cannot be in front of a building from the viewer's perspective; buildings appear in front of the sky, not vice versa.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sky can be described as positioned to the left of a building in a spatial context, which is plausible given a typical scene layout.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or interpret the spatial relationship with the sky.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be above the house only if they are positioned on the roof or higher, but based on the descriptions, flipping the subject and object makes more sense: the house is above the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large, stationary house is plausibly located above the walking person in the spatial sense (e.g., the house is elevated or the person is below), making 'house above person' reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a house (subject) to be above the sand (object) in a spatial relationship since houses are typically constructed on top of ground or sand surfaces.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the house, not the house above the sky; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are large buildings described similarly and likely overlapping; stating one is above the other adds no clear distinct spatial information.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A house cannot be spatially above a large multi-story building; this relationship is physically implausible given typical building structures.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying name or description, making it impossible to verify the spatial relationship 'above' with the house.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is in front of the building; flipping subject and object corrects the spatial predicate 'behind'.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a large building to be behind a person walking along a path, consistent with the spatial predicate and descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sand is typically in front of a building; the building being 'behind' the sand is more plausible if sand is the reference point, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is typically behind the building, not the building behind the sky; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is below the building, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for one large building to be to the right of another large building in a scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a building, but the object lacks any description or name, making it unclear what the building is to the right of; it is best to keep the relationship as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a large building to be located to the right of a person in a spatial context.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is right of the building rather than the building being right of the person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large building located to the right of a vast expanse of sand is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A building cannot be positioned 'right of' the sky, as the sky is a background element encompassing the whole scene.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The house is likely below the larger multi-story building, so flipping subject and object corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both are large buildings with distinct features and the relationship 'left of' is plausible given their relative positions in the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The building's position 'right of' an unspecified object lacks enough detail to confirm or deny the spatial relationship, so it is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, making it unclear what the spatial relationship 'right of' implies relative to the described person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification, but the spatial predicate 'right of' with respect to a described person is plausible without contradicting available information.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, so spatial relation 'right of' to the sand cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely undefined with no name or description, making it impossible to verify or make sense of its spatial relation to the sky.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unnamed and undescribed, so its spatial relation 'below' to the house cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so while 'left of building' is spatially plausible, there is insufficient context to confirm the relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying details, making it unclear what the object is, but spatial relation 'left of' relative to a building is plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally walk on the sky, which is an aerial expanse above ground.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sand cannot walk on the sky; the predicate 'walking on' is physically impossible between sand and sky.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking on",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be walking near sand, given the descriptions of both.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'driving on' the sky; the relationship is physically impossible under normal circumstances.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "driving on",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person moving with purpose and stepping forward towards another person who is walking steadily suggests a plausible 'approaching' relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving toward or approaching an expanse of sand is physically and semantically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'being approached by' implies the object is approaching the subject; flipping the subject and object aligns with the observed actions and spatial dynamics described.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person approaching a sand surface is a physically plausible scenario based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'walking together' with sand as sand is an inanimate substance that does not walk.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sand, being a non-sentient substance, cannot engage in the social action 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined with no attributes or description, making it impossible to confirm the watching relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified and has no description; we cannot confirm watching relationship to sand, which is inanimate and unlikely to be watched attentively in this context.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined and the object is a moving person, so without more detail, the 'watching' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "under",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "walking near",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "approaching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      3,
+      "approaching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      2,
+      "being approached by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      1,
+      "being approached by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      1,
+      "watching",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000079"
+}

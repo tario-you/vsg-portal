@@ -1,0 +1,308 @@
+{
+  "activity_differential": [
+    "cat self-grooming and scratching",
+    "cat sitting and resting",
+    "cat yawning and relaxing"
+  ],
+  "description": "A cat is sitting on the floor in a living room, initially yawning, then sitting still, and later scratching itself. The environment includes another cat and a fabric object, but the main activity centers on the first cat's self-grooming and brief yawning.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "One cat cannot realistically be 'on top of' another cat in a spatial sense described here; both cats are seated on the floor side by side.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat sitting in front of a fabric object is plausible and matches the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a cat, but the object lacks any description or name, so the spatial relation 'left of' cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One cat being under another is unlikely given both cats are described as sitting gracefully; the spatial relationship 'under' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cat sitting with a fabric piece in front is a physically plausible and reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to evaluate the spatial relationship with the cat.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The fabric is likely behind the cat, not the other way around; flipping subject and object aligns with typical spatial interpretation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A piece of fabric being behind a cat in spatial relation is plausible given the descriptions of their positions and appearances.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description to verify spatial relation; thus relationship is unsupported.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what it is, but the spatial relationship 'right of' a cat is plausible if the subject is another object.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the positional relationship 'right of' relative to the described cat cannot be fully validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of subject's identity and description prevents verification of spatial relation 'right of' with the fabric object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'cat yawning cat' where subject and object are the same cat is not logically coherent; a cat cannot yawn another cat.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "yawning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the cat is sitting the cat, which is a self-referential and redundant statement without meaningful new information.",
+      "label": "redundant",
+      "object_id": 1,
+      "predicate": "sitting",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The cat is described as sitting calmly with paws tucked and remains mostly still; it is not scratching itself as stated in the relationship.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "scratching itself",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "One cat ignoring another nearby cat with attentive posture is a plausible social interaction.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the cat may be ignoring the fabric, the concept of a cat ignoring an inanimate object like fabric is plausible but not strongly evident or meaningful; the metadata does not provide enough context to confirm the social interaction.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The predicate 'ignoring' between the cat and an unidentified object with no description is plausible but lacks sufficient context to fully verify.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "ignoring",
+      "relation_type": "social",
+      "subject_id": 1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "behind",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      3,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ],
+    [
+      1,
+      4,
+      "ignoring",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "social"
+    ]
+  ],
+  "video_id": "sav_000046"
+}

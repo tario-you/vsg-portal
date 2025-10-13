@@ -1,0 +1,5003 @@
+{
+  "activity_differential": [
+    "child caring for younger child",
+    "children socializing and playing together",
+    "child feeding or helping another child eat"
+  ],
+  "description": "A group of children are interacting at the entrance of a home. One child is sitting on a stool, holding a younger child on their lap, while another child enters the scene holding a book and pen. The children interact with each other and with a bowl of noodles on the ground.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A book cannot be spatially 'behind' a dress in a way that makes sense; more plausibly, the dress is behind the book from the viewer's perspective, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vibrant pink book is described as tilting and rotating, while the noodles remain stationary; the book being behind the noodles in the scene is plausible based on spatial relations.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A book cannot realistically be behind a child's head, but the child's head can be behind the book, making flipping subject and object appropriate.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A moving and tilted book is unlikely to be behind a stable chair leg; reversing subject and object makes the chair leg behind the book, which is plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wooden structure is likely behind the book rather than the book being behind the wooden structure; flipping subject and object aligns with the spatial description.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the book rather than the book being behind the arm, so reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely behind the book, not the book behind the arm; flipping subject and object better matches physical arrangement.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the book is spatially behind the leg, given the visual descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the staircase is behind the book, not the book behind the staircase, given the descriptions and typical spatial relations.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a vibrant pink book being moved to be left of a dark wooden staircase as described.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Given the descriptions, the wooden stool likely is behind the book rather than the book being behind the stool; flipping subject and object aligns with physical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the book is behind the shorts, but physically a book cannot be spatially behind clothes being worn or moved as described; their relative positions are not plausible for 'behind'.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The description suggests the book is held or manipulated by the child, so the child should be the subject and the book the object, making the spatial relationship 'behind' correct if reversed.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A book can be positioned in front of a curtain, making the relationship 'book behind curtain' plausible if the book is further back. Given the descriptions, it is reasonable the book is behind the curtain or vice versa depending on perspective, but without contradiction, keeping the relationship as is is appropriate.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is holding or manipulating the book, so it is more appropriate to say the arm is in front of the book, not the other way around.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A book being spatially right of a baby's foot is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is more likely to be behind a book rather than the book being behind the shoe in typical spatial arrangements; flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log is a static large object that can be behind the book, but the book being behind the log is more plausible; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A book being held or manipulated in front of a stationary log is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dress can be spatially positioned in front of a bowl of noodles in a scene, so the 'in front of' relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dress can spatially contain (cover or surround) a child's head as part of the outfit; the relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress itself cannot be located to the right of a chair leg; the dress is clothing on a person, so it is spatially nonsensical to assign 'right of' between the dress and chair leg independently.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially located right of a wooden structure, as it is clothing that exists on a person rather than as a standalone object in space.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress, as an article of clothing, cannot meaningfully be positioned 'right of' a specific arm; the arm typically supports or is covered by the dress, making this spatial relation implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress itself cannot be positioned 'right of' an arm, as the dress is worn on the body and moves with it; the spatial relationship is not meaningful between a dress and an arm separately.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress, being an article of clothing without a defined spatial position separate from its wearer, cannot logically be positioned right of a leg; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress itself cannot be located to the right of a staircase as it is not an independent entity; the relationship likely refers to the person wearing the dress, but as stated it is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dress is unlikely to be below the staircase; reversing subject and object makes sense since the staircase is below the dress (the dress is on or above the stairs).",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The dress, being a piece of clothing and not an entity independent of the wearer, cannot be spatially located 'right of' the stool on its own.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress and a pair of shorts as objects of clothing cannot be spatially positioned 'right of' each other independently; they are worn by a person and do not exist separately in space in this manner.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress is an inanimate object and cannot have a spatial position like 'right of' relative to a person; the relationship does not make sense as stated.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the dress is positioned to the right of the curtain, and both descriptions support a spatial relationship without contradiction.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially below an arm because it is worn on the body including the arm; the relationship 'dress below arm' is not physically plausible as stated.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be spatially located to the right of a foot as an independent object; the foot and dress are part of the same body's arrangement, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is typically below a dress (on the foot) rather than the dress being below the shoe; flipping subject and object makes the 'below' relation physically plausible.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dress cannot be positioned spatially 'right of' a log independently; the dress is a clothing item and cannot occupy space relative to objects by itself.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dress is plausibly spatially below the log if positioned on the ground and the log is above; the descriptions do not contradict this arrangement.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more physically plausible that the child's head is above the noodles, not the noodles above the child's head; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pile of dry noodles inside a bowl cannot cover a vertical wooden chair leg; this spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Noodles cannot cover a tall wooden structure; it is more plausible that the wooden structure covers or contains the noodles.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the arm covers the noodles rather than the noodles covering the arm; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles, being inanimate and brittle, cannot realistically cover an arm; the arm could cover noodles but not vice versa.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles cannot cover a human leg; it is more plausible that the leg may cover the noodles or be near them, but the described relationship as given is not physically possible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles within a metallic bowl cannot plausibly cover a wooden staircase; the spatial and physical contexts do not align for such a relationship.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pile of noodles inside a metallic bowl cannot be spatially situated to the left of a staircase in a meaningful way; the scales and contexts do not align.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Dry, brittle noodles cannot plausibly cover a wooden stool; noodles would not be placed over or spread on a stool's surface in this manner.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles do not realistically cover or overlap shorts; the spatial relationship is implausible given their typical contexts and properties.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles cannot cover a child; the spatial relationship 'covers' is not plausible with noodles as the subject and child as the object.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles cannot physically cover a curtain, especially since the curtain is likely hanging and larger in scale compared to the pile of noodles in a bowl.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the pile of noodles to be spatially in front of an extending arm, given the descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The noodles and baby's foot can plausibly be positioned side by side with the noodles right of the foot, fitting the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles cannot realistically cover a shoe, especially given their dry and brittle state and the described spatial context.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles cannot realistically cover a log; typically, a log might cover or hold noodles, but the reverse is physically implausible given their relative sizes and physical properties.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "covers",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Noodles inside a metallic bowl cannot logically be positioned 'in front of' a log; the spatial relationship is implausible given the descriptions and typical physical arrangements.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'child's head inside dress' is physically implausible as a head is not contained inside a dress, which typically covers the torso.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head positioned visually below noodles is spatially plausible within a scene; the relationship 'child's head below noodles' is reasonable given no contradictory context.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head located to the right of a chair leg is a plausible spatial relationship given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child's head to be spatially positioned to the right of a tall wooden structure in the scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head being positioned to the right of an arm is spatially plausible given typical human anatomy and scene composition.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's head being right of the arm is a plausible spatial relationship given the described positioning in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child's head to be spatially right of the child's leg; the relationship is consistent with the described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child's head to be positioned spatially to the right of a wooden staircase in a scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a child's head is spatially below a staircase in a vertical scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's head being spatially positioned to the right of the stool is plausible in a scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child's head cannot be spatially positioned 'right of' a pair of shorts independently since the head is part of the body wearing the shorts; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is the child's head, which is naturally part of the child (object); spatially stating the head is 'right of' the child is redundant and not meaningful.",
+      "label": "redundant",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head can be positioned to the right of a curtain; the spatial relationship is plausible given their relative placement.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child's head to be spatially below an extended arm, given the descriptions indicate different positions and orientations.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head being to the right of a baby's foot is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child's head cannot be physically located below a shoe; spatially this relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's head can plausibly be positioned spatially to the right of the log; the spatial relationship is physically and contextually reasonable.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child's head being below a log (e.g., the log positioned above or in front) is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair leg cannot be spatially under noodles, which are typically on top or above a chair leg; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair leg being to the left of a taller, narrow wooden structure is spatially plausible given their physical descriptions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a chair leg can be located to the left of a human arm in the scene, as these spatial relations do not conflict with the physical descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wooden chair leg can plausibly be positioned to the left of a child's arm in the scene, so the spatial relationship 'left of' is reasonable.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'chair leg left of leg' is spatially plausible, but without clear positional detail, the description is ambiguous yet reasonable to keep as is.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair leg positioned to the left of a staircase is a plausible spatial relationship within a scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair leg positioned to the left of a wooden staircase is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair leg being to the left of a stool is spatially plausible and consistent with the descriptions of both wooden furniture pieces.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair leg being to the left of a person wearing shorts who is moving is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a chair leg to be to the left of a child; the descriptions support a stable, vertical wooden chair leg next to a child with no contradictions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair leg can be located to the left of a curtain; the spatial relation is plausible given the described scene.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair leg being positioned in front of a person's arm is spatially plausible in a typical scene.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair leg can plausibly be positioned to the right of a baby's foot; the spatial relationship is reasonable and physically possible.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'chair leg left of shoe' is plausible given their physical descriptions and typical arrangement in a scene.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wooden chair leg can plausibly be positioned left of the log; both objects are described with detailed physical attributes and spatial orientation without contradiction.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair leg can plausibly be positioned in front of a log in a spatial arrangement, and both descriptions support stable, consistent orientations.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tall, narrow wooden structure cannot realistically be 'under' a pile of noodles due to their size and physical properties.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall wooden structure being right of the chair leg is spatially plausible given the descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a tall wooden structure and a moving arm is plausible based on the vague descriptions, but without clear spatial references it is uncertain.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary wooden structure and a moving arm is plausible but context is limited; no contradiction or physical impossibility detected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a tall wooden structure and a slender leg is plausible, but the uncertainty in object identities and lack of clear spatial context means the relationship cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing the wooden structure as 'right of' the staircase is a plausible spatial relationship based on their stationary vertical positions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, narrow wooden structure positioned to the left of a dark wooden staircase is physically plausible and spatially coherent.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall wooden structure being to the right of the wooden stool is a plausible spatial relationship given the descriptions and no conflicting context.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are typically worn under a wooden structure (unlikely), but a wooden structure cannot be under shorts; flipping the relationship is more coherent if the wooden structure is above or behind the shorts.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a tall wooden structure and a child is plausible, but the uncertain object types and lack of detailed spatial context make it difficult to fully verify.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall wooden structure can plausibly be positioned to the right of the curtain in the scene, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between a wooden structure and an arm is plausible, but lacking detailed spatial context to fully confirm accuracy.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a tall wooden structure and a baby's foot is plausible, but the uncertain object types and lack of scene context prevent a definitive assessment.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall wooden structure can plausibly be positioned to the right of the shoe; describing their spatial relationship as 'right of' is sensible given the scene and descriptions.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall wooden structure being spatially to the right of a weathered log is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, narrow wooden structure can plausibly be positioned in front of a log; the spatial relationship is consistent and physically possible.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the noodles are under the arm rather than the arm being under the noodles.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm being right of the chair leg is spatially plausible given their descriptions and no contradictory details.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an arm to be positioned to the left of a stationary wooden structure, given the spatial description.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two arms described with relative spatial placement; the first arm being right of the second is plausible given no conflicting details.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm being to the right of a leg is spatially plausible given the described positions; descriptions align with a natural scene.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned right of a staircase is a plausible spatial relationship given their described locations.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned left of a staircase is plausible given their spatial descriptions in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm can spatially be located to the right of the stool in the scene; this relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is likely under or inside the shorts (wearing them), so flipping subject and object makes the spatial relation 'shorts under arm' incorrect; the arm is under the shorts, not vice versa.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an arm to be positioned to the right of a child in the scene; the spatial relation is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm being to the right of the curtain is a plausible spatial relationship based on their described positions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two arms described with different attributes and actions spatially positioned with one in front of the other is plausible.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm being positioned to the right of a foot in a spatial context is physically plausible in a scene. The descriptions support their distinct presence without contradiction.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm being spatially right of the shoe is plausible based on their descriptions and movements.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm can be located to the right of a log in a spatial arrangement, which is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned in front of a stationary log is spatially plausible given their descriptions and natural arrangement.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm can plausibly be positioned under a pile of noodles, consistent with the spatial predicate 'under'.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm is described as extending and the chair leg is stable; stating the arm is to the right of the chair leg is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm can plausibly be positioned to the left of a tall wooden structure, making the spatial relationship sensible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are similar arms with uncertain identities and overlapping descriptions; stating one is 'left of' the other adds no significant or reliable new spatial information.",
+      "label": "redundant",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned to the right of a leg in a child's pose is spatially plausible given the natural arrangement of limbs.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'arm right of staircase' is plausible given the descriptive context; the arm could be positioned to the right side relative to the staircase.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an arm to be located to the left of a staircase in the scene; this spatial relationship is physically possible and contextually appropriate.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm being positioned to the right of the stool is a spatial relationship that is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned under or below the shorts is spatially plausible, especially if the arm is reaching or interacting near the shorts.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot spatially be 'right of' a child as the arm is part of a body, so the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm positioned right of a curtain in the scene is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are arms described as close and similar in position; stating one arm is 'in front of' the other is redundant and adds negligible new information.",
+      "label": "redundant",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm can reasonably be spatially positioned right of a foot in a scene, especially in a baby; the relationship is plausible as given.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm can plausibly be positioned to the right of a shoe within a spatial scene.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm is spatially positioned to the right of the log, which is plausible given the descriptions and no conflict in physical relations.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for an arm to be positioned 'in front of' a log in a spatial context based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg being spatially under dry, brittle noodles in a bowl is unlikely and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a slender leg to be positioned to the right of a chair leg as described; the spatial relationship is consistent with the scene details.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'leg left of wooden structure' is plausible given the descriptions of both objects and no contradictions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is physically plausible for a leg to be located to the left of an arm in an image or sequence; the spatial relationship 'left of' makes sense here.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg being to the left of an arm is physically plausible in the spatial arrangement of limbs, especially given the detailed descriptions indicating proximity and natural posture.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg visually positioned to the right of a staircase is plausible in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a leg (likely a child's) is positioned left of a wooden staircase as described; the spatial relationship fits the context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slender leg positioned to the right of a stationary wooden stool is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are typically worn on or covering a leg, not under it; flipping the subject and object makes the spatial relationship 'shorts under leg' correct.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'leg right of child' is plausible but uncertain due to lack of explicit contextual confirmation whether the leg is part of or distinct from the child.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg can be spatially positioned to the right of a curtain; the spatial relationship 'right of' is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg spatially positioned in front of an arm is plausible; both limbs are described as belonging to a person and the spatial predicate 'in front of' can reasonably describe their relative positioning.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A leg cannot be spatially positioned 'right of' its own foot since the foot is part of the leg; this relationship misrepresents their actual anatomical connection.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is typically to the right of a leg, not the leg to the right of the shoe; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A leg positioned to the right of a log is spatially plausible given their descriptions; no contradictions or physical impossibilities arise.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Described leg being in front of a log is spatially plausible given their physical properties and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A wooden staircase cannot physically be located under a pile of noodles; the spatial relationship 'staircase under noodles' is implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wooden staircase can plausibly be right of the chair leg given their descriptions and typical room layout.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a wooden staircase and a tall narrow wooden structure is plausible given their described stationary and solid characteristics.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A staircase cannot realistically be positioned to the left of an arm, as the arm is part of a person and spatial orientation relates to entities in a scene, not body parts in isolation.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wooden staircase cannot be positioned 'left of' a movable arm; the spatial relationship between an architectural structure and a body part in this way is implausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a staircase and a leg is plausible, but without scene context it is unclear if this is accurate; no contradictions are evident.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two wooden staircases described side by side, one lighter and the other darker, with one being to the left of the other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase being spatially right of a wooden stool is a plausible spatial relationship given their descriptions and typical room arrangements.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be under a staircase, but a staircase cannot be under shorts; flipping subject and object makes the spatial relation physically accurate.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be to the right of a staircase, but a staircase being 'right of' a child is unusual; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase can plausibly be positioned to the right of a curtain in a spatial scene.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A staircase being 'in front of' an arm (a body part) is physically implausible since the arm's position is part of a person and not an independent spatial reference; typically the arm would be in front of or behind structures, not vice versa.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A staircase cannot be spatially 'right of' a particular foot, especially when the foot is a small, localized object; the relationship is spatially implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase can plausibly be spatially located to the right of a moving black shoe; the relationship is semantically and physically plausible.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase located to the right of a log is spatially plausible given their descriptions and typical environmental arrangements.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase can be positioned in front of a log; this spatial relationship is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary staircase and a moving book is plausible given their described positions; nothing contradicts this arrangement.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A staircase cannot be 'above' a dress in a spatial sense; the dress can be on or near the staircase but not spatially below it.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is spatially plausible for a pile of noodles to be positioned to the right of a staircase in a scene, given no contradictory information.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A staircase extending above a child's head is physically plausible and consistent with the spatial relationship 'above'.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a staircase and a nearby chair leg is plausible given their descriptions and typical room layouts.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between two distinct wooden structures is plausible given their described attributes and positioning.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a staircase and an arm is plausible, but lack of explicit positional context for the arm relative to the staircase prevents full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary staircase and a moving arm is plausible based on their described positions and motions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a staircase and a leg is plausible, but the descriptions lack precise positional details to confirm definitively.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two wooden staircases positioned with one to the right of the other is physically plausible given their described spatial layout.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary wooden stool and a dark wooden staircase is plausible given their descriptions and typical spatial arrangements.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be to the right of a staircase, but the current subject and object positions make the relationship semantically incorrect; flipping corrects this spatial relation.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden staircase and a child positioned with the child to the right of the staircase is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A staircase being to the right of a curtain is spatially plausible given the detailed scene descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a staircase and an arm is plausible, but the exact spatial arrangement is unclear from the metadata provided.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary staircase cannot be 'right of' a baby's foot in a spatial sense as an object; the spatial relationship is physically unclear or nonsensical given the staircase's fixed position and the small scale of the foot relative to the entire staircase.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the shoe is spatially positioned to the right of the staircase as both coexist in the scene.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a staircase and a log is plausible given their described positions; no inconsistency in attributes or actions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The staircase and the log are both wooden objects with clear spatial positions. It is plausible the log is positioned to the right of the staircase in the scene.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "Noodles cannot be physically under a stool; the stool can be under the noodles or the bowl containing them. Flipping subject and object makes the relationship spatially plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden stool being located to the right of a chair leg is a plausible spatial relationship given their descriptions and typical furniture arrangement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden stool can reasonably be positioned 'left of' a tall wooden structure; the spatial relation is plausible given both are stationary wooden objects with defined positions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wooden stool positioned to the left of an arm performing subtle movements is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wooden stool being left of an arm in a spatial arrangement is plausible without conflict.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden stool can logically be positioned to the left of a child's leg; the spatial relationship is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stool positioned left of a staircase is spatially plausible and aligns with the described rustic setting.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden stool positioned to the left of a wooden staircase is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts can be 'under' a stool (e.g., someone wearing the shorts sitting on the stool), but a stool cannot be under shorts; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a wooden stool to be positioned to the right of a child based on spatial relationship; no physical or semantic contradictions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wooden stool being right of a gently swaying curtain is a spatially plausible placement in a scene.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is extending outward and is likely positioned in front of the stationary stool; reversing the subject and object makes the spatial relation 'arm in front of stool' plausible.",
+      "label": "flipped",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'stool right of foot' is plausible given the stationary stool and baby's foot described; there is no contradiction in the spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wooden stool positioned spatially to the right of a moving shoe is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden stool being right of a log is spatially plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between a stationary wooden stool and a dark elongated log is plausible given their stable positions and descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shorts cannot be physically positioned under noodles; clothing and food items do not spatially arrange this way in a plausible scenario.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for shorts to be positioned spatially to the right of a chair leg in a scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are worn on the body and are not 'above' a wooden structure; flipping makes more sense if the wooden structure is above or near the shorts.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Shorts and arm are distinct body-related objects; stating that shorts are to the left of the arm is plausible and spatially consistent in a scene describing both.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shorts being 'left of' the arm is plausible in a spatial context, as clothing can be positioned relative to an arm in an image.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shorts are clothing worn on legs and cannot be spatially located 'left of' a leg; the relationship does not make physical sense.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pair of shorts can be spatially positioned left of a staircase in the scene, making the 'left of' relationship plausible.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Shorts can be spatially located to the left of a staircase in the scene; this spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'shorts left of stool' is plausible as both objects could appear side-by-side in the scene, with shorts worn on a person moving left of a stationary stool.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shorts are clothing and cannot be spatially positioned relative to a child by themselves; the shorts would be worn by or near the child but not independently 'right of' the child.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible and contextually reasonable that the shorts are positioned to the right of the curtain, as both are described with spatially relevant details.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shorts are clothing and cannot spatially position themselves as being 'in front of' a human arm, which is part of the body they cover.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shorts, as clothing, cannot have a spatial relationship such as being 'right of' a foot on their own; this relationship is nonsensical and physically impossible without an agent wearing the shorts.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the shorts to be spatially positioned to the right of the shoe, given the descriptions of both objects and their relative movement.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the shorts, as clothing on a moving person, could be positioned to the right of a stationary log in the scene.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Shorts positioned in front of a log is a spatially plausible description based on the objects and their descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot plausibly be 'on top of' a pile of dry, brittle noodles; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is spatially positioned to the right of the chair leg, which is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being positioned to the right of a tall wooden structure is spatially plausible given the descriptions, with no contradictions or impossibilities.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a child and an arm is plausible, but the ambiguous and partial descriptions do not allow definitive validation.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is plausibly positioned to the right of the arm, which likely belongs to the child; the spatial relation 'right of' is consistent with the described positioning.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the child is positioned to the right of the leg, as the leg likely belongs to the same child or a nearby person, and the spatial relationship is logical given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be spatially located to the right of a staircase as described.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child positioned to the left of a staircase is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child can be positioned to the right of a stationary stool, which is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child as a subject cannot plausibly be spatially to the right of a pair of shorts as an independent object without a clear spatial context; shorts are worn clothing and not standalone entities with spatial location separate from the wearer.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child with downward head tilt and subtle movements can plausibly be touching a lightweight curtain that sways gently.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child being in front of an arm is spatially plausible and consistent with the described postures and positions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child's head cannot be 'right of' a foot; the spatial relationship between a body part and a distinct foot in this manner is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child being positioned to the right of a shoe is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child positioned right of a log is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is described as positioned with head tilted downward and subtle movements, and the log as a stable elongated object; it is plausible for the child to be in front of the log spatially.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot physically be on top of noodles; the relationship is spatially implausible given their typical settings and physical properties.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a curtain (large and hanging) to be positioned spatially to the right of a chair leg in a scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vibrant curtain can plausibly be positioned to the right of the tall, narrow wooden structure; this spatial relationship is consistent with the described scene layout.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be positioned 'right of' a human arm in a meaningful spatial manner, as the arm is part of a person and the curtain is a hanging object; the relative position described is unlikely or nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain and the child's arm can plausibly be positioned with the curtain to the right of the arm, fitting the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain cannot be spatially described as 'right of' a leg in a meaningful way since the curtain is a hanging object and the leg is a body part; their relative positioning in this context is unclear and the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain being to the right of a staircase is spatially plausible and consistent with the scene layout described.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a curtain to be positioned left of a staircase in a room setting, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a curtain to be positioned to the right of a stool within a scene, as both are common household objects arranged in spatial relation.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain being 'right of' a pair of shorts spatially is unlikely since shorts are clothing worn on a person and not static objects positioned side by side with curtains; the context does not support this spatial relationship as meaningful.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight curtain swaying could plausibly be touching a nearby child with subtle movements.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can realistically be in front of an arm extending outward; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a curtain hangs to the right of a baby's foot in the scene based on their descriptions and spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain is a stationary hanging object and cannot be spatially to the right of a moving shoe in a meaningful way.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The curtain and the log are distinct objects with described positions; stating that the curtain is right of the log is spatially plausible given the scene.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight curtain can plausibly hang in front of a log; the spatial relationship 'in front of' makes sense given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A piece of fabric cannot hold a log; the subject lacks agency or structure to perform the holding action.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "The log, being a stable, rough, and weathered object, can support the lightweight fabric draped over it, but the fabric cannot support the log. Reversing subject and object makes the 'supporting' relation plausible.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "supporting",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot functionally 'sit on the lap of' a piece of fabric; typically, fabric is on a lap, not the other way around.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "sitting on lap of",
+      "relation_type": "functional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A piece of fabric cannot look at a log as it lacks awareness or eyes, making the 'looking at' relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log is an inanimate object and cannot 'look at' another object.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A piece of fabric cannot perform the action of feeding a child's head; the predicate 'feeding' is not physically plausible with the given subject.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "feeding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log is an inanimate object and cannot perform the action of eating a child's head; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "eating",
+      "relation_type": "functional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A piece of fabric cannot perform deliberate actions such as 'reaching for' another object like a child's head, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "reaching for",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A log cannot focus attention on a child's head; flipping subject and object makes 'child's head focused on log' plausible, as a child can focus on the log.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A piece of fabric (non-sentient) cannot focus attention on a child's head; the predicate 'focused on' implies intention which fabric lacks.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot physically 'approach' an object like a log on its own as it is inanimate.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot physically approach a piece of fabric, as it is not capable of autonomous movement.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book, being an inanimate object, cannot socially interact with a log; such a relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot socially interact with a fabric; 'interacting with' as a social predicate is not plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log, as an inanimate object, cannot engage in a 'social' interaction such as 'interacting with' a book; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric cannot engage in a social interaction such as 'interacting with' a book; the predicate is inappropriate for the types of objects involved.",
+      "label": "physically_impossible",
+      "object_id": 36,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot perform the action 'feeding self' to a child's head, which is not plausible or possible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "feeding self",
+      "relation_type": "functional",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shorts are likely 'sitting on' the piece of fabric if draped, not the fabric sitting on the shorts; reversing subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shorts are worn by a person and can support a log placed on them; the current subject/object order is incorrect for the 'supported by' predicate.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "supported by",
+      "relation_type": "functional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "Fabric, an inanimate object, cannot perform an attention action such as 'looking at'.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log is an inanimate object and cannot perform the action of 'looking at' anything.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric object cannot realistically perform the complex intentional action of 'caring for' a log; the predicate implies intentional agency that the fabric lacks.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "caring for",
+      "relation_type": "higher_order",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric cannot actively play with a log; the relationship 'playing with' implies intentional interaction which is not possible for an inanimate fabric.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot engage in the action of playing with a piece of fabric; this is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fabric and a log are inanimate objects and cannot engage in a social action like 'conversing with'.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "Logs and fabrics cannot engage in 'conversing with', as this is a social action requiring cognition and communication.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 31
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that a person is holding the toothbrush rather than a book holding a toothbrush; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot hold a door frame; the holding relationship is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book is an inanimate object and cannot look at anything, including a log.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 36
+    },
+    {
+      "decision": "drop",
+      "explanation": "A book cannot look at an object; 'looking at' is an attentional predicate that requires an animate subject, which a book is not.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown with no description, making it unclear if it can perform the 'camera focusing on' action despite the plausible object description.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks details, making it impossible to confirm the 'camera focusing on' relationship with the log.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is undefined with no details, so we cannot confirm if it is a camera; the object is a book with detailed description. Without explicit subject metadata, it is uncertain but plausible the camera is focusing on the book.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks a name or description, making it unclear what is performing the 'camera focusing on' action; thus, the relationship cannot be properly validated.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      4,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "behind",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      1,
+      "behind",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "contains",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      4,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      33,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "covers",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "covers",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      22,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      33,
+      "below",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      12,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      16,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      17,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      20,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      21,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      28,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      31,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      12,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      8,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      12,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      9,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      20,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      11,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      12,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      13,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      16,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      17,
+      "under",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      27,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      28,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      31,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      8,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      12,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      11,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      20,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      8,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      12,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      12,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      16,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      22,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      33,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      16,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      8,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      10,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      11,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      12,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "under",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      27,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      7,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "above",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      9,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      10,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      12,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      16,
+      "left of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      21,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      28,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      31,
+      "right of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      7,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      8,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      9,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      10,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      11,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      12,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      13,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      21,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      28,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      31,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      7,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      8,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      13,
+      "left of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      16,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      20,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      27,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      31,
+      "right of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      33,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      38,
+      "supporting",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      31,
+      "focused on",
+      [
+        [
+          192,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      17,
+      38,
+      "sitting on",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      17,
+      31,
+      "supported by",
+      [
+        [
+          0,
+          192
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      36,
+      "holding",
+      [
+        [
+          240,
+          264
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      38,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      36,
+      "camera focusing on",
+      [
+        [
+          216,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000093"
+}

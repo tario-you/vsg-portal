@@ -1,0 +1,1451 @@
+{
+  "activity_differential": [
+    "person preparing a drink at the bar",
+    "person using blender to mix ingredients",
+    "person working behind bar counter"
+  ],
+  "description": "A person is working behind a bar counter, preparing a drink using a blender and various ingredients. The camera moves from a close-up of the counter and plants to a wider view of the person at work, then zooms in on the preparation process.",
+  "place_env_id_name": "bar counter",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "It is more logical and common that the person is to the right of the napkin, rather than the napkin being to the right of the person; flipping subject and object aligns better with typical spatial descriptions.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A napkin positioned in front of a vertically standing log-shaped object is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The napkin is plausibly located to the right of the vent or exhaust pipe, a spatial relationship that makes sense given the objects' descriptions and typical arrangements.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A napkin can reasonably be positioned to the right of a streetlight in a scene; no physical or semantic implausibility noted.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A crumpled napkin being to the right of a polished marble surface is plausible and consistent with the described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The napkin is described as resting with subtle positional shifts, but the object it is 'on top of' is unspecified, so the relationship cannot be fully validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The napkin is described in detail, but the object it is inside of is unknown, so the spatial relationship cannot be fully verified or denied.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The napkin being left of the stones is spatially plausible as described; both objects have a stable presence with subtle movements, making the relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person positioned left of a napkin is spatially plausible and consistent with the described scenario.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is engaged in a focused, hands-on activity and is positioned spatially in front of a vertically standing log-shaped object, which is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is closely engaged in a task with hands near each other, and the vent or exhaust pipe is a stationary object; it is plausible that their bodies spatially overlap in the scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person and the streetlight are spatially positioned, with the person plausibly being to the right of the streetlight as described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can be spatially located to the right of a marble surface in the scene, which is plausible given the described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any descriptive information, so we cannot confirm or deny the plausibility of the 'on top of' relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship is spatially plausible but the object's lack of description or attributes prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a person and a collection of stones is plausible based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The log-like object maintaining an upright position behind the crumpled napkin is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible for the person to be behind the log rather than the log being behind the person; flipping subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark log-shaped object and the light beige vent/exhaust pipe are both vertical and spatially distinct, making the 'left of' relationship plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dark, elongated object resembling a log stands upright and is plausibly positioned to the left of a tall, slender streetlight, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The log-like object standing upright to the left of the polished marble surface is a plausible spatial relationship given the descriptions of both objects and their positions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object linked to the log is unspecified and lacks any descriptive information, making it impossible to verify the 'below' spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a log-like object; however, the object lacks any identifying information, making it unclear what the 'left of' relationship precisely refers to, but the spatial relation is plausible.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A log standing upright to the left of a group of stones is spatially plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall vent or pipe positioned to the left of a crumpled napkin is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall vent or exhaust pipe spatially overlapping with the person is plausible based on their described positions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a tall vent-like object and a log-like object is plausible, but the uncertain identification of both objects and lack of context make it difficult to fully validate.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a vent or exhaust pipe and a streetlight is plausible, but the uncertainty in object identification and lack of precise scene layout prevent a definitive decision; therefore, the relationship is kept.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall, slender vent-like object being to the right of a polished marble surface is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any identifying information, making it unclear if the subject is truly below the object; unable to confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described but the object lacks description or name, so the spatial relation 'left of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, slender vent or pipe positioned left of a group of small stones is spatially plausible given their described characteristics.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A streetlight located to the left of a napkin is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the streetlight to be positioned left of the person; both objects and spatial relationship are coherently described.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The streetlight is plausibly positioned to the right of the log given their descriptions and spatial relation; the relationship is consistent with the scene's context.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The streetlight is plausibly positioned to the left of the vent or exhaust pipe, both described as tall and slender objects in the scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall streetlight being spatially right of a marble surface is plausible and consistent with the scene's descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship of the streetlight being 'below' it cannot be assessed for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The streetlight's position relative to the unnamed object cannot be fully confirmed or denied due to lack of detail about the object; leaving the relationship as is is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall streetlight positioned left of a cluster of small stones is spatially plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a stationary polished marble surface and a crumpled napkin with slight shifts is plausible and consistent with scene descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A polished marble surface is an inanimate object and cannot be spatially positioned 'left of' a person in a meaningful way; marble is the surface or floor on which the person likely stands, so 'left of' does not apply as a relationship here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A marble surface is flat and horizontal, while the log is vertical; the log cannot be 'right of' the marble surface since the marble is a plane rather than a distinct object to the left/right in this context.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The polished marble surface can reasonably be positioned spatially to the left of a tall, slender vent or exhaust pipe; the 'left of' relationship is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The polished marble surface and the streetlight are distinct objects, and it is spatially plausible for the marble surface to be left of the streetlight in the scene described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The marble surface is described, but the object has no name or description; lacking context to confirm the spatial relation, so keep as is.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so its spatial relation to the marble cannot be verified or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing the polished marble surface as left of the small stones is spatially plausible and consistent with the scene details.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no attributes or description, so we cannot confirm the spatial relationship under the napkin; however, the napkin's description is detailed but does not clarify the subject's position.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so we cannot verify the spatial relationship 'under' relative to the well-described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name, attributes, actions, or description, making it impossible to verify or interpret the spatial relationship with the log-like object.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and descriptive details, making it impossible to confirm the plausibility of being 'above' the vent or exhaust pipe; relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it impossible to confirm a meaningful 'above' spatial relation to the streetlight.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks description; though the marble surface is described, it's unclear what is above it, so the relationship cannot be confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object have no identifying information or description, making it impossible to confirm the spatial relationship 'surrounding', but it cannot be ruled out.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "surrounding",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any name, attributes, actions, or description, making it impossible to interpret what is left of the stones or if 'left of' applies logically.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification and description, making it impossible to confirm if it can spatially contain the napkin; thus, the relationship is unsupported.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "containing",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, making it unclear what object is right of the person; however, without contradictory information, the spatial relation cannot be dismissed.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks a name and description, making it unclear what it is; however, the spatial predicate 'right of' with respect to the log-like object is plausible and cannot be rejected based on the given information.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so we cannot confirm the spatial relationship's accuracy, but it is plausible to keep the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified with no attributes or description, making it impossible to confirm spatial relation 'right of' the streetlight.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, making it unclear what is 'right of' the marble; however, the spatial relation itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive metadata; cannot validate the 'inside' relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, and the spatial relation 'left of' is plausible but lacks sufficient context to confirm accuracy.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Small stones located to the right of a crumpled napkin is a plausible spatial relationship given their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small stones being right of the person in the scene is spatially plausible and consistent with the described arrangement and activities.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Small stones shifting slightly positioned to the right of an upright log-like object is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Small stones could plausibly be located right of a tall, slender vent or exhaust pipe in a scene; spatial relation is physically possible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Small stones can reasonably be positioned right of a tall streetlight in a scene; spatial relationship is plausible given descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Small stones can physically be located to the right of a polished marble surface; this spatial relationship is plausible given their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or interpret the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to validate the spatial relationship with the stones.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), making it impossible to evaluate the relationship; the predicate involves a camera action which cannot be assigned a subject here.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null name and description), making it impossible to confirm the 'camera zooming in on' relationship; lacking necessary context to validate.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera zooming in on",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a defined name or description, making it unclear what the log is using; the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log maintaining an upright position cannot plausibly be 'using' a bottle; logs are inanimate objects and cannot perform functional actions.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log (an inanimate object) cannot 'use' a bottle; the relationship implies agency that the log cannot have.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "using",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, and the predicate 'preparing with' is vague without context; the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A log cannot perform actions related to 'preparing with' a bottle; the relationship is unrealistic given their physical properties and typical use.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'preparing with' is vague and the entities are uncertain logs and bottles; there is not enough context to confirm a meaningful or plausible relationship.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "preparing with",
+      "relation_type": "higher_order",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "An object focusing on itself is redundant; the subject and object are identical and the relationship 'focused on' is not meaningful in this context.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 3
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "inside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "overlapping",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "overlapping",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "under",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "above",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "surrounding",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "inside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      5,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ]
+  ],
+  "video_id": "sav_000020"
+}

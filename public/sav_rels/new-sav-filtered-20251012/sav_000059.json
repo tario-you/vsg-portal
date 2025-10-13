@@ -1,0 +1,1112 @@
+{
+  "activity_differential": [
+    "people waiting or resting on sidewalk at night",
+    "people sitting together near street",
+    "motorcycles passing by people on sidewalk"
+  ],
+  "description": "Two people are sitting on stools on a sidewalk at night, near a well-lit area with bushes, billboards, and street signs. Several motorcycles pass by on the street in the background. The environment is calm, with the people appearing to be waiting or resting.",
+  "place_env_id_name": "sidewalk street at night",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A lightbulb being behind a bush is unlikely since the lightbulb is described as dominant and suspended; it makes more sense that the bush is behind the lightbulb.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt (part of or worn by a person) is typically in front of or covering an object like a bush, not behind it. Flipping subject and object makes 'skirt behind bush' plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bush to be located in front of a flowerpot given their stationary nature and described positions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush cannot be on top of a tall tree, but a bush can be on the ground beneath a tree; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stone block can be behind a billboard, not the other way around; flipping subject and object makes the spatial relation logical.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A billboard, typically elevated, cannot logically be positioned under a tarp that is stretched horizontally; the spatial relationship 'under' is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary billboard positioned in front of a large refrigerator is spatially plausible and matches the described attributes.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large flowerpot can plausibly be positioned to the left of a tarp as described; the spatial relationship is coherent with the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary stone block can plausibly be located in front of a tall, upright billboard; the spatial relationship 'in front of' is logical given the objects' descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tarp is more plausibly under the stone block, not the other way around; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Describing a lightbulb as 'in front of' a flowing skirt is plausible as a spatial relationship given the scene's context.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lightbulb can plausibly be positioned to the left of the bush in the scene, and the spatial predicate reflects this positional relationship accurately.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lightbulb being on top of a tree is physically unlikely without some artificial support, and the description suggests the lightbulb is suspended separately. This spatial relation is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plant being above a seated person is spatially plausible given typical environmental arrangements.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A plant with elongated leaves swaying gently can plausibly be positioned above a dense bush, making 'above' a reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is an uncertain skirt and the object is a lightbulb; without spatial setup details, it's unclear if the skirt is behind the lightbulb, so the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A flowing skirt being positioned left of a bush is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A flowing skirt cannot be physically positioned on top of a tall tree as implied; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is likely sitting under or above the stone structure (footrest), so flipping subject and object makes the spatial relation 'under' correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two bushes with described spatial attributes and positions make it plausible that one bush is right of the other in the scene.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A headscarf being beside a refrigerator is spatially plausible; no physical contradictions are evident.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stone-like object cannot be on top of a person seated; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary bush and a suspended lightbulb is plausible given their descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'bush right of skirt' is plausible as the bush is stationary and the skirt is moving; the description supports their distinct positions without conflict.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two bushes can be spatially arranged with one located to the left of the other; the descriptions support a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a bush would be positioned in front of a flowerpot rather than the flowerpot being behind the bush; flipping subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot on top of a tree is implausible; typically, a tree is below or supporting a flowerpot if at all. Flipping the relationship to 'tree on top of flowerpot' is still unlikely, but flipping better fits the physical arrangement where the flowerpot is on the ground and tree above.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bush is naturally under a tree, not the other way around; flipping subject and object aligns with common spatial hierarchy.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree cannot be under a lightbulb in a typical scene; it is more plausible that the lightbulb is under the tree.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt can be under a tree, not the other way around; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A flowerpot cannot realistically be under a tall tree; more plausible that the flowerpot is under the tree.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tarp, which is typically flexible and low-lying, cannot be physically positioned above a tall billboard; the spatial relationship 'above' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tarp stretches horizontally above the stationary stone block, which is physically plausible given the descriptions and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tarp is described as stretched horizontally and stationary, and the flowerpot is a large, stationary object; it is plausible for the tarp to be located to the right of the flowerpot in the scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person is unlikely to be seated on top of a bush due to its physical nature; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is seated and the stone structure resembles a footrest with a broad, flat top, making it plausible that the person is on top of it.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person being 'under' a stone-like object is unlikely given the descriptions; no indication that the person is beneath or covered by the object.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be spatially located to the right of a bush in a scene.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A seated person can plausibly be below a plant, such as a hanging or tall potted plant, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a bush to be spatially located to the left of a seated person; the relationship matches the spatial predicate without physical impossibility.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot be spatially below a plant in a way that makes sense given typical growth patterns; usually plants or parts thereof are below or on bushes, but here 'bush below plant' is unlikely physically.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A refrigerator is a large stationary object and cannot be spatially 'beside' a headscarf, which is a movable piece of fabric; the relationship as stated is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "An awning being left of a stone block is spatially plausible given their stationary nature and the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a street sign is positioned above a seated person in a typical outdoor setting.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the spatial relationship 'right of' relative to the flowerpot cannot be fully confirmed but remains possible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be 'sitting together' with a bush, as this relationship implies social interaction between sentient beings which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "sitting together",
+      "relation_type": "social",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear a stone structure, as this is not a wearable object.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person wearing a rough, stone-like object is not physically plausible, as the object's texture and nature do not correspond to wearable garments or accessories.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot 'wear' a stone structure; the predicate 'wearing' is not plausible for these entities.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bush cannot 'wear' a stone-like object as clothing or accessories; the predicate 'wearing' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'wait with' a bush in a meaningful relational sense, as a bush is an inanimate object incapable of participating in social actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "waiting with",
+      "relation_type": "higher_order",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be illuminated by a plant, as plants do not emit light; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plant cannot illuminate a bush; plants are not light sources, so this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "illuminated by",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically rest on a bush; it is not suitable for supporting a seated person.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "One bush resting on another bush is physically implausible as bushes grow from the ground and do not rest on each other in a supporting manner.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "resting on",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle moving along near a bush is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle moving along near a bush is physically plausible and contextually consistent based on descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pathway cannot perform the action 'moving along' relative to a bush; paths are inanimate and fixed structures.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "moving along",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle moving steadily and passing by a lush bush is plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle moving past a nearby bush is a physically plausible event and aligns with the described motion and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pathway is an inanimate structure and cannot perform the motion of 'passing by' a bush.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is undefined (null), so it is impossible to confirm or evaluate the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so it is unclear what is focusing the camera on the bush, but the predicate 'camera focusing on' is plausible with the bush as the object.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject entity is undefined with no attributes or description, making it impossible to verify the relationship with the motorcycle.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera observing",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, but a camera observing a motorcycle is plausible; lack of subject details prevents full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera observing",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks detail, making it impossible to confirm the 'camera observing' relationship with the pathway.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera observing",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      9,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      5,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      19,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      21,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      22,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      16,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      16,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      23,
+      "beside",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      9,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      11,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      13,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "behind",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      17,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      18,
+      "under",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      7,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "on top of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "below",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      21,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      8,
+      "left of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      20,
+      "above",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      7,
+      "right of",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "moving along",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      4,
+      "moving along",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      4,
+      "passing by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      4,
+      "passing by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      22,
+      "camera focusing on",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "camera observing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000059"
+}

@@ -1,0 +1,2195 @@
+{
+  "activity_differential": [
+    "adult supervising and interacting with children near a building",
+    "person walking along a residential pathway",
+    "camera panning to capture people and environment"
+  ],
+  "description": "A group of people, including adults and children, are present outside a building along a rough pathway. One adult interacts with two children near a window, while another person walks along the pathway. The camera moves and pans, shifting focus from the group near the building to the pathway and surroundings.",
+  "place_env_id_name": "outdoor residential pathway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically stand on a tall, vertical concrete block structure; the spatial relationship is implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person standing, and the predicate 'standing on' implies a surface or object beneath, but the object has no description, so the relationship cannot be fully validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'person in front of' an unidentified object lacks sufficient description of the object to confirm plausibility, but is possible given the person's posture suggesting engagement with something ahead.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of a signboard is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing in front of a collection of rocks is a physically and spatially plausible relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person's detailed description suggests a spatial relation, but the object is unspecified with no description, so we cannot fully confirm the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing upright and facing an object described as a vent, which is fixed and vertically oriented, supports the spatial relationship 'in front of'.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person is standing in front of a large, stationary garage door based on the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a person stands to the left of a door; the spatial relationship makes sense given the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing in front of a wall is a common and physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, so it's unclear what 'on' refers to; the relationship cannot be verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child running or playing cannot realistically be standing on a tall, rectangular concrete block structure; the relationship is physically implausible given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to confirm the spatial relationship 'standing on' with the child.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a clearly described child in motion, but the object lacks any identifying information, so we cannot fully assess the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child running or playing can plausibly be located spatially in front of a stationary signboard, making the 'in front of' relationship plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be in front of a group of rocks as described in the spatial context.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child's position 'in front of' an unknown object with no description cannot be confirmed or denied, so the relationship is kept with consideration of limited context.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being 'in front of' a vent is spatially plausible given the described positions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is described in motion and the garage door is stationary; the spatial relationship 'in front of' the door is plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being to the left of the door is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is described as moving dynamically and the wall is a fixed spatial feature; the child being in front of the wall is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object has no name or description, so it is unclear what the child is 'on'; cannot verify correctness but no contradiction.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot stand on a structure; typically, the structure supports the window, making the stated relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot physically be 'standing on' another object; the spatial predicate is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The window's description is detailed, but the object lacks any description or attributes, so it is unclear whether 'touching' is correct or not.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is unclear from the metadata whether the window is physically in front of the signboard or vice versa, so the spatial relationship lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A window can plausibly be in front of a collection of rocks based on spatial arrangement described.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The window is described in detail but the object it is touching is unknown; unable to confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between a window and a vent is plausible, but the uncertainty in object identification and lack of detailed spatial context prevent confident verification.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A window located in front of a garage door spatially makes sense and the attributes support both objects being distinct and positioned accordingly.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a door is to the right of a window rather than the window being to the right of the door. Flipping subject and object corrects the spatial relationship for plausibility.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a window is part of or set into a wall, so the wall is in front of the window is unlikely; flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the window could be 'on'; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The door or panel is likely part of or placed on the structure, so the structure stands on the ground and not on the panel. Flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is a door or panel, which does not typically stand on something, and the object lacks description or identity to assess plausibility.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object being touched is unidentified, making it unclear if the spatial relationship is accurate, but the 'door or panel' touching another object is physically plausible.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a door or panel to be positioned in front of a signboard, both described as static and maintaining orientation; the spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door or panel positioned in front of rocks is a plausible spatial relationship given their descriptions and physical plausibility.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify if it can be 'touching' the door or panel; insufficient detail to assess the relationship.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door or panel positioned in front of a vent is spatially plausible and consistent with their described orientations and features.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door or panel described as rectangular and grid-like can reasonably be positioned in front of a large garage door with similar grid panel characteristics.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are doors or panels with similar size and appearance; saying one is to the right of the other is plausible and consistent with spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door or panel is plausibly located in front of a wall in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's description is detailed but the related object lacks any identification or attributes, making it impossible to evaluate the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's identity and description are unknown, making it impossible to verify the 'covering' relationship.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "covering",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a tall concrete block structure and the object is undefined with no details; the spatial relation 'in front of' is plausible but cannot be fully confirmed due to lack of object information.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall concrete block structure can plausibly be positioned in front of a signboard; the spatial relationship is physically possible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A structure standing in front of rocks is spatially plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a described structure and the object lacks any identification or description, making it unclear if the 'in front of' relationship is accurate or relevant; the relationship cannot be rejected due to missing object context.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall concrete block structure can plausibly be in front of a rectangular vent attached to a surface; spatial relation 'in front of' is logically consistent.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, rectangular concrete block structure standing in front of a large rectangular garage door is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, rectangular structure composed of concrete blocks positioned in front of a tall door is spatially plausible given their described attributes and positioning.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall concrete block structure being spatially 'in front of' a concrete block wall is plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a well-described structure, but the object lacks any identification or description, making it unclear whether 'overlapping' is plausible or not.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, making it unclear if it can physically be covered by the structure; lacking sufficient detail to confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "covered by",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "No identifying information about subject or object to assess the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is 'in front of' the signboard, making the relationship plausible but not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so we cannot confirm spatial relations, but 'in front of' with a rock is plausible.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and descriptive details, so the spatial relation cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks description, making it unclear if being 'in front of' the vent is plausible, so the relationship is retained due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unidentified and lacks description, making it unclear what is in front of the garage door, but the spatial relationship 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying details, but the spatial relation 'in front of' to a stationary door is plausible; insufficient information to confirm or reject.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying details, so it is unclear what is in front of the wall; however, the spatial relationship itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of information about subject and object makes it unclear, but overlapping as a spatial relation is plausible if these are physical entities.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, making it unclear what is in front of the signboard, but spatial relationship 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification or description, so spatial relation 'in front of' with the rocks is unclear but not implausible.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the touch relationship cannot be validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it's unclear what the relationship with the vent represents, but the spatial predicate 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unknown with no description; cannot verify the spatial relation but 'in front of' the garage door is plausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is 'right of' the door; however, the relationship itself is spatially plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, making it unclear what is in front of the wall; however, the spatial predicate 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "No identifying information is provided about either object to assess the relationship 'beside' accurately.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard can plausibly be located beside a rock; both are static objects in a natural or outdoor setting.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described clearly, but the object lacks any identifying information, so the plausibility of the 'touching' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are rectangular, affixed to surfaces, and can logically be positioned beside each other; the relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard can plausibly be located beside a garage door; the spatial relationship is consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard being to the right of the door is spatially plausible given their static and adjacent descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is likely on or attached to the wall; reversing the subject and object makes the spatial relationship 'wall beside signboard' more physically plausible.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described in detail, but the object is unspecified and lacks description, making it unclear if the spatial relationship 'behind' is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a detailed rock collection, but object lacks identification and description, so the spatial relation 'touching' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "A collection of rocks scattered across the ground being spatially beside a rectangular vent object is plausible in a scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a collection of rocks could be beside a large, stationary garage door as described.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for rocks to be positioned right of a door in a scene, given the spatial descriptions and stationary nature of both objects.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for rocks to be beside a wall on the ground; their spatial relationship fits the descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'rock' is well described, but the object lacks any identity or description, so spatial relationship cannot be fully verified; therefore, keep as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information, making it impossible to confirm or refute the 'touching' relationship with the vent-like object.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no details; it is possible it is touching the garage door, but the lack of information prevents a definitive judgment.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is to the right of the door; retaining the relationship due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so it's unclear what is touching the wall; however, touching a wall is physically plausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, so plausibility of spatial relation 'beside' cannot be determined definitively.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent positioned beside a garage door is semantically and physically plausible given the descriptions and spatial predicate.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent being right of a door is a plausible spatial relationship given their described positions and features.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent being beside a wall is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent is described clearly, but the other object lacks any description or name, making it impossible to judge the spatial relationship with certainty.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large garage door can be positioned to the right of another door, both described as stationary and spatially related, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A garage door is typically adjacent to a wall, so the spatial relationship 'beside' is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The garage door's position described as beside an unknown object lacks detail to assess the spatial relationship, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door positioned left of a wall is spatially plausible given the descriptions and relative positioning in a typical architectural context.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door's described spatial relation as 'left of' an unspecified object cannot be verified or dismissed due to lack of details about the object on the right.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall is described in detail, but the object has no name or description, making it unclear what the relationship 'in front of' refers to, so it is kept with insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'person walking past child' is physically plausible given both subjects are described as moving and positioned realistically.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person whose description suggests they could be watched by a camera, but lack of camera object metadata means we cannot fully verify correctness or physical plausibility.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by camera",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child cannot meaningfully 'interact with' a window as it is an inanimate object incapable of social interaction.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is plausibly looking at the window, which is a spatially and contextually reasonable attentional relationship given the scene description.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child appears near a door or panel, which is plausible, but the incomplete descriptions and uncertainty about the object prevent full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a child seemingly in motion, but the object lacks any detail about the camera, making it uncertain yet plausible that the child is being watched by a camera.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by camera",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window cannot engage in a social interaction such as 'interacting with' a child.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A window cannot look at a child; reversing subject and object aligns with the natural attentional predicate where a child looks at a window.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified and lacks description, making it impossible to confirm the relationship 'being watched by camera' is valid.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being watched by camera",
+      "relation_type": "attentional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information, making it impossible to confirm or refute the relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "panning toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear who or what is focusing on the child; insufficient context to confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown with no attributes or description, making it unclear who or what is focusing on the window; thus the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks description, making it unclear what is performing the 'panning along' motion relative to the structure; thus, the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "panning along",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      22,
+      "standing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      28,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      37,
+      "on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      28,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "standing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      28,
+      "touching",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "right of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      28,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      37,
+      "overlapping",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      18,
+      "covered by",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      28,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      37,
+      "overlapping",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      30,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      16,
+      "touching",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      37,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      30,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      16,
+      "touching",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      6,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      5,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      19,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      37,
+      "behind",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      16,
+      "touching",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      6,
+      "beside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      5,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      24,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      37,
+      "behind",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      6,
+      "touching",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      37,
+      "beside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      24,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      37,
+      "beside",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      24,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      37,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      24,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      37,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      37,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      -1,
+      "being watched by camera",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      4,
+      "standing near",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      -1,
+      "being watched by camera",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      2,
+      3,
+      "looking at",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      2,
+      "focusing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      18,
+      "panning along",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000062"
+}

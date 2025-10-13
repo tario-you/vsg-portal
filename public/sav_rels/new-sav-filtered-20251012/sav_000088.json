@@ -1,0 +1,1614 @@
+{
+  "activity_differential": [
+    "people shopping and moving through a busy market street",
+    "motorcycle riders transporting passengers in the market",
+    "camera operator walking and filming through the market crowd"
+  ],
+  "description": "A bustling outdoor market scene with multiple people walking, interacting, and shopping. Motorcycles and cars move through the street, while vendors and buyers engage in commerce. The camera moves forward through the market, capturing the dynamic environment.",
+  "place_env_id_name": "outdoor market street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The person is on the motorcycle, so the motorcycle is more naturally 'right of' the person, reversing subject and object aligns with spatial context.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, so it's unclear what is to the right of the person, but the spatial relation itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person riding a motorcycle being spatially to the right of a large signboard is plausible in a scene context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identifying information, but spatial relationship 'right of' relative to the person could be plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person riding a motorcycle can reasonably be positioned spatially in front of a stationary tall metallic structure.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well-described, but the object is unspecified and lacks description, making it unclear what the 'right of' relationship refers to.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is spatially plausible, but the object lacks a name and description, so it's unclear what the person is right of; however, the relationship cannot be disproven.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people with described positions and postures can reasonably be arranged with one person to the right of the other spatially.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it's unclear what is to the right of the person; however, no contradiction exists, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person walking is positioned left of the motorcycle in the scene described.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well-described, but the object lacks detail or a name, making it unclear what the person is left of; however, the spatial relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking to the left of a large signboard is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is spatially located to the left of an unspecified object with no description, so the relationship is plausible but lacks sufficient context to be fully evaluated.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a tall, stationary metallic structure is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any identification or description, making it unclear what the person is to the left of; however, there's no reason to discard or flip the relationship given the spatial predicate.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks name and description, so spatial relation 'left of' cannot be definitively confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description plausibly supports one person being spatially to the left of another person; both are present and their relative positions can be assessed.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship is spatially plausible, but the object's identity and description are missing, so confirmation is not possible.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it unclear what the motorcycle is spatially behind; cannot confirm relationship plausibility.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A motorcycle positioned behind a signboard is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject (motorcycle) is well described, but the object lacks any identifying information, making it impossible to confirm the spatial relationship fully. However, 'behind' is plausible and no contradictions arise.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle maintaining forward motion can reasonably be positioned in front of a stationary tall, metallic structure, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle's position relative to an unspecified object is plausible, but lack of details about the object prevents certainty.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The motorcycle is described well, but the object lacks any information or identification, so its spatial relationship 'behind' the motorcycle cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a motorcycle to be spatially behind a person standing; the relationship respects the spatial predicate 'behind'.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a detailed motorcycle, but the object is unidentified (null name and description), so it's unclear if the 'behind' spatial relationship is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is beside the signboard, but the spatial relationship is plausible without contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object names or descriptions are provided, so the spatial relation 'beside' cannot be validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear if it being 'in front of' the structure is accurate or plausible; thus, relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and descriptions, so the spatial relationship 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so it's unclear what is beside what, but the spatial predicate is plausible.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what it is, but the spatial predicate 'beside' relative to a standing person is plausible.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so plausibility of 'beside' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed signboard, but the object lacks identification and description; thus, the spatial relation 'beside' cannot be fully verified, so it is kept pending more information.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard being in front of a tall metallic structure is spatially plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is clearly described but the object beside which it is located is unspecified; without knowing the object, the spatial relationship cannot be fully validated but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described in detail, but the adjacent object's identity is unknown, preventing conclusive spatial validation.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A static signboard being spatially beside a standing person is physically plausible and matches the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a detailed signboard, but the object lacks any description or name, so the spatial relationship 'beside' cannot be fully verified or refuted; keeping as is.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it is unclear what is in front of the tall structure; relationship plausibility cannot be fully assessed.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object to assess the plausibility, so keep by default.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of specific object information or descriptions to fully verify the spatial relationship 'beside'.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it is unclear what it is. However, the predicate 'beside' is spatial and plausible if the subject is an object near the described person.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions and names, so we cannot confirm the relationship but it's plausible to keep it as is.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a tall metallic structure plausibly behind another object, but lack of details on the object makes the relationship uncertain yet possible.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a tall metallic structure, but the object lacks any identifying information, so the spatial relation 'behind' cannot be conclusively evaluated.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, stationary structure being behind a person in a spatial relationship is plausible given their descriptions and spatial context.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a tall metallic structure described with detailed features, but the object lacks any description or attributes, so the spatial relation 'behind' cannot be fully verified but is plausible given the data.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the spatial relationship 'beside' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity and description are unknown, so we cannot confirm or deny the spatial relationship 'beside' with the described person.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifiers or descriptions, so it is unclear but spatial 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification, but the spatial predicate 'beside' and the detailed description of the person make the relationship plausible without contradictions.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship 'beside' cannot be verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object's identity and description are missing, but it can still be spatially beside the person; insufficient detail to drop or flip.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject entity has no name or description, making it impossible to confirm if a camera is following the person; metadata is incomplete.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification but relationship 'camera moving toward motorcycle' is plausible in a video context.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "camera moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any description, making it impossible to validate the relationship 'camera passing by' with the person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera passing by",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any identifying information, making it impossible to evaluate the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "camera moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, but 'camera moving past' an umbrella is a plausible video scene action; lacking subject details, the relationship is accepted as is.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "camera moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, making it unclear what is moving past the signboard; however, the relationship 'camera moving past' a static signboard is plausible in a video context.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "camera moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of subject and object identification and no description makes it impossible to verify the relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are provided, so the plausibility of the 'camera moving past' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "camera moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified but the predicate 'camera moving past' plausibly relates to the skirt; lack of subject details prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "camera moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is riding the motorcycle; they cannot be walking alongside it simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking alongside",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is riding a motorcycle and wearing a safety vest with text on it, but is not physically carrying a large rectangular signboard; thus, the 'carrying' relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person riding a motorcycle can plausibly carry an umbrella, even if uncertain, so this relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily and not interacting with the motorcycle functionally; riding the motorcycle contradicts the walking action.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily, not riding a motorcycle; riding a motorcycle while walking is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking while the other is seated on a motorcycle; they cannot be 'walking with' each other in a social sense in this scenario.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as seated on and appearing in motion on the motorcycle, which plausibly supports the 'riding' relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as seated on and in motion on the motorcycle, making 'riding' a plausible functional relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "riding",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking, wearing flip-flops and not positioned as riding; thus, they cannot be 'riding' the motorcycle logically.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "being ridden by",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The motorcycle is being ridden by the person, so reversing subject and object corrects the predicate relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "being ridden by",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is riding the motorcycle, so the person is moving alongside the motorcycle rather than vice versa; flipping subject and object fixes the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "moving alongside",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object lacks a name, attributes, actions, or description, so it's unclear what 'passed by' refers to; the relationship is not verifiable.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "passed by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person carries the umbrella, not the umbrella being carried by the person as subject; flipping corrects the subject-object roles.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "carried by",
+      "relation_type": "functional",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The signboard is static and large; it is not physically plausible that it is being carried by a person on a motorcycle.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "carried by",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object has no name or description, making it unclear what is walking toward the person; hence, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the 'walking past' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information or descriptions, so it is unclear if 'walking with' is plausible, but cannot be rejected.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, making it impossible to confirm the relationship, but 'walking near' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "A building cannot perform the action 'walking past' as it remains stationary and is an inanimate structure.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification or attributes, so the plausibility of 'walking near' the motorcycle cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 34
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to assess the 'moving past' relationship with the skirt.",
+      "label": "insufficient_context",
+      "object_id": 40,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 37
+    }
+  ],
+  "relationships": [
+    [
+      4,
+      1,
+      "right of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "right of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "right of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "right of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "right of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "right of",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "right of",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "left of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "left of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "left of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "left of",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "left of",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "left of",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "behind",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "behind",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      20,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      22,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      23,
+      "behind",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      26,
+      "behind",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "beside",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      18,
+      "beside",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      20,
+      "beside",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      22,
+      "beside",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      23,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      18,
+      "beside",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      20,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      22,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      23,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      19,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      22,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      23,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      20,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      22,
+      "behind",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      23,
+      "behind",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      26,
+      "behind",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      22,
+      "beside",
+      [
+        [
+          96,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      23,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      23,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      26,
+      "beside",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      6,
+      "camera moving toward",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      8,
+      "camera moving past",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      10,
+      "camera moving past",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      13,
+      "camera moving past",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      20,
+      "camera approaching",
+      [
+        [
+          96,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      26,
+      "camera moving past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      37,
+      "camera moving past",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      10,
+      "carrying",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      4,
+      "riding",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      6,
+      "riding",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      5,
+      6,
+      "being ridden by",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      6,
+      "moving alongside",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      10,
+      "carried by",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      20,
+      26,
+      "walking past",
+      [
+        [
+          120,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      21,
+      15,
+      "walking with",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      30,
+      21,
+      "walking near",
+      [
+        [
+          48,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      6,
+      "walking near",
+      [
+        [
+          168,
+          168
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000088"
+}

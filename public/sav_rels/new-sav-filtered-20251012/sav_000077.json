@@ -1,0 +1,2189 @@
+{
+  "activity_differential": [
+    "person walking down hallway to a door",
+    "person passing by shoes and sandals in hallway",
+    "person opening a door at the end of hallway"
+  ],
+  "description": "A person walks down a hallway lined with shoes and sandals, holding a green object, and eventually stops at a door.",
+  "place_env_id_name": "hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The subject is a wall described as vertical and stationary, making it reasonable that it is above an unspecified object; however, lack of details on the object leaves uncertainty, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what the wall is above, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification or description, so the plausibility of 'touching' cannot be assessed.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject entity is unspecified and lacks description, making it impossible to confirm the spatial relationship of being 'below' the wall.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, so it's unclear what is below the wall; thus, the relationship cannot be confirmed or disproved.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying details, so the validity of the 'touching' relationship cannot be assessed definitively.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot literally be standing on their own sneakers as separate objects; the sneakers are worn by the person, so 'standing on' this relationship is physically inaccurate.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "standing on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'right of' is spatial and plausible, but the object lacks identification or description, so we cannot fully confirm the relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person's position relative to an unspecified object cannot be verified or falsified due to missing object name and description.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any identifying information making it unclear what the spatial relationship refers to; however, 'right of' is plausible given the lack of contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's position as 'right of' the object is plausible spatially, but the object's name and description are missing, so full validation is not possible.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'right of' a floor since the floor is a horizontal surface beneath the person; the relationship is nonsensical in this context.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be positioned to the right of a wall, and the spatial relationship 'right of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking and the slipper is located spatially to the right; this spatial relationship is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks identification and description, so spatial relation cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a walking person to be in front of a baseboard, which is a long, narrow stationary object along a wall.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking in front of a stationary wall panel is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking to the right of the door frame is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can be spatially located in front of a wall, which is physically and visually plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking described as being to the right of a slipper-like object in motion is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking and leaning forward being to the right of a door is spatially plausible based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking is reasonably described as being to the right of the wall; their spatial relationship is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is plausibly positioned to the right of the wall, making the spatial relationship 'right of' appropriate and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is part of or near the person; saying the person is 'right of' the shoe is unusual, whereas the shoe being 'right of' the person makes more spatial sense.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the walking person is to the right of the fixed vent-like object in the scene.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking right of a long slender pipe is a spatially plausible relationship given their described positions and context.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking forward can reasonably be positioned spatially to the right of a door frame.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steady forward being positioned to the right of a stationary vent is spatially plausible given the described scene.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person is to the right of the stationary door based on their descriptions and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person's described movement and the stationary tape measure positioned to the left makes it plausible that the person is right of the tape measure.",
+      "label": "reasonable",
+      "object_id": 37,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking being right of a stationary baseboard (likely on a wall) is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is plausibly positioned to the right of the sandals in the spatial description, which is a reasonable and physically possible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown (no name or description), so it's unclear what 'on' relation to the sneakers means; insufficient information to assess plausibility.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive information, so the spatial relationship 'beside' cannot be confirmed or rejected with given metadata.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what it is beside the baseboard; however, 'beside' is a plausible spatial predicate without conflicting details.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so it's unclear what is beside the slipper; thus, the relationship cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying information, but 'beside' a door is a plausible spatial relationship; there is insufficient detail to evaluate further.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so its spatial relationship 'beside' to the wall is plausible but not confirmable with given data.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information, so it is unclear what is beside the shoe, but the spatial relationship 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identified name or description, so it is unclear what is on the sneakers, but 'on' is plausible and there is no contradictory information.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is beside the baseboard; spatial relation is plausible but cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks a name or description, so it is unclear what it is beside the slipper, but the spatial relation 'beside' is generally plausible.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is beside the door; the spatial relationship is plausible but cannot be fully confirmed.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so it is unclear what is beside the wall, but spatially being beside a wall is plausible.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information, making it impossible to verify the spatial relationship 'beside' with the shoe.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unspecified but related by 'on' to sneakers moving steadily; lacking subject details makes judging relationship plausibility uncertain.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unknown and has no description; cannot confirm the spatial relation 'beside' with the baseboard.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks a name and description, providing no context to reliably assess spatial relation to the slipper.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so it's unclear what is on the sneakers; lacking context to confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it is unclear what it is beside the baseboard; however, 'beside' is a plausible spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification or description; cannot determine the spatial relation's correctness with the slipper.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are physically on the floor, not the floor on the sneakers; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A baseboard is typically located beside a floor; the spatial relationship 'beside' from floor to baseboard is physically plausible.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slipper can be beside a floor, but the current statement has the floor as the subject beside the slipper, which is less natural; flipping subject and object better fits the spatial relation.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are physically on the floor or ground near the wall, not the wall being on the sneakers; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A baseboard is typically located beside a wall, making this spatial relationship plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper exhibiting rolling motion can be beside a stationary wall, which is spatially and physically plausible.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper placed beside a baseboard is physically plausible and matches the spatial predicate.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two slipper-like objects placed beside each other is a plausible and reasonable spatial relationship given their descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper touching a nearby door is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and there's no description to determine what is 'on' the sneakers; keeping as is due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying features or description, so whether it is beside the baseboard cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and the object is likely a slipper; without more details on the subject or spatial setup, the 'beside' relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary baseboard positioned beside moving sneakers is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A baseboard being beside a slipper is spatially plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary baseboard and a stationary door positioned together touching each other is spatially plausible and consistent with typical architectural elements.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A baseboard typically touches a wall, and the spatial relationship 'touching' between a long baseboard and a vertical wall is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wall panel can be located beside moving sneakers; spatially plausible without contradiction.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wall panel can plausibly be beside a slipper moving with rolling motion; the spatial relationship 'beside' is reasonable here.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sneakers are likely on the floor or ground, not on the door frame; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door frame being spatially beside a baseboard is plausible and consistent with their typical positioning in a room.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door frame standing vertically can feasibly be beside a slipper on the ground; the spatial relationship 'beside' is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The positioning of a wall in front of sneakers moving across a floor is spatially plausible and consistent with the scene's descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A baseboard is typically positioned directly in front of or attached to a wall near the floor, not behind or spatially behind it; 'wall in front of baseboard' is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wall being in front of a slipper is plausible given their physical sizes and relative positioning described.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper and sneakers can plausibly be located beside each other; their spatial relationship as 'beside' is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper touching a door is physically plausible given the slipper's motion and the door's stationary state.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper in motion maintaining contact with a wall is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary door being spatially beside a pair of moving sneakers is plausible given the context; no contradiction or physical impossibility.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door is typically touching or attached to a wall, making this spatial relationship plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall is a static vertical surface and the sneakers are moving along the floor beside it, so 'beside' spatially is plausible in this context.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are typically on the floor or near the wall, not the wall on the sneakers; flipping better represents the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes moving side by side with similar movement patterns plausibly appear spatially beside each other.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vent and sneakers being beside each other in the scene is spatially plausible given the vent is fixed and the sneakers are moving nearby on the floor.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary long pipe positioned beside moving sneakers is plausible within a scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door frame positioned beside a pair of moving sneakers is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers can be on a vent, but a vent cannot be on sneakers; reversing the subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers are on the door is unlikely; more plausible that the door is on or behind the sneakers, so flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tape measure lying steady beside moving sneakers is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the sneakers are above the baseboard rather than the baseboard being above the sneakers.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a pair of sandals is spatially beside a pair of sneakers, as both are footwear and can be next to each other in a scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "flip",
+      "explanation": "Sneakers would be on the door only if flipping subject and object; the door cannot be on the sneakers, but sneakers can be on the door as a floor or a surface.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "A window is a stationary architectural element that cannot be on top of moving sneakers; the spatial relationship 'on' is physically impossible here.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 31
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identity and description, making it impossible to verify if it is tracking the person's movement.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "tracking movement of",
+      "relation_type": "functional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identification or description, making it unclear what entity is 'camera following' the person; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot hold a wall, as a wall is a large, fixed structure not physically held by a person.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information, making it unclear what the person is walking past.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is clearly walking forward; the object is undefined, so it's uncertain but plausible they are walking past something.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a walking person and the predicate 'walking past' is plausible, but the object lacks identification or description, making it unclear what is being walked past.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking and the predicate 'walking past' is plausible, but the object lacks identification or description to fully confirm the context.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be walking past a floor, which is a static surface they move over.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary wall is a physically plausible and typical scenario.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person clearly moving, but the object lacks any description or identification to confirm or refute the walking past relationship.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary door frame is a common and physically plausible scenario.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary large window is a logically consistent and physically plausible scenario.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking past a stationary vent is a physically plausible and contextually consistent relationship.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary door is a plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 36,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking with purpose and can plausibly be approaching the slipper, as described.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, which contradicts the relationship 'standing at' the slipper; a walking person cannot be standing at the slipper simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "standing at",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is 'opening' a slipper, which is not a reasonable interaction since slippers do not open.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "opening",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as holding an object and walking steadily, and the slipper is visible, but there is no clear indication of the person's gaze or focus on the slipper. However, the uncertainty in the slipper identification suggests incomplete context for full verification.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "focused on",
+      "relation_type": "attentional",
+      "subject_id": 2
+    }
+  ],
+  "relationships": [
+    [
+      3,
+      4,
+      "above",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "touching",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "below",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "touching",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "right of",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "right of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "in front of",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "in front of",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "right of",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "in front of",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "right of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "right of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "right of",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "right of",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      2,
+      "right of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "right of",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "right of",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "right of",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "right of",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      38,
+      "right of",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      39,
+      "right of",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      12,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      20,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      25,
+      "beside",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      26,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      28,
+      "beside",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      30,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "on",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      20,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      25,
+      "beside",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      26,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      28,
+      "beside",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "on",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "on",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      20,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      25,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      16,
+      "on",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "beside",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      16,
+      "beside",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      17,
+      "on",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      20,
+      "beside",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      25,
+      "beside",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      20,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      26,
+      "touching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "on",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      20,
+      "beside",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "beside",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      9,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      25,
+      "beside",
+      [
+        [
+          24,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      26,
+      "touching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      28,
+      "touching",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      25,
+      "beside",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      22,
+      "on",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      20,
+      "beside",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      25,
+      "beside",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      9,
+      "in front of",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      25,
+      "in front of",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      9,
+      "beside",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      26,
+      "touching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      28,
+      "touching",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      9,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      28,
+      "touching",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      9,
+      "beside",
+      [
+        [
+          24,
+          144
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      29,
+      "on",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      9,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      9,
+      "beside",
+      [
+        [
+          72,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      9,
+      "beside",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      9,
+      "beside",
+      [
+        [
+          24,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      35,
+      "on",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      36,
+      "on",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      9,
+      "beside",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      38,
+      "above",
+      [
+        [
+          96,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      9,
+      "beside",
+      [
+        [
+          144,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      40,
+      "on",
+      [
+        [
+          72,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "walking past",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      8,
+      "walking past",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      11,
+      "walking past",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      16,
+      "walking past",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      17,
+      "walking past",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      19,
+      "walking past",
+      [
+        [
+          24,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      22,
+      "walking past",
+      [
+        [
+          48,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      31,
+      "walking past",
+      [
+        [
+          120,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      35,
+      "walking past",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      36,
+      "walking past",
+      [
+        [
+          168,
+          264
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      18,
+      "approaching",
+      [
+        [
+          192,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      18,
+      "focused on",
+      [
+        [
+          264,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000077"
+}

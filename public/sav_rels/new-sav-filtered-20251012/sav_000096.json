@@ -1,0 +1,1573 @@
+{
+  "activity_differential": [
+    "person shopping for toys",
+    "person browsing and handling toy boxes",
+    "person exploring toy store aisles"
+  ],
+  "description": "A person is shopping in a toy store, browsing and interacting with toy boxes and displays. The camera follows the person as they move through the aisles, occasionally focusing on specific products.",
+  "place_env_id_name": "toy store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'worn by' suggests the shirt is worn by a subject, but here the subject is undefined and the shirt is the object; flipping subject and object aligns with typical usage that a shirt is worn by a person.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "worn by",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be wearing another object; 'wearing' implies a person or animal as the subject, not an inanimate garment.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person wearing the shirt can be in front of the shirt only if the objects are reversed; typically, the shirt is worn by the person, so flipping subject and object makes the relationship 'person in front of shirt' more plausible.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be spatially in front of a person; more logical is that the person is in front of the shirt (wearing it).",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be to the left of a person, but a person can be to the left of a shirt; flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt being described as 'in front of' the carpet spatially is plausible since a shirt can be positioned in front of a carpet in a scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt is described in detail but the object has no name or description, so it is unclear what it is in front of; however, spatially the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt is stated to be in front of an unspecified object; without further details about the object, the spatial relationship is plausible but lacks sufficient context to confirm or reject.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to confirm or reject the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a clearly described shirt, but the object lacks a name or description, so the spatial relationship 'in front of' cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to validate the 'in front of' relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to validate the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks any identifying details, so the spatial relationship cannot be confirmed or denied. Keeping the relationship given uncertainty.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what the shirt is in front of, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name, attributes, actions, and description, making it impossible to evaluate the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt is described well but the object lacks any description or name, so the spatial relation 'in front of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt and the dark elongated object can be spatially arranged as 'in front of,' but the abstract description of the object does not provide enough clear context to confirm the spatial relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify or interpret the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, so it's not possible to confirm the spatial relationship of the shirt being 'in front of' it.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to verify the spatial relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially located in front of a box independently, as it is an article of clothing rather than an agent or object that can stand or move; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship; no context confirms the shirt is 'in front of' an undefined object.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a black polo shirt described in detail, but the object lacks any identifying information; thus, the spatial relationship 'in front of' cannot be fully verified but is not implausible.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it's unclear what the shirt is in front of, making the relationship uncertain.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to assess the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can be positioned in front of a banner spatially, and the descriptions support this plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so it is unclear what the shirt is in front of, making it impossible to verify the relationship.",
+      "label": "insufficient_context",
+      "object_id": 31,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, or description, making it impossible to validate the spatial relationship involving the shirt.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, so it's unclear what the shirt is in front of, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what the shirt is in front of; cannot verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'shirt in front of toy packaging' is plausible as the shirt could logically be positioned in front of the toy packaging in the visual scene.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description to establish a meaningful spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying attributes or description, so the spatial relationship 'in front of' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'in front of' between the shirt and the object cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relation 'in front of' cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a shirt to be positioned in front of a palm tree in a scene, reflecting a spatial relationship without conflict.",
+      "label": "reasonable",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shirt cannot be physically in front of a person; it is more accurate to say the person is in front of the shirt.",
+      "label": "flipped",
+      "object_id": 41,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information, making it impossible to evaluate the spatial relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 42,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the 'in front of' spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 43,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the plausibility of the 'in front of' spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 44,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying attributes or description, making it impossible to confirm the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 45,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to confirm or deny the spatial relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 46,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the shirt is in front of, so the spatial relation cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 47,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making the spatial relationship 'in front of' with the shirt unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 48,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship 'in front of' with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 49,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can plausibly be positioned spatially in front of a signboard in a scene; the spatial relationship 'in front of' fits the described visual context.",
+      "label": "reasonable",
+      "object_id": 50,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to verify the spatial relation of 'shirt in front of' an unspecified object.",
+      "label": "insufficient_context",
+      "object_id": 51,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship 'in front of' with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 52,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 53,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying name or description, making it impossible to confirm or refute the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 54,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship or its plausibility.",
+      "label": "insufficient_context",
+      "object_id": 55,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'in front of' with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 56,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot be spatially positioned 'in front of' another object in a meaningful physical sense.",
+      "label": "physically_impossible",
+      "object_id": 57,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot physically position itself 'in front of' a box; as an inanimate clothing item, it cannot establish spatial relationships independently.",
+      "label": "physically_impossible",
+      "object_id": 58,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making the 'in front of' relationship unverifiable or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 59,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship is missing a name and description, so we cannot verify the spatial relation 'in front of' involving the shirt.",
+      "label": "insufficient_context",
+      "object_id": 60,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt is described in detail, but the object it is in front of is undefined; without object information, the spatial relationship cannot be verified or falsified.",
+      "label": "insufficient_context",
+      "object_id": 61,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can physically appear in front of a toy car in the scene; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 62,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description; thus, the spatial relationship 'in front of' cannot be verified or meaningfully interpreted.",
+      "label": "insufficient_context",
+      "object_id": 63,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, and description, making it impossible to validate the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 64,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can be spatially positioned in front of a panel; the physical arrangement described is plausible.",
+      "label": "reasonable",
+      "object_id": 65,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the shirt is in front of; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 66,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt being 'in front of' a box in a spatial sense is not plausible as the shirt is an article of clothing typically worn, not an independent object positioned spatially in front of a box.",
+      "label": "physically_impossible",
+      "object_id": 67,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relation 'in front of' with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 68,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 69,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to assess the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 70,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear what the shirt is in front of, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 71,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to confirm the plausibility of 'in front of' relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 72,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the shirt is 'in front of'; thus, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 73,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially positioned in front of a box on its own; as an object without independent location, the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 74,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to verify if the shirt being 'in front of' it is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 75,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, being an inanimate piece of clothing, cannot be spatially positioned 'in front of' a toy xylophone box on its own; this relationship is not physically plausible without a wearer or support.",
+      "label": "physically_impossible",
+      "object_id": 76,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is unspecified (null name and description), so the spatial relation 'in front of' cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 77,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify or understand the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 78,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, so the spatial relationship 'in front of' cannot be reasonably confirmed.",
+      "label": "insufficient_context",
+      "object_id": 79,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to determine if the spatial relationship 'in front of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 80,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can be spatially positioned in front of a signboard in a scene; this relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 81,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 82,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can be spatially located in front of a box in a scene; the relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 83,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 84,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'in front of' cannot be confirmed or validated.",
+      "label": "insufficient_context",
+      "object_id": 85,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt physically positioned in front of a window is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 86,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt being positioned in front of a signboard is spatially plausible given their described orientations and scene context.",
+      "label": "reasonable",
+      "object_id": 87,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The black and red-accented shirt being positioned in front of a red wall is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 88,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt can be positioned in front of a miniature football field; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 89,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports a spatial relationship where the shirt can be physically positioned in front of the toy xylophone, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 90,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship of a black polo shirt positioned in front of a tall red panel is plausible and consistent with their described physical characteristics.",
+      "label": "reasonable",
+      "object_id": 91,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a shirt described with detail, but the object lacks name and description, so correctness of 'in front of' cannot be fully verified yet seems plausible.",
+      "label": "insufficient_context",
+      "object_id": 92,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what the shirt is in front of, so the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 93,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt is described in detail but the object it is 'in front of' lacks any description, making it unclear but not implausible.",
+      "label": "insufficient_context",
+      "object_id": 94,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a shirt to be positioned spatially in front of a box in the scene as described.",
+      "label": "reasonable",
+      "object_id": 95,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a shirt to be spatially positioned in front of a panel in the described scene.",
+      "label": "reasonable",
+      "object_id": 96,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shirt positioned in front of a mural is spatially plausible and compatible with the described scene.",
+      "label": "reasonable",
+      "object_id": 97,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt cannot be spatially located in front of a track lighting fixture independently; the relationship is physically implausible as the shirt is worn by a person and cannot be an independent object positioned in front of a light fixture.",
+      "label": "physically_impossible",
+      "object_id": 98,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shirt and the tall red object can logically have a front-to-back spatial relation, but the partial descriptions do not provide enough detail to confirm this confidently.",
+      "label": "insufficient_context",
+      "object_id": 99,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or identification, making it impossible to verify the spatial relationship 'in front of' with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 100,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is completely undefined (null name and description), making it impossible to validate the 'following' relationship to the shirt.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information is provided about the subject or object, so the relationship 'camera focusing on' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is inanimate and cannot 'look at' something, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate object, cannot perform the action of 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, as an inanimate object, cannot look at anything; 'looking at' requires agency which a shirt lacks.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is an inanimate shirt unlikely to 'look at' anything, and the object lacks identity or description, making the relationship implausible and unsupported.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt, being an inanimate object, cannot perform the action of looking at a box.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot perform the action of 'looking at' another object.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt as an inanimate object cannot perform the action of 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and the relationship 'handling' from a shirt to an unknown object is unclear and implausible without more context.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (null) with no description, making it impossible to determine if the shirt can be handling it.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear who or what is handling the shirt, so the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt as an inanimate piece of clothing cannot handle or manipulate another object.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear who or what is handling the shirt; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot 'handle' a box; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the shirt is handling or interacting with; thus the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what is being handled by the shirt, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shirt itself does not interact independently; the person wears the shirt, so reversing subject and object makes more sense.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying details, making it impossible to verify the plausibility of the interaction with the shirt.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object lacks a name and description, making it impossible to evaluate the relationship's validity or relevance.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt is an inanimate object and cannot interact with a box.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identifying attributes and description, so it's unclear what the shirt is interacting with; cannot confirm correctness or error.",
+      "label": "insufficient_context",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's impossible to verify the relationship or its plausibility.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "worn by",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      35,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      41,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      50,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      61,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      62,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      65,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      81,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      83,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      86,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      87,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      88,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      89,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      90,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      91,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      92,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      94,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      95,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      96,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      97,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      99,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          48
+        ],
+        [
+          168,
+          264
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      3,
+      2,
+      "interacting with",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          240,
+          264
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      26,
+      "interacting with",
+      [
+        [
+          192,
+          264
+        ]
+      ],
+      "higher_order"
+    ]
+  ],
+  "video_id": "sav_000096"
+}

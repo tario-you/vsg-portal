@@ -1,0 +1,2402 @@
+{
+  "activity_differential": [
+    "person shopping in supermarket",
+    "person pushing shopping cart down aisle",
+    "person navigating supermarket aisle"
+  ],
+  "description": "A person is shopping in a supermarket, pushing a shopping cart down an aisle decorated with lanterns. Other shoppers and staff are present, and the camera moves steadily forward, following the main shopper.",
+  "place_env_id_name": "supermarket",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a shopping cart is behind a person who is moving forward, matching the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shopping cart can be spatially located to the right of the hanging lantern, which is plausible given their descriptions and no conflicting spatial info.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart can plausibly be positioned in front of a hanging lantern in a scene; the spatial relationship is reasonable given the described objects.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the shopping cart is positioned to the left of the sweatshirt, indicating a spatial relationship that aligns with the scene description.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart moving forward can plausibly be in front of a hanging lantern; the spatial relationship is credible and contextually consistent.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart being left of a fluorescent light fixture is spatially plausible given the descriptions and typical scene layouts.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart on the ground cannot be 'in front of' a ceiling fan blade, which is typically mounted on the ceiling far above the cart; the spatial relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart can be spatially positioned in front of a hanging lantern; this relationship is physically and semantically plausible.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the trash can is under or behind the shopping cart, not the other way around; flipping subject and object aligns with typical spatial relations.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot be spatially 'under' another shopping cart in the usual sense due to their similar sizes; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible for a person to be under a shopping cart, but not for a shopping cart to be under a person. Flipping subject and object makes the spatial relation 'person under shopping cart' reasonable.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern is hanging and likely above the shopping cart; flipping the relationship to 'lantern under shopping cart' is physically implausible, so flipping subject and object makes the spatial predicate 'under' correct in context.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The air conditioning unit is mounted on a wall above, so logically the shopping cart is under the air conditioning unit; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot physically be under a fixed wall vent; their relative positions and sizes make this spatial relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One shopping cart cannot be physically located under another shopping cart meaningfully; both carts are at similar ground level.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'shopping cart under signboard' is physically unlikely given the typical sizes and mounting of signboards above ground and the mobility of shopping carts; the metadata suggests the signboard is stationary and upright, making the cart being 'under' it implausible.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart is wheeled on the floor and cannot be physically located under a wall-mounted vent; 'under' spatially here is implausible.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the shopping cart is positioned to the left of the fluorescent light fixture in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart located to the left of a rectangular box is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart positioned to the left of stacked plastic chairs is a spatially plausible scene arrangement.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart positioned left of a steady pair of trousers is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar shopping carts can reasonably be positioned relative to each other, with one to the left of the other.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a shopping cart to be positioned in front of a person, given the person's attentive posture and potential interaction with the cart.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plastic bags described are already inside the shopping cart's basket; stating the cart is 'left of' the bags adds no new or meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot physically be under a shopping cart since the cart's basket is elevated and the coat is worn by a person; the relationship 'under' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward can plausibly be in front of a shopping cart also moving forward; the spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward can plausibly be located spatially to the right of a hanging lantern in a shopping area; the relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person moving steadily forward can plausibly be in front of a hanging lantern, making the spatial relationship coherent and sensible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is plausibly positioned spatially left of the sweatshirt (likely worn by another person or displayed), making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described moving forward and the lantern is hanging and swaying, so it is plausible the person is positioned 'in front of' the lantern in a spatial sense.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person to be located to the left of a ceiling-mounted fluorescent light fixture in a spatial context.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a ceiling fan blade in a meaningful way, as the fan is typically mounted on the ceiling above the person.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward can plausibly be spatially in front of a hanging lantern in a shopping area.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person moving forward cannot be physically 'under' a tall, upright trash can; the spatial relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person cannot be spatially 'under' the shopping cart due to the cart's typical size and structure; this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially 'under' another person is physically implausible in this context where both are walking upright.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving under a hanging lantern is a plausible spatial relationship consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving under a wall-mounted air conditioning unit is physically plausible and consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be physically located under a vent as vents are typically mounted high and small, making the 'under' spatial relationship implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically be 'under' a shopping cart; the spatial relationship is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can be spatially located under a signboard, which is plausible given typical urban environments and the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically be 'under' a vent as described; the vent is likely part of a ceiling or wall and the person is moving forward, so the spatial relationship 'under' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lantern hanging in the air can reasonably be positioned to the right of the sweatshirt; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lantern hanging near and to the left of a fluorescent light fixture is spatially plausible given their described positions and characteristics.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lantern hanging in front of a person is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lantern hanging left of plastic bags is plausible as a spatial relationship; no conflict or impossibility is evident.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are very similar lanterns described together; stating one is left of the other adds no significant informative relationship given the near-identical descriptions.",
+      "label": "redundant",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The lantern hanging near a ceiling fan blade and positioned to the left is spatially plausible given descriptions; no contradictions or physical implausibilities are present.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lantern typically hangs above or over objects like a trash can, so the lantern should be 'over' or 'above' the trash can; flipping the relationship corrects the spatial context.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern hanging and swaying in the air cannot logically be under a moving shopping cart; their spatial relationship as described is implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern is hanging in the air, so it is more plausible that the person is under the lantern rather than the lantern being under the person.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar hanging lanterns; stating one is 'under' the other adds no meaningful new information given their comparable descriptions and positions.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern hangs under the air conditioning unit, so flipping subject and object makes the spatial relationship 'under' correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lantern would typically hang under a vent, not the other way around; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lantern can reasonably hang under a shopping cart in a scene, especially if suspended or positioned lower relative to the cart.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern hangs below the signboard, so flipping subject and object makes the spatial relationship 'under' correct.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern is hanging and typically would be under the vent; flipping subject and object corrects the spatial predicate 'under'.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatshirt can physically be positioned to the left of the fluorescent light fixture in a spatial context.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is in front of the sweatshirt, not the sweatshirt in front of the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatshirt and stack of plastic bags are distinct objects, and it is plausible for the sweatshirt to be positioned left of the plastic bags in the scene.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatshirt and lantern are distinct objects with plausible spatial relation; the sweatshirt being left of the lantern fits the scene without contradiction.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt, being an article of clothing worn on the body, cannot physically be positioned to the left of a ceiling fan blade suspended above; the spatial relationship is implausible due to differing contexts and typical relative positions.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be spatially located under a tall trash can; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be physically under a shopping cart; the relationship is not plausible as described.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sweatshirt cannot be under a person; rather, a person wears or is over a sweatshirt, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being under a hanging spherical lantern is physically implausible since the sweatshirt is worn on a person indoors or on the body, while the lantern is hanging suspended in air, so the sweatshirt cannot be spatially under the lantern.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt cannot be physically located under a wall-mounted air conditioning unit in a spatial sense; the sweatshirt is worn on a person, and its spatial relation as 'under' the unit is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sweatshirt being under the vent is spatially plausible, considering the vent is a fixed structure and the sweatshirt is worn on the upper body which could be positioned under it.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "It is not physically plausible for a sweatshirt (a garment worn on the body) to be spatially under a shopping cart, given the descriptions.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being 'under' a mounted signboard is not physically plausible given typical spatial arrangements; these objects are unrelated in context and unlikely to be in such a spatial relation.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt being 'under' a vent is unlikely since vents are usually fixed to ceilings or walls above a person wearing a sweatshirt.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fluorescent light fixture positioned in front of a person is spatially plausible and consistent with typical room layouts.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fluorescent light fixture being positioned left of the stacked plastic bags is a plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a fluorescent light fixture to be spatially positioned to the left of a hanging lantern as described.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a fluorescent light fixture to be positioned left of a ceiling fan blade in a ceiling setup; the spatial relation is physically reasonable.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fluorescent light fixture extending horizontally is typically above objects like a trash can; saying the light is 'under' the trash can is incorrect, flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fluorescent light fixture cannot logically be 'under' a shopping cart; it is more plausible the shopping cart is under the light fixture, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is physically under the fluorescent light fixture, not the other way around; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern is hanging and thus likely positioned below the fluorescent light fixture; flipping subject and object makes 'lantern under light fixture' correct.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "An air conditioning unit is typically installed above a fluorescent light fixture, so flipping subject and object corrects the 'under' relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fluorescent light fixture cannot realistically be 'under' a vent; typically, vents are installed on ceilings or walls above fixtures. The spatial relationship is implausible as stated.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The fluorescent light fixture is naturally positioned above the shopping cart; flipping subject and object fits the spatial relation 'under' correctly.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a fluorescent light fixture is mounted above a signboard; flipping subject and object to 'signboard under light fixture' aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A vent is usually installed under or below a light fixture, so the vent is under the light fixture, not the other way around. Flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person positioned left of a hanging lantern is a plausible spatial relationship given their attributes and descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person can logically be positioned to the left of a ceiling fan blade in the scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'person under trash can' is physically unlikely and the object's identification as a 'trash can (uncertain)' plus incomplete descriptions do not provide enough context to confirm or justify the subject being under the object.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be under a shopping cart, as the cart is typically on the floor and people stand or push carts above it.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot realistically be spatially 'under' another person in a standing scenario, as both are described upright and moving.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be under a hanging lantern, which is described as suspended in air above.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is unlikely to be 'under' the air conditioning unit; it is more plausible that the air conditioning unit is 'above' the person, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "flip",
+      "explanation": "The vent is likely under the person rather than the person under the vent, so flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person being under the shopping cart is spatially plausible, possibly indicating the person is bending down or positioned beneath or near the cart's height.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Person can plausibly be positioned under a signboard; spatial relationship is physically possible and context supports it.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing under a vent is spatially plausible given the descriptions of both entities.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hanging lantern being described as to the right of a ceiling fan blade is plausible given their spatial arrangement and descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the lantern hangs above the trash can rather than being under it; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lantern hangs in the air, so it cannot be under a shopping cart; flipping subject and object makes the spatial relation 'shopping cart under lantern,' which is plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lantern hanging above (subject lantern 'under' object person) is spatially plausible and matches the description of a hanging lantern over a moving person.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are similar lanterns hanging in air; stating one lantern is 'under' the other adds no meaningful spatial distinction given the descriptions.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern hangs suspended, likely under the air conditioning unit mounted on the wall; flipping subject and object aligns with spatial hierarchy.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "A lantern typically hangs below a vent, not the other way around; flipping subject and object aligns the predicate 'under' correctly.",
+      "label": "flipped",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern is typically hung above and would not be positioned under a shopping cart, making the spatial relationship 'lantern under shopping cart' physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern is hanging below the signboard, so the correct spatial relationship is that the signboard is 'under' the lantern, not vice versa.",
+      "label": "flipped",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "The lantern hangs under some structure; it is more plausible that the lantern is under the vent, reversing subject and object fixes the spatial relation.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling fan blade is typically above the trash can; stating the blade is under the trash can is incorrect and flipping subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A ceiling fan blade is logically positioned above a shopping cart on the floor; 'under' correctly describes the spatial relation.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling fan blade cannot be 'under' a person; rather, the person is under the ceiling fan blade, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling fan blade is physically above a hanging lantern; the lantern cannot be above the fan blade. Flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 19,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "The ceiling fan blade is typically below the air conditioning unit mounted on a wall, so flipping subject and object makes the 'under' relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 25,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling fan blade is typically positioned above a vent, not under it, so the spatial relation 'under' is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling fan blade is typically above a shopping cart; flipping subject and object makes 'shopping cart under ceiling fan blade' correct.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A ceiling fan blade being positioned under a signboard is spatially plausible given their descriptions and no conflicting context.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling fan blade is typically located above a vent, so flipping subject and object to 'vent under ceiling fan blade' aligns better with physical layout and common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person pushes a shopping cart, not the shopping cart pushing the person; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person handles (pushes) the shopping cart, not the other way around; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person moving steadily forward and a shopping cart moving with them is a plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship involves an unspecified camera object lacking description, making it unclear and unverifiable.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by camera",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart moving past a sweatshirt (worn by a person) is physically and contextually plausible in a scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping cart moving past a hanging lantern is physically plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart is an inanimate object incapable of looking at anything, so this attentional relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart cannot perform the action 'walking past' as it lacks legs or the ability to walk; this predicate is not physically plausible for the subject.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shopping cart as an object cannot perform the action of 'walking past' a person, as it lacks autonomous motion and intent.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern cannot push a fluorescent light fixture; this action is physically implausible given their descriptions and typical interactions.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The vibrant red lantern is swaying and moving, while the fluorescent light fixture is fixed and steady; the lantern cannot be moving with the light fixture.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern cannot physically walk past a sweatshirt as it is an inanimate object hanging in the air, hence the predicate 'walking past' is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a lantern, but a lantern cannot walk past a person; flipping subject and object makes the relationship physically and semantically correct.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A lantern, which hangs in the air, cannot perform the action 'walking past' a shopping cart.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can plausibly be pushing a fluorescent light fixture, for example during installation or adjustment.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "pushing",
+      "relation_type": "functional",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot physically move together with a fixed fluorescent light fixture as the fixture is stationary and mounted.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweatshirt as an object cannot be 'walked past' as an independent entity; it is a garment worn by a person, so the predicate misapplies physical action between the person and clothing.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a hanging, gently moving lantern is a physically plausible and contextually reasonable relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking past a shopping cart is a common and plausible scenario given the descriptions of both entities and their actions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 16
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or description, making it impossible to evaluate the 'following' relationship with the shopping cart.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no identifying information, making it impossible to validate the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, making it unclear who or what is moving past the sweatshirt; cannot confirm relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear who or what is moving past the lantern; thus, the relationship cannot be verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unnamed and undescribed, so it is unclear whether it is a camera or something else; therefore, the relationship cannot be confirmed or discarded.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, and without its description, it is unclear whether it can move past the lantern; thus, the relationship cannot be confirmed or rejected definitively.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and lacks description, making it impossible to confirm the 'moving past' relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      1,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      31,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "right of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      32,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      3,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      3,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      3,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      17,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      24,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      5,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      20,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      17,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      24,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      32,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      8,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      8,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      24,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      32,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      19,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      16,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      16,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      21,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      31,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      33,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      32,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      24,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      24,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      15,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      24,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      24,
+      "under",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      31,
+      24,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      24,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      32,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      4,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      32,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      32,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      32,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      32,
+      "under",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      31,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      32,
+      "under",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "pushing",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      1,
+      "handling",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "moving with",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      5,
+      "moving past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      14,
+      "moving past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      3,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      8,
+      "pushing",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "functional"
+    ],
+    [
+      16,
+      3,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      16,
+      1,
+      "walking past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      5,
+      "moving past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      14,
+      "moving past",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      18,
+      "camera focusing on",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      3,
+      "moving past",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000081"
+}

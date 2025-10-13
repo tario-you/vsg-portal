@@ -1,0 +1,3434 @@
+{
+  "activity_differential": [
+    "customers browsing and queuing in a manga merchandise store",
+    "customers socializing and shopping together",
+    "customers handling and examining products"
+  ],
+  "description": "A series of frames inside a manga/anime merchandise store, showing multiple people browsing, queuing, and moving through the store. The camera is positioned at the entrance and remains mostly static, capturing the flow of customers as they interact with products and each other.",
+  "place_env_id_name": "retail store",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, so it is unclear what is in front of the signboard. The spatial relationship is plausible but insufficiently detailed to confirm or reject.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying details, making it unclear what is in front of the signboard, so it is not possible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and has no description, so it is unclear what is in front of the signboard; the relationship may be correct but context is insufficient to confirm.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so the spatial relationship 'in front of' with the signboard cannot be fully evaluated but is plausible enough to keep.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, so it's not possible to verify a meaningful spatial relationship 'under' with the person.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks any identifying information, so it's unclear what is under the coat; cannot confirm or deny relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object is unnamed and undescribed, so it's unclear what is under the stack of books; cannot confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, so it is unclear what is under the person, but the relationship is not inherently implausible.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so it is unclear if the 'under' spatial relationship to the person is correct, but not implausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and has no description, making it unclear what is under the coat; thus, the relationship cannot be fully validated but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No details provided about the objects to assess the spatial relation 'under'; cannot confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to assess the plausibility of the 'touching' relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically under another person while both are walking.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject described as a person is plausibly wearing the black jacket, which fits well with the clothing description and the predicate 'wearing'.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person described is wearing the coat mentioned; the attributes and actions align well with the predicate 'wearing'.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as wearing a cream-colored coat, but the object is a black coat; this mismatch makes the 'wearing' relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described wearing light gray pants, not olive green trousers; therefore, the 'wearing' relationship with the olive trousers is incorrect.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot wear another person; the predicate 'wearing' is not plausible between two humans.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm what the person is wearing.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The first person walking is plausibly in front of the second person, consistent with their descriptions and spatial relation.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two posters can logically be arranged spatially with one to the right of the other.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two posters placed side by side with one to the right of the other is plausible given their descriptions and stationary actions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a large poster to be positioned above a television, both described as stationary large rectangular objects in the scene.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large rectangular poster positioned to the right of the tall, rectangular signboard is a spatial relationship that is plausible given typical scene arrangements.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large poster being to the right of the signboard is a plausible spatial relationship given their described stationary positions and relative placements.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The jacket is worn by the person, so the person is on the jacket is incorrect; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A jacket cannot be under a person; rather, a person wears or is over a jacket, so flipping subject and object makes the spatial relation 'under' plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The black jacket and cream-colored coat described are both worn garments that could plausibly touch each other if layered or in close proximity.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The black jacket and black coat described are plausibly touching, as they could be worn together or positioned close in a video scene.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The jacket naturally touches the trousers as they are worn on the same person, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is touching the jacket by wearing it; flipping subject and object makes the 'touching' relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a jacket described in detail, but the object lacks any identifying information, making it unclear what the jacket is touching; thus, the relationship cannot be confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification and description, so it's unclear what the person is above, making it uncertain but not necessarily incorrect.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically above another person who is on the same floor level; the predicate 'above' implies spatial positioning that does not match the described scene.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person is above the jacket they are wearing, as the jacket is part of the person's attire.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is above the person as it is worn on them; flipping subject and object aligns with the predicate 'above' for spatial correctness.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is likely above the coat they are wearing, making 'above' a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two persons walking close to each other side by side is spatially plausible given their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people are described in close proximity with plausible actions and appearances, making the spatial relationship 'beside' reasonable.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person clearly described, but the object lacks any descriptive information, making it impossible to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people described with distinct appearances and postures standing or moving near each other; 'beside' is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that one poster could be located to the left of another in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two posters are described with spatial features; one can plausibly be to the left of the other based on the scene description.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between two tall, rectangular signage objects (poster and signboard) standing prominently is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both poster and signboard are rectangular stationary objects and it is plausible for the poster to be positioned left of the signboard.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'above' with the coat.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot be 'on' a person; rather, the person wears the coat. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two separate garments (coat and jacket) cannot physically be touching each other unless worn together, which is not indicated; the relationship is implausible without further context.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is physically 'under' the coat; reversing subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two coats worn by a person could physically touch each other, especially if layered or close in proximity.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a long coat to be touching trousers worn underneath, as described by their overlapping clothing attributes and physical positioning.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person and thus touches the person; flipping subject and object corrects the predicate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The coat is described in detail but the object lacks any identifying information, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person wears the coat, so the coat is touching the person; flipping subject and object aligns with this natural relationship.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards described as tall, rectangular, and prominently standing stationary; stating one is 'in front of' the other adds no meaningful new spatial information given the similar descriptions.",
+      "label": "redundant",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are signboards with distinct descriptions, so stating one signboard is 'under' another is unlikely or redundant without more spatial context.",
+      "label": "redundant",
+      "object_id": 23,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is stated to be behind an unspecified object with no details, so the spatial relation cannot be verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards have arrows pointing in opposite directions (left and right), so one cannot be to the 'left of' the other in a way that matches their indicated directional arrows.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards described with specific colors and text; stating that one is 'left of' the other adds no meaningful new information given their similar context and stationary nature.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are signboards, and spatially describing one as 'left of' the other adds no significant new information given the similar nature and static positioning described.",
+      "label": "redundant",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identifying information, so while the signboard being behind it is possible, the unclear object prevents full verification.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards with arrows pointing in opposite directions can logically be positioned with one to the right of the other.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards are described as steady and maintaining their positions; specifying that one is 'right of' the other adds little new informative spatial distinction given the lack of explicit positional coordinates.",
+      "label": "redundant",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both signboards are objects that are fixed in place and do not typically move relative to each other, making a spatial relationship of one being to the right of the other ambiguous or physically unsupported from the metadata provided.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is 'on' the coat is incorrect; flipping subject and object makes it semantically correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat and a jacket are both clothing items typically worn separately; they cannot be touching each other independently without a wearer, so the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the person is 'under' the coat, not the coat under the person; flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two coats worn closely by individuals can plausibly be touching, especially given their descriptions of movement and proximity.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coat touching trousers is physically plausible, especially as clothing layers typically overlap or contact each other.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person is wearing a coat, so the person is touching the coat, not the coat touching the person; flipping subject and object makes the predicate accurate.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what the coat is touching, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is wearing the coat, so it makes more sense to say the person is touching the coat rather than the coat touching the person.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, slender metallic object positioned in front of a poster is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slender, metallic object standing in front of the tall, rectangular signboard is spatially plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are described as tall, metallic, and stationary with minimal details; their spatial relationship 'beside' is plausible but not confirmed.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two posters can be arranged spatially with one positioned to the left of the other; the descriptions support a spatial layout.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two posters can logically be positioned such that one is to the right of the other; the spatial relationship 'right of' is plausible with the provided descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a poster to be positioned to the right of a signboard as spatial arrangements of static objects.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "A poster can plausibly be positioned to the right of a signboard; both are stable, stationary objects with spatial relation consistent with the description.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "The trousers are worn by the person, so the person is 'on' the trousers is incorrect; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for loose-fit trousers and a jacket worn by the same person to be touching, consistent with clothing layers and spatial proximity.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The trousers and coat are described as clothing items interacting naturally during movement, making the 'touching' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The trousers and coat likely overlap or touch as clothing layers on a person, making the 'touching' relationship physically plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is likely touching the trousers, not the trousers touching the person; flipping subject and object aligns with physical plausibility.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as trousers, but the object lacks description or identification, making it uncertain whether the touching relationship is valid or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more natural to say the person is touching the trousers they are wearing, rather than the trousers touching the person.",
+      "label": "flipped",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are tall signboards that remain stationary; stating one is behind the other adds minimal useful information about the scene.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "One rectangular signboard positioned above another is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "A ceiling light fixture is typically above a signboard, so the relationship 'signboard under ceiling light fixture' makes sense only if the subject and object are flipped.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary signboard being positioned to the left of a poster is spatially plausible based on their descriptions and does not conflict with physical reality.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard and poster are both tall rectangular objects featuring vibrant designs, so the signboard being located to the right of the poster is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is described only vaguely as 'object (uncertain)' with no clear spatial context relative to the signboard; cannot confirm the 'behind' relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a signboard to be positioned spatially to the left of a poster in a scene, given their descriptions and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards positioned relative to each other is a plausible spatial relationship; the subject signboard being 'right of' the object signboard fits with their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm the spatial relationship 'above' with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people walking near each other with described clothing and posture can plausibly be beside each other.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is wearing the coat, so it is reasonable to say the person is touching the coat.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described wearing a black coat, but the object is a cream-colored coat. The person cannot be touching a coat they are not wearing, so the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person touching 'trousers' as a separate object is unlikely since trousers would be worn by the person; claiming the person touches trousers as a distinct object is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, so it is unclear what the person is touching or whether the relationship is valid.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people standing close together could plausibly be touching in this context.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any descriptive information, making it impossible to confirm the spatial relationship of 'behind' with respect to the signboard.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both signboards are described as stationary and provide directional information, making the spatial relation 'right of' plausible and reasonable.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two stationary signboards with distinct colors and purposes can logically be positioned such that one is to the left of the other.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard and poster both remain stationary and their relative spatial positions can be reasonably described; the signboard being to the left of the poster is plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two stationary signboards with distinct descriptions can plausibly be arranged spatially with one to the left of the other.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both signboards are described as stationary and possess similar attributes; one being to the right of the other is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a banner would be displayed under a signboard, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are described as modern, metallic, upright items without clear identities; 'beside' is plausible, but object uncertainty limits certainty.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people described in proximity with one standing still and one walking steadily can plausibly be beside each other.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name and description, so it is unclear what it is, but the person is stated as 'beside' it, which is plausible without additional details.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people standing close to each other can be described as 'beside,' which is plausible given their descriptions and postures.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "One signboard being spatially above another is plausible given the descriptions and no contradictory details.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A smaller signboard is unlikely to be under a taller signboard; likely the taller signboard is above the smaller one, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a poster is displayed on a wall above a television; saying the television is below the poster is correct when flipped to poster below television.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object's name and description are missing, making it impossible to verify the spatial relationship with the signboard.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards with distinct colors and attributes can logically be positioned with one to the right of the other in a spatial layout.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards described separately with distinct colors and features could plausibly be positioned with one to the left of the other in a scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar signboards are both stationary and adjacent; stating one is left of the other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'above' between the books and the unnamed object cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stack of books can plausibly be positioned beside a walking person in a spatial context.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "Books in a stationary upright stack cannot be touching a moving coat that sways with the wearer; these two objects are unlikely to be in contact given their described states and typical contexts.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a stack of books, and the object is unspecified; without object details, it is unclear but plausible that the books are touching it.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "drop",
+      "explanation": "The stack of books is described as stationary and upright, and the person is not described as touching or interacting physically with the books; 'touching' relationship is implausible without direct interaction.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 27
+    },
+    {
+      "decision": "keep",
+      "explanation": "A ceiling light fixture being above a signboard is a physically plausible and common spatial relationship.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so the spatial relationship 'left of' cannot be verified or evaluated for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described as prominently displayed and steady, which can plausibly be positioned above the poster, which remains static below it.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "A vent being under a ceiling light fixture in a scene is spatially plausible and consistent with their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive details; cannot evaluate plausibility but 'beside' is a reasonable spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear what is under the signboard, but the spatial 'under' relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "Insufficient metadata to determine the nature or plausibility of the spatial relationship between unidentified objects.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so it is unclear what is under the signboard, but spatially 'under' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identifying information, so the spatial relationship 'right of' the ceiling light fixture cannot be fully validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are provided, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what the entity is, but being 'beside' a person is plausible; cannot confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, but touching a coat is plausible; lack of subject details prevents detailed validation.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no attributes or description, so confirming the 'touching' relationship with the coat is uncertain but plausible.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, making it unclear what is touching the trousers; cannot confirm or deny the relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification, making it unclear what is touching the person; however, no contradictory information suggests dropping or flipping.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, so it is unclear what is beside the person, but the spatial predicate is plausible and cannot be ruled out.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity is unknown, so it is unclear what is touching the books; however, 'touching' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to assess if touching the person is plausible.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no attributes or description, making it impossible to confirm the spatial relationship 'under' relative to the ceiling light fixture.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 36
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object have identifying details, but spatial relationship 'right of' is plausible; insufficient data to confirm correctness.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 37
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or attributes, making it impossible to verify the spatial relationship 'above' with the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially 'on' another person is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person wearing and touching the jacket is plausible given the jacket is described as being worn by the person and hands are tucked into pockets.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people described in close proximity with spatial relation 'beside' is plausible and consistent with their respective descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is wearing a dark, padded jacket and touching a black coat, which is plausible as the coat may be part of or near the person's attire.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person wearing a coat with hands tucked into pockets plausibly touches the coat.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person wearing a jacket can plausibly be touching their trousers, as the trousers are part of their clothing and within reach.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two persons are described with overlapping presence and proximity, making it plausible that one is touching the other.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people described in close proximity makes 'beside' a semantically and physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person has hands tucked into their jacket pockets, so they are not touching the books; touching the books while hands are in pockets is implausible.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person whose hands are tucked into pockets, suggesting touching the pockets or jacket; however, the object lacks a name or description, so it's unclear what is being touched, but 'touching' remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 39
+    },
+    {
+      "decision": "keep",
+      "explanation": "One person walking in front of another is a plausible spatial relationship given their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object is undefined (null) making it impossible to confirm the relationship 'camera focusing on' the person.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified (null), making it impossible to validate the relationship 'camera focusing on' with the given metadata.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified and lacks any attributes or description, making it impossible to confirm a 'camera focusing on' relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object is entirely undefined (name and description are null), so we cannot confirm the validity of 'camera focusing on' relationship to the person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object names or descriptions are provided, so it is unclear if the camera is focusing on the object, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person is physically implausible in this walking context.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot set down another person; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "setting down",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person walking steadily and focused on their path would be looking at the vibrant signboard with a clear directional arrow.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking and looking at a prominent, stable signboard is a common and plausible scenario.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily can plausibly be looking at a stack of neatly aligned books, consistent with the attentive relationship.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a person looking at an unspecified object with no description; cannot confirm correctness, so keep as is.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both individuals are described as walking steadily and maintaining consistent movement, but there is no indication of interaction or communication that would imply 'socializing with'.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking steadily while the other is focused on a device and standing still; they cannot realistically be socializing simultaneously in this context.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as wearing a black coat, which aligns with the coat object and the 'wearing' predicate, making the relationship plausible and coherent.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot wear another person; the 'wearing' predicate between two persons is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying attributes or description, making it impossible to confirm the 'holding' relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is seen from behind, so they cannot be looking at the stack of books ahead as described.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both people are described as walking steadily with relaxed arms and focused on their path, but there is no evidence or description indicating they are interacting or socializing; thus, 'socializing with' is not supported.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person holding another person in the described context is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is focused intently on a handheld device they are holding, so they cannot be simultaneously looking at the signboard.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is focused on a handheld device and standing still, while the other is walking steadily and focused on their path; they are not interacting or socializing.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 22
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it unclear what the person could be holding; relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person described as wearing a cream-colored coat is a plausible and reasonable relationship; the metadata confirms the coat is worn by the subject.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described wearing loose-fitting pants and the object is a pair of trousers; the 'wearing' relationship is plausible and consistent.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described walking independently with no indication of interaction or communication that would suggest socializing.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so we cannot confirm or refute the socializing relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unidentified with no description or name, making it impossible to confirm a socializing relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "Insufficient information about subject and object to assess the socializing relationship.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 33
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no name or description, making it impossible to verify or support the 'socializing with' predicate in this context.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "socializing with",
+      "relation_type": "social",
+      "subject_id": 33
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to verify if the person is handling it.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what is being handled; thus, the relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is walking steadily and the books are stationary; browsing implies looking through or examining books closely, which is incompatible with just walking past without interaction.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is depicted walking forward with relaxed arms and a forward lean, indicating movement away from the books rather than interacting with them; browsing books typically requires stopping and looking at them closely, which is not supported by the description.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as focused on a handheld device likely a smartphone, not on the signboard; 'browsing' the signboard is implausible as browsing implies interacting with digital content, not a static signboard.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 22
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily and focused can plausibly be browsing or looking at a nearby signboard.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "browsing",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described as walking steadily with consistent pace, not standing in line; 'queuing with' implies standing still in line, which conflicts with their described walking actions.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking steadily, while the other is standing still and focused on a device; they are not simultaneously queuing together.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is walking with forward lean and movement, while the other is standing still and focused on a device; they cannot be queuing together as a group under these actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are described as walking steadily and not standing in line; thus, 'queuing with' is not a physically plausible relationship.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subjects are people walking in the same direction and posture, making queuing a plausible higher-order relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "queuing with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject and object lack identifying information, but 'walking together' is plausible between two entities if unspecified.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "walking together",
+      "relation_type": "motion",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity and attributes are unknown, making it unclear if 'walking toward' the person is plausible, but no evidence contradicts the relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 32
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information, making it impossible to confirm the 'walking toward' relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 33
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      27,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      39,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      35,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      24,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      4,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      35,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "above",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      18,
+      "beside",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      22,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      35,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      39,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      17,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      19,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      14,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      35,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "behind",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      11,
+      "under",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      7,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      14,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      17,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      21,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      17,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      19,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "on",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      4,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      14,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      35,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      14,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      23,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      16,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      3,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      6,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      19,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      5,
+      "beside",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      39,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      10,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      17,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      25,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      20,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      5,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      35,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      22,
+      39,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      8,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      23,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      24,
+      "below",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      10,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      19,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      5,
+      "beside",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      27,
+      35,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      16,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      13,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      28,
+      "under",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      33,
+      "beside",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      17,
+      "under",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      32,
+      "beside",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      17,
+      "under",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      28,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      1,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      5,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      14,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      18,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      22,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      27,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      37,
+      34,
+      "right of",
+      [
+        [
+          216,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      4,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      5,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      7,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      11,
+      "touching",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      14,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      18,
+      "touching",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      22,
+      "beside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      39,
+      35,
+      "touching",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      32,
+      "camera focusing on",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      33,
+      "camera focusing on",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      9,
+      "looking at",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      10,
+      "looking at",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      27,
+      "looking at",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      1,
+      "looking at",
+      [
+        [
+          0,
+          312
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      18,
+      7,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      11,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      14,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      32,
+      33,
+      "socializing with",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      33,
+      32,
+      "socializing with",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "social"
+    ],
+    [
+      5,
+      9,
+      "browsing",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      2,
+      18,
+      "queuing with",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      32,
+      33,
+      "walking together",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "motion"
+    ],
+    [
+      32,
+      5,
+      "walking toward",
+      [
+        [
+          312,
+          408
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000005"
+}

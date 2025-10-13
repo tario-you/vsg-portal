@@ -1,0 +1,1388 @@
+{
+  "activity_differential": [
+    "people shopping in mall corridor",
+    "people walking through clothing store area",
+    "people carrying shopping bags in mall"
+  ],
+  "description": "Two people are walking through a shopping mall corridor, carrying shopping bags and passing by various clothing displays and mannequins. The camera follows their movement, tracking their progress down the corridor.",
+  "place_env_id_name": "shopping mall corridor",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so the spatial relationship 'in front of' with the described person cannot be fully validated but is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject has no name or description, so the spatial relationship 'right of' relative to a described person is plausible but cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is identified, but spatial relation 'left of' is plausible without further details.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information or attributes, making it unclear who or what is holding the floor lamp; no evidence supports this relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unnamed and undescribed, so we can't confirm the spatial relationship, but 'left of' a wall is generally plausible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information is available about the subject or object to assess the spatial relationship accurately, so keep as is.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so the spatial relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object entity lacks any identification, attributes, actions, or description, making it impossible to validate the spatial relationship 'behind' the person.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similarly dressed individuals walking forward can plausibly be positioned 'right of' one another; the spatial relationship aligns with their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed person, but the object is undefined and lacks description, so the spatial relationship cannot be fully verified but is not implausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking and swinging arms would not be holding a floor lamp, which is typically heavy and stationary; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking to the left of a wall is a spatially plausible and logically consistent relationship.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any identifying information, making it unclear if the spatial relation 'left of' is meaningful or accurate.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm a meaningful spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well-described, but the object lacks any identifying details, so the relative position 'left of' cannot be fully verified but is plausible without contradiction.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well-described as a person walking, but the object lacks any identifying details; 'left of' is plausible but context is insufficient to confirm or refute.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subjects are walking forward with similar attributes and descriptions; one being 'left of' the other spatially is plausible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'opposite' cannot be meaningfully assessed or confirmed.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "opposite",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking left of a stationary floor lamp is spatially plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking is plausibly positioned left of the described wall, matching spatial and contextual clues in the metadata.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying details, making it impossible to verify or reason about the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks a name or description, so it is unclear what the subject is positioned left of, but the relationship itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification or description, so the spatial relationship 'left of' cannot be fully validated, but no contradiction is present.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "No object or subject names or descriptions are provided to judge the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name and description, so it is unclear what object is to the right of the person; the spatial relationship is plausible but lacks full context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks a name or description, so it is unclear what the entity is, but the spatial predicate 'opposite' to the person could be valid in some contexts.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "opposite",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification or description, so it's unclear what object is 'right of' the floor lamp, but the spatial relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity is unknown, making it unclear if it is plausible for it to be right of the wall, but the spatial relationship is possible in general.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Neither subject nor object is identified, so the spatial relation 'right of' cannot be verified or refuted.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the spatial relationship 'right of' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so spatial relationship 'right of' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to validate the 'held by' relationship with the floor lamp.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the person is holding the floor lamp, not the floor lamp being held by the person; flipping the subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The floor lamp being spatially 'right of' the walking person is physically plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The floor lamp is stationary and could plausibly be 'left of' another object, but the object's identity and description are missing, so the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is a large, fixed vertical surface, and the floor lamp stands in front or to the right of the wall. Saying the lamp is 'right of' the wall is less plausible than the wall being 'right of' the lamp, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship 'right of' with the floor lamp.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The floor lamp is described in detail, but the object it is spatially related to has no description or name, leaving the spatial relationship unverifiable yet not implausible.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to determine the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is to the right of the wall, not that the wall is to the right of the person; flipping subject and object fixes the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be to the right of a wall, but saying the wall is to the right of the person is unlikely given the description; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall can plausibly be spatially to the left of a stationary floor lamp in the scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object lacks any name or description, making it impossible to evaluate the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify or interpret the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack names and descriptions, so the spatial relationship 'right of' cannot be confidently confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's uncertain who or what is right of the person, but the spatial relation 'right of' is plausible as given.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks a name and description, so it is unclear what it is; cannot confirm spatial relationship with the person.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about the objects' identities or context; cannot verify or reject the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is left of the floor lamp, but the spatial predicate 'left of' could be reasonable.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, so the spatial relationship 'left of' the wall cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, making it impossible to assess the spatial relationship with certainty.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of object names and descriptions prevents confirming the spatial relation's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no name or description, making it unclear what it is, but the spatial relation 'right of' to a described person is plausible. Without more context, the relationship cannot be verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and unlabeled, making it impossible to verify if 'right of' the person relationship is accurate, but the spatial predicate is plausible pending more detail.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive information, so the spatial 'left of' relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject's identity is unknown, but spatial relation 'left of' a stationary floor lamp is plausible without further details.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks description, so the spatial relationship to the wall cannot be fully validated but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identifying information, so it is unclear if the spatial relation 'beside' is plausible, but no contradiction is present.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "Objects lack identifying information, but spatial relationship 'right of' is plausible given no contradictory data.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, making it impossible to confirm the spatial relationship to the person. The relationship might be valid but lacks sufficient context to verify.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity and description are missing, making it unclear if the spatial relationship 'right of' with the person is accurate or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptive metadata, making it impossible to assess the spatial relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack identification and description, so the validity of the relationship cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "tracking movement of",
+      "relation_type": "functional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined and lacks description, making it unclear who or what is tracking the movement of the person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "tracking movement of",
+      "relation_type": "functional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject and object lack detail, making it unclear if camera following relation is accurate but cannot be ruled out.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject of the relationship is undefined (null), so it is unclear what or who is doing the camera following; lacking context to validate or flip.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so it is unclear if it can carry the floor lamp; insufficient information to confirm or reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it impossible to verify that it can hold the floor lamp; insufficient information to keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks any identifying information or description, making it unclear who or what is walking behind the person, so the relationship cannot be fully validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking behind",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object lacks a name and description, making it impossible to verify the 'walking toward' relationship with the described person.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail, but the object is unspecified, making it unclear if a camera is following the person; nevertheless, the relationship is plausible and lacks contradictory evidence.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by camera",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack any descriptive metadata to evaluate the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by camera",
+      "relation_type": "motion",
+      "subject_id": 1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "in front of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "right of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "left of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "right of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "left of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "left of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "left of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "left of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "left of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "right of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "right of",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "opposite",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      10,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      13,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      14,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      16,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "held by",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      14,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      1,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      2,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "right of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      5,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      10,
+      "left of",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      13,
+      "beside",
+      [
+        [
+          24,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      1,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      3,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      5,
+      "left of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "tracking movement of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      2,
+      "tracking movement of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera following",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      9,
+      "carrying",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "walking behind",
+      [
+        [
+          24,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      -1,
+      "being followed by camera",
+      [
+        [
+          144,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      -1,
+      "being followed by camera",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000006"
+}

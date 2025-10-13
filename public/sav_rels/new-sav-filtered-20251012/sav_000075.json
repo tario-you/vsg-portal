@@ -1,0 +1,3006 @@
+{
+  "activity_differential": [
+    "people walking and passing by street vendors",
+    "people distributing or promoting items on the sidewalk",
+    "people loading and unloading a pickup truck"
+  ],
+  "description": "A busy urban sidewalk scene with multiple people walking, interacting, and some engaging in street vending or promotion. A pickup truck is being loaded/unloaded, and a group of people are distributing or promoting items near a signboard. The camera remains mostly static, capturing the flow of people and their interactions.",
+  "place_env_id_name": "urban sidewalk",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The pickup truck being spatially located behind the stationary signboard is plausible within the described scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pickup truck being in front of a walking person is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pickup truck can be positioned to the left of a tablecloth in the scene, which is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pickup truck is clearly described, but the object has no name or description; the spatial relationship 'left of' cannot be confirmed or denied, so it is kept pending more context.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary white pickup truck can plausibly be positioned behind a signboard; the spatial relationship is coherent with the description.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is described as moving forward with a directed gaze ahead, implying the pickup truck is behind the person, not the other way around. Flipping the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a pickup truck to be positioned behind a bench as described, with both objects stationary and described clearly in the scene.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is behind the pickup truck rather than the truck being behind the child given their sizes, so flipping subject/object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pickup truck cannot realistically be behind a small shopping bag in a spatial sense; the scale and typical spatial relationship make this physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking forward can plausibly be positioned to the right of the stationary white pickup truck in the scene.",
+      "label": "reasonable",
+      "object_id": 40,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between the stationary pickup truck and car is plausible given their detailed descriptions and lack of motion.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The white pickup truck stationary and positioned to the right of a stationary handcart is spatially and physically plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary pickup truck can plausibly be behind a moving person; the spatial relationship 'behind' makes sense given the descriptions.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary pickup truck and a walking person is plausible based on their descriptions and positions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary pickup truck to be positioned behind a stationary signboard in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pickup truck being spatially 'behind' a coat is physically implausible as coats are wearable items and generally smaller and mobile compared to large vehicles.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A white pickup truck being behind a dark-colored SUV is spatially plausible and consistent with their descriptions and stationary state.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so the spatial relationship 'behind' cannot be evaluated for plausibility.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary white pickup truck can be positioned behind a streetlight in a spatial context; the relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard and person are spatially related; it is plausible the signboard is located to the left of the person.",
+      "label": "reasonable",
+      "object_id": 40,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard being located to the left of a person walking nearby is spatially plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a signboard to be spatially positioned left of a shopping bag, given their descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard can be spatially positioned to the left of a person; this relationship is plausible given their described positions and characteristics.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard being positioned left of a stationary parked car is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a signboard to be spatially located to the left of a handcart as described in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard being to the left of the walking person is spatially plausible given typical scene compositions and does not contradict any metadata.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two signboards described with distinct attributes and positions, one being to the left of the other, is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is described as fixed and horizontally aligned, while the coat is a separate object likely positioned relative to the signboard; it is plausible that the signboard is to the left of the coat in the scene.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary SUV to be positioned to the right of a fixed signboard, supporting the spatial relationship that the signboard is to the left of the SUV.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'signboard' is described clearly, but the object lacks any identification or description, making it impossible to fully confirm the spatial relationship; however, no contradiction is present, so keeping is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard is plausibly positioned to the left of the streetlight based on their spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be spatially 'in front of' a small shopping bag in a meaningful way; the bag is typically carried or held by the person, not positioned behind them as a separate entity.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail but the object lacks any description or identifying attributes, making it impossible to verify the spatial relation, so it is kept as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking right of a child is a plausible spatial relationship given the described scene and no contradictions.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is walking and is described near a rectangular object likely a bench; stating the person is to the right of the bench is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that one person dressed in a black jacket is spatially 'in front of' another person in a gray jacket based on their described positions and movements.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is a clearly described shopping bag, but the object lacks any identifying information, so the spatial relation 'right of' cannot be fully validated or invalidated.",
+      "label": "insufficient_context",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the shopping bag to be spatially positioned to the right of the walking child as described.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping bag can plausibly be positioned to the right of a bench; the spatial relationship 'right of' makes sense given their descriptions and does not conflict with physical or semantic norms.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shopping bag held upright can reasonably be positioned 'in front of' a person moving forward nearby; the spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined, so it is unclear what is positioned to the left of the child; however, spatial relationships can be valid without full description, so keep the relationship.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and the predicate 'left of' is spatial; due to lack of subject details, the relationship cannot be fully verified but it is plausible to keep.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a walking child and a stationary bench is plausible based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 35
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking to the right side of a stationary car is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is plausibly positioned to the right of a stationary handcart given their described movements and locations.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two individuals walking alongside each other with one person spatially right of the other is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person is spatially positioned to the right of the stationary signboard in the scene described.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by the person, so the coat is on the right of the person does not make sense; flipping subject and object to 'coat right of person' is more plausible.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person can physically be positioned to the right of a stationary SUV; the spatial relationship is plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object has no identifying information, so the spatial relation 'right of' involving the person cannot be fully verified but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as walking near a streetlight, which is steady and located spatially such that it makes sense for the person to be 'right of' the streetlight in the scene.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 40
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary silver car being to the right of a stationary handcart is spatially and physically plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'car right of person' is plausible given the descriptions; the car is stationary and the person is walking nearby.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The silver stationary car being spatially right of the rectangular signboard is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the stationary car is spatially positioned to the right of the coat; the descriptions do not contradict this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary silver car can plausibly be positioned right of a stationary dark-colored SUV in a scene.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject car is well described, but the object has no name or description, making it unclear what 'right of' spatially refers to; thus, relationship cannot be confirmed or discarded.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary car and a streetlight is plausible based on their described positions and appearances.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 26
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handcart being to the right of the walking person is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The handcart has a white signboard on top; stating the handcart is 'right of' a signboard is redundant given the signboard is part of the cart.",
+      "label": "redundant",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary handcart and a coat is plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary handcart can be positioned to the right of a stationary SUV; this spatial relationship is plausible based on their described positions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handcart is described well, but the object has no name or description, so the spatial relation 'right of' cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handcart and the streetlight are both stationary and plausibly positioned with the cart to the right of the streetlight in a street or sidewalk setting.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person walking to be spatially to the right of a stationary signboard; the descriptions support this spatial relationship.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is spatially right of the coat, which is plausible given the descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking to the right of a stationary SUV is a spatially plausible relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person's position relative to an unnamed object described as 'right of' cannot be fully verified due to lack of object details, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily can plausibly be positioned to the right of a streetlight; the spatial relationship is consistent with the description.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A signboard being to the right of a coat is spatially plausible given the scene descriptions and no conflicting evidence.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is positioned right of the SUV; flipping the relationship to have the SUV as subject and signboard as object correctly reflects the spatial 'right of' predicate.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a signboard, but the object lacks any identifying details, making it impossible to fully validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The signboard being 'right of' the streetlight is spatially plausible given their descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The coat can plausibly be positioned to the right of the SUV within the scene, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the coat.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the spatial relation 'right of' between a coat and a streetlight is plausible, the streetlight identification is uncertain and the scene context is limited, so the relationship cannot be confidently confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a well-described SUV, but the object lacks any identification or description, making it unclear what the SUV is to the right of; however, the spatial relationship 'right of' is plausible if the object is indeed located to the left side.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sleek, stationary SUV being to the left of a streetlight is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified with no description, making it unclear if anything is spatially right of the streetlight; however, the streetlight's position is described, so keeping with uncertainty is appropriate.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 33
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat itself cannot walk; the person wearing the coat walks past the bus stop shelter. Flipping subject and object aligns the action realistically.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot walk past a person, but a person wearing a coat can walk past; flipping subject and object corrects this.",
+      "label": "flipped",
+      "object_id": 24,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The coat itself cannot perform the action of walking; it is an inanimate object being worn by a person, so the relationship as stated is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot perform the action 'walking past'; it must be worn by a person who walks. The coat alone is stationary or moving only as the person moves.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat cannot walk past the fence, but a person wearing the coat can walk past the fence. Flipping subject and object makes the predicate reasonable in a typical scene.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat itself cannot 'walk past'; a person wearing the coat is implied. Flipping subject and object aligns with the likely intended meaning that a person walks past the truck.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat is worn by a person and likely walking past the stationary car; flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 26,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot literally 'walk past' a child; it is the child wearing the coat who is walking past. Reversing subject and object makes the relationship physically and semantically plausible.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot carry a shopping bag; carrying is an action performed by a person wearing the coat, not by the coat alone.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person wears a coat, not the other way around; flipping subject and object corrects the 'wearing' predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot 'walk past' an object; a person wearing the coat walks past the signboard. Reversing subject/object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Coats do not walk; the person wearing the coat is likely walking past the handcart, so flipping subject/object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot carry a person; reversing subject and object makes the relationship plausible, as a person can carry or wear a coat.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "carrying",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot wear a signboard; the relationship 'wearing' is physically impossible from coat to signboard.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot perform the action 'walking past' another coat since coats are inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat is an inanimate object and cannot perform actions like 'walking past' an SUV, which is stationary.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat itself cannot perform the action 'walking past'; it is an inanimate object rather than an agent capable of motion.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A coat cannot wear a streetlight; the predicate 'wearing' is incorrectly assigned here.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat does not perform actions like 'walking past'; it is worn by the person who is walking. Reversing subject and object aligns the action correctly with the person.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A coat cannot walk past a person; flipping subject and object correctly attributes the walking action to the person moving past the coat.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The signboard is typically affixed to or on top of the bus stop shelter, so the bus stop shelter is 'sitting on' by the signboard; flipping the subject and object makes the predicate plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "sitting on",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot hold a person; the subject and predicate relation is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate, fixed object and cannot hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear a person; the predicate 'wearing' is incorrectly applied here.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear another signboard; 'wearing' is not a plausible functional relationship between two signboards.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot wear a streetlight; the 'wearing' predicate is not physically plausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A signboard cannot walk; the person is the one walking past the signboard. Reversing subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 23
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a fence is a plausible spatial relationship based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a child who is walking and leaning forward is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot functionally hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can wear a jacket, but a bench cannot wear a person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a signboard; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the functional relationship 'wearing' is implausible between inanimate objects like a bench and streetlight.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate bench cannot 'interact with' a coat in a social sense; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a signboard are inanimate objects and cannot engage in a social interaction such as 'interacting with'.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is the one walking past the bench, not the bench walking past the person; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, and a bench cannot engage in social interaction; the relationship is not plausible or supported by context.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate bench cannot socially 'interact with' a coat; the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot engage in social interaction with an SUV, another inanimate object. The predicate 'interacting with' implies agency not present here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking, so it is more accurate that the person is walking past the bench, not the bench walking past the person. Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the person is holding the bench or interacting with it, not the bench holding the person; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench is a stationary object and a person can reasonably be standing near it; the relationship is plausible given the detailed descriptions.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, as an inanimate object, cannot socially interact with a handcart; the relationship 'interacting with' implies an animate or agentive subject, which is not applicable here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a car; 'interacting with' is not physically or socially plausible here.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench and a bus stop shelter standing near each other is a common and physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench can plausibly stand near a stationary pickup truck; the spatial relationship is reasonable given the described context.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench can reasonably stand near a signboard; both are static objects likely positioned close to each other in a scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a fence is a plausible spatial relationship indicating their proximity.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be described as standing near a bench, not the bench standing near the child; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object that cannot functionally hold a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot wear a person; the predicate 'wearing' is incorrectly assigned to this subject-object pair.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a signboard; the predicate 'wearing' is implausible for these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the predicate and relationship are not physically plausible given the objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be walking past a bench, not the bench walking past the person. Flipping subject and object aligns with physical reality.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or descriptive attributes, and the 'bench' as subject cannot 'interact' socially without clear context; lack of information prevents validation.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a coat are inanimate objects and cannot engage in a social interaction like 'interacting with'; therefore, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot engage in social interaction with an SUV; 'interacting with' is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a bench, but a bench cannot walk past a person; flipping subject and object makes the relationship logical.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "Object 27 is a person showing motion and gestures, and object 38 is a bench; it is more plausible that the person is holding or using the bench, not the bench holding the person.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the bench and person are described, the exact spatial proximity implied by 'standing near' is unclear, so the relationship is plausible but not fully certain.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench (an inanimate object) cannot socially interact with a handcart; the 'interacting with' predicate implies an agent capable of interaction, which a bench is not.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a car.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a bus stop shelter is a plausible and common spatial relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench (even uncertain) can plausibly be standing near a stationary pickup truck; the relationship is spatially and functionally coherent.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "The bench and signboard are both static objects described as being near each other; it is plausible for the bench to be standing near the signboard as described.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench is plausibly standing near a fence as both are stationary objects situated outdoors with no conflict in spatial relation.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child moving and leaning near a bench is plausible and coherent with the described scene.",
+      "label": "reasonable",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being a stationary furniture object, cannot perform the action of holding a shopping bag.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot wear a person, but a person wearing clothing is plausible by flipping the subject and object.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot wear a signboard; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench cannot 'wear' a streetlight; the predicate 'wearing' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 39,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot walk, but a person walking past a bench is plausible; reversing subject/object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate a social interaction with the bench.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench and a coat cannot engage in a social interaction; 'interacting with' is not a plausible relationship for these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot 'interact' socially with an SUV, which is also inanimate; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk past a bench, but the current subject/object order suggests the bench is walking past the person, which is implausible. Flipping corrects the relationship.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A bench cannot hold a person, but a person can be holding or using a bench (e.g., sitting on it), so flipping subject and object makes the relationship more plausible.",
+      "label": "flipped",
+      "object_id": 27,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking near a bench is a plausible and contextually reasonable spatial relationship.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench, being an inanimate object, cannot socially interact with a handcart; 'interacting with' is not physically plausible between these objects.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "A bench is an inanimate object and cannot engage in a social interaction such as 'interacting with' a car; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench is typically found standing near a bus stop shelter, making this spatial relationship plausible and contextually consistent.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a stationary pickup truck is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rectangular bench and a signboard standing near each other is a plausible spatial relationship given their described attributes and stable placements.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "keep",
+      "explanation": "A bench standing near a fence is a typical and physically plausible spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be standing near a bench, but the relationship 'bench standing near child' is less plausible; flipping subject and object makes the statement correct.",
+      "label": "flipped",
+      "object_id": 35,
+      "predicate": "standing near",
+      "relation_type": "functional",
+      "subject_id": 38
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified with no attributes or description, making it impossible to confirm the 'camera focusing on' relationship to the coat.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown, so we cannot verify if the camera is focusing on the signboard, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any attributes or description, making it impossible to confirm a meaningful 'camera focusing on' relationship with the bench.",
+      "label": "insufficient_context",
+      "object_id": 38,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), so it's unclear what is focusing on the pickup truck; thus, the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      18,
+      8,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      31,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      25,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      21,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      23,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      18,
+      "behind",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      38,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      18,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      40,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      26,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      4,
+      "right of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      27,
+      "behind",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      29,
+      "behind",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      32,
+      "behind",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      39,
+      "behind",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      40,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      24,
+      "left of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      19,
+      "left of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      27,
+      "left of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      26,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      4,
+      "left of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      1,
+      "left of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      29,
+      "left of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      30,
+      "left of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      32,
+      "left of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      33,
+      "left of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      39,
+      "left of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      21,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      35,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      38,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          216,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      27,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      21,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      35,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      38,
+      "right of",
+      [
+        [
+          0,
+          120
+        ],
+        [
+          168,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      27,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ],
+        [
+          168,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      35,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      38,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      35,
+      38,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      26,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      4,
+      "right of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      1,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      29,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      40,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      32,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      40,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      4,
+      "right of",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      1,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      29,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      30,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      32,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      26,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      30,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      32,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      30,
+      "right of",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      39,
+      "right of",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      30,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      29,
+      "right of",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      32,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      33,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      39,
+      "right of",
+      [
+        [
+          96,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      39,
+      "right of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      24,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      7,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      18,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      26,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      35,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      3,
+      2,
+      "wearing",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      9,
+      2,
+      "walking past",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "motion"
+    ],
+    [
+      4,
+      2,
+      "walking past",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      2,
+      "carrying",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      2,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      23,
+      "sitting on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      23,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      38,
+      7,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      35,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      38,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      24,
+      "standing near",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      18,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      9,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      7,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      35,
+      38,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      24,
+      "standing near",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      18,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      9,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      7,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      35,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      3,
+      38,
+      "wearing",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      38,
+      "walking past",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "motion"
+    ],
+    [
+      34,
+      38,
+      "walking past",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      27,
+      38,
+      "holding",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      24,
+      "standing near",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      5,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      18,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      9,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      38,
+      7,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      35,
+      38,
+      "standing near",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      23,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000075"
+}

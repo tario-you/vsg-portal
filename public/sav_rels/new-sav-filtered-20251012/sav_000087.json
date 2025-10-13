@@ -1,0 +1,2036 @@
+{
+  "activity_differential": [
+    "people walking and conversing in hallway",
+    "people approaching and waiting for elevator",
+    "people passing each other in office corridor"
+  ],
+  "description": "A group of people are walking and interacting in a modern hallway with glass panels and doors. Some people are moving toward the elevator area, some are conversing, and others are walking away from or toward the camera. The camera remains stationary, capturing the flow of people through the corridor.",
+  "place_env_id_name": "office hallway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The first person is standing slightly to the right of the second person who is walking, making the spatial relationship 'standing right of' plausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the person is standing to the right of the door, matching the spatial predicate and the described scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is standing near a tall rectangular object, and being 'standing right of' it is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing to the right of the coat rack matches the spatial description and is physically plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A standing person being to the right of a walking person is spatially plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person standing to the right of the ceiling light fixture is spatially plausible given the descriptions and typical room layouts.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that one person is standing in front of another person who is walking steadily forward in the described scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is plausibly positioned in front of the floor lamp, a spatial relation consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so they cannot simultaneously be 'standing left of' the other person, making the spatial relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is walking forward and cannot simultaneously be 'standing right of' the door; the predicate conflicts with ongoing movement.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot simultaneously be standing right of the object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward while the relationship states the person is 'standing right of' the coat rack, which conflicts with the action of walking; one cannot be both walking and standing simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both people are described as walking steadily forward, so neither is standing; thus, the relationship 'standing right of' is physically impossible in this scenario.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is installed on or above the ceiling, not at ground level, so the concept of a walking person 'standing right of' it is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two persons walking forward with one described as in front of the other is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A walking person can be spatially positioned in front of a stationary floor lamp; the relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'door standing left of person' is spatially plausible given the door and person descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the door is standing to the left of the walking person based on the spatial descriptions, so the relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The door and the object are both metallic, stationary, and vertical elements; it is plausible for the door to be standing right of the object in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door standing to the right of a coat rack with both stationary and described spatially is plausible and consistent with their stationary presence.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a person can be positioned right of a door, not the door right of a person; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is typically above and attached to the ceiling, so it cannot be spatially 'right of' a door which is vertical and on a wall; this makes the stated spatial relation physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a door is spatially located in front of a walking person based on the scene description.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The floor lamp is likely positioned in front of the door, not the other way around, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object is described as tall, rectangular, and stationary, and the person is standing nearby with relaxed posture. The spatial relationship 'standing left of' is plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The stationary sleek object can plausibly be standing left of a walking person; the spatial relationship is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall, sleek metallic object can reasonably stand to the left of the similarly described door in a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The coat rack is taller and more logically stands right of the smaller object; flipping subject and object aligns with typical spatial arrangement.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is described as walking steadily forward, while the object is stationary; it is more plausible that the person is standing right of the object rather than the object standing right of the person.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture hangs from the ceiling and cannot spatially be 'standing' or positioned to the right of a standing object; the spatial relationship 'standing right of' is not physically plausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary sleek object being in front of a walking person is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary sleek rectangular object can plausibly be in front of a sleek modern floor lamp; the spatial relationship fits the descriptions without contradiction.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary coat rack can plausibly be standing to the left of a person, matching typical spatial relations.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coat rack being stationary and standing left of a walking person is a plausible and spatially reasonable relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coat rack positioned standing left of a door is plausible and consistent with their spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coat rack standing left of another sleek, small, metallic object is a spatial relationship that is plausible and correctly assigned.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary coat rack standing to the right of a person walking forward is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The coat rack is a tall object standing on the floor, while the ceiling light fixture is suspended from above; the spatial term 'standing right of' is not applicable between a floor-standing and a ceiling-suspended object.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The coat rack is stationary and the person is described as walking forward; it is plausible that the coat rack is in front of the person during their movement.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A coat rack positioned in front of a floor lamp is spatially plausible given their described stationary positions and similar design context.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as 'walking steadily forward,' which conflicts with the predicate 'standing left of' that implies being stationary.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so it cannot be standing; thus 'standing left of' the other walking person is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot simultaneously be standing left of the door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is described as walking steadily forward, so they cannot be standing left of the object simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as walking steadily forward, so they cannot be 'standing left of' the coat rack at the same time.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person walking cannot be spatially positioned 'standing right of' a ceiling light fixture that is suspended above; they are not on the same plane for such a spatial relation to hold technically.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "standing right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subjects are described as walking steadily forward and visually could be spatially arranged with one in front of the other, making the 'in front of' relation plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily forward can plausibly be in front of a stationary floor lamp, and the relationship fits the spatial context described.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is a stationary object mounted on the ceiling and cannot 'stand left of' a person; this spatial relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed to the ceiling and cannot physically stand or be positioned to the left of a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted above and cannot be spatially located to the left of a door in a meaningful standing position; the relationship 'standing left of' is not physically plausible for a ceiling fixture.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is suspended from above and cannot be 'standing left of' another object; the predicate is physically implausible for this subject.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted overhead and cannot be described as 'standing left of' another object; the predicate is spatially and physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed to the ceiling and cannot 'stand left of' a person; the spatial relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "standing left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is fixed on the ceiling and cannot be 'in front of' a person who is walking below; spatially, the person is below or under the fixture, making the stated relationship physically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted on the ceiling, while a floor lamp stands on the floor; the ceiling fixture cannot be 'in front of' the floor lamp in a physically meaningful horizontal spatial relationship.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both individuals described in motion and posture can plausibly be arranged with one behind the other; the spatial relationship 'behind' is consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both individuals are walking steadily forward and the spatial relation 'behind' is plausible given their descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person walking steadily forward could plausibly be located behind the door from the viewer's perspective, making the spatial relationship 'behind' reasonable.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking steadily can plausibly be behind a stationary, tall, sleek metallic object; the spatial relationship is reasonable.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking with a coat rack behind them is physically plausible and consistent with the spatial predicate 'behind.'",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that one person walking steadily forward is located behind another person also walking steadily forward given the descriptions and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is mounted on the ceiling above; a person cannot be positioned 'behind' it in a meaningful spatial context.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' between a walking person and a stationary floor lamp is plausible and aligns with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The floor lamp being behind the person in the spatial arrangement is plausible given their descriptions and typical scene setups.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary floor lamp being behind a walking person is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A floor lamp being behind a door is spatially plausible given their stationary nature and relative positions in indoor settings.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A floor lamp being behind another stationary, sleek metallic object is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A modern floor lamp can plausibly be positioned behind a coat rack in a room setting; the spatial relationship is logical and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person is walking and the lamp is stationary; it is plausible for the person to be behind the floor lamp, not the lamp being behind the person.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is on the ground and a ceiling light fixture is mounted on the ceiling, so the floor lamp cannot be spatially behind the ceiling light fixture.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The floor lamp being to the right of a walking person is spatially plausible given their described positions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person is standing mostly still while the other is walking; they cannot be 'walking together' simultaneously.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a stationary ceiling light fixture; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with an inanimate floor lamp, which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a signboard, which is an inanimate object incapable of social or physical movement.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person holding a small object and subtly shifting weight is plausibly walking toward a tall, stationary door.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The person is described as holding and glancing at a small rectangular object, but the relationship states the person is approaching a tall, stationary metallic object; approaching implies movement towards, which counters the description of the person standing relaxed. Additionally, a person cannot 'approach' an inanimate object in this context without movement, which contradicts the subject's relaxed posture and lack of approach action.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person subtly shifting weight and glancing at an object while standing near a stationary coat rack is plausible; walking past the coat rack makes sense in context.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both entities are described as people with walking actions; one person walking toward the other is plausible given their described movements.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person standing and occasionally glancing at a small object while facing slightly to the right can reasonably be described as 'walking away from' a stationary column in front of them.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two people close by, with one walking steadily and the other standing relaxed, can plausibly be described as 'walking together' in a social sense.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with a stationary ceiling light fixture; the spatial and social relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot 'walk together' with an inanimate signboard, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking toward a stationary door is a plausible and common scenario.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking towards a stationary, sleek metallic object is a physically plausible scenario.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking past a stationary coat rack is a plausible and contextually supported relationship.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door cannot walk toward a person; flipping subject and object makes 'person walking toward door' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A door cannot walk toward a person; flipping subject and object to 'person walking toward door' makes sense.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door and a ceiling light fixture are inanimate objects incapable of motion such as walking; therefore, 'walking toward' is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is an inanimate object and cannot perform actions like 'walking toward' another object.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door cannot approach an object, as it is non-moving and stationary; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door cannot walk past a coat rack, as both are inanimate objects incapable of motion.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can walk toward a door, but a door cannot walk toward a person. Reversing subject and object makes the predicate 'walking toward' plausible.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is an inanimate object and cannot perform the action of 'walking away from' a column, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is an inanimate object and cannot engage in the social action of 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and inanimate, so it cannot walk together with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture and a signboard are inanimate objects that cannot perform the action of 'walking together.'",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is a stationary object fixed to the ceiling and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The ceiling light fixture remains stationary and does not move; it cannot be 'approaching' another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and mounted; it cannot walk past a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A ceiling light fixture is stationary and cannot walk toward a person; the predicate is physically impossible given the subject's nature.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that cannot walk; thus, it cannot be 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp cannot walk together with a person as it is stationary and inanimate.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that remains stationary and cannot engage in social actions like 'walking together' with a signboard, which is also inanimate.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The floor lamp is described as stationary and cannot physically approach another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A floor lamp is an inanimate object that remains stationary and cannot perform the action of 'walking past' a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard cannot walk, so 'walking together' involving a signboard and person is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard, as an inanimate object, cannot engage in the social action 'walking together' with a person.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard and a ceiling light fixture cannot walk together as both are inanimate and stationary objects.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking together",
+      "relation_type": "social",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot perform the action 'walking toward' a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object that cannot perform the action of 'approaching' another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "A signboard is an inanimate object and cannot 'walk past' another object such as a coat rack.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking toward another person is a plausible and realistic scenario based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking toward a door is a plausible and common scenario given the described attributes and actions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot realistically walk toward a ceiling light fixture suspended overhead as if approaching it directly.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a person walking to pass by a stationary coat rack; the relationship correctly describes a typical spatial interaction in a scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "walking past",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person walking toward a tall, stationary column is a plausible and physically consistent relationship.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "flip",
+      "explanation": "A column cannot physically walk away from a person, but a person can walk away from a column; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "A column is a stationary architectural element incapable of walking away from a door.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "walking away from",
+      "relation_type": "motion",
+      "subject_id": 18
+    },
+    {
+      "decision": "flip",
+      "explanation": "A column cannot walk toward a person; reversing subject and object makes the predicate plausible as the person is walking toward the column.",
+      "label": "flipped",
+      "object_id": 17,
+      "predicate": "walking toward",
+      "relation_type": "motion",
+      "subject_id": 18
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified (null), so the relationship 'camera focusing on person' cannot be properly validated or interpreted.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and unnamed, making it unclear if it is a camera, but the relationship 'camera focusing on' a person walking is plausible without further details.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unidentified, but 'camera focusing on door' is plausible; lacking subject details, the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Lack of subject information prevents confirming if the camera is focusing on the ceiling light fixture, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unknown, making it unclear who or what is focusing the camera on the lamp; cannot confirm or deny relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so it's unclear who or what is focusing the camera on the signboard, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject entity is unknown with no description; cannot confirm the camera focusing on the person but plausible as given.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined with no description, making it unclear what is focusing on the column; thus, the relationship cannot be fully validated but is plausible.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "standing left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "standing right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "left of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      1,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "behind",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "right of",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          168
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      17,
+      "walking toward",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      18,
+      "walking away from",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      1,
+      "walking together",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      2,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      4,
+      "approaching",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      5,
+      "walking past",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      2,
+      3,
+      "walking toward",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      3,
+      "walking toward",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      1,
+      "walking toward",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      3,
+      "walking toward",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      5,
+      "walking past",
+      [
+        [
+          48,
+          240
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      18,
+      "walking toward",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      18,
+      "walking away from",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      17,
+      18,
+      "walking toward",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      3,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      7,
+      "camera focusing on",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      9,
+      "camera focusing on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      15,
+      "camera focusing on",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      17,
+      "camera focusing on",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      18,
+      "camera focusing on",
+      [
+        [
+          264,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000087"
+}

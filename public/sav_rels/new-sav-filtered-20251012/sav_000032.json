@@ -1,0 +1,1556 @@
+{
+  "activity_differential": [
+    "child running toward SUV",
+    "camera moving along street and focusing on vehicles",
+    "camera observing street environment"
+  ],
+  "description": "A child is seen running in a sandy outdoor area near a black SUV, with the camera following the scene and approaching the vehicles. The child is only present in the first frame, while the camera moves closer to the SUV and then toward the street, capturing various vehicles and street elements.",
+  "place_env_id_name": "outdoor street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The child holding an object and touching a large metallic circular object is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A child is unlikely to be 'on top of' a large tent; this spatial relationship is physically implausible given the description.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a child is in front of horizontally stretched wires, as described in the scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The child is described as moving on foot and holding an object, but there is no indication or plausibility that the child is physically on top of a tall, narrow, vertical structure resembling a wall, making the relationship unlikely.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the foot is right of the child, not the other way around, making it necessary to flip the subject and object for the spatial predicate 'right of' to be correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between the child and a stationary pipe is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being located right of the table is plausible in a spatial context given the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' is plausible since a child can be positioned to the right side of a pole in the scene described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between the child and the uncertain object is plausible, but the vague description of the object prevents definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is described as moving and holding an object near a large tire that is in motion; it is plausible for the child to be 'right of' the tire in the scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is plausibly positioned to the right of a large stationary tank; spatial relationship 'right of' is reasonable given descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be in front of a moving car in a spatial context.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is physically below the tire in the scene, and the spatial predicate 'below' is plausible given their relative positions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object of the relationship is unspecified, making it unclear what the child is spatially positioned right of; therefore, the relationship cannot be invalidated or corrected.",
+      "label": "insufficient_context",
+      "object_id": 23,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a child to be positioned to the right of a large building in a scene; the spatial relationship 'right of' is reasonable here.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child can be positioned spatially right of a stationary signboard; the relationship is plausible based on the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is positioned right of the van in the described scene, which is spatially plausible given their movement and positions.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a child is positioned to the right of a car; the spatial relationship is consistent with the descriptions of both objects and their positions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child being to the right of the stationary awning is spatially plausible given the descriptions and does not contradict any observed facts.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The child is dynamically moving and holding an object, and being spatially right of a stationary signboard is physically plausible.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A child moving near a stationary door being on the right side of the door is plausible and consistent with the spatial description provided.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A 'foot' typically belongs to a 'child', and the child's position can be left of the foot, not the foot left of the child. Flipping subject and object aligns the spatial relationship realistically.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving foot can plausibly be positioned above a large, stationary circular metallic object; the spatial relationship 'above' fits the described scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot moving to the right of a stationary pipe is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A foot moving right of a stationary table is spatially plausible based on the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot is described as moving and the pole is a stationary object; the foot being 'right of' the pole is spatially plausible, but the uncertain pole identification and lack of scene context prevents full confirmation.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a foot and an uncertain object is plausible, but the vague description of the object and lack of precise spatial details prevent a definitive judgment.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot and tire are spatially related, and the foot being 'right of' the tire is plausible in a dynamic sequence.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot is described as moving and the tank is a large stationary object; it is plausible for the foot to be spatially right of the tank in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot is plausibly positioned to the right of the car, and the spatial relationship makes sense given the scene depicts both in motion.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A foot can be spatially above a tent in a scene, especially if the foot is elevated or the tent is at a lower level.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A foot can spatially be above a tall, narrow structure such as a wall or panel, which is physically plausible in some contexts.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'touching' between the child and the large metallic object is plausible, but due to the uncertain identification of the object and lack of explicit mention of contact, the context is insufficient to fully confirm or deny the relationship.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foot is below the large circular object, not the other way around; reversing subject and object aligns with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large, circular metallic object touching a large tent-like structure is plausible in a scene; the spatial relationship 'touching' fits given their described proximity and surfaces.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large, circular metallic object and tall, narrow structure could plausibly be touching, but the ambiguous descriptions and lack of clear interaction details leave uncertainty.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pipe is stationary and described as to the left of a moving child, which is a plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pipe is described as stationary and vertical, which can plausibly be located to the left of a moving foot within the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pipe being to the left of the pole is spatially plausible given their descriptions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be on the left of a stationary table, but not the table left of a walking child; flipping subject/object fits the physical scenario.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'table left of foot' is plausible given typical scene arrangements and no conflicting details in the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The pole is described as standing vertically and the child is moving nearby; spatially, the pole being to the left of the child aligns with the described scene and is plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the pole is positioned to the left of the moving foot as described; the spatial relationship 'left of' fits the scene context and object descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the pole is positioned to the right of the pipe based on their described spatial arrangement and stationary positions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between an undefined, soft, irregularly shaped object and a moving child is plausible, but the exact spatial accuracy is uncertain due to ambiguous object description; thus, it is best kept.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' is plausible between an undefined floating object and a moving foot, but the ambiguous nature of the subject prevents a confident evaluation.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tire to be spatially left of a child who is walking or running; the spatial relationship is consistent with the description.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tire in motion to be positioned to the left of a walking foot in the scene, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is under the tent, not the tent under the child, so reversing the subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large tent touching a large circular metallic object is physically plausible given both descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tent and a tall, narrow structure positioned beside each other is spatially plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is likely to be left of the tank, reversing subject and object makes the spatial relationship accurate.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A large stationary tank can plausibly be located to the left of a moving foot; their spatial relationship is credible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A compact yellow car is plausibly behind a young child walking or running; the spatial relationship 'behind' is reasonable and matches the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is logically behind the wire from the viewer's perspective, so flipping subject and object makes the 'behind' relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for thin, elongated wires to be positioned beside a tall, narrow structure, as described in the metadata.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tire being above a child is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A child can be under (below) a tall structure, but the given relationship incorrectly states the structure is under the child. Flipping subject and object corrects this spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'touching' between a tall, narrow, angular structure and a large, circular, metallic object is plausible but the uncertain nature of both objects and limited context prevent a more definitive assessment.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'beside' between a tall, narrow structure and a large, smooth tent is plausible, but uncertainty in object identification and lack of explicit spatial details advise retaining the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tall structure beside the wires is plausible since both coexist in the scene, but uncertainty about exact identities and spatial relations leaves room for interpretation. Keeping the relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The large building and the child have distinct positions in the scene, so the spatial relationship 'left of' is plausible and consistent with their descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "flip",
+      "explanation": "The child is moving and can be positioned left or right of the stationary signboard, but it is more plausible to say the child is 'left of' the signboard if the child is on the left side; flipping makes 'child left of signboard' accurate and meaningful.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 16
+    },
+    {
+      "decision": "keep",
+      "explanation": "The van being to the left of the child is spatially plausible and consistent with the described scene of a moving vehicle and a walking/running child.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car is described as moving steadily along the road, and the child is walking or running nearby; spatially, the car being to the left of the child is plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 18
+    },
+    {
+      "decision": "keep",
+      "explanation": "An awning is a stationary object and can plausibly be located to the left of a child moving nearby; this spatial relationship is consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 19
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary signboard can plausibly be located to the left of a moving child; the spatial relationship is sensible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the child is left of the door, not the door left of the child, given the child's movement and typical spatial reference points.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so we cannot confirm the spatial relationship, but it is plausible the unidentified object is left of the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 23
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot alone cannot run toward a child; it is more plausible that the child is running toward the foot (or the person to whom the foot belongs). Flipping subject and object makes the relationship semantically correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "running toward",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot cannot perform the action of 'looking at' another entity; this predicate requires an entity with vision and attention, such as the child.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null), making it impossible to confirm or deny the relationship with the foot.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject entity has no name or description, making it impossible to evaluate the 'approaching' relationship to the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unidentified and without description; cannot determine plausibility of 'watching' relationship with the child.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (name and description are null), making it impossible to verify the 'approaching' relationship to the wire; lacks sufficient context.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and the object is a wire; without knowing who or what the subject is, the watching relationship cannot be fully evaluated.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks identification or description, making it impossible to verify the 'watching' relationship towards the awning.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and unnamed, making it unclear who or what is watching the car; the relationship cannot be confirmed or refuted.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "watching",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      3,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "in front of",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "below",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      23,
+      "right of",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "right of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "right of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "right of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "right of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "right of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "right of",
+      [
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "right of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      14,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      14,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      1,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "behind",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      14,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "above",
+      [
+        [
+          48,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "under",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "touching",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "beside",
+      [
+        [
+          0,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      12,
+      "beside",
+      [
+        [
+          24,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "left of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "left of",
+      [
+        [
+          192,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      1,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      19,
+      1,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "left of",
+      [
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "left of",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      23,
+      1,
+      "left of",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "running toward",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      12,
+      "watching",
+      [
+        [
+          72,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      18,
+      "watching",
+      [
+        [
+          216,
+          240
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000032"
+}

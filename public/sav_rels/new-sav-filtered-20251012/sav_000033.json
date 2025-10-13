@@ -1,0 +1,1057 @@
+{
+  "activity_differential": [
+    "person walking along rural path and approaching group",
+    "group socializing near motorcycle and bicycle",
+    "bicycle riders passing by walking person"
+  ],
+  "description": "A person in traditional attire is walking along a dirt path, approaching a group of people near a motorcycle and a bicycle. As the person walks, two people on a bicycle pass by, and the walking person appears to interact with the group ahead.",
+  "place_env_id_name": "rural path",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "An object cannot wear a skirt; it is more plausible that the skirt is wearing or containing the small elongated object (e.g., as decoration or accessory). Reversing subject and object makes the relationship meaningful.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small, elongated object like a piece of bark cannot realistically 'wear' a plastic bag; the predicate is physically impossible in this context.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small elongated object like a piece of dried vegetation cannot have 'hands attached' as the predicate suggests.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "hands attached to",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small elongated natural object can plausibly be positioned in front of a person wearing a plaid shirt, matching the spatial relation 'in front of'.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small elongated object can plausibly be in front of a person walking; no contradiction or impossibility is evident.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'in front of' between an uncertain small natural object and a hand is plausible but the vague descriptions do not confirm exact positioning, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated object being in front of the sweater is plausible given the spatial description and does not conflict with any physical constraints.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'in front of' between a small elongated object and a pair of jeans is plausible, but the vague descriptions and partial data prevent a definitive assessment.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small, stationary object being in front of a moving sandal is spatially plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object is described but the related object lacks description, so it's unclear if 'in front of' is accurate but no evidence to reject the relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated object being in front of the sandal spatially is plausible given their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between an uncertain small object and a hand with described natural positioning is plausible, but there is insufficient context to confirm exact positioning or interaction.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated natural object being to the left of a sweater is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The uncertain identities and vague spatial positioning of the small elongated object relative to the jeans prevent a confident assessment of the 'left of' relation.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small textured object being left of the moving sandal is spatially plausible and consistent with their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described in detail, but the object lacks any description or identification, making it impossible to verify the spatial relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated object with natural features can plausibly be spatially located left of the sandal, and nothing contradicts this relation.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between an uncertain small elongated object and a hand is plausible but the vague descriptions do not provide enough detail to confirm the spatial arrangement precisely.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a small, elongated natural object and a nearby sweater is plausible but cannot be conclusively verified without more spatial details.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between an uncertain small natural object and jeans is plausible, but the context does not provide enough detail to fully confirm the positioning or relevance.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a small elongated object and a sandal is plausible, but the exact scene context is limited, so the relationship should be kept as is.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to evaluate the spatial relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' is plausible between an uncertain small object and a sandal; however, the lack of precise spatial details and scene context prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small, elongated object being behind a hand with described positions is spatially plausible given the metadata.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small elongated natural object being behind a sweater worn by a person is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relative spatial position of a small elongated object being behind jeans is plausible, but lack of precise spatial context and clear identification prevents definitive validation or correction.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated object being positioned behind the sandal is spatially plausible given no contradictory details in the descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object is described with some detail but the related object has no description or identity, making it unclear whether 'behind' is plausible or meaningful.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small elongated object is described as behind the sandal, which is plausible spatially, but the exact physical layout is unclear due to limited context.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "A skirt being 'on' an object is unlikely; instead, the small elongated object could be on the skirt, so flipping subject and object makes spatial sense.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A plastic bag lying on the ground is plausible; saying the bag is 'on' the small object is unlikely. The small object is more likely to be on or beneath the bag, so flipping subject and object makes the predicate 'on' correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shirt being attached to a small, rough, natural object like a piece of bark or dried vegetation is physically implausible based on the descriptions provided.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'behind' between a hand and a small, elongated object is plausible but not definitively confirmed due to uncertainty in object identities and partial descriptions.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand and the small object are described with uncertain identification and natural appearances, with the hand positioned to the right of the object being plausible but not clearly verifiable given the vague positional context.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The hand and the small elongated object with natural textures can plausibly be spatially related with the hand positioned left of the object; the relationship fits the spatial context.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'behind' between a sweater (worn by a person) and a small uncertain object is plausible but the context does not clearly indicate their relative positioning.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The spatial relationship 'behind' between a pair of jeans and an uncertain small object lacks clear spatial context and cannot be definitively confirmed or refuted given ambiguous descriptions.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving forward behind an uncertain small elongated object is plausible, but the exact spatial relation cannot be fully confirmed due to vague description of the second object.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is behind the object; thus, the relationship cannot be fully assessed but is plausible spatially.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the sandal is moving forward and described in detail, the other object is uncertain and the relative spatial positioning 'behind' is plausible but not definitively verifiable given the vague context and incomplete descriptions.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object being followed is unspecified and lacks description, preventing evaluation of the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "being followed by",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown and lacks any description or attributes, so it is unclear what is following the object; thus, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The moving 'hand' approaching the static small object is more plausible; flipping subject and object corrects the direction of approach.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small object cannot perform the action of 'looking at' a sweater, which is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate object like a piece of bark or dried vegetation cannot perform the action 'looking at' a pair of jeans.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate object like a small piece of dried vegetation cannot perform the action 'looking at'.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "An inanimate small object resembling dried vegetation cannot perform the action 'looking at' another entity.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'interacting with' is social and does not plausibly apply between a small, undefined object and a sweater; there is no clear social interaction possible, nor detailed context to justify it.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A small, elongated rough object (likely plant material) cannot engage in a social interaction with a pair of jeans; the predicate 'interacting with' in a social sense is not physically plausible for these inanimate items.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "interacting with",
+      "relation_type": "social",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sweater and jeans are clothing items and cannot engage in a social action like 'riding with' each other.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sweater cannot 'ride with' a sandal, as clothing items do not perform actions or socially interact with footwear in this way.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no identified name or description, and the relationship 'riding with' does not logically apply to a sweater alone; the context is insufficient to validate this relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'passing by' between a sweater (worn by a person in motion) and an uncertain small object is plausible but the metadata lacks sufficient detail to fully confirm or refute the interaction.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans and sweater are clothing items that cannot 'ride with' each other as this implies a social or interactive action inappropriate for inanimate clothing.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans cannot ride with a sandal; both are inanimate clothing items, making the 'riding with' relationship physically impossible and nonsensical.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Jeans as an inanimate clothing item cannot 'ride with' another entity; the subject is not capable of this action.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "riding with",
+      "relation_type": "social",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Clothing items like jeans do not move independently to pass by objects; the relationship 'passing by' is implausible between jeans and an object.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject hand and object are described with uncertainties; the hand may be moving toward the object, but the context is limited, so the 'approaching' relationship seems plausible but not conclusively verified.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hand is approaching the object, not the other way around; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "being approached by",
+      "relation_type": "motion",
+      "subject_id": 6
+    }
+  ],
+  "relationships": [
+    [
+      3,
+      6,
+      "wearing",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "in front of",
+      [
+        [
+          48,
+          72
+        ],
+        [
+          168,
+          216
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          360,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "in front of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "in front of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "in front of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "in front of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "in front of",
+      [
+        [
+          288,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "left of",
+      [
+        [
+          96,
+          144
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "left of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "left of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "left of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "left of",
+      [
+        [
+          288,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "right of",
+      [
+        [
+          120,
+          144
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "right of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "right of",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "right of",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "right of",
+      [
+        [
+          288,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "behind",
+      [
+        [
+          240,
+          288
+        ],
+        [
+          360,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "behind",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "behind",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "behind",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      12,
+      "behind",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "behind",
+      [
+        [
+          288,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "on",
+      [
+        [
+          0,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "behind",
+      [
+        [
+          48,
+          72
+        ],
+        [
+          168,
+          216
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          360,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "right of",
+      [
+        [
+          96,
+          144
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "left of",
+      [
+        [
+          120,
+          144
+        ],
+        [
+          336,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "behind",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "behind",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      6,
+      "behind",
+      [
+        [
+          312,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      6,
+      "behind",
+      [
+        [
+          288,
+          312
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "approaching",
+      [
+        [
+          48,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      8,
+      6,
+      "passing by",
+      [
+        [
+          312,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "approaching",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "being approached by",
+      [
+        [
+          288,
+          384
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000033"
+}

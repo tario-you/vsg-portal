@@ -1,0 +1,689 @@
+{
+  "activity_differential": [
+    "car driving along mountain road",
+    "camera following car through landscape",
+    "vehicle traversing hilly terrain"
+  ],
+  "description": "A car is driving along a road through a mountainous and hilly landscape under a clear sky, as seen from a moving camera (likely a dashcam or following vehicle). The camera follows the car as it moves forward through the terrain.",
+  "place_env_id_name": "mountain road",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "The terrain is physically below the sky, not the sky below the terrain; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Mountains are below the sky, so flipping the subject and object corrects the spatial relationship 'on top of'.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The hill is in front of the sky from the viewer's perspective; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky cannot be in front of the car; instead, the car is in front of the sky (background). Reversing subject and object makes the spatial predicate accurate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, so we cannot verify the spatial relationship of 'sky' being 'on top of' it.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the terrain, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Mountains are typically above terrain; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hill, being elevated land, is physically above the terrain; flipping subject and object aligns the spatial predicate correctly.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is traveling on the terrain, so the car is above the terrain, not the terrain above the car. Reversing the subject and object makes the 'above' relationship correct.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship is undefined, making it impossible to verify the spatial relationship with the terrain.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is above the mountain, so flipping subject and object makes the 'under' relationship correct.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The terrain is below the mountain, not the mountain below the terrain; flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rugged mountain being to the right of a smooth hill is a plausible spatial arrangement given their descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Given the spatial description, the mountain being left of the car in the scene is plausible and consistent with typical landscape layouts.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified with no name or description, so the spatial relationship 'under' cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The sky is typically behind the hill in a spatial sense; flipping subject and object aligns with this realistic spatial arrangement.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Terrain is the overall surface and hill is a feature on it; saying the hill is below the terrain is incorrect, but flipping subject and object makes it plausible.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hill described as gently sloping being to the left of a rugged mountain range is semantically and spatially plausible.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a hill is to the left of a car traveling on a road, matching the spatial predicate 'left of'.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name, attributes, actions, or description, making it impossible to verify or assess the spatial relationship with the hill.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A 'car' cannot be spatially 'behind' the 'sky' because the sky is a background element extending overhead and beyond physical objects; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A car traveling above natural terrain is plausible, so the terrain being 'below' the car spatially makes sense.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a car traveling on a road to be spatially described as right of a distant mountain range in the scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car traveling steadily along the road plausibly is positioned to the right of the gently sloping hill, making the spatial relationship logical and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify or assign a meaningful spatial relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, making it unclear what is under the sky; the spatial relation 'under sky' is plausible but not confirmable without more detail.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined and lacks any description or attributes, making it impossible to verify the spatial relation 'below' to the terrain.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks description, making it unclear what is 'on top of' the mountain, but the spatial relationship is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, making it unclear what is in front of the hill; however, the spatial relation 'in front of' is plausible without further context.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what is in front of the car; the spatial relationship might be plausible but cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (no name or description), so the relationship 'following' to the sky lacks sufficient context to evaluate or confirm its plausibility.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject entity is unspecified, but the predicate 'camera focusing on' towards the sky is plausible; lack of subject detail prevents full validation.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky cannot 'drive through' a mountain; such motion is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "driving through",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sky is not a physical entity capable of motion such as 'driving past' a hill; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "driving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car can be described as driving past the sky, but the sky itself cannot drive past the car; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "driving past",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (null), and the predicate 'moving ahead of' does not apply meaningfully to the sky as subject without a clear object.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "moving ahead of",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, making it unclear what is moving through the mountain, so we cannot judge the relationship's correctness.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "moving through",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, making it impossible to confirm or deny the plausibility of it moving past the hill.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined with no attributes or description, making it impossible to validate the relationship with the car.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "above",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "behind",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "left of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "below",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "right of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "under",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      5,
+      1,
+      "driving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "moving through",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      4,
+      "moving past",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000040"
+}

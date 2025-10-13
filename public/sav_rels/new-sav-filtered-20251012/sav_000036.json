@@ -1,0 +1,2965 @@
+{
+  "activity_differential": [
+    "dog playing with toys",
+    "dog chasing and interacting with objects",
+    "dog exploring living room with person present"
+  ],
+  "description": "A dog is actively playing with various toys, including a rubber chicken toy and a ball, in a living room environment. A person, visible by their feet and slippers, is present and may be interacting with the dog. The camera follows the dog's movement, capturing the playful activity.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving and positioned left of a stationary rubber chicken toy is a plausible spatial relationship given their described positions and actions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sandal to be touching a slipper, as both are footwear and can be in close spatial proximity.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal being 'left of' the rubber chicken toy spatially is plausible given both objects are described with positions and orientations in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal is described as gliding smoothly and leading the way with its sole, while the slipper moves gracefully and maintains consistent orientation. It is plausible that the sandal is positioned spatially below the slipper in this sequence.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal being to the left of a small dog in a scene is spatially plausible, and the descriptions support their distinct positions and movement.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot be to the right of a foot wearing a slipper in a meaningful spatial context; usually the foot wears the sandal or slipper, so the relationship as 'right of' between sandal and foot is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal appearing spatially to the left of the cell phone is plausible given their descriptions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal can plausibly be located to the left of the slipper, given the spatial predicate and the descriptions of both footwear items moving smoothly and maintaining orientation.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal can plausibly be positioned to the left of the stationary scale, and no spatial or physical contradictions are evident.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and the vent are described as separate, stationary or moving objects with distinct locations; stating the sandal is left of the vent is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sandal to be positioned to the right of a chair as described, and the spatial relationship 'right of' makes sense in this context.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is a wearable item unlikely to be physically inside a sleek, metallic pipe; the spatial relationship 'inside' here is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal positioned above a plush blanket is spatially plausible given their described attributes and actions.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and the toy are two distinct objects described in proximity; stating the sandal is to the right of the toy is plausible given their spatial descriptions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and the spherical toy are distinct objects with plausible spatial relation; 'right of' is reasonable given no contradictory spatial info.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two sandals moving with distinct characteristics can plausibly be positioned spatially right of one another.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal positioned to the left of a slender toy is plausible spatially given the descriptions of both objects and their relative orientations.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal touching a sleek, possibly rotating cell phone is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal being beside a sleek, elongated, and glossy object likely to be a bathtub is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two sandals with distinct features moving in the scene can plausibly have a spatial relation 'right of' between them.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal being to the left of the sports ball is spatially plausible and consistent with the moving scenario described.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can reasonably be positioned below a small dog lying down, making the spatial relation 'below' plausible.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy placed spatially to the right of a moving sandal is plausible and consistent with object descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the rubber chicken toy to be spatially located to the right of the slipper as described in the scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two rubber chicken toys described with distinct positions and states can reasonably be spatially beside each other.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy is plausibly located spatially right of the slipper, which is moving; their relative positions can be valid as described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy being beside a moving small dog is plausible and spatially consistent.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy is described as stationary and positioned spatially to the right of a foot in motion; this is plausible given their spatial relation and descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy being beside a moving, sleek cell phone is a plausible spatial relationship given the described scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy is stationary and positioned spatially to the right of the moving slipper, which is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy positioned beside a sleek modern scale is physically and contextually plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being to the right of the vent is a spatial relationship that is plausible given the descriptions; no contradictions are present.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy can reasonably be located to the right of a modern chair, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the rubber chicken toy being inside a pipe-shaped object is unusual, the descriptions provide no clear size contrast or spatial conflicts. The pipe is of uncertain identity and could plausibly accommodate the toy.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being above the blanket is physically plausible given the stationary toy and the blanket's soft surface.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a stationary rubber chicken toy and a multicolored toy with dynamic motion is plausible based on their described positions and appearances.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being spatially right of a colorful spherical toy is plausible given their descriptions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of the sandal is a spatial relationship that is plausible given the attributes and descriptions; the sandal's movement does not preclude a relative spatial position at a given time.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are stationary toys described as close in position, making 'beside' plausible, but exact spatial details are unclear due to limited description of their relative placement.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy is stationary and is described as being right of the rotating cell phone, which is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rubber chicken toy positioned to the right of a sleek elongated object likely to be a bathtub is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy is stationary and located spatially to the right of the moving sandal; this spatial relationship is plausible.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rubber chicken toy positioned beside a rotating sports ball is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being to the right of the small dog is plausible as a spatial relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper and sandal are both footwear items described as close and touching, which is physically plausible since they can be adjacent or in contact.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper can logically be positioned to the left of a rubber chicken toy in a spatial context described in the metadata.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'left of' between the slipper and the rotating rubber chicken toy is plausible and consistent with their described positions and motions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two slippers with detailed spatial and physical descriptions; it is plausible for one slipper to be positioned to the left of the other.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a slipper is positioned left of a small dog in the scene; no physical or semantic contradictions arise.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The foot is wearing the slipper; the slipper cannot be right of the foot in a meaningful spatial relation. Flipping subject and object fixes this.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a slipper is positioned to the left of a cell phone; their spatial relationship as 'left of' fits the described scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two slippers with similar attributes and descriptions in proximity can plausibly have a spatial relation of one being 'left of' the other.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper can reasonably be positioned to the left of a scale in a typical scene; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper positioned left of the vent is plausible given their descriptions and spatial relation.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is reasonable for a slipper to be positioned to the right of a chair in a spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A slipper being inside a pipe is implausible; however, a pipe inside a slipper is physically possible and matches the descriptions.",
+      "label": "flipped",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper is spatially above the blanket, which is plausible given the slipper's orientation and the blanket's position as described.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper being right of the toy is a plausible spatial relationship given their described positions and no conflicting details.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper located to the right of the toy is spatially plausible given their descriptions and orientations.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper being right of the sandal is spatially plausible given their described orientations and positions.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper to the left of the elongated toy is a plausible spatial relationship given their described shapes and orientations.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper and the cell phone are described as touching, which is spatially plausible given their physical properties and the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper positioned beside a bathtub is spatially plausible in a typical indoor setting like a bathroom.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A slipper positioned to the right of a sandal with specified attributes is spatially plausible and consistent with the description.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slipper and the sports ball are described with clear spatial characteristics; the slipper being left of the moving ball is plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The slipper is below the dog given the dog's position above; flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being to the right of the sandal is a plausible spatial relationship given the descriptions of both objects and their positions in the scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are similar rubber chicken toys described together; stating one is 'beside' the other adds no substantial new spatial information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being to the right of the slipper is a plausible spatial relationship given the descriptions and no conflicting information.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of the slipper is physically plausible and consistent with spatial relations described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'beside' between a small rubber chicken toy and a small dog in motion is plausible as they can be near each other without conflict.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of a foot in motion is spatially plausible given the descriptions of both objects and their orientations.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rubber chicken toy being beside a cell phone is physically plausible and spatially coherent given the described context.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' is plausible between the moving rubber chicken toy and the slipper sliding gently, given their described positions and motions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being beside a stationary modern scale is a plausible spatial relationship based on their described positions and attributes.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of the vent is spatially plausible given the described scene and object positions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' is plausible between a rotating rubber chicken toy and a stationary chair based on their descriptions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rubber chicken toy could plausibly be inside a sleek metallic pipe, given the pipe's elongated and hollow nature.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rubber chicken toy can be physically above a blanket, which is consistent with the spatial predicate and the described dynamic motion of the toy.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A yellow rubber chicken toy positioned to the right of a multicolored toy is spatially plausible given their distinct descriptions and motions.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The yellow rubber chicken toy can plausibly be positioned to the right of the colorful spherical toy, and the spatial relationship 'right of' makes sense given the stable position of the spherical toy and the motion of the chicken toy.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of the sandal is a spatial relationship that is plausible given the descriptions of their positions and movements.",
+      "label": "reasonable",
+      "object_id": 18,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two toy objects in close proximity with no conflicting actions or physical contradictions make the 'beside' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being right of the cell phone is spatially plausible given their described positions and motions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rubber chicken toy being positioned right of the bathtub is spatially plausible given the descriptions and does not contradict physical arrangement.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for the rubber chicken toy to be positioned to the right of the sandal in the scene, given the spatial relationship and no contradictory details.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rubber chicken toy located beside an orange sports ball is plausible given their described positions and states in the scene.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small rubber chicken toy can reasonably be positioned to the right of a lying small dog in a scene.",
+      "label": "reasonable",
+      "object_id": 33,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A foot clad in a slipper can be positioned spatially left of a sandal; the described motion and attributes support this plausible spatial relation.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot in a slipper being left of a stationary rubber chicken toy is a plausible spatial relationship in a casual setting.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot cannot be positioned 'left of' the slipper it is wearing; the foot is inside the slipper, so this spatial relationship does not make physical sense.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The foot in a slipper being to the left of a rubber chicken toy is plausible and consistent with their spatial descriptions and actions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A foot clad in a slipper being spatially to the left of a small dog is plausible and fits the scene description.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The slippered foot being to the left of a cell phone is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the foot in a slipper is positioned to the left of a stationary chair in the scene.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot inside a metallic pipe is physically implausible, especially given the pipe's description and the foot's actions of stepping and shifting weight.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A foot and a sandal with the same duck face design cannot be spatially 'left of' each other as separate objects; the foot is expected to be inside or wearing the sandal, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is described as lying down with a relaxed posture, and the foot is stepping forward; physically, the dog would be below the foot, not the foot below the dog. Flipping subject and object corrects this spatial relationship.",
+      "label": "flipped",
+      "object_id": 33,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The chair is stationary and the sandal is moving; it is plausible for the chair to be positioned left of the sandal in the scene.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot with a slipper can be right of a chair, but the relation 'right of' typically describes the position of the chair relative to the foot; flipping subject and object makes more sense here since the foot is moving and likely spatially described in relation to the stationary chair.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair cannot be inside a pipe; the spatial relationship is physically implausible given their sizes and descriptions.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a stationary chair to be located to the left of a sandal that moves past it; the spatial relationship makes sense in the given context.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot realistically contain a sandal, especially one described as gliding smoothly and moving forward.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sleek, elongated metallic pipe is unlikely to physically contain a rubber chicken toy, especially given the pipe's shape and size constraints.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe-like object cannot realistically contain a slipper, especially given their described sizes and typical uses.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sleek metallic pipe is unlikely to contain a rubber chicken toy spatially as it seems solid and elongated with tapering ends, not hollow or open to contain another object inside.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe is a rigid elongated object unlikely to contain a foot, which is a much larger and differently shaped entity. The spatial containment relation is physically implausible here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot physically contain a chair, as a chair is larger and not enclosed by a pipe.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pipe cannot realistically contain a sandal, especially one that is moving gracefully; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sleek, moving object likely being a cell phone can plausibly be touching the sandal, which is described as gliding smoothly; the spatial relationship is physically plausible.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sleek, elongated object (likely a cell phone) moving to the left of a stationary rubber chicken toy is physically plausible given the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A moving cell phone can plausibly be touching a stationary slipper, both described with compatible surfaces and spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cell phone and rubber chicken toy are described as objects in motion with specific spatial positions; it is plausible for the phone to be left of the toy in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "A cell phone (or similar object) being positioned to the right of a decorated foot in a scene is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The cell phone described as moving and slightly tilted being right of a stationary chair is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sleek, elongated object resembling a cell phone appears to be moving in relation to a pipe-like object; while the spatial predicate 'inside' could be plausible if the phone is partly within the pipe, the uncertain identification and limited context prevent a definitive evaluation, so the relationship is kept as is.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'left of' between a moving cell phone-like object and a sandal is plausible given their described positions and motions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 20
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two sandals with distinct attributes moving in a scene can have a spatial relationship such as 'left of'; the description doesn't contradict this.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal is described as moving and the rubber chicken toy as stationary; it is plausible for the sandal to be spatially left of the chicken toy.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and slipper are described with spatial attributes and it is plausible for the sandal to be positioned left of the slipper in the scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal moving gracefully to the left of the rubber chicken toy is a plausible spatial relationship given their descriptions and movement states.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "flip",
+      "explanation": "A foot wearing a sandal is plausible, so 'foot right of sandal' is unlikely; flipping subject and object aligns with the spatial relation meaning the sandal is right of the foot.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot move on its own to position itself spatially relative to a chair; the described actions imply autonomous motion which is physically impossible for a sandal.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is not capable of moving inside a pipe realistically; the 'inside' spatial relationship here is physically implausible given the objects described.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal is described as moving with smooth motion to the right of the cell phone, which is repositioning; the spatial relationship 'right of' is plausible given their relative positions.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 25
+    },
+    {
+      "decision": "drop",
+      "explanation": "Objects like sandals and slippers cannot 'play with' each other as they are inanimate footwear without consciousness or action capability.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot realistically play with a cell phone; the predicate 'playing with' is not physically plausible between these inanimate objects.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot engage in the activity of playing with a chair.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "playing with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Relationship 'interacting with' between two sandals with similar motion and whimsical descriptions is vague and adds no clear informative distinction.",
+      "label": "redundant",
+      "object_id": 25,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sandal is an inanimate object and cannot perform the action of moving around the rubber chicken toy which remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and rubber chicken toy are both described as moving objects with playful designs, making the 'moving around' relationship between them plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot move around a dog; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both the sandal and the cell phone are described as moving around independently, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal does not have the capability to move around a stationary scale on its own; the described movement is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The sandal is described as moving smoothly while the toy remains steady with no visible movement; it is implausible that the sandal is 'moving around' the toy which does not move or interact.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sandal and sports ball are both described as moving objects; the sandal 'gliding smoothly' and the ball 'rotating' and 'rolling', so the relationship 'moving around' between them is plausible.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description shows both sandal and slipper are moving with motion-like actions; stating sandal is 'moving around' slipper is plausible in the scene context.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "moving around",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal and a foot (wearing a slipper) can be interacting, especially given the descriptions of motion and design; the relationship is plausible as is.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The vague predicate 'interacting with' between a sandal and a bathtub with uncertain description does not allow clear validation or refutation.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'interacting with' between a sandal and a handle-like object is ambiguous but plausible, though the exact nature of interaction is unclear from the descriptions.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'interacting with' between a sandal and a toy is vague but plausible given the descriptions; no clear physical impossibility or better subject-object ordering is apparent.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal and a colorful toy interacting in a scene is plausible given their described attributes and actions, and 'interacting with' is a suitable predicate without requiring subject-object flipping or removal.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sandal objects do not possess agency to 'interact with' each other in a meaningful way; their described movements are metaphorical, making the relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sandal can realistically approach a drawer, and both are described as moving smoothly. The relationship fits the described motion context.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot actively chase a chair; the action 'chasing' implies intent and motion not applicable to a sandal.",
+      "label": "physically_impossible",
+      "object_id": 27,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Sandals are inanimate objects and cannot perform the action of chasing each other.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot physically chase a slipper as both are inanimate objects without autonomous motion.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot perform the action of 'chasing' a cell phone or any object.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot chase a foot; the 'chasing' action is not physically plausible for the sandal as subject.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot chase a bathtub, which is an inanimate and fixed object; the action is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot logically perform the action of chasing a handle; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "chasing",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to a cell phone; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, being an inanimate object, cannot pay attention to anything, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to another object.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal, an inanimate object, cannot pay attention to a dog; the relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal cannot pay attention to anything as it is an inanimate object without perception or attention capabilities.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal is an inanimate object and cannot pay attention to anything, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sandal as an inanimate object cannot pay attention to a sports ball; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject object lacks identification or description making it unclear what 'camera following' applies to; unable to confirm relationship validity.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it cannot be confirmed what the 'camera focusing on' relationship refers to, but focusing on a slipper is plausible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and lacks description; the object is likely a cell phone, but there is no definitive context to confirm the camera focusing relationship.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown with no attributes or description, so the plausibility of a camera focusing on the chair cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unidentified and lacks attributes or description to verify the camera focusing action; thus, the relationship cannot be fully confirmed or rejected.",
+      "label": "insufficient_context",
+      "object_id": 25,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "touching",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "below",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      13,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      18,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "touching",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      25,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      26,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      33,
+      "below",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "inside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      15,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      16,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      18,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      33,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "touching",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "left of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      3,
+      "inside",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      15,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      16,
+      "right of",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      17,
+      "right of",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      18,
+      "right of",
+      [
+        [
+          24,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      19,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      20,
+      "touching",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      22,
+      "beside",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      25,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      26,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "right of",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      13,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      14,
+      "inside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      15,
+      "above",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      16,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      17,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      18,
+      "right of",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      19,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      20,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      22,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      25,
+      "right of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      26,
+      "beside",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      33,
+      "right of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      1,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      4,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      33,
+      8,
+      "below",
+      [
+        [
+          24,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      25,
+      "left of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      1,
+      "touching",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      2,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      3,
+      "touching",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      4,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      8,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      13,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      14,
+      "inside",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      20,
+      25,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      1,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      2,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      3,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      4,
+      "left of",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      25,
+      "right of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      25,
+      20,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      9,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      26,
+      "moving around",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      6,
+      "moving around",
+      [
+        [
+          0,
+          0
+        ]
+      ],
+      "motion"
+    ],
+    [
+      1,
+      8,
+      "interacting with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      22,
+      "interacting with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      34,
+      "interacting with",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      16,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      17,
+      "interacting with",
+      [
+        [
+          24,
+          96
+        ]
+      ],
+      "higher_order"
+    ],
+    [
+      1,
+      23,
+      "approaching",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      3,
+      "camera focusing on",
+      [
+        [
+          0,
+          120
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      20,
+      "camera focusing on",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      27,
+      "camera focusing on",
+      [
+        [
+          216,
+          408
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      -1,
+      25,
+      "camera focusing on",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000036"
+}

@@ -1,0 +1,2840 @@
+{
+  "activity_differential": [
+    "vehicles moving along urban street",
+    "person walking on sidewalk",
+    "traffic passing parked cars at night"
+  ],
+  "description": "A nighttime urban street scene with parked vehicles, moving cars and scooters, and a person walking along the sidewalk. The camera remains mostly static, capturing the dynamic flow of traffic and pedestrian movement.",
+  "place_env_id_name": "urban street",
+  "relationship_filter_metadata": [
+    {
+      "decision": "flip",
+      "explanation": "A single tree cannot be 'in front of' a tree line; rather, the tree line is in front of the tree when viewed from the camera perspective, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree line can reasonably be positioned spatially to the left of the moving sedan in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the sedan is in front of the tree line; flipping subject and object aligns with natural spatial understanding.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The white fence is likely in front of the tree line in the scene; flipping subject and object makes the spatial relation 'behind' correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is in front of the tree line; saying the tree line is behind the car is misleading. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tree line is not above the minivan; the minivan is on the ground below the tree line, so flipping subject and object makes the statement correct.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The tree line being right of the tall, slender banner is a plausible spatial relationship based on their described positions and characteristics.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The banner is likely above the tree line, not the other way around; flipping subject and object aligns with this spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The car is physically below the tree line, not above; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any name or description, making it impossible to verify the spatial relationship with the tree line.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree line usually appears behind individual trees, not the other way around; flipping the subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary tree can logically be located to the left of a moving sedan; the spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A sedan can be behind a tree, but the original states the tree is behind the sedan, which contradicts common spatial arrangement; flipping subject and object corrects this.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tree is plausibly located above a fence, making the 'above' spatial relationship logically consistent.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "It's plausible that a tall tree with a broad canopy is spatially above a moving car; the relationship 'tree above car' makes sense given typical scene layout.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall tree with a spreading canopy above a minivan on the road is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A spatial relationship 'right of' between a tall tree and a tall slender banner is plausible given typical physical arrangements in a scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A banner is typically hung above a tree or in the air, so 'banner above tree' is plausible. The current relationship 'tree above banner' is unlikely; reversing subject/object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall tree with a canopy above a moving car is physically plausible and a natural spatial relationship.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well-described as a tree, but the object lacks any name or description, making it unclear what is to the right of the tree. Despite that, the spatial predicate 'left of' is plausible, so the relationship is kept with noted insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sedan and tree line are distinct entities with spatial attributes; the car can reasonably be positioned to the right of the tree line in the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a white sedan is located to the right of a tall tree along a road; the spatial relationship 'right of' fits the scene description.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A white sedan can logically be positioned behind a black sedan on the road; the spatial 'behind' relationship between two cars is plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sedan to be positioned to the right of a fence in a spatial context based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A white sedan is plausibly positioned spatially behind a black sleek car while both are moving on the road.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sedan cannot be physically positioned above a minivan on a road without additional context such as multi-level structures; the 'above' relation is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sedan can reasonably be located spatially to the right of a tall banner, both objects described plausibly in their positions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sedan cannot be physically located above a tall, rectangular banner; the spatial relationship 'above' is implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "A sedan cannot be physically located above another car in typical road scenarios; the relationship 'above' is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship lacks any identifying information, making it impossible to verify spatial correctness with the sedan.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sedan can plausibly be positioned in front of a tree line in a scene, making the 'in front of' spatial relationship sensible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a sleek black sedan to be in front of a tall tree as a spatial relationship.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "One sedan positioned in front of another is a physically plausible spatial relationship in a driving context.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fence positioned in front of a tree line is a common spatial arrangement and matches the described scene layout.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The tree, being tall, is plausibly above the fence; flipping subject and object aligns the predicate 'below' correctly.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary fence positioned to the left of a moving sedan is spatially plausible and coherent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fence is stationary and can spatially be in front of the moving car; this relationship is plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a fence is stationary and upright, and a minivan would be below or behind the fence from the observer's viewpoint; stating 'fence below minivan' is less plausible than 'minivan below fence'.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary white fence located to the right of a tall, slender, swaying banner is a plausible spatial relationship in the scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A fence is plausibly positioned below a tall banner, as the fence is a stationary, ground-level structure and the banner is described as tall and elevated.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The fence is likely positioned lower than the car in the scene's spatial layout, making 'fence below car' plausible physically and spatially.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to establish a meaningful spatial relationship with the fence.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sleek car moving smoothly can reasonably be described as 'in front of' a stable tree line in the scene.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A car being 'below' a tall tree is unlikely; it is more reasonable that the tree is above the car, so flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports the spatial relationship of one car being in front of the other while both are moving smoothly on the road.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A fence cannot logically be behind a car as a moving object; usually, the car is behind the fence from the viewer's perspective, so flipping subject and object makes the spatial relation correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car cannot be spatially below a minivan when both are on the road; the spatial relation 'below' is physically implausible in this context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car being right of the banner is a spatial relationship consistent with the scene description of both objects and their positions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a car is below a banner, especially if the banner is hung above a road or path where the car is moving.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "One car cannot be physically below another car in normal driving scenarios; 'below' is unlikely to describe their spatial relationship here.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject car's position relative to the object is described, but since the object lacks identification or description, the spatial relation 'left of' cannot be confirmed or denied; uncertainty suggests keeping as is.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan is physically below a tree line when viewed from a typical perspective, making the 'below' spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A minivan cannot be spatially below a tall tree; typically the tree is above the ground where the minivan moves.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One vehicle cannot be spatially below another on the same road surface; they are side by side or one ahead/behind, not vertically below.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan moving above a fence in spatial terms is plausible as the minivan is positioned above the fence in the scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A minivan cannot be physically positioned 'above' a car on the road; such spatial relation is implausible without additional context like a bridge or ramp.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan moving in front of a tall banner is spatially plausible and consistent with the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan is plausibly positioned below a tall banner; the spatial relationship 'below' fits the scene context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan can be spatially below (e.g., a lower position in the frame or road context) relative to a car, making the 'below' relationship plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The minivan is spatially right of an unspecified object; lack of details about the object prevents further assessment, so keep relationship as is.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall banner can physically be positioned to the left of a tree line; the spatial relation is plausible given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a tall, slender banner to be located to the left of a tall tree; the spatial relationship is reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall banner swaying left of a moving sedan is a plausible spatial relationship, fitting with the described scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The banner and fence are distinct objects, and it is plausible for the banner to be positioned to the left of the fence in a scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A banner can be positioned spatially left of a car; this spatial relationship is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall banner can plausibly be positioned behind a minivan in a spatial scene; both descriptions support this relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two banners described with spatial and movement attributes, with one being to the left of the other, is plausible and consistent with the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall, slender banner swaying in the air can realistically be positioned to the left of a moving car in an urban scene, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks name and description, so the spatial relationship 'left of' cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "The banner is typically positioned below the tree line in a scene; flipping subject and object makes the predicate 'below' correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A tree is generally taller and located above a banner; flipping subject and object to have the tree below the banner is physically incorrect, so the original 'banner below tree' relationship is correct. However, since the predicate is 'below' with banner as subject and tree as object, the relationship as stated is reasonable and does not need flipping.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall banner hanging above a sedan is spatially plausible; the banner can be located below the car from certain perspectives or if the sedan is on a raised platform, so without clear context, keeping the relation is reasonable.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A tall banner swaying gently above a white picket fence in the scene is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A banner suspended above a car is physically plausible; the metadata supports the banner being elevated and moving in air currents above the smoothly moving car.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A banner can reasonably be positioned above a minivan, especially if hanging above a street or road where the vehicle is traveling.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two banners described with spatial and movement attributes can plausibly be positioned with one to the right of the other in the scene.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "A banner being left of a car is a plausible spatial relationship based on their descriptions and positions in the scene.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car is below the tree line in the scene, which is a spatially plausible relationship given the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a car cannot be spatially below a tall tree; the tree would be below or above the car depending on perspective, but 'below' relation is more plausible if the tree is subject and car is object.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object both describe essentially the same car, so stating one is 'below' the other is redundant and adds no meaningful spatial information.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car moving along a road cannot be spatially above a fence, which is a fixed, taller vertical structure alongside or behind the car.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "Two cars both moving in a scene cannot be spatially in an 'above' relationship since they are on the ground level; one car being above the other is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "A car being above a minivan is physically unlikely unless explicitly described (e.g., in an overpass scenario); no such context is provided here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The car being spatially right of the tall, slender banner is consistent with the descriptions and plausible in a physical setting.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the moving car is positioned to the right of the tall, gently swaying banner as described in the scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making it impossible to validate the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks name and description, so it's unclear what 'right of' means spatially relative to tree line, but no contradiction.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks a name or description, so its spatial relationship 'right of' the tree cannot be fully verified, but the predicate itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so spatial relation 'right of' to the sedan is not verifiable but plausible.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is not identified and lacks attributes or description, making it impossible to confirm the spatial relationship with the fence.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified with no description, making it unclear what is to the right of the car; cannot confirm the relationship's plausibility.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject object lacks identification and description, but the minivan\u2019s position and movement do not contradict the 'left of' spatial relationship; hence the relationship is plausible but uncertain due to missing subject details.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so spatial relation 'right of' to a described banner cannot be fully confirmed, but it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so the spatial relation 'right of' to the banner cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification, but the spatial predicate 'right of' relative to a moving car is plausible without additional details.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "A fence cannot be 'parked next to' a banner; 'parked next to' implies a vehicle or movable object adjacent to another, which is not applicable to a stationary fence.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what is parked next to the fence, making the relationship unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A banner cannot be 'parked next to' a fence; the predicate implies a vehicle-like object, which is not applicable to a banner.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making the relationship 'parked next to' with the banner unclear and contextually invalid.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject's identity is unknown and no description is provided, so it's uncertain what is parked next to the fence.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject has no name or description, making it unclear what is parked next to the banner; insufficient information to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "parked next to",
+      "relation_type": "functional",
+      "subject_id": 13
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unspecified (null), so 'passing by' cannot be validated without knowing what the minivan is passing by.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it impossible to validate the 'passing by' relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is undefined, lacking name and description, making the 'passing by' predicate on the tree meaningless.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan passing by a stationary fence is a physically and contextually plausible relationship.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A minivan moving past a banner that is swaying in the breeze is a plausible scenario fitting the 'passing by' predicate.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The 'passing by' action is plausible for a moving minivan, but the lack of object identity or description limits full validation.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sedan passing by a stationary fence is a plausible and common scene.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A sleek sedan passing by a tall, slender banner that is swaying in the breeze is a physically plausible and coherent scenario.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The sedan's attributes suggest it can be involved in a passing by motion, but the object entity is not described, so we cannot fully confirm or deny the relationship's validity.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A tree is stationary and cannot perform the action 'passing by' another object such as a fence.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A stationary tree cannot 'pass by' a banner; reversing subject and object makes 'banner passing by tree' which is physically plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks name and description, making it unclear what is 'passing by' the stationary tree; insufficient context to validate the relationship.",
+      "label": "insufficient_context",
+      "object_id": 13,
+      "predicate": "passing by",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a vehicle follows another vehicle; here, flipping subject and object aligns the minivan following the sedan, which is physically plausible.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A minivan cannot physically follow a stationary tree since the tree does not move.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself as following, which is redundant and physically nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship indicates a minivan overtaking itself, which is redundant and semantically incorrect.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "overtaking",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving parallel to itself, which is redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving parallel to",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan instance, so stating it is moving in opposite direction to itself is redundant and implausible.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in opposite direction to",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan; stating it is moving in the same direction as itself is redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in same direction as",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan; stating it is 'moving past' itself is redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same minivan object to itself with 'moving alongside', which is redundant and does not convey meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving alongside",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving away from itself, which is redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving away from",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself, which is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself, making 'departing from' with the same entity redundant and semantically meaningless.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "departing from",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; relationship 'crossing' between identical entities is meaningless and redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "crossing",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan entity; stating it is 'passing' itself is redundant and not meaningful.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "passing",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship 'driving by' applied from the minivan to itself is redundant and nonsensical; a vehicle cannot drive by itself in this context.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "driving by",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with 'traveling', which is redundant because the subject and object are identical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "traveling",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving with itself as both subject and object, which is redundant and provides no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with predicate 'in motion', which is redundant since it's self-referential and provides no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "in motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are identical, and expressing the minivan as 'moving forward' relative to itself is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving forward",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan, making the relationship of it moving backward to itself illogical and physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving backward",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan entity; stating it is 'moving left' relative to itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving left",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship has the minivan as both subject and object with 'moving right' predicate, which is redundant and adds no new meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving right",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving up' relative to itself is redundant and semantically invalid.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving up",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a motion predicate, which is redundant and provides no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving down",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself regarding movement, which is redundant and uninformative.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving diagonally",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan, so stating it is 'moving in a straight line' to itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a straight line",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are identical (the same minivan), so stating a relationship of 'moving in a curve' between them is redundant and provides no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a curve",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a predicate describing its motion; this is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a circle",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with an unclear and redundant predicate; the description indicates steady, consistent movement, not zigzagging.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a zigzag",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship is between the same minivan object as both subject and object, making 'moving in a wave' with itself redundant and not informative.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a wave",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; describing it as 'moving in a spiral' in relation to itself is redundant and semantically invalid.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a spiral",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan entity; stating it is 'moving in a loop' with itself is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a loop",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship is self-referential (subject and object are the same minivan) and does not provide useful additional information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a figure eight",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving in a random pattern about itself, which is redundant and implausible given the minivan maintains a consistent speed and steady motion.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a random pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving in a predictable pattern' about itself provides no new information and is redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a predictable pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan described as moving steadily; labeling it as \"moving in an unpredictable pattern\" contradicts the consistent speed and smooth driving described and is redundant since it refers to the same object.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an unpredictable pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan, making the relationship redundant and uninformative.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a regular pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a predicate that contradicts the description of steady movement, making it redundant and inconsistent.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an irregular pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship links the minivan to itself describing motion, which is redundant and adds no informative value.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a repetitive pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself, which is redundant and provides no additional meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a non-repetitive pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a continuous pattern with itself, which is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a continuous pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a discontinuous pattern, but it is the same object as the subject which moves steadily; the description is self-referential and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a discontinuous pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is moving in a smooth pattern relating to itself adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a smooth pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan's motion pattern using the same object as both subject and object, which is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a jerky pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan with identical descriptions and actions; stating it is 'moving in a fast pattern' of itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a fast pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan's motion in relation to itself, which adds no meaningful information and is redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a slow pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a motion predicate describing its own movement, which adds no new information and is redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a steady pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan entity; stating it has a relationship to itself as 'moving in an unsteady pattern' is redundant and uninformative.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an unsteady pattern",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same minivan subject and object with a motion predicate, which is redundant and does not provide new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a regular motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The minivan is described as maintaining a consistent, steady motion, which contradicts 'moving in an irregular motion'; thus, the relationship is not plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving in an irregular motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a repetitive motion about itself, which is redundant since the subject and object are the same and the motion is already implied in the actions.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a repetitive motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a non-repetitive motion about itself, which is redundant since the subject and object are the same; it adds no meaningful additional information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a non-repetitive motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan, and stating it is 'moving in a continuous motion' about itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a continuous motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The minivan is described as moving steadily with consistent speed, which contradicts 'moving in a discontinuous motion'; this makes the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving in a discontinuous motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan and the predicate describes the minivan's motion, making the relationship self-referential and redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a smooth motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan, which is described as moving steadily, not jerky; this relationship adds no credible new information and is self-referential.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a jerky motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a predicate describing its motion, which is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a fast motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a predicate about moving slowly; this is redundant and adds no useful new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a slow motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The minivan cannot move in a steady motion relative to itself; this relationship is tautological and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a steady motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship claims the minivan is moving in an unsteady motion, but the description states it moves steadily at a consistent speed; also, subject and object are the same entity, making the relationship redundant.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an unsteady motion",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself describing its movement, which is redundant and provides no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a regular movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The minivan is described as moving steadily at a consistent speed, contradicting the predicate 'moving in an irregular movement'; thus, this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving in an irregular movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving in a repetitive movement' about itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a repetitive movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a non-repetitive movement, which is redundant as the subject and object are the same minivan with consistent movement attributes.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a non-repetitive movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is 'moving in a continuous movement' related to itself, which is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a continuous movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The minivan is described as moving steadily with consistent speed, contradicting the predicate of \"moving in a discontinuous movement.\" Additionally, the subject and object are the same entity, making the relationship redundant and physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "moving in a discontinuous movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving smoothly about itself, which is redundant given the subject and object are identical and actions already include moving and rotating.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a smooth movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan described as moving steadily; describing it as moving in a jerky movement contradicts the consistent motion and adds no credible new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a jerky movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving fast with itself as object, which is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a fast movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving slowly, but it relates the minivan to itself, which is redundant and adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a slow movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states the minivan is moving steadily about itself, which is inherently true and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a steady movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving unsteadily with itself, which is redundant and nonsensical as an object cannot move unsteadily relative to itself.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an unsteady movement",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a regular direction about itself, which is a redundant statement as the minivan is both the subject and object with the same attributes and actions.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a regular direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving in an irregular direction' about itself is redundant and illogical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an irregular direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the same minivan object to itself with a motion predicate, adding no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a repetitive direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan; stating it is 'moving in a non-repetitive direction' about itself adds no meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a non-repetitive direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship states that the minivan is moving in a continuous direction about itself, which is redundant since the subject and object are the same entity describing the same action.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a continuous direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes the minivan moving in a discontinuous direction referring to itself, which is redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a discontinuous direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object refer to the same minivan; stating it is 'moving in a smooth direction' about itself offers no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a smooth direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is moving jerky relative to itself is redundant and nonsensical.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a jerky direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving in a fast direction' about itself is redundant and adds no new information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a fast direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship connects the minivan to itself with a motion predicate, providing no new or meaningful information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a slow direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; stating it is 'moving in a steady direction' about itself is redundant and adds no extra information.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in a steady direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject and object are the same minivan; it cannot move in an unsteady direction to itself. Descriptions indicate steady, consistent movement, so the relationship is redundant and incorrect.",
+      "label": "redundant",
+      "object_id": 8,
+      "predicate": "moving in an unsteady direction",
+      "relation_type": "motion",
+      "subject_id": 8
+    }
+  ],
+  "relationships": [
+    [
+      3,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      8,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "behind",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      6,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      11,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      9,
+      "in front of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      11,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      13,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      6,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      8,
+      "behind",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      10,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      11,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      13,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      10,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      4,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      6,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      7,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      8,
+      "above",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      11,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      11,
+      "below",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      2,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      3,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      4,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      7,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      8,
+      "left of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      9,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      10,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      11,
+      "right of",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      6,
+      "parked next to",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      6,
+      "passing by",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "motion"
+    ],
+    [
+      8,
+      9,
+      "passing by",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "motion"
+    ],
+    [
+      8,
+      13,
+      "passing by",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      6,
+      "passing by",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      9,
+      "passing by",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      13,
+      "passing by",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ],
+    [
+      9,
+      1,
+      "passing by",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      5,
+      8,
+      "following",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000108"
+}

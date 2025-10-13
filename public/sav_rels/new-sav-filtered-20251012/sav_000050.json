@@ -1,0 +1,1151 @@
+{
+  "activity_differential": [
+    "person preparing dough balls for cooking",
+    "person placing dough balls on plate",
+    "person operating stove while preparing food"
+  ],
+  "description": "A person is preparing dough balls in a kitchen, picking them up and placing them on a plate, while operating the stove. The camera remains static, capturing the process.",
+  "place_env_id_name": "kitchen",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "A stationary plate being positioned in front of a stationary container is spatially plausible and consistent with the described setup.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A decorative plate placed above a cabinet door is physically plausible and spatially coherent.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject plate is well-described, but the object lacks any identifying information, making it unclear what the plate is above; thus, the relationship cannot be ruled out or corrected.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary decorative plate can plausibly be touching a small, soft dough ball that is rotating and shifting slightly on its surface.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary plate touching a soft, pliable dough ball is physically plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary decorative plate can plausibly be touching a small rounded potato; the spatial relationship is physically reasonable.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The plate and the potato being in physical contact is plausible given their described positions and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary plate touching a small rolling potato on a flat surface is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The container is clearly described, but the object it is 'in front of' lacks identification or description, making it impossible to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The container being in front of a small, rotating dough ball is spatially and physically plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 30,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular translucent container positioned in front of a slightly moving dough ball is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary container described as rectangular and translucent being in front of a small, rounded object likely a potato is plausible in a spatial context.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary container can plausibly be positioned in front of a gently rotating potato; the spatial relationship is physically possible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary plastic container can logically be positioned 'in front of' a small rolling potato; this spatial relationship is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship plausibly.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A dough ball rotating and gliding can be on top of a stationary cabinet door, but the original statement places the cabinet door as subject on top of the dough ball, which is unlikely; flipping the subject and object makes the spatial relation plausible.",
+      "label": "flipped",
+      "object_id": 30,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dough ball would be on top of the cabinet door, not the other way around; reversing subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 34,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potato can be on top of a cabinet door, but the cabinet door cannot be on top of the potato; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 28,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A potato being on top of a cabinet door is physically plausible, but the current subject and object are reversed; the potato should be the subject and the cabinet door the object for the 'on top of' relationship.",
+      "label": "flipped",
+      "object_id": 29,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A cabinet door is typically fixed and would not be on top of a potato; reversing subject and object makes logical spatial sense as the potato can be on top of the door.",
+      "label": "flipped",
+      "object_id": 32,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dough ball is described with attributes suggesting it could be on top of another object, but the object lacks description, so the relationship is plausible but context is insufficient to confirm details.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dough ball is described in detail, but the object it is 'on top of' is unknown, preventing certainty about the spatial relationship's accuracy.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject appears to be a small object plausibly on top of another, but the object lacks description, so the spatial relationship cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a likely potato, but the object has no identification or description, making it unclear what the potato is 'on top of'; cannot confirm or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a potato-like object moving on a surface, but the object it is 'on top of' lacks identification or description, making it unclear yet plausible.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 32
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar dough ball objects described with spatial relation 'beside' is plausible and consistent with the description.",
+      "label": "reasonable",
+      "object_id": 34,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dough ball and potato are both small, rounded objects with similar orientations and motions, making it reasonable for them to be beside each other spatially.",
+      "label": "reasonable",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are described as small, rounded, and with similar spatial orientations; stating that the dough ball is beside the potato is plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are small, rounded, and described with similar surfaces and motions; it is plausible they are beside each other spatially.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 30
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects have uncertain identification and plausible spatial adjacency; the relationship 'beside' is reasonable but not definitively confirmed from the metadata.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dough ball and a potato can plausibly be spatially beside each other, as described by their physical attributes and placement.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dough ball and potato are both small, rounded objects that can physically be located beside each other, and the spatial relationship 'beside' is plausible given their similar attributes and descriptions.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 34
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two similar small rounded earthy objects identified as potatoes plausibly can be beside each other in the scene.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two small, rounded objects described as likely potatoes placed beside each other is spatially plausible given their similar attributes and natural positioning.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 28
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both objects are described as similar potato-like items with spatial relation 'beside', which is plausible given their physical descriptions and proximity.",
+      "label": "reasonable",
+      "object_id": 32,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 29
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate that remains stationary cannot logically be 'handling' the dough, as it implies active manipulation which a plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 35,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot be handling a dough ball; handling implies active manipulation, which a plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 30,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of handling a dough ball.",
+      "label": "physically_impossible",
+      "object_id": 34,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, being an inanimate object that remains stationary, cannot actively place a container; the predicate 'placing' implies an agent performing an action, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot be 'turning' a pot lid; the relationship is not physically plausible as described.",
+      "label": "physically_impossible",
+      "object_id": 14,
+      "predicate": "turning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is stationary and typically does not perform the action of 'turning' a chopping board; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 26,
+      "predicate": "turning",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate (inanimate object) cannot perform the action of handling a jar; 'handling' implies an animate agent interacting with an object, which is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plate remains stationary and is unlikely to handle the potato; the potato is being handled, so flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 36,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object and cannot perform the action of handling a potato or any object.",
+      "label": "physically_impossible",
+      "object_id": 28,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is described as remaining stationary and is an inanimate object incapable of handling or manipulating a potato.",
+      "label": "physically_impossible",
+      "object_id": 29,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate remains stationary and cannot be handling the potato; handling implies active manipulation which the plate cannot perform.",
+      "label": "physically_impossible",
+      "object_id": 32,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear what is being handled by the plate; therefore, the relationship cannot be confirmed.",
+      "label": "insufficient_context",
+      "object_id": 37,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, and the plate remains stationary, so it cannot be handling an unspecified object.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remaining stationary cannot be 'handling' a chopping board, as plates do not perform actions or hold objects.",
+      "label": "physically_impossible",
+      "object_id": 31,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remaining stationary cannot perform the action of handling a cabinet door; the subject cannot functionally handle the object.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear who or what is handling the plate.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which remains stationary, cannot perform 'handling' of a bucket; the relationship is physically impossible as plates do not handle objects.",
+      "label": "physically_impossible",
+      "object_id": 40,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate remains stationary and cannot perform the action of handling the jar, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 21,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of handling a potato; thus, the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a drawer; this relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate is an inanimate object that cannot perform the action of 'handling' a faucet; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 23,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot handle a pot, making the 'handling' relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 24,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the plate and the strainer remain stationary, so the plate cannot be 'handling' the strainer.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a bowl, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The plate remains stationary and the knife is moving; it is more plausible that the knife is handling the plate, not the plate handling the knife.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a grater, which makes the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a knob; it is an inanimate object with no capability to handle anything.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action 'handling' of a frying pan; the predicate is not physically plausible for the subject.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform 'handling' of a cup; plates are inanimate and typically remain stationary and do not manipulate other objects.",
+      "label": "physically_impossible",
+      "object_id": 20,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary decorative plate cannot perform the action of handling a metallic knob; plates do not manipulate objects.",
+      "label": "physically_impossible",
+      "object_id": 25,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of handling a colander because it is inanimate and remains stationary; this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 15,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and cannot perform the action of handling a cutting board; plates are inanimate objects not capable of handling other objects.",
+      "label": "physically_impossible",
+      "object_id": 16,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary plate cannot perform the action of handling a drawer; the subject/object roles and predicate are not plausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate itself cannot perform the action of handling an object such as a shelf; handling implies intentional action by a capable agent.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which is stationary and an inanimate object, cannot 'handle' a pot; the action is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is stationary and the bowl is steady and slightly tilted, so the plate is not handling the bowl; plates do not handle bowls logically.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The plate is described as remaining stationary and cannot functionally handle a pot.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate, which is an inanimate object that remains stationary, cannot perform the action of handling cylindrical objects.",
+      "label": "physically_impossible",
+      "object_id": 33,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate remains stationary and is not capable of handling a chopping board, making this relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of placing another object; it is inanimate and remains stationary.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "placing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A plate cannot perform the action of removing a container; the subject/object roles and predicate do not align with physical capabilities.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "removing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so it's unclear if the subject can perform 'camera focusing on'; however, the predicate implies a camera action on the plate, which is plausible under some interpretations.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      37,
+      "above",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      30,
+      "touching",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      34,
+      "touching",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      28,
+      "touching",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      29,
+      "touching",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      32,
+      "touching",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "in front of",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      30,
+      "in front of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      34,
+      "in front of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      28,
+      "in front of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "in front of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      3,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      3,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      3,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      3,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      3,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      37,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      37,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      37,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      37,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      32,
+      37,
+      "on top of",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      34,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      28,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      29,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      30,
+      32,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      28,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      29,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      34,
+      32,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      29,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      28,
+      32,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      29,
+      32,
+      "beside",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      36,
+      1,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      10,
+      1,
+      "handling",
+      [
+        [
+          72,
+          168
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      1,
+      "camera focusing on",
+      [
+        [
+          0,
+          264
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000050"
+}

@@ -1,0 +1,1100 @@
+{
+  "activity_differential": [
+    "dog moving from house to car",
+    "dog descending stairs and exploring",
+    "dog interacting with child and entering vehicle"
+  ],
+  "description": "A small dog descends a staircase, moves through a living space, and enters a car, with a child briefly appearing on the stairs. The camera follows the dog's movement throughout.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The small dog is descending stairs and a suspended light fixture above or near the stairs can logically be described as 'in front of' the dog from a spatial viewpoint.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog cannot be spatially below a painting on a wall using 'below' in a way meaningful for placement because the painting is on the wall, and the dog is on the stairs; the relationship is unclear and not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small dog descending stairs can plausibly be to the right of a stationary wall, consistent with the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog is described as descending stairs and the object is a nearby chair, it is plausible for the dog to be to the right of the chair in the scene.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog can plausibly be positioned left of the stationary picture frame in the scene without semantic or physical conflict.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog descending stairs cannot be spatially above a painting fixed on a wall; given typical setups, this relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that the small dog descending the stairs is positioned to the right of the handrail as described.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both dogs are described as moving within a shared environment, and one dog being spatially 'left of' the other is a plausible spatial relationship given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dog descending stairs is physically above part of a vertical wall adjacent to the stairs; the spatial relation 'above' is plausible in this context.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A dog can be positioned to the left of a stationary table in a spatial relationship; the descriptions support plausible scene geometry.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dog is descending stairs and is likely above the bathtub spatially; this relationship is physically plausible and contextually consistent.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The painting is below the dog on the staircase, not the dog below the painting; flipping subject and object makes the spatial relation 'below' accurate.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog descending stairs could plausibly be positioned to the right of a piece of dark furniture; spatial relation 'right of' is reasonable given their stationary and stable descriptions.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog descending the stairs is plausibly positioned below the chair, making the spatial 'below' relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dog being to the right of the child is spatially plausible given the descriptions and no contradictory context.",
+      "label": "reasonable",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog descending stairs being described as 'above' a chair backrest is implausible given typical spatial arrangements; the dog is likely below or beside the chair, not above it.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is below the wall panel, so flipping subject and object makes 'dog below wall panel' correct.",
+      "label": "flipped",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small dog descending stairs being spatially below a vertical wall is plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog is described as descending stairs near stationary furniture, so it is plausible for the dog to be positioned left of the cabinet door in the scene.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The dog being located to the left of a handle is a spatial relationship that is plausible given the descriptions; the relationship is reasonable and coherent.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small dog is described as descending stairs while exploring, and the nearby rotating wheel is plausible to be located to its right, making the dog 'left of' the wheel reasonable spatially.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed and lacks description or attributes, making it impossible to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is moving down the stairs, likely in front of the light fixture; saying the fixture is behind the dog is more accurate when the relationship is flipped.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The painting is likely below the light fixture, reversing subject and object makes the spatial relation accurate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A light fixture is typically on or attached to a wall or ceiling, not positioned to the right of a wall; flipping subject and object makes the spatial relation more plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light fixture suspended from the ceiling can plausibly be positioned to the right of a chair in the spatial layout described.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small, fixed light fixture is plausibly positioned left of the stationary picture frame on the ceiling or wall, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A ceiling-mounted light fixture is logically positioned above a wall-mounted painting; the spatial relationship 'above' is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "While the spatial relation 'right of' between the ceiling-suspended light fixture and the elongated handrail is plausible, the uncertain identification and limited spatial cues in the metadata prevent a definitive evaluation.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary light fixture suspended from the ceiling can plausibly be located to the left of a dog moving below it; the spatial relation is logically consistent.",
+      "label": "reasonable",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be positioned above a vertical wall, as the wall typically extends upward from the floor.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be physically left of a table located below it; their vertical spatial relationship makes 'left of' between them physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light fixture (subject) is plausibly positioned above a bathtub (object) as both are stationary fixtures, making the spatial relationship 'above' reasonable.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The light fixture is suspended from the ceiling above the painting; it cannot be spatially below the painting, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'right of' between a small suspended light fixture and a piece of furniture is plausible but uncertain without exact positioning details; the metadata is inconclusive.",
+      "label": "insufficient_context",
+      "object_id": 14,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The 'light fixture' is described as suspended from the ceiling, so it should be above the 'chair'; flipping the subject and object aligns with correct spatial positioning.",
+      "label": "flipped",
+      "object_id": 15,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A small light fixture is usually fixed and unlikely to be spatially right of a child; it is more plausible that the child is right of the light fixture, so flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 16,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A light fixture is typically suspended above a chair, so stating the light fixture is above the chair backrest is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Since the light fixture is suspended from the ceiling, it cannot be located below the wall panel, which extends horizontally along the wall.",
+      "label": "physically_impossible",
+      "object_id": 18,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A light fixture suspended from the ceiling cannot be located below a wall, as the wall is vertical and the fixture hangs downward; the spatial relationship 'below' between a hanging fixture and a wall is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 19,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small ceiling-mounted light fixture can reasonably be located to the left of a cabinet door in a room setting, making the spatial relationship plausible.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small light fixture can plausibly be positioned left of a handle; their spatial relationship is coherent and supported by the descriptions.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The small, stationary light fixture being left of a moving, rotating wheel is physically plausible and consistent with the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is described, but the object lacks any description, so we cannot confirm spatial relation accuracy but cannot discard it either.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The dog is below the wall, not the wall below the dog; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall being described as to the left of the cabinet door is plausible given spatial layout possibilities in a room setting.",
+      "label": "reasonable",
+      "object_id": 20,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A handle is typically on or left of a wall, not the wall left of the handle; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "A stationary wall cannot be to the left of a rotating, moving wheel in a spatial sense; the relationship as stated is physically implausible given the dynamic actions.",
+      "label": "physically_impossible",
+      "object_id": 22,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to validate the spatial relationship with the wall.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible that the dog is below the chair backrest, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair backrest plausibly positioned to the left of a wall fits common spatial arrangements in interiors.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 17
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification and description, so spatial relationship to the wall cannot be fully verified but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 10,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, so it's unclear what object is to the left of the dog, but spatial relation 'left of' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 24
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject lacks any identifying information, making it impossible to validate the 'following' relationship with the known dog.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "following",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined (name and description are null), making it impossible to confirm the dog's awareness of it.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "aware of",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog moving with a wall is physically impossible since the wall is stationary and does not move.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, so it is unclear what the dog is entering; thus, the relationship cannot be verified.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "entering",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A small dog descending stairs and moving toward a chair backrest is plausible, as the dog could be approaching the chair.",
+      "label": "reasonable",
+      "object_id": 17,
+      "predicate": "moving toward",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair backrest cannot move away from a dog; the backrest is a static object and cannot perform the motion attributed to it.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "moving away from",
+      "relation_type": "motion",
+      "subject_id": 17
+    },
+    {
+      "decision": "drop",
+      "explanation": "A dog paying attention to an inanimate chair backrest is unlikely; the object lacks features to attract or hold the dog's attention meaningfully.",
+      "label": "physically_impossible",
+      "object_id": 17,
+      "predicate": "paying attention to",
+      "relation_type": "attentional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it unclear what is 'entering' the wall; the predicate is not plausible without more context.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "entering",
+      "relation_type": "functional",
+      "subject_id": 10
+    },
+    {
+      "decision": "keep",
+      "explanation": "No information about subject or object prevents verification of the 'approaching' relationship.",
+      "label": "insufficient_context",
+      "object_id": 24,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      6,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "above",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "left of",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      12,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      1,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      14,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      15,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      16,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      18,
+      1,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      19,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      20,
+      "left of",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      21,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      22,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "left of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      9,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "above",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      16,
+      2,
+      "right of",
+      [
+        [
+          0,
+          24
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      17,
+      "above",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      20,
+      "left of",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      22,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "right of",
+      [
+        [
+          120,
+          120
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "below",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      20,
+      "left of",
+      [
+        [
+          72,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "left of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "below",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      17,
+      10,
+      "left of",
+      [
+        [
+          72,
+          72
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      10,
+      "left of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      24,
+      1,
+      "left of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      17,
+      "moving toward",
+      [
+        [
+          48,
+          72
+        ]
+      ],
+      "motion"
+    ],
+    [
+      -1,
+      24,
+      "approaching",
+      [
+        [
+          168,
+          216
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000029"
+}

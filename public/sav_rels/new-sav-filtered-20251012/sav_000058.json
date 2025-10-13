@@ -1,0 +1,1238 @@
+{
+  "activity_differential": [
+    "door being opened to reveal living room",
+    "camera panning to show interior",
+    "latch and handle being manipulated to open door"
+  ],
+  "description": "A camera records a living room as a door is gradually opened wider, revealing more of the interior, including chairs, a mat, and other furnishings. The latch and handle on the door are manipulated as the door swings open.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "drop",
+      "explanation": "A door cannot be 'attached to' a chair since doors are typically attached to door frames or walls, not furniture like chairs.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information, making it impossible to confirm the relationship with the door.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is above the door in a typical indoor setting; reversing subject and object aligns with a physically plausible spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden door is plausibly positioned above a rug on the floor; the spatial relationship 'above' is reasonable given typical room layouts.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wooden door positioned above the floor is spatially plausible and consistent with the scene description.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair being left of a runner (a floor covering) is unlikely, as the runner usually lies on the floor and chairs are placed on top or partially overlapping it, making 'left of' spatial relation atypical or physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A chair being right of a blanket on a surface is spatially plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it is unclear if the chair can contain it; relationship is unsupported.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A chair cannot physically contain a door; their typical sizes and functions make the relationship implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is likely mounted above the chair; flipping subject/object correctly represents that the clock is above the chair, not vice versa.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair being above a rug is spatially plausible, as chairs are typically placed on rugs or floors.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair is plausibly positioned above the floor, matching the spatial predicate 'above'.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary wooden chair placed in front of a tall wooden door is spatially plausible and consistent with the described scene elements.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is typically in front of the chair, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair being positioned in front of a mat is spatially plausible and consistent with the given descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair remaining stationary to the right of a gently moving curtain is spatially and physically plausible.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A wooden chair being positioned to the right of a curtain is spatially plausible and consistent with typical room layouts.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot be on top of a wall since the wall is vertical and the mat is on the floor; flipping the relationship to 'wall on top of mat' makes no sense either, but flipping subject/object better fits spatial logic if interpreted as 'mat on floor below wall.' However, the relationship as 'mat on top of wall' is physically implausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A curtain typically hangs above a mat on the floor, so the curtain should be the subject 'over' or 'above' the mat; flipping subject and object aligns the spatial relation properly.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A clock is typically mounted above a mat on the wall, not the mat above the clock; flipping makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat cannot physically be above a rug lying on the floor; likely the rug is above the mat or on top of it, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is positioned on top of the floor, so the floor is below the mat, making the subject/object order incorrect for the predicate 'above'.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is above the wall is incorrect; the clock is mounted on the wall, so the correct relationship is the clock is above some part of the wall or the clock is on the wall. Flipping subject and object makes sense for 'above' to describe clock above the wall base or lower wall area.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall is described as vertical and the rug lies horizontally on the ground; the wall being above the rug is physically plausible.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The wall is described as extending vertically with objects mounted on it, positioned above the floor, which is flat and extends across the scene; stating the wall is above the floor is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door being left of a curtain is spatially plausible given their descriptions and typical interior arrangements.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the towel is below the door rather than the door being below the towel given their typical physical arrangement.",
+      "label": "flipped",
+      "object_id": 13,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a door to be spatially located left of a blanket in a scene; no physical or semantic conflict exists.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A door being to the left of a curtain is spatially plausible and consistent with their descriptions in the scene.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A mat is typically on the floor, with the door behind it from a spatial perspective; flipping the subject and object aligns with common spatial arrangement.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, a door is located on or in front of a wall, not behind it. Flipping subject and object to 'wall behind door' better reflects physical reality.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain being to the right of a door is a spatial relationship that is plausible given their descriptions and typical room layouts.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is likely on the floor, and the curtain hangs behind it; flipping subject and object aligns with spatial reality.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain typically hangs behind or in front of a wall; describing the curtain as behind the wall is plausible depending on perspective or layering in the scene.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be positioned to the left of a chair; the spatial relationship 'left of' between these two objects is plausible based on their descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned right of a door is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket being 'right of' the curtain is a plausible spatial relationship given their described placement and no contradictory information.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a blanket is positioned to the right of a curtain in a scene, consistent with their described spatial arrangement.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A curtain hangs and does not physically rest on top of a mat on the floor; the spatial predicate 'on top of' with curtain as subject and mat as object is implausible.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A wall is the rigid surface on which a curtain hangs; saying the curtain is 'on top of' the wall is incorrect, but flipping subject and object makes the statement plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A curtain can logically be positioned to the right of a door, matching their spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The relationship 'curtain right of curtain' is spatially plausible as curtains often hang side by side; the detailed descriptions support this arrangement.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The description supports a spatial relationship where the runner (a long, narrow object) could plausibly be right of the wooden chair; this spatial placement is reasonable given stable, stationary positions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The runner is described as a long, narrow object likely acting as a path or boundary, and the blanket as a draped fabric; stating the runner is to the right of the blanket is spatially plausible given their positions and physical properties.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "A clock is typically mounted on a wall above the floor rug; thus, the clock is above the rug, not below. Flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "The wall is vertically oriented, and the rug lies below it; flipping subject and object makes the spatial relation 'below' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A rug is typically placed on top of the floor, not below it; flipping subject and object makes the 'below' predicate accurate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "Typically, the wall is vertical and the floor is horizontal; the wall is below the floor is incorrect. Flipping makes the floor below the wall relationship correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is likely mounted on a wall and the floor is below it; reversing subject and object aligns with the physical layout.",
+      "label": "flipped",
+      "object_id": 12,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The clock is mounted on the wall, so the wall is above the clock; flipping subject and object makes the spatial predicate 'below' correct.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "flip",
+      "explanation": "The mat is located below the wall clock; flipping subject and object corrects the spatial predicate.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A clock is typically mounted on a wall above the floor where a rug would be placed, so the clock being above the rug spatially is plausible.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A clock mounted on a wall is logically positioned above the floor in the scene.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "A towel hanging above a door is spatially plausible and consistent with their descriptions and orientations.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 13
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relation 'right of' between a door handle and a runner is plausible, but the uncertainty in object identification and lack of precise visual context prevent a confident decision.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 14
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified, so we cannot confirm or deny the 'attached to' relationship with the chair; therefore, keeping it as is.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject is unspecified, so it is unclear whether 'attached to' is accurate, but the door description supports the predicate plausibly.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "attached to",
+      "relation_type": "spatial",
+      "subject_id": 15
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unspecified and lacks description, so the camera panning motion toward the chair cannot be fully verified, but the relationship is plausible.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning right toward",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both the chair and the door are stationary objects; a chair cannot move with a door as neither is capable of independent motion.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A door is stationary and cannot actively be manipulated by a chair, which is also stationary; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "being manipulated by",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject lacks identification and description, making it unclear whether it can manipulate the chair; however, no contradiction is present to drop or flip the relationship.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "being manipulated by",
+      "relation_type": "functional",
+      "subject_id": 15
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is unnamed with no description or attributes, and the chair is described as remaining stationary; thus, movement with the object is implausible and lacks supporting context.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The predicate 'revealing' is unclear in this context between a stationary chair and a mat; there is insufficient information to confirm this functional relationship.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "revealing",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is undefined and lacks description, so the relationship of camera focusing on the mat cannot be fully validated but is plausible; insufficient data prevents a more definitive decision.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      12,
+      1,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      11,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      11,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      3,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      3,
+      "under",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      3,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      4,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      8,
+      "on top of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      12,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      12,
+      "below",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      10,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      11,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      13,
+      5,
+      "above",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      14,
+      9,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      2,
+      "attached to",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      15,
+      1,
+      "attached to",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera panning right toward",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "motion"
+    ],
+    [
+      15,
+      2,
+      "being manipulated by",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      -1,
+      3,
+      "camera focusing on",
+      [
+        [
+          120,
+          288
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000058"
+}

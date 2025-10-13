@@ -1,0 +1,1263 @@
+{
+  "activity_differential": [
+    "adults engaging in social interaction at a festive event",
+    "woman receiving and displaying money during celebration",
+    "group conversing and celebrating under a canopy tent"
+  ],
+  "description": "A group of adults in traditional attire are standing and interacting at a festive indoor event under a canopy tent. One woman is holding a handbag and later handles and displays currency notes, while others are engaged in social interaction. The camera moves around the group, capturing their actions and interactions.",
+  "place_env_id_name": "event hall",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "The person's arm can logically be described as an object on top of which something rests or is positioned, making 'on top of' a plausible spatial relationship given the partial but sufficient description.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person cannot be 'on top of' a canopy tent; rather, the canopy tent is on top of or over the person, so flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "on top of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the hand is under the person or garment, rather than the person being under the hand; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically be 'under' another person in a standing posture as described; the spatial relationship is implausible here.",
+      "label": "physically_impossible",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The arm is realistically part of or 'under' the person, not the other way around; flipping subject and object makes the spatial relationship plausible.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm, likely belonging to a person, can be reasonably standing next to a stationary canopy tent in a scene.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand is anatomically under the arm, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arm cannot logically be 'under' a person; rather, the person is above the arm, so flipping subject/object aligns with the spatial predicate.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm is described as having subtle movements and a relaxed posture, and the canopy is a lightweight fabric that can be touched; the arm touching the canopy is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm touching a handbag is a physically plausible spatial relationship given the described subtle and gentle movements.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm described is likely part of a person and holding a handbag is a plausible action given the descriptions of both objects and their interaction.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot hold a person; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 7,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm likely belongs to or is near the person, so describing the arm as standing next to the person is plausible given the spatial relationship.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arm being 'inside' a person is logically incorrect; the person contains the arm, so flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks identification and description, so the spatial relation cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A delicate canopy can plausibly be touching an arm, especially given the fabric's light material and gentle folds suggesting contact.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A delicate canopy fabric fluttering slightly can plausibly be touching a stationary handbag, as described by the fabric's gentle folds and the handbag's proximity.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A lightweight, flowing canopy fabric could plausibly be touching a handbag, especially given their close proximity and the gentle movement described.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The delicate fabric canopy and the person with flowing clothing can plausibly be touching given the described gentle interactions and proximity.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand can plausibly be positioned above a person, especially when the hand is described as extending or reaching.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand being above an arm is a physically plausible spatial relationship.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand can physically be positioned above a canopy tent; the spatial relationship 'above' is plausible given their descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "A hand can plausibly overlap parts of a person's body or clothing; the relationship is spatially reasonable given the descriptions.",
+      "label": "reasonable",
+      "object_id": 11,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handbag can reasonably be touching the person's arm given their proximity and descriptions of subtle movements.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handbag and the delicate canopy fabric can plausibly be touching, given their described proximity and characteristics in the scene.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot hold another handbag; the 'holding' predicate with handbag as subject is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can hold a handbag, but a handbag holding a person is not plausible; reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "holding",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "The handbag is held by the arm, not the other way around; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "A handbag and a delicate canopy fabric can plausibly be touching or in close spatial contact given their described textures and draping, making the relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "A handbag cannot be held by another handbag; this relationship between two handbags is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "The handbag overlapping the person's clothing is plausible as it is described as being held and having fabric draping, indicating spatial contact.",
+      "label": "reasonable",
+      "object_id": 7,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The predicate 'held by' suggests the arm is holding the person, which is physically implausible; flipping subject and object makes the person holding the arm, which is reasonable.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person with flowing clothing can plausibly be touching a lightweight, delicate canopy fabric described as fluttering slightly.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A handbag is held by a person; flipping subject and object corrects the spatial relation 'held by'.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "held by",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person's clothing fabric can spatially overlap with a handbag held or positioned near them, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot be an independent object to be 'standing next to' a person; the relationship is not physically meaningful.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person being spatially inside another person is physically impossible; the relationship 'inside' does not apply between two people.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "A person's body can be described as containing their arm; it is reasonable to say the person contains the arm in a spatial sense.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot physically contain another person; the 'contains' spatial relationship is not plausible here.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically reasonable for a person to be under a canopy tent, not the tent under the person; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot stand next to a canopy tent on its own; the relationship is implausible without a full person as subject.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "standing next to",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A hand can be under a canopy tent, but the given relationship has the tent as the subject and the hand as the object with 'under'; flipping them makes the statement physically plausible.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person can be under a canopy tent, not the tent under the person; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 11,
+      "predicate": "under",
+      "relation_type": "spatial",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "One person cannot be physically 'above' another in a standing context as described here; the spatial predicate is not plausible for two standing people.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described as standing with crossed arms and subtle arm movements, so the 'person' being above the 'arm' is spatially plausible.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person's hand is part of the person's body, so describing the person overlapping with the hand in a spatial sense is plausible.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "overlapping",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "flip",
+      "explanation": "The canopy tent is above the person, so reversing subject and object aligns the spatial relationship correctly.",
+      "label": "flipped",
+      "object_id": 10,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 11
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject has no identifying information, so the spatial relationship 'behind' the arm is uncertain but plausible; cannot confirm or reject without more context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 12
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm holding a handbag is a plausible and common scenario, supported by the descriptions of subtle movements and the bag being held securely.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arm (part of a person) holding a person is implausible; reversing the subject and object to person holding arm makes sense.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "holding",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "An arm handling a handbag is a plausible and common interaction supported by the descriptions of movement and positioning.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "An arm cannot handle a person; more plausible is the person handling the arm (e.g., adjusting or touching it). Reversing subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "handling",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm a social interaction with the arm.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An 'arm (uncertain)' as a separate entity cannot engage in a social action like 'conversing with' a person; conversation requires a full person, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm gesturing with a canopy is implausible because a canopy is an architectural or large fabric structure, not something typically used for gesturing.",
+      "label": "physically_impossible",
+      "object_id": 3,
+      "predicate": "gesturing with",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm is described as making subtle, gentle movements and gesturing with the handbag is plausible given the arm's functional connection to holding or gesturing with objects.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "gesturing with",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identifying information or description, making it impossible to confirm the plausibility of the 'receiving money from' relationship with the uncertain 'arm' subject.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "receiving money from",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'arm' is described with movements suggesting interaction, but the object lacks any identifying details, so it is unclear if the arm is showing money to a person or entity.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "showing money to",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making it impossible to confirm a meaningful 'conversing with' relationship with an arm alone.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot engage in a social act like conversing; the subject should be the whole person.",
+      "label": "physically_impossible",
+      "object_id": 9,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm cannot 'converse with' a canopy tent as one is a body part and the other an inanimate object, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 10,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The arm likely belongs to a person and could be displaying money, but lack of detailed information about the object and missing object name makes it uncertain.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "displaying money to",
+      "relation_type": "functional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot perform the action of smiling at someone; smiling is a facial expression requiring a face, so the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 12,
+      "predicate": "smiling at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject is unspecified and the object is an arm, which cannot receive money; no clear context to validate the functional relationship.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "giving money to",
+      "relation_type": "functional",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "An unknown subject cannot be conversing with an arm, as conversing requires two persons or entities capable of communication.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unspecified and the object is an arm; smiling is an action performed by a face, so smiling at an arm is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "smiling at",
+      "relation_type": "attentional",
+      "subject_id": 12
+    },
+    {
+      "decision": "drop",
+      "explanation": "An arm alone cannot engage in 'conversing with' a person, as conversation requires a full person or agent.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "The person is described in detail, but there is no information about the object or another person to confirm the 'conversing with' relationship.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A canopy tent cannot engage in social interactions such as 'conversing with' an arm; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify any social interaction with the canopy tent, which itself cannot converse.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "conversing with",
+      "relation_type": "social",
+      "subject_id": 10
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks identification and description, making the 'camera panning around' predicate unclear and ambiguous in this context.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera panning around",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is undefined (null) which makes it impossible to verify the relationship; lacking necessary context to confirm the camera focusing action.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Both subject and object lack descriptions and names, so the interaction cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 12,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      1,
+      "on top of",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      2,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "standing next to",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "touching",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "holding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "standing next to",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "inside",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "in front of",
+      [
+        [
+          24,
+          24
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "touching",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      6,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      2,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      11,
+      "overlapping",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      3,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "holding",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "held by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      3,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "overlapping",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "held by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "touching",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      7,
+      "held by",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "overlapping",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "contains",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      10,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      10,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      10,
+      "under",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      2,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      11,
+      4,
+      "overlapping",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      10,
+      11,
+      "above",
+      [
+        [
+          0,
+          360
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      12,
+      2,
+      "behind",
+      [
+        [
+          24,
+          24
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          216,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      2,
+      "holding",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      6,
+      "handling",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      2,
+      "handling",
+      [
+        [
+          120,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      5,
+      "gesturing with",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      12,
+      "showing money to",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      2,
+      12,
+      "displaying money to",
+      [
+        [
+          216,
+          384
+        ]
+      ],
+      "functional"
+    ],
+    [
+      8,
+      12,
+      "conversing with",
+      [
+        [
+          0,
+          96
+        ]
+      ],
+      "social"
+    ],
+    [
+      -1,
+      12,
+      "camera focusing on",
+      [
+        [
+          168,
+          384
+        ]
+      ],
+      "attentional"
+    ]
+  ],
+  "video_id": "sav_000045"
+}

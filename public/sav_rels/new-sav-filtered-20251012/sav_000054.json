@@ -1,0 +1,1613 @@
+{
+  "activity_differential": [
+    "dog approaching and greeting observer",
+    "dog exploring living room",
+    "dog seeking attention from observer"
+  ],
+  "description": "A dog wearing a checkered garment walks from the back of a living room toward the camera, eventually approaching and interacting with the unseen observer. The environment is a domestic living room with various furniture and household items.",
+  "place_env_id_name": "living room",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "It is plausible for a blanket to be positioned in front of a moving dog; the spatial relationship 'in front of' is logically consistent given the scene descriptions.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned right of a placemat is spatially plausible given the described setting and objects.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed blanket; the object lacks a name and description, so spatial relation 'right of' cannot be fully validated but remains plausible.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket being behind the towel spatially is plausible given their described positions and appearances.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be spatially positioned to the right of a chair backrest; this spatial relationship is plausible and consistent with descriptions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket has a plausible spatial relationship of being 'right of' another object, but the object lacks description, so the relationship cannot be fully validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a blanket, but the object's lack of name or description prevents confirming the spatial relationship's accuracy or relevance.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be positioned in front of a chair; the spatial relation is plausible given the descriptions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any description or name, making it impossible to verify the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned in front of a cabinet door is spatially and physically plausible based on the described attributes and scene.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned in front of a cabinet door is physically plausible given the described spatial arrangement and object properties.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned to the left of a place mat is physically plausible and matches the spatial relationship described.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object of the relationship is unspecified and lacks any description or attributes, making it impossible to verify the spatial relationship accurately.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name, attributes, actions, or description, making it impossible to verify the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description to establish a spatial relationship with the blanket; cannot confirm \"in front of\" without object details.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a blanket, which can physically be 'on' something, but the object lacks identification and description, so the context is insufficient to fully confirm or refute the relationship.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it unclear what is in front of the blanket.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "It is plausible that a soft textured blanket could be positioned to the left of a stationary, rectangular box; the spatial relationship is reasonable given the described objects.",
+      "label": "reasonable",
+      "object_id": 21,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, so spatial relationship 'in front of' cannot be verified or evaluated with given metadata.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can plausibly be located in front of a door in a scene; the spatial relationship 'in front of' is reasonable given the described objects.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can be positioned in front of a doormat, and the spatial relationship 'in front of' is plausible given the descriptions of their positions and attributes.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned spatially in front of a cabinet door is plausible and fits the descriptions with no contradictions.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket being in front of a stationary canister on a surface is plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The object lacks description, so the spatial relationship is plausible but cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to validate the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can reasonably be placed in front of a doormat spatially; the description supports this arrangement.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to verify the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket positioned in front of a drawer is a plausible spatial relationship given the description of both objects.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The blanket is in front of an unidentified object with no description, making the spatial relationship plausible yet lacking sufficient detail.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "Object has no name or description, preventing verification of 'in front of' spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so the spatial relationship 'in front of' cannot be confirmed or evaluated.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a blanket, but the object has no name or description, making it impossible to confirm or deny the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can plausibly be positioned in front of a wall in a spatial context.",
+      "label": "reasonable",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A blanket being 'in front of' a tile is a spatial relationship that is ambiguous and unlikely to be meaningful, as the tile likely lies flat and the blanket would more plausibly be 'on' or 'covering' the tile rather than strictly 'in front of' it.",
+      "label": "physically_impossible",
+      "object_id": 38,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object has no name or description, making it impossible to confirm or deny the spatial relationship with the blanket.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A blanket can plausibly be positioned in front of a door frame, and the spatial relation is consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular box can reasonably be located to the right of a moving dog, and the spatial relationship 'right of' is plausible based on the description.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box being to the right of a place mat is a plausible spatial relationship given both descriptions.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to evaluate the spatial relationship meaningfully.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The spatial relationship 'box behind towel' is plausible given the descriptions of their positions and stationary nature.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box being to the right of the stationary chair backrest is a plausible spatial relationship based on their descriptions and stable positions.",
+      "label": "reasonable",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described, but the object lacks any details, making it impossible to fully verify the 'right of' spatial relationship; thus, keeping it as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 7,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any description or attributes to verify the spatial relationship, so the relationship is kept due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject box is well described, but the object lacks any description or name, making it unclear if the spatial relationship 'left of' is appropriate; uncertain but plausible to keep.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box positioned in front of the chair is a plausible spatial relationship given their descriptions and stationary positions.",
+      "label": "reasonable",
+      "object_id": 10,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described as a box, but the object lacks any identifying information, making it impossible to confirm or refute the spatial relationship reliably.",
+      "label": "insufficient_context",
+      "object_id": 11,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The rectangular box positioned in front of the cabinet door is a plausible spatial relationship given their stationary nature and descriptions.",
+      "label": "reasonable",
+      "object_id": 12,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary box positioned in front of a stationary cabinet door is a physically plausible and spatially reasonable relationship.",
+      "label": "reasonable",
+      "object_id": 13,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rectangular box can reasonably be positioned left of a rectangular place mat in a spatial context; both objects are stationary, making the relationship plausible.",
+      "label": "reasonable",
+      "object_id": 14,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed box, but the object lacks name or description, so there's insufficient context to verify the spatial relationship.",
+      "label": "insufficient_context",
+      "object_id": 15,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a well-described box, but the object lacks any information, making it impossible to fully verify the spatial relationship; keeping it as is due to lack of context.",
+      "label": "insufficient_context",
+      "object_id": 16,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject box is well described, but the object lacks identification and description, making it unclear whether the 'left of' spatial relationship is accurate; therefore, the relationship is kept as is due to insufficient context.",
+      "label": "insufficient_context",
+      "object_id": 17,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a box with specific attributes, but the object lacks identification or description, making it unclear what the box is in front of; however, the spatial predicate is plausible as-is.",
+      "label": "insufficient_context",
+      "object_id": 18,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed box with clear spatial features, but the object lacks description or identity, providing insufficient context to evaluate the 'on' relationship conclusively. Without knowing what the object is, keeping the relationship as is is reasonable.",
+      "label": "insufficient_context",
+      "object_id": 19,
+      "predicate": "on",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described clearly, but the object it is in front of is unidentified, so the spatial relationship cannot be fully verified or rejected.",
+      "label": "insufficient_context",
+      "object_id": 20,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular box being to the right of a soft, plush blanket is spatially plausible and consistent with the descriptions.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described in detail but the object it relates to is unknown, so spatial relationship cannot be definitively confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 22,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box can plausibly be positioned in front of a door, both are stationary and the spatial relation fits the described scene.",
+      "label": "reasonable",
+      "object_id": 23,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular box being in front of a stationary doormat is spatially plausible and consistent with the descriptions provided.",
+      "label": "reasonable",
+      "object_id": 24,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box and cabinet door are both stationary and described with spatial characteristics suggesting proximity; 'beside' is a plausible spatial relationship here.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular box described as beside a stationary cylindrical canister is a plausible spatial relationship given their descriptions and stability.",
+      "label": "reasonable",
+      "object_id": 26,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject 'box' is well described and stable, but the object lacks identification and description, making it unclear what it is beside; however, the spatial relation 'beside' is plausible.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described clearly, but the object in relation is unspecified, so the spatial relationship cannot be fully assessed.",
+      "label": "insufficient_context",
+      "object_id": 28,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box can plausibly be positioned in front of a doormat, and both objects maintain consistent orientation and position as described, making the spatial relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is clearly described as a box, but the object has no identifying name or description, so it's unclear what the box is right of; however, the spatial relationship itself is plausible.",
+      "label": "insufficient_context",
+      "object_id": 30,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box positioned in front of a drawer is spatially plausible and consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 31,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject box is well described, but the object lacks any identifying information, making it impossible to confirm or refute the spatial relationship definitively.",
+      "label": "insufficient_context",
+      "object_id": 32,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is well described, but the object lacks any descriptive information, making it difficult to fully assess the spatial relationship; however, 'in front of' is plausible as stated.",
+      "label": "insufficient_context",
+      "object_id": 33,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described in detail, but the object it is related to lacks name and description, so we cannot confirm or deny the spatial relationship, but it is plausible.",
+      "label": "insufficient_context",
+      "object_id": 34,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "Though the subject 'box' is well described, the object lacks name and description, so the spatial relation 'in front of' cannot be confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 35,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a detailed box with a stable position. The object lacks any identifying information or description, so its spatial relation 'in front of' the box cannot be confirmed or denied with certainty.",
+      "label": "insufficient_context",
+      "object_id": 36,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described as stationary with consistent orientation, and the wall is stationary; it is plausible for the box to be in front of the wall given the spatial relation and descriptions.",
+      "label": "reasonable",
+      "object_id": 37,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary rectangular box being positioned in front of a flat tile is spatially and physically plausible.",
+      "label": "reasonable",
+      "object_id": 38,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject box is well described; however, the object lacks any identifying information, making it impossible to verify the spatial relationship's accuracy or plausibility.",
+      "label": "insufficient_context",
+      "object_id": 39,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box positioned in front of a door frame is spatially plausible given the descriptions of both objects being stationary and their forms.",
+      "label": "reasonable",
+      "object_id": 40,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A rectangular box positioned beside a triangular doormat is spatially plausible and consistent with their described stable orientations.",
+      "label": "reasonable",
+      "object_id": 29,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A stationary box with a stable orientation can plausibly be touching a stationary cabinet door; the spatial relationship is consistent with the described scene.",
+      "label": "reasonable",
+      "object_id": 25,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "A box can plausibly be located beside a wall; both are stationary and spatially adjacent, making the relationship reasonable.",
+      "label": "reasonable",
+      "object_id": 37,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "keep",
+      "explanation": "The box is described in detail, but the object it is touching is unspecified, so the relationship cannot be fully verified or dismissed.",
+      "label": "insufficient_context",
+      "object_id": 27,
+      "predicate": "touching",
+      "relation_type": "spatial",
+      "subject_id": 21
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship is undefined with no description, making it impossible to evaluate 'approaching' for the blanket.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "approaching",
+      "relation_type": "motion",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship involves a blanket 'looking at' an unspecified object with no description; blankets cannot look, and the object is undefined.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "looking at",
+      "relation_type": "attentional",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined and lacks any attributes or description, making it impossible to assess the interaction with the blanket.",
+      "label": "insufficient_context",
+      "object_id": -1,
+      "predicate": "interacting with",
+      "relation_type": "higher_order",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification, but camera focusing on a blanket is plausible; insufficient details prevent confirmation or rejection.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "camera focusing on",
+      "relation_type": "attentional",
+      "subject_id": -1
+    },
+    {
+      "decision": "flip",
+      "explanation": "The blanket is soft and shows subtle movement, while the box remains stationary; it is more plausible that the box is moving past the blanket, not vice versa.",
+      "label": "flipped",
+      "object_id": 21,
+      "predicate": "moving past",
+      "relation_type": "motion",
+      "subject_id": 2
+    }
+  ],
+  "relationships": [
+    [
+      2,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "behind",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      6,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "right of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      8,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      14,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      19,
+      "on",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      21,
+      "left of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      25,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      26,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      27,
+      "in front of",
+      [
+        [
+          72,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      31,
+      "in front of",
+      [
+        [
+          96,
+          96
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      32,
+      "in front of",
+      [
+        [
+          120,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      36,
+      "in front of",
+      [
+        [
+          48,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      37,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      40,
+      "in front of",
+      [
+        [
+          0,
+          48
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      1,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      3,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      5,
+      "behind",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      6,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      7,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      8,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      9,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      10,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      11,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      12,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      13,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      14,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      15,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      16,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      17,
+      "left of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      18,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      19,
+      "on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      20,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      2,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      22,
+      "in front of",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      23,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      24,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      25,
+      "beside",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      26,
+      "beside",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      27,
+      "beside",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      28,
+      "in front of",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      29,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      30,
+      "right of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      31,
+      "in front of",
+      [
+        [
+          96,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      32,
+      "in front of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      33,
+      "in front of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      34,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      35,
+      "in front of",
+      [
+        [
+          120,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      36,
+      "in front of",
+      [
+        [
+          48,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      37,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      38,
+      "in front of",
+      [
+        [
+          120,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      39,
+      "in front of",
+      [
+        [
+          240,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      40,
+      "in front of",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      29,
+      "beside",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      25,
+      "touching",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      37,
+      "beside",
+      [
+        [
+          72,
+          216
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      21,
+      27,
+      "touching",
+      [
+        [
+          96,
+          192
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      -1,
+      2,
+      "camera focusing on",
+      [
+        [
+          0,
+          288
+        ]
+      ],
+      "attentional"
+    ],
+    [
+      21,
+      2,
+      "moving past",
+      [
+        [
+          0,
+          240
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000054"
+}

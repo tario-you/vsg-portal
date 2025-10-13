@@ -1,0 +1,1939 @@
+{
+  "activity_differential": [
+    "group of people walking together",
+    "person walking with companions",
+    "people strolling on walkway"
+  ],
+  "description": "Multiple people are walking together, as seen from a first-person perspective looking down at their legs and shoes. The camera moves in sync with the main person, capturing the coordinated walking motion of the group.",
+  "place_env_id_name": "outdoor walkway",
+  "relationship_filter_metadata": [
+    {
+      "decision": "keep",
+      "explanation": "Two shoes described in motion can plausibly be positioned one behind the other during walking.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes in motion with one positioned behind the other is spatially plausible given the described walking action.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "behind",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn above the shoe, so flipping subject and object corrects the spatial relationship 'above'.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe on a foot is naturally positioned above the trousers covering the leg, so the spatial relation 'shoe above trousers' is plausible.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe cannot be inside a pair of shoes; instead, the pair of shoes contains the shoe (or feet within the shoes). Flipping subject and object makes the spatial relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe cannot contain a person; the person wearing the shoe is inside the shoe, so flipping subject and object makes the spatial relation 'inside' accurate.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe (footwear) cannot be spatially 'left of' legs as it is part of the lower extremity of the legs; the relationship is physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is a shoe described in detail, but the object lacks any name or description, providing insufficient context to evaluate the accuracy fully; keeping the relationship is safest.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 1
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes both in motion with one shoe positioned spatially in front of the other is plausible and consistent with walking or shifting weight.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes described with detailed attributes appearing close in motion can plausibly be beside each other.",
+      "label": "reasonable",
+      "object_id": 3,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot be above trousers; the shoe is worn on the foot below the trousers, so the spatial relationship 'above' is physically incorrect.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers are worn above the shoe, so reversing subject and object makes the 'above' predicate accurate.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe above a pair of shoes is redundant or ambiguous, as a pair includes multiple shoes; spatially labeling one shoe as 'above' the other shoes is not meaningful.",
+      "label": "redundant",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is physically plausible that a person contains a shoe inside (the foot is inside the shoe), not the other way around.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "flip",
+      "explanation": "The legs move forward and wear shoes, so 'legs left of shoe' is more plausible; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object in the relationship lacks a name, attributes, actions, or description, making it impossible to verify the spatial relationship with the shoe.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 2
+    },
+    {
+      "decision": "keep",
+      "explanation": "One shoe being spatially in front of another shoe during movement is plausible and consistent with the descriptions of walking motion.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "in front of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes described with distinct attributes and both in motion can reasonably be beside each other.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "beside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe being above trousers is physically plausible since shoes are worn on feet and positioned below trousers, so the spatial relationship 'above' from shoe to trousers is valid in some views.",
+      "label": "reasonable",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "A shoe positioned above trousers in a motion sequence is physically plausible, as shoes generally cover the feet which are above trousers in the vertical spatial relation.",
+      "label": "reasonable",
+      "object_id": 5,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe cannot physically be above a pair of shoes; the relationship is implausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe being 'inside' a person is incorrect; the shoe is inside/on the person's foot, so flipping subject and object makes the relationship plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe alone cannot physically be positioned 'left of' legs as it is usually part of the legs; the spatial relationship is not meaningful without a distinct separate context.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "keep",
+      "explanation": "The shoe is described as moving and rotating, which could place it above another object, but the object is unspecified, so the spatial relationship cannot be fully confirmed or denied.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 3
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are below trousers, not the other way around; reversing subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are physically below trousers, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are typically below trousers; reversing subject and object corrects the spatial predicate 'below'.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both subjects are pairs of trousers with similar attributes and descriptions; stating one is below the other adds no meaningful or plausible spatial distinction.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are worn inside trousers, not the other way around; flipping subject and object corrects the spatial relation.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The person wears the trousers; the trousers cannot be inside the person. Flipping subject and object makes the relationship physically plausible.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "Trousers are worn on legs and cannot be positioned 'left of' them separately; the spatial relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to verify if the trousers can be 'inside' it.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 4
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shoe is physically below the trousers, not the other way around, so flipping corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe is typically below trousers, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are below trousers in natural human anatomy; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship describes one pair of trousers being 'above' another nearly identical pair of trousers, which is unlikely and provides no meaningful information.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "above",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes can be inside trousers (worn inside), but trousers being inside shoes is unlikely; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is more plausible that the person is inside the trousers rather than trousers inside the person.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "flip",
+      "explanation": "Legs wearing dark trousers are the main entity moving; reversing subject and object makes 'left of' a plausible spatial relation since trousers cannot be left of legs themselves.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object is undefined with no name or description, so the relationship 'trousers inside null' cannot be reasonably evaluated.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 5
+    },
+    {
+      "decision": "keep",
+      "explanation": "A pair of shoes containing an individual shoe is a logically consistent spatial relationship.",
+      "label": "reasonable",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The relationship stating one shoe is 'below' the other is redundant because both are shoes in close motion; this spatial relation adds no meaningful or distinctive information.",
+      "label": "redundant",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both entities are shoes with similar attributes and descriptions involving movement; stating one is 'below' the other adds no meaningful spatial distinction and is redundant.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shoes cannot contain trousers; the spatial relationship 'contains' is not physically plausible here.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes do not contain trousers; rather, trousers contain or cover shoes. Reversing subject and object aligns better with typical spatial relationships.",
+      "label": "flipped",
+      "object_id": 5,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shoes are worn by the person, so the person should be the subject and the shoes the object in the 'inside' spatial relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "keep",
+      "explanation": "Shoes being left of legs in a spatial relationship is plausible as shoes can be spatially referenced next to legs during walking.",
+      "label": "reasonable",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, so it's unclear what the shoes could contain; relationship cannot be validated.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 6
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shoe contains the foot (or sock), not the person containing the shoe; flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "The shoe contains the sock (part of the person), not the person containing the shoe; flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 2,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe contains a sock/foot, not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 3,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Trousers contain the leg and foot (including the sock and shoe), not the other way around; flipping subject and object corrects the spatial relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A person cannot be contained within trousers; the intended spatial relationship likely should be reversed or clarified, but as given, 'person contains trousers' is implausible.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes are worn on the person's feet and thus contain the feet or socks, not the other way around; flipping subject and object fixes the relationship.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "flip",
+      "explanation": "Legs contain the person or parts of the person, not vice versa; flipping subject and object makes the relationship 'legs contain person' plausible.",
+      "label": "flipped",
+      "object_id": 8,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name or description, making it impossible to confirm the 'contains' relationship with the person or their clothing.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 7
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of legs cannot be spatially 'right of' a shoe that is part of the legs; they are part of the same entity or overlapping, making this spatial relationship physically implausible.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "A pair of legs cannot be spatially to the right of a shoe that is part of those legs; the relationship is physically impossible due to the body parts' inherent connection.",
+      "label": "physically_impossible",
+      "object_id": 2,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The 'legs' include the feet/shoes as part of the same entity moving in unison, so stating 'legs right of shoe' is redundant and unclear spatially.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The legs are described wearing dark pants/trousers, so stating 'legs right of trousers' is semantically redundant and physically confusing.",
+      "label": "redundant",
+      "object_id": 4,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The legs wearing dark pants and the trousers likely refer to the same clothing item in motion; indicating the legs are 'right of' the trousers is redundant and adds no meaningful spatial distinction.",
+      "label": "redundant",
+      "object_id": 5,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs cannot be spatially to the right of the shoes they are wearing; the relationship is physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Legs cannot be inside a person, but a person contains legs; reversing subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks any identification or description, making the spatial relation 'right of' unverifiable.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "right of",
+      "relation_type": "spatial",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject lacks any identifying information; cannot confirm if it can contain the shoe.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and lacks description, so we cannot confirm the spatial relation with the shoe, though 'below' is plausible in general.",
+      "label": "insufficient_context",
+      "object_id": 2,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unnamed and undescribed, so it's unclear what 'below' relationship it has with the shoe; cannot verify correctness.",
+      "label": "insufficient_context",
+      "object_id": 3,
+      "predicate": "below",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "The subject is unknown and unnamed, so it's unclear what is containing the trousers. Without further details, the relationship cannot be validated or rejected.",
+      "label": "insufficient_context",
+      "object_id": 4,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "keep",
+      "explanation": "Subject lacks identification, making it unclear what contains the trousers, but the relationship 'contains' for spatial predicate may be plausible.",
+      "label": "insufficient_context",
+      "object_id": 5,
+      "predicate": "contains",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject object lacks any identifying information or description, making it impossible to verify if it can be inside the shoes.",
+      "label": "insufficient_context",
+      "object_id": 6,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "flip",
+      "explanation": "It is plausible that the vibrant sock/shoe is 'inside' the person (i.e., worn by them), not the other way around. Flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "inside",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "Subject entity lacks any identification or description, making it impossible to confirm the spatial 'left of' relationship to the described legs.",
+      "label": "insufficient_context",
+      "object_id": 8,
+      "predicate": "left of",
+      "relation_type": "spatial",
+      "subject_id": 9
+    },
+    {
+      "decision": "drop",
+      "explanation": "The subject is unknown with no description or attributes, making it impossible to assess the relationship's validity with the shoe.",
+      "label": "insufficient_context",
+      "object_id": 1,
+      "predicate": "moving with",
+      "relation_type": "motion",
+      "subject_id": -1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot 'walk with' trousers; walking is an action performed by a person wearing both, making the relationship between shoe and trousers incorrect.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A single shoe cannot 'walk with' another pair of shoes; walking is performed by a person wearing shoes, so this relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe itself cannot 'walk with' legs; it is part of a foot or leg, so this relationship is physically impossible as stated.",
+      "label": "physically_impossible",
+      "object_id": 8,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "The object lacks a name and description, making it impossible to confirm the 'walking with' relationship between the shoe and the object.",
+      "label": "insufficient_context",
+      "object_id": 9,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person (or foot) is wearing a shoe, not the other way around, so flipping subject and object corrects the 'wearing' relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "Shoes cannot wear trousers; the wearer relationship logically applies to a person or foot, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "flip",
+      "explanation": "A shoe cannot wear shoes, but a person would wear shoes; reversing subject and object fixes the 'wearing' predicate.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Shoes cannot walk independently; walking is an action performed by legs or a person, not shoes.",
+      "label": "physically_impossible",
+      "object_id": 1,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs cannot 'walk with' trousers as separate entities; trousers are worn on legs, so this spatial/social relationship is not physically plausible.",
+      "label": "physically_impossible",
+      "object_id": 4,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "drop",
+      "explanation": "Legs wearing shoes cannot be 'walking with' the shoes as separate entities; the shoes are part of the legs' movement, making the relationship physically impossible.",
+      "label": "physically_impossible",
+      "object_id": 6,
+      "predicate": "walking with",
+      "relation_type": "social",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "A person wears legs; it is the legs that are worn by the person, so flipping subject and object corrects the relationship.",
+      "label": "flipped",
+      "object_id": 7,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Legs do not wear trousers; trousers are worn on legs. Reversing subject and object aligns with the predicate 'wearing'.",
+      "label": "flipped",
+      "object_id": 4,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "flip",
+      "explanation": "Legs do not wear shoes, but shoes are worn on legs (feet); flipping subject and object makes the relationship correct.",
+      "label": "flipped",
+      "object_id": 6,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 8
+    },
+    {
+      "decision": "keep",
+      "explanation": "Two shoes in motion likely near each other plausibly represent walking side by side or nearby.",
+      "label": "reasonable",
+      "object_id": 2,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "Both objects are shoes described in motion; stating one shoe is 'walking near' another shoe is redundant and lacks clear distinctiveness or meaningful interaction.",
+      "label": "redundant",
+      "object_id": 3,
+      "predicate": "walking near",
+      "relation_type": "motion",
+      "subject_id": 1
+    },
+    {
+      "decision": "drop",
+      "explanation": "A shoe cannot wear trousers; the wearing relationship applies to a person or body part wearing clothes, not the shoe itself.",
+      "label": "physically_impossible",
+      "object_id": 5,
+      "predicate": "wearing",
+      "relation_type": "functional",
+      "subject_id": 1
+    }
+  ],
+  "relationships": [
+    [
+      1,
+      2,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      3,
+      "behind",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      1,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          336
+        ],
+        [
+          360,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "above",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "inside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "inside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      9,
+      "inside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      3,
+      "beside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      2,
+      "above",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      2,
+      "inside",
+      [
+        [
+          0,
+          168
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      2,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      1,
+      "in front of",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      2,
+      "beside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "above",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      3,
+      "inside",
+      [
+        [
+          0,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      9,
+      "above",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      4,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          72
+        ],
+        [
+          96,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          336
+        ],
+        [
+          360,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      4,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      4,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      4,
+      "inside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      4,
+      "inside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      5,
+      "below",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      5,
+      "below",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      5,
+      "below",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      5,
+      "inside",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      5,
+      "inside",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      5,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      1,
+      "contains",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          312,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      5,
+      6,
+      "contains",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      6,
+      "inside",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      8,
+      "left of",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      1,
+      7,
+      "contains",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      2,
+      7,
+      "contains",
+      [
+        [
+          0,
+          168
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      3,
+      7,
+      "contains",
+      [
+        [
+          0,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      4,
+      7,
+      "contains",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      6,
+      7,
+      "contains",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      8,
+      7,
+      "contains",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      8,
+      "inside",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ],
+        [
+          240,
+          240
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          360
+        ],
+        [
+          384,
+          384
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      2,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      3,
+      "below",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          72,
+          96
+        ],
+        [
+          120,
+          144
+        ],
+        [
+          192,
+          216
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      4,
+      "contains",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          264,
+          288
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      9,
+      5,
+      "contains",
+      [
+        [
+          0,
+          0
+        ],
+        [
+          72,
+          72
+        ],
+        [
+          144,
+          144
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      9,
+      "inside",
+      [
+        [
+          0,
+          24
+        ],
+        [
+          48,
+          120
+        ],
+        [
+          144,
+          168
+        ],
+        [
+          240,
+          288
+        ],
+        [
+          312,
+          336
+        ]
+      ],
+      "spatial"
+    ],
+    [
+      7,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          408
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      1,
+      "wearing",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "functional"
+    ],
+    [
+      7,
+      8,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      4,
+      8,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      6,
+      8,
+      "wearing",
+      [
+        [
+          0,
+          216
+        ]
+      ],
+      "functional"
+    ],
+    [
+      1,
+      2,
+      "walking near",
+      [
+        [
+          0,
+          336
+        ]
+      ],
+      "motion"
+    ]
+  ],
+  "video_id": "sav_000015"
+}
