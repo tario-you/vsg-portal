@@ -34,6 +34,8 @@ const state = {
   edgeRelationMap: new Map(),
   relationEdgeMap: new Map(),
   suppressNetworkSelect: false,
+  selectedRelationGroup: null,
+  tableFocusPending: false,
   nodeCentroids: null,
   centroidFrameIndex: new Map(),
   imageSize: null,
@@ -111,14 +113,8 @@ const dom = {
   activeRelations: document.getElementById('active-relations'),
   relationDetailsPanel: document.getElementById('relation-details-panel'),
   relationDetailsStatus: document.getElementById('relation-details-status'),
-  relationDetailsList: document.getElementById('relation-details-list'),
-  relationDetailsDecision: document.getElementById('relation-details-decision'),
-  relationDetailsLabel: document.getElementById('relation-details-label'),
-  relationDetailsSubjectId: document.getElementById('relation-details-subject-id'),
-  relationDetailsSubjectName: document.getElementById('relation-details-subject-name'),
-  relationDetailsObjectId: document.getElementById('relation-details-object-id'),
-  relationDetailsObjectName: document.getElementById('relation-details-object-name'),
-  relationDetailsExplanation: document.getElementById('relation-details-explanation'),
+  relationDetailsTableWrapper: document.getElementById('relation-details-table-wrapper'),
+  relationDetailsTableBody: document.getElementById('relation-details-tbody'),
 };
 
 function setViewportBackground(url) {
@@ -2954,7 +2950,7 @@ function formatObjectLabel(data, objectId, variant = 'display') {
   const descriptor = getObjectDisplayDescriptor(data, objectId);
   if (!descriptor) {
     const key = String(objectId);
-    if (variant === 'compact' || variant === 'short') {
+    if (variant === 'compact') {
       return Number.isFinite(Number(key)) ? `Object${Number(key)}` : `Object${key}`;
     }
     if (variant === 'short') {
@@ -2994,6 +2990,8 @@ function destroyNetwork() {
   state.edgeRelationMap = new Map();
   state.relationEdgeMap = new Map();
   state.suppressNetworkSelect = false;
+  state.selectedRelationGroup = null;
+  state.tableFocusPending = false;
   state.nodeCentroids = null;
   state.centroidFrameIndex = new Map();
   state.imageSize = null;
@@ -3221,6 +3219,7 @@ function selectRelationByEdgeId(edgeId, options = {}) {
   const { scrollIntoView = true } = options;
   const edgeInfo = state.edgeRelationMap instanceof Map ? state.edgeRelationMap.get(edgeId) : null;
   if (!edgeInfo) {
+    state.selectedRelationGroup = null;
     debugRelationEvent('select:edge-missing', {
       edgeId,
       datasetKind: state.currentVideoData?.filterDatasetKind || null,
@@ -3230,6 +3229,7 @@ function selectRelationByEdgeId(edgeId, options = {}) {
   const relations = Array.isArray(edgeInfo.relations) ? edgeInfo.relations : [];
   const primary = edgeInfo.primary || relations.find((rel) => Boolean(rel?.filterMeta)) || relations[0] || null;
   if (!primary) {
+    state.selectedRelationGroup = null;
     debugRelationEvent('select:edge-empty', {
       edgeId,
       datasetKind: state.currentVideoData?.filterDatasetKind || null,
@@ -3638,13 +3638,16 @@ function getRelationById(relationId) {
 }
 
 function setSelectedRelationId(relationId, options = {}) {
-  const { focus = false, scrollIntoView = false } = options;
+  const { focus = false, scrollIntoView = false, focusTable = false } = options;
   const data = state.currentVideoData;
+  state.tableFocusPending = Boolean(focusTable);
   if (!data || !data.isFiltered) {
     if (state.selectedRelation) {
       state.selectedRelation = null;
       renderRelationDetails();
     }
+    state.selectedRelationGroup = null;
+    state.tableFocusPending = false;
     debugRelationEvent('select:cleared', {
       reason: 'not-filter-dataset',
       datasetKind: data?.filterDatasetKind || null,
@@ -3657,6 +3660,8 @@ function setSelectedRelationId(relationId, options = {}) {
       state.selectedRelation = null;
       renderActiveRelations();
     }
+    state.selectedRelationGroup = null;
+    state.tableFocusPending = false;
     debugRelationEvent('select:cleared', {
       reason: 'empty-id',
       datasetKind: data.filterDatasetKind || null,
@@ -3675,6 +3680,8 @@ function setSelectedRelationId(relationId, options = {}) {
       state.selectedRelation = null;
       renderActiveRelations();
     }
+    state.selectedRelationGroup = null;
+    state.tableFocusPending = false;
     synchroniseNetworkSelection(null);
     return;
   }
@@ -3692,6 +3699,8 @@ function setSelectedRelationId(relationId, options = {}) {
   });
   if (isDeselection) {
     state.selectedRelation = null;
+    state.selectedRelationGroup = null;
+    state.tableFocusPending = false;
   } else {
     state.selectedRelation = {
       id: relation.uid,
@@ -3699,6 +3708,29 @@ function setSelectedRelationId(relationId, options = {}) {
       meta: relation.filterMeta || null,
     };
     shouldFocus = focus;
+    let groupEdgeId = null;
+    let groupRelations = [];
+    if (state.relationEdgeMap instanceof Map) {
+      groupEdgeId = state.relationEdgeMap.get(relation.uid) || null;
+    }
+    if (groupEdgeId && state.edgeRelationMap instanceof Map) {
+      const groupEntry = state.edgeRelationMap.get(groupEdgeId);
+      if (Array.isArray(groupEntry?.relations) && groupEntry.relations.length) {
+        groupRelations = groupEntry.relations;
+      }
+    }
+    if (!groupRelations.length && data?.relations) {
+      groupRelations = data.relations.filter(
+        (candidate) => candidate.from === relation.from && candidate.to === relation.to
+      );
+    }
+    if (!groupRelations.length) {
+      groupRelations = [relation];
+    }
+    state.selectedRelationGroup = {
+      edgeId: groupEdgeId,
+      relations: groupRelations,
+    };
   }
   debugRelationEvent('select:result', {
     relationId: state.selectedRelation?.id || null,
@@ -3732,8 +3764,8 @@ function setSelectedRelationId(relationId, options = {}) {
 function renderRelationDetails() {
   const panel = dom.relationDetailsPanel;
   const status = dom.relationDetailsStatus;
-  const list = dom.relationDetailsList;
-  const explanationEl = dom.relationDetailsExplanation;
+  const tableWrapper = dom.relationDetailsTableWrapper;
+  const tableBody = dom.relationDetailsTableBody;
   const data = state.currentVideoData;
 
   if (!panel) return;
@@ -3748,12 +3780,11 @@ function renderRelationDetails() {
       reason: 'not-filter-dataset',
       datasetKind: data?.filterDatasetKind || null,
     });
-    if (list) {
-      list.hidden = true;
+    if (tableWrapper) {
+      tableWrapper.hidden = true;
     }
-    if (explanationEl) {
-      explanationEl.textContent = '';
-      explanationEl.hidden = true;
+    if (tableBody) {
+      tableBody.innerHTML = '';
     }
     return;
   }
@@ -3772,17 +3803,23 @@ function renderRelationDetails() {
       reason: 'no-evaluations',
       datasetKind: data.filterDatasetKind || null,
     });
-    if (list) {
-      list.hidden = true;
+    if (tableWrapper) {
+      tableWrapper.hidden = true;
     }
-    if (explanationEl) {
-      explanationEl.textContent = '';
-      explanationEl.hidden = true;
+    if (tableBody) {
+      tableBody.innerHTML = '';
     }
     return;
   }
 
   const selection = state.selectedRelation;
+  const group = state.selectedRelationGroup;
+  const relations = Array.isArray(group?.relations) && group.relations.length
+    ? group.relations
+    : selection
+    ? [selection.relation]
+    : [];
+
   if (!selection) {
     if (status) {
       status.hidden = false;
@@ -3792,94 +3829,133 @@ function renderRelationDetails() {
       reason: 'no-selection',
       datasetKind: data.filterDatasetKind || null,
     });
-    if (list) {
-      list.hidden = true;
+    if (tableWrapper) {
+      tableWrapper.hidden = true;
     }
-    if (explanationEl) {
-      explanationEl.textContent = '';
-      explanationEl.hidden = true;
+    if (tableBody) {
+      tableBody.innerHTML = '';
     }
     return;
   }
 
-  const meta = selection.meta;
-  if (!meta) {
+  if (!relations.length) {
     if (status) {
       status.hidden = false;
-      status.textContent = 'Filter metadata is not available for the selected relationship.';
+      status.textContent = 'No relationships found for this selection.';
+    }
+    if (tableWrapper) {
+      tableWrapper.hidden = true;
+    }
+    if (tableBody) {
+      tableBody.innerHTML = '';
     }
     debugRelationEvent('details:hidden', {
-      reason: 'missing-meta',
+      reason: 'no-relations-for-edge',
       datasetKind: data.filterDatasetKind || null,
       relationId: selection.id,
     });
-    if (list) {
-      list.hidden = true;
-    }
-    if (explanationEl) {
-      explanationEl.textContent = '';
-      explanationEl.hidden = true;
-    }
     return;
   }
 
   if (status) {
     status.hidden = true;
   }
-  if (list) {
-    list.hidden = false;
+  if (tableWrapper) {
+    tableWrapper.hidden = false;
   }
 
-  const subjectId = meta.subjectId || meta.subject_id || null;
-  const objectId = meta.objectId || meta.object_id || null;
-  const fallbackSubjectCompact = subjectId != null ? formatObjectLabel(data, subjectId, 'compact') : null;
-  const fallbackObjectCompact = objectId != null ? formatObjectLabel(data, objectId, 'compact') : null;
-  const subjectCompact =
-    meta.subjectCompact ||
-    meta.subjectDisplay ||
-    meta.subjectName ||
-    meta.subject_name ||
-    fallbackSubjectCompact;
-  const objectCompact =
-    meta.objectCompact ||
-    meta.objectDisplay ||
-    meta.objectName ||
-    meta.object_name ||
-    fallbackObjectCompact;
-  const subjectName = subjectCompact || fallbackSubjectCompact || (subjectId ? `Object ${subjectId}` : null);
-  const objectName = objectCompact || fallbackObjectCompact || (objectId ? `Object ${objectId}` : null);
+  if (tableBody) {
+    tableBody.innerHTML = '';
+    const createCell = (value, className) => {
+      const td = document.createElement('td');
+      if (className) td.className = className;
+      td.textContent = value != null && value !== '' ? String(value) : '—';
+      return td;
+    };
+    let selectedRowElement = null;
 
-  if (dom.relationDetailsDecision) {
-    dom.relationDetailsDecision.textContent = meta.decision || '—';
+    relations.forEach((rel) => {
+      const meta = rel.filterMeta || {};
+      const subjectId = rel.from;
+      const objectId = rel.to;
+      const fallbackSubjectCompact =
+        subjectId != null ? formatObjectLabel(data, subjectId, 'compact') : null;
+      const fallbackObjectCompact =
+        objectId != null ? formatObjectLabel(data, objectId, 'compact') : null;
+      const subjectCompact =
+        meta.subjectCompact ||
+        meta.subjectDisplay ||
+        meta.subjectName ||
+        meta.subject_name ||
+        fallbackSubjectCompact;
+      const objectCompact =
+        meta.objectCompact ||
+        meta.objectDisplay ||
+        meta.objectName ||
+        meta.object_name ||
+        fallbackObjectCompact;
+
+      const decision = meta.decision || (rel.filterMeta ? rel.filterMeta.decision : null) || '—';
+      const label = meta.label || (rel.filterMeta ? rel.filterMeta.label : null) || '—';
+      const explanation = meta.explanation || (rel.filterMeta ? rel.filterMeta.explanation : null) || '—';
+
+      const row = document.createElement('tr');
+      row.classList.add('decision-row');
+      row.dataset.relId = rel.uid || '';
+      row.tabIndex = 0;
+      row.setAttribute('role', 'button');
+      const ariaLabelParts = [
+        decision,
+        subjectCompact || subjectId || 'subject',
+        rel.predicate || 'related to',
+        objectCompact || objectId || 'object',
+      ].filter(Boolean);
+      row.setAttribute('aria-label', ariaLabelParts.join(' '));
+      const isSelectedRow = Boolean(selection?.id && rel.uid === selection.id);
+      if (isSelectedRow) {
+        row.classList.add('decision-row--selected');
+        selectedRowElement = row;
+      }
+      row.setAttribute('aria-pressed', isSelectedRow ? 'true' : 'false');
+
+      row.appendChild(createCell(decision, 'decision-cell decision-cell--decision'));
+      row.appendChild(createCell(label, 'decision-cell decision-cell--label'));
+      row.appendChild(createCell(subjectId, 'decision-cell decision-cell--subject-id'));
+      row.appendChild(createCell(subjectCompact, 'decision-cell decision-cell--subject-name'));
+      row.appendChild(createCell(rel.predicate || '—', 'decision-cell decision-cell--predicate'));
+      row.appendChild(createCell(objectId, 'decision-cell decision-cell--object-id'));
+      row.appendChild(createCell(objectCompact, 'decision-cell decision-cell--object-name'));
+      const explanationCell = createCell(explanation, 'decision-cell decision-cell--explanation');
+      explanationCell.title = explanation || '';
+      row.appendChild(explanationCell);
+
+      tableBody.appendChild(row);
+    });
+
+    if (selectedRowElement && tableWrapper && state.tableFocusPending) {
+      scheduleMicrotask(() => {
+        if (tableWrapper.contains(selectedRowElement) && typeof selectedRowElement.scrollIntoView === 'function') {
+          if (typeof selectedRowElement.focus === 'function') {
+            try {
+              selectedRowElement.focus({ preventScroll: true });
+            } catch (error) {
+              selectedRowElement.focus();
+            }
+          }
+          selectedRowElement.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        }
+        state.tableFocusPending = false;
+      });
+    } else {
+      state.tableFocusPending = false;
+    }
   }
-  if (dom.relationDetailsLabel) {
-    dom.relationDetailsLabel.textContent = meta.label || '—';
-  }
-  if (dom.relationDetailsSubjectId) {
-    dom.relationDetailsSubjectId.textContent = subjectId || '—';
-  }
-  if (dom.relationDetailsSubjectName) {
-    dom.relationDetailsSubjectName.textContent = subjectName || '—';
-  }
-  if (dom.relationDetailsObjectId) {
-    dom.relationDetailsObjectId.textContent = objectId || '—';
-  }
-  if (dom.relationDetailsObjectName) {
-    dom.relationDetailsObjectName.textContent = objectName || '—';
-  }
-  if (explanationEl) {
-    explanationEl.hidden = false;
-    explanationEl.textContent = meta.explanation || '—';
-  }
+
   debugRelationEvent('details:rendered', {
     relationId: selection.id,
-    decision: meta.decision || null,
-    label: meta.label || null,
+    relationCount: relations.length,
     datasetKind: data.filterDatasetKind || null,
-    subjectId: subjectId || null,
-    objectId: objectId || null,
-    subjectName: subjectName || null,
-    objectName: objectName || null,
+    edgeId: group?.edgeId || null,
   });
 }
 
@@ -3982,6 +4058,33 @@ function handleRelationListKeydown(event) {
   });
   event.preventDefault();
   setSelectedRelationId(relationId, { focus: true });
+}
+
+function getDecisionRowFromTarget(target) {
+  if (!target || !(target instanceof Element)) return null;
+  return target.closest('tr[data-rel-id]');
+}
+
+function handleDecisionTableClick(event) {
+  if (!state.currentVideoData?.isFiltered) return;
+  const row = getDecisionRowFromTarget(event.target);
+  if (!row) return;
+  const relationId = row.dataset.relId;
+  if (!relationId) return;
+  event.preventDefault();
+  setSelectedRelationId(relationId, { focus: false, scrollIntoView: false, focusTable: true });
+}
+
+function handleDecisionTableKeydown(event) {
+  if (!state.currentVideoData?.isFiltered) return;
+  const key = event.key;
+  if (key !== 'Enter' && key !== ' ' && key !== 'Spacebar') return;
+  const row = getDecisionRowFromTarget(event.target);
+  if (!row) return;
+  const relationId = row.dataset.relId;
+  if (!relationId) return;
+  event.preventDefault();
+  setSelectedRelationId(relationId, { focus: false, scrollIntoView: false, focusTable: true });
 }
 
 function renderFrameDisplay() {
@@ -4283,6 +4386,8 @@ async function loadVideo(videoId, options = {}) {
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
   state.selectedRelation = null;
+  state.selectedRelationGroup = null;
+  state.tableFocusPending = false;
   renderRelationDetails();
 
   const restoredCategories = restoreCategorySelection(videoId, cached.categories);
@@ -4425,6 +4530,11 @@ function initialiseEventHandlers() {
   if (dom.activeRelations) {
     dom.activeRelations.addEventListener('click', handleRelationListClick);
     dom.activeRelations.addEventListener('keydown', handleRelationListKeydown);
+  }
+
+  if (dom.relationDetailsTableBody) {
+    dom.relationDetailsTableBody.addEventListener('click', handleDecisionTableClick);
+    dom.relationDetailsTableBody.addEventListener('keydown', handleDecisionTableKeydown);
   }
 
   if (dom.renderRate) {

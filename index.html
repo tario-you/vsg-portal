@@ -95,35 +95,25 @@
 
     <aside class="sidebar">
       <section class="panel panel--decision" id="relation-details-panel" hidden>
-        <h3>Filter Decision</h3>
+        <h3>Filter Decisions</h3>
         <p class="panel__note" id="relation-details-status">Select a relationship to view filter reasoning.</p>
-        <dl class="decision-list" id="relation-details-list" hidden>
-          <div>
-            <dt>Decision</dt>
-            <dd id="relation-details-decision">—</dd>
-          </div>
-          <div>
-            <dt>Label</dt>
-            <dd id="relation-details-label">—</dd>
-          </div>
-          <div>
-            <dt>Subject ID</dt>
-            <dd id="relation-details-subject-id">—</dd>
-          </div>
-          <div>
-            <dt>Subject Name</dt>
-            <dd id="relation-details-subject-name">—</dd>
-          </div>
-          <div>
-            <dt>Object ID</dt>
-            <dd id="relation-details-object-id">—</dd>
-          </div>
-          <div>
-            <dt>Object Name</dt>
-            <dd id="relation-details-object-name">—</dd>
-          </div>
-        </dl>
-        <p class="decision-explanation" id="relation-details-explanation" hidden></p>
+        <div class="decision-table-wrapper" id="relation-details-table-wrapper" hidden>
+          <table class="decision-table" id="relation-details-table">
+            <thead>
+              <tr>
+                <th scope="col">Decision</th>
+                <th scope="col">Label</th>
+                <th scope="col">Subj&nbsp;ID</th>
+                <th scope="col">Subj&nbsp;Name</th>
+                <th scope="col">Predicate</th>
+                <th scope="col">Obj&nbsp;ID</th>
+                <th scope="col">Obj&nbsp;Name</th>
+                <th scope="col">Explanation</th>
+              </tr>
+            </thead>
+            <tbody id="relation-details-tbody"></tbody>
+          </table>
+        </div>
       </section>
 
       <section class="panel">
