@@ -451,7 +451,7 @@ function makeRelationFingerprint(subjectId, objectId, predicate, relationType) {
 }
 
 function createRelationUid(index, subjectId, objectId, predicate, relationType) {
-  return `${index}#${makeRelationFingerprint(subjectId, objectId, predicate, relationType)}`;
+  return `rel-${index}`;
 }
 
 function detectFilteredRun(manifestEntry, rawData) {
@@ -3568,8 +3568,16 @@ function renderRelationDetails() {
 
   const subjectId = meta.subjectId || meta.subject_id || null;
   const objectId = meta.objectId || meta.object_id || null;
-  const subjectName = meta.subjectName || meta.subject_name || (subjectId ? `Object ${subjectId}` : null);
-  const objectName = meta.objectName || meta.object_name || (objectId ? `Object ${objectId}` : null);
+  const subjectName =
+    meta.subjectDisplay ||
+    meta.subjectName ||
+    meta.subject_name ||
+    (subjectId ? `Object ${subjectId}` : null);
+  const objectName =
+    meta.objectDisplay ||
+    meta.objectName ||
+    meta.object_name ||
+    (objectId ? `Object ${objectId}` : null);
 
   if (dom.relationDetailsDecision) {
     dom.relationDetailsDecision.textContent = meta.decision || '—';
