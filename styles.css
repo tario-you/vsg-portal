@@ -302,8 +302,8 @@ body {
   border-radius: 0.85rem;
   background: rgba(148, 163, 184, 0.15);
   padding: 0.4rem;
-  max-height: 320px;
-  overflow: auto;
+  max-height: none;
+  overflow: visible;
 }
 
 .decision-table {
@@ -332,7 +332,8 @@ body {
   padding: 0.5rem 0.65rem;
   border-bottom: 1px solid rgba(148, 163, 184, 0.2);
   vertical-align: top;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .decision-table tbody td.decision-cell {
@@ -350,13 +351,18 @@ body {
 
 .decision-cell--subject-id,
 .decision-cell--object-id {
+  white-space: nowrap;
+}
+
+.decision-cell--subject-id,
+.decision-cell--object-id {
   font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
   font-size: 0.78rem;
 }
 
 .decision-table tbody td.decision-cell--explanation {
   white-space: normal;
-  max-width: 320px;
+  max-width: none;
   line-height: 1.45;
   color: var(--muted);
 }
