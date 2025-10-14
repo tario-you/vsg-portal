@@ -42,6 +42,7 @@ const state = {
   renderStride: 6,
   lastRenderedFrame: null,
   debug: { enabled: false, overlay: null },
+  selectedRelation: null,
   mask: {
     enabled: false,
     store: new Map(),
@@ -105,7 +106,34 @@ const dom = {
   metaFps: document.getElementById('meta-fps'),
   categoryFilters: document.getElementById('category-filters'),
   activeRelations: document.getElementById('active-relations'),
+  relationDetailsPanel: document.getElementById('relation-details-panel'),
+  relationDetailsStatus: document.getElementById('relation-details-status'),
+  relationDetailsList: document.getElementById('relation-details-list'),
+  relationDetailsDecision: document.getElementById('relation-details-decision'),
+  relationDetailsLabel: document.getElementById('relation-details-label'),
+  relationDetailsSubjectId: document.getElementById('relation-details-subject-id'),
+  relationDetailsSubjectName: document.getElementById('relation-details-subject-name'),
+  relationDetailsObjectId: document.getElementById('relation-details-object-id'),
+  relationDetailsObjectName: document.getElementById('relation-details-object-name'),
+  relationDetailsExplanation: document.getElementById('relation-details-explanation'),
 };
+
+function setViewportBackground(url) {
+  const viewport = dom.frameViewport;
+  if (!viewport) return;
+  if (url) {
+    if (viewport.dataset.background === url) return;
+    const safeUrl = String(url).replace(/[")\\]/g, '\\$&');
+    viewport.style.backgroundImage = `url("${safeUrl}")`;
+    viewport.style.backgroundSize = 'contain';
+    viewport.style.backgroundRepeat = 'no-repeat';
+    viewport.style.backgroundPosition = 'center';
+    viewport.dataset.background = url;
+  } else {
+    viewport.style.backgroundImage = 'none';
+    delete viewport.dataset.background;
+  }
+}
 
 if (dom.maskPreview) {
   dom.maskPreview.addEventListener('load', () => {
@@ -406,6 +434,34 @@ function restoreMaskPreference() {
 function canonicalCategory(value) {
   if (!value) return 'default';
   return String(value).trim().toLowerCase().replace(/[\s-]+/g, '_');
+}
+
+function normaliseRelationType(value) {
+  if (value === null || value === undefined) return 'default';
+  const str = String(value).trim();
+  return str || 'default';
+}
+
+function makeRelationFingerprint(subjectId, objectId, predicate, relationType) {
+  const subj = subjectId === null || subjectId === undefined ? '' : String(subjectId).trim();
+  const obj = objectId === null || objectId === undefined ? '' : String(objectId).trim();
+  const pred = predicate === null || predicate === undefined ? '' : String(predicate).trim();
+  const type = relationType === null || relationType === undefined ? '' : String(relationType).trim();
+  return `${subj}→${obj}∣${pred}∣${type}`;
+}
+
+function createRelationUid(index, subjectId, objectId, predicate, relationType) {
+  return `${index}#${makeRelationFingerprint(subjectId, objectId, predicate, relationType)}`;
+}
+
+function detectFilteredRun(manifestEntry, rawData) {
+  const relationsUrl = manifestEntry?.relations_url;
+  const modelSlug = manifestEntry?.model_slug;
+  const modelId = manifestEntry?.model_id;
+  const strings = [relationsUrl, modelSlug, modelId].filter((value) => typeof value === 'string');
+  const hasFilteredMarker = strings.some((value) => value.toLowerCase().includes('filtered'));
+  const hasMetadata = Array.isArray(rawData?.relationship_filter_metadata) && rawData.relationship_filter_metadata.length > 0;
+  return Boolean(hasFilteredMarker && hasMetadata);
 }
 
 function getCategoryStorageKey(videoId) {
@@ -1105,6 +1161,7 @@ function hideBothFrames() {
   const b = dom.frameImageB;
   if (a) a.style.opacity = '0';
   if (b) b.style.opacity = '0';
+  setViewportBackground(null);
 }
 
 function displayFrame(url) {
@@ -1116,6 +1173,10 @@ function displayFrame(url) {
   const active = state.activeBuffer || 'A';
   const front = active === 'A' ? a : b;
   const back = active === 'A' ? b : a;
+  const currentSrc = front.dataset?.url || front.currentSrc || front.src;
+  if (currentSrc) {
+    setViewportBackground(currentSrc);
+  }
 
   // If the requested frame is already visible, ensure it's shown and bail
   if (front.dataset.url === url) {
@@ -1133,6 +1194,7 @@ function displayFrame(url) {
     front.style.opacity = '0';
     state.activeBuffer = active === 'A' ? 'B' : 'A';
     state.lastFrameUrl = url;
+    setViewportBackground(url);
   };
 
   ensurePrefetch(url)
@@ -1834,8 +1896,8 @@ function buildMaskLegend() {
     const rawObjectId = mask.objectId;
     const objectId = rawObjectId != null && rawObjectId !== 'null' ? String(rawObjectId) : null;
     const fallbackId = objectId ?? String(idx);
-    const preferredLabel = labels?.[fallbackId] || data.objectLabels?.[fallbackId];
-    const label = preferredLabel || `Object ${fallbackId}`;
+    const descriptor = getObjectDisplayDescriptor(data, fallbackId);
+    const label = descriptor?.displayLabel || labels?.[fallbackId] || `Object ${fallbackId}`;
 
     entry.labelSet.add(label);
 
@@ -1844,7 +1906,7 @@ function buildMaskLegend() {
         entry.objectIds.push(objectId);
       }
       if (!objectLabelMap.has(objectId)) {
-        objectLabelMap.set(objectId, label);
+        objectLabelMap.set(objectId, descriptor?.displayLabel || label);
       }
       if (!objectColorMap.has(objectId)) {
         objectColorMap.set(objectId, color);
@@ -1880,7 +1942,7 @@ function buildMaskLegend() {
     const label = labelsArray.length ? labelsArray.join(', ') : 'Unknown object';
     objectIds.forEach((objectId) => {
       if (!objectLabelMap.has(objectId)) {
-        const fallback = labels?.[objectId] || `Object ${objectId}`;
+        const fallback = getObjectDisplayDescriptor(data, objectId)?.displayLabel || labels?.[objectId] || formatObjectLabel(data, objectId);
         objectLabelMap.set(objectId, labelsArray.length ? labelsArray.join(', ') : fallback);
       }
       if (!objectColorMap.has(objectId)) {
@@ -2068,7 +2130,10 @@ function updateMaskLabelsOverlay() {
 
     const target = choosePosition(displayX, displayY);
 
-    const label = objectLabelMap.get(objectId) || data.objectLabels?.[objectId] || `Object ${objectId}`;
+    const label =
+      objectLabelMap.get(objectId) ||
+      getObjectDisplayDescriptor(data, objectId)?.displayLabel ||
+      formatObjectLabel(data, objectId);
     if (!label) return;
 
     const chip = document.createElement('div');
@@ -2482,6 +2547,53 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     ? rawData.relations
     : [];
 
+  const filteredRun = detectFilteredRun(manifestEntry, rawData);
+  const rawFilterMetadata = Array.isArray(rawData.relationship_filter_metadata)
+    ? rawData.relationship_filter_metadata
+    : [];
+  const filterRecords = [];
+  rawFilterMetadata.forEach((entry, index) => {
+    if (!entry || typeof entry !== 'object') return;
+    const subjectId = entry.subject_id;
+    const objectId = entry.object_id;
+    const predicate = entry.predicate;
+    const decisionRaw = typeof entry.decision === 'string' ? entry.decision.trim() : null;
+    const labelRaw = typeof entry.label === 'string' ? entry.label.trim() : null;
+    const explanationRaw = typeof entry.explanation === 'string' ? entry.explanation.trim() : null;
+    filterRecords.push({
+      index,
+      decision: decisionRaw,
+      label: labelRaw,
+      explanation: explanationRaw,
+      predicate: predicate === null || predicate === undefined ? null : String(predicate),
+      relationType: normaliseRelationType(entry.relation_type),
+      subjectId: subjectId === null || subjectId === undefined ? null : String(subjectId),
+      objectId: objectId === null || objectId === undefined ? null : String(objectId),
+    });
+  });
+
+  const filterBuckets = new Map();
+  if (filterRecords.length) {
+    filterRecords.forEach((record) => {
+      if (!record.predicate || !record.subjectId || !record.objectId) return;
+      if (record.decision === 'drop') return;
+      const effectiveSubject = record.decision === 'flip' ? record.objectId : record.subjectId;
+      const effectiveObject = record.decision === 'flip' ? record.subjectId : record.objectId;
+      const fingerprint = makeRelationFingerprint(
+        effectiveSubject,
+        effectiveObject,
+        record.predicate,
+        record.relationType
+      );
+      const existing = filterBuckets.get(fingerprint);
+      if (existing) {
+        existing.push(record);
+      } else {
+        filterBuckets.set(fingerprint, [record]);
+      }
+    });
+  }
+
   const processed = [];
   const categories = new Set();
   const nodes = new Set();
@@ -2518,9 +2630,11 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     if (!Array.isArray(rel) || rel.length < 4) return;
     const from = String(rel[0]);
     const to = String(rel[1]);
-    const predicate = rel[2];
+    const predicateRaw = rel[2];
+    const predicate = predicateRaw === null || predicateRaw === undefined ? '' : String(predicateRaw);
     const intervalsRaw = rel[3];
     const categoryRaw = rel[4];
+    const relationType = normaliseRelationType(categoryRaw);
     const category = canonicalCategory(categoryRaw);
 
     nodes.add(from);
@@ -2540,14 +2654,15 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
       : [];
 
     processed.push({
+      uid: createRelationUid(index, from, to, predicate, relationType),
       index,
       from,
-      fromLabel: labelMap.get(from) || `Object ${from}`,
       to,
-      toLabel: labelMap.get(to) || `Object ${to}`,
       predicate,
+      relationType,
       intervals,
       category,
+      filterMeta: null,
     });
   });
 
@@ -2555,12 +2670,103 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     categories.add('default');
   }
 
-  const nodeArray = Array.from(nodes)
-    .sort((a, b) => Number(a) - Number(b))
-    .map((id) => ({
+  const sortNodeIds = (a, b) => {
+    const aNum = Number(a);
+    const bNum = Number(b);
+    const aIsFinite = Number.isFinite(aNum);
+    const bIsFinite = Number.isFinite(bNum);
+    if (aIsFinite && bIsFinite) {
+      return aNum - bNum;
+    }
+    if (aIsFinite) return -1;
+    if (bIsFinite) return 1;
+    return String(a).localeCompare(String(b), undefined, { numeric: true, sensitivity: 'base' });
+  };
+
+  const descriptorMap = new Map();
+  const sortedNodeIds = Array.from(nodes).sort(sortNodeIds);
+  const nodeArray = sortedNodeIds.map((id, index) => {
+    const ordinal = index + 1;
+    const rawLabel = labelMap.get(id) || null;
+    const objectLabel = `Object ${ordinal}`;
+    const idSuffix = String(ordinal) === String(id) ? '' : ` (ID ${id})`;
+    const combinedLabel = `${objectLabel}${idSuffix}`;
+    const displayLabel = rawLabel ? `${combinedLabel} - ${rawLabel}` : combinedLabel;
+    const shortLabel = `#${ordinal}`;
+    const tooltipParts = [];
+    if (rawLabel) {
+      tooltipParts.push(rawLabel);
+    }
+    tooltipParts.push(`ID ${id}`);
+    const tooltip = tooltipParts.join(' | ');
+    const idLabel = rawLabel ? `${id}: ${rawLabel}` : `${id}: ${objectLabel}`;
+    const descriptor = {
       id,
-      label: labelMap.get(id) || `Object ${id}`,
-    }));
+      ordinal,
+      rawLabel,
+      objectLabel,
+      combinedLabel,
+      displayLabel,
+      shortLabel,
+      tooltip,
+      idLabel,
+    };
+    descriptorMap.set(id, descriptor);
+    return {
+      id,
+      ordinal,
+      label: filteredRun ? idLabel : shortLabel,
+      title: displayLabel,
+      displayLabel,
+      combinedLabel,
+      rawLabel,
+      tooltip,
+      idLabel,
+    };
+  });
+
+  if (filterRecords.length) {
+    const describeId = (id) => {
+      if (!id) {
+        return { name: null, idLabel: null };
+      }
+      const descriptor = descriptorMap.get(id);
+      const fallback = `Object ${id}`;
+      const name = descriptor?.rawLabel || descriptor?.combinedLabel || fallback;
+      const idLabel = descriptor?.idLabel || `${id}: ${name}`;
+      return { name, idLabel };
+    };
+    filterRecords.forEach((record) => {
+      const subjectInfo = describeId(record.subjectId);
+      const objectInfo = describeId(record.objectId);
+      record.subjectName = subjectInfo.name;
+      record.objectName = objectInfo.name;
+      record.subjectDisplay = subjectInfo.idLabel;
+      record.objectDisplay = objectInfo.idLabel;
+    });
+  }
+
+  const relationsById = new Map();
+  processed.forEach((entry) => {
+    const fromInfo = descriptorMap.get(entry.from);
+    const toInfo = descriptorMap.get(entry.to);
+    entry.fromOrdinal = fromInfo?.ordinal ?? null;
+    entry.toOrdinal = toInfo?.ordinal ?? null;
+    entry.fromLabel = fromInfo?.displayLabel || fromInfo?.combinedLabel || `Object ${entry.from}`;
+    entry.toLabel = toInfo?.displayLabel || toInfo?.combinedLabel || `Object ${entry.to}`;
+    entry.fromShortLabel = fromInfo?.shortLabel || entry.from;
+    entry.toShortLabel = toInfo?.shortLabel || entry.to;
+    entry.fromCombinedLabel = fromInfo?.combinedLabel || entry.fromLabel;
+    entry.toCombinedLabel = toInfo?.combinedLabel || entry.toLabel;
+    if (filterRecords.length) {
+      const fingerprint = makeRelationFingerprint(entry.from, entry.to, entry.predicate, entry.relationType);
+      const bucket = filterBuckets.get(fingerprint);
+      if (bucket && bucket.length) {
+        entry.filterMeta = bucket.shift();
+      }
+    }
+    relationsById.set(entry.uid, entry);
+  });
 
   const centroidInfo = normaliseCentroidPayload(centroidsPayload, nodeArray);
   if (centroidInfo.maxFrame != null) {
@@ -2591,6 +2797,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     relations: processed,
     categories: Array.from(categories).sort(),
     nodes: nodeArray,
+    objectDisplay: Object.fromEntries(descriptorMap),
     maxFrame,
     sliderMax: Math.max(maxFrame, Number.isFinite(frameCount) ? frameCount - 1 : maxFrame),
     description: rawData.description || 'No description provided.',
@@ -2608,7 +2815,75 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     centroidBounds: centroidInfo.bounds,
     fpsValue,
     baseVideoId,
+    isFiltered: filteredRun,
+    filterEvaluationCount: filterRecords.length,
+    relationMap: relationsById,
   };
+}
+
+function getObjectDisplayDescriptor(data, objectId) {
+  if (!data || objectId == null) return null;
+  const key = String(objectId);
+  const fromMap = data.objectDisplay;
+  if (fromMap && Object.prototype.hasOwnProperty.call(fromMap, key)) {
+    return fromMap[key];
+  }
+
+  const nodes = Array.isArray(data.nodes) ? data.nodes : [];
+  const node = nodes.find((entry) => String(entry.id) === key) || null;
+  const ordinalCandidate = Number(node?.ordinal);
+  const ordinal = Number.isFinite(ordinalCandidate) && ordinalCandidate > 0 ? ordinalCandidate : null;
+  const rawLabel = data.objectLabels?.[key] || null;
+  const baseLabel = ordinal != null ? `Object ${ordinal}` : `Object ${key}`;
+  const needsIdSuffix = ordinal != null ? key !== String(ordinal) : true;
+  const combinedLabel = needsIdSuffix ? `${baseLabel} (ID ${key})` : baseLabel;
+  const displayLabel = rawLabel ? `${combinedLabel} - ${rawLabel}` : combinedLabel;
+  const shortLabel = ordinal != null ? `#${ordinal}` : key;
+  const tooltipParts = [];
+  if (rawLabel) {
+    tooltipParts.push(rawLabel);
+  }
+  tooltipParts.push(`ID ${key}`);
+  const tooltip = tooltipParts.join(' | ');
+  return {
+    id: key,
+    ordinal,
+    rawLabel,
+    objectLabel: baseLabel,
+    combinedLabel,
+    displayLabel,
+    shortLabel,
+    tooltip,
+    idLabel: rawLabel ? `${key}: ${rawLabel}` : `${key}: ${baseLabel}`,
+  };
+}
+
+function formatObjectLabel(data, objectId, variant = 'display') {
+  const descriptor = getObjectDisplayDescriptor(data, objectId);
+  if (!descriptor) {
+    const key = String(objectId);
+    if (variant === 'short') {
+      return key;
+    }
+    if (variant === 'tooltip') {
+      return `ID ${key}`;
+    }
+    if (variant === 'combined') {
+      return `Object ${key}`;
+    }
+    return `Object ${key}`;
+  }
+
+  if (variant === 'short') {
+    return descriptor.shortLabel || descriptor.combinedLabel || `Object ${descriptor.id}`;
+  }
+  if (variant === 'combined') {
+    return descriptor.combinedLabel || descriptor.displayLabel || `Object ${descriptor.id}`;
+  }
+  if (variant === 'tooltip') {
+    return descriptor.tooltip || descriptor.displayLabel || descriptor.combinedLabel || `ID ${descriptor.id}`;
+  }
+  return descriptor.displayLabel || descriptor.combinedLabel || `Object ${descriptor.id}`;
 }
 
 function destroyNetwork() {
@@ -2975,6 +3250,7 @@ function updateNodePositions(activeNodeIds) {
 
 function updateNetwork() {
   if (!state.edgesDataset) return;
+  const data = state.currentVideoData;
   const active = getActiveRelations();
 
   const activeNodeIds = new Set();
@@ -2995,7 +3271,7 @@ function updateNetwork() {
         pairs.set(key, {
           self: true,
           node: rel.from,
-          nodeLabel: rel.fromLabel || `Object ${rel.from}`,
+          nodeLabel: rel.fromLabel || formatObjectLabel(data, rel.from),
           relations: [],
         });
       }
@@ -3020,10 +3296,9 @@ function updateNetwork() {
         reverse: [],
       });
     }
-
     const entry = pairs.get(key);
-    const fromLabel = rel.fromLabel || `Object ${rel.from}`;
-    const toLabel = rel.toLabel || `Object ${rel.to}`;
+    const fromLabel = rel.fromLabel || formatObjectLabel(data, rel.from);
+    const toLabel = rel.toLabel || formatObjectLabel(data, rel.to);
 
     if (!entry.nodeALabel) {
       if (rel.from === entry.nodeA) {
@@ -3060,7 +3335,7 @@ function updateNetwork() {
     const lines = [];
 
     if (entry.self) {
-      const label = entry.nodeLabel || `Object ${entry.node}`;
+      const label = entry.nodeLabel || formatObjectLabel(data, entry.node);
       lines.push(`${label} -> ${label}:`);
       entry.relations.forEach((rel) => {
         const predicate = rel.predicate ? String(rel.predicate) : '—';
@@ -3085,8 +3360,8 @@ function updateNetwork() {
       };
     }
 
-    const labelA = entry.nodeALabel || `Object ${entry.nodeA}`;
-    const labelB = entry.nodeBLabel || `Object ${entry.nodeB}`;
+    const labelA = entry.nodeALabel || formatObjectLabel(data, entry.nodeA);
+    const labelB = entry.nodeBLabel || formatObjectLabel(data, entry.nodeB);
 
     if (entry.forward.length) {
       lines.push(`${labelA} -> ${labelB}:`);
@@ -3146,13 +3421,192 @@ function updateNetwork() {
   updateNodePositions(activeNodeIds);
 }
 
+function getRelationById(relationId) {
+  if (!relationId) return null;
+  const data = state.currentVideoData;
+  if (!data) return null;
+  const id = String(relationId);
+  if (data.relationMap instanceof Map && data.relationMap.size > 0) {
+    const fromMap = data.relationMap.get(id);
+    if (fromMap) return fromMap;
+  }
+  const relations = Array.isArray(data.relations) ? data.relations : [];
+  return relations.find((entry) => entry.uid === id) || null;
+}
+
+function setSelectedRelationId(relationId, options = {}) {
+  const { focus = false } = options;
+  const data = state.currentVideoData;
+  if (!data || !data.isFiltered) {
+    if (state.selectedRelation) {
+      state.selectedRelation = null;
+      renderRelationDetails();
+    }
+    return;
+  }
+  if (!relationId) {
+    if (state.selectedRelation) {
+      state.selectedRelation = null;
+      renderActiveRelations();
+    }
+    return;
+  }
+  const relation = getRelationById(relationId);
+  if (!relation) {
+    if (state.selectedRelation) {
+      state.selectedRelation = null;
+      renderActiveRelations();
+    }
+    return;
+  }
+  let shouldFocus = false;
+  if (state.selectedRelation?.id === relation.uid) {
+    state.selectedRelation = null;
+  } else {
+    state.selectedRelation = {
+      id: relation.uid,
+      relation,
+      meta: relation.filterMeta || null,
+    };
+    shouldFocus = focus;
+  }
+  renderActiveRelations();
+  if (shouldFocus && typeof window !== 'undefined') {
+    scheduleMicrotask(() => {
+      const selector = `[data-rel-id="${relation.uid}"]`;
+      const element = dom.activeRelations?.querySelector(selector);
+      if (element && typeof element.focus === 'function') {
+        element.focus();
+      }
+    });
+  }
+}
+
+function renderRelationDetails() {
+  const panel = dom.relationDetailsPanel;
+  const status = dom.relationDetailsStatus;
+  const list = dom.relationDetailsList;
+  const explanationEl = dom.relationDetailsExplanation;
+  const data = state.currentVideoData;
+
+  if (!panel) return;
+
+  if (!data || !data.isFiltered) {
+    panel.hidden = true;
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'Filter metadata is available only for filtered runs.';
+    }
+    if (list) {
+      list.hidden = true;
+    }
+    if (explanationEl) {
+      explanationEl.textContent = '';
+      explanationEl.hidden = true;
+    }
+    return;
+  }
+
+  panel.hidden = false;
+  const hasEvaluations =
+    (Number.isFinite(data.filterEvaluationCount) ? data.filterEvaluationCount > 0 : false) ||
+    (Array.isArray(data.relations) && data.relations.some((entry) => entry.filterMeta));
+
+  if (!hasEvaluations) {
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'No filter metadata found for this run.';
+    }
+    if (list) {
+      list.hidden = true;
+    }
+    if (explanationEl) {
+      explanationEl.textContent = '';
+      explanationEl.hidden = true;
+    }
+    return;
+  }
+
+  const selection = state.selectedRelation;
+  if (!selection) {
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'Select a relationship to view filter reasoning.';
+    }
+    if (list) {
+      list.hidden = true;
+    }
+    if (explanationEl) {
+      explanationEl.textContent = '';
+      explanationEl.hidden = true;
+    }
+    return;
+  }
+
+  const meta = selection.meta;
+  if (!meta) {
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'Filter metadata is not available for the selected relationship.';
+    }
+    if (list) {
+      list.hidden = true;
+    }
+    if (explanationEl) {
+      explanationEl.textContent = '';
+      explanationEl.hidden = true;
+    }
+    return;
+  }
+
+  if (status) {
+    status.hidden = true;
+  }
+  if (list) {
+    list.hidden = false;
+  }
+
+  const subjectId = meta.subjectId || meta.subject_id || null;
+  const objectId = meta.objectId || meta.object_id || null;
+  const subjectName = meta.subjectName || meta.subject_name || (subjectId ? `Object ${subjectId}` : null);
+  const objectName = meta.objectName || meta.object_name || (objectId ? `Object ${objectId}` : null);
+
+  if (dom.relationDetailsDecision) {
+    dom.relationDetailsDecision.textContent = meta.decision || '—';
+  }
+  if (dom.relationDetailsLabel) {
+    dom.relationDetailsLabel.textContent = meta.label || '—';
+  }
+  if (dom.relationDetailsSubjectId) {
+    dom.relationDetailsSubjectId.textContent = subjectId || '—';
+  }
+  if (dom.relationDetailsSubjectName) {
+    dom.relationDetailsSubjectName.textContent = subjectName || '—';
+  }
+  if (dom.relationDetailsObjectId) {
+    dom.relationDetailsObjectId.textContent = objectId || '—';
+  }
+  if (dom.relationDetailsObjectName) {
+    dom.relationDetailsObjectName.textContent = objectName || '—';
+  }
+  if (explanationEl) {
+    explanationEl.hidden = false;
+    explanationEl.textContent = meta.explanation || '—';
+  }
+}
+
 function renderActiveRelations() {
   const container = dom.activeRelations;
   const active = getActiveRelations();
+  const data = state.currentVideoData;
   if (!active.length) {
     container.innerHTML = '<p class="empty-state">No active relationships for this frame and category selection.</p>';
+    renderRelationDetails();
     return;
   }
+
+  const selectedId = state.selectedRelation?.id || null;
+  const isFiltered = Boolean(data?.isFiltered);
 
   const html = active
     .map((rel) => {
@@ -3161,11 +3615,23 @@ function renderActiveRelations() {
       const ranges = rel.intervals
         .map(([start, end]) => `frames ${start}–${end}`)
         .join(', ');
-      const from = rel.fromLabel || `Object ${rel.from}`;
-      const to = rel.toLabel || `Object ${rel.to}`;
+      const from = rel.fromLabel || formatObjectLabel(data, rel.from);
+      const to = rel.toLabel || formatObjectLabel(data, rel.to);
       const predicateColor = style.edge || style.text || 'var(--text)';
+      const isSelected = rel.uid === selectedId;
+      const hasMeta = Boolean(rel.filterMeta);
+      const interactiveAttrs = isFiltered
+        ? ` role="button" tabindex="0" aria-pressed="${isSelected ? 'true' : 'false'}"`
+        : '';
+      const classes = [
+        'relation-item',
+        isSelected ? 'relation-item--selected' : '',
+        isFiltered && !hasMeta ? 'relation-item--disabled' : '',
+      ]
+        .filter(Boolean)
+        .join(' ');
       return `
-        <div class="relation-item" data-category="${rel.category}">
+        <div class="${classes}" data-category="${rel.category}" data-rel-id="${rel.uid}" data-has-meta="${hasMeta ? 'true' : 'false'}"${interactiveAttrs}>
           <div class="relation-item__header">
             <span class="relation-item__label">
               <span class="relation-item__category" style="background:${style.background};color:${style.text}">${catLabel}</span>
@@ -3179,6 +3645,34 @@ function renderActiveRelations() {
     })
     .join('');
   container.innerHTML = html;
+  renderRelationDetails();
+}
+
+function getRelationItemFromTarget(target) {
+  if (!target || !(target instanceof Element)) return null;
+  return target.closest('.relation-item');
+}
+
+function handleRelationListClick(event) {
+  if (!state.currentVideoData?.isFiltered) return;
+  const item = getRelationItemFromTarget(event.target);
+  if (!item) return;
+  const relationId = item.dataset.relId;
+  if (!relationId) return;
+  event.preventDefault();
+  setSelectedRelationId(relationId);
+}
+
+function handleRelationListKeydown(event) {
+  if (!state.currentVideoData?.isFiltered) return;
+  const key = event.key;
+  if (key !== 'Enter' && key !== ' ' && key !== 'Spacebar') return;
+  const item = getRelationItemFromTarget(event.target);
+  if (!item) return;
+  const relationId = item.dataset.relId;
+  if (!relationId) return;
+  event.preventDefault();
+  setSelectedRelationId(relationId, { focus: true });
 }
 
 function renderFrameDisplay() {
@@ -3479,6 +3973,8 @@ async function loadVideo(videoId, options = {}) {
 
   state.currentVideoId = videoId;
   state.currentVideoData = cached;
+  state.selectedRelation = null;
+  renderRelationDetails();
 
   const restoredCategories = restoreCategorySelection(videoId, cached.categories);
   let categorySelection = restoredCategories;
@@ -3616,6 +4112,11 @@ function initialiseEventHandlers() {
     const value = Number.isFinite(parsed) && parsed > 0 ? parsed : 1;
     setPlaybackSpeed(value, { updateSelect: false, restartTimer: true, sync: true });
   });
+
+  if (dom.activeRelations) {
+    dom.activeRelations.addEventListener('click', handleRelationListClick);
+    dom.activeRelations.addEventListener('keydown', handleRelationListKeydown);
+  }
 
   if (dom.renderRate) {
     // Initialize from current select value
