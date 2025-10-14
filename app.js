@@ -3750,15 +3750,6 @@ function setSelectedRelationId(relationId, options = {}) {
       }
     });
   }
-  if (scrollIntoView && typeof window !== 'undefined' && state.selectedRelation?.id && dom.activeRelations) {
-    scheduleMicrotask(() => {
-      const selector = `[data-rel-id="${state.selectedRelation.id}"]`;
-      const card = dom.activeRelations.querySelector(selector);
-      if (card && typeof card.scrollIntoView === 'function') {
-        card.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-      }
-    });
-  }
 }
 
 function renderRelationDetails() {
@@ -3934,7 +3925,7 @@ function renderRelationDetails() {
 
     if (selectedRowElement && tableWrapper && state.tableFocusPending) {
       scheduleMicrotask(() => {
-        if (tableWrapper.contains(selectedRowElement) && typeof selectedRowElement.scrollIntoView === 'function') {
+        if (tableWrapper.contains(selectedRowElement)) {
           if (typeof selectedRowElement.focus === 'function') {
             try {
               selectedRowElement.focus({ preventScroll: true });
@@ -3942,7 +3933,6 @@ function renderRelationDetails() {
               selectedRowElement.focus();
             }
           }
-          selectedRowElement.scrollIntoView({ block: 'nearest', inline: 'nearest' });
         }
         state.tableFocusPending = false;
       });
