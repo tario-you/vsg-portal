@@ -2740,18 +2740,24 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   const nodeArray = sortedNodeIds.map((id, index) => {
     const ordinal = index + 1;
     const rawLabel = labelMap.get(id) || null;
-    const objectLabel = `Object ${ordinal}`;
-    const idSuffix = String(ordinal) === String(id) ? '' : ` (ID ${id})`;
-    const combinedLabel = `${objectLabel}${idSuffix}`;
-    const displayLabel = rawLabel ? `${combinedLabel} - ${rawLabel}` : combinedLabel;
-    const shortLabel = `#${ordinal}`;
+    const ordinalSuffix = Number.isFinite(ordinal) ? ordinal : Number.isFinite(Number(id)) ? Number(id) : id;
+    const safeSuffix = ordinalSuffix != null ? ordinalSuffix : id;
+    const baseName = rawLabel && rawLabel.trim() ? rawLabel.trim() : null;
+    const compactBase = baseName ? baseName.replace(/\s+/g, '') || baseName : 'Object';
+    const compactLabel = `${compactBase}${safeSuffix}`;
+    const displayLabel = baseName ? `${baseName} (ID ${id})` : `Object ${safeSuffix} (ID ${id})`;
+    const combinedLabel = displayLabel;
+    const objectLabel = baseName ? baseName : `Object ${safeSuffix}`;
+    const shortLabel = compactLabel;
+    const idLabel = compactLabel;
     const tooltipParts = [];
-    if (rawLabel) {
-      tooltipParts.push(rawLabel);
+    if (baseName) {
+      tooltipParts.push(baseName);
+    } else {
+      tooltipParts.push(`Object ${safeSuffix}`);
     }
     tooltipParts.push(`ID ${id}`);
     const tooltip = tooltipParts.join(' | ');
-    const idLabel = rawLabel ? `${id}: ${rawLabel}` : `${id}: ${objectLabel}`;
     const descriptor = {
       id,
       ordinal,
@@ -2760,6 +2766,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
       combinedLabel,
       displayLabel,
       shortLabel,
+      compactLabel,
       tooltip,
       idLabel,
     };
@@ -2767,26 +2774,44 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     return {
       id,
       ordinal,
-      label: isFilterDataset ? idLabel : shortLabel,
+      label: compactLabel,
       title: displayLabel,
       displayLabel,
       combinedLabel,
       rawLabel,
       tooltip,
       idLabel,
+      compactLabel,
     };
   });
+
+  const getCompactLabel = (id) => {
+    const key = String(id);
+    const descriptor = descriptorMap.get(key);
+    if (descriptor?.compactLabel) return descriptor.compactLabel;
+    const numeric = Number.isFinite(Number(key)) ? Number(key) : key;
+    return `Object${numeric}`;
+  };
+
+  const getDisplayLabel = (id) => {
+    const key = String(id);
+    const descriptor = descriptorMap.get(key);
+    if (descriptor?.displayLabel) return descriptor.displayLabel;
+    const numeric = Number.isFinite(Number(key)) ? Number(key) : key;
+    return `Object ${numeric}`;
+  };
 
   if (filterRecords.length) {
     const describeId = (id) => {
       if (!id) {
-        return { name: null, idLabel: null };
+        return { name: null, idLabel: null, compact: null };
       }
       const descriptor = descriptorMap.get(id);
-      const fallback = `Object ${id}`;
-      const name = descriptor?.rawLabel || descriptor?.combinedLabel || fallback;
-      const idLabel = descriptor?.idLabel || `${id}: ${name}`;
-      return { name, idLabel };
+      const fallbackName = `Object ${id}`;
+      const name = descriptor?.displayLabel || descriptor?.combinedLabel || fallbackName;
+      const compact = descriptor?.compactLabel || getCompactLabel(id);
+      const idLabel = descriptor?.idLabel || compact || `${id}`;
+      return { name, idLabel, compact };
     };
     filterRecords.forEach((record) => {
       const subjectInfo = describeId(record.subjectId);
@@ -2795,6 +2820,8 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
       record.objectName = objectInfo.name;
       record.subjectDisplay = subjectInfo.idLabel;
       record.objectDisplay = objectInfo.idLabel;
+      record.subjectCompact = subjectInfo.compact;
+      record.objectCompact = objectInfo.compact;
     });
   }
 
@@ -2804,12 +2831,12 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     const toInfo = descriptorMap.get(entry.to);
     entry.fromOrdinal = fromInfo?.ordinal ?? null;
     entry.toOrdinal = toInfo?.ordinal ?? null;
-    entry.fromLabel = fromInfo?.displayLabel || fromInfo?.combinedLabel || `Object ${entry.from}`;
-    entry.toLabel = toInfo?.displayLabel || toInfo?.combinedLabel || `Object ${entry.to}`;
-    entry.fromShortLabel = fromInfo?.shortLabel || entry.from;
-    entry.toShortLabel = toInfo?.shortLabel || entry.to;
-    entry.fromCombinedLabel = fromInfo?.combinedLabel || entry.fromLabel;
-    entry.toCombinedLabel = toInfo?.combinedLabel || entry.toLabel;
+    entry.fromLabel = fromInfo?.compactLabel || getCompactLabel(entry.from);
+    entry.toLabel = toInfo?.compactLabel || getCompactLabel(entry.to);
+    entry.fromShortLabel = fromInfo?.compactLabel || entry.fromLabel;
+    entry.toShortLabel = toInfo?.compactLabel || entry.toLabel;
+    entry.fromCombinedLabel = fromInfo?.displayLabel || getDisplayLabel(entry.from);
+    entry.toCombinedLabel = toInfo?.displayLabel || getDisplayLabel(entry.to);
     if (filterRecords.length) {
       const fingerprint = makeRelationFingerprint(entry.from, entry.to, entry.predicate, entry.relationType);
       const bucket = filterBuckets.get(fingerprint);
@@ -2819,6 +2846,8 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     }
     relationsById.set(entry.uid, entry);
   });
+
+  const descriptorObject = Object.fromEntries(descriptorMap);
 
   const centroidInfo = normaliseCentroidPayload(centroidsPayload, nodeArray);
   if (centroidInfo.maxFrame != null) {
@@ -2849,7 +2878,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     relations: processed,
     categories: Array.from(categories).sort(),
     nodes: nodeArray,
-    objectDisplay: Object.fromEntries(descriptorMap),
+    objectDisplay: descriptorObject,
     maxFrame,
     sliderMax: Math.max(maxFrame, Number.isFinite(frameCount) ? frameCount - 1 : maxFrame),
     description: rawData.description || 'No description provided.',
@@ -2869,7 +2898,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     baseVideoId,
     isFiltered: isFilterDataset,
     filterDatasetKind: filterConfig.datasetKind,
-    includeDroppedDecisions,
+    includeDroppedDecisions: includeDropDecisions,
     filterEvaluationCount: filterRecords.length,
     relationMap: relationsById,
   };
@@ -2888,14 +2917,19 @@ function getObjectDisplayDescriptor(data, objectId) {
   const ordinalCandidate = Number(node?.ordinal);
   const ordinal = Number.isFinite(ordinalCandidate) && ordinalCandidate > 0 ? ordinalCandidate : null;
   const rawLabel = data.objectLabels?.[key] || null;
-  const baseLabel = ordinal != null ? `Object ${ordinal}` : `Object ${key}`;
-  const needsIdSuffix = ordinal != null ? key !== String(ordinal) : true;
-  const combinedLabel = needsIdSuffix ? `${baseLabel} (ID ${key})` : baseLabel;
-  const displayLabel = rawLabel ? `${combinedLabel} - ${rawLabel}` : combinedLabel;
-  const shortLabel = ordinal != null ? `#${ordinal}` : key;
+  const suffix = Number.isFinite(ordinalCandidate) && ordinalCandidate > 0 ? ordinalCandidate : Number.isFinite(Number(key)) ? Number(key) : key;
+  const baseName = rawLabel && rawLabel.trim() ? rawLabel.trim() : null;
+  const compactBase = baseName ? baseName.replace(/\s+/g, '') || baseName : 'Object';
+  const compactLabel = `${compactBase}${suffix}`;
+  const objectLabel = baseName ? `${baseName}` : `Object ${suffix}`;
+  const displayLabel = baseName ? `${baseName} (ID ${key})` : `Object ${suffix} (ID ${key})`;
+  const combinedLabel = displayLabel;
+  const shortLabel = compactLabel;
   const tooltipParts = [];
-  if (rawLabel) {
-    tooltipParts.push(rawLabel);
+  if (baseName) {
+    tooltipParts.push(baseName);
+  } else {
+    tooltipParts.push(`Object ${suffix}`);
   }
   tooltipParts.push(`ID ${key}`);
   const tooltip = tooltipParts.join(' | ');
@@ -2903,12 +2937,13 @@ function getObjectDisplayDescriptor(data, objectId) {
     id: key,
     ordinal,
     rawLabel,
-    objectLabel: baseLabel,
+    objectLabel,
     combinedLabel,
     displayLabel,
     shortLabel,
+    compactLabel,
     tooltip,
-    idLabel: rawLabel ? `${key}: ${rawLabel}` : `${key}: ${baseLabel}`,
+    idLabel: compactLabel,
   };
 }
 
@@ -2916,6 +2951,9 @@ function formatObjectLabel(data, objectId, variant = 'display') {
   const descriptor = getObjectDisplayDescriptor(data, objectId);
   if (!descriptor) {
     const key = String(objectId);
+    if (variant === 'compact' || variant === 'short') {
+      return Number.isFinite(Number(key)) ? `Object${Number(key)}` : `Object${key}`;
+    }
     if (variant === 'short') {
       return key;
     }
@@ -2928,8 +2966,11 @@ function formatObjectLabel(data, objectId, variant = 'display') {
     return `Object ${key}`;
   }
 
+  if (variant === 'compact') {
+    return descriptor.compactLabel || descriptor.shortLabel || descriptor.idLabel || descriptor.displayLabel || `Object ${descriptor.id}`;
+  }
   if (variant === 'short') {
-    return descriptor.shortLabel || descriptor.combinedLabel || `Object ${descriptor.id}`;
+    return descriptor.shortLabel || descriptor.compactLabel || descriptor.idLabel || `Object ${descriptor.id}`;
   }
   if (variant === 'combined') {
     return descriptor.combinedLabel || descriptor.displayLabel || `Object ${descriptor.id}`;
@@ -3325,7 +3366,7 @@ function updateNetwork() {
         pairs.set(key, {
           self: true,
           node: rel.from,
-          nodeLabel: rel.fromLabel || formatObjectLabel(data, rel.from),
+          nodeLabel: rel.fromLabel || formatObjectLabel(data, rel.from, 'compact'),
           relations: [],
         });
       }
@@ -3351,8 +3392,8 @@ function updateNetwork() {
       });
     }
     const entry = pairs.get(key);
-    const fromLabel = rel.fromLabel || formatObjectLabel(data, rel.from);
-    const toLabel = rel.toLabel || formatObjectLabel(data, rel.to);
+    const fromLabel = rel.fromLabel || formatObjectLabel(data, rel.from, 'compact');
+    const toLabel = rel.toLabel || formatObjectLabel(data, rel.to, 'compact');
 
     if (!entry.nodeALabel) {
       if (rel.from === entry.nodeA) {
@@ -3389,7 +3430,7 @@ function updateNetwork() {
     const lines = [];
 
     if (entry.self) {
-      const label = entry.nodeLabel || formatObjectLabel(data, entry.node);
+      const label = entry.nodeLabel || formatObjectLabel(data, entry.node, 'compact');
       lines.push(`${label} -> ${label}:`);
       entry.relations.forEach((rel) => {
         const predicate = rel.predicate ? String(rel.predicate) : '—';
@@ -3414,8 +3455,8 @@ function updateNetwork() {
       };
     }
 
-    const labelA = entry.nodeALabel || formatObjectLabel(data, entry.nodeA);
-    const labelB = entry.nodeBLabel || formatObjectLabel(data, entry.nodeB);
+    const labelA = entry.nodeALabel || formatObjectLabel(data, entry.nodeA, 'compact');
+    const labelB = entry.nodeBLabel || formatObjectLabel(data, entry.nodeB, 'compact');
 
     if (entry.forward.length) {
       lines.push(`${labelA} -> ${labelB}:`);
@@ -3670,16 +3711,22 @@ function renderRelationDetails() {
 
   const subjectId = meta.subjectId || meta.subject_id || null;
   const objectId = meta.objectId || meta.object_id || null;
-  const subjectName =
+  const fallbackSubjectCompact = subjectId != null ? formatObjectLabel(data, subjectId, 'compact') : null;
+  const fallbackObjectCompact = objectId != null ? formatObjectLabel(data, objectId, 'compact') : null;
+  const subjectCompact =
+    meta.subjectCompact ||
     meta.subjectDisplay ||
     meta.subjectName ||
     meta.subject_name ||
-    (subjectId ? `Object ${subjectId}` : null);
-  const objectName =
+    fallbackSubjectCompact;
+  const objectCompact =
+    meta.objectCompact ||
     meta.objectDisplay ||
     meta.objectName ||
     meta.object_name ||
-    (objectId ? `Object ${objectId}` : null);
+    fallbackObjectCompact;
+  const subjectName = subjectCompact || fallbackSubjectCompact || (subjectId ? `Object ${subjectId}` : null);
+  const objectName = objectCompact || fallbackObjectCompact || (objectId ? `Object ${objectId}` : null);
 
   if (dom.relationDetailsDecision) {
     dom.relationDetailsDecision.textContent = meta.decision || '—';
@@ -3735,8 +3782,8 @@ function renderActiveRelations() {
       const ranges = rel.intervals
         .map(([start, end]) => `frames ${start}–${end}`)
         .join(', ');
-      const from = rel.fromLabel || formatObjectLabel(data, rel.from);
-      const to = rel.toLabel || formatObjectLabel(data, rel.to);
+      const from = rel.fromLabel || formatObjectLabel(data, rel.from, 'compact');
+      const to = rel.toLabel || formatObjectLabel(data, rel.to, 'compact');
       const predicateColor = style.edge || style.text || 'var(--text)';
       const isSelected = rel.uid === selectedId;
       const hasMeta = Boolean(rel.filterMeta);
@@ -3758,7 +3805,7 @@ function renderActiveRelations() {
               <span class="relation-item__predicate" style="color:${predicateColor}">${rel.predicate}</span>
             </span>
           </div>
-          <div class="relation-item__entities">${from} → ${to}</div>
+          <div class="relation-item__entities">${from} -> ${to}</div>
           <div class="relation-item__time">${ranges}</div>
         </div>
       `;
