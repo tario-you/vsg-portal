@@ -454,14 +454,64 @@ function createRelationUid(index, subjectId, objectId, predicate, relationType) 
   return `rel-${index}`;
 }
 
+function debugRelationEvent(event, payload) {
+  try {
+    console.debug(`[RelationDebug] ${event}`, payload);
+  } catch (error) {
+    // Ignore logging failures
+  }
+}
+
 function detectFilteredRun(manifestEntry, rawData) {
   const relationsUrl = manifestEntry?.relations_url;
   const modelSlug = manifestEntry?.model_slug;
   const modelId = manifestEntry?.model_id;
   const strings = [relationsUrl, modelSlug, modelId].filter((value) => typeof value === 'string');
-  const hasFilteredMarker = strings.some((value) => value.toLowerCase().includes('filtered'));
-  const hasMetadata = Array.isArray(rawData?.relationship_filter_metadata) && rawData.relationship_filter_metadata.length > 0;
-  return Boolean(hasFilteredMarker && hasMetadata);
+  const lowered = strings.map((value) => value.toLowerCase());
+  const hasMetadata =
+    Array.isArray(rawData?.relationship_filter_metadata) && rawData.relationship_filter_metadata.length > 0;
+  if (!hasMetadata) {
+    return {
+      enabled: false,
+      includeDropped: false,
+      datasetKind: null,
+    };
+  }
+
+  const includesFilteredToken = lowered.some((value) =>
+    ['filtered', 'new-sav', 'flipped', 'dropped', 'drop'].some((token) => value.includes(token))
+  );
+
+  if (!includesFilteredToken) {
+    return {
+      enabled: false,
+      includeDropped: false,
+      datasetKind: null,
+    };
+  }
+
+  const includesDropped = lowered.some((value) =>
+    ['dropped', 'dropnontrivial', 'drop_only', 'drop-only', 'drop'].some((token) => value.includes(token))
+  );
+  const includesFlipped = lowered.some((value) => value.includes('flipped'));
+  const includesFiltered = lowered.some((value) => value.includes('filtered'));
+
+  let datasetKind = null;
+  if (includesDropped) {
+    datasetKind = 'dropped';
+  } else if (includesFlipped) {
+    datasetKind = 'flipped';
+  } else if (includesFiltered) {
+    datasetKind = 'filtered';
+  } else {
+    datasetKind = 'enriched';
+  }
+
+  return {
+    enabled: true,
+    includeDropped: includesDropped,
+    datasetKind,
+  };
 }
 
 function getCategoryStorageKey(videoId) {
@@ -2547,7 +2597,9 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     ? rawData.relations
     : [];
 
-  const filteredRun = detectFilteredRun(manifestEntry, rawData);
+  const filterConfig = detectFilteredRun(manifestEntry, rawData);
+  const isFilterDataset = filterConfig.enabled;
+  const includeDropDecisions = filterConfig.includeDropped;
   const rawFilterMetadata = Array.isArray(rawData.relationship_filter_metadata)
     ? rawData.relationship_filter_metadata
     : [];
@@ -2576,7 +2628,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   if (filterRecords.length) {
     filterRecords.forEach((record) => {
       if (!record.predicate || !record.subjectId || !record.objectId) return;
-      if (record.decision === 'drop') return;
+      if (!includeDropDecisions && record.decision === 'drop') return;
       const effectiveSubject = record.decision === 'flip' ? record.objectId : record.subjectId;
       const effectiveObject = record.decision === 'flip' ? record.subjectId : record.objectId;
       const fingerprint = makeRelationFingerprint(
@@ -2715,7 +2767,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     return {
       id,
       ordinal,
-      label: filteredRun ? idLabel : shortLabel,
+      label: isFilterDataset ? idLabel : shortLabel,
       title: displayLabel,
       displayLabel,
       combinedLabel,
@@ -2815,7 +2867,9 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     centroidBounds: centroidInfo.bounds,
     fpsValue,
     baseVideoId,
-    isFiltered: filteredRun,
+    isFiltered: isFilterDataset,
+    filterDatasetKind: filterConfig.datasetKind,
+    includeDroppedDecisions,
     filterEvaluationCount: filterRecords.length,
     relationMap: relationsById,
   };
@@ -3442,6 +3496,10 @@ function setSelectedRelationId(relationId, options = {}) {
       state.selectedRelation = null;
       renderRelationDetails();
     }
+    debugRelationEvent('select:cleared', {
+      reason: 'not-filter-dataset',
+      datasetKind: data?.filterDatasetKind || null,
+    });
     return;
   }
   if (!relationId) {
@@ -3449,10 +3507,19 @@ function setSelectedRelationId(relationId, options = {}) {
       state.selectedRelation = null;
       renderActiveRelations();
     }
+    debugRelationEvent('select:cleared', {
+      reason: 'empty-id',
+      datasetKind: data.filterDatasetKind || null,
+    });
     return;
   }
   const relation = getRelationById(relationId);
   if (!relation) {
+    debugRelationEvent('select:missing', {
+      relationId,
+      datasetKind: data.filterDatasetKind || null,
+      reason: 'relation-not-found',
+    });
     if (state.selectedRelation) {
       state.selectedRelation = null;
       renderActiveRelations();
@@ -3460,7 +3527,18 @@ function setSelectedRelationId(relationId, options = {}) {
     return;
   }
   let shouldFocus = false;
-  if (state.selectedRelation?.id === relation.uid) {
+  const isDeselection = state.selectedRelation?.id === relation.uid;
+  debugRelationEvent('select:request', {
+    relationId: relation.uid,
+    datasetKind: data.filterDatasetKind || null,
+    hasMeta: Boolean(relation.filterMeta),
+    decision: relation.filterMeta?.decision || null,
+    action: isDeselection ? 'deselect' : 'select',
+    subject: relation.from,
+    object: relation.to,
+    predicate: relation.predicate,
+  });
+  if (isDeselection) {
     state.selectedRelation = null;
   } else {
     state.selectedRelation = {
@@ -3470,6 +3548,13 @@ function setSelectedRelationId(relationId, options = {}) {
     };
     shouldFocus = focus;
   }
+  debugRelationEvent('select:result', {
+    relationId: state.selectedRelation?.id || null,
+    hasSelection: Boolean(state.selectedRelation),
+    hasMeta: Boolean(state.selectedRelation?.meta),
+    datasetKind: data.filterDatasetKind || null,
+    decision: state.selectedRelation?.meta?.decision || null,
+  });
   renderActiveRelations();
   if (shouldFocus && typeof window !== 'undefined') {
     scheduleMicrotask(() => {
@@ -3497,6 +3582,10 @@ function renderRelationDetails() {
       status.hidden = false;
       status.textContent = 'Filter metadata is available only for filtered runs.';
     }
+    debugRelationEvent('details:hidden', {
+      reason: 'not-filter-dataset',
+      datasetKind: data?.filterDatasetKind || null,
+    });
     if (list) {
       list.hidden = true;
     }
@@ -3517,6 +3606,10 @@ function renderRelationDetails() {
       status.hidden = false;
       status.textContent = 'No filter metadata found for this run.';
     }
+    debugRelationEvent('details:hidden', {
+      reason: 'no-evaluations',
+      datasetKind: data.filterDatasetKind || null,
+    });
     if (list) {
       list.hidden = true;
     }
@@ -3533,6 +3626,10 @@ function renderRelationDetails() {
       status.hidden = false;
       status.textContent = 'Select a relationship to view filter reasoning.';
     }
+    debugRelationEvent('details:hidden', {
+      reason: 'no-selection',
+      datasetKind: data.filterDatasetKind || null,
+    });
     if (list) {
       list.hidden = true;
     }
@@ -3549,6 +3646,11 @@ function renderRelationDetails() {
       status.hidden = false;
       status.textContent = 'Filter metadata is not available for the selected relationship.';
     }
+    debugRelationEvent('details:hidden', {
+      reason: 'missing-meta',
+      datasetKind: data.filterDatasetKind || null,
+      relationId: selection.id,
+    });
     if (list) {
       list.hidden = true;
     }
@@ -3601,6 +3703,16 @@ function renderRelationDetails() {
     explanationEl.hidden = false;
     explanationEl.textContent = meta.explanation || '—';
   }
+  debugRelationEvent('details:rendered', {
+    relationId: selection.id,
+    decision: meta.decision || null,
+    label: meta.label || null,
+    datasetKind: data.filterDatasetKind || null,
+    subjectId: subjectId || null,
+    objectId: objectId || null,
+    subjectName: subjectName || null,
+    objectName: objectName || null,
+  });
 }
 
 function renderActiveRelations() {
@@ -3667,6 +3779,16 @@ function handleRelationListClick(event) {
   if (!item) return;
   const relationId = item.dataset.relId;
   if (!relationId) return;
+  const relation = getRelationById(relationId);
+  debugRelationEvent('click', {
+    relationId,
+    hasRelation: Boolean(relation),
+    hasMeta: Boolean(relation?.filterMeta),
+    datasetKind: state.currentVideoData.filterDatasetKind || null,
+    subject: relation?.from || null,
+    object: relation?.to || null,
+    predicate: relation?.predicate || null,
+  });
   event.preventDefault();
   setSelectedRelationId(relationId);
 }
@@ -3679,6 +3801,17 @@ function handleRelationListKeydown(event) {
   if (!item) return;
   const relationId = item.dataset.relId;
   if (!relationId) return;
+  const relation = getRelationById(relationId);
+  debugRelationEvent('keydown', {
+    key,
+    relationId,
+    hasRelation: Boolean(relation),
+    hasMeta: Boolean(relation?.filterMeta),
+    datasetKind: state.currentVideoData.filterDatasetKind || null,
+    subject: relation?.from || null,
+    object: relation?.to || null,
+    predicate: relation?.predicate || null,
+  });
   event.preventDefault();
   setSelectedRelationId(relationId, { focus: true });
 }
