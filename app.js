@@ -31,6 +31,9 @@ const state = {
   network: null,
   nodesDataset: null,
   edgesDataset: null,
+  edgeRelationMap: new Map(),
+  relationEdgeMap: new Map(),
+  suppressNetworkSelect: false,
   nodeCentroids: null,
   centroidFrameIndex: new Map(),
   imageSize: null,
@@ -2988,6 +2991,9 @@ function destroyNetwork() {
     state.nodesDataset = null;
     state.edgesDataset = null;
   }
+  state.edgeRelationMap = new Map();
+  state.relationEdgeMap = new Map();
+  state.suppressNetworkSelect = false;
   state.nodeCentroids = null;
   state.centroidFrameIndex = new Map();
   state.imageSize = null;
@@ -3091,6 +3097,11 @@ function initialiseNetwork(nodes) {
   state.nodesDataset = data.nodes;
   state.edgesDataset = data.edges;
 
+  if (state.network) {
+    state.network.on('selectEdge', handleNetworkEdgeSelection);
+    state.network.on('deselectEdge', handleNetworkEdgeDeselection);
+  }
+
   const handleResize = () => {
     if (!state.network || !state.nodesDataset) return;
     state.fallbackPositions = computeCircularLayout(nodes, container);
@@ -3182,6 +3193,73 @@ function getCentroidPoint(nodeId, frame) {
     x: prevPoint.x + (nextPoint.x - prevPoint.x) * alpha,
     y: prevPoint.y + (nextPoint.y - prevPoint.y) * alpha,
   };
+}
+
+function synchroniseNetworkSelection(relationId) {
+  if (!state.network) return;
+  const edgeMap = state.relationEdgeMap;
+  const edgeId = relationId && edgeMap instanceof Map ? edgeMap.get(relationId) : null;
+  state.suppressNetworkSelect = true;
+  try {
+    if (edgeId) {
+      state.network.selectNodes([]);
+      state.network.selectEdges([edgeId]);
+    } else {
+      state.network.unselectAll();
+    }
+  } catch (error) {
+    console.debug('Network selection sync failed:', error);
+  } finally {
+    scheduleMicrotask(() => {
+      state.suppressNetworkSelect = false;
+    });
+  }
+}
+
+function selectRelationByEdgeId(edgeId, options = {}) {
+  if (!edgeId) return;
+  const { scrollIntoView = true } = options;
+  const edgeInfo = state.edgeRelationMap instanceof Map ? state.edgeRelationMap.get(edgeId) : null;
+  if (!edgeInfo) {
+    debugRelationEvent('select:edge-missing', {
+      edgeId,
+      datasetKind: state.currentVideoData?.filterDatasetKind || null,
+    });
+    return;
+  }
+  const relations = Array.isArray(edgeInfo.relations) ? edgeInfo.relations : [];
+  const primary = edgeInfo.primary || relations.find((rel) => Boolean(rel?.filterMeta)) || relations[0] || null;
+  if (!primary) {
+    debugRelationEvent('select:edge-empty', {
+      edgeId,
+      datasetKind: state.currentVideoData?.filterDatasetKind || null,
+      relationCount: relations.length,
+    });
+    return;
+  }
+  debugRelationEvent('select:edge', {
+    edgeId,
+    relationId: primary.uid || null,
+    datasetKind: state.currentVideoData?.filterDatasetKind || null,
+  });
+  setSelectedRelationId(primary.uid, { focus: false, scrollIntoView });
+}
+
+function handleNetworkEdgeSelection(params) {
+  if (state.suppressNetworkSelect) return;
+  if (!state.currentVideoData?.isFiltered) return;
+  const edges = Array.isArray(params?.edges) ? params.edges : [];
+  if (!edges.length) {
+    setSelectedRelationId(null);
+    return;
+  }
+  selectRelationByEdgeId(edges[0], { scrollIntoView: true });
+}
+
+function handleNetworkEdgeDeselection() {
+  if (state.suppressNetworkSelect) return;
+  if (!state.currentVideoData?.isFiltered) return;
+  setSelectedRelationId(null);
 }
 
 function updateNodePositions(activeNodeIds) {
@@ -3417,14 +3495,40 @@ function updateNetwork() {
     }
   });
 
-  const edges = Array.from(pairs.entries()).map(([key, entry]) => {
-    let style = CATEGORY_STYLES.default;
-    const allRelations = entry.self
-      ? entry.relations
+  const edges = [];
+  const edgeRelationMap = new Map();
+  const relationEdgeMap = new Map();
+
+  pairs.forEach((entry, key) => {
+    const edgeId = `edge-${key}`;
+    const relationsList = entry.self
+      ? entry.relations.slice()
       : entry.forward.concat(entry.reverse);
-    const primary = allRelations[0];
-    if (primary && allRelations.length === 1) {
-      style = CATEGORY_STYLES[primary.category] || CATEGORY_STYLES.default;
+    const primaryRelation =
+      relationsList.find((rel) => rel?.filterMeta) || relationsList[0] || null;
+
+    if (relationsList.length) {
+      edgeRelationMap.set(edgeId, {
+        relations: relationsList,
+        primary: primaryRelation,
+        self: entry.self,
+      });
+      relationsList.forEach((rel) => {
+        if (rel?.uid) {
+          relationEdgeMap.set(rel.uid, edgeId);
+        }
+      });
+    } else {
+      edgeRelationMap.set(edgeId, {
+        relations: [],
+        primary: null,
+        self: entry.self,
+      });
+    }
+
+    let style = CATEGORY_STYLES.default;
+    if (primaryRelation && relationsList.length === 1) {
+      style = CATEGORY_STYLES[primaryRelation.category] || CATEGORY_STYLES.default;
     }
 
     const lines = [];
@@ -3437,8 +3541,8 @@ function updateNetwork() {
         lines.push(`- ${predicate}`);
       });
 
-      return {
-        id: `edge-${key}`,
+      edges.push({
+        id: edgeId,
         from: entry.node,
         to: entry.node,
         label: lines.join('\n'),
@@ -3452,7 +3556,8 @@ function updateNetwork() {
           align: 'horizontal',
         },
         arrows: { to: { enabled: true, scaleFactor: 1.35, type: 'arrow' } },
-      };
+      });
+      return;
     }
 
     const labelA = entry.nodeALabel || formatObjectLabel(data, entry.nodeA, 'compact');
@@ -3490,8 +3595,8 @@ function updateNetwork() {
       edgeTo = entry.nodeA;
     }
 
-    return {
-      id: `edge-${key}`,
+    edges.push({
+      id: edgeId,
       from: edgeFrom,
       to: edgeTo,
       label: lines.join('\n'),
@@ -3505,8 +3610,11 @@ function updateNetwork() {
         align: 'horizontal',
       },
       arrows,
-    };
+    });
   });
+
+  state.edgeRelationMap = edgeRelationMap;
+  state.relationEdgeMap = relationEdgeMap;
 
   state.edgesDataset.clear();
   if (edges.length) {
@@ -3530,7 +3638,7 @@ function getRelationById(relationId) {
 }
 
 function setSelectedRelationId(relationId, options = {}) {
-  const { focus = false } = options;
+  const { focus = false, scrollIntoView = false } = options;
   const data = state.currentVideoData;
   if (!data || !data.isFiltered) {
     if (state.selectedRelation) {
@@ -3541,6 +3649,7 @@ function setSelectedRelationId(relationId, options = {}) {
       reason: 'not-filter-dataset',
       datasetKind: data?.filterDatasetKind || null,
     });
+    synchroniseNetworkSelection(null);
     return;
   }
   if (!relationId) {
@@ -3552,6 +3661,7 @@ function setSelectedRelationId(relationId, options = {}) {
       reason: 'empty-id',
       datasetKind: data.filterDatasetKind || null,
     });
+    synchroniseNetworkSelection(null);
     return;
   }
   const relation = getRelationById(relationId);
@@ -3565,6 +3675,7 @@ function setSelectedRelationId(relationId, options = {}) {
       state.selectedRelation = null;
       renderActiveRelations();
     }
+    synchroniseNetworkSelection(null);
     return;
   }
   let shouldFocus = false;
@@ -3591,18 +3702,28 @@ function setSelectedRelationId(relationId, options = {}) {
   }
   debugRelationEvent('select:result', {
     relationId: state.selectedRelation?.id || null,
-    hasSelection: Boolean(state.selectedRelation),
+   hasSelection: Boolean(state.selectedRelation),
     hasMeta: Boolean(state.selectedRelation?.meta),
     datasetKind: data.filterDatasetKind || null,
     decision: state.selectedRelation?.meta?.decision || null,
   });
   renderActiveRelations();
+  synchroniseNetworkSelection(state.selectedRelation?.id || null);
   if (shouldFocus && typeof window !== 'undefined') {
     scheduleMicrotask(() => {
       const selector = `[data-rel-id="${relation.uid}"]`;
       const element = dom.activeRelations?.querySelector(selector);
       if (element && typeof element.focus === 'function') {
         element.focus();
+      }
+    });
+  }
+  if (scrollIntoView && typeof window !== 'undefined' && state.selectedRelation?.id && dom.activeRelations) {
+    scheduleMicrotask(() => {
+      const selector = `[data-rel-id="${state.selectedRelation.id}"]`;
+      const card = dom.activeRelations.querySelector(selector);
+      if (card && typeof card.scrollIntoView === 'function') {
+        card.scrollIntoView({ block: 'nearest', inline: 'nearest' });
       }
     });
   }
