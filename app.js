@@ -5046,7 +5046,7 @@ function buildManualEvaluationExport() {
       const item = {
         video_id: videoId,
         relation_id: relationId,
-        decision,
+        manual_decision: decision,
       };
       const relation = cacheEntry ? findRelationInCache(videoId, relationId, cacheEntry) : null;
       if (relation) {
@@ -5054,6 +5054,23 @@ function buildManualEvaluationExport() {
         item.category = relation.category ?? null;
         item.subject_id = relation.from ?? null;
         item.object_id = relation.to ?? null;
+        item.intervals = Array.isArray(relation.intervals)
+          ? relation.intervals.map((pair) => (Array.isArray(pair) ? pair.slice(0, 2) : null)).filter(Boolean)
+          : [];
+        item.raw_uid = relation.rawUid ?? null;
+        item.source_uid = relation.sourceUid ?? null;
+        const filterMeta = relation.filterMeta || null;
+        if (filterMeta && typeof filterMeta === 'object') {
+          item.filter_decision = filterMeta.decision ?? null;
+          item.filter_label = filterMeta.label ?? null;
+          item.filter_explanation = filterMeta.explanation ?? null;
+          item.filter_relation_type = filterMeta.relationType ?? null;
+          item.filter_subject_id = filterMeta.subjectId ?? null;
+          item.filter_object_id = filterMeta.objectId ?? null;
+          item.filter_subject_display = filterMeta.subjectDisplay ?? filterMeta.subjectCompact ?? null;
+          item.filter_object_display = filterMeta.objectDisplay ?? filterMeta.objectCompact ?? null;
+        } else {
+        }
         if (cacheEntry) {
           item.subject_label = formatObjectLabel(cacheEntry, relation.from, 'compact') || null;
           item.object_label = formatObjectLabel(cacheEntry, relation.to, 'compact') || null;
