@@ -1847,38 +1847,67 @@ function sampleMaskPreviewColorForMask(mask, entry, imageData) {
   return null;
 }
 
-function deriveMaskDisplayLabel(labelsArray, objectIds, data) {
+function deriveMaskDisplayLabel(labelsArray, objectIds, data, extraLabels = []) {
   const result = [];
   const seen = new Set();
   const pushUnique = (value) => {
     if (value == null) return;
     const trimmed = String(value).trim();
-    if (!trimmed || /^unknown object$/i.test(trimmed)) return;
+    if (!trimmed || /^(unknown object|mask region)$/i.test(trimmed)) return;
     const key = trimmed.toLowerCase();
     if (seen.has(key)) return;
     seen.add(key);
     result.push(trimmed);
   };
 
+  const sources = [];
   if (Array.isArray(labelsArray)) {
-    labelsArray.forEach(pushUnique);
+    sources.push(...labelsArray);
   }
+  if (Array.isArray(extraLabels)) {
+    sources.push(...extraLabels);
+  }
+  sources.forEach(pushUnique);
 
-  if (!result.length && Array.isArray(objectIds) && objectIds.length && data) {
+  if (Array.isArray(objectIds) && objectIds.length) {
     objectIds.forEach((objectId) => {
-      const label = formatObjectLabel(data, objectId, 'display');
-      if (label) {
-        pushUnique(label);
+      if (objectId == null) return;
+      const key = String(objectId).trim();
+      if (!key) return;
+      let descriptorAdded = false;
+      if (data) {
+        const descriptor = getObjectDisplayDescriptor(data, key);
+        if (descriptor) {
+          const descriptorCandidates = [
+            descriptor.displayLabel,
+            descriptor.combinedLabel,
+            descriptor.objectLabel,
+            descriptor.shortLabel,
+            descriptor.compactLabel,
+          ];
+          for (const candidate of descriptorCandidates) {
+            const before = result.length;
+            pushUnique(candidate);
+            if (result.length > before) {
+              descriptorAdded = true;
+              break;
+            }
+          }
+        }
+      }
+      if (!descriptorAdded) {
+        const numeric = Number(key);
+        const fallbackLabel = Number.isFinite(numeric) ? `Object ${numeric}` : `Object ${key}`;
+        pushUnique(fallbackLabel);
       }
     });
   }
 
-  if (!result.length && Array.isArray(objectIds) && objectIds.length) {
-    if (objectIds.length === 1) {
-      pushUnique(`Object ${objectIds[0]}`);
-    } else {
-      pushUnique(`Objects ${objectIds.join(', ')}`);
-    }
+  if (!result.length && Array.isArray(labelsArray)) {
+    labelsArray
+      .map((value) => (value == null ? '' : String(value).trim()))
+      .filter(Boolean)
+      .forEach(pushUnique);
   }
 
   return result.join(', ');
@@ -2038,11 +2067,28 @@ function buildMaskLegend() {
       ? Array.from(entry.labelSet)
       : [];
     labelsArray.sort((a, b) => a.localeCompare(b));
-    const label = deriveMaskDisplayLabel(labelsArray, objectIds, data);
+    const fallbackFromLabels = labelsArray
+      .map((value) => (value == null ? '' : String(value).trim()))
+      .filter(Boolean)
+      .join(', ');
+    const fallbackFromIds = objectIds
+      .map((objectId) => {
+        const descriptor = getObjectDisplayDescriptor(data, objectId);
+        if (descriptor?.displayLabel) return descriptor.displayLabel;
+        if (descriptor?.combinedLabel) return descriptor.combinedLabel;
+        if (descriptor?.objectLabel) return descriptor.objectLabel;
+        if (descriptor?.shortLabel) return descriptor.shortLabel;
+        const labelFromData = labels?.[objectId];
+        if (labelFromData) return String(labelFromData).trim();
+        return `Object ${objectId}`;
+      })
+      .filter(Boolean)
+      .join(', ');
+    const label = deriveMaskDisplayLabel(labelsArray, objectIds, data) || fallbackFromLabels || fallbackFromIds;
     objectIds.forEach((objectId) => {
       if (!objectLabelMap.has(objectId)) {
         const fallback = getObjectDisplayDescriptor(data, objectId)?.displayLabel || labels?.[objectId] || formatObjectLabel(data, objectId);
-        objectLabelMap.set(objectId, label || fallback);
+        objectLabelMap.set(objectId, label || fallback || `Object ${objectId}`);
       }
       if (!objectColorMap.has(objectId)) {
         objectColorMap.set(objectId, entry.color);
@@ -2097,7 +2143,18 @@ function buildMaskLegend() {
 
     const labelSpan = document.createElement('span');
     labelSpan.className = 'mask-object-label';
-    labelSpan.textContent = item.label || 'Mask region';
+    const mapLabels = item.objectIds
+      .map((objectId) => objectLabelMap.get(objectId))
+      .filter((value) => typeof value === 'string' && value.trim().length > 0);
+    const displayLabel = deriveMaskDisplayLabel(
+      item.label && !/^mask region$/i.test(item.label) ? [item.label] : [],
+      item.objectIds,
+      data,
+      mapLabels
+    );
+    const resolvedListLabel = displayLabel || 'Mask region';
+    labelSpan.textContent = resolvedListLabel;
+    item.label = resolvedListLabel;
     entry.appendChild(labelSpan);
 
     if (item.objectIds.length) {
@@ -2141,18 +2198,21 @@ function formatMaskTooltipEntry(entry) {
     ? entry.objectIds.map((value) => String(value)).filter((value) => value.length > 0)
     : [];
   const data = state.currentVideoData;
-  let labelText = entry.label;
-  if (!labelText || /^unknown object$/i.test(labelText)) {
-    labelText = deriveMaskDisplayLabel([], objectIds, data);
-  }
-  if (!labelText) {
-    labelText = 'Mask region';
-  }
-  const mentionsIdDirectly = objectIds.some((id) => labelText.includes(id));
-  const mentionsKeywords = /\b(obj|id)\b/i.test(labelText);
+  const objectMapLabels = objectIds
+    .map((objectId) => state.mask.objectLabelMap?.get(objectId))
+    .filter((value) => typeof value === 'string' && value.trim().length > 0);
+  const primaryLabels =
+    entry.label && !/^(unknown object|mask region)$/i.test(entry.label) ? [entry.label] : [];
+  const labelFromSources = deriveMaskDisplayLabel(primaryLabels, objectIds, data, objectMapLabels);
+  const fallbackLabel =
+    labelFromSources ||
+    (objectIds.length ? deriveMaskDisplayLabel([], objectIds, data, objectMapLabels) : '') ||
+    'Mask region';
+  const mentionsIdDirectly = objectIds.some((id) => fallbackLabel.includes(id));
+  const mentionsKeywords = /\b(obj|id)\b/i.test(fallbackLabel);
   const needsSuffix = objectIds.length > 0 && !(mentionsKeywords || mentionsIdDirectly);
   const suffix = needsSuffix ? ` (Obj ${objectIds.join(', ')})` : '';
-  return `${labelText}${suffix}`;
+  return `${fallbackLabel}${suffix}`;
 }
 
 function clearMaskLabelsOverlay() {
@@ -2344,7 +2404,10 @@ function handleMaskPreviewPointerMove(event) {
   });
   const labelsArray = Array.from(labelSet).sort((a, b) => a.localeCompare(b));
   const objectIds = Array.from(objectIdsSet).sort((a, b) => Number(a) - Number(b));
-  const derivedLabel = deriveMaskDisplayLabel(labelsArray, objectIds, state.currentVideoData);
+  const mapLabels = objectIds
+    .map((objectId) => state.mask.objectLabelMap?.get(objectId))
+    .filter((value) => typeof value === 'string' && value.trim().length > 0);
+  const derivedLabel = deriveMaskDisplayLabel(labelsArray, objectIds, state.currentVideoData, mapLabels);
   const label = formatMaskTooltipEntry({
     label: derivedLabel,
     objectIds,
