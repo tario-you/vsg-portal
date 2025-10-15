@@ -5,6 +5,7 @@ const CATEGORY_STYLES = {
   higher_order: { background: '#de4c64', text: '#0f172a', edge: '#ef4444' },
   social: { background: '#49cd98', text: '#0f172a', edge: '#10b981' },
   attentional: { background: '#f8d065', text: '#0f172a', edge: '#f59e0b' },
+  _all: { background: '#1f2937', text: '#f8fafc', edge: '#38bdf8' },
   default: { background: '#723bf3', text: '#f8fafc', edge: '#8b5cf6' },
 };
 
@@ -13,6 +14,7 @@ const manifestUrl = '/public/manifest.json';
 const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
 const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
 const CATEGORY_STORAGE_PREFIX = 'vsg-portal:categories:';
+const CATEGORY_DISABLED_BY_DEFAULT = new Set(['_all']);
 
 let urlSyncEnabled = false;
 let suspendUrlSync = false;
@@ -59,6 +61,10 @@ const state = {
     previewCanvas: null,
     previewContext: null,
     previewImageData: null,
+    previewIndexMap: null,
+    previewIndexWidth: 0,
+    previewIndexHeight: 0,
+    previewIndexObjectIds: [],
     colorLookup: new Map(),
     objectLabelMap: new Map(),
     objectColorMap: new Map(),
@@ -535,8 +541,17 @@ function restoreCategorySelection(videoId, availableCategories) {
   const available = Array.isArray(availableCategories)
     ? availableCategories
     : Array.from(availableCategories || []);
-  const availableSet = new Set(available);
-  const fallback = new Set(available);
+  const canonicalAvailable = available.map((value) => canonicalCategory(value));
+  const availableSet = new Set(canonicalAvailable);
+  const fallback = new Set();
+  canonicalAvailable.forEach((cat) => {
+    if (!CATEGORY_DISABLED_BY_DEFAULT.has(cat)) {
+      fallback.add(cat);
+    }
+  });
+  if (fallback.size === 0 && canonicalAvailable.length > 0) {
+    canonicalAvailable.forEach((cat) => fallback.add(cat));
+  }
   const key = getCategoryStorageKey(videoId);
   if (!key || typeof window === 'undefined') {
     return fallback;
@@ -552,7 +567,9 @@ function restoreCategorySelection(videoId, availableCategories) {
       if (parsed.length === 0) {
         return new Set();
       }
-      const valid = parsed.filter((cat) => availableSet.has(cat));
+      const valid = parsed
+        .map((cat) => canonicalCategory(cat))
+        .filter((cat) => availableSet.has(cat));
       if (valid.length) {
         return new Set(valid);
       }
@@ -741,6 +758,7 @@ function syncUrl(replace = true) {
 }
 
 function formatCategoryLabel(cat) {
+  if (cat === '_all') return '_all';
   return cat.replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
@@ -1582,6 +1600,10 @@ function hideMaskPreview() {
   state.mask.previewImageData = null;
   state.mask.previewCanvas = null;
   state.mask.previewContext = null;
+  state.mask.previewIndexMap = null;
+  state.mask.previewIndexWidth = 0;
+  state.mask.previewIndexHeight = 0;
+  state.mask.previewIndexObjectIds = [];
   if (state.mask.colorLookup) {
     state.mask.colorLookup.clear();
   } else {
@@ -1847,6 +1869,66 @@ function sampleMaskPreviewColorForMask(mask, entry, imageData) {
   return null;
 }
 
+function populateMaskIndexMap(entry, mask, maskIndex, indexMap) {
+  if (!entry || !mask || !indexMap) return false;
+  const dimensions = resolveMaskDimensions(mask, entry);
+  if (!dimensions) {
+    return false;
+  }
+  const width = Math.trunc(dimensions.width);
+  const height = Math.trunc(dimensions.height);
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return false;
+  }
+  const totalPixels = width * height;
+  if (indexMap.length !== totalPixels) {
+    return false;
+  }
+  const runs = decodeCompressedCounts(mask.counts);
+  if (!runs.length) {
+    return false;
+  }
+  const buffers = ensureMaskBuffers(entry);
+  if (!buffers) {
+    return false;
+  }
+  buffers.column.fill(0);
+  buffers.row.fill(0);
+
+  let cursor = 0;
+  let value = 0;
+  for (let i = 0; i < runs.length && cursor < totalPixels; i += 1) {
+    const runLength = runs[i];
+    if (!Number.isFinite(runLength) || runLength <= 0) {
+      value ^= 1;
+      continue;
+    }
+    const end = Math.min(cursor + runLength, totalPixels);
+    if (value === 1) {
+      buffers.column.fill(1, cursor, end);
+    }
+    cursor = end;
+    value ^= 1;
+  }
+
+  let dest = 0;
+  for (let row = 0; row < height; row += 1) {
+    const base = row;
+    for (let col = 0; col < width; col += 1) {
+      buffers.row[dest] = buffers.column[col * height + base];
+      dest += 1;
+    }
+  }
+
+  let covered = false;
+  for (let pixel = 0; pixel < totalPixels; pixel += 1) {
+    if (!buffers.row[pixel]) continue;
+    indexMap[pixel] = maskIndex;
+    covered = true;
+  }
+  return covered;
+}
+
 function deriveMaskDisplayLabel(labelsArray, objectIds, data, extraLabels = []) {
   const result = [];
   const seen = new Set();
@@ -1998,6 +2080,47 @@ function buildMaskLegend() {
   const objectColorMap = new Map();
   const data = state.currentVideoData;
   const labels = data.objectLabels || {};
+
+  let maskWidthCandidate = Number(maskEntry?.width);
+  if (!Number.isFinite(maskWidthCandidate) || maskWidthCandidate <= 0) {
+    const derivedWidth = Number(imageData.width);
+    maskWidthCandidate = Number.isFinite(derivedWidth) && derivedWidth > 0 ? derivedWidth : maskWidthCandidate;
+  }
+  if (!Number.isFinite(maskWidthCandidate) || maskWidthCandidate <= 0) {
+    const previewWidth = Number(preview.naturalWidth || preview.width);
+    maskWidthCandidate = Number.isFinite(previewWidth) && previewWidth > 0 ? previewWidth : maskWidthCandidate;
+  }
+
+  let maskHeightCandidate = Number(maskEntry?.height);
+  if (!Number.isFinite(maskHeightCandidate) || maskHeightCandidate <= 0) {
+    const derivedHeight = Number(imageData.height);
+    maskHeightCandidate = Number.isFinite(derivedHeight) && derivedHeight > 0 ? derivedHeight : maskHeightCandidate;
+  }
+  if (!Number.isFinite(maskHeightCandidate) || maskHeightCandidate <= 0) {
+    const previewHeight = Number(preview.naturalHeight || preview.height);
+    maskHeightCandidate = Number.isFinite(previewHeight) && previewHeight > 0 ? previewHeight : maskHeightCandidate;
+  }
+
+  let previewIndexMap = null;
+  let previewIndexWidth = 0;
+  let previewIndexHeight = 0;
+  let previewIndexObjectIds = [];
+  if (
+    Number.isFinite(maskWidthCandidate) &&
+    Number.isFinite(maskHeightCandidate) &&
+    maskWidthCandidate > 0 &&
+    maskHeightCandidate > 0
+  ) {
+    previewIndexWidth = Math.trunc(maskWidthCandidate);
+    previewIndexHeight = Math.trunc(maskHeightCandidate);
+    const totalPixels = previewIndexWidth * previewIndexHeight;
+    if (totalPixels > 0 && totalPixels <= 16777216) {
+      previewIndexMap = new Int32Array(totalPixels);
+      previewIndexMap.fill(-1);
+      previewIndexObjectIds = new Array(firstFrameMasks.length || 0);
+    }
+  }
+
   const ensureEntry = (color) => {
     if (!color) return null;
     const existing = colorLookup.get(color.key);
@@ -2015,12 +2138,6 @@ function buildMaskLegend() {
 
   firstFrameMasks.forEach((mask, idx) => {
     if (!mask) return;
-    const color = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
-    if (!color) return;
-
-    const entry = ensureEntry(color);
-    if (!entry) return;
-
     const rawObjectId = mask.objectId;
     const objectId = rawObjectId != null && rawObjectId !== 'null' ? String(rawObjectId) : null;
     const fallbackId = String(idx);
@@ -2033,19 +2150,38 @@ function buildMaskLegend() {
       labels?.[fallbackId] ||
       `Object ${resolvedId}`;
 
-    entry.labelSet.add(label);
-
-    if (!entry.objectIds.includes(resolvedId)) {
-      entry.objectIds.push(resolvedId);
+    if (previewIndexMap) {
+      const bucket = previewIndexObjectIds[idx] || (previewIndexObjectIds[idx] = []);
+      if (!bucket.includes(resolvedId)) {
+        bucket.push(resolvedId);
+      }
+      populateMaskIndexMap(maskEntry, mask, idx, previewIndexMap);
     }
+
     if (!objectLabelMap.has(resolvedId)) {
       objectLabelMap.set(
         resolvedId,
         descriptor?.displayLabel || descriptor?.combinedLabel || label || `Object ${resolvedId}`
       );
     }
-    if (!objectColorMap.has(resolvedId)) {
-      objectColorMap.set(resolvedId, color);
+
+    const fallbackColor = maskColorForIndex(idx);
+    let colorStruct = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
+    if (!colorStruct && fallbackColor) {
+      colorStruct = createColorStruct(fallbackColor.r, fallbackColor.g, fallbackColor.b, fallbackColor.a);
+    }
+
+    if (colorStruct) {
+      const entry = ensureEntry(colorStruct);
+      if (entry) {
+        entry.labelSet.add(label);
+        if (!entry.objectIds.includes(resolvedId)) {
+          entry.objectIds.push(resolvedId);
+        }
+      }
+      if (!objectColorMap.has(resolvedId)) {
+        objectColorMap.set(resolvedId, colorStruct);
+      }
     }
   });
 
@@ -2062,6 +2198,32 @@ function buildMaskLegend() {
       seen.add(color.key);
       ensureEntry(color);
     }
+  }
+
+  if (previewIndexMap && previewIndexWidth && previewIndexHeight) {
+    state.mask.previewIndexMap = previewIndexMap;
+    state.mask.previewIndexWidth = previewIndexWidth;
+    state.mask.previewIndexHeight = previewIndexHeight;
+    state.mask.previewIndexObjectIds = previewIndexObjectIds.map((value) => {
+      if (!value) return [];
+      const values = Array.isArray(value) ? value : [value];
+      const deduped = [];
+      const seen = new Set();
+      values.forEach((id) => {
+        if (id == null) return;
+        const str = String(id);
+        const key = str.toLowerCase();
+        if (seen.has(key)) return;
+        seen.add(key);
+        deduped.push(str);
+      });
+      return deduped;
+    });
+  } else {
+    state.mask.previewIndexMap = null;
+    state.mask.previewIndexWidth = 0;
+    state.mask.previewIndexHeight = 0;
+    state.mask.previewIndexObjectIds = [];
   }
 
   state.mask.colorLookup = colorLookup;
@@ -2495,6 +2657,47 @@ function setMaskLabelsVisible(nextValue) {
   updateMaskLabelsOverlay();
 }
 
+function resolveMaskTooltipFromIndex(coords) {
+  const indexMap = state.mask.previewIndexMap;
+  const width = state.mask.previewIndexWidth;
+  const height = state.mask.previewIndexHeight;
+  const indexObjectIds = state.mask.previewIndexObjectIds;
+  if (!indexMap || !Array.isArray(indexObjectIds)) {
+    return null;
+  }
+  if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    return null;
+  }
+  const x = Math.round(coords.x);
+  const y = Math.round(coords.y);
+  if (x < 0 || y < 0 || x >= width || y >= height) {
+    return null;
+  }
+  const offset = y * width + x;
+  const maskIndex = indexMap[offset];
+  if (!Number.isInteger(maskIndex) || maskIndex < 0) {
+    return null;
+  }
+  const rawIds = indexObjectIds[maskIndex];
+  const objectIds = Array.isArray(rawIds)
+    ? rawIds
+        .map((value) => (value == null ? '' : String(value).trim()))
+        .filter((value) => value.length > 0)
+    : [];
+  if (!objectIds.length) {
+    return null;
+  }
+  const mapLabels = objectIds
+    .map((objectId) => state.mask.objectLabelMap?.get(objectId))
+    .filter((value) => typeof value === 'string' && value.trim().length > 0);
+  const derivedLabel = deriveMaskDisplayLabel([], objectIds, state.currentVideoData, mapLabels);
+  const label = formatMaskTooltipEntry({
+    label: derivedLabel,
+    objectIds,
+  });
+  return label || null;
+}
+
 function handleMaskPreviewPointerMove(event) {
   if (!state.mask.enabled || !state.mask.previewImageData || !state.mask.colorLookup) {
     hideMaskTooltip();
@@ -2505,51 +2708,54 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
-  const color = sampleNearestMaskColor(coords.x, coords.y, 6);
-  if (!color) {
-    hideMaskTooltip();
-    return;
-  }
-  const entries = resolveMaskEntriesForColor(color);
-  if (!entries.length) {
-    hideMaskTooltip();
-    return;
-  }
-  const labelSet = new Set();
-  const objectIdsSet = new Set();
-  entries.forEach((entry) => {
-    const labelsRaw = entry?.labelSet;
-    if (Array.isArray(labelsRaw)) {
-      labelsRaw.forEach((value) => {
-        if (value) {
-          labelSet.add(String(value));
-        }
-      });
-    } else if (labelsRaw instanceof Set) {
-      labelsRaw.forEach((value) => {
-        if (value) {
-          labelSet.add(String(value));
-        }
-      });
+  let label = resolveMaskTooltipFromIndex(coords);
+  if (!label) {
+    const color = sampleNearestMaskColor(coords.x, coords.y, 6);
+    if (!color) {
+      hideMaskTooltip();
+      return;
     }
-    if (Array.isArray(entry?.objectIds)) {
-      entry.objectIds.forEach((id) => {
-        if (id != null) {
-          objectIdsSet.add(String(id));
-        }
-      });
+    const entries = resolveMaskEntriesForColor(color);
+    if (!entries.length) {
+      hideMaskTooltip();
+      return;
     }
-  });
-  const labelsArray = Array.from(labelSet).sort((a, b) => a.localeCompare(b));
-  const objectIds = Array.from(objectIdsSet).sort((a, b) => Number(a) - Number(b));
-  const mapLabels = objectIds
-    .map((objectId) => state.mask.objectLabelMap?.get(objectId))
-    .filter((value) => typeof value === 'string' && value.trim().length > 0);
-  const derivedLabel = deriveMaskDisplayLabel(labelsArray, objectIds, state.currentVideoData, mapLabels);
-  const label = formatMaskTooltipEntry({
-    label: derivedLabel,
-    objectIds,
-  });
+    const labelSet = new Set();
+    const objectIdsSet = new Set();
+    entries.forEach((entry) => {
+      const labelsRaw = entry?.labelSet;
+      if (Array.isArray(labelsRaw)) {
+        labelsRaw.forEach((value) => {
+          if (value) {
+            labelSet.add(String(value));
+          }
+        });
+      } else if (labelsRaw instanceof Set) {
+        labelsRaw.forEach((value) => {
+          if (value) {
+            labelSet.add(String(value));
+          }
+        });
+      }
+      if (Array.isArray(entry?.objectIds)) {
+        entry.objectIds.forEach((id) => {
+          if (id != null) {
+            objectIdsSet.add(String(id));
+          }
+        });
+      }
+    });
+    const labelsArray = Array.from(labelSet).sort((a, b) => a.localeCompare(b));
+    const objectIds = Array.from(objectIdsSet).sort((a, b) => Number(a) - Number(b));
+    const mapLabels = objectIds
+      .map((objectId) => state.mask.objectLabelMap?.get(objectId))
+      .filter((value) => typeof value === 'string' && value.trim().length > 0);
+    const derivedLabel = deriveMaskDisplayLabel(labelsArray, objectIds, state.currentVideoData, mapLabels);
+    label = formatMaskTooltipEntry({
+      label: derivedLabel,
+      objectIds,
+    });
+  }
   if (!label) {
     hideMaskTooltip();
     return;
@@ -2745,6 +2951,32 @@ async function fetchRelations(url) {
   return response.json();
 }
 
+function deriveBaseRelationsUrl(relationsUrl) {
+  if (!relationsUrl || typeof relationsUrl !== 'string') return null;
+  let candidate = relationsUrl;
+  let replaced = false;
+  const tokens = [
+    'dropnontrivial',
+    'drop_only',
+    'drop-only',
+    'dropped',
+    'filtered',
+    'flipped',
+    'drop',
+  ];
+  tokens.forEach((token) => {
+    const regex = new RegExp(token, 'i');
+    if (regex.test(candidate)) {
+      candidate = candidate.replace(regex, 'raw');
+      replaced = true;
+    }
+  });
+  if (!replaced || candidate === relationsUrl) {
+    return null;
+  }
+  return candidate;
+}
+
 async function fetchObjectLabels(url) {
   if (!url) return null;
   try {
@@ -2854,7 +3086,7 @@ async function fetchCentroids(videoId, manifestEntry) {
   return null;
 }
 
-function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, objectLabelsPayload) {
+function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, objectLabelsPayload, options = {}) {
   const baseVideoId = getSourceVideoId(manifestEntry);
   const relationships = Array.isArray(rawData.relationships)
     ? rawData.relationships
@@ -2862,7 +3094,14 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     ? rawData.relations
     : [];
 
-  const filterConfig = detectFilteredRun(manifestEntry, rawData);
+  const supplementalRelationsData = options?.baseRelations;
+  const supplementalRelationships = Array.isArray(supplementalRelationsData?.relationships)
+    ? supplementalRelationsData.relationships
+    : Array.isArray(supplementalRelationsData?.relations)
+    ? supplementalRelationsData.relations
+    : [];
+
+  const filterConfig = options?.filterConfigOverride || detectFilteredRun(manifestEntry, rawData);
   const rawFilterMetadata = Array.isArray(rawData.relationship_filter_metadata)
     ? rawData.relationship_filter_metadata
     : [];
@@ -2884,6 +3123,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
       relationType: normaliseRelationType(entry.relation_type),
       subjectId: subjectId === null || subjectId === undefined ? null : String(subjectId),
       objectId: objectId === null || objectId === undefined ? null : String(objectId),
+      used: false,
     });
   });
 
@@ -2916,6 +3156,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   }
 
   const processed = [];
+  const supplementalEntries = [];
   const categories = new Set();
   const nodes = new Set();
   const labelMap = extractObjectLabels(rawData, metadata);
@@ -2934,6 +3175,54 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   let frameCount = null;
   let fpsLabel = null;
 
+  const appendRelationsFromRaw = (source, target, options = {}) => {
+    if (!Array.isArray(source)) return;
+    const { updateCategories = false, uidPrefix = '' } = options;
+    source.forEach((rel, index) => {
+      if (!Array.isArray(rel) || rel.length < 4) return;
+      const from = String(rel[0]);
+      const to = String(rel[1]);
+      const predicateRaw = rel[2];
+      const predicate = predicateRaw === null || predicateRaw === undefined ? '' : String(predicateRaw);
+      const intervalsRaw = rel[3];
+      const categoryRaw = rel[4];
+      const relationType = normaliseRelationType(categoryRaw);
+      const category = canonicalCategory(categoryRaw);
+
+      nodes.add(from);
+      nodes.add(to);
+      if (updateCategories) {
+        categories.add(category);
+      }
+
+      const intervals = Array.isArray(intervalsRaw)
+        ? intervalsRaw
+            .map((iv) => {
+              if (!Array.isArray(iv) || iv.length < 2) return null;
+              const start = Math.max(0, Number(iv[0]) || 0);
+              const end = Math.max(0, Number(iv[1]) || 0);
+              maxFrame = Math.max(maxFrame, start, end);
+              return [Math.min(start, end), Math.max(start, end)];
+            })
+            .filter(Boolean)
+        : [];
+
+      const baseUid = createRelationUid(index, from, to, predicate, relationType);
+      target.push({
+        uid: uidPrefix ? `${uidPrefix}${baseUid}` : baseUid,
+        rawUid: baseUid,
+        index,
+        from,
+        to,
+        predicate,
+        relationType,
+        intervals,
+        category,
+        filterMeta: null,
+      });
+    });
+  };
+
   if (metadata) {
     if (metadata.frames) {
       const parsedFrames = Number(metadata.frames);
@@ -2947,44 +3236,14 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     }
   }
 
-  relationships.forEach((rel, index) => {
-    if (!Array.isArray(rel) || rel.length < 4) return;
-    const from = String(rel[0]);
-    const to = String(rel[1]);
-    const predicateRaw = rel[2];
-    const predicate = predicateRaw === null || predicateRaw === undefined ? '' : String(predicateRaw);
-    const intervalsRaw = rel[3];
-    const categoryRaw = rel[4];
-    const relationType = normaliseRelationType(categoryRaw);
-    const category = canonicalCategory(categoryRaw);
+  appendRelationsFromRaw(supplementalRelationships, supplementalEntries, {
+    updateCategories: false,
+    uidPrefix: 'base-',
+  });
 
-    nodes.add(from);
-    nodes.add(to);
-    categories.add(category);
-
-    const intervals = Array.isArray(intervalsRaw)
-      ? intervalsRaw
-          .map((iv) => {
-            if (!Array.isArray(iv) || iv.length < 2) return null;
-            const start = Math.max(0, Number(iv[0]) || 0);
-            const end = Math.max(0, Number(iv[1]) || 0);
-            maxFrame = Math.max(maxFrame, start, end);
-            return [Math.min(start, end), Math.max(start, end)];
-          })
-          .filter(Boolean)
-      : [];
-
-    processed.push({
-      uid: createRelationUid(index, from, to, predicate, relationType),
-      index,
-      from,
-      to,
-      predicate,
-      relationType,
-      intervals,
-      category,
-      filterMeta: null,
-    });
+  appendRelationsFromRaw(relationships, processed, {
+    updateCategories: true,
+    uidPrefix: '',
   });
 
   if (categories.size === 0) {
@@ -3110,11 +3369,132 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
       const fingerprint = makeRelationFingerprint(entry.from, entry.to, entry.predicate, entry.relationType);
       const bucket = filterBuckets.get(fingerprint);
       if (bucket && bucket.length) {
-        entry.filterMeta = bucket.shift();
+        const record = bucket.shift();
+        if (record) {
+          record.used = true;
+          entry.filterMeta = record;
+        }
       }
     }
     relationsById.set(entry.uid, entry);
   });
+
+  const supplementalLookup = new Map();
+  if (supplementalEntries.length) {
+    supplementalEntries.forEach((entry) => {
+      const fromInfo = descriptorMap.get(entry.from);
+      const toInfo = descriptorMap.get(entry.to);
+      entry.fromOrdinal = fromInfo?.ordinal ?? null;
+      entry.toOrdinal = toInfo?.ordinal ?? null;
+      entry.fromLabel = fromInfo?.compactLabel || getCompactLabel(entry.from);
+      entry.toLabel = toInfo?.compactLabel || getCompactLabel(entry.to);
+      entry.fromShortLabel = fromInfo?.compactLabel || entry.fromLabel;
+      entry.toShortLabel = toInfo?.compactLabel || entry.toLabel;
+      entry.fromCombinedLabel = fromInfo?.displayLabel || getDisplayLabel(entry.from);
+      entry.toCombinedLabel = toInfo?.displayLabel || getDisplayLabel(entry.to);
+      const fingerprint = makeRelationFingerprint(entry.from, entry.to, entry.predicate, entry.relationType);
+      const existing = supplementalLookup.get(fingerprint);
+      if (existing) {
+        existing.push(entry);
+      } else {
+        supplementalLookup.set(fingerprint, [entry]);
+      }
+    });
+  }
+
+  const cloneIntervals = (intervals) => {
+    if (!Array.isArray(intervals)) return [];
+    return intervals
+      .map((pair) => {
+        if (!Array.isArray(pair) || pair.length < 2) return null;
+        return [pair[0], pair[1]];
+      })
+      .filter(Boolean);
+  };
+
+  const additionalRelations = [];
+  let allSequence = 0;
+
+  if (hasFilterMetadata) {
+    const baseProcessedSnapshot = processed.slice();
+    baseProcessedSnapshot.forEach((entry) => {
+      const clone = {
+        ...entry,
+        uid: `${entry.uid}::_all`,
+        category: '_all',
+        relationType: entry.relationType,
+        filterMeta: entry.filterMeta,
+        sourceUid: entry.uid,
+        rawUid: entry.rawUid || entry.uid,
+        originalCategory: entry.category,
+        isAllVariant: true,
+        isAllSynthetic: false,
+        intervals: cloneIntervals(entry.intervals),
+      };
+      additionalRelations.push(clone);
+    });
+
+    const fallbackIntervalEnd = Number.isFinite(frameCount) && frameCount > 0 ? frameCount - 1 : maxFrame;
+    const fallbackIntervals = [[0, Math.max(0, fallbackIntervalEnd)]];
+
+    filterRecords.forEach((record) => {
+      if (record.used) return;
+      const effectiveSubject = record.decision === 'flip' ? record.objectId : record.subjectId;
+      const effectiveObject = record.decision === 'flip' ? record.subjectId : record.objectId;
+      if (!effectiveSubject || !effectiveObject) return;
+      const predicate = record.predicate || '';
+      const relationType = record.relationType || 'default';
+      const fingerprint = makeRelationFingerprint(effectiveSubject, effectiveObject, predicate, relationType);
+      let source = null;
+      const pool = supplementalLookup.get(fingerprint);
+      if (pool && pool.length) {
+        source = pool.shift();
+      }
+      const from = source ? source.from : effectiveSubject;
+      const to = source ? source.to : effectiveObject;
+      const fromInfo = descriptorMap.get(from);
+      const toInfo = descriptorMap.get(to);
+      const intervals =
+        source && Array.isArray(source.intervals) && source.intervals.length
+          ? cloneIntervals(source.intervals)
+          : cloneIntervals(fallbackIntervals);
+      const originalCategory = source ? source.category : canonicalCategory(relationType);
+      const newEntry = {
+        uid: `rel-all-${++allSequence}`,
+        index: processed.length + additionalRelations.length + allSequence,
+        from,
+        to,
+        predicate: source ? source.predicate : predicate,
+        relationType,
+        intervals,
+        category: '_all',
+        filterMeta: record,
+        fromOrdinal: fromInfo?.ordinal ?? null,
+        toOrdinal: toInfo?.ordinal ?? null,
+        fromLabel: fromInfo?.compactLabel || getCompactLabel(from),
+        toLabel: toInfo?.compactLabel || getCompactLabel(to),
+        fromShortLabel: fromInfo?.compactLabel || getCompactLabel(from),
+        toShortLabel: toInfo?.compactLabel || getCompactLabel(to),
+        fromCombinedLabel: fromInfo?.displayLabel || getDisplayLabel(from),
+        toCombinedLabel: toInfo?.displayLabel || getDisplayLabel(to),
+        rawUid: source?.rawUid || null,
+        sourceUid: source?.uid || null,
+        originalCategory,
+        isAllVariant: true,
+        isAllSynthetic: !source,
+      };
+      additionalRelations.push(newEntry);
+      record.used = true;
+    });
+  }
+
+  if (additionalRelations.length) {
+    additionalRelations.forEach((entry) => {
+      processed.push(entry);
+      relationsById.set(entry.uid, entry);
+    });
+    categories.add('_all');
+  }
 
   const descriptorObject = Object.fromEntries(descriptorMap);
 
@@ -3141,11 +3521,18 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     }
   }
 
+  const categoriesList = Array.from(categories);
+  categoriesList.sort((a, b) => {
+    if (a === '_all' && b !== '_all') return 1;
+    if (b === '_all' && a !== '_all') return -1;
+    return a.localeCompare(b);
+  });
+
   return {
     manifest: manifestEntry,
     raw: rawData,
     relations: processed,
-    categories: Array.from(categories).sort(),
+    categories: categoriesList,
     nodes: nodeArray,
     objectDisplay: descriptorObject,
     maxFrame,
@@ -3170,6 +3557,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     includeDroppedDecisions: includeDropDecisions,
     filterEvaluationCount: filterRecords.length,
     hasFilterMetadata,
+    hasAllRelations: additionalRelations.length > 0,
     relationMap: relationsById,
   };
 }
@@ -4617,14 +5005,40 @@ function updateCategoryFilters(categories) {
     button.style.color = style.text;
     button.addEventListener('click', () => {
       const isActive = state.enabledCategories.has(cat);
-      if (isActive) {
-        state.enabledCategories.delete(cat);
-        button.dataset.active = 'false';
-        button.setAttribute('aria-pressed', 'false');
+      if (cat === '_all') {
+        if (isActive) {
+          state.enabledCategories.delete('_all');
+          button.dataset.active = 'false';
+          button.setAttribute('aria-pressed', 'false');
+        } else {
+          state.enabledCategories.clear();
+          state.enabledCategories.add('_all');
+          const chips = container.querySelectorAll('button[data-category]');
+          chips.forEach((chip) => {
+            const chipCat = chip.dataset.category || '';
+            const active = chipCat === '_all';
+            chip.dataset.active = active ? 'true' : 'false';
+            chip.setAttribute('aria-pressed', active ? 'true' : 'false');
+          });
+        }
       } else {
-        state.enabledCategories.add(cat);
-        button.dataset.active = 'true';
-        button.setAttribute('aria-pressed', 'true');
+        if (isActive) {
+          state.enabledCategories.delete(cat);
+          button.dataset.active = 'false';
+          button.setAttribute('aria-pressed', 'false');
+        } else {
+          state.enabledCategories.add(cat);
+          button.dataset.active = 'true';
+          button.setAttribute('aria-pressed', 'true');
+        }
+        if (state.enabledCategories.has('_all')) {
+          state.enabledCategories.delete('_all');
+          const allButton = container.querySelector('button[data-category="_all"]');
+          if (allButton) {
+            allButton.dataset.active = 'false';
+            allButton.setAttribute('aria-pressed', 'false');
+          }
+        }
       }
       persistCategorySelection(state.currentVideoId, state.enabledCategories);
       updateNetwork();
@@ -4670,7 +5084,33 @@ async function loadVideo(videoId, options = {}) {
       fetchCentroids(videoId, manifestEntry),
       fetchObjectLabels(manifestEntry.object_labels_url),
     ]);
-    cached = buildVideoData(manifestEntry, raw, metadata, centroidPayload, objectLabelsPayload);
+    let baseRelationsPayload = null;
+    let filterConfigOverride = null;
+    try {
+      filterConfigOverride = detectFilteredRun(manifestEntry, raw);
+    } catch (error) {
+      console.debug('Unable to detect filter run configuration; continuing without override.', { videoId, error });
+    }
+    const hasFilterMetadata =
+      Array.isArray(raw?.relationship_filter_metadata) && raw.relationship_filter_metadata.length > 0;
+    if (hasFilterMetadata) {
+      const baseRelationsUrl = deriveBaseRelationsUrl(manifestEntry.relations_url);
+      if (baseRelationsUrl && baseRelationsUrl !== manifestEntry.relations_url) {
+        try {
+          baseRelationsPayload = await fetchRelations(baseRelationsUrl);
+        } catch (error) {
+          console.debug('Base relations fetch failed; continuing without supplemental relations.', {
+            videoId,
+            baseRelationsUrl,
+            error,
+          });
+        }
+      }
+    }
+    cached = buildVideoData(manifestEntry, raw, metadata, centroidPayload, objectLabelsPayload, {
+      baseRelations: baseRelationsPayload,
+      filterConfigOverride,
+    });
     state.videoCache.set(videoId, cached);
   }
 
