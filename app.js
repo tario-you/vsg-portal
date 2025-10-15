@@ -1873,23 +1873,37 @@ function populateMaskIndexMap(entry, mask, maskIndex, indexMap) {
   if (!entry || !mask || !indexMap) return false;
   const dimensions = resolveMaskDimensions(mask, entry);
   if (!dimensions) {
+    console.debug('[mask] populateMaskIndexMap:badDimensions', {
+      maskIndex,
+      entryWidth: entry?.width,
+      entryHeight: entry?.height,
+      maskSize: mask?.size,
+    });
     return false;
   }
   const width = Math.trunc(dimensions.width);
   const height = Math.trunc(dimensions.height);
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    console.debug('[mask] populateMaskIndexMap:invalidSize', { maskIndex, width, height });
     return false;
   }
   const totalPixels = width * height;
   if (indexMap.length !== totalPixels) {
+    console.warn('[mask] populateMaskIndexMap:lengthMismatch', {
+      maskIndex,
+      expected: totalPixels,
+      actual: indexMap.length,
+    });
     return false;
   }
   const runs = decodeCompressedCounts(mask.counts);
   if (!runs.length) {
+    console.debug('[mask] populateMaskIndexMap:emptyRuns', { maskIndex });
     return false;
   }
   const buffers = ensureMaskBuffers(entry);
   if (!buffers) {
+    console.debug('[mask] populateMaskIndexMap:noBuffers', { maskIndex });
     return false;
   }
   buffers.column.fill(0);
@@ -1925,6 +1939,9 @@ function populateMaskIndexMap(entry, mask, maskIndex, indexMap) {
     if (!buffers.row[pixel]) continue;
     indexMap[pixel] = maskIndex;
     covered = true;
+  }
+  if (!covered) {
+    console.debug('[mask] populateMaskIndexMap:noCoverage', { maskIndex });
   }
   return covered;
 }
@@ -2064,6 +2081,16 @@ function buildMaskLegend() {
   const videoId = state.currentVideoId;
   const maskEntry = videoId ? state.mask.store.get(videoId) : null;
   const firstFrameMasks = Array.isArray(maskEntry?.frames?.[0]) ? maskEntry.frames[0] : [];
+  console.debug('[mask] buildMaskLegend:init', {
+    videoId,
+    hasPreview: Boolean(preview),
+    previewLoaded: preview?.dataset?.loaded,
+    hasPanel: Boolean(panel),
+    hasList: Boolean(list),
+    hasImageData: Boolean(imageData),
+    maskEntryLoaded: Boolean(maskEntry),
+    firstFrameCount: firstFrameMasks.length,
+  });
   if (!preview || !list || !panel || !imageData || !state.currentVideoData) {
     if (panel) {
       panel.hidden = true;
@@ -2111,6 +2138,12 @@ function buildMaskLegend() {
     maskWidthCandidate > 0 &&
     maskHeightCandidate > 0
   ) {
+    console.debug('[mask] buildMaskLegend:indexSetup', {
+      maskWidthCandidate,
+      maskHeightCandidate,
+      previewWidth: preview.naturalWidth || preview.width,
+      previewHeight: preview.naturalHeight || preview.height,
+    });
     previewIndexWidth = Math.trunc(maskWidthCandidate);
     previewIndexHeight = Math.trunc(maskHeightCandidate);
     const totalPixels = previewIndexWidth * previewIndexHeight;
@@ -2119,6 +2152,15 @@ function buildMaskLegend() {
       previewIndexMap.fill(-1);
       previewIndexObjectIds = new Array(firstFrameMasks.length || 0);
     }
+  }
+
+  if (!previewIndexMap) {
+    console.debug('[mask] buildMaskLegend:indexMapUnavailable', {
+      maskWidthCandidate,
+      maskHeightCandidate,
+      previewWidth: preview.naturalWidth || preview.width,
+      previewHeight: preview.naturalHeight || preview.height,
+    });
   }
 
   const ensureEntry = (color) => {
@@ -2137,7 +2179,13 @@ function buildMaskLegend() {
   };
 
   firstFrameMasks.forEach((mask, idx) => {
-    if (!mask) return;
+    if (!mask) {
+      console.debug('[mask] buildMaskLegend:missingMaskEntry', { idx });
+      return;
+    }
+    if (idx === 0) {
+      console.debug('[mask] buildMaskLegend:firstMaskSample', mask);
+    }
     const rawObjectId = mask.objectId;
     const objectId = rawObjectId != null && rawObjectId !== 'null' ? String(rawObjectId) : null;
     const fallbackId = String(idx);
@@ -2167,6 +2215,9 @@ function buildMaskLegend() {
 
     const fallbackColor = maskColorForIndex(idx);
     const sampledColor = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
+    if (!sampledColor) {
+      console.debug('[mask] buildMaskLegend:noSampledColor', { idx, resolvedId, fallbackColor });
+    }
     let colorStruct = sampledColor;
     if (!colorStruct && fallbackColor) {
       colorStruct = createColorStruct(fallbackColor.r, fallbackColor.g, fallbackColor.b, fallbackColor.a);
@@ -2220,7 +2271,13 @@ function buildMaskLegend() {
       });
       return deduped;
     });
+    console.debug('[mask] buildMaskLegend:indexReady', {
+      width: previewIndexWidth,
+      height: previewIndexHeight,
+      mapLength: previewIndexMap.length,
+    });
   } else {
+    console.debug('[mask] buildMaskLegend:clearingIndexMap');
     state.mask.previewIndexMap = null;
     state.mask.previewIndexWidth = 0;
     state.mask.previewIndexHeight = 0;
@@ -2228,6 +2285,11 @@ function buildMaskLegend() {
   }
 
   state.mask.colorLookup = colorLookup;
+  console.debug('[mask] buildMaskLegend:colorLookupReady', {
+    entryCount: colorLookup.size,
+    objectLabelCount: objectLabelMap.size,
+    objectColorCount: objectColorMap.size,
+  });
 
   const items = Array.from(colorLookup.values()).map((entry) => {
     const objectIds = entry.objectIds.slice().sort((a, b) => Number(a) - Number(b));
@@ -2664,19 +2726,23 @@ function resolveMaskTooltipFromIndex(coords) {
   const height = state.mask.previewIndexHeight;
   const indexObjectIds = state.mask.previewIndexObjectIds;
   if (!indexMap || !Array.isArray(indexObjectIds)) {
+    console.debug('[mask] resolveMaskTooltipFromIndex:noIndexMap');
     return null;
   }
   if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) {
+    console.debug('[mask] resolveMaskTooltipFromIndex:invalidDimensions', { width, height });
     return null;
   }
   const x = Math.round(coords.x);
   const y = Math.round(coords.y);
   if (x < 0 || y < 0 || x >= width || y >= height) {
+    console.debug('[mask] resolveMaskTooltipFromIndex:outOfBounds', { x, y, width, height });
     return null;
   }
   const offset = y * width + x;
   const maskIndex = indexMap[offset];
   if (!Number.isInteger(maskIndex) || maskIndex < 0) {
+    console.debug('[mask] resolveMaskTooltipFromIndex:noMaskAtPixel', { offset, maskIndex });
     return null;
   }
   const rawIds = indexObjectIds[maskIndex];
@@ -2686,6 +2752,7 @@ function resolveMaskTooltipFromIndex(coords) {
         .filter((value) => value.length > 0)
     : [];
   if (!objectIds.length) {
+    console.debug('[mask] resolveMaskTooltipFromIndex:noObjectIds', { maskIndex });
     return null;
   }
   const mapLabels = objectIds
@@ -2696,6 +2763,7 @@ function resolveMaskTooltipFromIndex(coords) {
     label: derivedLabel,
     objectIds,
   });
+  console.debug('[mask] resolveMaskTooltipFromIndex:resolved', { coords, maskIndex, objectIds, label });
   return label || null;
 }
 
@@ -2709,15 +2777,18 @@ function handleMaskPreviewPointerMove(event) {
     hideMaskTooltip();
     return;
   }
+  console.debug('[mask] pointerMove:coords', coords);
   let label = resolveMaskTooltipFromIndex(coords);
   if (!label) {
     const color = sampleNearestMaskColor(coords.x, coords.y, 6);
     if (!color) {
+      console.debug('[mask] pointerMove:noColor', { coords });
       hideMaskTooltip();
       return;
     }
     const entries = resolveMaskEntriesForColor(color);
     if (!entries.length) {
+      console.debug('[mask] pointerMove:noEntriesForColor', { color });
       hideMaskTooltip();
       return;
     }
@@ -2756,11 +2827,20 @@ function handleMaskPreviewPointerMove(event) {
       label: derivedLabel,
       objectIds,
     });
+    console.debug('[mask] pointerMove:colorFallback', {
+      color,
+      entriesCount: entries.length,
+      objectIds,
+      derivedLabel,
+      label,
+    });
   }
   if (!label) {
+    console.debug('[mask] pointerMove:noResolvedLabel');
     hideMaskTooltip();
     return;
   }
+  console.debug('[mask] pointerMove:showTooltip', { label, clientX: event.clientX, clientY: event.clientY });
   showMaskTooltip(label, event.clientX, event.clientY);
 }
 
