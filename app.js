@@ -4975,7 +4975,7 @@ function handleEvaluationNextClick(event) {
   const targetFrame = Number.isFinite(frame) ? frame : 0;
   setCurrentTime(targetFrame);
   if (nextRelation.uid) {
-    setSelectedRelationId(nextRelation.uid, { focus: true, scrollIntoView: true, focusTable: true });
+    setSelectedRelationId(nextRelation.uid, { focus: true, scrollIntoView: false, focusTable: true });
   }
   refreshManualEvaluationUi();
 }
@@ -4996,7 +4996,7 @@ function handleEvaluationPrevClick(event) {
   const targetFrame = Number.isFinite(frame) ? frame : 0;
   setCurrentTime(targetFrame);
   if (prevRelation.uid) {
-    setSelectedRelationId(prevRelation.uid, { focus: true, scrollIntoView: true, focusTable: true });
+    setSelectedRelationId(prevRelation.uid, { focus: true, scrollIntoView: false, focusTable: true });
   }
   refreshManualEvaluationUi();
 }
@@ -5334,6 +5334,10 @@ function renderRelationDetails() {
     toggleShouldBeDisabled = false;
     if (selectedRowElement && tableWrapper && state.tableFocusPending) {
       scheduleMicrotask(() => {
+        const container = dom.relationDetailsPanel;
+        if (container && typeof container.scroll === 'function') {
+          container.scroll({ top: 0, left: 0, behavior: 'smooth' });
+        }
         if (tableWrapper.contains(selectedRowElement)) {
           if (typeof selectedRowElement.focus === 'function') {
             try {
