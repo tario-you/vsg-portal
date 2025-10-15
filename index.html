@@ -101,6 +101,16 @@
           <input type="checkbox" id="decision-columns-toggle" />
           <span>Show decision &amp; ID columns</span>
         </label>
+        <div class="evaluation-toolbar" id="evaluation-toolbar">
+          <span id="evaluation-summary" class="evaluation-summary">0 / 0 evaluated</span>
+          <div class="evaluation-actions">
+            <label class="toggle evaluation-toggle" for="evaluation-temporal-only">
+              <input type="checkbox" id="evaluation-temporal-only" checked />
+              <span>Temporal-only</span>
+            </label>
+            <button id="evaluation-next" type="button" disabled>Next</button>
+          </div>
+        </div>
         <div class="decision-table-wrapper" id="relation-details-table-wrapper" hidden>
           <table class="decision-table decision-table--compact" id="relation-details-table">
             <thead>
