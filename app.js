@@ -138,6 +138,7 @@ const dom = {
   evaluationPrev: document.getElementById('evaluation-prev'),
   evaluationNext: document.getElementById('evaluation-next'),
   evaluationTemporalOnly: document.getElementById('evaluation-temporal-only'),
+  sidebar: document.querySelector('.sidebar'),
 };
 
 restoreManualEvaluations();
@@ -4736,6 +4737,23 @@ function setTemporalOnlyFilter(enabled) {
   refreshManualEvaluationUi();
 }
 
+function scrollSidebarToTop(options = {}) {
+  const sidebar = dom.sidebar;
+  if (!sidebar) return;
+  const behavior = options.instant ? 'auto' : 'smooth';
+  if (typeof sidebar.scroll === 'function') {
+    try {
+      sidebar.scroll({ top: 0, left: 0, behavior });
+      return;
+    } catch (error) {
+      // fall through to direct assignment
+    }
+  }
+  if (typeof sidebar.scrollTop === 'number') {
+    sidebar.scrollTop = 0;
+  }
+}
+
 function isTemporalRelation(relation) {
   if (!relation) return false;
   const type = canonicalCategory(relation.relationType || relation.category);
@@ -4977,6 +4995,7 @@ function handleEvaluationNextClick(event) {
   if (nextRelation.uid) {
     setSelectedRelationId(nextRelation.uid, { focus: true, scrollIntoView: false, focusTable: true });
   }
+  scrollSidebarToTop();
   refreshManualEvaluationUi();
 }
 
@@ -4998,6 +5017,7 @@ function handleEvaluationPrevClick(event) {
   if (prevRelation.uid) {
     setSelectedRelationId(prevRelation.uid, { focus: true, scrollIntoView: false, focusTable: true });
   }
+  scrollSidebarToTop();
   refreshManualEvaluationUi();
 }
 
