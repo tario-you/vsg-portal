@@ -4782,11 +4782,21 @@ function getSortedEvaluationCandidates(options = {}) {
   const data = state.currentVideoData;
   if (!data || !Array.isArray(data.relations)) return [];
   const onlyTemporal = options.onlyTemporal === true;
+  const categoryFilter =
+    options.categorySet instanceof Set
+      ? options.categorySet
+      : state.enabledCategories instanceof Set && state.enabledCategories.size > 0
+      ? state.enabledCategories
+      : null;
   const seen = new Set();
   const decorated = [];
   data.relations.forEach((relation) => {
     if (!relation || !relation.uid) return;
     if (seen.has(relation.uid)) return;
+    if (categoryFilter) {
+      const category = relation.category || 'default';
+      if (!categoryFilter.has(category)) return;
+    }
     if (onlyTemporal && !isTemporalRelation(relation)) return;
     seen.add(relation.uid);
     decorated.push({
