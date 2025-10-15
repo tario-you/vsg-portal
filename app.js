@@ -2023,22 +2023,29 @@ function buildMaskLegend() {
 
     const rawObjectId = mask.objectId;
     const objectId = rawObjectId != null && rawObjectId !== 'null' ? String(rawObjectId) : null;
-    const fallbackId = objectId ?? String(idx);
-    const descriptor = getObjectDisplayDescriptor(data, fallbackId);
-    const label = descriptor?.displayLabel || labels?.[fallbackId] || `Object ${fallbackId}`;
+    const fallbackId = String(idx);
+    const resolvedId = objectId ?? fallbackId;
+    const descriptor = getObjectDisplayDescriptor(data, resolvedId);
+    const label =
+      descriptor?.displayLabel ||
+      descriptor?.combinedLabel ||
+      labels?.[resolvedId] ||
+      labels?.[fallbackId] ||
+      `Object ${resolvedId}`;
 
     entry.labelSet.add(label);
 
-    if (objectId) {
-      if (!entry.objectIds.includes(objectId)) {
-        entry.objectIds.push(objectId);
-      }
-      if (!objectLabelMap.has(objectId)) {
-        objectLabelMap.set(objectId, descriptor?.displayLabel || label);
-      }
-      if (!objectColorMap.has(objectId)) {
-        objectColorMap.set(objectId, color);
-      }
+    if (!entry.objectIds.includes(resolvedId)) {
+      entry.objectIds.push(resolvedId);
+    }
+    if (!objectLabelMap.has(resolvedId)) {
+      objectLabelMap.set(
+        resolvedId,
+        descriptor?.displayLabel || descriptor?.combinedLabel || label || `Object ${resolvedId}`
+      );
+    }
+    if (!objectColorMap.has(resolvedId)) {
+      objectColorMap.set(resolvedId, color);
     }
   });
 
@@ -2725,8 +2732,6 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     : [];
 
   const filterConfig = detectFilteredRun(manifestEntry, rawData);
-  const isFilterDataset = filterConfig.enabled;
-  const includeDropDecisions = filterConfig.includeDropped;
   const rawFilterMetadata = Array.isArray(rawData.relationship_filter_metadata)
     ? rawData.relationship_filter_metadata
     : [];
@@ -2751,8 +2756,14 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     });
   });
 
+  const hasFilterMetadata = filterRecords.length > 0;
+  const includeDropDecisions =
+    filterConfig.includeDropped || (!filterConfig.enabled && hasFilterMetadata);
+  const filterDatasetKind = filterConfig.datasetKind || (hasFilterMetadata ? 'raw' : null);
+  const isFilterDataset = filterConfig.enabled || hasFilterMetadata;
+
   const filterBuckets = new Map();
-  if (filterRecords.length) {
+  if (hasFilterMetadata) {
     filterRecords.forEach((record) => {
       if (!record.predicate || !record.subjectId || !record.objectId) return;
       if (!includeDropDecisions && record.decision === 'drop') return;
@@ -3024,9 +3035,10 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
     fpsValue,
     baseVideoId,
     isFiltered: isFilterDataset,
-    filterDatasetKind: filterConfig.datasetKind,
+    filterDatasetKind,
     includeDroppedDecisions: includeDropDecisions,
     filterEvaluationCount: filterRecords.length,
+    hasFilterMetadata,
     relationMap: relationsById,
   };
 }
