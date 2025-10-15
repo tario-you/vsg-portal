@@ -2201,25 +2201,156 @@ function getPreviewCoordinates(event) {
 
 function formatMaskTooltipEntry(entry) {
   if (!entry) return '';
-  const objectIds = Array.isArray(entry.objectIds)
-    ? entry.objectIds.map((value) => String(value)).filter((value) => value.length > 0)
-    : [];
+  const normalizeValue = (value) => (value == null ? '' : String(value).trim());
+  const isGenericLabel = (value) => {
+    const normalized = normalizeValue(value);
+    if (!normalized) return true;
+    if (/^(unknown object|mask region)$/i.test(normalized)) return true;
+    const withoutIdSuffix = normalized.replace(/\s*\(ID\s*[^)]+\)\s*$/i, '').trim();
+    if (!withoutIdSuffix) return true;
+    const compact = withoutIdSuffix.replace(/\s+/g, '').toLowerCase();
+    if (/^(id|object|obj)\d+$/.test(compact)) return true;
+    return false;
+  };
+
   const data = state.currentVideoData;
-  const objectMapLabels = objectIds
-    .map((objectId) => state.mask.objectLabelMap?.get(objectId))
-    .filter((value) => typeof value === 'string' && value.trim().length > 0);
-  const primaryLabels =
-    entry.label && !/^(unknown object|mask region)$/i.test(entry.label) ? [entry.label] : [];
-  const labelFromSources = deriveMaskDisplayLabel(primaryLabels, objectIds, data, objectMapLabels);
-  const fallbackLabel =
-    labelFromSources ||
-    (objectIds.length ? deriveMaskDisplayLabel([], objectIds, data, objectMapLabels) : '') ||
-    'Mask region';
-  const mentionsIdDirectly = objectIds.some((id) => fallbackLabel.includes(id));
-  const mentionsKeywords = /\b(obj|id)\b/i.test(fallbackLabel);
-  const needsSuffix = objectIds.length > 0 && !(mentionsKeywords || mentionsIdDirectly);
-  const suffix = needsSuffix ? ` (Obj ${objectIds.join(', ')})` : '';
-  return `${fallbackLabel}${suffix}`;
+  const objectLabelMap = state.mask.objectLabelMap;
+
+  const objectInfos = [];
+  const seenIdDisplays = new Set();
+  if (Array.isArray(entry.objectIds)) {
+    entry.objectIds.forEach((rawId) => {
+      const str = normalizeValue(rawId);
+      if (!str) return;
+      const numeric = Number(str);
+      const display = Number.isFinite(numeric) ? String(numeric) : str;
+      if (seenIdDisplays.has(display)) return;
+      seenIdDisplays.add(display);
+      objectInfos.push({
+        raw: rawId,
+        str,
+        numeric,
+        display,
+      });
+    });
+  }
+
+  const describeObject = (info) => {
+    const lookupKeys = [];
+    const keySet = new Set();
+    const addKey = (candidate) => {
+      if (candidate == null) return;
+      const dedupeKey = `${typeof candidate}:${String(candidate)}`;
+      if (keySet.has(dedupeKey)) return;
+      keySet.add(dedupeKey);
+      lookupKeys.push(candidate);
+    };
+
+    addKey(info.raw);
+    addKey(info.str);
+    addKey(info.display);
+    if (Number.isFinite(info.numeric)) {
+      addKey(info.numeric);
+    }
+
+    let label = '';
+    if (objectLabelMap) {
+      for (const key of lookupKeys) {
+        if (objectLabelMap.has(key)) {
+          const candidate = normalizeValue(objectLabelMap.get(key));
+          if (!candidate || isGenericLabel(candidate)) {
+            continue;
+          }
+          label = candidate;
+          break;
+        }
+      }
+    }
+
+    if (!label && data) {
+      const descriptor = getObjectDisplayDescriptor(data, info.str);
+      if (descriptor) {
+        const descriptorCandidates = [
+          descriptor.rawLabel,
+          descriptor.objectLabel,
+          descriptor.displayLabel,
+          descriptor.combinedLabel,
+          descriptor.shortLabel,
+          descriptor.compactLabel,
+        ];
+        for (const candidate of descriptorCandidates) {
+          const normalized = normalizeValue(candidate);
+          if (!normalized || isGenericLabel(normalized)) {
+            continue;
+          }
+          label = normalized;
+          break;
+        }
+      }
+    }
+
+    if (label) {
+      label = label.replace(/\s*\(ID\s*[^)]+\)\s*$/i, '').replace(/^ID\s+/i, '').trim();
+      const compactLabel = label.replace(/\s+/g, '').toLowerCase();
+      const compactId = info.display.replace(/\s+/g, '').toLowerCase();
+      if (
+        compactLabel === compactId ||
+        compactLabel === `object${compactId}` ||
+        compactLabel === `obj${compactId}` ||
+        compactLabel === `id${compactId}`
+      ) {
+        label = '';
+      }
+    }
+
+    if (label) {
+      return `Obj ${info.display}: ${label}`;
+    }
+    return `Obj ${info.display}`;
+  };
+
+  const seenDescriptions = new Set();
+  const objectParts = [];
+  objectInfos.forEach((info) => {
+    const description = normalizeValue(describeObject(info));
+    if (!description) return;
+    const key = description.toLowerCase();
+    if (seenDescriptions.has(key)) return;
+    seenDescriptions.add(key);
+    objectParts.push(description);
+  });
+
+  const rawLabel = normalizeValue(entry.label);
+  const finalParts = [];
+  if (rawLabel && !isGenericLabel(rawLabel)) {
+    const cleanedLabel = rawLabel.replace(/\s*\(ID\s*[^)]+\)\s*$/i, '').trim();
+    const normalizedLabel = cleanedLabel.toLowerCase();
+    const coveredByObject = objectParts.some((part) => {
+      const partLower = part.toLowerCase();
+      return partLower === normalizedLabel || partLower.includes(`: ${normalizedLabel}`);
+    });
+    if (!coveredByObject) {
+      finalParts.push(rawLabel);
+    }
+  }
+  finalParts.push(...objectParts);
+
+  if (finalParts.length) {
+    return finalParts.join(', ');
+  }
+
+  if (data && objectInfos.length) {
+    const derived = deriveMaskDisplayLabel([], objectInfos.map((info) => info.display), data);
+    if (derived && !isGenericLabel(derived)) {
+      return derived;
+    }
+  }
+
+  if (objectInfos.length) {
+    return objectInfos.map((info) => `Obj ${info.display}`).join(', ');
+  }
+
+  return 'Mask (no object metadata)';
 }
 
 function clearMaskLabelsOverlay() {
