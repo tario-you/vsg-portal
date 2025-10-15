@@ -105,6 +105,8 @@
           <table class="decision-table decision-table--compact" id="relation-details-table">
             <thead>
               <tr>
+                <th scope="col" class="decision-column decision-column--mark decision-column--approve" aria-label="Mark good">√</th>
+                <th scope="col" class="decision-column decision-column--mark decision-column--reject" aria-label="Mark bad">x</th>
                 <th scope="col" class="decision-column decision-column--decision">Decision</th>
                 <th scope="col" class="decision-column decision-column--label">Label</th>
                 <th scope="col" class="decision-column decision-column--subject-id">Subj&nbsp;ID</th>
@@ -127,6 +129,10 @@
           <div>
             <dt>Relations JSON</dt>
             <dd><a id="download-json" href="#" target="_blank" rel="noopener">Download</a></dd>
+          </div>
+          <div>
+            <dt>Manual Ratings</dt>
+            <dd><button id="download-evaluations" type="button" disabled>Export Ratings</button></dd>
           </div>
           <div>
             <dt>Frames</dt>

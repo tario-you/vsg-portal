@@ -356,6 +356,73 @@ body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
+.decision-column--mark {
+  width: 2.2rem;
+  text-align: center;
+}
+
+.decision-table tbody td.decision-cell--mark {
+  text-align: center;
+  padding: 0.4rem;
+}
+
+.decision-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.4);
+  color: #f8fafc;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.decision-mark:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.decision-mark--approve {
+  background: rgba(34, 197, 94, 0.18);
+  border-color: rgba(34, 197, 94, 0.4);
+  color: #bbf7d0;
+}
+
+.decision-mark--reject {
+  background: rgba(248, 113, 113, 0.18);
+  border-color: rgba(248, 113, 113, 0.4);
+  color: #fecaca;
+}
+
+.decision-mark:not(:disabled):hover,
+.decision-mark:not(:disabled):focus-visible {
+  transform: translateY(-1px);
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+.decision-mark--active {
+  box-shadow: inset 0 0 0 2px rgba(15, 23, 42, 0.35);
+  border-color: transparent;
+  transform: translateY(0);
+}
+
+.decision-mark--approve.decision-mark--active {
+  background: rgba(34, 197, 94, 0.36);
+  color: #dcfce7;
+}
+
+.decision-mark--reject.decision-mark--active {
+  background: rgba(248, 113, 113, 0.36);
+  color: #fee2e2;
+}
+
 .decision-cell--decision,
 .decision-cell--label {
   font-weight: 600;
@@ -415,6 +482,19 @@ body {
 .decision-row--selected {
   background: rgba(96, 165, 250, 0.18);
   box-shadow: inset 0 0 0 1px rgba(96, 165, 250, 0.35);
+}
+
+.decision-row--approved {
+  background: rgba(34, 197, 94, 0.14);
+}
+
+.decision-row--rejected {
+  background: rgba(248, 113, 113, 0.14);
+}
+
+.decision-row--selected.decision-row--approved,
+.decision-row--selected.decision-row--rejected {
+  background: rgba(96, 165, 250, 0.28);
 }
 
 .decision-row--selected td {
@@ -583,6 +663,34 @@ body {
   font-size: 0.8rem;
   word-break: break-all;
   color: var(--text);
+}
+
+.panel__meta button {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.4);
+  color: #f8fafc;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+.panel__meta button:hover,
+.panel__meta button:focus-visible {
+  background: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-1px);
+}
+
+.panel__meta button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+  transform: none;
+  background: rgba(15, 23, 42, 0.2);
+  border-color: rgba(148, 163, 184, 0.25);
 }
 
 .panel__note {

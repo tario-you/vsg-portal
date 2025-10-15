@@ -51,6 +51,12 @@ const state = {
   debug: { enabled: false, overlay: null },
   selectedRelation: null,
   showDecisionColumns: false,
+  manualEvaluations: {
+    storageKey: 'vsg-portal:manual-evaluations',
+    version: 1,
+    byVideo: new Map(),
+    dirty: false,
+  },
   mask: {
     enabled: false,
     store: new Map(),
@@ -114,6 +120,7 @@ const dom = {
   videoDescription: document.getElementById('video-description'),
   frameTemplate: document.getElementById('frame-template'),
   downloadJson: document.getElementById('download-json'),
+  downloadEvaluations: document.getElementById('download-evaluations'),
   metaFrames: document.getElementById('meta-frames'),
   metaFps: document.getElementById('meta-fps'),
   categoryFilters: document.getElementById('category-filters'),
@@ -126,6 +133,8 @@ const dom = {
   decisionColumnsToggle: document.getElementById('decision-columns-toggle'),
   decisionColumnsToggleContainer: document.querySelector('.decision-controls'),
 };
+
+restoreManualEvaluations();
 
 function setViewportBackground(url) {
   const viewport = dom.frameViewport;
@@ -447,6 +456,113 @@ function restoreMaskPreference() {
     console.debug('Unable to restore mask preference:', error);
   }
   return false;
+}
+
+function restoreManualEvaluations() {
+  if (typeof window === 'undefined') return;
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return;
+  const key = store.storageKey;
+  if (!key) return;
+  try {
+    const raw = window.localStorage?.getItem(key);
+    if (!raw) return;
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== 'object') return;
+    const data = parsed.data;
+    if (!data || typeof data !== 'object') return;
+    Object.entries(data).forEach(([videoId, relations]) => {
+      if (!videoId || typeof relations !== 'object' || !relations) return;
+      const relMap = new Map();
+      Object.entries(relations).forEach(([relationId, value]) => {
+        if (!relationId) return;
+        if (value === 'good' || value === 'bad') {
+          relMap.set(relationId, value);
+        }
+      });
+      if (relMap.size) {
+        store.byVideo.set(videoId, relMap);
+      }
+    });
+    store.dirty = false;
+    scheduleMicrotask(updateManualEvaluationButton);
+  } catch (error) {
+    console.debug('Unable to restore manual evaluations:', error);
+  }
+}
+
+function persistManualEvaluations() {
+  if (typeof window === 'undefined') return;
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return;
+  const key = store.storageKey;
+  if (!key) return;
+  try {
+    const data = {};
+    for (const [videoId, relationMap] of store.byVideo.entries()) {
+      if (!relationMap || !(relationMap instanceof Map) || relationMap.size === 0) continue;
+      const serialised = {};
+      for (const [relationId, value] of relationMap.entries()) {
+        if (value === 'good' || value === 'bad') {
+          serialised[relationId] = value;
+        }
+      }
+      if (Object.keys(serialised).length > 0) {
+        data[videoId] = serialised;
+      }
+    }
+    const payload = JSON.stringify({
+      version: store.version || 1,
+      data,
+    });
+    window.localStorage?.setItem(key, payload);
+    store.dirty = false;
+  } catch (error) {
+    console.debug('Unable to persist manual evaluations:', error);
+  }
+}
+
+function getManualEvaluation(videoId, relationId) {
+  if (!videoId || !relationId) return null;
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return null;
+  const relationMap = store.byVideo.get(videoId);
+  if (!(relationMap instanceof Map)) return null;
+  const value = relationMap.get(relationId);
+  return value === 'good' || value === 'bad' ? value : null;
+}
+
+function setManualEvaluation(videoId, relationId, value) {
+  if (!videoId || !relationId) return null;
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return null;
+  let relationMap = store.byVideo.get(videoId);
+  if (!(relationMap instanceof Map)) {
+    relationMap = new Map();
+    store.byVideo.set(videoId, relationMap);
+  }
+  const normalised = value === 'good' || value === 'bad' ? value : null;
+  if (normalised) {
+    relationMap.set(relationId, normalised);
+  } else {
+    relationMap.delete(relationId);
+  }
+  if (relationMap.size === 0) {
+    store.byVideo.delete(videoId);
+  }
+  store.dirty = true;
+  persistManualEvaluations();
+  scheduleMicrotask(updateManualEvaluationButton);
+  return normalised;
+}
+
+function toggleManualEvaluation(videoId, relationId, targetValue) {
+  if (targetValue !== 'good' && targetValue !== 'bad') {
+    return setManualEvaluation(videoId, relationId, null);
+  }
+  const current = getManualEvaluation(videoId, relationId);
+  const next = current === targetValue ? null : targetValue;
+  return setManualEvaluation(videoId, relationId, next);
 }
 
 function canonicalCategory(value) {
@@ -4502,6 +4618,120 @@ function setSelectedRelationId(relationId, options = {}) {
   }
 }
 
+function updateManualEvaluationIndicators(row, evaluation) {
+  if (!row) return;
+  const value = evaluation === 'good' || evaluation === 'bad' ? evaluation : null;
+  row.dataset.manualEvaluation = value || '';
+  row.classList.toggle('decision-row--approved', value === 'good');
+  row.classList.toggle('decision-row--rejected', value === 'bad');
+  const approveButton = row.querySelector('button[data-eval-value="good"]');
+  if (approveButton) {
+    const isActive = value === 'good';
+    approveButton.classList.toggle('decision-mark--active', isActive);
+    approveButton.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  }
+  const rejectButton = row.querySelector('button[data-eval-value="bad"]');
+  if (rejectButton) {
+    const isActive = value === 'bad';
+    rejectButton.classList.toggle('decision-mark--active', isActive);
+    rejectButton.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+  }
+}
+
+function countAllManualEvaluations() {
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return 0;
+  let total = 0;
+  for (const relationMap of store.byVideo.values()) {
+    if (relationMap instanceof Map) {
+      total += relationMap.size;
+    }
+  }
+  return total;
+}
+
+function updateManualEvaluationButton() {
+  const button = dom.downloadEvaluations;
+  if (!button) return;
+  const total = countAllManualEvaluations();
+  const labelBase = 'Export Ratings';
+  button.disabled = total === 0;
+  button.textContent = total > 0 ? `${labelBase} (${total})` : labelBase;
+  button.title = total > 0 ? 'Download manual relationship ratings as JSON' : 'No manual ratings available yet';
+}
+
+function findRelationInCache(videoId, relationId, cacheEntryOverride) {
+  if (!videoId || !relationId) return null;
+  const cacheEntry = cacheEntryOverride || state.videoCache.get(videoId);
+  if (!cacheEntry) return null;
+  const id = String(relationId);
+  if (cacheEntry.relationMap instanceof Map && cacheEntry.relationMap.size > 0) {
+    const fromMap = cacheEntry.relationMap.get(id);
+    if (fromMap) return fromMap;
+  }
+  const relations = Array.isArray(cacheEntry.relations) ? cacheEntry.relations : [];
+  return relations.find((entry) => entry.uid === id) || null;
+}
+
+function buildManualEvaluationExport() {
+  const results = [];
+  const store = state.manualEvaluations;
+  if (!store || !(store.byVideo instanceof Map)) return results;
+  for (const [videoId, relationMap] of store.byVideo.entries()) {
+    if (!(relationMap instanceof Map) || relationMap.size === 0) continue;
+    const cacheEntry = state.videoCache.get(videoId) || null;
+    for (const [relationId, decision] of relationMap.entries()) {
+      if (decision !== 'good' && decision !== 'bad') continue;
+      const item = {
+        video_id: videoId,
+        relation_id: relationId,
+        decision,
+      };
+      const relation = cacheEntry ? findRelationInCache(videoId, relationId, cacheEntry) : null;
+      if (relation) {
+        item.predicate = relation.predicate ?? null;
+        item.category = relation.category ?? null;
+        item.subject_id = relation.from ?? null;
+        item.object_id = relation.to ?? null;
+        if (cacheEntry) {
+          item.subject_label = formatObjectLabel(cacheEntry, relation.from, 'compact') || null;
+          item.object_label = formatObjectLabel(cacheEntry, relation.to, 'compact') || null;
+        }
+      }
+      results.push(item);
+    }
+  }
+  return results;
+}
+
+function downloadManualEvaluations() {
+  const evaluations = buildManualEvaluationExport();
+  if (!evaluations.length) {
+    console.info('No manual relationship ratings to export.');
+    return;
+  }
+  const payload = {
+    generated_at: new Date().toISOString(),
+    total: evaluations.length,
+    evaluations,
+  };
+  const json = JSON.stringify(payload, null, 2);
+  const blob = new Blob([json], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+  const filename = `vsg-manual-evaluations-${timestamp}.json`;
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.download = filename;
+  anchor.style.display = 'none';
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+  setTimeout(() => {
+    URL.revokeObjectURL(url);
+  }, 0);
+}
+
 function renderRelationDetails() {
   const panel = dom.relationDetailsPanel;
   const status = dom.relationDetailsStatus;
@@ -4637,6 +4867,34 @@ function renderRelationDetails() {
       td.textContent = value != null && value !== '' ? String(value) : '—';
       return td;
     };
+    const videoId = state.currentVideoId;
+    const createMarkCell = (relationId, currentEvaluation, evaluationValue) => {
+      const td = document.createElement('td');
+      const evalClass = evaluationValue === 'good' ? 'approve' : 'reject';
+      td.className = `decision-cell decision-cell--mark decision-cell--${evalClass}`;
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = `decision-mark decision-mark--${evalClass}`;
+      button.textContent = evaluationValue === 'good' ? '√' : 'x';
+      button.dataset.evalValue = evaluationValue;
+      if (relationId) {
+        button.dataset.relId = relationId;
+        button.disabled = false;
+      } else {
+        button.disabled = true;
+      }
+      button.setAttribute(
+        'aria-label',
+        evaluationValue === 'good' ? 'Mark relationship as good' : 'Mark relationship as bad'
+      );
+      const isActive = currentEvaluation === evaluationValue;
+      button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      if (isActive) {
+        button.classList.add('decision-mark--active');
+      }
+      td.appendChild(button);
+      return td;
+    };
     let selectedRowElement = null;
 
     relations.forEach((rel) => {
@@ -4683,6 +4941,9 @@ function renderRelationDetails() {
       }
       row.setAttribute('aria-pressed', isSelectedRow ? 'true' : 'false');
 
+      const evaluation = rel.uid ? getManualEvaluation(videoId, rel.uid) : null;
+      row.appendChild(createMarkCell(rel.uid || '', evaluation, 'good'));
+      row.appendChild(createMarkCell(rel.uid || '', evaluation, 'bad'));
       row.appendChild(createCell(decision, 'decision-cell decision-cell--decision'));
       row.appendChild(createCell(label, 'decision-cell decision-cell--label'));
       row.appendChild(createCell(subjectId, 'decision-cell decision-cell--subject-id'));
@@ -4694,6 +4955,7 @@ function renderRelationDetails() {
       explanationCell.title = explanation || '';
       row.appendChild(explanationCell);
 
+      updateManualEvaluationIndicators(row, evaluation);
       tableBody.appendChild(row);
     });
 
@@ -4837,6 +5099,22 @@ function getDecisionRowFromTarget(target) {
 
 function handleDecisionTableClick(event) {
   if (!state.currentVideoData?.isFiltered) return;
+  const target = event.target instanceof Element ? event.target : null;
+  if (target) {
+    const button = target.closest('button[data-eval-value]');
+    if (button) {
+      const relationId = button.dataset.relId;
+      const value = button.dataset.evalValue === 'good' ? 'good' : 'bad';
+      if (relationId && value) {
+        event.preventDefault();
+        event.stopPropagation();
+        const nextValue = toggleManualEvaluation(state.currentVideoId, relationId, value);
+        const row = getDecisionRowFromTarget(button);
+        updateManualEvaluationIndicators(row, nextValue);
+      }
+      return;
+    }
+  }
   const row = getDecisionRowFromTarget(event.target);
   if (!row) return;
   const relationId = row.dataset.relId;
@@ -4847,6 +5125,10 @@ function handleDecisionTableClick(event) {
 
 function handleDecisionTableKeydown(event) {
   if (!state.currentVideoData?.isFiltered) return;
+  const target = event.target instanceof Element ? event.target : null;
+  if (target && target.closest('button[data-eval-value]')) {
+    return;
+  }
   const key = event.key;
   if (key !== 'Enter' && key !== ' ' && key !== 'Spacebar') return;
   const row = getDecisionRowFromTarget(event.target);
@@ -5359,6 +5641,13 @@ function initialiseEventHandlers() {
     dom.relationDetailsTableBody.addEventListener('keydown', handleDecisionTableKeydown);
   }
 
+  if (dom.downloadEvaluations) {
+    dom.downloadEvaluations.addEventListener('click', (event) => {
+      event.preventDefault();
+      downloadManualEvaluations();
+    });
+  }
+
   if (dom.renderRate) {
     // Initialize from current select value
     const initialStride = parseInt(dom.renderRate.value, 10);
@@ -5395,6 +5684,8 @@ function initialiseEventHandlers() {
       console.error('Failed to apply route from history navigation:', error);
     });
   });
+
+  updateManualEvaluationButton();
 }
 
 async function initialise() {
