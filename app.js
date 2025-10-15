@@ -5281,6 +5281,7 @@ function renderRelationDetails() {
       row.appendChild(createCell(label, 'decision-cell decision-cell--label'));
       row.appendChild(createCell(subjectId, 'decision-cell decision-cell--subject-id'));
       row.appendChild(createCell(subjectCompact, 'decision-cell decision-cell--subject-name'));
+      row.appendChild(createCell(rel.category || '—', 'decision-cell decision-cell--category'));
       row.appendChild(createCell(rel.predicate || '—', 'decision-cell decision-cell--predicate'));
       row.appendChild(createCell(objectId, 'decision-cell decision-cell--object-id'));
       row.appendChild(createCell(objectCompact, 'decision-cell decision-cell--object-name'));
