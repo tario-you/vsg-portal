@@ -5185,6 +5185,33 @@ function renderRelationDetails() {
     return;
   }
 
+  const enabledCategories =
+    state.enabledCategories instanceof Set && state.enabledCategories.size > 0
+      ? state.enabledCategories
+      : null;
+  const filteredRelations = relations.filter((rel) => {
+    if (!rel) return false;
+    if (!enabledCategories) return true;
+    const category = rel.category || 'default';
+    return enabledCategories.has(category);
+  });
+
+  if (!filteredRelations.length) {
+    if (status) {
+      status.hidden = false;
+      status.textContent = 'No relationships match the selected categories.';
+    }
+    if (tableWrapper) {
+      tableWrapper.hidden = true;
+    }
+    if (tableBody) {
+      tableBody.innerHTML = '';
+    }
+    toggleShouldBeDisabled = false;
+    applyToggleState();
+    return;
+  }
+
   if (status) {
     status.hidden = true;
   }
@@ -5230,7 +5257,7 @@ function renderRelationDetails() {
     };
     let selectedRowElement = null;
 
-    relations.forEach((rel) => {
+    filteredRelations.forEach((rel) => {
       const meta = rel.filterMeta || {};
       const subjectId = rel.from;
       const objectId = rel.to;
@@ -5319,7 +5346,7 @@ function renderRelationDetails() {
   applyToggleState();
   debugRelationEvent('details:rendered', {
     relationId: selection.id,
-    relationCount: relations.length,
+    relationCount: filteredRelations.length,
     datasetKind: data.filterDatasetKind || null,
     edgeId: group?.edgeId || null,
   });
