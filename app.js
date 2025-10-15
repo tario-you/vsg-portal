@@ -6,6 +6,7 @@ const CATEGORY_STYLES = {
   social: { background: '#49cd98', text: '#0f172a', edge: '#10b981' },
   attentional: { background: '#f8d065', text: '#0f172a', edge: '#f59e0b' },
   _all: { background: '#1f2937', text: '#f8fafc', edge: '#38bdf8' },
+  _all_temporal: { background: '#0f766e', text: '#ecfeff', edge: '#14b8a6' },
   default: { background: '#723bf3', text: '#f8fafc', edge: '#8b5cf6' },
 };
 
@@ -14,7 +15,7 @@ const manifestUrl = '/public/manifest.json';
 const KEY_BACKWARD = new Set(['arrowleft', 'a', 'j']);
 const KEY_FORWARD = new Set(['arrowright', 'd', 'l']);
 const CATEGORY_STORAGE_PREFIX = 'vsg-portal:categories:';
-const CATEGORY_DISABLED_BY_DEFAULT = new Set(['_all']);
+const CATEGORY_DISABLED_BY_DEFAULT = new Set(['_all', '_all_temporal']);
 
 let urlSyncEnabled = false;
 let suspendUrlSync = false;
@@ -894,6 +895,7 @@ function syncUrl(replace = true) {
 
 function formatCategoryLabel(cat) {
   if (cat === '_all') return '_all';
+  if (cat === '_all_temporal') return '_all_temporal';
   return cat.replace(/_/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
@@ -3639,25 +3641,73 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   };
 
   const additionalRelations = [];
-  let allSequence = 0;
+  const variantSequence = { all: 0, allTemporal: 0 };
+
+  const pushAllVariant = (base, options = {}) => {
+    const { category, synthetic = false, uid: customUid } = options;
+    if (!category) return null;
+    const sequenceKey = category === '_all_temporal' ? 'allTemporal' : 'all';
+    const prefix = sequenceKey === 'allTemporal' ? 'rel-all-temporal-' : 'rel-all-';
+    const newUid = customUid || `${prefix}${++variantSequence[sequenceKey]}`;
+    const relationType = options.relationType ?? base.relationType ?? 'default';
+    const clone = {
+      ...base,
+      uid: newUid,
+      index: processed.length + additionalRelations.length + 1,
+      category,
+      relationType,
+      predicate: options.predicate ?? base.predicate ?? '',
+      intervals: cloneIntervals(options.intervals ?? base.intervals),
+      filterMeta: options.filterMeta ?? base.filterMeta ?? null,
+      sourceUid: options.sourceUid ?? base.sourceUid ?? base.uid ?? null,
+      rawUid: options.rawUid ?? base.rawUid ?? base.uid ?? null,
+      originalCategory: options.originalCategory ?? base.originalCategory ?? base.category ?? null,
+      isAllVariant: true,
+      isAllSynthetic: Boolean(synthetic),
+    };
+    if (!clone.sourceUid && base.uid) {
+      clone.sourceUid = base.uid;
+    }
+    if (!clone.rawUid && base.rawUid) {
+      clone.rawUid = base.rawUid;
+    }
+    additionalRelations.push(clone);
+    relationsById.set(clone.uid, clone);
+    categories.add(category);
+    return clone;
+  };
 
   if (hasFilterMetadata) {
     const baseProcessedSnapshot = processed.slice();
     baseProcessedSnapshot.forEach((entry) => {
-      const clone = {
-        ...entry,
-        uid: `${entry.uid}::_all`,
-        category: '_all',
+      const temporal = canonicalCategory(entry.relationType) !== 'spatial';
+      const baseVariant = {
+        from: entry.from,
+        to: entry.to,
+        predicate: entry.predicate,
         relationType: entry.relationType,
+        intervals: entry.intervals,
         filterMeta: entry.filterMeta,
-        sourceUid: entry.uid,
+        fromOrdinal: entry.fromOrdinal,
+        toOrdinal: entry.toOrdinal,
+        fromLabel: entry.fromLabel,
+        toLabel: entry.toLabel,
+        fromShortLabel: entry.fromShortLabel,
+        toShortLabel: entry.toShortLabel,
+        fromCombinedLabel: entry.fromCombinedLabel,
+        toCombinedLabel: entry.toCombinedLabel,
         rawUid: entry.rawUid || entry.uid,
+        sourceUid: entry.uid,
         originalCategory: entry.category,
-        isAllVariant: true,
-        isAllSynthetic: false,
-        intervals: cloneIntervals(entry.intervals),
       };
-      additionalRelations.push(clone);
+      pushAllVariant(baseVariant, { category: '_all', synthetic: false, uid: `${entry.uid}::_all` });
+      if (temporal) {
+        pushAllVariant(baseVariant, {
+          category: '_all_temporal',
+          synthetic: false,
+          uid: `${entry.uid}::_all_temporal`,
+        });
+      }
     });
 
     const fallbackIntervalEnd = Number.isFinite(frameCount) && frameCount > 0 ? frameCount - 1 : maxFrame;
@@ -3685,15 +3735,12 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
           ? cloneIntervals(source.intervals)
           : cloneIntervals(fallbackIntervals);
       const originalCategory = source ? source.category : canonicalCategory(relationType);
-      const newEntry = {
-        uid: `rel-all-${++allSequence}`,
-        index: processed.length + additionalRelations.length + allSequence,
+      const baseEntry = {
         from,
         to,
         predicate: source ? source.predicate : predicate,
         relationType,
         intervals,
-        category: '_all',
         filterMeta: record,
         fromOrdinal: fromInfo?.ordinal ?? null,
         toOrdinal: toInfo?.ordinal ?? null,
@@ -3706,10 +3753,12 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
         rawUid: source?.rawUid || null,
         sourceUid: source?.uid || null,
         originalCategory,
-        isAllVariant: true,
-        isAllSynthetic: !source,
       };
-      additionalRelations.push(newEntry);
+      const temporal = canonicalCategory(relationType) !== 'spatial';
+      pushAllVariant(baseEntry, { category: '_all', synthetic: !source });
+      if (temporal) {
+        pushAllVariant(baseEntry, { category: '_all_temporal', synthetic: !source });
+      }
       record.used = true;
     });
   }
@@ -3717,9 +3766,7 @@ function buildVideoData(manifestEntry, rawData, metadata, centroidsPayload, obje
   if (additionalRelations.length) {
     additionalRelations.forEach((entry) => {
       processed.push(entry);
-      relationsById.set(entry.uid, entry);
     });
-    categories.add('_all');
   }
 
   const descriptorObject = Object.fromEntries(descriptorMap);
