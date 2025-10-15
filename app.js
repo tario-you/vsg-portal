@@ -135,6 +135,7 @@ const dom = {
   decisionColumnsToggle: document.getElementById('decision-columns-toggle'),
   decisionColumnsToggleContainer: document.querySelector('.decision-controls'),
   evaluationSummary: document.getElementById('evaluation-summary'),
+  evaluationPrev: document.getElementById('evaluation-prev'),
   evaluationNext: document.getElementById('evaluation-next'),
   evaluationTemporalOnly: document.getElementById('evaluation-temporal-only'),
 };
@@ -4841,6 +4842,37 @@ function findNextUnevaluatedRelation(candidates, videoId) {
   return null;
 }
 
+function findPreviousUnevaluatedRelation(candidates, videoId) {
+  if (!Array.isArray(candidates) || !candidates.length || !videoId) return null;
+  const store = state.manualEvaluations;
+  const relationsMap =
+    store && store.byVideo instanceof Map ? store.byVideo.get(videoId) : null;
+  const isEvaluated = (relationId) => {
+    if (!relationsMap || !(relationsMap instanceof Map)) return false;
+    const value = relationsMap.get(relationId);
+    return value === 'good' || value === 'bad';
+  };
+  let startIndex = 0;
+  const selectedId = state.selectedRelation?.id || null;
+  if (selectedId) {
+    const index = candidates.findIndex((rel) => rel.uid === selectedId);
+    if (index >= 0) {
+      startIndex = index;
+    }
+  }
+  const total = candidates.length;
+  for (let offset = 1; offset <= total; offset += 1) {
+    const index = (startIndex - offset + total) % total;
+    if (index < 0 || index >= total) continue;
+    const relation = candidates[index];
+    if (!relation) continue;
+    if (!isEvaluated(relation.uid)) {
+      return relation;
+    }
+  }
+  return null;
+}
+
 function computeEvaluationProgress(videoId, candidates) {
   const total = Array.isArray(candidates) ? candidates.length : 0;
   if (!videoId || !total) {
@@ -4894,6 +4926,7 @@ function refreshManualEvaluationUi() {
   }
 
   const nextRelation = findNextUnevaluatedRelation(candidates, videoId);
+  const prevRelation = findPreviousUnevaluatedRelation(candidates, videoId);
   if (dom.evaluationNext) {
     dom.evaluationNext.disabled = !nextRelation;
     if (nextRelation) {
@@ -4902,6 +4935,16 @@ function refreshManualEvaluationUi() {
       dom.evaluationNext.title = 'No relationships available for this filter';
     } else {
       dom.evaluationNext.title = 'All selected relationships have been evaluated';
+    }
+  }
+  if (dom.evaluationPrev) {
+    dom.evaluationPrev.disabled = !prevRelation;
+    if (prevRelation) {
+      dom.evaluationPrev.title = 'Jump to the previous unevaluated relationship';
+    } else if (!candidates.length) {
+      dom.evaluationPrev.title = 'No relationships available for this filter';
+    } else {
+      dom.evaluationPrev.title = 'All selected relationships have been evaluated';
     }
   }
 }
@@ -4923,6 +4966,27 @@ function handleEvaluationNextClick(event) {
   setCurrentTime(targetFrame);
   if (nextRelation.uid) {
     setSelectedRelationId(nextRelation.uid, { focus: true, scrollIntoView: true, focusTable: true });
+  }
+  refreshManualEvaluationUi();
+}
+
+function handleEvaluationPrevClick(event) {
+  if (event && typeof event.preventDefault === 'function') {
+    event.preventDefault();
+  }
+  const temporalOnly = shouldUseTemporalOnly();
+  const candidates = getSortedEvaluationCandidates({ onlyTemporal: temporalOnly });
+  const videoId = state.currentVideoId;
+  const prevRelation = findPreviousUnevaluatedRelation(candidates, videoId);
+  if (!prevRelation) {
+    refreshManualEvaluationUi();
+    return;
+  }
+  const frame = getRelationPrimaryFrame(prevRelation);
+  const targetFrame = Number.isFinite(frame) ? frame : 0;
+  setCurrentTime(targetFrame);
+  if (prevRelation.uid) {
+    setSelectedRelationId(prevRelation.uid, { focus: true, scrollIntoView: true, focusTable: true });
   }
   refreshManualEvaluationUi();
 }
@@ -5908,6 +5972,10 @@ function initialiseEventHandlers() {
   if (dom.relationDetailsTableBody) {
     dom.relationDetailsTableBody.addEventListener('click', handleDecisionTableClick);
     dom.relationDetailsTableBody.addEventListener('keydown', handleDecisionTableKeydown);
+  }
+
+  if (dom.evaluationPrev) {
+    dom.evaluationPrev.addEventListener('click', handleEvaluationPrevClick);
   }
 
   if (dom.evaluationNext) {
