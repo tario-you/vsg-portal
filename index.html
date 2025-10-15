@@ -97,16 +97,20 @@
       <section class="panel panel--decision" id="relation-details-panel" hidden>
         <h3>Filter Decisions</h3>
         <p class="panel__note" id="relation-details-status">Select a relationship to view filter reasoning.</p>
+        <label class="decision-controls" for="decision-columns-toggle">
+          <input type="checkbox" id="decision-columns-toggle" />
+          <span>Show decision &amp; ID columns</span>
+        </label>
         <div class="decision-table-wrapper" id="relation-details-table-wrapper" hidden>
-          <table class="decision-table" id="relation-details-table">
+          <table class="decision-table decision-table--compact" id="relation-details-table">
             <thead>
               <tr>
-                <th scope="col">Decision</th>
-                <th scope="col">Label</th>
-                <th scope="col">Subj&nbsp;ID</th>
+                <th scope="col" class="decision-column decision-column--decision">Decision</th>
+                <th scope="col" class="decision-column decision-column--label">Label</th>
+                <th scope="col" class="decision-column decision-column--subject-id">Subj&nbsp;ID</th>
                 <th scope="col">Subj&nbsp;Name</th>
                 <th scope="col">Predicate</th>
-                <th scope="col">Obj&nbsp;ID</th>
+                <th scope="col" class="decision-column decision-column--object-id">Obj&nbsp;ID</th>
                 <th scope="col">Obj&nbsp;Name</th>
                 <th scope="col">Explanation</th>
               </tr>

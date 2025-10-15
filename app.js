@@ -48,6 +48,7 @@ const state = {
   lastRenderedFrame: null,
   debug: { enabled: false, overlay: null },
   selectedRelation: null,
+  showDecisionColumns: false,
   mask: {
     enabled: false,
     store: new Map(),
@@ -114,7 +115,10 @@ const dom = {
   relationDetailsPanel: document.getElementById('relation-details-panel'),
   relationDetailsStatus: document.getElementById('relation-details-status'),
   relationDetailsTableWrapper: document.getElementById('relation-details-table-wrapper'),
+  relationDetailsTable: document.getElementById('relation-details-table'),
   relationDetailsTableBody: document.getElementById('relation-details-tbody'),
+  decisionColumnsToggle: document.getElementById('decision-columns-toggle'),
+  decisionColumnsToggleContainer: document.querySelector('.decision-controls'),
 };
 
 function setViewportBackground(url) {
@@ -176,6 +180,15 @@ if (dom.maskLabelsToggle) {
     const target = event.target;
     const desired = Boolean(target?.checked);
     setMaskLabelsVisible(desired);
+  });
+}
+
+if (dom.decisionColumnsToggle) {
+  dom.decisionColumnsToggle.checked = state.showDecisionColumns;
+  dom.decisionColumnsToggle.addEventListener('change', (event) => {
+    const target = event.target;
+    state.showDecisionColumns = Boolean(target?.checked);
+    renderRelationDetails();
   });
 }
 
@@ -3757,9 +3770,27 @@ function renderRelationDetails() {
   const status = dom.relationDetailsStatus;
   const tableWrapper = dom.relationDetailsTableWrapper;
   const tableBody = dom.relationDetailsTableBody;
+  const table = dom.relationDetailsTable;
   const data = state.currentVideoData;
+  const toggle = dom.decisionColumnsToggle;
+  const toggleContainer = dom.decisionColumnsToggleContainer;
 
   if (!panel) return;
+
+  if (table) {
+    table.classList.toggle('decision-table--compact', !state.showDecisionColumns);
+  }
+  let toggleShouldBeVisible = false;
+  let toggleShouldBeDisabled = true;
+  const applyToggleState = () => {
+    if (toggleContainer) {
+      toggleContainer.hidden = !toggleShouldBeVisible;
+    }
+    if (toggle) {
+      toggle.disabled = toggleShouldBeDisabled;
+      toggle.checked = state.showDecisionColumns;
+    }
+  };
 
   if (!data || !data.isFiltered) {
     panel.hidden = true;
@@ -3777,6 +3808,7 @@ function renderRelationDetails() {
     if (tableBody) {
       tableBody.innerHTML = '';
     }
+    applyToggleState();
     return;
   }
 
@@ -3800,6 +3832,7 @@ function renderRelationDetails() {
     if (tableBody) {
       tableBody.innerHTML = '';
     }
+    applyToggleState();
     return;
   }
 
@@ -3826,6 +3859,8 @@ function renderRelationDetails() {
     if (tableBody) {
       tableBody.innerHTML = '';
     }
+    toggleShouldBeDisabled = false;
+    applyToggleState();
     return;
   }
 
@@ -3845,6 +3880,8 @@ function renderRelationDetails() {
       datasetKind: data.filterDatasetKind || null,
       relationId: selection.id,
     });
+    toggleShouldBeDisabled = false;
+    applyToggleState();
     return;
   }
 
@@ -3923,6 +3960,8 @@ function renderRelationDetails() {
       tableBody.appendChild(row);
     });
 
+    toggleShouldBeVisible = true;
+    toggleShouldBeDisabled = false;
     if (selectedRowElement && tableWrapper && state.tableFocusPending) {
       scheduleMicrotask(() => {
         if (tableWrapper.contains(selectedRowElement)) {
@@ -3941,6 +3980,10 @@ function renderRelationDetails() {
     }
   }
 
+  if (tableWrapper) {
+    tableWrapper.hidden = false;
+  }
+  applyToggleState();
   debugRelationEvent('details:rendered', {
     relationId: selection.id,
     relationCount: relations.length,

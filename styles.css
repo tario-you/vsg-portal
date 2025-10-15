@@ -306,6 +306,22 @@ body {
   overflow: visible;
 }
 
+.decision-controls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: 0.35rem;
+}
+
+.decision-controls input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
 .decision-table {
   width: 100%;
   border-collapse: collapse;
@@ -358,6 +374,17 @@ body {
 .decision-cell--object-id {
   font-family: 'JetBrains Mono', 'Roboto Mono', monospace;
   font-size: 0.78rem;
+}
+
+.decision-table--compact .decision-column--decision,
+.decision-table--compact .decision-column--label,
+.decision-table--compact .decision-column--subject-id,
+.decision-table--compact .decision-column--object-id,
+.decision-table--compact .decision-cell--decision,
+.decision-table--compact .decision-cell--label,
+.decision-table--compact .decision-cell--subject-id,
+.decision-table--compact .decision-cell--object-id {
+  display: none;
 }
 
 .decision-table tbody td.decision-cell--explanation {
