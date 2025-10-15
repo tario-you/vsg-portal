@@ -2203,7 +2203,12 @@ function buildMaskLegend() {
       if (!bucket.includes(resolvedId)) {
         bucket.push(resolvedId);
       }
-      populateMaskIndexMap(maskEntry, mask, idx, previewIndexMap);
+      const populated = populateMaskIndexMap(maskEntry, mask, idx, previewIndexMap);
+      if (!populated) {
+        console.debug('[mask] buildMaskLegend:indexPopulateFailed', { idx, resolvedId });
+      }
+    } else {
+      console.debug('[mask] buildMaskLegend:noIndexMapForMask', { idx, resolvedId });
     }
 
     if (!objectLabelMap.has(resolvedId)) {
@@ -2211,6 +2216,11 @@ function buildMaskLegend() {
         resolvedId,
         descriptor?.displayLabel || descriptor?.combinedLabel || label || `Object ${resolvedId}`
       );
+      console.debug('[mask] buildMaskLegend:labelAssigned', {
+        idx,
+        resolvedId,
+        labelValue: objectLabelMap.get(resolvedId),
+      });
     }
 
     const fallbackColor = maskColorForIndex(idx);
