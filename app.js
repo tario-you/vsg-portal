@@ -2166,22 +2166,23 @@ function buildMaskLegend() {
     }
 
     const fallbackColor = maskColorForIndex(idx);
-    let colorStruct = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
+    const sampledColor = sampleMaskPreviewColorForMask(mask, maskEntry, imageData);
+    let colorStruct = sampledColor;
     if (!colorStruct && fallbackColor) {
       colorStruct = createColorStruct(fallbackColor.r, fallbackColor.g, fallbackColor.b, fallbackColor.a);
     }
 
-    if (colorStruct) {
-      const entry = ensureEntry(colorStruct);
+    if (sampledColor) {
+      const entry = ensureEntry(sampledColor);
       if (entry) {
         entry.labelSet.add(label);
         if (!entry.objectIds.includes(resolvedId)) {
           entry.objectIds.push(resolvedId);
         }
       }
-      if (!objectColorMap.has(resolvedId)) {
-        objectColorMap.set(resolvedId, colorStruct);
-      }
+    }
+    if (!objectColorMap.has(resolvedId) && colorStruct) {
+      objectColorMap.set(resolvedId, colorStruct);
     }
   });
 
