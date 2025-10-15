@@ -1847,6 +1847,43 @@ function sampleMaskPreviewColorForMask(mask, entry, imageData) {
   return null;
 }
 
+function deriveMaskDisplayLabel(labelsArray, objectIds, data) {
+  const result = [];
+  const seen = new Set();
+  const pushUnique = (value) => {
+    if (value == null) return;
+    const trimmed = String(value).trim();
+    if (!trimmed || /^unknown object$/i.test(trimmed)) return;
+    const key = trimmed.toLowerCase();
+    if (seen.has(key)) return;
+    seen.add(key);
+    result.push(trimmed);
+  };
+
+  if (Array.isArray(labelsArray)) {
+    labelsArray.forEach(pushUnique);
+  }
+
+  if (!result.length && Array.isArray(objectIds) && objectIds.length && data) {
+    objectIds.forEach((objectId) => {
+      const label = formatObjectLabel(data, objectId, 'display');
+      if (label) {
+        pushUnique(label);
+      }
+    });
+  }
+
+  if (!result.length && Array.isArray(objectIds) && objectIds.length) {
+    if (objectIds.length === 1) {
+      pushUnique(`Object ${objectIds[0]}`);
+    } else {
+      pushUnique(`Objects ${objectIds.join(', ')}`);
+    }
+  }
+
+  return result.join(', ');
+}
+
 function getPreviewGeometry(preview) {
   if (!preview) return null;
   const rect = preview.getBoundingClientRect();
@@ -2001,11 +2038,11 @@ function buildMaskLegend() {
       ? Array.from(entry.labelSet)
       : [];
     labelsArray.sort((a, b) => a.localeCompare(b));
-    const label = labelsArray.length ? labelsArray.join(', ') : 'Unknown object';
+    const label = deriveMaskDisplayLabel(labelsArray, objectIds, data);
     objectIds.forEach((objectId) => {
       if (!objectLabelMap.has(objectId)) {
         const fallback = getObjectDisplayDescriptor(data, objectId)?.displayLabel || labels?.[objectId] || formatObjectLabel(data, objectId);
-        objectLabelMap.set(objectId, labelsArray.length ? labelsArray.join(', ') : fallback);
+        objectLabelMap.set(objectId, label || fallback);
       }
       if (!objectColorMap.has(objectId)) {
         objectColorMap.set(objectId, entry.color);
@@ -2060,7 +2097,7 @@ function buildMaskLegend() {
 
     const labelSpan = document.createElement('span');
     labelSpan.className = 'mask-object-label';
-    labelSpan.textContent = item.label;
+    labelSpan.textContent = item.label || 'Mask region';
     entry.appendChild(labelSpan);
 
     if (item.objectIds.length) {
@@ -2100,8 +2137,22 @@ function getPreviewCoordinates(event) {
 
 function formatMaskTooltipEntry(entry) {
   if (!entry) return '';
-  const ids = entry.objectIds?.length ? ` (Obj ${entry.objectIds.join(', ')})` : '';
-  return `${entry.label || 'Unknown object'}${ids}`;
+  const objectIds = Array.isArray(entry.objectIds)
+    ? entry.objectIds.map((value) => String(value)).filter((value) => value.length > 0)
+    : [];
+  const data = state.currentVideoData;
+  let labelText = entry.label;
+  if (!labelText || /^unknown object$/i.test(labelText)) {
+    labelText = deriveMaskDisplayLabel([], objectIds, data);
+  }
+  if (!labelText) {
+    labelText = 'Mask region';
+  }
+  const mentionsIdDirectly = objectIds.some((id) => labelText.includes(id));
+  const mentionsKeywords = /\b(obj|id)\b/i.test(labelText);
+  const needsSuffix = objectIds.length > 0 && !(mentionsKeywords || mentionsIdDirectly);
+  const suffix = needsSuffix ? ` (Obj ${objectIds.join(', ')})` : '';
+  return `${labelText}${suffix}`;
 }
 
 function clearMaskLabelsOverlay() {
@@ -2293,8 +2344,9 @@ function handleMaskPreviewPointerMove(event) {
   });
   const labelsArray = Array.from(labelSet).sort((a, b) => a.localeCompare(b));
   const objectIds = Array.from(objectIdsSet).sort((a, b) => Number(a) - Number(b));
+  const derivedLabel = deriveMaskDisplayLabel(labelsArray, objectIds, state.currentVideoData);
   const label = formatMaskTooltipEntry({
-    label: labelsArray.length ? labelsArray.join(', ') : 'Unknown object',
+    label: derivedLabel,
     objectIds,
   });
   if (!label) {
