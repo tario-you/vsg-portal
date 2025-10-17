@@ -5375,15 +5375,30 @@ function renderRelationDetails() {
     if (selectedRowElement && tableWrapper && state.tableFocusPending) {
       scheduleMicrotask(() => {
         const container = dom.relationDetailsPanel;
-        if (container && typeof container.scroll === 'function') {
-          container.scroll({ top: 0, left: 0, behavior: 'smooth' });
-        }
-        if (tableWrapper.contains(selectedRowElement)) {
+        if (container && tableWrapper.contains(selectedRowElement)) {
+          const scrollMargin = 16;
+          if (typeof selectedRowElement.scrollIntoView === 'function') {
+            selectedRowElement.scrollIntoView({
+              block: 'start',
+              inline: 'nearest',
+              behavior: 'auto',
+            });
+            container.scrollTop = Math.max(0, container.scrollTop - scrollMargin);
+          } else if (typeof container.scrollTo === 'function') {
+            const targetTop = Math.max(0, selectedRowElement.offsetTop - scrollMargin);
+            container.scrollTo({ top: targetTop, behavior: 'auto' });
+          } else {
+            container.scrollTop = Math.max(0, selectedRowElement.offsetTop - scrollMargin);
+          }
           if (typeof selectedRowElement.focus === 'function') {
             try {
               selectedRowElement.focus({ preventScroll: true });
             } catch (error) {
-              selectedRowElement.focus();
+              try {
+                selectedRowElement.focus();
+              } catch (focusError) {
+                // Ignore focus issues
+              }
             }
           }
         }
