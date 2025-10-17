@@ -669,6 +669,14 @@ function detectFilteredRun(manifestEntry, rawData) {
   };
 }
 
+function supportsManualEvaluation(data = state.currentVideoData) {
+  const dataset = data || null;
+  if (!dataset) return false;
+  if (dataset.isFiltered) return true;
+  const relations = Array.isArray(dataset.relations) ? dataset.relations : [];
+  return relations.length > 0;
+}
+
 function getCategoryStorageKey(videoId) {
   if (!videoId) return null;
   return `${CATEGORY_STORAGE_PREFIX}${videoId}`;
@@ -4180,7 +4188,7 @@ function selectRelationByEdgeId(edgeId, options = {}) {
 
 function handleNetworkEdgeSelection(params) {
   if (state.suppressNetworkSelect) return;
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   const edges = Array.isArray(params?.edges) ? params.edges : [];
   if (!edges.length) {
     setSelectedRelationId(null);
@@ -4191,7 +4199,7 @@ function handleNetworkEdgeSelection(params) {
 
 function handleNetworkEdgeDeselection() {
   if (state.suppressNetworkSelect) return;
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   setSelectedRelationId(null);
 }
 
@@ -4574,7 +4582,7 @@ function setSelectedRelationId(relationId, options = {}) {
   const { focus = false, scrollIntoView = false, focusTable = false } = options;
   const data = state.currentVideoData;
   state.tableFocusPending = Boolean(focusTable);
-  if (!data || !data.isFiltered) {
+  if (!data || !supportsManualEvaluation(data)) {
     if (state.selectedRelation) {
       state.selectedRelation = null;
       renderRelationDetails();
@@ -4582,7 +4590,7 @@ function setSelectedRelationId(relationId, options = {}) {
     state.selectedRelationGroup = null;
     state.tableFocusPending = false;
     debugRelationEvent('select:cleared', {
-      reason: 'not-filter-dataset',
+      reason: 'manual-eval-unavailable',
       datasetKind: data?.filterDatasetKind || null,
     });
     synchroniseNetworkSelection(null);
@@ -5119,14 +5127,18 @@ function renderRelationDetails() {
     }
   };
 
-  if (!data || !data.isFiltered) {
+  const manualEnabled = supportsManualEvaluation(data);
+
+  if (!data || !manualEnabled) {
     panel.hidden = true;
     if (status) {
       status.hidden = false;
-      status.textContent = 'Filter metadata is available only for filtered runs.';
+      status.textContent = data
+        ? 'Manual ratings are unavailable because no relationships were loaded for this video.'
+        : 'Select a video to begin reviewing relationships.';
     }
     debugRelationEvent('details:hidden', {
-      reason: 'not-filter-dataset',
+      reason: 'manual-eval-unavailable',
       datasetKind: data?.filterDatasetKind || null,
     });
     if (tableWrapper) {
@@ -5140,14 +5152,23 @@ function renderRelationDetails() {
   }
 
   panel.hidden = false;
+  const isFilteredDataset = Boolean(data?.isFiltered);
+  const hasFilterEvaluations =
+    Number.isFinite(data?.filterEvaluationCount)
+      ? data.filterEvaluationCount > 0
+      : false;
+  const hasRelations = Array.isArray(data?.relations) && data.relations.length > 0;
   const hasEvaluations =
-    (Number.isFinite(data.filterEvaluationCount) ? data.filterEvaluationCount > 0 : false) ||
-    (Array.isArray(data.relations) && data.relations.some((entry) => entry.filterMeta));
+    (isFilteredDataset && hasFilterEvaluations) ||
+    (Array.isArray(data?.relations) && data.relations.some((entry) => entry?.filterMeta)) ||
+    hasRelations;
 
   if (!hasEvaluations) {
     if (status) {
       status.hidden = false;
-      status.textContent = 'No filter metadata found for this run.';
+      status.textContent = isFilteredDataset
+        ? 'No filter metadata found for this run.'
+        : 'No relationships found for this video.';
     }
     debugRelationEvent('details:hidden', {
       reason: 'no-evaluations',
@@ -5174,7 +5195,9 @@ function renderRelationDetails() {
   if (!selection) {
     if (status) {
       status.hidden = false;
-      status.textContent = 'Select a relationship to view filter reasoning.';
+      status.textContent = isFilteredDataset
+        ? 'Select a relationship to view filter reasoning or record a manual rating.'
+        : 'Select a relationship to review and record a manual rating.';
     }
     debugRelationEvent('details:hidden', {
       reason: 'no-selection',
@@ -5395,6 +5418,7 @@ function renderActiveRelations() {
 
   const selectedId = state.selectedRelation?.id || null;
   const isFiltered = Boolean(data?.isFiltered);
+  const manualEnabled = supportsManualEvaluation(data);
 
   const html = active
     .map((rel) => {
@@ -5408,7 +5432,7 @@ function renderActiveRelations() {
       const predicateColor = style.edge || style.text || 'var(--text)';
       const isSelected = rel.uid === selectedId;
       const hasMeta = Boolean(rel.filterMeta);
-      const interactiveAttrs = isFiltered
+      const interactiveAttrs = manualEnabled
         ? ` role="button" tabindex="0" aria-pressed="${isSelected ? 'true' : 'false'}"`
         : '';
       const classes = [
@@ -5442,7 +5466,7 @@ function getRelationItemFromTarget(target) {
 }
 
 function handleRelationListClick(event) {
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   const item = getRelationItemFromTarget(event.target);
   if (!item) return;
   const relationId = item.dataset.relId;
@@ -5462,7 +5486,7 @@ function handleRelationListClick(event) {
 }
 
 function handleRelationListKeydown(event) {
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   const key = event.key;
   if (key !== 'Enter' && key !== ' ' && key !== 'Spacebar') return;
   const item = getRelationItemFromTarget(event.target);
@@ -5490,7 +5514,7 @@ function getDecisionRowFromTarget(target) {
 }
 
 function handleDecisionTableClick(event) {
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   const target = event.target instanceof Element ? event.target : null;
   if (target) {
     const button = target.closest('button[data-eval-value]');
@@ -5516,7 +5540,7 @@ function handleDecisionTableClick(event) {
 }
 
 function handleDecisionTableKeydown(event) {
-  if (!state.currentVideoData?.isFiltered) return;
+  if (!supportsManualEvaluation()) return;
   const target = event.target instanceof Element ? event.target : null;
   if (target && target.closest('button[data-eval-value]')) {
     return;
